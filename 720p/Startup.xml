@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+	<onload condition="!Skin.HasSetting(DisableTVNextAired) + !System.HasAddon(script.tv.show.next.aired)">Skin.Setbool(DisableTVNextAired)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlaylist)</onload>
+	<onload condition="Skin.HasSetting(EnableFanartScript) + !System.HasAddon(script.grab.fanart)">Skin.Reset(EnableFanartScript)</onload>
+	<onload condition="!Skin.HasSetting(DisableGlobalSearch) + !System.HasAddon(script.globalsearch)">Skin.Setbool(DisableGlobalSearch)</onload>
+	<onload condition="!Skin.HasSetting(DisableTVTunes) + !System.HasAddon(script.tvtunes)">Skin.Setbool(DisableTVTunes)</onload>
+	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + !System.HasAddon(script.artistslideshow)">Skin.Setbool(DisableSlideShowArt)</onload>
+	<onload condition="!Skin.HasSetting(DisableWatchItLater) + !System.HasAddon(script.simpleplaylists)">Skin.Setbool(DisableWatchItLater)</onload>
+	<onload condition="!Skin.HasSetting(DisableFanartScript) + IntegerGreaterThan(Skin.String(FanArtCycleRate),0)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onload>
+	<controls>
+		<control type="image">
+			<description>Startup Background Image</description>
+			<include>Dimensions_Fullscreen</include>
+			<aspectratio>scale</aspectratio>
+			<include>VisibleFadeEffect</include>
+			<texture fallback="special://skin/backgrounds/startup.jpg">$INFO[Skin.String(StartUpBackgroundPath)]</texture>
+			<visible>!Skin.HasSetting(HideStartUpBackground)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>trigger</description>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(UseStartUpPlaylistPath) + Skin.HasSetting(HideKodiIntro)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>trigger with XBMC Intro Movie</description>
+			<onfocus>XBMC.PlayMedia(special://skin/extras/Intro/KODI-Intro-Video.mp4)</onfocus>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(HideKodiIntro)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>trigger with startup Playlist</description>
+			<onfocus>PlayMedia($INFO[Skin.String(StartUpPlaylistPath)])</onfocus>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(UseStartUpPlaylistPath)</visible>
+		</control>
+		<include>CommonBackground</include>
+	</controls>
+</window>

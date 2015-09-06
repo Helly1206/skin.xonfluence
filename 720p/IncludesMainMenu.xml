@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="WrapHomeMainMenu">
+		<control type="wraplist" id="9000">
+			<include>HomeMainMenuSys</include>
+			<include>HomeMainMenuContent</include>
+			<visible>Skin.HasSetting(WrapAroundHomeMenu)</visible>
+		</control>
+	</include>
+	<include name="FixedHomeMainMenu">
+		<control type="fixedlist" id="9000">
+			<include>HomeMainMenuSys</include>
+			<include>HomeMainMenuContent</include>
+			<visible>!Skin.HasSetting(WrapAroundHomeMenu)</visible>
+		</control>
+	</include>
+	<include name="HomeMainMenuSys">
+		<left>-110</left>
+		<top>5</top>
+		<width>1500</width>
+		<height>60</height>
+		<onleft condition="!Skin.HasSetting(FixedEndingMenu)">9000</onleft>
+		<onright condition="!Skin.HasSetting(FixedEndingMenu)">9000</onright>
+		<onleft condition="Skin.HasSetting(FixedEndingMenu)">noop</onleft>
+		<onright condition="Skin.HasSetting(FixedEndingMenu)">noop</onright>
+		<onup condition="!Skin.HasSetting(DisableGlobalSearch)">608</onup>
+		<onup condition="Skin.HasSetting(DisableGlobalSearch)">603</onup>
+		<ondown>9001</ondown>
+		<pagecontrol>-</pagecontrol>
+		<scrolltime>300</scrolltime>
+		<focusposition>2</focusposition>
+		<movement>1</movement>
+		<orientation>Horizontal</orientation>
+		<itemlayout height="60" width="300">
+			<control type="image">
+				<left>0</left>
+				<top>4</top>
+				<width>1</width>
+				<height>52</height>
+				<texture>HomeSeperator.png</texture>
+			</control>
+			<control type="image">
+				<left>299</left>
+				<top>4</top>
+				<width>1</width>
+				<height>52</height>
+				<texture>HomeSeperator.png</texture>
+			</control>
+			<control type="label">
+				<left>5</left>
+				<top>0</top>
+				<width>290</width>
+				<height>60</height>
+				<font>font_MainMenu</font>
+				<textcolor>grey3</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</itemlayout>
+		<focusedlayout height="60" width="300">
+			<control type="image">
+				<left>0</left>
+				<top>4</top>
+				<width>1</width>
+				<height>52</height>
+				<texture>HomeSeperator.png</texture>
+			</control>
+			<control type="image">
+				<left>299</left>
+				<top>4</top>
+				<width>1</width>
+				<height>52</height>
+				<texture>HomeSeperator.png</texture>
+			</control>
+			<control type="label">
+				<left>5</left>
+				<top>0</top>
+				<width>290</width>
+				<height>60</height>
+				<font>font_MainMenu</font>
+				<textcolor>grey3</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>!Control.HasFocus(9000)</visible>
+			</control>
+			<control type="label">
+				<left>5</left>
+				<top>0</top>
+				<width>290</width>
+				<height>60</height>
+				<font>font_MainMenu</font>
+				<textcolor>$VAR[MainColorOne]</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>Control.HasFocus(9000)</visible>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="HomeMainMenuContent">
+		<content>
+			<item id="1">
+				<description>Home Menu Item One</description>
+				<label>$INFO[Skin.String(HomeItem.1.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemOne,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.1.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.1.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.1.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.1.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.1.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.1.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.1.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.1.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistOne.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.1.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
+			</item>
+			<item id="2">
+				<description>Home Menu Item Two</description>
+				<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemTwo,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.2.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.2.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.2.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.2.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.2.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.2.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.2.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.2.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwo.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.2.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
+			</item>
+			<item id="3">
+				<description>Home Menu Item Three</description>
+				<label>$INFO[Skin.String(HomeItem.3.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemThree,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.3.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.3.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.3.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.3.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.3.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.3.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.3.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.3.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistThree.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.3.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
+			</item>
+			<item id="4">
+				<description>Home Menu Item Four</description>
+				<label>$INFO[Skin.String(HomeItem.4.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemFour,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.4.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.4.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.4.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.4.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.4.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.4.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.4.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.4.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFour.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.4.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
+			</item>
+			<item id="5">
+				<description>Home Menu Item Five</description>
+				<label>$INFO[Skin.String(HomeItem.5.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemFive,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.5.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.5.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.5.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.5.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.5.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.5.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.5.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.5.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFive.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.5.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
+			</item>
+			<item id="6">
+				<description>Home Menu Item Six</description>
+				<label>$INFO[Skin.String(HomeItem.6.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemSix,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.6.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.6.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.6.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.6.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.6.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.6.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.6.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.6.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSix.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.6.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
+			</item>
+			<item id="7">
+				<description>Home Menu Item Seven</description>
+				<label>$INFO[Skin.String(HomeItem.7.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemSeven,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.7.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.7.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.7.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.7.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.7.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.7.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.7.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.7.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSeven.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.7.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
+			</item>
+			<item id="8">
+				<description>Home Menu Item Eight</description>
+				<label>$INFO[Skin.String(HomeItem.8.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemEight,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.8.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.8.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.8.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.8.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.8.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.8.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.8.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.8.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEight.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.8.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
+			</item>
+			<item id="9">
+				<description>Home Menu Item Nine</description>
+				<label>$INFO[Skin.String(HomeItem.9.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemNine,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.9.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.9.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.9.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.9.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.9.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.9.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.9.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.9.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistNine.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.9.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
+			</item>
+			<item id="10">
+				<description>Home Menu Item Ten</description>
+				<label>$INFO[Skin.String(HomeItem.10.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemTen,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.10.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.10.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.10.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.10.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.10.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.10.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.10.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.10.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTen.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.10.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
+			</item>
+			<item id="11">
+				<description>Home Menu Item Eleven</description>
+				<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemEleven,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.11.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.11.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.11.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.11.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.11.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.11.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.11.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.11.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEleven.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.11.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
+			</item>
+			<item id="12">
+				<description>Home Menu Item Twelve</description>
+				<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemTwelve,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.12.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.12.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.12.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.12.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.12.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.12.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.12.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.12.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwelve.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.12.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
+			</item>
+		</content>
+	</include>
+	<include name="DefaultInitialSetup">
+		<onload>Skin.SetString(HomeItem.1.Label,$LOCALIZE[8])</onload>
+		<onload>Skin.SetString(HomeItem.1.Path,ActivateWindow(Weather))</onload>
+		<onload>Skin.SetString(HomeItem.1.Sub,None)</onload>
+		<onload>Skin.SetString(HomeItem.1.Addon,None)</onload>
+		<onload>Skin.SetString(HomeItem.1.Widget,Weather)</onload>
+		<onload>Skin.SetString(HomeItem.1.Type,Weather)</onload>
+		<onload>Skin.SetString(HomeItem.1.Fanart,special://skin/backgrounds/weather.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.1.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.2.Label,$LOCALIZE[1213])</onload>
+		<onload>Skin.SetString(HomeItem.2.Path,ActivateWindow(Pictures))</onload>
+		<onload>Skin.SetString(HomeItem.2.Sub,Pictures)</onload>
+		<onload>Skin.SetString(HomeItem.2.Addon,Pictures)</onload>
+		<onload>Skin.SetString(HomeItem.2.Widget,None)</onload>
+		<onload>Skin.SetString(HomeItem.2.Type,Pictures)</onload>
+		<onload>Skin.SetString(HomeItem.2.Fanart,special://skin/backgrounds/pictures.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.2.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.3.Label,$LOCALIZE[19021])</onload>
+		<onload>Skin.SetString(HomeItem.3.Path,ActivateWindow(RadioChannels))</onload>
+		<onload>Skin.SetString(HomeItem.3.Sub,Radio)</onload>
+		<onload>Skin.SetString(HomeItem.3.Addon,None)</onload>
+		<onload>Skin.SetString(HomeItem.3.Widget,None)</onload>
+		<onload>Skin.SetString(HomeItem.3.Type,Radio)</onload>
+		<onload>Skin.SetString(HomeItem.3.Fanart,special://skin/backgrounds/tv.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.3.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.4.Label,$LOCALIZE[19020])</onload>
+		<onload>Skin.SetString(HomeItem.4.Path,ActivateWindow(TVChannels))</onload>
+		<onload>Skin.SetString(HomeItem.4.Sub,LiveTV)</onload>
+		<onload>Skin.SetString(HomeItem.4.Addon,None)</onload>
+		<onload>Skin.SetString(HomeItem.4.Widget,None)</onload>
+		<onload>Skin.SetString(HomeItem.4.Type,LiveTV)</onload>
+		<onload>Skin.SetString(HomeItem.4.Fanart,special://skin/backgrounds/tv.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.4.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.5.Label,$LOCALIZE[3])</onload>
+		<onload>Skin.SetString(HomeItem.5.Path,ActivateWindow(Videos,root,return))</onload>
+		<onload>Skin.SetString(HomeItem.5.Sub,Videos)</onload>
+		<onload>Skin.SetString(HomeItem.5.Addon,Videos)</onload>
+		<onload>Skin.SetString(HomeItem.5.Widget,UnWatched)</onload>
+		<onload>Skin.SetString(HomeItem.5.Type,Videos)</onload>
+		<onload>Skin.SetString(HomeItem.5.Fanart,special://skin/backgrounds/videos.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.5.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.6.Label,$LOCALIZE[342])</onload>
+		<onload>Skin.SetString(HomeItem.6.Path,ActivateWindow(Videos,MovieTitles,return))</onload>
+		<onload>Skin.SetString(HomeItem.6.Sub,Movies)</onload>
+		<onload>Skin.SetString(HomeItem.6.Addon,Videos)</onload>
+		<onload>Skin.SetString(HomeItem.6.Widget,RecentMovies)</onload>
+		<onload>Skin.SetString(HomeItem.6.Type,Movies)</onload>
+		<onload>Skin.SetString(HomeItem.6.Fanart,special://skin/backgrounds/videos.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.6.Display,Database)</onload>
+		<onload>Skin.SetString(HomeItem.7.Label,$LOCALIZE[31424])</onload>
+		<onload>Skin.SetString(HomeItem.7.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
+		<onload>Skin.SetString(HomeItem.7.Sub,TVShows)</onload>
+		<onload>Skin.SetString(HomeItem.7.Addon,Videos)</onload>
+		<onload>Skin.SetString(HomeItem.7.Widget,RecentEpisodes)</onload>
+		<onload>Skin.SetString(HomeItem.7.Type,TVShows)</onload>
+		<onload>Skin.SetString(HomeItem.7.Fanart,special://skin/backgrounds/videos.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.7.Display,Database)</onload>
+		<onload>Skin.SetString(HomeItem.8.Label,$LOCALIZE[2])</onload>
+		<onload>Skin.SetString(HomeItem.8.Path,ActivateWindow(Music))</onload>
+		<onload>Skin.SetString(HomeItem.8.Sub,Music)</onload>
+		<onload>Skin.SetString(HomeItem.8.Addon,Music)</onload>
+		<onload>Skin.SetString(HomeItem.8.Widget,RecentAlbums)</onload>
+		<onload>Skin.SetString(HomeItem.8.Type,Music)</onload>
+		<onload>Skin.SetString(HomeItem.8.Fanart,special://skin/backgrounds/music.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.8.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.9.Label,$LOCALIZE[350])</onload>
+		<onload condition="!System.Platform.Android">Skin.SetString(HomeItem.9.Path,ActivateWindow(Programs,Addons,return))</onload>
+		<onload condition="System.Platform.Android">Skin.SetString(HomeItem.9.Path,ActivateWindow(Programs))</onload>
+		<onload>Skin.SetString(HomeItem.9.Sub,Programs)</onload>
+		<onload>Skin.SetString(HomeItem.9.Addon,Programs)</onload>
+		<onload>Skin.SetString(HomeItem.9.Widget,None)</onload>
+		<onload>Skin.SetString(HomeItem.9.Type,Programs)</onload>
+		<onload>Skin.SetString(HomeItem.9.Fanart,special://skin/backgrounds/programs.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.9.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.10.Label,$LOCALIZE[33002])</onload>
+		<onload>Skin.SetString(HomeItem.10.Path,PlayMedia(special://skin/extras/Streaming/Radio105NetworkTV.strm))</onload>
+		<onload>Skin.SetString(HomeItem.10.Sub,None)</onload>
+		<onload>Skin.SetString(HomeItem.10.Addon,None)</onload>
+		<onload>Skin.SetString(HomeItem.10.Widget,None)</onload>
+		<onload>Skin.SetString(HomeItem.10.Type,Streaming)</onload>
+		<onload>Skin.SetString(HomeItem.10.Fanart,special://skin/backgrounds/musicvideos.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.10.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.11.Label,$LOCALIZE[31973])</onload>
+		<onload>Skin.SetString(HomeItem.11.Path,PlayDVD())</onload>
+		<onload>Skin.SetString(HomeItem.11.Sub,PlayDisc)</onload>
+		<onload>Skin.SetString(HomeItem.11.Addon,None)</onload>
+		<onload>Skin.SetString(HomeItem.11.Widget,None)</onload>
+		<onload>Skin.SetString(HomeItem.11.Type,PlayDisc)</onload>
+		<onload>Skin.SetString(HomeItem.11.Fanart,special://skin/backgrounds/playdisc.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.11.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.12.Label,$LOCALIZE[13000])</onload>
+		<onload>Skin.SetString(HomeItem.12.Path,ActivateWindow(Settings))</onload>
+		<onload>Skin.SetString(HomeItem.12.Sub,Settings)</onload>
+		<onload>Skin.SetString(HomeItem.12.Addon,None)</onload>
+		<onload>Skin.SetString(HomeItem.12.Widget,None)</onload>
+		<onload>Skin.SetString(HomeItem.12.Type,Settings)</onload>
+		<onload>Skin.SetString(HomeItem.12.Fanart,special://skin/backgrounds/settings.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.12.Display,Default)</onload>
+		<onload>Skin.SetBool(SingleGlobalBackground)</onload>
+		<onload>Skin.SetBool(EnableFanartScript)</onload>
+		<onload>Skin.SetString(FanArtCycleRate,10)</onload>
+		<onload condition="System.Date(11-24,1-6)">Skin.Setbool(HolidayEffects)</onload>
+		<onload>Skin.SetString(HolidayThemePath,special://skin/extras/Holiday/xmastree.jpg)</onload>
+		<onload condition="!System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlaylist)</onload>
+		<onload>Skin.SetBool(InitialSetUpRun)</onload>
+	</include>
+</includes>

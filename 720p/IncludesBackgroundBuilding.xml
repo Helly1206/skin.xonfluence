@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="CommonBackground">
+		<control type="group">
+			<visible>Skin.HasSetting(SingleGlobalBackground) + !Skin.HasSetting(HolidayEffects)</visible>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<imagepath background="true">$INFO[Skin.String(GlobalBackGroundPath)]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>!IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(HolidayEffects)</visible>
+			<control type="image">
+				<description>Holiday Theme Default Image</description>
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<texture>special://skin/extras/Holiday/xmastree.jpg</texture>
+				<visible>IsEmpty(Skin.String(HolidayThemePath)) | !Window.IsVisible(Home) + !IsEmpty(Skin.String(HolidayThemePath))</visible>
+			</control>
+			<control type="multiimage">
+				<description>Holiday Theme Images</description>
+				<include>Dimensions_Fullscreen</include>
+				<imagepath background="true" fallback="special://skin/extras/Holiday/xmastree.jpg">$INFO[Skin.String(HolidayThemePath)]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>Window.IsVisible(Home)</visible>
+				<visible>!IsEmpty(Skin.String(HolidayThemePath))</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(HideHomeNowPlaying) | !Player.HasAudio | Player.Paused | SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
+			<visible>!Skin.HasSetting(SingleGlobalBackground) + !StringCompare(Window(Home).Property(MenuBackground),Theme) + !StringCompare(Container(9000).ListItem.Property(Background),Theme) + !Skin.HasSetting(HolidayEffects)</visible>
+			<control type="group">
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<include>LiveContentBackgrounds</include>
+				<visible>Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(Background),Live) + !StringCompare(Container(9000).ListItem.Property(HiLiteItem),Weather)</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(Background),Live)  + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Weather)</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<imagepath background="true">$VAR[HomeMenuItemBackground]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>Window.IsVisible(Home)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Property(Background),Database) | StringCompare(Container(9000).ListItem.Property(Background),Default) | IsEmpty(Container(9000).ListItem.Property(Background))</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<imagepath background="true">$VAR[WeatherBackground]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>StringCompare(Window(Home).Property(MenuItemSelected),Weather)</visible>
+				<visible>Window.IsVisible(weather)</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>!Window.IsVisible(Home) + !StringCompare(Window(Home).Property(MenuItemSelected),Weather) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
+			</control>
+		</control>
+		<control type="multiimage">
+			<include>Dimensions_Fullscreen</include>
+			<aspectratio>scale</aspectratio>
+			<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+			<visible>!Skin.HasSetting(SingleGlobalBackground) + !Skin.HasSetting(HolidayEffects) + !Window.IsVisible(Home) + !Player.HasVideo + Skin.HasSetting(HideBackGroundFanart)</visible>
+		</control>
+		<control type="group">
+			<visible>!Window.IsVisible(Home) + !Player.HasVideo + !Skin.HasSetting(HideBackGroundFanart)</visible>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>!StringCompare(Window(Home).Property(MenuItemSelected),Weather) + Player.HasAudio</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<imagepath background="true">$VAR[WeatherBackground]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>StringCompare(Window(Home).Property(MenuItemSelected),Weather) + Player.HasAudio</visible>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" fallback="special://skin/backgrounds/videos.jpg">$INFO[Fanart.Image]</texture>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>!IsEmpty(Fanart.Image)</visible>
+				<visible>StringCompare(ListItem.Label,..) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>[StringCompare(ListItem.Label,..) | IsEmpty(ListItem.Property(Fanart_Image))] + Container.Content(Episodes) + IsEmpty(Fanart.Image)</visible>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>!IsEmpty(ListItem.Property(Fanart_Image))</visible>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$VAR[GenreLabelFanart,special://skin/extras/Genres/,.jpg]</texture>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>!StringCompare(ListItem.Label,..) + Container.Content(genres)</visible>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$VAR[GenreFolderFanart,special://skin/extras/Genres/,.jpg]</texture>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>StringCompare(ListItem.Label,..)</visible>
+				<visible>SubString(ListItem.FilenameAndPath,videodb://movies/genres) | SubString(ListItem.FilenameAndPath,videodb://tvshows/genres) | SubString(ListItem.FilenameAndPath,videodb://musicvideos/genres) | SubString(ListItem.FilenameAndPath,musicdb://genres)</visible>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
+				<visible>Window.IsActive(script-NextAired-TVGuide.xml)</visible>
+				<control type="image">
+					<include>Dimensions_Fullscreen</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Container(200).ListItem.Property(Fanart)]</texture>
+					<visible>Control.HasFocus(200)</visible>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<include>Dimensions_Fullscreen</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Container(201).ListItem.Property(Fanart)]</texture>
+					<visible>Control.HasFocus(201)</visible>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<include>Dimensions_Fullscreen</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Container(202).ListItem.Property(Fanart)]</texture>
+					<visible>Control.HasFocus(202)</visible>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<include>Dimensions_Fullscreen</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Container(203).ListItem.Property(Fanart)]</texture>
+					<visible>Control.HasFocus(203)</visible>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<include>Dimensions_Fullscreen</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Container(204).ListItem.Property(Fanart)]</texture>
+					<visible>Control.HasFocus(204)</visible>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<include>Dimensions_Fullscreen</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Container(205).ListItem.Property(Fanart)]</texture>
+					<visible>Control.HasFocus(205)</visible>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<include>Dimensions_Fullscreen</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Container(206).ListItem.Property(Fanart)]</texture>
+					<visible>Control.HasFocus(206)</visible>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Container.Content(Episodes)  + !Control.IsVisible(515) + Skin.HasSetting(EpisodeBackground) + !stringcompare(ListItem.Label,..)</visible>
+				<include>Window_OpenClose_Animation</include>
+				<control type="image">
+					<include>Dimensions_Fullscreen</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[ListItem.icon]</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+				</control>
+				<control type="image">
+					<include>Window_OpenClose_Animation</include>
+					<include>Dimensions_Fullscreen</include>
+					<include>VisibleFadeEffect</include>
+					<aspectratio>stretch</aspectratio>
+					<texture>black-back.png</texture>
+					<colordiffuse>88FFFFFF</colordiffuse>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(724) | Control.IsVisible(508) | Control.IsVisible(51)</visible>
+				<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(EnableAdditionalArtWork)</visible>
+				<include>Window_OpenClose_Animation</include>
+				<control type="image">
+					<include>Window_OpenClose_Animation</include>
+					<include>Dimensions_Fullscreen</include>
+					<include>VisibleFadeEffect</include>
+					<aspectratio>stretch</aspectratio>
+					<texture>black-back.png</texture>
+					<visible>!Skin.HasSetting(HideListItemArtWork) + !Skin.HasSetting(DisableClearArt)</visible>
+					<visible>!IsEmpty(ListItem.Art(clearart)) | !IsEmpty(ListItem.Art(characterart)) | !IsEmpty(ListItem.Art(tvshow.clearlogo)) | !IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+				</control>
+				<control type="image">
+					<left>-200</left>
+					<top>500r</top>
+					<width>720</width>
+					<height>720</height>
+					<include>VisibleFadeEffect</include>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+					<animation effect="rotate" end="-45" center="auto" time="0" condition="true">Conditional</animation>
+					<visible>!Skin.HasSetting(DisableDiscArt) + !IsEmpty(ListItem.Art(discart))</visible>
+				</control>
+				<control type="image">
+					<left>140</left>
+					<top>0</top>
+					<width>1000</width>
+					<height>562</height>
+					<include>VisibleFadeEffect</include>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+					<animation effect="slide" end="0,50" time="0" condition="Control.IsVisible(51)">conditional</animation>
+					<visible>!Skin.HasSetting(DisableClearArt) + !IsEmpty(ListItem.Art(clearart))</visible>
+				</control>
+				<control type="image">
+					<left>140</left>
+					<top>0</top>
+					<width>1000</width>
+					<height>562</height>
+					<include>VisibleFadeEffect</include>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(tvshow.clearart)]</texture>
+					<animation effect="slide" end="0,50" time="0" condition="Control.IsVisible(51)">conditional</animation>
+					<visible>!Skin.HasSetting(DisableClearArt) + IsEmpty(ListItem.Art(clearart)) + !IsEmpty(ListItem.Art(tvshow.clearart))</visible>
+				</control>
+				<control type="image">
+					<left>252r</left>
+					<top>72</top>
+					<width>258</width>
+					<height>100</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<animation effect="rotate" start="0" end="-45" center="auto" time="0" condition="true">Conditional</animation>
+					<visible>!Skin.HasSetting(DisableLogoArt) + !IsEmpty(ListItem.Art(clearlogo)) + !Control.IsVisible(51)</visible>
+				</control>
+				<control type="image">
+					<left>252r</left>
+					<top>72</top>
+					<width>258</width>
+					<height>100</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<animation effect="rotate" start="0" end="-45" center="auto" time="0" condition="true">Conditional</animation>
+					<visible>!Skin.HasSetting(DisableLogoArt) + IsEmpty(ListItem.Art(clearlogo)) + !IsEmpty(ListItem.Art(tvshow.clearlogo)) + !Control.IsVisible(51)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="visualisation">
+			<include>Dimensions_Fullscreen</include>
+			<visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome) + Player.HasAudio + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+			<visible>!stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum) + !stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
+		</control>
+		<control type="group">
+			<visible>Window.IsVisible(Home) + !Skin.HasSetting(HideHomeNowPlaying) + Player.HasAudio + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture>special://skin/backgrounds/media-overlay.jpg</texture>
+				<visible>Skin.HasSetting(NoDiffuseVizFanart) | stringcompare(Visualisation.Name,Waveform) | stringcompare(Visualisation.Name,DirectX Spectrum) | stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
+				<visible>!Skin.HasSetting(DisableSlideShowArt) + !IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+			</control>
+			<include>AlbumArtMusicVizWall</include>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<timeperimage>10000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+				<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
+				<visible>Skin.HasSetting(DisableSlideShowArt) + !IsEmpty(Control.GetLabel(5043))</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<timeperimage>10000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+				<imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
+				<visible>Skin.HasSetting(DisableSlideShowArt) + IsEmpty(Control.GetLabel(5043))</visible>
+			</control>
+			<control type="image">
+				<description>Fanart Image for Artist</description>
+				<include>Dimensions_Fullscreen</include>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+				<texture background="true">$INFO[Player.Art(fanart)]</texture>
+				<fadetime>600</fadetime>
+				<visible>!IsEmpty(Player.Art(fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))</visible>
+				<visible>Skin.HasSetting(DisableSlideShowArt) | IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<timeperimage>10000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+				<visible>!Skin.HasSetting(DisableSlideShowArt) + !IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+			</control>
+		</control>
+		<control type="visualisation">
+			<include>Dimensions_Fullscreen</include>
+			<visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome) + Player.HasAudio + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+			<visible>Skin.HasSetting(NoDiffuseVizFanart) | stringcompare(Visualisation.Name,Waveform) | stringcompare(Visualisation.Name,DirectX Spectrum) | stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>special://skin/backgrounds/media-overlay.jpg</texture>
+			<visible>Player.HasVideo + !Skin.HasSetting(HideHomeNowPlaying) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVChannels) | [Player.HasVideo + Window.IsVisible(TVChannels) + !Skin.HasSetting(HidePVRNowPlaying)]</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="videowindow">
+			<include>Dimensions_Fullscreen</include>
+			<visible>Player.HasVideo + !Skin.HasSetting(HideHomeNowPlaying) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVChannels) | [Window.IsVisible(TVChannels) + !Skin.HasSetting(HidePVRNowPlaying)]</visible>
+		</control>
+	</include>
+	<include name="ArtistExtraFanArt">
+		<control type="multiimage" id="5043">
+			<include>InvisibleButton</include>
+			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
+			<visible>Player.HasAudio + !Player.IsInternetStream</visible>
+		</control>
+		<control type="multiimage" id="5044">
+			<include>InvisibleButton</include>
+			<imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
+			<visible>Player.HasAudio + IsEmpty(Control.GetLabel(5043))</visible>
+		</control>
+	</include>
+	<include name="FanArtExtraThumbs">
+		<control type="multiimage" id="5045">
+			<include>InvisibleButton</include>
+			<imagepath background="true">$INFO[ListItem.Path,,extrathumbs/]</imagepath>
+			<visible>!IsEmpty(ListItem.Title)</visible>
+			<visible>Container.Content(Movies) | Container.Content(MusicVideos)</visible>
+		</control>
+	</include>
+	<include name="VideoExtrasIcon">
+		<control type="image" id="5048">
+			<include>InvisibleButton</include>
+			<texture>$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/movies/,.png]</texture>
+			<visible>System.HasAddon(script.videoextras) + Container.Content(Movies)</visible>
+		</control>
+		<control type="image" id="5049">
+			<include>InvisibleButton</include>
+			<texture>$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/tvshows/,.png]</texture>
+			<visible>System.HasAddon(script.videoextras) + Container.Content(TVShows)</visible>
+		</control>
+		<control type="image" id="5050">
+			<include>InvisibleButton</include>
+			<texture>$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/musicvideos/,.png]</texture>
+			<visible>System.HasAddon(script.videoextras) + Container.Content(MusicVideos)</visible>
+		</control>
+	</include>
+	<include name="ContentPanelBackgrounds">
+		<control type="image">
+			<left>0</left>
+			<top>100r</top>
+			<width>1280</width>
+			<height>100</height>
+			<texture>floor.png</texture>
+			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(50)</visible>
+				<control type="image">
+					<left>50</left>
+					<top>60</top>
+					<width>750</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>652</top>
+					<width>750</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(504) | Control.IsVisible(550) | Control.IsVisible(512)</visible>
+				<control type="image">
+					<left>50</left>
+					<top>60</top>
+					<width>640</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>652</top>
+					<width>640</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>700</left>
+					<top>60</top>
+					<width>530</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>700</left>
+					<top>652</top>
+					<width>530</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(551) | Control.IsVisible(560) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(513)</visible>
+				<control type="image">
+					<left>50</left>
+					<top>60</top>
+					<width>840</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>652</top>
+					<width>840</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>900</left>
+					<top>60</top>
+					<width>330</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>900</left>
+					<top>652</top>
+					<width>330</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(501)</visible>
+				<control type="image">
+					<left>50</left>
+					<top>50</top>
+					<width>1180</width>
+					<height>610</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>652</top>
+					<width>1180</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(503)</visible>
+				<control type="image">
+					<left>50</left>
+					<top>230</top>
+					<width>640</width>
+					<height>430</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>652</top>
+					<width>640</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>700</left>
+					<top>230</top>
+					<width>550</width>
+					<height>430</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>700</left>
+					<top>652</top>
+					<width>550</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(51) | Control.IsVisible(500) | Control.IsVisible(505)</visible>
+				<control type="image">
+					<left>75</left>
+					<top>60</top>
+					<width>1130</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>75</left>
+					<top>652</top>
+					<width>1130</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(514)</visible>
+				<control type="image">
+					<left>50</left>
+					<top>60</top>
+					<width>490</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>652</top>
+					<width>490</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>550</left>
+					<top>60</top>
+					<width>680</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>550</left>
+					<top>652</top>
+					<width>680</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(515)</visible>
+				<control type="image">
+					<left>50</left>
+					<top>60</top>
+					<width>400</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>652</top>
+					<width>400</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>460</left>
+					<top>60</top>
+					<width>770</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>460</left>
+					<top>652</top>
+					<width>770</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(724)</visible>
+				<control type="image">
+					<left>25</left>
+					<top>420</top>
+					<width>1250</width>
+					<height>240</height>
+					<texture border="15">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				</control>
+				<control type="image">
+					<left>25</left>
+					<top>652</top>
+					<width>1250</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

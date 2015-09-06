@@ -1,0 +1,15 @@
+[B]3.1.0[/B]
+- Starting point from ccm-helix 3.0.15: Continue numbering from here
+- Made compatible with isengard (updated from isengard version of confluence)
+- Adapted shutdown settings (extra selectable possilities)
+- Added possibility to use custom shutdown scripts (e.g. for use with service.hts.pvrmanager)
+- Corrected visiblility of exit button in VideoOSD
+- Change toast position to bottom right. No overlapping with logo or weather anymore.
+- Updated language file (en_gb), rest to be generated.
+- Removed sideblade when return from guide (go completely left to show sideblade)
+
+
+
+
+
+

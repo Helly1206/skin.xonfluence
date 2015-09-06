@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="2131">
+	<allowoverlay>no</allowoverlay>
+	<onload condition="Library.HasContent(Music)">PlayerControl(PartyMode(music))</onload>
+	<visible>System.ScreenSaverActive + !Player.HasMedia</visible>
+	<visible>Skin.HasSetting(AutoPartySaver)</visible>
+	<controls></controls>
+</window>
