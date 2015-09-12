@@ -55,6 +55,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>ListItem.Property(DateLabel)</visible>
 					</control>
 				</rulerlayout>
 				<channellayout height="48" width="280">
