@@ -5,6 +5,7 @@
 	<views>50,51,500,732,724,550,551,560,501,508,504,503,515,505,511</views>
 	<include condition="!Skin.HasSetting(DisableTVTunes)">LoadTvTunes</include>
 	<onload condition="!Skin.HasSetting(DisableTVNextAired)">RunScript(script.tv.show.next.aired,backend=True,silent=True)</onload>
+	<onload condition="!Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(Movies) + !Container.Content(tvshows) + !Container.Content(musicvideos) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(playlists) + !Container.Content(studios) + !Container.Content(directors) + !Container.Content(sets) + !Container.Content(tags) + !Skin.HasSetting(Videos_Librarymode) + !StringCompare(Container.FolderName,Files)">ReplaceWindow(videos,library://video/files.xml/)</onload>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
 		<include>CommonBackground</include>
@@ -50,7 +51,7 @@
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<include condition="!Skin.HasSetting(DisableTVNextAired)">NextAired</include>
-		<include>FanArtExtraThumbs</include>
+		<!--include>FanArtExtraThumbs</include-->
 		<control type="image">
 			<description>Section header image</description>
 			<left>20</left>
@@ -132,6 +133,16 @@
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+				</control>
+				<control type="radiobutton" id="99">
+					<description>Library button</description>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[29800]</label>
+					<onclick>Skin.ToggleSetting(Videos_Librarymode)</onclick>
+					<onclick condition="!Skin.HasSetting(Videos_Librarymode)">ReplaceWindow(videos,[])</onclick>
+					<onclick condition="Skin.HasSetting(Videos_Librarymode)">ReplaceWindow(videos,library://video/files.xml/)</onclick>
+					<selected>Skin.HasSetting(Videos_Librarymode)</selected>
+					<visible>!Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(Movies)</visible>
 				</control>
 				<control type="edit" id="19">
 					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>

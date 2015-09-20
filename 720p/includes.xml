@@ -17,6 +17,7 @@
 	<include file="ViewsPictures.xml" />
 	<include file="ViewsAddonBrowser.xml" />
 	<include file="ViewsLiveTV.xml" />
+	<include file="ViewsPVR.xml" />
 	<include file="ViewsPVRGuide.xml" />
 	<include file="ViewsWeather.xml" />
 	<include file="IncludesCodecFlagging.xml" />
@@ -307,6 +308,7 @@
 				<visible>!Player.HasMedia + !IsEmpty(ListItem.Trailer)</visible>
 				<visible>!Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
 				<visible>![Control.IsVisible(500) | Control.IsVisible(732)]</visible>
+				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
 			</control>
 			<control type="button" id="803">
 				<description>Back push button</description>
@@ -321,6 +323,7 @@
 				<onright>804</onright>
 				<onup>800</onup>
 				<ondown>800</ondown>
+				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
 			</control>
 			<control type="button" id="804">
 				<description>Home push button</description>
@@ -336,6 +339,7 @@
 				<onright>801</onright>
 				<onup>800</onup>
 				<ondown>800</ondown>
+				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
 			</control>
 		</control>
 	</include>
@@ -375,7 +379,7 @@
 	</include>
 	<include name="CommonNowPlaying">
 		<control type="group">
-			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
+			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE) + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>

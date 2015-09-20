@@ -13,6 +13,7 @@
 				<onright>60</onright>
 				<onup>724</onup>
 				<ondown>724</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<viewtype label="$LOCALIZE[31648]">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -49,6 +50,14 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					<control type="image">
+						<left>430</left>
+						<top>14</top>
+						<width>20</width>
+						<height>16</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<aspectratio>keep</aspectratio>
 					</control>
 					<!--control type="group">
 						<control type="image">
@@ -129,6 +138,14 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
+					<control type="image">
+						<left>430</left>
+						<top>14</top>
+						<width>20</width>
+						<height>16</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
 					<!--control type="group">
 						<control type="image">
 							<left>435</left>
@@ -170,6 +187,7 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>724</onleft>
 				<onright>800</onright>
+				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(724)</visible>

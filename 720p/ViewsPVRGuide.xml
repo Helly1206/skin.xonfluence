@@ -29,8 +29,8 @@
 				<progresstexture border="0,48,18,14">PVR-EpgProgressIndicator.png</progresstexture>
 				<onleft>101</onleft>
 				<onright>101</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
+				<onup>101</onup>
+				<ondown>101</ondown>
 				<!--<onback>101</onback>-->
 				<rulerlayout height="35" width="40">
 					<control type="label" id="2">
@@ -658,7 +658,7 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
-				<right>40</right>
+				<right>155</right>
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>
@@ -1036,7 +1036,7 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
-				<right>40</right>
+				<right>155</right>
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>
@@ -1361,7 +1361,7 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
-				<right>40</right>
+				<right>155</right>
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>

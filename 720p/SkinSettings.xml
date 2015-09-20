@@ -458,6 +458,19 @@
 						<onclick>Skin.ToggleSetting(UseDiscTypeCase)</onclick>
 						<selected>Skin.HasSetting(UseDiscTypeCase)</selected>
 					</control>
+					<control type="radiobutton" id="117">
+						<description>enable floor return buttons</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31097]</label>
+						<onclick>Skin.ToggleSetting(EnableFloorReturnButtons)</onclick>
+						<selected>Skin.HasSetting(EnableFloorReturnButtons)</selected>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
 					<control type="label" id="120">
 						<width>750</width>
 						<height>45</height>

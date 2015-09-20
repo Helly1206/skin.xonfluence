@@ -2578,6 +2578,7 @@
 		<value condition="substring(listitem.mpaa,x18) | substring(listitem.mpaa,r18)">$INFO[Skin.String(MPAACertificate)]/r18</value>
 		<value condition="substring(listitem.mpaa, U )">$INFO[Skin.String(MPAACertificate)]/u</value>
 		<value condition="substring(listitem.mpaa, G )">$INFO[Skin.String(MPAACertificate)]/g</value>
+		<value condition="substring(listitem.mpaa, M )">$INFO[Skin.String(MPAACertificate)]/13</value>
 	</variable>
 	<!--variable name="VideoListCase">
 		<value condition="ListItem.IsStereoscopic">3D</value>

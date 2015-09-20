@@ -9,6 +9,7 @@
 			<height>460</height>
 			<onup>9000</onup>
 			<ondown>803</ondown>
+			<onback>ActivateWindow(home)</onback>
 			<usecontrolcoords>true</usecontrolcoords>
 			<include>VisibleFadeEffect</include>
 			<control type="fixedlist" id="501">
@@ -22,6 +23,7 @@
 				<onright>501</onright>
 				<onup>2</onup>
 				<ondown>60</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<viewtype label="31028">bigwrap</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -38,6 +40,14 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
+					</control>
+					<control type="image">
+						<left>185</left>
+						<top>315</top>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="310" width="218">
@@ -93,6 +103,7 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onup>501</onup>
 				<ondown>803</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(501)</visible>
@@ -347,6 +358,7 @@
 				<onright>508</onright>
 				<onup>2</onup>
 				<ondown>60</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<viewtype label="31029">wrap</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -368,6 +380,7 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onup>508</onup>
 				<ondown>803</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(508)</visible>
@@ -393,6 +406,7 @@
 				<onright>508</onright>
 				<onup>2</onup>
 				<ondown>60</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<viewtype label="31029">wrap</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -414,6 +428,7 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onup>508</onup>
 				<ondown>803</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(508)</visible>
@@ -794,6 +809,14 @@
 				<fadetime>200</fadetime>
 				<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$VAR[PosterThumb]</texture>
 			</control>
+			<control type="image">
+				<left>90</left>
+				<top>145</top>
+				<width>25</width>
+				<height>25</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Overlay]</texture>
+			</control>
 		</itemlayout>
 		<focusedlayout height="310" width="120">
 			<control type="image">
@@ -851,6 +874,7 @@
 				<onright>60</onright>
 				<onup>503</onup>
 				<ondown>503</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -1007,6 +1031,7 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>503</onleft>
 				<onright>800</onright>
+				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(503)</visible>
@@ -1298,6 +1323,7 @@
 				<onright>60</onright>
 				<onup>504</onup>
 				<ondown>504</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<viewtype label="$LOCALIZE[544]">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -1454,6 +1480,7 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>504</onleft>
 				<onright>800</onright>
+				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(504)</visible>
@@ -1727,6 +1754,7 @@
 				<onright>60</onright>
 				<onup>515</onup>
 				<ondown>515</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<viewtype label="$LOCALIZE[544] 3">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -1760,7 +1788,6 @@
 						<texture>OverlayWatching.png</texture>
 						<visible>ListItem.IsResumable</visible>
 					</control>
-				</itemlayout>
 					<control type="image">
 						<left>320</left>
 						<top>14</top>
@@ -1769,6 +1796,7 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
+				</itemlayout>
 				<focusedlayout condition="Container.Content(Episodes) | !Skin.HasSetting(Enable515WideBanners)" height="40" width="345">
 					<control type="image">
 						<left>0</left>
@@ -1943,6 +1971,7 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>515</onleft>
 				<onright>800</onright>
+				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(515)</visible>
@@ -2265,6 +2294,7 @@
 				<onright>732</onright>
 				<onup>732</onup>
 				<ondown>732</ondown>
+				<onback>ActivateWindow(home)</onback>
 				<viewtype label="31030">panel</viewtype>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>

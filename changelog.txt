@@ -1,3 +1,17 @@
+[B]3.1.1[/B]
+- MPAA rating fix for Australia (#16)
+- Added views for PVR: Big List (ed76s mod) and Preview List
+- Changed pages position in PVR, no overlapping with buttons anymore
+- Added accessibility of floor return buttons with remote control
+- Cleanup of obsolete files
+- Added Library mode/ File mode option for videos
+- Pictures window always opens in pictures folder now (overruled bug)
+- Go back to home when pressing back button in file views (to prevent running back through a lot of folders). Not changed in addon-views
+- Added watched status for all views unfocused (#12)
+- Added option for visibility of floor return buttons
+- Enable Now Playing info now works on all screens (#24)
+- Removed FanartExtraThumbnails for now, as it is not stable for all addons (#36)
+
 [B]3.1.0[/B]
 - Starting point from ccm-helix 3.0.15: Continue numbering from here
 - Made compatible with isengard (updated from isengard version of confluence)
