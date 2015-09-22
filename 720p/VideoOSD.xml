@@ -177,12 +177,18 @@
 				<width>270</width>
 				<texture>-</texture>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<visible>VideoPlayer.HasMenu</visible>
 			</control>
 			<control type="image" id="2300">
 				<width>165</width>
 				<texture>-</texture>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
+			<control type="image" id="2600">
++				<width>325</width>
++				<texture>-</texture>
++				<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu</visible>
++			</control>
 			<control type="button" id="255">
 				<enable>VideoPlayer.IsStereoscopic</enable>
 				<animation effect="fade" start="100" end="0" time="75" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
@@ -257,6 +263,7 @@
 				<enable>VideoPlayer.HasMenu</enable>
 				<animation effect="fade" start="100" end="50" time="75" condition="!VideoPlayer.HasMenu">Conditional</animation>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<visible>VideoPlayer.HasMenu</visible>
 			</control>
 			<control type="togglebutton" id="353">
 				<width>55</width>
@@ -294,6 +301,7 @@
 			<animation effect="slide" start="0,0" end="0,80" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
 			<animation effect="slide" start="0,0" end="55,0" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="55,0" time="0" condition="!VideoPlayer.HasMenu">Conditional</animation>
 			<right>145</right>
 			<bottom>45</bottom>
 			<width>256</width>
