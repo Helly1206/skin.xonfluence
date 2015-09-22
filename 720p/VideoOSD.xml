@@ -185,10 +185,10 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2600">
-+				<width>325</width>
-+				<texture>-</texture>
-+				<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu</visible>
-+			</control>
+				<width>325</width>
+				<texture>-</texture>
+				<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu</visible>
+			</control>
 			<control type="button" id="255">
 				<enable>VideoPlayer.IsStereoscopic</enable>
 				<animation effect="fade" start="100" end="0" time="75" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>

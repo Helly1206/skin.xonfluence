@@ -260,11 +260,11 @@
 				<visible>MusicPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2500">
-+				<width>270</width>
-+				<height>55</height>
-+				<texture>-</texture>
-+				<visible>!MusicPlayer.Content(LiveTV) + !Player.CanRecord</visible>
-+			</control>
+				<width>270</width>
+  			<height>55</height>
+				<texture>-</texture>
+				<visible>!MusicPlayer.Content(LiveTV) + !Player.CanRecord</visible>
+			</control>
 
 			<control type="togglebutton" id="701">
 				<width>55</width>
