@@ -251,8 +251,7 @@
 				<width>215</width>
 				<height>55</height>
 				<texture>-</texture>
-				<visible>!MusicPlayer.Content(LiveTV)</visible>
-				<visible>Player.CanRecord</visible>
+				<visible>!MusicPlayer.Content(LiveTV) + Player.CanRecord</visible>
 			</control>
 			<control type="image" id="2400">
 				<width>270</width>
