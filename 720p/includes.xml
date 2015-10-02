@@ -1622,7 +1622,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font13</font>
-		<focusedcolor>black</focusedcolor>
+		<focusedcolor>white</focusedcolor>
 	</include>
 	<include name="TransparentEffect">
 		<animation effect="fade" start="100" end="40" time="0" condition="SubString(skin.string(MediaPanelTrans),85)">Conditional</animation>
