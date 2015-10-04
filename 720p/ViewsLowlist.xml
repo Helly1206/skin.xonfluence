@@ -13,7 +13,6 @@
 				<onright>60</onright>
 				<onup>724</onup>
 				<ondown>724</ondown>
-				<onback>ActivateWindow(home)</onback>
 				<viewtype label="$LOCALIZE[31648]">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -187,7 +186,6 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>724</onleft>
 				<onright>800</onright>
-				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(724)</visible>

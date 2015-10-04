@@ -26,6 +26,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_system.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -35,6 +36,7 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[20077]</label>
@@ -45,6 +47,7 @@
 				<visible>!IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget)">TopLeftInfo</include>
 		<control type="group">
 			<left>90</left>
 			<top>30</top>
@@ -94,14 +97,14 @@
 				<width>150</width>
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
-				<texture>special://skin/media/Xonfluence_Logo.png</texture>
+				<texture>Xonfluence_Logo.png</texture>
 			</control>
-			<control type="button" id="800">
+			<control type="button" id="50">
 				<include>InvisibleButton</include>
-				<onleft>801</onleft>
-				<onright>804</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
+				<onleft>800</onleft>
+				<onright>800</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
 				<visible>false</visible>
 			</control>
 			<control type="list" id="9000">
@@ -471,7 +474,46 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="label" id="120">
+					<control type="radiobutton" id="118">
+						<description>enable volume buttons</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31063]</label>
+						<onclick>Skin.ToggleSetting(EnableVolumeButtons)</onclick>
+						<selected>Skin.HasSetting(EnableVolumeButtons)</selected>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="119">
+						<description>volume buttons small jump</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31064]</label>
+						<onclick>Skin.ToggleSetting(SmallVolumeJump)</onclick>
+						<selected>Skin.HasSetting(SmallVolumeJump)</selected>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="120">
+						<description>Top left widget on all screens</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31098]</label>
+						<onclick>Skin.ToggleSetting(AllScreenTopLeftWidget)</onclick>
+						<selected>Skin.HasSetting(AllScreenTopLeftWidget)</selected>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="label" id="124">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -481,7 +523,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="button" id="121">
+					<control type="button" id="125">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -507,7 +549,7 @@
 						<onclick condition="StringCompare(Container(9011).Position,11)">Skin.SetString(InitialMenuItem,10)</onclick>
 						<onclick condition="StringCompare(Container(9011).Position,12)">Skin.SetString(InitialMenuItem,-2)</onclick>
 					</control>
-					<control type="radiobutton" id="122">
+					<control type="radiobutton" id="126">
 						<description>lower menu bar</description>
 						<width>750</width>
 						<height>40</height>
@@ -520,7 +562,7 @@
 						<onclick>Skin.ToggleSetting(LowerMainMenuBar)</onclick>
 						<selected>Skin.HasSetting(LowerMainMenuBar)</selected>
 					</control>
-					<control type="radiobutton" id="123">
+					<control type="radiobutton" id="127">
 						<description>enable wrap around menu</description>
 						<width>750</width>
 						<height>40</height>
@@ -534,7 +576,7 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="124">
+					<control type="radiobutton" id="128">
 						<description>enable fixed ends menu</description>
 						<width>750</width>
 						<height>40</height>
@@ -548,7 +590,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>!Skin.HasSetting(WrapAroundHomeMenu)</enable>
 					</control>
-					<control type="radiobutton" id="125">
+					<control type="radiobutton" id="129">
 						<description>hide horizontal submenu</description>
 						<width>750</width>
 						<height>40</height>
@@ -561,7 +603,7 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<!--control type="radiobutton" id="126">
+					<!--control type="radiobutton" id="130">
                         <description>enable submenu advise</description>
                         <width>750</width>
                         <height>40</height>
@@ -575,7 +617,7 @@
                         <texturenofocus>MenuItemNF.png</texturenofocus>
                         <enable>Skin.HasSetting(AutoVisableSubMenu)</enable>
                     </control-->
-					<control type="radiobutton" id="127">
+					<control type="radiobutton" id="131">
 						<description>large widget layout</description>
 						<width>750</width>
 						<height>40</height>
@@ -588,7 +630,7 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="128">
+					<control type="radiobutton" id="132">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -600,7 +642,7 @@
 						<onclick>Skin.ToggleSetting(VizOnlyOnHome)</onclick>
 						<selected>Skin.HasSetting(VizOnlyOnHome)</selected>
 					</control>
-					<control type="radiobutton" id="129">
+					<control type="radiobutton" id="133">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -613,7 +655,7 @@
 						<selected>!Skin.HasSetting(HideSuggestedMedia)</selected>
 						<enable>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</enable>
 					</control>
-					<control type="radiobutton" id="130">
+					<control type="radiobutton" id="134">
 						<description>enable now playing info</description>
 						<width>750</width>
 						<height>40</height>
@@ -626,7 +668,7 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="131">
+					<control type="radiobutton" id="135">
 						<description>enable now TV Recording info</description>
 						<width>750</width>
 						<height>40</height>
@@ -639,7 +681,7 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="132">
+					<control type="radiobutton" id="136">
 						<description>enable stats bar</description>
 						<width>750</width>
 						<height>40</height>
@@ -652,7 +694,7 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="button" id="133">
+					<control type="button" id="137">
 						<description>Top Left Home Info</description>
 						<width>750</width>
 						<height>40</height>
@@ -669,7 +711,7 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="134">
+					<control type="radiobutton" id="138">
 						<description>enable raindrop effect</description>
 						<width>750</width>
 						<height>40</height>

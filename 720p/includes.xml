@@ -282,63 +282,71 @@
 			<width>150</width>
 			<height>55</height>
 			<aspectratio>keep</aspectratio>
-			<texture>special://skin/media/Xonfluence_Logo.png</texture>
+			<texture>Xonfluence_Logo.png</texture>
 		</control>
 	</include>
 	<include name="FloorReturnButtons">
-		<control type="group">
-			<left>190r</left>
+		<control type="grouplist" id="800">
+			<left>280r</left>
 			<top>55r</top>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<align>right</align>align>
+			<orientation>horizontal</orientation>
 			<animation effect="fade" time="200" condition="Window.Previous(home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(home)">WindowClose</animation>
 			<control type="button" id="801">
 				<description>Trailer Button</description>
-				<left>45</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<onclick>PlayMedia("$INFO[ListItem.Trailer]")</onclick>
 				<texturefocus border="5">FloorButtons/FloorTrailerFO.png</texturefocus>
 				<texturenofocus border="5">FloorButtons/FloorTrailerNF.png</texturenofocus>
-				<onleft>804</onleft>
-				<onright>803</onright>
-				<onup>800</onup>
-				<ondown>800</ondown>
 				<visible>!Skin.HasSetting(HideTrailerBtn)</visible>
 				<visible>!Player.HasMedia + !IsEmpty(ListItem.Trailer)</visible>
 				<visible>!Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
 				<visible>![Control.IsVisible(500) | Control.IsVisible(732)]</visible>
 				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
 			</control>
+			<control type="button" id="802">
+				<description>Volume Up Button</description>
+				<width>45</width>
+				<height>45</height>
+				<onclick>$VAR[VolumeStepUp]</onclick>
+				<onclick>VolumeUp</onclick>
+				<texturefocus border="5">FloorButtons/FloorVolPlusFO.png</texturefocus>
+				<texturenofocus border="5">FloorButtons/FloorVolPlusNF.png</texturenofocus>
+				<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
+			</control>
 			<control type="button" id="803">
+				<description>Volume Down Button</description>
+				<width>45</width>
+				<height>45</height>
+				<onclick>$VAR[VolumeStepDown]</onclick>
+				<onclick>VolumeDown</onclick>
+				<texturefocus border="5">FloorButtons/FloorVolMinusFO.png</texturefocus>
+				<texturenofocus border="5">FloorButtons/FloorVolMinusNF.png</texturenofocus>
+				<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
+			</control>
+			<control type="button" id="804">
 				<description>Back push button</description>
-				<left>90</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<onclick>back</onclick>
 				<texturefocus border="5">FloorButtons/FloorBackFO.png</texturefocus>
 				<texturenofocus border="5">FloorButtons/FloorBackNF.png</texturenofocus>
-				<onleft>801</onleft>
-				<onright>804</onright>
-				<onup>800</onup>
-				<ondown>800</ondown>
 				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
 			</control>
-			<control type="button" id="804">
+			<control type="button" id="805">
 				<description>Home push button</description>
-				<left>135</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<onclick>Dialog.Close(all,true)</onclick>
 				<onclick>ActivateWindow(home)</onclick>
 				<texturefocus border="5">FloorButtons/FloorHomeFO.png</texturefocus>
 				<texturenofocus border="5">FloorButtons/FloorHomeNF.png</texturenofocus>
-				<onleft>803</onleft>
-				<onright>801</onright>
-				<onup>800</onup>
-				<ondown>800</ondown>
 				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
 			</control>
 		</control>
@@ -347,30 +355,31 @@
 		<control type="group">
 			<animation effect="slide" start="0,0" end="-70,0" time="0" condition="!Skin.HasSetting(DisableFloorBtns)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-45,0" time="0" condition="!Skin.HasSetting(HideTrailerBtn)">Conditional</animation>
+			<visible>!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 			<control type="label">
 				<description>Page Count Label</description>
-				<right>40</right>
+				<left>200</left>
 				<top>53r</top>
-				<width>500</width>
+				<width>1100</width>
 				<height>20</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
-				<align>right</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[Container.NumItems,([COLOR=white],[/COLOR]) $LOCALIZE[31025]]$INFO[Container.CurrentPage, - $LOCALIZE[31024] ([COLOR=white]]$INFO[Container.NumPages,/,[/COLOR])]</label>
 				<include>Window_OpenClose_Animation</include>
 			</control>
 			<control type="label">
 				<description>Container Duration Label</description>
-				<right>40</right>
+				<left>200</left>
 				<top>32r</top>
-				<width>500</width>
+				<width>1100</width>
 				<height>20</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
-				<align>right</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[Container.TotalTime,$LOCALIZE[31009] ([COLOR=white],[/COLOR])]</label>
 				<include>Window_OpenClose_Animation</include>
@@ -1075,7 +1084,7 @@
 		</control>
 	</include>
 	<include name="Clock">
-		<control type="label">
+		<control type="label"  id="1">
 			<description>time label</description>
 			<right>20</right>
 			<top>5</top>
@@ -1087,8 +1096,28 @@
 			<textcolor>C0FFFFFF</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
+			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
-			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="Window.IsVisible(MusicOSD)">conditional</animation>
+			<!--animation effect="slide" start="0,0" end="-80,0" time="0" condition="Window.IsVisible(MusicOSD)">conditional</animation-->
+			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
+			<visible>!Skin.HasSetting(HideSystemTime)</visible>
+		</control>
+	</include>
+	<include name="Date">
+		<control type="label" id="1">
+			<description>Date label</description>
+			<right>20</right>
+			<top>35</top>
+			<width>200</width>
+			<height>15</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>font10</font>
+			<textcolor>C0FFFFFF</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[System.Date]</label>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
@@ -1622,7 +1651,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font13</font>
-		<focusedcolor>black</focusedcolor>
+		<focusedcolor>white</focusedcolor>
 	</include>
 	<include name="TransparentEffect">
 		<animation effect="fade" start="100" end="40" time="0" condition="SubString(skin.string(MediaPanelTrans),85)">Conditional</animation>
@@ -1714,5 +1743,106 @@
 			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.11) |
 			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.12)
 		</visible>
+	</include>
+	<include name="TopLeftInfo">
+		<control type="image" id="1">
+			<description>LOGO</description>
+			<left>10</left>
+			<top>5</top>
+			<width>120</width>
+			<height>49</height>
+			<aspectratio aligny="top" align="left">keep</aspectratio>
+			<texture>kodi-logo.png</texture>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>IsEmpty(Skin.String(TopLeftHomeInfo)) | StringCompare(Skin.String(TopLeftHomeInfo),Logo)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Logged User</description>
+			<left>20</left>
+			<top>5</top>
+			<height>45</height>
+			<width>350</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font28_title</font>
+			<textcolor>C0FFFFFF</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<info>System.ProfileName</info>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!StringCompare(System.ProfileName,Master user) + StringCompare(Skin.String(TopLeftHomeInfo),Profile)</visible>
+		</control>
+		<control type="group" id="1">
+			<left>20</left>
+			<top>0</top>
+			<visible>!IsEmpty(Weather.Plugin) + StringCompare(Skin.String(TopLeftHomeInfo),Weather)</visible>
+			<include>Window_OpenClose_Animation</include>
+			<control type="image" id="1">
+				<description>Weather image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[Weather.Conditions]</texture>
+			</control>
+			<control type="label" id="1">
+				<description>Location label</description>
+				<left>65</left>
+				<top>5</top>
+				<width>500</width>
+				<height>15</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[Window(Weather).Property(Location)]</label>
+			</control>
+			<control type="grouplist" id="1">
+				<left>65</left>
+				<top>20</top>
+				<width>1000</width>
+				<height>30</height>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<itemgap>0</itemgap>
+				<control type="label" id="1">
+					<description>Temp label</description>
+					<width min="0" max="300">auto</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+				</control>
+				<control type="label" id="1">
+					<description>Temp Units</description>
+					<width min="0" max="100">auto</width>
+					<height>22</height>
+					<font>font10</font>
+					<aligny>center</aligny>
+					<label>$INFO[System.TemperatureUnits]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Conditions Label</description>
+					<width>500</width>
+					<height>22</height>
+					<font>font10</font>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
 	</include>
 </includes>

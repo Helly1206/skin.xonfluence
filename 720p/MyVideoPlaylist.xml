@@ -47,14 +47,6 @@
 				<visible>!IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
-		<control type="button" id="800">
-			<include>InvisibleButton</include>
-			<onleft>801</onleft>
-			<onright>804</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<visible>false</visible>
-		</control>
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
 			<left>-251</left>

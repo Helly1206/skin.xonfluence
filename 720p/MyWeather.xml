@@ -27,6 +27,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_weather.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -36,11 +37,13 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[8]</label>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget)">TopLeftInfo</include>
 		<control type="image">
 			<left>0</left>
 			<top>100r</top>
@@ -51,14 +54,6 @@
 			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
-		</control>
-		<control type="button" id="800">
-			<include>InvisibleButton</include>
-			<onleft>801</onleft>
-			<onright>804</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<visible>false</visible>
 		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">

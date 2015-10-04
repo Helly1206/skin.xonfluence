@@ -1,3 +1,22 @@
+[B]3.1.2[/B]
+- Reverted back button behavior, as most users (including myself) didn't like it.
+- Changed library mode/ file mode implementation
+- Implemented updater if videos window
+- Merged msduketown's pullrequest on silly record buttons and DVD logos
+- Scrolling setting with autoscroll in PVR views and PVR Views Guide
+- NextPVR preferences dialog updated (Cannot test myself) #74
+- Added audio buttons on FloorReturnButtons (for touch) #37
+- Added audio buttons on OSD
+- Re-aligned pagecount labels with added buttons
+- Changed onload behavior of pictures window (hopefully prevents crashing on some windows systems) (pull request on github)
+- Changed 'blue' random play button on music osd to normal not focussed color #47
+- Make focused color of keyboards white for better contrast (pull request on github)
+- Top left icon on all screens instead on screen name (option in skinsettings) #45/ #54
+- Realigned clock and date on OSD displays
+- Hide CommonPageCount when NowPlaying is active (fields may overlap otherwise)
+- Updated textures and synced with confluence
+- Added Zix theme
+
 [B]3.1.1[/B]
 - MPAA rating fix for Australia (#16)
 - Added views for PVR: Big List (ed76s mod) and Preview List

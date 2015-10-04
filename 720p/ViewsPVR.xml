@@ -159,7 +159,7 @@
 					<shadowcolor>black</shadowcolor>
 					<pagecontrol>-</pagecontrol>
 					<label>$INFO[Container(50).ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -399,6 +399,7 @@
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
 				<include>Window_OpenClose_Animation</include>
+				<visible>!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 			</control>
 		</control>
 	</include>
@@ -566,7 +567,7 @@
 					<shadowcolor>black</shadowcolor>
 					<pagecontrol>-</pagecontrol>
 					<label>$INFO[Container(5010).ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="501000">true</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="501000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				
 				<!--NextTitle-->
@@ -855,6 +856,7 @@
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(5010).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(5010).CurrentPage]/$INFO[Container(5010).NumPages][/COLOR])</label>
 				<include>Window_OpenClose_Animation</include>
+				<visible>!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 			</control>
 		</control>
 	</include>	
@@ -1106,6 +1108,7 @@
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(5060).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(5060).CurrentPage]/$INFO[Container(5060).NumPages][/COLOR])</label>
 				<include>Window_OpenClose_Animation</include>
+				<visible>!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(5060)</visible>
@@ -1223,7 +1226,7 @@
 						<visible>Control.IsVisible(5060)</visible>
 						<label>$INFO[Container(5060).ListItem.Plot]</label>
 						<animation effect="fade" start="100" end="0" time="2000" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)">Conditional</animation>
-						<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 					<control type="image">
 						<posx>610</posx>

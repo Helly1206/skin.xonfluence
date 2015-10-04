@@ -16,14 +16,6 @@
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
-		<control type="button" id="800">
-			<include>InvisibleButton</include>
-			<onleft>801</onleft>
-			<onright>804</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<visible>false</visible>
-		</control>
 		<include>FloorReturnButtons</include>
 		<include>PVRHeader</include>
 		<!-- view id = 50 -->

@@ -39,42 +39,9 @@
 				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
 				<visible>!Skin.String(MusicOSDInfo,never)</visible>
 			</control>
-			<control type="label">
-				<description>profile label</description>
-				<left>10</left>
-				<top>10</top>
-				<width>450</width>
-				<height>30</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font28_title</font>
-				<textcolor>C0FFFFFF</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<info>System.ProfileName</info>
-				<include>Window_OpenClose_Animation</include>
-				<visible>!Skin.String(MusicOSDInfo,never)</visible>
-				<visible>!StringCompare(System.ProfileName,Master user) + StringCompare(Skin.String(TopLeftHomeInfo),Profile)</visible>
-			</control>
+			<include condition="!Skin.String(MusicOSDInfo,never)">TopLeftInfo</include>
 			<include condition="!Skin.String(MusicOSDInfo,never)">Clock</include>
-			<control type="label">
-				<description>Date label</description>
-				<right>20</right>
-				<top>35</top>
-				<width>200</width>
-				<height>15</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font10</font>
-				<textcolor>C0FFFFFF</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>$INFO[System.Date]</label>
-				<include>Window_OpenClose_Animation</include>
-				<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
-				<animation effect="slide" start="0,0" end="-80,0" time="0" condition="Window.IsVisible(MusicOSD)">conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
-				<visible>!Skin.HasSetting(HideSystemTime)</visible>
-				<visible>!Skin.String(MusicOSDInfo,never)</visible>
-			</control>
+			<include condition="!Skin.String(MusicOSDInfo,never)">Date</include>
 			<control type="image">
 				<left>0</left>
 				<top>230r</top>

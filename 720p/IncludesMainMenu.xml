@@ -23,7 +23,7 @@
 		<onright condition="!Skin.HasSetting(FixedEndingMenu)">9000</onright>
 		<onleft condition="Skin.HasSetting(FixedEndingMenu)">noop</onleft>
 		<onright condition="Skin.HasSetting(FixedEndingMenu)">noop</onright>
-		<onup condition="!Skin.HasSetting(DisableGlobalSearch)">608</onup>
+		<onup condition="!Skin.HasSetting(DisableGlobalSearch)">610</onup>
 		<onup condition="Skin.HasSetting(DisableGlobalSearch)">603</onup>
 		<ondown>9001</ondown>
 		<pagecontrol>-</pagecontrol>
@@ -317,7 +317,7 @@
 		<onload>Skin.SetString(HomeItem.1.Fanart,special://skin/backgrounds/weather.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.1.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.2.Label,$LOCALIZE[1213])</onload>
-		<onload>Skin.SetString(HomeItem.2.Path,ActivateWindow(Pictures))</onload>
+		<onload>Skin.SetString(HomeItem.2.Path,ActivateWindow(Pictures,Pictures))</onload>
 		<onload>Skin.SetString(HomeItem.2.Sub,Pictures)</onload>
 		<onload>Skin.SetString(HomeItem.2.Addon,Pictures)</onload>
 		<onload>Skin.SetString(HomeItem.2.Widget,None)</onload>
@@ -341,7 +341,7 @@
 		<onload>Skin.SetString(HomeItem.4.Fanart,special://skin/backgrounds/tv.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.4.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.5.Label,$LOCALIZE[3])</onload>
-		<onload>Skin.SetString(HomeItem.5.Path,ActivateWindow(Videos,root,return))</onload>
+		<onload>Skin.SetString(HomeItem.5.Path,ActivateWindow(1199))</onload>
 		<onload>Skin.SetString(HomeItem.5.Sub,Videos)</onload>
 		<onload>Skin.SetString(HomeItem.5.Addon,Videos)</onload>
 		<onload>Skin.SetString(HomeItem.5.Widget,UnWatched)</onload>
@@ -412,5 +412,44 @@
 		<onload>Skin.SetString(HolidayThemePath,special://skin/extras/Holiday/xmastree.jpg)</onload>
 		<onload condition="!System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlaylist)</onload>
 		<onload>Skin.SetBool(InitialSetUpRun)</onload>
+	</include>
+	<include name="UpdatesV312">
+		<onload condition="Skin.String(HomeItem.1.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.1.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.1.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.1.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.2.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.2.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.2.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.2.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.3.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.3.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.3.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.3.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.4.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.4.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.4.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.4.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.5.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.5.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.5.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.5.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.6.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.6.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.6.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.6.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.7.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.7.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.7.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.7.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.8.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.8.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.8.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.8.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.9.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.9.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.9.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.9.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.10.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.10.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.10.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.10.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.11.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.11.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.11.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.11.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.12.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.12.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.12.Path,ActivateWindow(Videos,files,return))">Skin.SetString(HomeItem.12.Path,ActivateWindow(1199))</onload>
+		<onload condition="Skin.String(HomeItem.1.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.1.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.2.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.2.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.3.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.3.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.4.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.4.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.5.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.5.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.6.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.6.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.7.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.7.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.8.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.8.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.9.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.9.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.10.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.10.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.11.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.11.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload condition="Skin.String(HomeItem.12.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.12.Path,ActivateWindow(Pictures,Pictures))</onload>
+		<onload>Skin.SetBool(Updates_V312)</onload>
 	</include>
 </includes>

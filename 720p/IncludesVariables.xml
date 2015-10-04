@@ -2796,4 +2796,30 @@
 	<variable name="CustomSuspendArg" type="text">
 		<value condition="!IsEmpty(Skin.String(CustomSuspendArg))">$INFO[Skin.String(CustomSuspendArg)]</value>
 	</variable>
+	<variable name="VolumeStepDown" type="text">
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,90)">SetVolume(90,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,80)">SetVolume(80,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,70)">SetVolume(70,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,60)">SetVolume(60,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,50)">SetVolume(50,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,40)">SetVolume(40,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,30)">SetVolume(30,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,20)">SetVolume(20,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,10)">SetVolume(10,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + IntegerGreaterThan(player.volume,1)">SetVolume(1,true)</value>
+		<value>VolumeDown</value>
+	</variable>
+	<variable name="VolumeStepUp" type="text">
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,10)">SetVolume(11,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,20)">SetVolume(21,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,30)">SetVolume(31,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,40)">SetVolume(41,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,50)">SetVolume(51,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,60)">SetVolume(61,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,70)">SetVolume(71,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,80)">SetVolume(81,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,90)">SetVolume(91,true)</value>
+		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,99)">SetVolume(100,true)</value>
+		<value>VolumeUp</value>
+	</variable>
 </includes>

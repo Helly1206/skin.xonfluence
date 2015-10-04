@@ -15,10 +15,10 @@
 			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
-		<control type="button" id="800">
+		<control type="button" id="50">
 			<include>InvisibleButton</include>
-			<onleft>801</onleft>
-			<onright>804</onright>
+			<onleft>800</onleft>
+			<onright>800</onright>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<visible>false</visible>
@@ -72,7 +72,7 @@
 				<width>150</width>
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
-				<texture>special://skin/media/Xonfluence_Logo.png</texture>
+				<texture>Xonfluence_Logo.png</texture>
 			</control>
 			<control type="list" id="9000">
 				<left>10</left>
@@ -263,6 +263,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_system.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -272,11 +273,13 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[5]</label>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget)">TopLeftInfo</include>
 		<include>Clock</include>
 	</controls>
 </window>

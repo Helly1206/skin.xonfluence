@@ -13,7 +13,6 @@
 				<onright>60</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
-				<onback>ActivateWindow(home)</onback>
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -206,7 +205,6 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>50</onleft>
 				<onright>800</onright>
-				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(50)</visible>
@@ -264,7 +262,6 @@
 				<onright>60</onright>
 				<onup>500</onup>
 				<ondown>500</ondown>
-				<onback>ActivateWindow(home)</onback>
 				<viewtype label="21371">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -458,7 +455,6 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>500</onleft>
 				<onright>800</onright>
-				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(500)</visible>
@@ -479,7 +475,6 @@
 				<onright>60</onright>
 				<onup>505</onup>
 				<ondown>505</ondown>
-				<onback>ActivateWindow(home)</onback>
 				<viewtype label="$LOCALIZE[539]">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -537,7 +532,6 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>505</onleft>
 				<onright>800</onright>
-				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(505)</visible>
@@ -557,7 +551,6 @@
 				<onright>60</onright>
 				<onup>51</onup>
 				<ondown>51</ondown>
-				<onback>ActivateWindow(home)</onback>
 				<viewtype label="537">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -793,7 +786,6 @@
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>50</onleft>
 				<onright>800</onright>
-				<onback>ActivateWindow(home)</onback>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(51)</visible>

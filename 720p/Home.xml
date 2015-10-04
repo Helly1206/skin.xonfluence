@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+	<include condition="!Skin.HasSetting(Updates_V312)">UpdatesV312</include>
 	<onload condition="!IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
 	<onload condition="!IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
 	<onload condition="!IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
@@ -42,35 +43,7 @@
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
-		<control type="image">
-			<description>LOGO</description>
-			<left>10</left>
-			<top>5</top>
-			<width>120</width>
-			<height>49</height>
-			<aspectratio aligny="top" align="left">keep</aspectratio>
-			<texture>kodi-logo.png</texture>
-			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>
-			<visible>IsEmpty(Skin.String(TopLeftHomeInfo)) | StringCompare(Skin.String(TopLeftHomeInfo),Logo)</visible>
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
-		</control>
-		<control type="label">
-			<description>profile label</description>
-			<left>10</left>
-			<top>10</top>
-			<width>450</width>
-			<height>30</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>font28_title</font>
-			<textcolor>C0FFFFFF</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<info>System.ProfileName</info>
-			<include>Window_OpenClose_Animation</include>
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
-			<visible>!StringCompare(System.ProfileName,Master user) + StringCompare(Skin.String(TopLeftHomeInfo),Profile)</visible>
-		</control>
+		<include>TopLeftInfo</include>
 		<!-- Music Info -->
 		<control type="group">
 			<left>0</left>
@@ -645,7 +618,7 @@
 			<onright>9000</onright>
 			<onup>21</onup>
 			<ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
-			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
+			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">610</ondown>
 			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 			<visible>false</visible>
 		</control>
@@ -656,7 +629,7 @@
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-100,0" time="225" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
 			<animation effect="fade" start="100" end="65" time="150" condition="Window.IsVisible(2123) | Window.IsVisible(2124) | Window.IsVisible(2125) | Window.IsVisible(Favourites)">conditional</animation>
-			<animation effect="slide" start="0,0" end="365,0" time="225" condition="!Player.HasMedia + !Skin.HasSetting(EnableHomeStats)">conditional</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="225" condition="!Player.HasMedia + !Skin.HasSetting(EnableHomeStats)">conditional</animation>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
 				<effect type="fade" start="0" end="100" time="225" />
@@ -675,13 +648,13 @@
 				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
 				<animation effect="slide" start="0,0" end="145,0" time="0" condition="Skin.HasSetting(DisableGlobalSearch)">Conditional</animation>
 			</control>
-			<control type="radiobutton" id="608">
+			<control type="radiobutton" id="610">
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<description>Global Search</description>
 				<left>35</left>
 				<top>0</top>
 				<height>35</height>
-				<width>145</width>
+				<width>115</width>
 				<textwidth>150</textwidth>
 				<textoffsetx>10</textoffsetx>
 				<align>left</align>
@@ -698,7 +671,7 @@
 				<textureradioonnofocus>icon_search.png</textureradioonnofocus>
 				<textureradioofffocus>icon_search.png</textureradioofffocus>
 				<textureradiooffnofocus>icon_search.png</textureradiooffnofocus>
-				<onleft>607</onleft>
+				<onleft>609</onleft>
 				<onright>601</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
@@ -706,7 +679,7 @@
 				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
 			</control>
 			<control type="group" id="600">
-				<left>180</left>
+				<left>150</left>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 				<ondown>9000</ondown>
@@ -716,7 +689,7 @@
 					<description>Background image</description>
 					<left>0</left>
 					<top>0</top>
-					<width>205</width>
+					<width>255</width>
 					<height>35</height>
 					<texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
 					<colordiffuse>CCFFFFFF</colordiffuse>
@@ -734,7 +707,7 @@
 						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPrevTrackFO.png</texturefocus>
 						<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-						<onleft>608</onleft>
+						<onleft>610</onleft>
 						<onright>602</onright>
 						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
 						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
@@ -820,6 +793,40 @@
 						<ondown>9000</ondown>
 						<onclick>PlayerControl(Next)</onclick>
 					</control>
+					<control type="button" id="607">
+						<posx>190</posx>
+						<posy>2</posy>
+						<width>30</width>
+						<height>30</height>
+						<label>-</label>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolUpFO.png</texturefocus>
+						<texturenofocus>OSDVolUpNF.png</texturenofocus>
+						<onleft>606</onleft>
+						<onright>608</onright>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+						<ondown>9000</ondown>
+						<onclick>$VAR[VolumeStepUp]</onclick>
+						<onclick>VolumeUp</onclick>
+						<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+					</control>
+					<control type="button" id="608">
+						<posx>220</posx>
+						<posy>2</posy>
+						<width>30</width>
+						<height>30</height>
+						<label>-</label>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolDownFO.png</texturefocus>
+						<texturenofocus>OSDVolDownNF.png</texturenofocus>
+						<onleft>607</onleft>
+						<onright>609</onright>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+						<ondown>9000</ondown>
+						<onclick>$VAR[VolumeStepDown]</onclick>
+						<onclick>VolumeDown</onclick>
+						<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+					</control>
 				</control>
 				<control type="group" id="600">
 					<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -904,16 +911,50 @@
 						<ondown>9000</ondown>
 						<onclick>PlayerControl(record)</onclick>
 					</control>
+					<control type="button" id="607">
+						<posx>190</posx>
+						<posy>2</posy>
+						<width>30</width>
+						<height>30</height>
+						<label>-</label>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolUpFO.png</texturefocus>
+						<texturenofocus>OSDVolUpNF.png</texturenofocus>
+						<onleft>606</onleft>
+						<onright>608</onright>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+						<ondown>9000</ondown>
+						<onclick>$VAR[VolumeStepUp]</onclick>
+						<onclick>VolumeUp</onclick>
+						<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+					</control>
+					<control type="button" id="608">
+						<posx>220</posx>
+						<posy>2</posy>
+						<width>30</width>
+						<height>30</height>
+						<label>-</label>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolDownFO.png</texturefocus>
+						<texturenofocus>OSDVolDownNF.png</texturenofocus>
+						<onleft>607</onleft>
+						<onright>609</onright>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+						<ondown>9000</ondown>
+						<onclick>$VAR[VolumeStepDown]</onclick>
+						<onclick>VolumeDown</onclick>
+						<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+					</control>
 				</control>
 			</control>
-			<control type="radiobutton" id="607">
+			<control type="radiobutton" id="609">
 				<animation effect="slide" end="0,35" time="300" condition="!Player.HasMedia">conditional</animation>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<description>Go to fullscreen Playback</description>
-				<left>385</left>
+				<left>405</left>
 				<top>0</top>
 				<height>35</height>
-				<width>160</width>
+				<width>140</width>
 				<textwidth>150</textwidth>
 				<textoffsetx>10</textoffsetx>
 				<align>left</align>
@@ -930,8 +971,8 @@
 				<textureradioonnofocus>GoFullscreen.png</textureradioonnofocus>
 				<textureradioofffocus>GoFullscreen.png</textureradioofffocus>
 				<textureradiooffnofocus>GoFullscreen.png</textureradiooffnofocus>
-				<onleft>606</onleft>
-				<onright>608</onright>
+				<onleft>608</onleft>
+				<onright>610</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 				<ondown>9000</ondown>
@@ -1127,92 +1168,7 @@
 				<texture>icon_favourites.png</texture>
 			</control>
 		</control>
-		<control type="group">
-			<left>20</left>
-			<top>0</top>
-			<visible>!IsEmpty(Weather.Plugin) + StringCompare(Skin.String(TopLeftHomeInfo),Weather)</visible>
-			<include>Window_OpenClose_Animation</include>
-			<control type="image">
-				<description>Weather image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[Weather.Conditions]</texture>
-			</control>
-			<control type="label">
-				<description>Location label</description>
-				<left>65</left>
-				<top>5</top>
-				<width>500</width>
-				<height>15</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font10</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>$INFO[Window(Weather).Property(Location)]</label>
-			</control>
-			<control type="grouplist">
-				<left>65</left>
-				<top>20</top>
-				<width>1000</width>
-				<height>30</height>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<itemgap>0</itemgap>
-				<control type="label">
-					<description>Temp label</description>
-					<width min="0" max="300">auto</width>
-					<height>30</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font28_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
-				</control>
-				<control type="label">
-					<description>Temp Units</description>
-					<width min="0" max="100">auto</width>
-					<height>22</height>
-					<font>font10</font>
-					<aligny>center</aligny>
-					<label>$INFO[System.TemperatureUnits]</label>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
-				</control>
-				<control type="label">
-					<description>Conditions Label</description>
-					<width>500</width>
-					<height>22</height>
-					<font>font10</font>
-					<aligny>center</aligny>
-					<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
-					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-		</control>
 		<include>Clock</include>
-		<control type="label">
-			<description>Date label</description>
-			<right>20</right>
-			<top>35</top>
-			<width>200</width>
-			<height>15</height>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>font10</font>
-			<textcolor>C0FFFFFF</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<label>$INFO[System.Date]</label>
-			<include>Window_OpenClose_Animation</include>
-			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
-			<visible>!Skin.HasSetting(HideSystemTime)</visible>
-		</control>
+		<include>Date</include>
 	</controls>
 </window>
