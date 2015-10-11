@@ -264,7 +264,7 @@
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(11).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR])</label>
 				<include>Window_OpenClose_Animation</include>
-				<visible>!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
+				<visible>[!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)] + !Skin.HasSetting(HidePageCountInfo)</visible>
 			</control>
 		</control>
 	</controls>

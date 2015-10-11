@@ -1109,42 +1109,17 @@
 				<texture>icon-rss.png</texture>
 			</control>
 		</control>
-		<control type="group" id="10">
+		<control type="grouplist" id="21">
+			<include>Window_OpenClose_Animation</include>
 			<left>20</left>
 			<top>55r</top>
-			<include>Window_OpenClose_Animation</include>
-			<control type="button" id="20">
-				<description>Power push button</description>
-				<left>55</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<label>31003</label>
-				<font>-</font>
-				<onclick>$VAR[HomePowerBtnCommand]</onclick>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>21</onleft>
-				<onright>21</onright>
-				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9002</onup>
-				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9001</onup>
-				<ondown>9003</ondown>
-				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
-			</control>
-			<control type="image">
-				<description>Power Icon</description>
-				<left>60</left>
-				<top>5</top>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_power.png</texture>
-				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
-			</control>
-			<control type="button" id="21">
+			<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+			<onup condition="Skin.HasSetting(LowerMainMenuBar)">9001</onup>
+			<ondown>9003</ondown>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<control type="button" id="22">
 				<description>Favourites push button</description>
-				<left>0</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>1036</label>
@@ -1152,20 +1127,53 @@
 				<onclick>$VAR[FavBtnCommand]</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>20</onleft>
-				<onright>20</onright>
-				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9002</onup>
-				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9001</onup>
-				<ondown>9003</ondown>
+				<visible>!Skin.HasSetting(HideFavorites)</visible>
 			</control>
+			<control type="image" id="24">
+				<width>1</width>
+				<height>45</height>
+				<texture>-</texture>
+				<visible>!Skin.HasSetting(HideFavorites)</visible>
+			</control>
+			<control type="button" id="23">
+				<description>Power push button</description>
+				<width>45</width>
+				<height>45</height>
+				<label>31003</label>
+				<font>-</font>
+				<onclick>$VAR[HomePowerBtnCommand]</onclick>
+				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
+			</control>
+		</control>
+		<control type="grouplist">
+			<include>Window_OpenClose_Animation</include>
+			<left>25</left>
+			<top>50r</top>
+			<align>left</align>
+			<orientation>horizontal</orientation>
 			<control type="image">
 				<description>Favourites Icon</description>
-				<left>5</left>
-				<top>5</top>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
 				<texture>icon_favourites.png</texture>
+				<visible>!Skin.HasSetting(HideFavorites)</visible>
+			</control>
+			<control type="image">
+				<width>11</width>
+				<height>45</height>
+				<texture>-</texture>
+				<visible>!Skin.HasSetting(HideFavorites)</visible>
+			</control>
+			<control type="image">
+				<description>Power Icon</description>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_power.png</texture>
+				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
 			</control>
 		</control>
 		<include>Clock</include>

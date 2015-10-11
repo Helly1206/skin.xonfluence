@@ -36,7 +36,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_music.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
-			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -46,7 +46,7 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
-			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[31022]</label>
@@ -57,7 +57,7 @@
 				<visible>!IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
-		<include condition="Skin.HasSetting(AllScreenTopLeftWidget)">TopLeftInfo</include>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
 			<left>-251</left>

@@ -118,7 +118,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_video.png</texture>
 			<animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(infodialog)">Conditional</animation>
-			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -128,7 +128,7 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
-			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$ADDON[script.tv.show.next.aired 450]</label>
@@ -138,7 +138,7 @@
 				<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$LOCALIZE[31208]</label>
 			</control>
 		</control>
-		<include condition="Skin.HasSetting(AllScreenTopLeftWidget)">TopLeftInfo</include>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 		<control type="grouplist" id="2000">
 			<include>Window_OpenClose_Animation</include>
 			<left>40</left>

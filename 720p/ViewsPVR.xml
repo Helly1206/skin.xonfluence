@@ -399,7 +399,7 @@
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
 				<include>Window_OpenClose_Animation</include>
-				<visible>!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
+				<visible>[!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)] + !Skin.HasSetting(HidePageCountInfo)</visible>
 			</control>
 		</control>
 	</include>
@@ -856,7 +856,7 @@
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(5010).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(5010).CurrentPage]/$INFO[Container(5010).NumPages][/COLOR])</label>
 				<include>Window_OpenClose_Animation</include>
-				<visible>!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
+				<visible>[!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)] + !Skin.HasSetting(HidePageCountInfo)</visible>
 			</control>
 		</control>
 	</include>	
@@ -1108,7 +1108,7 @@
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(5060).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(5060).CurrentPage]/$INFO[Container(5060).NumPages][/COLOR])</label>
 				<include>Window_OpenClose_Animation</include>
-				<visible>!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
+				<visible>[!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)] + !Skin.HasSetting(HidePageCountInfo)</visible>
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(5060)</visible>

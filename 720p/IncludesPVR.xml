@@ -10,7 +10,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_video.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
-			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -20,7 +20,7 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
-			<visible>!Skin.HasSetting(AllScreenTopLeftWidget)</visible>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[19020]</label>
@@ -65,7 +65,7 @@
 				<label>$INFO[Control.GetLabel(30),[COLOR=$VAR[MainColorOne]] - [/COLOR]]</label>
 			</control>
 		</control>
-		<include condition="Skin.HasSetting(AllScreenTopLeftWidget)">TopLeftInfo</include>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 		<control type="label" id="29">
 			<description>Empty so we can pass the values up one level</description>
 			<visible>False</visible>

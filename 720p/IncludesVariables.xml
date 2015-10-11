@@ -611,7 +611,8 @@
 	<variable name="HomePowerBtnCommand">
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Menu)">ActivateWindow(ShutdownMenu)</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Settings)">ActivateWindow(SkinSettings)</value>
-		<value condition="StringCompare(Skin.String(PowerBtnAction),Exit) + System.ShowExitButton">Quit()</value>
+		<value condition="StringCompare(Skin.String(PowerBtnAction),Exit) + System.ShowExitButton + !Skin.HasSetting(MinimizeOnExit)">Quit()</value>
+		<value condition="StringCompare(Skin.String(PowerBtnAction),Exit) + System.ShowExitButton + Skin.HasSetting(MinimizeOnExit)">Minimize</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),PowerDown) + System.CanPowerDown + !Skin.HasSetting(Enable_CustomShutDown)">Powerdown()</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),PowerDown) + System.CanPowerDown + Skin.HasSetting(Enable_CustomShutDown)">XBMC.RunScript($VAR[CustomShutdown],$VAR[CustomShutdownArg])</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Suspend) + System.CanSuspend + !Skin.HasSetting(Enable_CustomSuspend)">Suspend()</value>
