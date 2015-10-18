@@ -452,4 +452,8 @@
 		<onload condition="Skin.String(HomeItem.12.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.12.Path,ActivateWindow(Pictures,Pictures))</onload>
 		<onload>Skin.SetBool(Updates_V312)</onload>
 	</include>
+	<include name="UpdatesV314">
+		<onload>RunScript(special://skin/scripts/CopyKeymap.py)</onload>
+		<onload>Skin.SetBool(Updates_V314)</onload>
+	</include>
 </includes>

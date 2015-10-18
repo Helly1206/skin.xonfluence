@@ -1,20 +1,28 @@
+[B]3.1.4[/B]
+- Fixed incorrect position of pause button in 'not' original popup seekbar #150
+- Added option for minimal (better sorted) dialogpicture info #19
+- Added option for notifications window in top left #148
+- Implemented picture OSD #19
+- Added music controls to picture OSD if music is playing #19
+- Added script to copy keymap additions for picture OSD (with notification to restart)
+
 [B]3.1.3[/B]
 - Recording, no overlay when isresumable (2 pictures can be displayed on top of each other otherwise), same for video file views
 - Cleaned up backgrounds to save some space
 - Updated wide angle file view
 - Added fallback image on various views
 - Keep default background on home screen when music is playing and no visualisation is selected
-- Moved FloorReturnButtons to floor buttons heading is skin settings
+- Moved FloorReturnButtons to floor buttons heading in skin settings
 - Added option to minimize instead of quit kodi by pressing exit button #87
 - Added option to display plot info on info screen
 - Added option to hide favorites button #101
 - Added option to hide top left info on windows (except home window) #101
 - Added option to hide page count info #101
 - Updated background image selection, open file browser in correct path and do not reset current image on cancel
-- Updated Slideshow paused logo
-- Removed unneeded '[' on picture thumnails
-- Added Full Wall View for Pictures
-- Added date-time taken on biglist view for pictures
+- Updated Slideshow paused logo #19
+- Removed unneeded '[' on picture thumbnails #19
+- Added Full Wall View for Pictures #19
+- Added date-time taken on biglist view for pictures #19
 
 [B]3.1.2[/B]
 - Reverted back button behavior, as most users (including myself) didn't like it.

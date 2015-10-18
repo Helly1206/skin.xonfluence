@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>2</defaultcontrol>
+	<defaultcontrol always="true">2</defaultcontrol>
 	<controls>
+		<control type="button" id="2">
+			<include>InvisibleButton</include>
+			<onclick>ActivateWindow(1198)</onclick>
+		</control>
 		<control type="group" id="13">
 			<visible>!Skin.HasSetting(Show_SlideShow_Paused)</visible>
-			<animation effect="slide" start="0,0" end="245,665" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="185,665" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
 			<left>360r</left>
 			<top>-6</top>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>170</width>
+				<width>180</width>
 				<height>70</height>
 				<colordiffuse>EEFFFFFF</colordiffuse>
 				<texture border="12">OverlayDialogBackground.png</texture>
 				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
 			</control>
 			<control type="image">
-				<left>70</left>
+				<left>80</left>
 				<top>10</top>
 				<width>80</width>
 				<height>50</height>
 				<texture>OSDSeekFrame.png</texture>
 			</control>
 			<control type="image">
-				<left>91</left>
+				<left>101</left>
 				<top>14</top>
 				<width>40</width>
 				<height>40</height>
@@ -32,6 +36,7 @@
 			</control>
 			<control type="label">
 				<description>Paused Label</description>
+				<animation effect="slide" start="0,0" end="0,19" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
 				<left>20</left>
 				<top>7</top>
 				<width>240</width>
@@ -47,7 +52,7 @@
 		<control type="group">
 			<left>20</left>
 			<top>180r</top>
-			<visible>Player.ShowInfo + Player.HasMedia</visible>
+			<visible>Player.ShowInfo + !Window.IsActive(1198) + Player.HasMedia</visible>
 			<include>VisibleFadeEffect</include>
 			<include>SmallMusicInfo</include>
 		</control>
