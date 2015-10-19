@@ -3,7 +3,6 @@
 	<defaultcontrol always="true">5</defaultcontrol>
 	<onload>ClearProperty(SideBladeOpen)</onload>
 	<coordinates>
-		<system>1</system>
 		<left>240</left>
 		<top>100</top>
 	</coordinates>
