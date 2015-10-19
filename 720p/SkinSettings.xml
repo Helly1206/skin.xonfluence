@@ -79,8 +79,6 @@ font11xml version="1.0" encoding="UTF-8"?>
 				<top>11</top>
 				<width>64</width>
 				<height>32</height>
-				<label>-</label>
-				<font>-</font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -116,7 +114,6 @@ font11xml version="1.0" encoding="UTF-8"?>
 				<onright>9010</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
 				<itemlayout height="70" width="260">
 					<control type="image">
@@ -5665,7 +5662,6 @@ font11xml version="1.0" encoding="UTF-8"?>
 						<onright>500</onright>
 						<onup>9005</onup>
 						<ondown>9005</ondown>
-						<pagecontrol>-</pagecontrol>
 						<scrolltime>0</scrolltime>
 						<itemlayout height="1" width="750"></itemlayout>
 						<focusedlayout height="40" width="750">
@@ -7876,85 +7872,61 @@ font11xml version="1.0" encoding="UTF-8"?>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.1.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.3.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.4.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.5.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.6.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.7.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.8.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.9.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.10.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
 					</item>
 				</content>

@@ -592,7 +592,6 @@
 							<align>justify</align>
 							<textcolor>grey2</textcolor>
 							<shadowcolor>black</shadowcolor>
-							<pagecontrol>-</pagecontrol>
 							<label>$VAR[VideoDescription]</label>
 						</control>
 						<control type="image">
@@ -971,7 +970,6 @@
 							<align>justify</align>
 							<textcolor>grey2</textcolor>
 							<shadowcolor>black</shadowcolor>
-							<pagecontrol>-</pagecontrol>
 							<label>$VAR[VideoDescription]</label>
 						</control>
 						<control type="image">
@@ -1297,7 +1295,6 @@
 							<align>justify</align>
 							<textcolor>grey2</textcolor>
 							<shadowcolor>black</shadowcolor>
-							<pagecontrol>-</pagecontrol>
 							<label>$VAR[VideoDescription]</label>
 						</control>
 						<control type="image">

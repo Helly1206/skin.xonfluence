@@ -111,9 +111,7 @@
 				<left>760</left>
 				<top>15</top>
 				<width>64</width>
-				<height>32</height>
-				<label>-</label>
-				<font>-</font>
+				<height>32</height>>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>

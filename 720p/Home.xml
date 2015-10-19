@@ -610,10 +610,6 @@
 			<top>-20</top>
 			<width>1</width>
 			<height>1</height>
-			<label>-</label>
-			<font>-</font>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<onup>21</onup>
@@ -683,7 +679,6 @@
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 				<ondown>9000</ondown>
-				<defaultcontrol>-</defaultcontrol>
 				<enable>Player.HasMedia</enable>
 				<control type="image">
 					<description>Background image</description>
@@ -704,7 +699,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPrevTrackFO.png</texturefocus>
 						<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
 						<onleft>610</onleft>
@@ -719,7 +713,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRewindFO.png</texturefocus>
 						<texturenofocus>OSDRewindNF.png</texturenofocus>
 						<onleft>601</onleft>
@@ -734,7 +727,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
 						<texturenofocus>OSDPauseNF.png</texturenofocus>
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -752,7 +744,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
 						<texturenofocus>OSDStopNF.png</texturenofocus>
 						<onleft>603</onleft>
@@ -768,7 +759,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDForwardFO.png</texturefocus>
 						<texturenofocus>OSDForwardNF.png</texturenofocus>
 						<onleft>604</onleft>
@@ -783,7 +773,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDNextTrackFO.png</texturefocus>
 						<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 						<onleft>605</onleft>
@@ -798,7 +787,6 @@
 						<posy>2</posy>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolUpFO.png</texturefocus>
 						<texturenofocus>OSDVolUpNF.png</texturenofocus>
 						<onleft>606</onleft>
@@ -815,7 +803,6 @@
 						<posy>2</posy>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolDownFO.png</texturefocus>
 						<texturenofocus>OSDVolDownNF.png</texturenofocus>
 						<onleft>607</onleft>
@@ -835,7 +822,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelUPFO.png</texturefocus>
 						<texturenofocus>OSDChannelUPNF.png</texturenofocus>
 						<onleft>608</onleft>
@@ -850,7 +836,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelDownFO.png</texturefocus>
 						<texturenofocus>OSDChannelDownNF.png</texturenofocus>
 						<onleft>601</onleft>
@@ -865,7 +850,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
 						<texturenofocus>OSDStopNF.png</texturenofocus>
 						<onleft>602</onleft>
@@ -881,7 +865,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
 						<texturenofocus>OSDPauseNF.png</texturenofocus>
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -901,7 +884,6 @@
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRecordOffFO.png</texturefocus>
 						<texturenofocus>OSDRecordOffNF.png</texturenofocus>
 						<onleft>604</onleft>
@@ -916,7 +898,6 @@
 						<posy>2</posy>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolUpFO.png</texturefocus>
 						<texturenofocus>OSDVolUpNF.png</texturenofocus>
 						<onleft>606</onleft>
@@ -933,7 +914,6 @@
 						<posy>2</posy>
 						<width>30</width>
 						<height>30</height>
-						<label>-</label>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolDownFO.png</texturefocus>
 						<texturenofocus>OSDVolDownNF.png</texturenofocus>
 						<onleft>607</onleft>
@@ -1123,7 +1103,6 @@
 				<width>45</width>
 				<height>45</height>
 				<label>1036</label>
-				<font>-</font>
 				<onclick>$VAR[FavBtnCommand]</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
@@ -1132,7 +1111,6 @@
 			<control type="image" id="24">
 				<width>1</width>
 				<height>45</height>
-				<texture>-</texture>
 				<visible>!Skin.HasSetting(HideFavorites)</visible>
 			</control>
 			<control type="button" id="23">
@@ -1140,7 +1118,6 @@
 				<width>45</width>
 				<height>45</height>
 				<label>31003</label>
-				<font>-</font>
 				<onclick>$VAR[HomePowerBtnCommand]</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
@@ -1164,7 +1141,6 @@
 			<control type="image">
 				<width>11</width>
 				<height>45</height>
-				<texture>-</texture>
 				<visible>!Skin.HasSetting(HideFavorites)</visible>
 			</control>
 			<control type="image">

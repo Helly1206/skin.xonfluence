@@ -25,7 +25,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPrevTrackFO.png</texturefocus>
 				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
 				<onleft>609</onleft>
@@ -40,7 +39,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRewindFO.png</texturefocus>
 				<texturenofocus>OSDRewindNF.png</texturenofocus>
 				<onleft>600</onleft>
@@ -55,7 +53,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
 				<texturenofocus>OSDPauseNF.png</texturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -73,7 +70,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
 				<texturenofocus>OSDStopNF.png</texturenofocus>
 				<onleft>603</onleft>
@@ -89,7 +85,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDForwardFO.png</texturefocus>
 				<texturenofocus>OSDForwardNF.png</texturenofocus>
 				<onleft>602</onleft>
@@ -104,7 +99,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDNextTrackFO.png</texturefocus>
 				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 				<onleft>604</onleft>
@@ -119,7 +113,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRecordOffFO.png</texturefocus>
 				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
 				<onleft>605</onleft>
@@ -138,9 +131,6 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
 					<onclick>PlayerControl(Repeat)</onclick>
 					<onleft>606</onleft>
 					<onright>608</onright>
@@ -213,7 +203,6 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
 					<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRandomOffFO.png</texturefocus>
 					<texturenofocus>OSDRandomOffNF.png</texturenofocus>
 					<usealttexture>Playlist.IsRandom</usealttexture>
@@ -232,7 +221,6 @@
 					<width>40</width>
 					<height>40</height>
 					<label>31128</label>
-					<font>-</font>
 					<texturefocus colordiffuse="$VAR[MainColorOne]">OSDLyricsFO.png</texturefocus>
 					<texturenofocus>OSDLyricsNF.png</texturenofocus>
 					<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDLyricsFO.png</alttexturefocus>
@@ -263,7 +251,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRewindFO.png</texturefocus>
 				<texturenofocus>OSDRewindNF.png</texturenofocus>
 				<onleft>706</onleft>
@@ -280,7 +267,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
 				<texturenofocus>OSDStopNF.png</texturenofocus>
 				<onleft>701</onleft>
@@ -296,7 +282,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
 				<texturenofocus>OSDPauseNF.png</texturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -317,7 +302,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDForwardFO.png</texturefocus>
 				<texturenofocus>OSDForwardNF.png</texturenofocus>
 				<onleft>703</onleft>
@@ -334,7 +318,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelUPFO.png</texturefocus>
 				<texturenofocus>OSDChannelUPNF.png</texturenofocus>
 				<onleft>704</onleft>
@@ -349,7 +332,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelDownFO.png</texturefocus>
 				<texturenofocus>OSDChannelDownNF.png</texturenofocus>
 				<onleft>700</onleft>
@@ -364,7 +346,6 @@
 				<top>0</top>
 				<width>40</width>
 				<height>40</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRecordOffFO.png</texturefocus>
 				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
 				<onleft>705</onleft>
@@ -403,8 +384,6 @@
 			<top>5</top>
 			<width>64</width>
 			<height>32</height>
-			<label>-</label>
-			<font>-</font>
 			<onclick>back</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>

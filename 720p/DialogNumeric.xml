@@ -313,7 +313,6 @@
 				<texturenofocus flipx="true" border="25,5,5,25">KeyboardCornerBottomNF.png</texturenofocus>
 				<texturefocus flipx="true" border="5,5,25,25">KeyboardCornerBottom.png</texturefocus>
 				<textwidth>120</textwidth>
-				<label>-</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>21</onleft>
 				<onright>21</onright>

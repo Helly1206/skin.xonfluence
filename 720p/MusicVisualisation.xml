@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
-	<defaultcontrol>-</defaultcontrol
 	<controls>
 		<control type="group">
 			<visible>!Skin.HasSetting(HideHomeNowPlaying)</visible>
@@ -284,7 +283,6 @@
 				<description>row 1 label</description>
 				<left>50</left>
 				<top>10</top>
-				<label>-</label>
 				<align>left</align>
 				<label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps]$INFO[musicplayer.bitspersample, · $LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz]$INFO[musicplayer.Channels, · $LOCALIZE[21444]: ]</label>
 				<font>font12</font>
@@ -293,7 +291,6 @@
 				<description>row 2 label</description>
 				<left>50</left>
 				<top>40</top>
-				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Name,, [I][COLOR=orange]($LOCALIZE[20166])[/COLOR][/I] · ]fps: $INFO[System.FPS]</label>
 				<font>font12</font>
@@ -303,7 +300,6 @@
 				<description>Unlocked row 2 label</description>
 				<left>50</left>
 				<top>40</top>
-				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Name,, · ]fps: $INFO[System.FPS]</label>
 				<font>font12</font>
@@ -313,7 +309,6 @@
 				<description>row 3 label</description>
 				<left>50</left>
 				<top>70</top>
-				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Preset,$LOCALIZE[13388]: ]</label>
 				<font>font12</font>
@@ -463,7 +458,6 @@
 					<top>147</top>
 					<width>910</width>
 					<height>14</height>
-					<overlaytexture>-</overlaytexture>
 					<info>PVR.ActStreamProgrSNR</info>
 				</control>
 				<control type="label">

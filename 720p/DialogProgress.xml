@@ -22,7 +22,6 @@
 			<top>0</top>
 			<width>0</width>
 			<height>0</height>
-			<font>-</font>
 			<visible>false</visible>
 <!--		</control>
 		<control type="label">
@@ -44,8 +43,6 @@
 			<top>15</top>
 			<width>64</width>
 			<height>32</height>
-			<label>-</label>
-			<font>-</font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -62,7 +59,6 @@
 			<width>550</width>
 			<height>78</height>
 			<align>left</align>
-			<label>-</label>
 			<font>font13</font>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 		</control>

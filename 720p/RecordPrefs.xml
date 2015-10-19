@@ -43,8 +43,6 @@
       <posy>15</posy>
       <width>64</width>
       <height>32</height>
-      <label>-</label>
-      <font>-</font>
       <!--<onclick>PreviousMenu</onclick>-->
       <texturefocus>DialogCloseButton-focus.png</texturefocus>
       <texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -54,8 +52,6 @@
       <ondown>10</ondown>
       <visible>system.getbool(input.enablemouse)</visible>
     </control>
-
-
     <control type="label" description="program title" id = "20">
       <posx>40</posx>
       <posy>60</posy>

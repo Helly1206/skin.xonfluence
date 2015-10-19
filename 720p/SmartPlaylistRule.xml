@@ -36,7 +36,6 @@
 				<top>100</top>
 				<width>365</width>
 				<height>40</height>
-				<font>-</font>
 				<texturefocus border="3" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 				<texturenofocus border="3">button-nofocus.png</texturenofocus>
 				<onright>16</onright>
@@ -63,7 +62,6 @@
 				<top>100</top>
 				<width>365</width>
 				<height>40</height>
-				<font>-</font>
 				<texturefocus border="3" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 				<texturenofocus border="3">button-nofocus.png</texturenofocus>
 				<onright>15</onright>
@@ -96,7 +94,6 @@
 			<invalidcolor>invalid</invalidcolor>
 			<texturefocus border="3" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 			<texturenofocus border="3">button-nofocus.png</texturenofocus>
-			<label>-</label>
 			<onup>9001</onup>
 			<onleft>20</onleft>
 			<onright>20</onright>

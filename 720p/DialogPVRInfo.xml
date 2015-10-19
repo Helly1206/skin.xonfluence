@@ -25,7 +25,6 @@
 			<onright>49</onright>
 			<onup>9000</onup>
 			<ondown>61</ondown>
-			<pagecontrol>-</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<itemlayout height="30">
 				<control type="label">
@@ -166,12 +165,10 @@
 			<left>720</left>
 			<top>375</top>
 			<subtype>page</subtype>
-			<font>-</font>
 			<onleft>60</onleft>
 			<onright>60</onright>
 			<ondown>9000</ondown>
 			<onup>9000</onup>
-			<textcolor>-</textcolor>
 			<showonepage>true</showonepage>
 		</control>
 		<control type="textbox" id="400">
@@ -218,7 +215,6 @@
 			<control type="button" id="6">
 				<description>Record</description>
 				<include>ButtonInfoDialogsCommonValues</include>
-				<label>-</label>
 				<visible>Window.IsActive(PVRGuideInfo)</visible>
 			</control>
 			<control type="button" id="7">

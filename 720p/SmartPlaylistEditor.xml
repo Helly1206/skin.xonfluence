@@ -56,7 +56,6 @@
 				<font>font13</font>
 				<align>center</align>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
-				<label>-</label>
 				<onup>22</onup>
 				<onleft>12</onleft>
 				<onright>12</onright>

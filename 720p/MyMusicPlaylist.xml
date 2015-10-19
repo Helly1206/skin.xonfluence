@@ -89,7 +89,6 @@
 					<description>View As button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
 				</control>
 				<control type="label" id="201">
 					<width>250</width>
@@ -109,7 +108,6 @@
 					<description>Repeat button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
 				</control>
 				<control type="button" id="21">
 					<description>Save button</description>
