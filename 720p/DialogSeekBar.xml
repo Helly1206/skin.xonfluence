@@ -48,7 +48,8 @@
 			</control>
 		</control>
 		<control type="group">
-			<animation effect="slide" start="0,0" end="245,665" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="195,665" time="0" condition="Skin.HasSetting(HidePopUpSeekBar) + !Window.IsActive(VideoOSD) + !Window.IsActive(MusicOSD)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="195,565" time="0" condition="Skin.HasSetting(HidePopUpSeekBar) + [Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD)]">Conditional</animation>
 			<left>560r</left>
 			<top>-6</top>
 			<control type="image">
@@ -194,11 +195,10 @@
 				<font>font10_title</font>
 				<textcolor>$VAR[MainColorOne]</textcolor>
 				<label>$VAR[SeekLabel]</label>
-<!--				<visible>Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek</visible> -->
 				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-<!--			</control>
+			</control>
 			<control type="label">
-				<description>Playing Label</description>
+				<description>Seekbar Label</description>
 				<left>125</left>
 				<top>26</top>
 				<width>130</width>
@@ -207,177 +207,8 @@
 				<aligny>center</aligny>
 				<font>font10_title</font>
 				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>$LOCALIZE[31042]</label>
-				<visible>Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek</visible>
+				<label>$VAR[SeekLabel]</label>
 				<visible>Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>Paused Label</description>
-				<left>20</left>
-				<top>7</top>
-				<width>240</width>
-				<height>20</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>31043</label>
-				<visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
-				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>Paused Label</description>
-				<left>125</left>
-				<top>26</top>
-				<width>130</width>
-				<height>20</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>$LOCALIZE[31043]</label>
-				<visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
-				<visible>Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>Cache Label</description>
-				<left>20</left>
-				<top>7</top>
-				<width>240</width>
-				<height>20</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
-				<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
-				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>Cache Label</description>
-				<left>125</left>
-				<top>26</top>
-				<width>130</width>
-				<height>20</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
-				<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
-				<visible>Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>Seeking Label</description>
-				<left>20</left>
-				<top>7</top>
-				<width>240</width>
-				<height>20</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>$LOCALIZE[31046]</label>
-				<visible>Player.Seeking</visible>
-				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>Seeking Label</description>
-				<left>125</left>
-				<top>26</top>
-				<width>130</width>
-				<height>20</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>$LOCALIZE[31046]</label>
-				<visible>Player.Seeking</visible>
-				<visible>Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>Final Seek amount Label</description>
-				<left>20</left>
-				<top>7</top>
-				<width>240</width>
-				<height>20</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekOffset][/COLOR]</label>
-				<visible>Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]</visible>
-				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>Final Seek amount Label</description>
-				<left>125</left>
-				<top>26</top>
-				<width>130</width>
-				<height>20</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekOffset][/COLOR]</label>
-				<visible>Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]</visible>
-				<visible>Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>FF Label</description>
-				<left>20</left>
-				<top>7</top>
-				<width>240</width>
-				<height>20</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>31044</label>
-				<visible>Player.Forwarding</visible>
-				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>FF Label</description>
-				<left>125</left>
-				<top>26</top>
-				<width>130</width>
-				<height>20</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>31044</label>
-				<visible>Player.Forwarding</visible>
-				<visible>Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>RW Label</description>
-				<left>20</left>
-				<top>7</top>
-				<width>240</width>
-				<height>20</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>31045</label>
-				<visible>Player.Rewinding</visible>
-				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-			</control>
-			<control type="label">
-				<description>RW Label</description>
-				<left>125</left>
-				<top>26</top>
-				<width>130</width>
-				<height>20</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<label>31045</label>
-				<visible>Player.Rewinding</visible>
-				<visible>Skin.HasSetting(HidePopUpSeekBar)</visible> -->
 			</control>
 			<control type="label">
 				<description>Elapsed Time Label</description>

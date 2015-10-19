@@ -260,6 +260,14 @@ msgctxt "#31062"
 msgid "Episode backdrop"
 msgstr "Episode backdrop"
 
+msgctxt "#31063"
+msgid "Show volume buttons"
+msgstr "Show volume buttons"
+
+msgctxt "#31064"
+msgid "Volume buttons small jump"
+msgstr "Volume buttons small jump"
+
 msgctxt "#31065"
 msgid "Favourites button action"
 msgstr "Favourites button action"
@@ -388,9 +396,17 @@ msgctxt "#31096"
 msgid "Enable suggested movies or TV shows info"
 msgstr "Enable suggested movies or TV shows info"
 
+msgctxt "#31097"
+msgid "Enable Floor Return Buttons (for touch)"
+msgstr "Enable Floor Return Buttons (for touch)"
+
+msgctxt "#31098"
+msgid "Top left widget on all screens"
+msgstr "Top left widget on all screens"
+
 msgctxt "#31099"
 msgid "Enable [COLOR=grey3](Slower)[/COLOR] File system search for additional artwork"
-msgstr "Enable [COLOR=grey3](Slower)[/COLOR] File system search for additional artwork
+msgstr "Enable [COLOR=grey3](Slower)[/COLOR] File system search for additional artwork"
 
 msgctxt "#31100"
 msgid "Weather fanart"
@@ -472,6 +488,14 @@ msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Hide background fanart"
 
+msgctxt "#31120"
+msgid "Hide page count info"
+msgstr "Hide page count info"
+
+msgctxt "#31121"
+msgid "Show plot info on info screen"
+msgstr "Show plot info on info screen"
+
 msgctxt "#31122"
 msgid "Enable busy animation"
 msgstr "Enable busy animation"
@@ -504,9 +528,21 @@ msgctxt "#31129"
 msgid "Hide fanart in full screen visualisation"
 msgstr "Hide fanart in full screen visualization"
 
+msgctxt "#31130"
+msgid "Hide favorites button"
+msgstr "Hide favorites button"
+
+msgctxt "#31131"
+msgid "Hide top left info on windows"
+msgstr "Hide top left info on windows"
+
 msgctxt "#31132"
 msgid "Lyrics add-on"
 msgstr "Lyrics add-on"
+
+msgctxt "#31133"
+msgid "Minimize on exit button"
+msgstr "Minimize on exit button"
 
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
@@ -575,6 +611,14 @@ msgstr "Select UPnP server"
 msgctxt "#31152"
 msgid "Enable kiosk mode"
 msgstr "Enable kiosk mode"
+
+msgctxt "#31153"
+msgid "Show minimal picture info"
+msgstr "Show minimal picture info"
+
+msgctxt "#31154"
+msgid "Notifications at top left"
+msgstr "Notifications at top left"
 
 msgctxt "#31185"
 msgid "Random songs"

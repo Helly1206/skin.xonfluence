@@ -64,7 +64,7 @@
 				<width>150</width>
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
-				<texture>special://skin/media/Xonfluence_Logo.png</texture>
+				<texture>Xonfluence_Logo.png</texture>
 			</control>
 			<control type="grouplist" id="3">
 				<description>button area</description>
@@ -288,6 +288,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_system.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -297,6 +298,7 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[5]</label>
@@ -306,6 +308,7 @@
 				<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$INFO[Control.GetLabel(2)]</label>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 		<include>Clock</include>
 	</controls>
 </window>

@@ -16,14 +16,6 @@
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
-		<control type="button" id="800">
-			<include>InvisibleButton</include>
-			<onleft>801</onleft>
-			<onright>804</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<visible>false</visible>
-		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<control type="group">
@@ -134,6 +126,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio>keep</aspectratio>
+						<visible>!ListItem.IsResumable</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40" width="760">
@@ -210,6 +203,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio>keep</aspectratio>
+						<visible>!ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -224,24 +218,25 @@
 				<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>50</onleft>
-				<onright>102</onright>
+				<onright>800</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>
 			<control type="label">
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
-				<right>40</right>
+				<left>90</left>
 				<top>53r</top>
-				<width>500</width>
+				<width>760</width>
 				<height>20</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
-				<align>right</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[19163] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
 				<include>Window_OpenClose_Animation</include>
+				<visible>[!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)] + !Skin.HasSetting(HidePageCountInfo)</visible>
 			</control>
 			<control type="group">
 				<left>910</left>

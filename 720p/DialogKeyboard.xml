@@ -67,7 +67,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="100">
 						<description>(0,0) key button</description>
@@ -164,7 +164,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="120">
 						<description>(1,0) key button</description>
@@ -259,7 +259,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="140">
 						<description>(2,0) key button</description>
@@ -351,7 +351,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="radiobutton" id="304">
 						<description>Symbols button</description>
@@ -368,7 +368,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="160">
 						<description>(3,0) key button</description>
@@ -460,7 +460,7 @@
 						<aligny>center</aligny>
 						<onup>304</onup>
 						<ondown>309</ondown>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="32">
 						<description>SPACE button</description>
@@ -472,7 +472,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 						<onup>161</onup>
 						<ondown>101</ondown>
 					</control>
@@ -488,7 +488,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="305">
 						<description>previous button</description>
@@ -500,7 +500,7 @@
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texturefocus>
 						<font>font30</font>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 						<onup>168</onup>
 						<ondown>108</ondown>
 					</control>
@@ -514,7 +514,7 @@
 						<texturenofocus flipx="true" border="5,5,25,25">KeyboardCornerBottomNF.png</texturenofocus>
 						<texturefocus flipx="true" border="5,5,25,25" colordiffuse="$VAR[MainColorOne]">KeyboardCornerBottom.png</texturefocus>
 						<font>font30</font>
-						<focusedcolor>black</focusedcolor>
+						<focusedcolor>white</focusedcolor>
 						<onup>170</onup>
 						<ondown>110</ondown>
 					</control>

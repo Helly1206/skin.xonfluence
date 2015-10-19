@@ -39,6 +39,14 @@
 						<bordersize>4</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
+					<control type="image">
+						<left>185</left>
+						<top>315</top>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
 				</itemlayout>
 				<focusedlayout height="310" width="218">
 					<control type="image">
@@ -92,7 +100,7 @@
 				<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onup>501</onup>
-				<ondown>803</ondown>
+				<ondown>800</ondown>
 				<showonepage>true</showonepage>
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(501)</visible>
@@ -367,7 +375,7 @@
 				<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onup>508</onup>
-				<ondown>803</ondown>
+				<ondown>800</ondown>
 				<showonepage>true</showonepage>
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(508)</visible>
@@ -413,7 +421,7 @@
 				<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onup>508</onup>
-				<ondown>803</ondown>
+				<ondown>800</ondown>
 				<showonepage>true</showonepage>
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(508)</visible>
@@ -793,6 +801,14 @@
 				<bordersize>4</bordersize>
 				<fadetime>200</fadetime>
 				<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$VAR[PosterThumb]</texture>
+			</control>
+			<control type="image">
+				<left>90</left>
+				<top>145</top>
+				<width>25</width>
+				<height>25</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Overlay]</texture>
 			</control>
 		</itemlayout>
 		<focusedlayout height="310" width="120">
@@ -1760,7 +1776,6 @@
 						<texture>OverlayWatching.png</texture>
 						<visible>ListItem.IsResumable</visible>
 					</control>
-				</itemlayout>
 					<control type="image">
 						<left>320</left>
 						<top>14</top>
@@ -1769,6 +1784,7 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
+				</itemlayout>
 				<focusedlayout condition="Container.Content(Episodes) | !Skin.HasSetting(Enable515WideBanners)" height="40" width="345">
 					<control type="image">
 						<left>0</left>

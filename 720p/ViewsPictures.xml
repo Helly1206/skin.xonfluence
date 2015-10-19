@@ -194,7 +194,7 @@
 					<top>510</top>
 					<width>640</width>
 					<height>15</height>
-					<label>$INFO[ListItem.PictureDateTime,[COLOR=$VAR[MainColorOne]]$LOCALIZE[31948][/COLOR] - ]</label>
+					<label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[31948][/COLOR] - $INFO[ListItem.PictureDateTime]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -207,13 +207,98 @@
 					<top>535</top>
 					<width>640</width>
 					<height>15</height>
-					<label>$INFO[ListItem.PictureResolution,[COLOR=$VAR[MainColorOne]]$LOCALIZE[31999][/COLOR] - ]</label>
+					<label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[31999][/COLOR] - $INFO[ListItem.PictureResolution]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
+			</control>
+		</control>
+	</include>
+		<include name="PictureFullWallView">
+		<control type="group">
+			<visible>Control.IsVisible(532)</visible>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture background="true">black-back.png</texture>
+			</control>
+			<control type="panel" id="532">
+				<hitrect x="0" y="-55" w="1280" h="720" />
+				<left>29</left>
+				<top>55</top>
+				<width>1251</width>
+				<height>606</height>
+				<onleft>2</onleft>
+				<onright>732</onright>
+				<onup>732</onup>
+				<ondown>732</ondown>
+				<viewtype label="31030">panel</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<preloaditems>200</preloaditems>
+				<itemlayout height="202" width="139">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>139</width>
+						<height>202</height>
+						<bordersize>5</bordersize>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<include>VisibleFadeEffect</include>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>139</width>
+						<height>202</height>
+						<bordersize>5</bordersize>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<aspectratio>stretch</aspectratio>
+						<texture>black-back.png</texture>
+						<colordiffuse>AAFFFFFF</colordiffuse>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>139</width>
+						<height>202</height>
+						<bordersize>5</bordersize>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<aspectratio>stretch</aspectratio>
+						<texture>black-back.png</texture>
+						<colordiffuse>AAFFFFFF</colordiffuse>
+						<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="205" width="142">
+					<control type="group">
+						<left>0</left>
+						<top>0</top>
+						<animation effect="slide" end="22,0" time="200" reversible="true" condition="Container.Column(0)">conditional</animation>
+						<animation effect="slide" end="0,26" time="200" reversible="true" condition="Container.Row(0)">conditional</animation>
+						<animation effect="slide" end="0,-26" time="200" reversible="true" condition="Container.Row(2)">conditional</animation>
+						<animation effect="slide" end="-22,0" time="200" reversible="true" condition="Container.Column(8)">conditional</animation>
+						<animation reversible="false" effect="zoom" end="-27,-33,185,267" time="100">focus</animation>
+						<animation reversible="false" effect="zoom" start="-27,-33,185,267" time="100">unfocus</animation>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>142</width>
+							<height>205</height>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<include>VisibleFadeEffect</include>
+							<bordersize>8</bordersize>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="8">ThumbBorder.png</bordertexture>
+						</control>
+					</control>
+				</focusedlayout>
 			</control>
 		</control>
 	</include>

@@ -26,7 +26,6 @@
 			<onup>100</onup>
 			<ondown>100</ondown>
 			<animation effect="fade" time="150">VisibleChange</animation>
-<!-- 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible> -->
 			<visible>![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)</visible>
 		</control>
 		<control type="slider" id="87">
@@ -60,7 +59,7 @@
 				<height>55</height>
 				<label>210</label>
 				<font>-</font>
-				<texturefocus>OSDChannelUPFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelUPFO.png</texturefocus>
 				<texturenofocus>OSDChannelUPNF.png</texturenofocus>
 				<onclick>PlayerControl(Previous)</onclick>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -70,10 +69,32 @@
 				<height>55</height>
 				<label>209</label>
 				<font>-</font>
-				<texturefocus>OSDChannelDownFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelDownFO.png</texturefocus>
 				<texturenofocus>OSDChannelDownNF.png</texturenofocus>
 				<onclick>PlayerControl(Next)</onclick>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
+			</control>
+			<control type="button" id="302">
+				<width>55</width>
+				<height>55</height>
+				<label>210</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolUpFO.png</texturefocus>
+				<texturenofocus>OSDVolUpNF.png</texturenofocus>
+				<onclick>$VAR[VolumeStepUp]</onclick>
+				<onclick>VolumeUp</onclick>
+				<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+			</control>
+			<control type="button" id="303">
+				<width>55</width>
+				<height>55</height>
+				<label>210</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolDownFO.png</texturefocus>
+				<texturenofocus>OSDVolDownNF.png</texturenofocus>
+				<onclick>$VAR[VolumeStepDown]</onclick>
+				<onclick>VolumeDown</onclick>
+				<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
 			</control>
 			<control type="button" id="200">
 				<width>55</width>
@@ -168,24 +189,30 @@
 				<height>55</height>
 				<label>31356</label>
 				<font>-</font>
-				<texturefocus>OSDTeleTextFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDTeleTextFO.png</texturefocus>
 				<texturenofocus>OSDTeleTextNF.png</texturenofocus>
 				<onclick>ActivateWindow(Teletext)</onclick>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
+			<control type="image" id="2100">
+				<width>105</width>
+				<height>55</height>
+				<texture>-</texture>
+				<visible>!Skin.HasSetting(EnableVolumeButtons)</visible>
+			</control>
 			<control type="image" id="2200">
-				<width>270</width>
+				<width>165</width>
 				<texture>-</texture>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 				<visible>VideoPlayer.HasMenu</visible>
 			</control>
 			<control type="image" id="2300">
-				<width>165</width>
+				<width>60</width>
 				<texture>-</texture>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2600">
-				<width>325</width>
+				<width>220</width>
 				<texture>-</texture>
 				<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu</visible>
 			</control>

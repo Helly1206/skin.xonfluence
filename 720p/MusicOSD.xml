@@ -27,7 +27,7 @@
 			<ondown>100</ondown>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="Window.IsVisible(Mutebug)">conditional</animation>
-			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
+			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]+system.getbool(input.enablemouse)</visible>
 		</control>
 		<control type="slider" id="87">
 			<description>Seek Slider</description>
@@ -59,7 +59,7 @@
 				<height>55</height>
 				<label>210</label>
 				<font>-</font>
-				<texturefocus>OSDChannelUPFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelUPFO.png</texturefocus>
 				<texturenofocus>OSDChannelUPNF.png</texturenofocus>
 				<onclick>PlayerControl(Previous)</onclick>
 				<visible>MusicPlayer.Content(LiveTV)</visible>
@@ -69,10 +69,32 @@
 				<height>55</height>
 				<label>209</label>
 				<font>-</font>
-				<texturefocus>OSDChannelDownFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelDownFO.png</texturefocus>
 				<texturenofocus>OSDChannelDownNF.png</texturenofocus>
 				<onclick>PlayerControl(Next)</onclick>
 				<visible>MusicPlayer.Content(LiveTV)</visible>
+			</control>
+			<control type="button" id="302">
+				<width>55</width>
+				<height>55</height>
+				<label>210</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolUpFO.png</texturefocus>
+				<texturenofocus>OSDVolUpNF.png</texturenofocus>
+				<onclick>$VAR[VolumeStepUp]</onclick>
+				<onclick>VolumeUp</onclick>
+				<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+			</control>
+			<control type="button" id="303">
+				<width>50</width>
+				<height>50</height>
+				<label>210</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolDownFO.png</texturefocus>
+				<texturenofocus>OSDVolDownNF.png</texturenofocus>
+				<onclick>$VAR[VolumeStepDown]</onclick>
+				<onclick>VolumeDown</onclick>
+				<visible>Skin.HasSetting(EnableVolumeButtons)</visible>
 			</control>
 			<control type="button" id="600">
 				<width>55</width>
@@ -145,7 +167,7 @@
 				<height>55</height>
 				<label>19019</label>
 				<font>-</font>
-				<texturefocus>OSDChannelListFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelListFO.png</texturefocus>
 				<texturenofocus>OSDChannelListNF.png</texturenofocus>
 				<onclick>ActivateWindow(PVROSDChannels)</onclick>
 				<visible>MusicPlayer.Content(LiveTV)</visible>
@@ -155,7 +177,7 @@
 				<height>55</height>
 				<label>$LOCALIZE[19029]$INFO[MusicPlayer.ChannelName, - ]</label>
 				<font>-</font>
-				<texturefocus>OSDepgFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDepgFO.png</texturefocus>
 				<texturenofocus>OSDepgNF.png</texturenofocus>
 				<onclick>ActivateWindow(PVROSDGuide)</onclick>
 				<visible>MusicPlayer.Content(LiveTV)</visible>
@@ -184,7 +206,7 @@
 					<top>0</top>
 					<width>55</width>
 					<height>55</height>
-					<texture colordiffuse="$VAR[MainColorOne]">OSDRepeatNF.png</texture>
+					<texture>OSDRepeatNF.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					<visible>!Control.HasFocus(606)</visible>
 				</control>
@@ -202,7 +224,7 @@
 					<top>0</top>
 					<width>55</width>
 					<height>55</height>
-					<texture colordiffuse="$VAR[MainColorOne]">OSDRepeatOneNF.png</texture>
+					<texture>OSDRepeatOneNF.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
 					<visible>!Control.HasFocus(606)</visible>
 				</control>
@@ -220,7 +242,7 @@
 					<top>0</top>
 					<width>55</width>
 					<height>55</height>
-					<texture colordiffuse="$VAR[MainColorOne]">OSDRepeatAllNF.png</texture>
+					<texture>OSDRepeatAllNF.png</texture>
 					<visible>Playlist.IsRepeat</visible>
 					<visible>!Control.HasFocus(606)</visible>
 				</control>
@@ -247,20 +269,26 @@
 				<visible>!MusicPlayer.Content(LiveTV)</visible>
 				<onclick>PlayerControl(Random)</onclick>
 			</control>
+			<control type="image" id="2200">
+				<width>105</width>
+				<height>55</height>
+				<texture>-</texture>
+				<visible>!Skin.HasSetting(EnableVolumeButtons)</visible>
+			</control>
 			<control type="image" id="2300">
-				<width>215</width>
+				<width>110</width>
 				<height>55</height>
 				<texture>-</texture>
 				<visible>!MusicPlayer.Content(LiveTV) + Player.CanRecord</visible>
 			</control>
 			<control type="image" id="2400">
-				<width>270</width>
+				<width>165</width>
 				<texture>-</texture>
 				<visible>MusicPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2500">
-				<width>270</width>
-  			<height>55</height>
+				<width>165</width>
+  				<height>55</height>
 				<texture>-</texture>
 				<visible>!MusicPlayer.Content(LiveTV) + !Player.CanRecord</visible>
 			</control>

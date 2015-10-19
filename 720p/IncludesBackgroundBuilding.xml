@@ -45,7 +45,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Skin.HasSetting(HideHomeNowPlaying) | !Player.HasAudio | Player.Paused | SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
+			<visible>Skin.HasSetting(HideHomeNowPlaying) | !Player.HasAudio | Player.Paused | SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE) | [Player.HasAudio + !Skin.HasSetting(VizOnlyOnHome) + Skin.HasSetting(HideBackgroundCDWall)]</visible>
 			<visible>!Skin.HasSetting(SingleGlobalBackground) + !StringCompare(Window(Home).Property(MenuBackground),Theme) + !StringCompare(Container(9000).ListItem.Property(Background),Theme) + !Skin.HasSetting(HolidayEffects)</visible>
 			<control type="group">
 				<include>BackgroundFade</include>
