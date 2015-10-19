@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
-	<defaultcontrol>-</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<defaultcontrol>-</defaultcontrol
 	<controls>
 		<control type="group">
 			<visible>!Skin.HasSetting(HideHomeNowPlaying)</visible>

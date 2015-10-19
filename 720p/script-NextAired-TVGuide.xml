@@ -8,7 +8,6 @@
 	<onload>ClearProperty(TVGuide.SaturdayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.SundayList,Home)</onload>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
-	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
