@@ -309,31 +309,6 @@
 						<onclick>Skin.ToggleSetting(HideSystemTime)</onclick>
 						<selected>!Skin.HasSetting(HideSystemTime)</selected>
 					</control>
-					<control type="button" id="104">
-						<description>Main Colour One</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31365]</label>
-						<label2>[COLOR=$VAR[MainColorOne]]$VAR[ColorOneName][/COLOR]</label2>
-						<onclick>ActivateWindow(2130)</onclick>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="105">
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>$LOCALIZE[31281]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(HideHomeNowPlaying)</onclick>
-						<selected>!Skin.HasSetting(HideHomeNowPlaying)</selected>
-					</control>
 					<control type="radiobutton" id="106">
 						<width>750</width>
 						<height>40</height>

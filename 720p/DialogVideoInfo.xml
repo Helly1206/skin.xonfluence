@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
-	<include condition="!Skin.HasSetting(DisableTVTunes)">LoadTvTunes</include>
-	<onload condition="System.HasAddon(script.videoextras)">XBMC.RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
@@ -1004,13 +1002,6 @@
 						<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control-->
-					<control type="button" id="102">
-						<description>Fetch TvTunes stuff</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>31127</label>
-						<onclick>RunScript(script.tvtunes,mode=solo)</onclick>
-						<visible>!Skin.HasSetting(DisableTVTunes) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>
-					</control>
 					<control type="button" id="105">
 						<description>Extras</description>
 						<include>ButtonInfoDialogsCommonValues</include>
