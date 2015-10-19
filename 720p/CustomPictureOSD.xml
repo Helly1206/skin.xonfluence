@@ -80,7 +80,6 @@
 				<usealttexture>!SlideShow.IsPaused + SlideShow.IsActive</usealttexture>
 				<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</alttexturefocus>
 				<alttexturenofocus>OSDPauseNF.png</alttexturenofocus>
-				<!-- <animation effect="fade" start="100" end="50" time="75" condition="!Player.PauseEnabled">Conditional</animation> -->
 				<onclick>Action(Pause,SlideShow)</onclick>
 			</control>
 			<control type="button" id="103">

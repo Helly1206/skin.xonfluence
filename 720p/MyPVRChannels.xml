@@ -17,15 +17,9 @@
 		</control>
 		<include>FloorReturnButtons</include>
 		<include>PVRHeader</include>
-		<!-- view id = 50 -->
 		<include>ChannelList</include>
-		<!-- view id = 5010 -->
 		<include>ChannelList2</include>
-
 		<include>AllWidthList</include>
-		<!-- view id = 5060 -->
-
-
 		<include>CommonNowPlaying</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>

@@ -43,7 +43,6 @@
       <posy>15</posy>
       <width>64</width>
       <height>32</height>
-      <!--<onclick>PreviousMenu</onclick>-->
       <texturefocus>DialogCloseButton-focus.png</texturefocus>
       <texturenofocus>DialogCloseButton.png</texturenofocus>
       <onleft>10</onleft>
@@ -58,27 +57,21 @@
       <width>720</width>
       <height>30</height>
       <font>font13_title</font>
-      <!--<label>filled in by code</label>-->
       <align>left</align>
       <aligny>center</aligny>
       <textcolor>white</textcolor>
-      <!--<shadowcolor>black</shadowcolor>-->
     </control>
-    
     <control type="label" description="program description" id = "24">
       <posx>40</posx>
       <posy>100</posy>
       <width>720</width>
       <height>100</height>
       <font>font13_title</font>
-      <!--<label>filled in by code</label>-->
       <align>left</align>
       <aligny>center</aligny>
       <textcolor>grey2</textcolor>
-      <!--<shadowcolor>black</shadowcolor>-->
       <wrapmultiline>true</wrapmultiline>
-    </control>    
-    
+    </control>       
     <control type="spincontrolex" id="21">
       <description>recording type</description>
       <posx>40</posx>

@@ -12,7 +12,6 @@
 		</control>
 		<include>MusicArtUnderVisualisation</include>
 		<control type="visualisation" id="2">
-			<!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
 			<description>visualisation</description>
 			<left>0</left>
 			<top>0</top>
@@ -25,7 +24,6 @@
 			<include>AlbumArtMusicVizWall</include>
 		</control>
 		<include>MusicArtOverVisualisation</include>
-		<!-- media infos -->
 		<control type="group">
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
@@ -264,7 +262,6 @@
 				<animation effect="slide" end="-150,0" time="0" tween="back" easing="out" condition="Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)" reversible="true">Conditional</animation>
 			</control>
 		</control>
-		<!-- codec & viz infos -->
 		<control type="group" id="0">
 			<left>0</left>
 			<top>50</top>

@@ -507,7 +507,6 @@
 				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 				<onleft>ClearProperty(SideBladeOpen)</onleft>
 				<onright>ClearProperty(SideBladeOpen)</onright>
-				<!--onright>200</onright-->
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onback>ClearProperty(SideBladeOpen)</onback>
@@ -535,9 +534,7 @@
 					<label>5</label>
 					<onleft>ClearProperty(SideBladeOpen)</onleft>
 					<onright>200</onright>
-					<!--onclick>ClearProperty(SideBladeOpen)</onclick-->
 				</control>
-				<!-- include>CommonNowPlaying_Controls</include -->
 			</control>
 		</control>
 		<include>Clock</include>

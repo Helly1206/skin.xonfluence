@@ -368,12 +368,10 @@
 			<visible>Window.IsVisible(home)</visible>
 			<texture border="20">OverlayDialogBackground.png</texture>
 		</control>
-		<!-- Music Info -->
 		<control type="group">
 			<visible>Player.HasAudio</visible>
 			<include>SmallMusicInfo</include>
 		</control>
-		<!-- Video Info -->
 		<control type="group">
 			<visible>Player.HasVideo</visible>
 			<include>SmallVideoInfo</include>

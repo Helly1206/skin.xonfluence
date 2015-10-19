@@ -42,14 +42,6 @@
 				<visible>!substring(Window(Home).Property(UsrSelectBtn),UserSub,Left) + !substring(Window(Home).Property(UsrSelectBtn),SubProg) + Window.IsVisible(2115)</visible>
 				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
-			<!--item> Changes Lable,Type & Command ** Removed because Is confusing for users !!
-				<description>Edit XBMC Command</description>
-				<label>$LOCALIZE[31037]</label>
-				<onclick>SetProperty(MenuItemType,EditMenu)</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
-				<visible>SubString(Window(Home).Property(UsrSelectPath),InUse,right)</visible>
-			</item-->
 			<item>
 				<description>UPnP</description>
 				<label>$LOCALIZE[31114]</label>
@@ -309,7 +301,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
-			<!-- Edit Menu -->
 			<item>
 				<description>Edit Videos</description>
 				<label>$LOCALIZE[3]</label>
@@ -418,7 +409,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
-			<!-- Streaming Menu -->
 			<item>
 				<description>Video Streaming File</description>
 				<label>$LOCALIZE[31212]</label>
@@ -487,7 +477,6 @@
 				<visible>StringCompare(Window.Property(MenuItemType),StreamingMenu)</visible>
 				<include>CloseMenuChoice</include>
 			</item>
-			<!-- PlayList Menu -->
 			<item>
 				<description>Watch it Later Playlist</description>
 				<label>$LOCALIZE[559] - $LOCALIZE[31215]</label>
@@ -700,7 +689,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
-			<!-- Music Menu -->
 			<item>
 				<description>Suggested Music</description>
 				<label>$LOCALIZE[31191]</label>
@@ -942,7 +930,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
-			<!-- Video Menu -->
 			<item>
 				<description>Videos</description>
 				<label>$LOCALIZE[3]</label>
@@ -1074,7 +1061,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),VideoMenu)</visible>
 			</item>
-			<!-- Movies Menu -->
 			<item>
 				<description>Cinema</description>
 				<label>$LOCALIZE[24000] - $LOCALIZE[31429]</label>
@@ -1221,24 +1207,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
-			<!-- TVShows Menu -->
-			<!--item>
-				<description>PseudoTV</description>
-				<label>$LOCALIZE[24000] - $LOCALIZE[31428]</label>
-				<include>ClearButtonChoice</include>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript("script.pseudotv"))</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31428])</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,TVShows)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentEpisodes)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
-				<include>CloseMenuChoice</include>
-				<visible>System.HasAddon(script.pseudotv)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
-			</item-->
 			<item>
 				<description>Suggested TVShows</description>
 				<label>$LOCALIZE[31194]</label>
@@ -1367,7 +1335,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
-			<!-- Concerts Menu -->
 			<item>
 				<description>Suggested Concerts</description>
 				<label>$LOCALIZE[31199]</label>
@@ -1559,7 +1526,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),LiveTVMenu)</visible>
 			</item>
-			<!-- Profile Menu -->
 			<item>
 				<description>Profiles</description>
 				<label>$LOCALIZE[13200]</label>
@@ -1608,7 +1574,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),ProfileMenu)</visible>
 			</item>
-			<!-- Shutdown Menu -->
 			<item>
 				<description>Shut Down Menu</description>
 				<label>$LOCALIZE[31334]</label>
@@ -1709,7 +1674,6 @@
 				<visible>System.CanReboot</visible>
 				<visible>StringCompare(Window.Property(MenuItemType),ShutDownMenu)</visible>
 			</item>
-			<!-- System Menu -->
 			<item>
 				<description>System Settings</description>
 				<label>$LOCALIZE[5] $LOCALIZE[13000]</label>
@@ -1841,7 +1805,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
 			</item>
-			<!-- UPnP Music Menu -->
 			<item>
 				<description>Music</description>
 				<label>$LOCALIZE[31115] $LOCALIZE[2]</label>
@@ -1985,7 +1948,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
-			<!-- UPnP Videos -->
 			<item>
 				<description>UPnP Video Files Window</description>
 				<label>[COLOR=selected]$LOCALIZE[31115] $LOCALIZE[3] - $LOCALIZE[744][/COLOR]</label>
@@ -2130,7 +2092,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
-			<!-- UPnP TVShows -->
 			<item>
 				<description>UPnP TV Shows</description>
 				<label>[COLOR=selected]$LOCALIZE[31115] - $LOCALIZE[31424][/COLOR]</label>
@@ -2243,7 +2204,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
-			<!-- UPnP Concerts -->
 			<item>
 				<description>UPnP Concerts</description>
 				<label>[COLOR=selected]$LOCALIZE[31115] - $LOCALIZE[31425][/COLOR]</label>

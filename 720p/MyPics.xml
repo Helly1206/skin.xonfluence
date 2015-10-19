@@ -20,21 +20,13 @@
 		<include>ContentPanelBackgrounds</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<!-- view id = 50 -->
 			<include>CommonRootView</include>
-			<!-- view id = 51 -->
 			<include>FullWidthList</include>
-			<!-- view id = 500 -->
 			<include>ThumbnailView</include>
-			<!-- view id = 510 -->
 			<include>PictureWrapView</include>
-			<!-- view id = 514 -->
 			<include>PictureThumbView</include>
-			<!-- view id = 550 -->
 			<include>AddonInfoListView1</include>
-			<!-- view id = 551 -->
 			<include>AddonInfoThumbView1</include>
-			<!-- view id = 532 -->
 			<include>PictureFullWallView</include>
 		</control>
 		<include>CommonPageCount</include>

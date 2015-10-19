@@ -156,7 +156,6 @@
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelListFO.png</texturefocus>
 				<texturenofocus>OSDChannelListNF.png</texturenofocus>
 				<onclick>ActivateWindow(PVROSDChannels)</onclick>
-				<!-- <onclick>Dialog.Close(VideoOSD)</onclick> -->
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="307">
@@ -166,7 +165,6 @@
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDepgFO.png</texturefocus>
 				<texturenofocus>OSDepgNF.png</texturenofocus>
 				<onclick>ActivateWindow(PVROSDGuide)</onclick>
-				<!-- <onclick>Dialog.Close(VideoOSD)</onclick> -->
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="350">
@@ -348,7 +346,6 @@
 				<onclick>Close</onclick>
 				<onclick>Dialog.Close(VideoOSD)</onclick>
 				<onclick>ActivateWindow(SubtitleSearch)</onclick>
-				<!-- no point in downloading subtitles for live programs -->
 				<enable>!VideoPlayer.Content(LiveTV)</enable>
 			</control>
 			<control type="button" id="402">
@@ -399,7 +396,6 @@
 				<texture border="20,0,20,50">SubMenuBack-Footer.png</texture>
 			</control>
 		</control>
-		<!-- STEREOSCOPIC 3D !LiveTV -->
 		<control type="button" id="520">
 			<description>Fake button for mouse control</description>
 			<right>200</right>

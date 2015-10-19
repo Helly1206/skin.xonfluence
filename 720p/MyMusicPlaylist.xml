@@ -8,11 +8,8 @@
 		<include>ContentPanelBackgrounds</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<!-- view id = 50 -->
 			<include>CommonRootView</include>
-			<!-- view id = 51 -->
 			<include>FullWidthList</include>
-			<!-- view id = 506 -->
 			<include>MusicInfoListView</include>
 		</control>
 		<include>CommonPageCount</include>

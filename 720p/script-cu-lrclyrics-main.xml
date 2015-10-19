@@ -76,7 +76,6 @@
 				<height>4</height>
 				<texture>separator.png</texture>
 			</control>
-			<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
 			<control type="list" id="110">
 				<left>30</left>
 				<top>130</top>
@@ -158,7 +157,6 @@
 				<textcolor>white</textcolor>
 				<visible>Control.IsVisible(120) + !Control.IsVisible(110)</visible>
 			</control>
-			<!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
 			<control type="list" id="120">
 				<left>30</left>
 				<top>170</top>

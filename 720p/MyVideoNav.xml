@@ -11,36 +11,21 @@
 		<include>VideoExtrasIcon</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<!-- view id = 50 -->
 			<include>CommonRootView</include>
-			<!-- view id = 51 -->
 			<include>FullWidthList</include>
-			<!-- view id = 500 -->
 			<include>ThumbnailView</include>
-			<!-- view id = 732 -->
 			<include>FullWallView</include>
-			<!-- view id = 724 -->
 			<include>Lowlist</include>
-			<!-- view id = 501 -->
 			<include>PosterWrapView</include>
-			<!-- view id = 508 -->
 			<include condition="Skin.HasSetting(WrapMediaViews)">PosterWrapViewFanart</include>
 			<include condition="!Skin.HasSetting(WrapMediaViews)">PosterListViewFanart</include>
-			<!-- view id = 503 -->
 			<include>MediaListView3</include>
-			<!-- view id = 504 -->
 			<include>MediaListView2</include>
-			<!-- view id = 515 -->
 			<include>MediaListView4</include>
-			<!-- view id = 505 -->
 			<include>WideIconView</include>
-			<!-- view id = 511 -->
 			<include>MusicVideoInfoListView</include>
-			<!-- view id = 550 -->
 			<include>AddonInfoListView1</include>
-			<!-- view id = 551 -->
 			<include>AddonInfoThumbView1</include>
-			<!-- view id = 560 -->
 			<include>LiveTVView1</include>
 		</control>
 		<include>CommonPageCount</include>
@@ -49,7 +34,6 @@
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<include condition="!Skin.HasSetting(DisableTVNextAired)">NextAired</include>
-		<!--include>FanArtExtraThumbs</include-->
 		<control type="image">
 			<description>Section header image</description>
 			<left>20</left>

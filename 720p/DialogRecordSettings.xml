@@ -8,7 +8,6 @@
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
-		<!-- Standard dialog header //-->
 		<control type="image">
 			<description>background image</description>
 			<left>0</left>
@@ -53,14 +52,12 @@
 			<ondown>10</ondown>
 			<visible>system.getbool(input.enablemouse)</visible>
 		</control>
-		<!-- Dialog specific controls //-->
 		<control type="label" description="Program title" id="20">
 			<left>40</left>
 			<top>100</top>
 			<width>720</width>
 			<height>30</height>
 			<font>font12_title</font>
-			<!--<label>filled in by code</label>-->
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>white</textcolor>
@@ -71,7 +68,6 @@
 			<width>355</width>
 			<height>30</height>
 			<font>font12_title</font>
-			<!--<label>filled in by code</label>-->
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>white</textcolor>
@@ -82,7 +78,6 @@
 			<width>355</width>
 			<height>30</height>
 			<font>font12_title</font>
-			<!--<label>filled in by code</label>-->
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>white</textcolor>
@@ -151,7 +146,6 @@
 				<onleft>15</onleft>
 			</control>
 		</control>
-		<!-- Dialog Ok/Cancel buttons //-->
 		<control type="grouplist" id="9001">
 			<left>190</left>
 			<top>435</top>

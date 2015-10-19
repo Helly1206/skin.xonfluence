@@ -44,7 +44,6 @@
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<include>TopLeftInfo</include>
-		<!-- Music Info -->
 		<control type="group">
 			<left>0</left>
 			<top>65</top>
@@ -103,7 +102,6 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
-		<!-- LiveTV Info -->
 		<control type="group">
 			<left>490r</left>
 			<top>70</top>
@@ -248,7 +246,6 @@
 				</control>
 			</control>
 		</control>
-		<!-- Video Info -->
 		<control type="group">
 			<left>0</left>
 			<top>60</top>
@@ -456,7 +453,6 @@
 				</control>
 			</control>
 		</control>
-		<!-- Suggested Movie Info -->
 		<control type="group">
 			<left>0</left>
 			<top>60</top>
@@ -531,7 +527,6 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
-		<!-- Suggested Episode Info -->
 		<control type="group">
 			<left>0</left>
 			<top>60</top>

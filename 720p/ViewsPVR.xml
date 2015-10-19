@@ -408,8 +408,6 @@
 			<include>Window_OpenClose_Animation</include>
 			<control type="group">
 				<include>VisibleFadeEffect</include>
-				
-				<!--BG image LEFTVIEW -->
 				<control type="image">
 					<left>50</left>
 					<top>60</top>
@@ -424,8 +422,6 @@
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
-				
-				<!--BG image RIGHTVIEW-->
 				<control type="image">
 					<left>660</left>
 					<top>60</top>
@@ -456,8 +452,6 @@
 				<height>184</height>
 				<texture border="5">button-nofocus.png</texture>
 			</control>
-			
-			<!--BigChannelPicon-->
 			<control type="image">
 				<left>15</left>
 				<top>20</top>
@@ -467,7 +461,6 @@
 				<aspectratio>keep</aspectratio>
 				<visible>!IsEmpty(Listitem.Icon)</visible>
 			</control>
-			
 			<control type="multiimage">
 				<left>225</left>
 				<top>5</top>
@@ -497,9 +490,6 @@
 			<control type="group">
 				<left>680</left>
 				<top>340</top>
-				
-				<!--### RIGHT VIEW ###-->
-				<!--Title-->
 				<control type="label">
 					<left>0</left>
 					<top>-60</top>
@@ -513,8 +503,6 @@
 					<aligny>center</aligny>
 					<label>[B]$INFO[Container(5010).ListItem.Title][/B]</label>
 				</control>
-				
-				<!--StartTime-->
 				<control type="label">
 					<left>0</left>
 					<top>-80</top>
@@ -527,8 +515,6 @@
 					<visible>Container(5010).ListItem.HasEpg</visible>
 					<label>$INFO[Container(5010).ListItem.StartTime]</label>
 				</control>
-				
-				<!--Progressbar-->
 				<control type="progress">
 					<description>Progressbar</description>
 					<left>4</left>
@@ -538,8 +524,6 @@
 					<visible>Container(5010).ListItem.HasEpg</visible>
 					<info>Container(5010).ListItem.Progress</info>
 				</control>
-				
-				<!--EndTime-->
 				<control type="label">
 					<left>123</left>
 					<top>-80</top>
@@ -552,8 +536,6 @@
 					<visible>Container(5010).ListItem.HasEpg</visible>
 					<label>$INFO[Container(5010).ListItem.EndTime]</label>
 				</control>
-				
-				<!--Plot-->
 				<control type="textbox">
 					<description>Plot Value for TVShow</description>
 					<left>0</left>
@@ -567,8 +549,6 @@
 					<label>$INFO[Container(5010).ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="501000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-				
-				<!--NextTitle-->
 				<control type="label">
 					<left>0</left>
 					<top>280</top>
@@ -582,8 +562,6 @@
 					<visible>!IsEmpty(Container(5010).ListItem.NextTitle)</visible>
 					<label>$LOCALIZE[19031]: $INFO[Container(5010).ListItem.NextTitle]</label>
 				</control>
-				
-				<!--NextTitle Time-->
 				<control type="label">
 					<left>335</left>
 					<top>280</top>
@@ -598,10 +576,6 @@
 					<label>$INFO[Container(5010).ListItem.NextStartTime]$INFO[Container(5010).ListItem.NextEndTime, - ,]</label>
 				</control>
 			</control>
-			
-			<!--### ### LEFT VIEW ### ###-->
-			
-			<!--### unfocussed ###-->
 			<control type="list" id="5010">
 				<left>70</left>
 				<top>85</top>
@@ -623,8 +597,6 @@
 						<texture border="2">MenuItemNF.png</texture>
 						<include>VisibleFadeEffect</include>
 					</control>
-					
-					<!--ChannelNumber-->
 					<control type="label">
 						<left>3</left>
 						<top>1</top>
@@ -637,7 +609,6 @@
 						<selectedcolor>grey</selectedcolor>
 						<info>ListItem.ChannelNumberLabel</info>
 					</control>
-					<!--Picon-->
 					<control type="image">
 						<left>50</left>
 						<top>2</top>
@@ -646,8 +617,6 @@
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
-					
-					<!--Sendername-->
 					<control type="label">
 						<left>100</left>
 						<top>1</top>
@@ -660,8 +629,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
-					<!--Title no Picon-->
 					<control type="label">
 						<left>270</left>
 						<top>1</top>
@@ -675,8 +642,6 @@
 						<label>$INFO[ListItem.Title]</label>
 						<visible>IsEmpty(Listitem.Icon)</visible>
 					</control>
-					
-					<!--Title with Picon-->
 					<control type="label">
 						<left>270</left>
 						<top>1</top>
@@ -690,8 +655,6 @@
 						<label>$INFO[ListItem.Title]</label>
 						<visible>!IsEmpty(Listitem.Icon)</visible>
 					</control>
-					
-					<!--progressbar-->
 					<control type="progress">
 						<description>Progressbar</description>
 						<left>100</left>
@@ -702,8 +665,6 @@
 						<visible>ListItem.HasEpg</visible>
 						<info>ListItem.Progress</info>
 					</control>
-
-					<!--recording-->
 					<control type="image">
 						<left>503</left>
 						<top>5</top>
@@ -713,8 +674,6 @@
 						<visible>ListItem.IsRecording</visible>
 					</control>
 				</itemlayout>
-				
-				<!--### focussed ###-->
 				<focusedlayout height="38" width="590">
 					<control type="image">
 						<left>0</left>
@@ -734,8 +693,6 @@
 						<visible>Control.HasFocus(5010)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
-
-					<!--ChannelNumber-->
 					<control type="label">
 						<left>3</left>
 						<top>1</top>
@@ -748,7 +705,6 @@
 						<selectedcolor>grey</selectedcolor>
 						<info>ListItem.ChannelNumberLabel</info>
 					</control>
-					<!--Picon-->
 					<control type="image">
 						<left>50</left>
 						<top>2</top>
@@ -757,8 +713,6 @@
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
-					
-					<!--Sendername-->
 					<control type="label">
 						<left>100</left>
 						<top>1</top>
@@ -771,8 +725,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
-					<!--Title no Picon-->
 					<control type="label">
 						<left>270</left>
 						<top>1</top>
@@ -786,8 +738,6 @@
 						<label>$INFO[ListItem.Title]</label>
 						<visible>IsEmpty(Listitem.Icon)</visible>
 					</control>
-					
-					<!--Title with Picon-->
 					<control type="label">
 						<left>270</left>
 						<top>1</top>
@@ -801,8 +751,6 @@
 						<label>$INFO[ListItem.Title]</label>
 						<visible>!IsEmpty(Listitem.Icon)</visible>
 					</control>
-					
-					<!--Progressbar-->
 					<control type="progress">
 						<description>Progressbar</description>
 						<left>100</left>
@@ -813,8 +761,6 @@
 						<visible>ListItem.HasEpg</visible>
 						<info>ListItem.Progress</info>
 					</control>
-					
-					<!--recording-->
 					<control type="image">
 						<left>503</left>
 						<top>5</top>

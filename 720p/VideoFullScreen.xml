@@ -2,7 +2,6 @@
 <window>
 	<onunload>Skin.SetString(LastVideoPlayed,PlayMedia("$INFO[Player.Filenameandpath]"))</onunload>
 	<controls>
-		<!-- Intro infos -->
 		<control type="group" id="1">
 			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4)</visible>
 			<visible>IntegerGreaterThan(Player.time,3) + !IntegerGreaterThan(Player.time,8) + !Skin.HasSetting(HideInfoStartOSD)</visible>
@@ -25,7 +24,6 @@
 				<include>OSDMediaFlagging</include>
 			</control>
 		</control>
-		<!-- media infos -->
 		<control type="group" id="1">
 			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4)</visible>
 			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] | Player.Seeking | Player.displayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
@@ -177,7 +175,6 @@
 				</control>
 			</control>
 		</control>
-		<!-- codec info -->
 		<control type="group" id="0">
 			<left>0</left>
 			<top>20</top>
@@ -220,20 +217,6 @@
 				<aligny>center</aligny>
 				<font>font12</font>
 			</control>
-<!--		</control>
-		<control type="selectbutton" id="503">
-			<left>440</left>
-			<top>100</top>
-			<width>400</width>
-			<height>100</height>
-			<font>font13caps</font>
-			<description>TV Channel Group Select Button</description>
-			<texturebg border="20">OverlayDialogBackground.png</texturebg>
-			<onleft>503</onleft>
-			<onright>503</onright>
-			<onup>500</onup>
-			<ondown>500</ondown>
-			<include>VisibleFadeEffect</include> -->
 		</control>
 		<control type="group">
 			<visible>Player.ShowCodec + VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>

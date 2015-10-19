@@ -601,20 +601,6 @@ font11xml version="1.0" encoding="UTF-8"?>
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<!--control type="radiobutton" id="130">
-                        <description>enable submenu advise</description>
-                        <width>750</width>
-                        <height>40</height>
-                        <font>font13</font>
-                        <textcolor>grey2</textcolor>
-                        <focusedcolor>white</focusedcolor>
-                        <label>  $LOCALIZE[31276]</label>
-                        <onclick>Skin.ToggleSetting(hidesubmenuadvise)</onclick>
-                        <selected>!Skin.HasSetting(hidesubmenuadvise)</selected>
-                        <texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-                        <texturenofocus>MenuItemNF.png</texturenofocus>
-                        <enable>Skin.HasSetting(AutoVisableSubMenu)</enable>
-                    </control-->
 					<control type="radiobutton" id="131">
 						<description>large widget layout</description>
 						<width>750</width>
