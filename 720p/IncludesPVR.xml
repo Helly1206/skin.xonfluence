@@ -104,8 +104,6 @@
 				</control>
 				<control type="button" id="100">
 					<description>Channels</description>
-<!--					<left>0</left>
-					<top>0</top> -->
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19019</label>
@@ -115,8 +113,6 @@
 				</control>
 				<control type="button" id="101">
 					<description>TV Guide</description>
-<!--					<left>0</left>
-					<top>80</top> -->
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>22020</label>
@@ -126,8 +122,6 @@
 				</control>
 				<control type="button" id="102">
 					<description>Recordings</description>
-<!--					<left>0</left>
-					<top>120</top> -->
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19163</label>
@@ -136,8 +130,6 @@
 				</control>
 				<control type="button" id="103">
 					<description>Timers</description>
-<!--					<left>0</left>
-					<top>160</top> -->
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19040</label>
@@ -146,8 +138,6 @@
 				</control>
 				<control type="button" id="104">
 					<description>Search</description>
-<!--					<left>0</left>
-					<top>200</top> -->
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>137</label>
@@ -165,29 +155,13 @@
 				</control>
 				<control type="button" id="28">
 					<description>Channel Groups</description>
-<!--					<left>0</left>
-					<right>40</right> -->
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
-<!--				</control>
-				<control type="radiobutton" id="5">
-					<description>Group recording items by folder structure</description>
-					<left>0</left>
-					<right>40</right>
-					<textwidth>235</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>19270</label>
-					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible> -->
 				</control>
 				<control type="button" id="2">
 					<description>View As button</description>
-<!--					<left>0</left>
-					<right>40</right> -->
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
-					<!-- <visible>Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)</visible> -->
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
@@ -198,7 +172,6 @@
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<alttexturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</alttexturefocus>
-					<alttexturenofocus>-</alttexturenofocus>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
@@ -212,7 +185,6 @@
 					<onclick>right</onclick>
 					<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
 				</control>
-				<!-- Misc Options (ID is completely arbitrary) -->
 				<control type="label" id="205">
 					<width>250</width>
 					<height>35</height>
@@ -244,7 +216,6 @@
 					<label>19184</label>
 					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
 				</control>
-				<!-- Playback controls -->
 				<include>CommonNowPlaying_Controls</include>
 			</control>
 		</control>

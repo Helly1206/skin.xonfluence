@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">9</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>210</left>
 		<top>65</top>
 	</coordinates>
@@ -47,8 +46,6 @@
 			<font>font13</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
 			<align>left</align>
 			<onleft>9</onleft>
 			<onright>9</onright>

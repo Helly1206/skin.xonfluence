@@ -79,8 +79,6 @@
 				<top>11</top>
 				<width>64</width>
 				<height>32</height>
-				<label>-</label>
-				<font>-</font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -116,7 +114,6 @@
 				<onright>9010</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
 				<itemlayout height="70" width="260">
 					<control type="image">
@@ -308,31 +305,6 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(HideSystemTime)</onclick>
 						<selected>!Skin.HasSetting(HideSystemTime)</selected>
-					</control>
-					<control type="button" id="104">
-						<description>Main Colour One</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31365]</label>
-						<label2>[COLOR=$VAR[MainColorOne]]$VAR[ColorOneName][/COLOR]</label2>
-						<onclick>ActivateWindow(2130)</onclick>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="105">
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>$LOCALIZE[31281]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(HideHomeNowPlaying)</onclick>
-						<selected>!Skin.HasSetting(HideHomeNowPlaying)</selected>
 					</control>
 					<control type="radiobutton" id="106">
 						<width>750</width>
@@ -629,20 +601,6 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<!--control type="radiobutton" id="130">
-                        <description>enable submenu advise</description>
-                        <width>750</width>
-                        <height>40</height>
-                        <font>font13</font>
-                        <textcolor>grey2</textcolor>
-                        <focusedcolor>white</focusedcolor>
-                        <label>  $LOCALIZE[31276]</label>
-                        <onclick>Skin.ToggleSetting(hidesubmenuadvise)</onclick>
-                        <selected>!Skin.HasSetting(hidesubmenuadvise)</selected>
-                        <texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-                        <texturenofocus>MenuItemNF.png</texturenofocus>
-                        <enable>Skin.HasSetting(AutoVisableSubMenu)</enable>
-                    </control-->
 					<control type="radiobutton" id="131">
 						<description>large widget layout</description>
 						<width>750</width>
@@ -5690,7 +5648,6 @@
 						<onright>500</onright>
 						<onup>9005</onup>
 						<ondown>9005</ondown>
-						<pagecontrol>-</pagecontrol>
 						<scrolltime>0</scrolltime>
 						<itemlayout height="1" width="750"></itemlayout>
 						<focusedlayout height="40" width="750">
@@ -7050,7 +7007,7 @@
 						<height>20</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>font11</font>
+						<font>font13</font>
 						<haspath>yes</haspath>
 						<label>$VAR[HomeBackgroundLabel]</label>
 						<textcolor>white</textcolor>
@@ -7901,85 +7858,61 @@
 					<item>
 						<label>$INFO[Skin.String(HomeItem.1.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.3.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.4.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.5.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.6.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.7.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.8.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.9.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.10.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
 					</item>
 				</content>

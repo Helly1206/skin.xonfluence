@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>185</left>
 		<top>105</top>
 	</coordinates>
@@ -250,7 +249,6 @@
 					<width>460</width>
 					<height>138</height>
 					<font>font13</font>
-					<pagecontrol>-</pagecontrol>
 					<label fallback="161">$INFO[ListItem.Comment]</label>
 				</control>
 			</control>

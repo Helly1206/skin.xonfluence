@@ -1747,7 +1747,6 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
-				<!--itemlayout height="40" width="345"-->
 				<itemlayout condition="Container.Content(Episodes) | !Skin.HasSetting(Enable515WideBanners)" height="40" width="345">
 					<control type="image">
 						<left>0</left>
@@ -2282,7 +2281,6 @@
 				<onup>732</onup>
 				<ondown>732</ondown>
 				<viewtype label="31030">panel</viewtype>
-				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>200</preloaditems>
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Sets) | Container.Content(MusicVideos)</visible>

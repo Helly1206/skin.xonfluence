@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<views>50,51,550,551</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
@@ -10,13 +9,9 @@
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<include>CommonRootView</include>
-			<!-- view id = 50 -->
 			<include>FullWidthList</include>
-			<!-- view id = 51 -->
 			<include>AddonInfoListView1</include>
-			<!-- view id = 550 -->
 			<include>AddonInfoThumbView1</include>
-			<!-- view id = 551 -->
 		</control>
 		<include>CommonPageCount</include>
 		<include>CommonNowPlaying</include>
@@ -84,7 +79,6 @@
 					<description>View As button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
@@ -95,7 +89,6 @@
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<alttexturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</alttexturefocus>
-					<alttexturenofocus>-</alttexturenofocus>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>

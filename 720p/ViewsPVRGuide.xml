@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- ID: 10 -->
 	<include name="PVRGuideViewTimeline">
 		<control type="group">
 			<description>TV Guide Timeline</description>
@@ -31,7 +30,6 @@
 				<onright>101</onright>
 				<onup>101</onup>
 				<ondown>101</ondown>
-				<!--<onback>101</onback>-->
 				<rulerlayout height="35" width="40">
 					<control type="label" id="2">
 						<left>0</left>
@@ -293,7 +291,6 @@
 			</control>
 		</control>
 	</include>
-	<!-- ID: 11 -->
 	<include name="PVRGuideViewNow">
 		<control type="group">
 			<description>TV Guide Now</description>
@@ -592,7 +589,6 @@
 							<align>justify</align>
 							<textcolor>grey2</textcolor>
 							<shadowcolor>black</shadowcolor>
-							<pagecontrol>-</pagecontrol>
 							<label>$VAR[VideoDescription]</label>
 						</control>
 						<control type="image">
@@ -672,7 +668,6 @@
 			</control>
 		</control>
 	</include>
-	<!-- ID: 12 -->
 	<include name="PVRGuideViewNext">
 		<control type="group">
 			<description>TV Guide Next</description>
@@ -971,7 +966,6 @@
 							<align>justify</align>
 							<textcolor>grey2</textcolor>
 							<shadowcolor>black</shadowcolor>
-							<pagecontrol>-</pagecontrol>
 							<label>$VAR[VideoDescription]</label>
 						</control>
 						<control type="image">
@@ -1051,7 +1045,6 @@
 			</control>
 		</control>
 	</include>
-	<!-- ID: 13 -->
 	<include name="PVRGuideViewChannel">
 		<control type="group">
 			<description>TV Guide Channel</description>
@@ -1297,7 +1290,6 @@
 							<align>justify</align>
 							<textcolor>grey2</textcolor>
 							<shadowcolor>black</shadowcolor>
-							<pagecontrol>-</pagecontrol>
 							<label>$VAR[VideoDescription]</label>
 						</control>
 						<control type="image">

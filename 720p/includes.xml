@@ -125,8 +125,6 @@
 			<top>15</top>
 			<width>64</width>
 			<height>32</height>
-			<label>-</label>
-			<font>-</font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -170,7 +168,6 @@
 		<aligny>center</aligny>
 		<font>font13</font>
 		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="ButtonMediaSubCommonValues">
@@ -243,10 +240,6 @@
 			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
-			<label>-</label>
-			<font>-</font>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
 			<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
@@ -260,7 +253,6 @@
 			<top>260</top>
 			<width>42</width>
 			<height>128</height>
-			<font>-</font>
 			<texturefocus>HasSubFocus.png</texturefocus>
 			<texturenofocus>HasSub.png</texturenofocus>
 			<onright>ClearProperty(SideBladeOpen)</onright>
@@ -388,7 +380,7 @@
 	</include>
 	<include name="CommonNowPlaying">
 		<control type="group">
-			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE) + !Skin.HasSetting(HideNowPlayingInfo)</visible>
+			<visible>Player.HasMedia</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
@@ -399,7 +391,6 @@
 				<width>45</width>
 				<height>45</height>
 				<label>31003</label>
-				<font>-</font>
 				<onclick>ActivateWindow(PlayerControls)</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
@@ -811,7 +802,6 @@
 				<top>2</top>
 				<width>39</width>
 				<height>39</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelUPFO.png</texturefocus>
 				<texturenofocus>OSDChannelUPNF.png</texturenofocus>
 				<onleft>50</onleft>
@@ -825,7 +815,6 @@
 				<top>2</top>
 				<width>39</width>
 				<height>39</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelDownFO.png</texturefocus>
 				<texturenofocus>OSDChannelDownNF.png</texturenofocus>
 				<onleft>600</onleft>
@@ -839,7 +828,6 @@
 				<top>2</top>
 				<width>39</width>
 				<height>39</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
 				<texturenofocus>OSDStopNF.png</texturenofocus>
 				<onleft>601</onleft>
@@ -854,7 +842,6 @@
 				<top>2</top>
 				<width>39</width>
 				<height>39</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
 				<texturenofocus>OSDPauseNF.png</texturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -874,7 +861,6 @@
 				<top>2</top>
 				<width>39</width>
 				<height>39</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRecordOffFO.png</texturefocus>
 				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
 				<onleft>604</onleft>
@@ -898,7 +884,6 @@
 				<top>2</top>
 				<width>39</width>
 				<height>39</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPrevTrackFO.png</texturefocus>
 				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
 				<onleft>50</onleft>
@@ -913,7 +898,6 @@
 				<top>2</top>
 				<width>39</width>
 				<height>39</height>
-				<label>-</label>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRewindFO.png</texturefocus>
 				<texturenofocus>OSDRewindNF.png</texturenofocus>
 				<onleft>600</onleft>
@@ -931,7 +915,6 @@
 					<top>2</top>
 					<width>39</width>
 					<height>39</height>
-					<label>-</label>
 					<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
 					<texturenofocus>OSDPauseNF.png</texturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -949,7 +932,6 @@
 					<top>2</top>
 					<width>39</width>
 					<height>39</height>
-					<label>-</label>
 					<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
 					<texturenofocus>OSDStopNF.png</texturenofocus>
 					<onleft>603</onleft>
@@ -965,7 +947,6 @@
 					<top>2</top>
 					<width>39</width>
 					<height>39</height>
-					<label>-</label>
 					<texturefocus colordiffuse="$VAR[MainColorOne]">OSDForwardFO.png</texturefocus>
 					<texturenofocus>OSDForwardNF.png</texturenofocus>
 					<onleft>601</onleft>
@@ -981,7 +962,6 @@
 					<top>2</top>
 					<width>39</width>
 					<height>39</height>
-					<label>-</label>
 					<texturefocus colordiffuse="$VAR[MainColorOne]">OSDNextTrackFO.png</texturefocus>
 					<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 					<onleft>607</onleft>
@@ -1000,9 +980,6 @@
 					<top>2</top>
 					<width>39</width>
 					<height>39</height>
-					<label>-</label>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
 					<onclick>PlayerControl(Repeat)</onclick>
 					<onleft>602</onleft>
 					<onright>605</onright>
@@ -1022,7 +999,6 @@
 					<top>2</top>
 					<width>39</width>
 					<height>39</height>
-					<label>-</label>
 					<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRandomOffFO.png</texturefocus>
 					<texturenofocus>OSDRandomOffNF.png</texturenofocus>
 					<usealttexture>Playlist.IsRandom</usealttexture>
@@ -1098,7 +1074,6 @@
 			<label>$INFO[System.Time]</label>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
-			<!--animation effect="slide" start="0,0" end="-80,0" time="0" condition="Window.IsVisible(MusicOSD)">conditional</animation-->
 			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
@@ -1693,8 +1668,6 @@
 		<top>920</top>
 		<width>1</width>
 		<height>1</height>
-		<texturenofocus>-</texturenofocus>
-		<texturefocus>-</texturefocus>
 	</include>
 	<include name="MenuMoviePlayListCheck">
 		<visible>

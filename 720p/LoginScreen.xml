@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">52</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<coordinates>
-		<system>1</system>
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
@@ -192,8 +190,6 @@
 					<top>0</top>
 					<width>45</width>
 					<height>45</height>
-					<label>-</label>
-					<font>-</font>
 					<onclick>ActivateWindow(ShutdownMenu)</onclick>
 					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 					<texturenofocus border="5">floor_button.png</texturenofocus>

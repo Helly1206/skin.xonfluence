@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="3001">
-	<!-- The following property allows TvTunes to keep playing when this window is displayed -->
-	<onload condition="!IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "TvShows")</onload>
-	<onload condition="IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "Movies")</onload>
-	<include condition="!Skin.HasSetting(DisableTVTunes)">LoadTvTunes</include>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
@@ -14,7 +10,6 @@
 		</control>
 		<include>CommonPageCount</include>
 		<include>CommonNowPlaying</include>
-		<!--include>MainWindowMouseButtons</include-->
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
@@ -90,7 +85,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<!-- Label 2 is used to store the Duration HH:MM:SS -->
 					<control type="label">
 						<posx>950</posx>
 						<posy>0</posy>
@@ -160,7 +154,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<!-- Label 2 is used to store the Duration HH:MM:SS -->
 					<control type="label">
 						<posx>950</posx>
 						<posy>0</posy>

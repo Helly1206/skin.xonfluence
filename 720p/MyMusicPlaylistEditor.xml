@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">6</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
@@ -89,7 +88,6 @@
 					<align>center</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<pagecontrol>-</pagecontrol>
 					<label>$INFO[Container(50).ListItem.Title,[COLOR=$VAR[MainColorOne]]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Artist,[COLOR=$VAR[MainColorOne]]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Album,[COLOR=$VAR[MainColorOne]]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Duration,[COLOR=$VAR[MainColorOne]]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.TrackNumber,[COLOR=$VAR[MainColorOne]]$LOCALIZE[554]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Genre,[COLOR=$VAR[MainColorOne]]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
 				</control>
 			</control>
@@ -113,7 +111,6 @@
 					<align>center</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<pagecontrol>-</pagecontrol>
 					<label>$INFO[Container(100).ListItem.Title,[COLOR=$VAR[MainColorOne]]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Artist,[COLOR=$VAR[MainColorOne]]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Album,[COLOR=$VAR[MainColorOne]]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Duration,[COLOR=$VAR[MainColorOne]]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.TrackNumber,[COLOR=$VAR[MainColorOne]]$LOCALIZE[554]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Genre,[COLOR=$VAR[MainColorOne]]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
 				</control>
 			</control>

@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">2</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>240</left>
 		<top>60</top>
 	</coordinates>
@@ -42,10 +41,7 @@
 			<left>710</left>
 			<top>15</top>
 			<width>64</width>
-			<height>32</height>
-			<label>-</label>
-			<font>-</font>
-			<onclick>PreviousMenu</onclick>
+			<height>32</height>			<onclick>PreviousMenu</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<onleft>3</onleft>
@@ -78,7 +74,6 @@
 			<onup>2</onup>
 			<scrolltime>200</scrolltime>
 			<viewtype label="536">icon</viewtype>
-			<pagecontrol>-</pagecontrol>
 			<orientation>vertical</orientation>
 			<itemlayout height="215" width="240">
 				<control type="image">

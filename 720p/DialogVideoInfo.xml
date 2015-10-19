@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	<include condition="!Skin.HasSetting(DisableTVTunes)">LoadTvTunes</include>
-	<onload condition="System.HasAddon(script.videoextras)">XBMC.RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
@@ -22,8 +19,6 @@
 				<top>0</top>
 				<width>64</width>
 				<height>32</height>
-				<label>-</label>
-				<font>-</font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -187,7 +182,6 @@
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
-						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="30">
 							<control type="label">
@@ -367,7 +361,6 @@
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
-						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="30">
 							<control type="label">
@@ -512,7 +505,6 @@
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
-						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="30">
 							<control type="label">
@@ -677,7 +669,6 @@
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
-						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="30">
 							<control type="label">
@@ -839,12 +830,10 @@
 					<left>120r</left>
 					<top>485</top>
 					<subtype>page</subtype>
-					<font>-</font>
 					<onleft>61</onleft>
 					<onright>61</onright>
 					<ondown>9000</ondown>
 					<onup>49</onup>
-					<textcolor>-</textcolor>
 					<showonepage>true</showonepage>
 				</control>
 				<control type="textbox" id="400">
@@ -995,23 +984,6 @@
 						<visible>Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos)</visible>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
-					<!--control type="button" id="101">
-						<description>Get ExtraFanart</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>$LOCALIZE[31344]</label>
-						<onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
-						<onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
-						<onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=musicvideo, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
-						<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control-->
-					<control type="button" id="102">
-						<description>Fetch TvTunes stuff</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>31127</label>
-						<onclick>RunScript(script.tvtunes,mode=solo)</onclick>
-						<visible>!Skin.HasSetting(DisableTVTunes) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>
-					</control>
 					<control type="button" id="105">
 						<description>Extras</description>
 						<include>ButtonInfoDialogsCommonValues</include>
@@ -1028,7 +1000,6 @@
 					<height>40</height>
 					<texturefocus>arrow-big-left.png</texturefocus>
 					<texturenofocus>arrow-big-left.png</texturenofocus>
-					<!--onclick>Control.Move(9000,-1)</onclick-->
 					<visible>Container(9000).HasPrevious</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
@@ -1040,7 +1011,6 @@
 					<height>40</height>
 					<texturefocus>arrow-big-right.png</texturefocus>
 					<texturenofocus>arrow-big-right.png</texturenofocus>
-					<!--onclick>Control.Move(9000,1)</onclick-->
 					<visible>Container(9000).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>

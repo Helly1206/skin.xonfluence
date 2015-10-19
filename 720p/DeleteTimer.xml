@@ -43,9 +43,6 @@
 			<top>15</top>
 			<width>64</width>
 			<height>32</height>
-			<label>-</label>
-			<font>-</font>
-			<!--<onclick>PreviousMenu</onclick>-->
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<onleft>10</onleft>
@@ -60,11 +57,9 @@
 			<width>720</width>
 			<height>30</height>
 			<font>font13_title</font>
-			<!--<label>filled in by code</label>-->
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>white</textcolor>
-			<!--<shadowcolor>black</shadowcolor>-->
 		</control>
 		<control type="group" description="radio buttons">
 			<left>40</left>

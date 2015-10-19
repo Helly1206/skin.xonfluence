@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>290</left>
 		<top>75</top>
 	</coordinates>
@@ -72,7 +71,6 @@
 			<left>0</left>
 			<top>0</top>
 			<height>30</height>
-			<label>-</label>
 			<align>center</align>
 			<aligny>bottom</aligny>
 			<font>font13_title</font>

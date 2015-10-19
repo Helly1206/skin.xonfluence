@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
-	<defaultcontrol>-</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
 			<visible>!Skin.HasSetting(HideHomeNowPlaying)</visible>
@@ -14,7 +12,6 @@
 		</control>
 		<include>MusicArtUnderVisualisation</include>
 		<control type="visualisation" id="2">
-			<!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
 			<description>visualisation</description>
 			<left>0</left>
 			<top>0</top>
@@ -27,7 +24,6 @@
 			<include>AlbumArtMusicVizWall</include>
 		</control>
 		<include>MusicArtOverVisualisation</include>
-		<!-- media infos -->
 		<control type="group">
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
@@ -266,7 +262,6 @@
 				<animation effect="slide" end="-150,0" time="0" tween="back" easing="out" condition="Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)" reversible="true">Conditional</animation>
 			</control>
 		</control>
-		<!-- codec & viz infos -->
 		<control type="group" id="0">
 			<left>0</left>
 			<top>50</top>
@@ -285,7 +280,6 @@
 				<description>row 1 label</description>
 				<left>50</left>
 				<top>10</top>
-				<label>-</label>
 				<align>left</align>
 				<label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps]$INFO[musicplayer.bitspersample, · $LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz]$INFO[musicplayer.Channels, · $LOCALIZE[21444]: ]</label>
 				<font>font12</font>
@@ -294,7 +288,6 @@
 				<description>row 2 label</description>
 				<left>50</left>
 				<top>40</top>
-				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Name,, [I][COLOR=orange]($LOCALIZE[20166])[/COLOR][/I] · ]fps: $INFO[System.FPS]</label>
 				<font>font12</font>
@@ -304,7 +297,6 @@
 				<description>Unlocked row 2 label</description>
 				<left>50</left>
 				<top>40</top>
-				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Name,, · ]fps: $INFO[System.FPS]</label>
 				<font>font12</font>
@@ -314,7 +306,6 @@
 				<description>row 3 label</description>
 				<left>50</left>
 				<top>70</top>
-				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Preset,$LOCALIZE[13388]: ]</label>
 				<font>font12</font>
@@ -464,7 +455,6 @@
 					<top>147</top>
 					<width>910</width>
 					<height>14</height>
-					<overlaytexture>-</overlaytexture>
 					<info>PVR.ActStreamProgrSNR</info>
 				</control>
 				<control type="label">

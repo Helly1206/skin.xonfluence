@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">20</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<coordinates>
-		<system>1</system>
 		<left>80</left>
 		<top>65</top>
 	</coordinates>
@@ -231,10 +229,6 @@
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<pulseonselect>no</pulseonselect>
 					<label>19074</label>
-<!--					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>33</onup>
-					<ondown>8</ondown> -->
 				</control>
 				<control type="edit" id="8">
 					<description>Channel name</description>
@@ -249,10 +243,6 @@
 					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<label>19201</label>
-<!--					<onright>60</onright>
-					<onleft>20</onleft>
-					<onup>7</onup>
-					<ondown>9</ondown> -->
 				</control>
 				<control type="group" id="9005">
 					<left>0</left>
@@ -300,10 +290,6 @@
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<pulseonselect>no</pulseonselect>
 					<label>19206</label>
-<!--					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>9</onup>
-					<ondown>13</ondown> -->
 				</control>
 				<control type="spincontrolex" id="13">
 					<description>EPG source</description>
@@ -315,10 +301,6 @@
 					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<label>19200</label>
-<!--					<onright>9000</onright>
-					<onleft>20</onleft>
-					<onup>12</onup>
-					<ondown>14</ondown> -->
 				</control>
 				<control type="radiobutton" id="14">
 					<description>Parental locked</description>
@@ -336,10 +318,6 @@
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<pulseonselect>no</pulseonselect>
 					<label>19267</label>
-<!--					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>13</onup>
-					<ondown>30</ondown> -->
 				</control>
 			</control>
 			<control type="grouplist">
@@ -364,55 +342,6 @@
 					<textcolor>$VAR[MainColorOne]</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-<!--				<control type="button" id="30">
-					<description>Group Manager Button</description>
-					<left>0</left>
-					<top>25</top>
-					<width>190</width>
-					<height>35</height>
-					<font>font12</font>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<align>center</align>
-					<label>19205</label>
-					<onleft>20</onleft>
-					<onright>34</onright>
-					<onup>14</onup>
-					<ondown>31</ondown>
-				</control>
-				<control type="button" id="34">
-					<description>TV/Radio Button</description>
-					<left>195</left>
-					<top>25</top>
-					<width>185</width>
-					<height>35</height>
-					<font>font12</font>
-					<visible>IsEmpty(Window.Property(IsRadio))</visible>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<align>center</align>
-					<label>19024</label>
-					<onleft>30</onleft>
-					<onright>9000</onright>
-					<onup>14</onup>
-					<ondown>31</ondown>
-				</control>
-				<control type="button" id="34">
-					<description>TV/Radio Button</description>
-					<left>195</left>
-					<top>25</top>
-					<width>185</width>
-					<height>35</height>
-					<font>font12</font>
-					<visible>!IsEmpty(Window.Property(IsRadio))</visible>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<align>center</align>
-					<label>19023</label>
-					<onleft>30</onleft>
-					<onright>9000</onright>
-					<onup>14</onup>
-					<ondown>31</ondown> -->
 				</control>
 				<control type="button" id="31">
 					<description>New channel Button</description>
@@ -425,10 +354,6 @@
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<align>center</align>
 					<label>19204</label>
-<!--					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>30</onup>
-					<ondown>32</ondown> -->
 				</control>
 				<control type="button" id="30">
 					<description>Group Manager Button</description>
@@ -441,10 +366,6 @@
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<align>center</align>
 					<label>19205</label>
-<!--					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>31</onup>
-					<ondown>33</ondown> -->
 				</control>
 				<control type="togglebutton" id="34">
 					<description>TV/Radio toggle</description>
@@ -462,10 +383,6 @@
 					<label>19024</label>
 					<altlabel>19023</altlabel>
 					<usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
-<!--					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>32</onup>
-					<ondown>7</ondown> -->
 				</control>
 			</control>
 		</control>

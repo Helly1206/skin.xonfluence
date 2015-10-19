@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">20</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>240</left>
 		<top>20</top>
 	</coordinates>
@@ -40,8 +39,6 @@
 				<height>40</height>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
 				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<font>-</font>
-				<label>-</label>
 				<reverse>yes</reverse>
 				<onup>28</onup>
 				<ondown>5</ondown>

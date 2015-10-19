@@ -1277,7 +1277,6 @@
 		<control type="wraplist" id="555">
 			<description>Fake list to control coverflow movement</description>
 			<include>Window_OpenClose_Animation</include>
-			<!--visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(MusicVideos)</visible-->
 			<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(MusicVideos)</visible>
 			<left>490</left>
 			<top>200</top>
