@@ -1098,7 +1098,9 @@
 			<label>$INFO[System.Time]</label>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
-			<!--animation effect="slide" start="0,0" end="-80,0" time="0" condition="Window.IsVisible(MusicOSD)">conditional</animation-->
+			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="system.getbool(input.enablemouse)+Window.IsVisible(1198)">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
@@ -1118,6 +1120,9 @@
 			<label>$INFO[System.Date]</label>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="system.getbool(input.enablemouse)+Window.IsVisible(1198)">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
@@ -1492,7 +1497,7 @@
 				<top>60</top>
 				<width>260</width>
 				<height>15</height>
-				<label>$INFO[ListItem.Property(NextNumber),$LOCALIZE[20359] [COLOR=$VAR[MainColorOne]]-[/COLOR] ]</label>
+				<label>$LOCALIZE[20359] [COLOR=$VAR[MainColorOne]]-[/COLOR] $INFO[ListItem.Property(NextNumber)]</label>
 				<textcolor>white</textcolor>
 				<font>font12</font>
 				<align>center</align>
@@ -1514,7 +1519,7 @@
 				<top>100</top>
 				<width>260</width>
 				<height>15</height>
-				<label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(NextDate), [COLOR=$VAR[MainColorOne]]-[/COLOR] ]</label>
+				<label>$INFO[ListItem.Property(ShortTime)] [COLOR=$VAR[MainColorOne]]-[/COLOR] $INFO[ListItem.Property(NextDate)]</label>
 				<textcolor>grey2</textcolor>
 				<font>font12</font>
 				<align>center</align>
@@ -1525,7 +1530,7 @@
 				<top>120</top>
 				<width>260</width>
 				<height>15</height>
-				<label>$INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]]$INFO[ListItem.Property(Network), [COLOR=$VAR[MainColorOne]]-[/COLOR] (,)]</label>
+				<label>$INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]] [COLOR=$VAR[MainColorOne]]-[/COLOR] (,)$INFO[ListItem.Property(Network)]</label>
 				<textcolor>grey2</textcolor>
 				<font>font12</font>
 				<align>center</align>
@@ -1575,7 +1580,7 @@
 				<top>60</top>
 				<width>260</width>
 				<height>15</height>
-				<label>$INFO[ListItem.Property(NextNumber),$LOCALIZE[20359] [COLOR=$VAR[MainColorOne]]-[/COLOR] ]</label>
+				<label>$LOCALIZE[20359] [COLOR=$VAR[MainColorOne]]-[/COLOR] $INFO[ListItem.Property(NextNumber)]</label>
 				<textcolor>selected</textcolor>
 				<font>font12</font>
 				<align>center</align>
@@ -1597,7 +1602,7 @@
 				<top>100</top>
 				<width>260</width>
 				<height>15</height>
-				<label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(NextDate), [COLOR=$VAR[MainColorOne]]-[/COLOR] ]</label>
+				<label>$INFO[ListItem.Property(ShortTime)] [COLOR=$VAR[MainColorOne]]-[/COLOR] $INFO[ListItem.Property(NextDate)]</label>
 				<textcolor>white</textcolor>
 				<font>font12</font>
 				<align>center</align>
@@ -1608,7 +1613,7 @@
 				<top>120</top>
 				<width>260</width>
 				<height>15</height>
-				<label>$INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]]$INFO[ListItem.Property(Network), [COLOR=$VAR[MainColorOne]]-[/COLOR] (,)]</label>
+				<label>$INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]] [COLOR=$VAR[MainColorOne]]-[/COLOR] (,)$INFO[ListItem.Property(Network)]</label>
 				<textcolor>white</textcolor>
 				<font>font12</font>
 				<align>center</align>

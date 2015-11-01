@@ -1,3 +1,14 @@
+[B]3.1.5[/B]
+- Changed entering sidebar for picture full wall view to up/down #159
+- Show slide index on a paused slideshow #159
+- Add daten taken to pictures list view #159
+- Move clock on close window button if mouse enabled #162, #172
+- Show slide info on picture OSD
+- removed unneeded '[' on various places #171, #173
+- Removed strange appearance of Clearart dailog #180
+- Cleanup and keyboard/ numpad according to confluence 2.8.0 (Thanks to msduketown)
+- Added option to have graphical textures on keyboards
+
 [B]3.1.4[/B]
 - Fixed incorrect position of pause button in 'not' original popup seekbar #150
 - Added option for minimal (better sorted) dialogpicture info #19

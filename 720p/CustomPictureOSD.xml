@@ -2,7 +2,6 @@
 <window type="dialog" id="1198">
 	<defaultcontrol always="false">100</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
@@ -44,7 +43,6 @@
 			<width>64</width>
 			<height>32</height>
 			<label>-</label>
-			<font>-</font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -54,6 +52,42 @@
 			<ondown>100</ondown>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>system.getbool(input.enablemouse)</visible>
+		</control>
+		<control type="label" id="1001">
+			<left>625</left>
+			<top>135r</top>
+			<width min="10" max="520">auto</width>
+			<height>30</height>
+			<font>font30</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Slideshow.FileName]</label>
+			<textcolor>orange</textcolor>
+			<scroll>true</scroll>
+		</control>
+		<control type="label" id="1001">
+			<left>625</left>
+			<top>100r</top>
+			<width min="10" max="520">auto</width>
+			<height>15</height>
+			<font>font13</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[21804]$LOCALIZE[31001] $INFO[Slideshow.SlideIndex]</label>
+			<textcolor>grey</textcolor>
+			<scroll>true</scroll>
+		</control>
+		<control type="label" id="1001">
+			<left>625</left>
+			<top>80r</top>
+			<width min="10" max="520">auto</width>
+			<height>15</height>
+			<font>font13</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[577]$LOCALIZE[31001] $INFO[Slideshow.EXIFDate]</label>
+			<textcolor>grey</textcolor>
+			<scroll>true</scroll>
 		</control>
 		<control type="grouplist" id="100">
 			<left>625</left>
@@ -68,7 +102,7 @@
 			<control type="button" id="101">
 				<width>55</width>
 				<height>55</height>
-				<label>pr</label>
+				<label>-</label>
 				<font>-</font>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPrevTrackFO.png</texturefocus>
 				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
@@ -77,20 +111,19 @@
 			<control type="togglebutton" id="102">
 				<width>55</width>
 				<height>55</height>
-				<label>p</label>
+				<label>-</label>
 				<font>-</font>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPlayFO.png</texturefocus>
 				<texturenofocus>OSDPlayNF.png</texturenofocus>
 				<usealttexture>!SlideShow.IsPaused + SlideShow.IsActive</usealttexture>
 				<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</alttexturefocus>
 				<alttexturenofocus>OSDPauseNF.png</alttexturenofocus>
-				<!-- <animation effect="fade" start="100" end="50" time="75" condition="!Player.PauseEnabled">Conditional</animation> -->
 				<onclick>Action(Pause,SlideShow)</onclick>
 			</control>
 			<control type="button" id="103">
 				<width>55</width>
 				<height>55</height>
-				<label>n</label>
+				<label>-</label>
 				<font>-</font>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDNextTrackFO.png</texturefocus>
 				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
@@ -99,7 +132,7 @@
 			<control type="button" id="104">
 				<width>55</width>
 				<height>55</height>
-				<label>r</label>
+				<label>-</label>
 				<font>-</font>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRepeatFO.png</texturefocus>
 				<texturenofocus>OSDRepeatNF.png</texturenofocus>
@@ -108,7 +141,7 @@
 			<control type="button" id="105">
 				<width>55</width>
 				<height>55</height>
-				<label>+</label>
+				<label>-</label>
 				<font>-</font>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDZoomInFO.png</texturefocus>
 				<texturenofocus>OSDZoomInNF.png</texturenofocus>
@@ -126,7 +159,7 @@
 			<control type="button" id="107">
 				<width>55</width>
 				<height>55</height>
-				<label>I</label>
+				<label>-</label>
 				<font>-</font>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDInfoFO.png</texturefocus>
 				<texturenofocus>OSDInfoNF.png</texturenofocus>

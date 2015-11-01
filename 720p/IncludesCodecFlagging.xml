@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-<!--	<variable name="typehackflagging">
-		<value condition="[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]">bluray</value>
-		<value condition="substring(ListItem.FilenameAndPath,hddvd)">hddvd</value>
-		<value condition="substring(ListItem.FilenameAndPath,dvd)">dvd</value>
-		<value condition="[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)]">TV</value>
-		<value condition="substring(ListItem.FilenameAndPath,vhs)">vhs</value>
-	</variable>
-	<variable name="videocodec">
-		<value condition="[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]">divx</value>
-		<value>$INFO[ListItem.VideoCodec]</value>
-	</variable> -->
 	<include name="VideoCodecFlaggingConditions">
 		<control type="image">
 			<description>Video rez Image</description>

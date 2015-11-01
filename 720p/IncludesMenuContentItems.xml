@@ -42,14 +42,6 @@
 				<visible>!substring(Window(Home).Property(UsrSelectBtn),UserSub,Left) + !substring(Window(Home).Property(UsrSelectBtn),SubProg) + Window.IsVisible(2115)</visible>
 				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
-			<!--item> Changes Lable,Type & Command ** Removed because Is confusing for users !!
-				<description>Edit XBMC Command</description>
-				<label>$LOCALIZE[31037]</label>
-				<onclick>SetProperty(MenuItemType,EditMenu)</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
-				<visible>SubString(Window(Home).Property(UsrSelectPath),InUse,right)</visible>
-			</item-->
 			<item>
 				<description>UPnP</description>
 				<label>$LOCALIZE[31114]</label>
@@ -1222,23 +1214,6 @@
 				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<!-- TVShows Menu -->
-			<!--item>
-				<description>PseudoTV</description>
-				<label>$LOCALIZE[24000] - $LOCALIZE[31428]</label>
-				<include>ClearButtonChoice</include>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript("script.pseudotv"))</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31428])</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,TVShows)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentEpisodes)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
-				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
-				<include>CloseMenuChoice</include>
-				<visible>System.HasAddon(script.pseudotv)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
-			</item-->
 			<item>
 				<description>Suggested TVShows</description>
 				<label>$LOCALIZE[31194]</label>

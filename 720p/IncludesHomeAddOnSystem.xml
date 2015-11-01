@@ -731,7 +731,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetOne.1.Path))</visible>
 		</item>
 		<item>
@@ -739,7 +738,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetOne.2.Path))</visible>
 		</item>
 		<item>
@@ -747,7 +745,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetOne.3.Path))</visible>
 		</item>
 		<item>
@@ -755,7 +752,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetOne.4.Path))</visible>
 		</item>
 		<item>
@@ -763,7 +759,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetOne.5.Path))</visible>
 		</item>
 		<item>
@@ -771,7 +766,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetOne.6.Path))</visible>
 		</item>
 		<item>
@@ -779,7 +773,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetOne.7.Path))</visible>
 		</item>
 	</include>
@@ -789,7 +782,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwo.1.Path))</visible>
 		</item>
 		<item>
@@ -797,7 +789,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwo.2.Path))</visible>
 		</item>
 		<item>
@@ -805,7 +796,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwo.3.Path))</visible>
 		</item>
 		<item>
@@ -813,7 +803,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwo.4.Path))</visible>
 		</item>
 		<item>
@@ -821,7 +810,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwo.5.Path))</visible>
 		</item>
 		<item>
@@ -829,7 +817,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwo.6.Path))</visible>
 		</item>
 		<item>
@@ -837,7 +824,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwo.7.Path))</visible>
 		</item>
 	</include>
@@ -847,7 +833,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetThree.1.Path))</visible>
 		</item>
 		<item>
@@ -855,7 +840,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetThree.2.Path))</visible>
 		</item>
 		<item>
@@ -863,7 +847,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetThree.3.Path))</visible>
 		</item>
 		<item>
@@ -871,7 +854,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetThree.4.Path))</visible>
 		</item>
 		<item>
@@ -879,7 +861,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetThree.5.Path))</visible>
 		</item>
 		<item>
@@ -887,7 +868,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetThree.6.Path))</visible>
 		</item>
 		<item>
@@ -895,7 +875,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetThree.7.Path))</visible>
 		</item>
 	</include>
@@ -905,7 +884,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFour.1.Path))</visible>
 		</item>
 		<item>
@@ -913,7 +891,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFour.2.Path))</visible>
 		</item>
 		<item>
@@ -921,7 +898,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFour.3.Path))</visible>
 		</item>
 		<item>
@@ -929,7 +905,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFour.4.Path))</visible>
 		</item>
 		<item>
@@ -937,7 +912,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFour.5.Path))</visible>
 		</item>
 		<item>
@@ -945,7 +919,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFour.6.Path))</visible>
 		</item>
 		<item>
@@ -953,7 +926,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFour.7.Path))</visible>
 		</item>
 	</include>
@@ -963,7 +935,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFive.1.Path))</visible>
 		</item>
 		<item>
@@ -971,7 +942,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFive.2.Path))</visible>
 		</item>
 		<item>
@@ -979,7 +949,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFive.3.Path))</visible>
 		</item>
 		<item>
@@ -987,7 +956,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFive.4.Path))</visible>
 		</item>
 		<item>
@@ -995,7 +963,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFive.5.Path))</visible>
 		</item>
 		<item>
@@ -1003,7 +970,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFive.6.Path))</visible>
 		</item>
 		<item>
@@ -1011,7 +977,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFive.7.Path))</visible>
 		</item>
 	</include>
@@ -1021,7 +986,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSix.1.Path))</visible>
 		</item>
 		<item>
@@ -1029,7 +993,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSix.2.Path))</visible>
 		</item>
 		<item>
@@ -1037,7 +1000,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSix.3.Path))</visible>
 		</item>
 		<item>
@@ -1045,7 +1007,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSix.4.Path))</visible>
 		</item>
 		<item>
@@ -1053,7 +1014,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSix.5.Path))</visible>
 		</item>
 		<item>
@@ -1061,7 +1021,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSix.6.Path))</visible>
 		</item>
 		<item>
@@ -1069,7 +1028,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSix.7.Path))</visible>
 		</item>
 	</include>
@@ -1079,7 +1037,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSeven.1.Path))</visible>
 		</item>
 		<item>
@@ -1087,7 +1044,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSeven.2.Path))</visible>
 		</item>
 		<item>
@@ -1095,7 +1051,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSeven.3.Path))</visible>
 		</item>
 		<item>
@@ -1103,7 +1058,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSeven.4.Path))</visible>
 		</item>
 		<item>
@@ -1111,7 +1065,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSeven.5.Path))</visible>
 		</item>
 		<item>
@@ -1119,7 +1072,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSeven.6.Path))</visible>
 		</item>
 		<item>
@@ -1127,7 +1079,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetSeven.7.Path))</visible>
 		</item>
 	</include>
@@ -1137,7 +1088,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEight.1.Path))</visible>
 		</item>
 		<item>
@@ -1145,7 +1095,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEight.2.Path))</visible>
 		</item>
 		<item>
@@ -1153,7 +1102,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEight.3.Path))</visible>
 		</item>
 		<item>
@@ -1161,7 +1109,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEight.4.Path))</visible>
 		</item>
 		<item>
@@ -1169,7 +1116,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEight.5.Path))</visible>
 		</item>
 		<item>
@@ -1177,7 +1123,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEight.6.Path))</visible>
 		</item>
 		<item>
@@ -1185,7 +1130,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEight.7.Path))</visible>
 		</item>
 	</include>
@@ -1195,7 +1139,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetNine.1.Path))</visible>
 		</item>
 		<item>
@@ -1203,7 +1146,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetNine.2.Path))</visible>
 		</item>
 		<item>
@@ -1211,7 +1153,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetNine.3.Path))</visible>
 		</item>
 		<item>
@@ -1219,7 +1160,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetNine.4.Path))</visible>
 		</item>
 		<item>
@@ -1227,7 +1167,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetNine.5.Path))</visible>
 		</item>
 		<item>
@@ -1235,7 +1174,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetNine.6.Path))</visible>
 		</item>
 		<item>
@@ -1243,7 +1181,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetNine.7.Path))</visible>
 		</item>
 	</include>
@@ -1253,7 +1190,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTen.1.Path))</visible>
 		</item>
 		<item>
@@ -1261,7 +1197,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTen.2.Path))</visible>
 		</item>
 		<item>
@@ -1269,7 +1204,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTen.3.Path))</visible>
 		</item>
 		<item>
@@ -1277,7 +1211,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTen.4.Path))</visible>
 		</item>
 		<item>
@@ -1285,7 +1218,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTen.5.Path))</visible>
 		</item>
 		<item>
@@ -1293,7 +1225,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTen.6.Path))</visible>
 		</item>
 		<item>
@@ -1301,7 +1232,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTen.7.Path))</visible>
 		</item>
 	</include>
@@ -1311,7 +1241,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEleven.1.Path))</visible>
 		</item>
 		<item>
@@ -1319,7 +1248,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.2.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEleven.2.Path))</visible>
 		</item>
 		<item>
@@ -1327,7 +1255,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEleven.3.Path))</visible>
 		</item>
 		<item>
@@ -1335,7 +1262,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEleven.4.Path))</visible>
 		</item>
 		<item>
@@ -1343,7 +1269,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEleven.5.Path))</visible>
 		</item>
 		<item>
@@ -1351,7 +1276,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEleven.6.Path))</visible>
 		</item>
 		<item>
@@ -1359,7 +1283,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetEleven.7.Path))</visible>
 		</item>
 	</include>
@@ -1369,7 +1292,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.1.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwelve.1.Path))</visible>
 		</item>
 		<item>
@@ -1385,7 +1307,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.3.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwelve.3.Path))</visible>
 		</item>
 		<item>
@@ -1393,7 +1314,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.4.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwelve.4.Path))</visible>
 		</item>
 		<item>
@@ -1401,7 +1321,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.5.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwelve.5.Path))</visible>
 		</item>
 		<item>
@@ -1409,7 +1328,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.6.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwelve.6.Path))</visible>
 		</item>
 		<item>
@@ -1417,7 +1335,6 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.7.Icon)]</icon>
-			<thumb>-</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetTwelve.7.Path))</visible>
 		</item>
 	</include>

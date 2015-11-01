@@ -2,7 +2,6 @@
 <window type="dialog" id="2129">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>335</left>
 		<top>230</top>
 	</coordinates>
@@ -43,7 +42,6 @@
 			<width>64</width>
 			<height>32</height>
 			<label>-</label>
-			<font>-</font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>

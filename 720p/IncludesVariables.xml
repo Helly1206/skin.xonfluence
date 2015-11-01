@@ -664,8 +664,6 @@
 	<variable name="InfoBarStats" type="text">
 		<value condition="StringCompare(Container(9000).ListItem.Property(HiLiteItem),VideoNode) + IntegerGreaterThan(Window(home).Property(PlaylistTVShowCount),0)">[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[31424]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistTVShowCount)]     [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[20360]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistEpisodes)]     [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16101]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistEpisodesUnWatched)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(HiLiteItem),VideoNode) + !IntegerGreaterThan(Window(home).Property(PlaylistTVShowCount),0)">[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[3]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistCount)]     [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16101]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistUnWatched)]     [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[575]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistInProgress)]</value>
-		<!--value condition="StringCompare(Container(9000).ListItem.Property(HiLiteItem),UPnPMovies) + IntegerGreaterThan(Window(home).Property(PlaylistTVShowCount),0)">[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[31424]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistTVShowCount)]     [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[20360]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistEpisodes)]     [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16101]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistEpisodesUnWatched)]</value-->
-		<!--value condition="StringCompare(Container(9000).ListItem.Property(HiLiteItem),UPnPMovies) + !IntegerGreaterThan(Window(home).Property(PlaylistTVShowCount),0)">[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[3]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistCount)]     [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16101]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistUnWatched)]     [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[575]$LOCALIZE[31001] [/COLOR][/B]$INFO[Window(home).Property(PlaylistInProgress)]</value-->
 		<value condition="!Skin.HasSetting(DisableScriptPlaylist) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),VideoPlayList) + Container(9000).Hasfocus(1)">[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[31025]: [/COLOR][/B]$INFO[Window(Home).Property(HomePlayListOne.Count)]   [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window(Home).Property(HomePlayListOne.Watched)]    [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window(Home).Property(HomePlayListOne.Unwatched)]</value>
 		<value condition="!Skin.HasSetting(DisableScriptPlaylist) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),VideoPlayList) + Container(9000).Hasfocus(2)">[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[31025]: [/COLOR][/B]$INFO[Window(Home).Property(HomePlayListTwo.Count)]   [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window(Home).Property(HomePlayListTwo.Watched)]    [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window(Home).Property(HomePlayListTwo.Unwatched)]</value>
 		<value condition="!Skin.HasSetting(DisableScriptPlaylist) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),VideoPlayList) + Container(9000).Hasfocus(3)">[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[31025]: [/COLOR][/B]$INFO[Window(Home).Property(HomePlayListThree.Count)]   [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window(Home).Property(HomePlayListThree.Watched)]    [B][COLOR=$VAR[MainColorOne]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window(Home).Property(HomePlayListThree.Unwatched)]</value>
@@ -715,7 +713,6 @@
 	</variable>
 	<variable name="PlaylistSortOrder" type="text">
 		<value condition="Skin.HasSetting(EnableRandomPlaylist)">Random</value>
-		<!--value>Playlist</value-->
 		<value>Last</value>
 	</variable>
 	<variable name="UsersSubVideosName" type="text">
@@ -1829,301 +1826,218 @@
 	<variable name="MenuOneBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.1.Type),Weather) + IsEmpty(Skin.String(HomeItem.1.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.1.Type),Weather) + StringCompare(Skin.String(HomeItem.1.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.1.Type),Weather) + StringCompare(Skin.String(HomeItem.1.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.1.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.1.Type),Music) | StringCompare(Skin.String(HomeItem.1.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.1.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.1.Type),Music) | StringCompare(Skin.String(HomeItem.1.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.1.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.1.Type),Music) | StringCompare(Skin.String(HomeItem.1.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.1.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.1.Type),Music) | StringCompare(Skin.String(HomeItem.1.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.1.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.1.Type),Music) | StringCompare(Skin.String(HomeItem.1.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.1.Type),Videos) | StringCompare(Skin.String(HomeItem.1.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.1.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.1.Type),Videos) | StringCompare(Skin.String(HomeItem.1.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.1.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.1.Type),Videos) | StringCompare(Skin.String(HomeItem.1.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.1.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.1.Type),Videos) | StringCompare(Skin.String(HomeItem.1.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.1.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.1.Type),Videos) | StringCompare(Skin.String(HomeItem.1.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.1.Type),Movies) | StringCompare(Skin.String(HomeItem.1.Type),TVShows) | StringCompare(Skin.String(HomeItem.1.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.1.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.1.Type),Movies) | StringCompare(Skin.String(HomeItem.1.Type),TVShows) | StringCompare(Skin.String(HomeItem.1.Type),Concerts)] + StringCompare(Skin.String(HomeItem.1.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.1.Type),Movies) | StringCompare(Skin.String(HomeItem.1.Type),TVShows) | StringCompare(Skin.String(HomeItem.1.Type),Concerts)] + StringCompare(Skin.String(HomeItem.1.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.1.Type),Movies) | StringCompare(Skin.String(HomeItem.1.Type),TVShows) | StringCompare(Skin.String(HomeItem.1.Type),Concerts)] + StringCompare(Skin.String(HomeItem.1.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.1.Type),Movies) | StringCompare(Skin.String(HomeItem.1.Type),TVShows) | StringCompare(Skin.String(HomeItem.1.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.1.Display),Default)">Theme</value-->
-		<!--value condition="StringCompare(Skin.String(HomeItem.1.Display),Theme)">Default</value-->
-		<!--value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuTwoBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.2.Type),Weather) + IsEmpty(Skin.String(HomeItem.2.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.2.Type),Weather) + StringCompare(Skin.String(HomeItem.2.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.2.Type),Weather) + StringCompare(Skin.String(HomeItem.2.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.2.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.2.Type),Music) | StringCompare(Skin.String(HomeItem.2.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.2.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.2.Type),Music) | StringCompare(Skin.String(HomeItem.2.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.2.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.2.Type),Music) | StringCompare(Skin.String(HomeItem.2.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.2.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.2.Type),Music) | StringCompare(Skin.String(HomeItem.2.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.2.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.2.Type),Music) | StringCompare(Skin.String(HomeItem.2.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.2.Type),Videos) | StringCompare(Skin.String(HomeItem.2.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.2.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.2.Type),Videos) | StringCompare(Skin.String(HomeItem.2.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.2.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.2.Type),Videos) | StringCompare(Skin.String(HomeItem.2.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.2.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.2.Type),Videos) | StringCompare(Skin.String(HomeItem.2.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.2.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.2.Type),Videos) | StringCompare(Skin.String(HomeItem.2.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.2.Type),Movies) | StringCompare(Skin.String(HomeItem.2.Type),TVShows) | StringCompare(Skin.String(HomeItem.2.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.2.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.2.Type),Movies) | StringCompare(Skin.String(HomeItem.2.Type),TVShows) | StringCompare(Skin.String(HomeItem.2.Type),Concerts)] + StringCompare(Skin.String(HomeItem.2.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.2.Type),Movies) | StringCompare(Skin.String(HomeItem.2.Type),TVShows) | StringCompare(Skin.String(HomeItem.2.Type),Concerts)] + StringCompare(Skin.String(HomeItem.2.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.2.Type),Movies) | StringCompare(Skin.String(HomeItem.2.Type),TVShows) | StringCompare(Skin.String(HomeItem.2.Type),Concerts)] + StringCompare(Skin.String(HomeItem.2.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.2.Type),Movies) | StringCompare(Skin.String(HomeItem.2.Type),TVShows) | StringCompare(Skin.String(HomeItem.2.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.2.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.2.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuThreeBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.3.Type),Weather) + IsEmpty(Skin.String(HomeItem.3.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.3.Type),Weather) + StringCompare(Skin.String(HomeItem.3.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.3.Type),Weather) + StringCompare(Skin.String(HomeItem.3.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.3.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.3.Type),Music) | StringCompare(Skin.String(HomeItem.3.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.3.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.3.Type),Music) | StringCompare(Skin.String(HomeItem.3.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.3.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.3.Type),Music) | StringCompare(Skin.String(HomeItem.3.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.3.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.3.Type),Music) | StringCompare(Skin.String(HomeItem.3.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.3.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.3.Type),Music) | StringCompare(Skin.String(HomeItem.3.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.3.Type),Videos) | StringCompare(Skin.String(HomeItem.3.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.3.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.3.Type),Videos) | StringCompare(Skin.String(HomeItem.3.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.3.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.3.Type),Videos) | StringCompare(Skin.String(HomeItem.3.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.3.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.3.Type),Videos) | StringCompare(Skin.String(HomeItem.3.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.3.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.3.Type),Videos) | StringCompare(Skin.String(HomeItem.3.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.3.Type),Movies) | StringCompare(Skin.String(HomeItem.3.Type),TVShows) | StringCompare(Skin.String(HomeItem.3.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.3.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.3.Type),Movies) | StringCompare(Skin.String(HomeItem.3.Type),TVShows) | StringCompare(Skin.String(HomeItem.3.Type),Concerts)] + StringCompare(Skin.String(HomeItem.3.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.3.Type),Movies) | StringCompare(Skin.String(HomeItem.3.Type),TVShows) | StringCompare(Skin.String(HomeItem.3.Type),Concerts)] + StringCompare(Skin.String(HomeItem.3.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.3.Type),Movies) | StringCompare(Skin.String(HomeItem.3.Type),TVShows) | StringCompare(Skin.String(HomeItem.3.Type),Concerts)] + StringCompare(Skin.String(HomeItem.3.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.3.Type),Movies) | StringCompare(Skin.String(HomeItem.3.Type),TVShows) | StringCompare(Skin.String(HomeItem.3.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.3.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.3.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuFourBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.4.Type),Weather) + IsEmpty(Skin.String(HomeItem.4.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.4.Type),Weather) + StringCompare(Skin.String(HomeItem.4.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.4.Type),Weather) + StringCompare(Skin.String(HomeItem.4.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.4.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.4.Type),Music) | StringCompare(Skin.String(HomeItem.4.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.4.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.4.Type),Music) | StringCompare(Skin.String(HomeItem.4.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.4.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.4.Type),Music) | StringCompare(Skin.String(HomeItem.4.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.4.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.4.Type),Music) | StringCompare(Skin.String(HomeItem.4.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.4.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.4.Type),Music) | StringCompare(Skin.String(HomeItem.4.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.4.Type),Videos) | StringCompare(Skin.String(HomeItem.4.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.4.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.4.Type),Videos) | StringCompare(Skin.String(HomeItem.4.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.4.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.4.Type),Videos) | StringCompare(Skin.String(HomeItem.4.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.4.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.4.Type),Videos) | StringCompare(Skin.String(HomeItem.4.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.4.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.4.Type),Videos) | StringCompare(Skin.String(HomeItem.4.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.4.Type),Movies) | StringCompare(Skin.String(HomeItem.4.Type),TVShows) | StringCompare(Skin.String(HomeItem.4.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.4.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.4.Type),Movies) | StringCompare(Skin.String(HomeItem.4.Type),TVShows) | StringCompare(Skin.String(HomeItem.4.Type),Concerts)] + StringCompare(Skin.String(HomeItem.4.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.4.Type),Movies) | StringCompare(Skin.String(HomeItem.4.Type),TVShows) | StringCompare(Skin.String(HomeItem.4.Type),Concerts)] + StringCompare(Skin.String(HomeItem.4.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.4.Type),Movies) | StringCompare(Skin.String(HomeItem.4.Type),TVShows) | StringCompare(Skin.String(HomeItem.4.Type),Concerts)] + StringCompare(Skin.String(HomeItem.4.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.4.Type),Movies) | StringCompare(Skin.String(HomeItem.4.Type),TVShows) | StringCompare(Skin.String(HomeItem.4.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.4.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.4.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuFiveBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.5.Type),Weather) + IsEmpty(Skin.String(HomeItem.5.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.5.Type),Weather) + StringCompare(Skin.String(HomeItem.5.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.5.Type),Weather) + StringCompare(Skin.String(HomeItem.5.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.5.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.5.Type),Music) | StringCompare(Skin.String(HomeItem.5.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.5.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.5.Type),Music) | StringCompare(Skin.String(HomeItem.5.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.5.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.5.Type),Music) | StringCompare(Skin.String(HomeItem.5.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.5.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.5.Type),Music) | StringCompare(Skin.String(HomeItem.5.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.5.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.5.Type),Music) | StringCompare(Skin.String(HomeItem.5.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.5.Type),Videos) | StringCompare(Skin.String(HomeItem.5.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.5.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.5.Type),Videos) | StringCompare(Skin.String(HomeItem.5.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.5.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.5.Type),Videos) | StringCompare(Skin.String(HomeItem.5.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.5.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.5.Type),Videos) | StringCompare(Skin.String(HomeItem.5.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.5.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.5.Type),Videos) | StringCompare(Skin.String(HomeItem.5.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.5.Type),Movies) | StringCompare(Skin.String(HomeItem.5.Type),TVShows) | StringCompare(Skin.String(HomeItem.5.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.5.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.5.Type),Movies) | StringCompare(Skin.String(HomeItem.5.Type),TVShows) | StringCompare(Skin.String(HomeItem.5.Type),Concerts)] + StringCompare(Skin.String(HomeItem.5.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.5.Type),Movies) | StringCompare(Skin.String(HomeItem.5.Type),TVShows) | StringCompare(Skin.String(HomeItem.5.Type),Concerts)] + StringCompare(Skin.String(HomeItem.5.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.5.Type),Movies) | StringCompare(Skin.String(HomeItem.5.Type),TVShows) | StringCompare(Skin.String(HomeItem.5.Type),Concerts)] + StringCompare(Skin.String(HomeItem.5.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.5.Type),Movies) | StringCompare(Skin.String(HomeItem.5.Type),TVShows) | StringCompare(Skin.String(HomeItem.5.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.5.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.5.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuSixBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.6.Type),Weather) + IsEmpty(Skin.String(HomeItem.6.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.6.Type),Weather) + StringCompare(Skin.String(HomeItem.6.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.6.Type),Weather) + StringCompare(Skin.String(HomeItem.6.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.6.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.6.Type),Music) | StringCompare(Skin.String(HomeItem.6.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.6.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.6.Type),Music) | StringCompare(Skin.String(HomeItem.6.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.6.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.6.Type),Music) | StringCompare(Skin.String(HomeItem.6.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.6.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.6.Type),Music) | StringCompare(Skin.String(HomeItem.6.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.6.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.6.Type),Music) | StringCompare(Skin.String(HomeItem.6.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.6.Type),Videos) | StringCompare(Skin.String(HomeItem.6.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.6.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.6.Type),Videos) | StringCompare(Skin.String(HomeItem.6.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.6.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.6.Type),Videos) | StringCompare(Skin.String(HomeItem.6.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.6.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.6.Type),Videos) | StringCompare(Skin.String(HomeItem.6.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.6.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.6.Type),Videos) | StringCompare(Skin.String(HomeItem.6.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.6.Type),Movies) | StringCompare(Skin.String(HomeItem.6.Type),TVShows) | StringCompare(Skin.String(HomeItem.6.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.6.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.6.Type),Movies) | StringCompare(Skin.String(HomeItem.6.Type),TVShows) | StringCompare(Skin.String(HomeItem.6.Type),Concerts)] + StringCompare(Skin.String(HomeItem.6.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.6.Type),Movies) | StringCompare(Skin.String(HomeItem.6.Type),TVShows) | StringCompare(Skin.String(HomeItem.6.Type),Concerts)] + StringCompare(Skin.String(HomeItem.6.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.6.Type),Movies) | StringCompare(Skin.String(HomeItem.6.Type),TVShows) | StringCompare(Skin.String(HomeItem.6.Type),Concerts)] + StringCompare(Skin.String(HomeItem.6.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.6.Type),Movies) | StringCompare(Skin.String(HomeItem.6.Type),TVShows) | StringCompare(Skin.String(HomeItem.6.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.6.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.6.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuSevenBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.7.Type),Weather) + IsEmpty(Skin.String(HomeItem.7.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.7.Type),Weather) + StringCompare(Skin.String(HomeItem.7.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.7.Type),Weather) + StringCompare(Skin.String(HomeItem.7.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.7.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.7.Type),Music) | StringCompare(Skin.String(HomeItem.7.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.7.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.7.Type),Music) | StringCompare(Skin.String(HomeItem.7.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.7.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.7.Type),Music) | StringCompare(Skin.String(HomeItem.7.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.7.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.7.Type),Music) | StringCompare(Skin.String(HomeItem.7.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.7.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.7.Type),Music) | StringCompare(Skin.String(HomeItem.7.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.7.Type),Videos) | StringCompare(Skin.String(HomeItem.7.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.7.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.7.Type),Videos) | StringCompare(Skin.String(HomeItem.7.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.7.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.7.Type),Videos) | StringCompare(Skin.String(HomeItem.7.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.7.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.7.Type),Videos) | StringCompare(Skin.String(HomeItem.7.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.7.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.7.Type),Videos) | StringCompare(Skin.String(HomeItem.7.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.7.Type),Movies) | StringCompare(Skin.String(HomeItem.7.Type),TVShows) | StringCompare(Skin.String(HomeItem.7.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.7.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.7.Type),Movies) | StringCompare(Skin.String(HomeItem.7.Type),TVShows) | StringCompare(Skin.String(HomeItem.7.Type),Concerts)] + StringCompare(Skin.String(HomeItem.7.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.7.Type),Movies) | StringCompare(Skin.String(HomeItem.7.Type),TVShows) | StringCompare(Skin.String(HomeItem.7.Type),Concerts)] + StringCompare(Skin.String(HomeItem.7.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.7.Type),Movies) | StringCompare(Skin.String(HomeItem.7.Type),TVShows) | StringCompare(Skin.String(HomeItem.7.Type),Concerts)] + StringCompare(Skin.String(HomeItem.7.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.7.Type),Movies) | StringCompare(Skin.String(HomeItem.7.Type),TVShows) | StringCompare(Skin.String(HomeItem.7.Type),Concerts)">Default</value>
 		<!--value condition="StringCompare(Skin.String(HomeItem.7.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.7.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuEightBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.8.Type),Weather) + IsEmpty(Skin.String(HomeItem.8.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.8.Type),Weather) + StringCompare(Skin.String(HomeItem.8.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.8.Type),Weather) + StringCompare(Skin.String(HomeItem.8.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.8.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.8.Type),Music) | StringCompare(Skin.String(HomeItem.8.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.8.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.8.Type),Music) | StringCompare(Skin.String(HomeItem.8.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.8.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.8.Type),Music) | StringCompare(Skin.String(HomeItem.8.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.8.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.8.Type),Music) | StringCompare(Skin.String(HomeItem.8.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.8.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.8.Type),Music) | StringCompare(Skin.String(HomeItem.8.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.8.Type),Videos) | StringCompare(Skin.String(HomeItem.8.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.8.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.8.Type),Videos) | StringCompare(Skin.String(HomeItem.8.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.8.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.8.Type),Videos) | StringCompare(Skin.String(HomeItem.8.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.8.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.8.Type),Videos) | StringCompare(Skin.String(HomeItem.8.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.8.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.8.Type),Videos) | StringCompare(Skin.String(HomeItem.8.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.8.Type),Movies) | StringCompare(Skin.String(HomeItem.8.Type),TVShows) | StringCompare(Skin.String(HomeItem.8.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.8.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.8.Type),Movies) | StringCompare(Skin.String(HomeItem.8.Type),TVShows) | StringCompare(Skin.String(HomeItem.8.Type),Concerts)] + StringCompare(Skin.String(HomeItem.8.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.8.Type),Movies) | StringCompare(Skin.String(HomeItem.8.Type),TVShows) | StringCompare(Skin.String(HomeItem.8.Type),Concerts)] + StringCompare(Skin.String(HomeItem.8.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.8.Type),Movies) | StringCompare(Skin.String(HomeItem.8.Type),TVShows) | StringCompare(Skin.String(HomeItem.8.Type),Concerts)] + StringCompare(Skin.String(HomeItem.8.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.8.Type),Movies) | StringCompare(Skin.String(HomeItem.8.Type),TVShows) | StringCompare(Skin.String(HomeItem.8.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.8.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.8.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuNineBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.9.Type),Weather) + IsEmpty(Skin.String(HomeItem.9.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.9.Type),Weather) + StringCompare(Skin.String(HomeItem.9.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.9.Type),Weather) + StringCompare(Skin.String(HomeItem.9.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.9.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.9.Type),Music) | StringCompare(Skin.String(HomeItem.9.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.9.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.9.Type),Music) | StringCompare(Skin.String(HomeItem.9.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.9.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.9.Type),Music) | StringCompare(Skin.String(HomeItem.9.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.9.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.9.Type),Music) | StringCompare(Skin.String(HomeItem.9.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.9.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.9.Type),Music) | StringCompare(Skin.String(HomeItem.9.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.9.Type),Videos) | StringCompare(Skin.String(HomeItem.9.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.9.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.9.Type),Videos) | StringCompare(Skin.String(HomeItem.9.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.9.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.9.Type),Videos) | StringCompare(Skin.String(HomeItem.9.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.9.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.9.Type),Videos) | StringCompare(Skin.String(HomeItem.9.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.9.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.9.Type),Videos) | StringCompare(Skin.String(HomeItem.9.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.9.Type),Movies) | StringCompare(Skin.String(HomeItem.9.Type),TVShows) | StringCompare(Skin.String(HomeItem.9.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.9.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.9.Type),Movies) | StringCompare(Skin.String(HomeItem.9.Type),TVShows) | StringCompare(Skin.String(HomeItem.9.Type),Concerts)] + StringCompare(Skin.String(HomeItem.9.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.9.Type),Movies) | StringCompare(Skin.String(HomeItem.9.Type),TVShows) | StringCompare(Skin.String(HomeItem.9.Type),Concerts)] + StringCompare(Skin.String(HomeItem.9.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.9.Type),Movies) | StringCompare(Skin.String(HomeItem.9.Type),TVShows) | StringCompare(Skin.String(HomeItem.9.Type),Concerts)] + StringCompare(Skin.String(HomeItem.9.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.9.Type),Movies) | StringCompare(Skin.String(HomeItem.9.Type),TVShows) | StringCompare(Skin.String(HomeItem.9.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.9.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.9.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuTenBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.10.Type),Weather) + IsEmpty(Skin.String(HomeItem.10.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.10.Type),Weather) + StringCompare(Skin.String(HomeItem.10.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.10.Type),Weather) + StringCompare(Skin.String(HomeItem.10.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.10.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.10.Type),Music) | StringCompare(Skin.String(HomeItem.10.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.10.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.10.Type),Music) | StringCompare(Skin.String(HomeItem.10.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.10.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.10.Type),Music) | StringCompare(Skin.String(HomeItem.10.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.10.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.10.Type),Music) | StringCompare(Skin.String(HomeItem.10.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.10.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.10.Type),Music) | StringCompare(Skin.String(HomeItem.10.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.10.Type),Videos) | StringCompare(Skin.String(HomeItem.10.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.10.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.10.Type),Videos) | StringCompare(Skin.String(HomeItem.10.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.10.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.10.Type),Videos) | StringCompare(Skin.String(HomeItem.10.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.10.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.10.Type),Videos) | StringCompare(Skin.String(HomeItem.10.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.10.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.10.Type),Videos) | StringCompare(Skin.String(HomeItem.10.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.10.Type),Movies) | StringCompare(Skin.String(HomeItem.10.Type),TVShows) | StringCompare(Skin.String(HomeItem.10.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.10.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.10.Type),Movies) | StringCompare(Skin.String(HomeItem.10.Type),TVShows) | StringCompare(Skin.String(HomeItem.10.Type),Concerts)] + StringCompare(Skin.String(HomeItem.10.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.10.Type),Movies) | StringCompare(Skin.String(HomeItem.10.Type),TVShows) | StringCompare(Skin.String(HomeItem.10.Type),Concerts)] + StringCompare(Skin.String(HomeItem.10.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.10.Type),Movies) | StringCompare(Skin.String(HomeItem.10.Type),TVShows) | StringCompare(Skin.String(HomeItem.10.Type),Concerts)] + StringCompare(Skin.String(HomeItem.10.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.10.Type),Movies) | StringCompare(Skin.String(HomeItem.10.Type),TVShows) | StringCompare(Skin.String(HomeItem.10.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.10.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.10.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuElevenBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.11.Type),Weather) + IsEmpty(Skin.String(HomeItem.11.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.11.Type),Weather) + StringCompare(Skin.String(HomeItem.11.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.11.Type),Weather) + StringCompare(Skin.String(HomeItem.11.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.11.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.11.Type),Music) | StringCompare(Skin.String(HomeItem.11.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.11.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.11.Type),Music) | StringCompare(Skin.String(HomeItem.11.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.11.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.11.Type),Music) | StringCompare(Skin.String(HomeItem.11.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.11.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.11.Type),Music) | StringCompare(Skin.String(HomeItem.11.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.11.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.11.Type),Music) | StringCompare(Skin.String(HomeItem.11.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.11.Type),Videos) | StringCompare(Skin.String(HomeItem.11.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.11.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.11.Type),Videos) | StringCompare(Skin.String(HomeItem.11.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.11.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.11.Type),Videos) | StringCompare(Skin.String(HomeItem.11.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.11.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.11.Type),Videos) | StringCompare(Skin.String(HomeItem.11.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.11.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.11.Type),Videos) | StringCompare(Skin.String(HomeItem.11.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.11.Type),Movies) | StringCompare(Skin.String(HomeItem.11.Type),TVShows) | StringCompare(Skin.String(HomeItem.11.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.11.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.11.Type),Movies) | StringCompare(Skin.String(HomeItem.11.Type),TVShows) | StringCompare(Skin.String(HomeItem.11.Type),Concerts)] + StringCompare(Skin.String(HomeItem.11.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.11.Type),Movies) | StringCompare(Skin.String(HomeItem.11.Type),TVShows) | StringCompare(Skin.String(HomeItem.11.Type),Concerts)] + StringCompare(Skin.String(HomeItem.11.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.11.Type),Movies) | StringCompare(Skin.String(HomeItem.11.Type),TVShows) | StringCompare(Skin.String(HomeItem.11.Type),Concerts)] + StringCompare(Skin.String(HomeItem.11.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.11.Type),Movies) | StringCompare(Skin.String(HomeItem.11.Type),TVShows) | StringCompare(Skin.String(HomeItem.11.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.11.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.11.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="MenuTwelveBackgroundType" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.12.Type),Weather) + IsEmpty(Skin.String(HomeItem.12.Display))">Live</value>
 		<value condition="StringCompare(Skin.String(HomeItem.12.Type),Weather) + StringCompare(Skin.String(HomeItem.12.Display),Default)">Live</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.12.Type),Weather) + StringCompare(Skin.String(HomeItem.12.Display),Live)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.12.Type),Weather)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.12.Type),Music) | StringCompare(Skin.String(HomeItem.12.Type),MusicPlayList)] + IsEmpty(Skin.String(HomeItem.12.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.12.Type),Music) | StringCompare(Skin.String(HomeItem.12.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.12.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.12.Type),Music) | StringCompare(Skin.String(HomeItem.12.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.12.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.12.Type),Music) | StringCompare(Skin.String(HomeItem.12.Type),MusicPlayList)] + StringCompare(Skin.String(HomeItem.12.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.12.Type),Music) | StringCompare(Skin.String(HomeItem.12.Type),MusicPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.12.Type),Videos) | StringCompare(Skin.String(HomeItem.12.Type),VideoPlayList)] + IsEmpty(Skin.String(HomeItem.12.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.12.Type),Videos) | StringCompare(Skin.String(HomeItem.12.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.12.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.12.Type),Videos) | StringCompare(Skin.String(HomeItem.12.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.12.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.12.Type),Videos) | StringCompare(Skin.String(HomeItem.12.Type),VideoPlayList)] + StringCompare(Skin.String(HomeItem.12.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.12.Type),Videos) | StringCompare(Skin.String(HomeItem.12.Type),VideoPlayList)">Default</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.12.Type),Movies) | StringCompare(Skin.String(HomeItem.12.Type),TVShows) | StringCompare(Skin.String(HomeItem.12.Type),Concerts)] + IsEmpty(Skin.String(HomeItem.12.Display))">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.12.Type),Movies) | StringCompare(Skin.String(HomeItem.12.Type),TVShows) | StringCompare(Skin.String(HomeItem.12.Type),Concerts)] + StringCompare(Skin.String(HomeItem.12.Display),Default)">Live</value>
 		<value condition="[StringCompare(Skin.String(HomeItem.12.Type),Movies) | StringCompare(Skin.String(HomeItem.12.Type),TVShows) | StringCompare(Skin.String(HomeItem.12.Type),Concerts)] + StringCompare(Skin.String(HomeItem.12.Display),Live)">Database</value>
-		<!--value condition="[StringCompare(Skin.String(HomeItem.12.Type),Movies) | StringCompare(Skin.String(HomeItem.12.Type),TVShows) | StringCompare(Skin.String(HomeItem.12.Type),Concerts)] + StringCompare(Skin.String(HomeItem.12.Display),Database)">Theme</value-->
 		<value condition="StringCompare(Skin.String(HomeItem.12.Type),Movies) | StringCompare(Skin.String(HomeItem.12.Type),TVShows) | StringCompare(Skin.String(HomeItem.12.Type),Concerts)">Default</value>
-		<!--value condition="StringCompare(Skin.String(HomeItem.12.Display),Default)">Theme</value>
-		<value condition="StringCompare(Skin.String(HomeItem.12.Display),Theme)">Default</value>
-		<value>Theme</value-->
 		<value>Default</value>
 	</variable>
 	<variable name="SetMenuOneBackground" type="text">
@@ -2581,17 +2495,6 @@
 		<value condition="substring(listitem.mpaa, G )">$INFO[Skin.String(MPAACertificate)]/g</value>
 		<value condition="substring(listitem.mpaa, M )">$INFO[Skin.String(MPAACertificate)]/13</value>
 	</variable>
-	<!--variable name="VideoListCase">
-		<value condition="ListItem.IsStereoscopic">3D</value>
-		<value condition="SubString(ListItem.FilenameAndPath,bluray) | SubString(ListItem.FilenameAndPath,bdrip) | SubString(ListItem.FilenameAndPath,bd25) | SubString(ListItem.FilenameAndPath,bd50)">bd</value>
-		<value condition="SubString(ListItem.FilenameAndPath,.3D.) | SubString(ListItem.FilenameAndPath,.3DBD.) | SubString(ListItem.FilenameAndPath,.SBS.)">3DCase</value>
-		<value condition="SubString(ListItem.FilenameAndPath,hddvd)">hddvd</value>
-		<value condition="SubString(ListItem.FilenameAndPath,dvd)">dvd</value>
-		<value condition="SubString(ListItem.FilenameAndPath,pdtv) | SubString(ListItem.FilenameAndPath,hdtv) | SubString(ListItem.FilenameAndPath,dsr)">TVseries</value>
-		<value condition="!IsEmpty(ListItem.FileExtension)">$INFO[ListItem.FileExtension]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(Episodes)">TVseries</value>
-		<value>dv</value>
-	</variable-->
 	<variable name="VideoListCase">
 		<value condition="!Skin.HasSetting(UseDiscTypeCase) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">TVseries</value>
 		<value condition="!Skin.HasSetting(UseDiscTypeCase) + !IsEmpty(ListItem.FileExtension)">$INFO[ListItem.FileExtension]</value>

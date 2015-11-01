@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<window type="dialog" id="2127">
+<window type="dialog" id="1127">
 	<onload>Skin.Reset(EnableRandomPlaylist)</onload>
 	<defaultcontrol always="false">10</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>335</left>
 		<top>230</top>
 	</coordinates>

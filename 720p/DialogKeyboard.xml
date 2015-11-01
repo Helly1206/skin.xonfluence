@@ -3,7 +3,6 @@
 	<defaultcontrol always="true">300</defaultcontrol>
 	<include>dialogeffect</include>
 	<coordinates>
-		<system>2</system>
 		<left>205</left>
 		<top>120</top>
 	</coordinates>
@@ -20,6 +19,54 @@
 				<param name="CloseButtonLeft" value="770" />
 				<param name="CloseButtonNav" value="3" />
 			</include>
+			<control type="group">
+				<left>0</left>
+				<top>-90</top>
+				<visible>Control.IsVisible(313)</visible>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>860</width>
+					<height>102</height>
+					<texture border="20">OverlayDialogBackground.png</texture>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>18</top>
+					<width>760</width>
+					<height>32</height>
+					<aspectratio>stretch</aspectratio>
+					<texture border="20">KeyboardEditArea.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>53</top>
+					<width>860</width>
+					<height>2</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>separator.png</texture>
+				</control>
+				<!-- <control type="label" id="313">
+					<description>HZCODE label</description>
+					<left>55</left>
+					<top>18</top>
+					<width>750</width>
+					<height>30</height>
+					<font>font13</font>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="314">
+					<description>HZLIST label</description>
+					<left>55</left>
+					<top>55</top>
+					<width>750</width>
+					<height>30</height>
+					<font>font13</font>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control> -->
+			</control>
 			<control type="image">
 				<left>50</left>
 				<top>60</top>
@@ -153,18 +200,14 @@
 						<description>SHIFT button</description>
 						<width>200</width>
 						<height>50</height>
-						<label>20178</label>
+						<label>-</label>
 						<onup>309</onup>
 						<ondown>303</ondown>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texturefocus>
-						<radiotop>5</radiotop>
+						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font13</font>
-						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="120">
 						<description>(1,0) key button</description>
@@ -239,6 +282,28 @@
 						<include>KeyboardButton</include>
 					</control>
 				</control>
+				<control type="label">
+					<description>SHIFT label</description>
+					<top>50</top>
+					<left>0</left>
+					<width>200</width>
+					<height>50</height>
+					<label>20178</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<visible>!Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+				</control>
+				<control type="image">
+					<description>SHIFT icon</description>
+					<top>60</top>
+					<left>85</left>
+					<width>30</width>
+					<height>30</height>
+					<texture>KeyboardShiftKey.png</texture>
+					<visible>Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+				</control>
 				<!-- 3rd row -->
 				<control type="grouplist">
 					<top>100</top>
@@ -248,7 +313,7 @@
 						<description>CAPS LOCK button</description>
 						<width>200</width>
 						<height>50</height>
-						<label>20179</label>
+						<label>-</label>
 						<onup>302</onup>
 						<ondown>307</ondown>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -256,10 +321,6 @@
 						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font13</font>
-						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="140">
 						<description>(2,0) key button</description>
@@ -333,6 +394,28 @@
 						<ondown>171</ondown>
 						<include>KeyboardButton</include>
 					</control>
+				</control>
+				<control type="label">
+					<description>CAPS LOCK label</description>
+					<top>100</top>
+					<left>0</left>
+					<width>200</width>
+					<height>50</height>
+					<label>20179</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<visible>!Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+				</control>
+				<control type="image">
+					<description>CAPS LOCK icon</description>
+					<top>110</top>
+					<left>85</left>
+					<width>30</width>
+					<height>30</height>
+					<texture>KeyboardCapsKey.png</texture>
+					<visible>Skin.HasSetting(KeyboardGraphicalTextures)</visible>
 				</control>
 				<!-- 4th row -->
 				<control type="grouplist">
@@ -454,25 +537,17 @@
 						<height>50</height>
 						<texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
 						<texturefocus border="25,5,25,5" colordiffuse="$VAR[MainColorOne]">KeyboardCornerBottom.png</texturefocus>
-						<label>20177</label>
-						<font>font13</font>
-						<align>center</align>
-						<aligny>center</aligny>
+						<label>-</label>
 						<onup>304</onup>
 						<ondown>309</ondown>
-						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="32">
 						<description>SPACE button</description>
 						<width>200</width>
 						<height>50</height>
-						<label>20182</label>
+						<label>-</label>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texturefocus>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font13</font>
-						<focusedcolor>white</focusedcolor>
 						<onup>161</onup>
 						<ondown>101</ondown>
 					</control>
@@ -480,15 +555,11 @@
 						<description>BACKSPACE button</description>
 						<width>200</width>
 						<height>50</height>
-						<label>20181</label>
+						<label>-</label>
 						<onup>165</onup>
 						<ondown>105</ondown>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texturefocus>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font13</font>
-						<focusedcolor>white</focusedcolor>
 					</control>
 					<control type="button" id="305">
 						<description>previous button</description>
@@ -517,6 +588,68 @@
 						<focusedcolor>white</focusedcolor>
 						<onup>170</onup>
 						<ondown>110</ondown>
+					</control>
+				</control>
+				<control type="grouplist">
+					<top>200</top>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width>200</width>
+						<height>50</height>
+						<label>20177</label>
+						<font>font13</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<visible>!Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>50</height>
+						<label>20182</label>
+						<font>font13</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<visible>!Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>50</height>
+						<label>20181</label>
+						<font>font13</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<visible>!Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<top>210</top>
+					<control type="image">
+						<description>Done icon</description>
+						<left>85</left>
+						<width>30</width>
+						<height>30</height>
+						<texture>KeyboardDoneKey.png</texture>
+						<visible>Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+					</control>
+					<control type="image">
+						<description>Space icon</description>
+						<left>285</left>
+						<width>30</width>
+						<height>30</height>
+						<texture>KeyboardSpaceKey.png</texture>
+						<visible>Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+					</control>
+					<control type="image">
+						<description>Backspace icon</description>
+						<left>485</left>
+						<width>30</width>
+						<height>30</height>
+						<texture>KeyboardBackKey.png</texture>
+						<visible>Skin.HasSetting(KeyboardGraphicalTextures)</visible>
 					</control>
 				</control>
 			</control>

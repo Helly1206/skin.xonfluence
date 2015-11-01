@@ -196,7 +196,7 @@
 					<top>480</top>
 					<width>290</width>
 					<height>25</height>
-					<label>$INFO[listitem.TrackNumber,[COLOR=$VAR[MainColorOne]]$LOCALIZE[31946]: [/COLOR]]</label>
+					<label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[31946]: [/COLOR]$INFO[listitem.TrackNumber]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -209,7 +209,7 @@
 					<top>505</top>
 					<width>290</width>
 					<height>25</height>
-					<label>$INFO[listitem.Year,[COLOR=$VAR[MainColorOne]]$LOCALIZE[345]: [/COLOR]]</label>
+					<label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[345]: [/COLOR]$INFO[listitem.Year]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -701,7 +701,7 @@
 					<top>530</top>
 					<width>290</width>
 					<height>25</height>
-					<label>$INFO[listitem.Year,[COLOR=$VAR[MainColorOne]]$LOCALIZE[345]: [/COLOR]]</label>
+					<label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[345]: [/COLOR]$INFO[listitem.Year]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13_title</font>

@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>240</left>
 		<top>100</top>
 	</coordinates>
@@ -45,7 +44,6 @@
 			<height>32</height>
 			<label>-</label>
 			<font>-</font>
-			<!--<onclick>PreviousMenu</onclick>-->
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<onleft>10</onleft>
@@ -60,11 +58,9 @@
 			<width>720</width>
 			<height>30</height>
 			<font>font13_title</font>
-			<!--<label>filled in by code</label>-->
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>white</textcolor>
-			<!--<shadowcolor>black</shadowcolor>-->
 		</control>
 		<control type="group" description="radio buttons">
 			<left>40</left>

@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>335</left>
 		<top>230</top>
 	</coordinates>
@@ -25,36 +24,6 @@
 			<height>0</height>
 			<font>-</font>
 			<visible>false</visible>
-<!--		</control>
-		<control type="label">
-			<description>header label</description>
-			<left>40</left>
-			<top>20</top>
-			<width>530</width>
-			<height>30</height>
-			<font>font13_title</font>
-			<label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
-			<align>center</align>
-			<aligny>center</aligny>
-			<textcolor>selected</textcolor>
-			<shadowcolor>black</shadowcolor>
-		</control>
-		<control type="button">
-			<description>Close Window button</description>
-			<left>520</left>
-			<top>15</top>
-			<width>64</width>
-			<height>32</height>
-			<label>-</label>
-			<font>-</font>
-			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
-			<texturenofocus>DialogCloseButton.png</texturenofocus>
-			<onleft>10</onleft>
-			<onright>10</onright>
-			<onup>10</onup>
-			<ondown>10</ondown>
-			<visible>system.getbool(input.enablemouse)</visible> -->
 		</control>
 		<control type="textbox" id="9">
 			<description>text</description>

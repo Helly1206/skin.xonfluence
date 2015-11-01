@@ -4,7 +4,6 @@
 	<onload condition="!VideoPlayer.Content(LiveTV)">SetFocus(202)</onload>
 	<include>dialogeffect</include>
 	<coordinates>
-		<system>1</system>
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
@@ -170,7 +169,6 @@
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelListFO.png</texturefocus>
 				<texturenofocus>OSDChannelListNF.png</texturenofocus>
 				<onclick>ActivateWindow(PVROSDChannels)</onclick>
-				<!-- <onclick>Dialog.Close(VideoOSD)</onclick> -->
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="307">
@@ -181,7 +179,6 @@
 				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDepgFO.png</texturefocus>
 				<texturenofocus>OSDepgNF.png</texturenofocus>
 				<onclick>ActivateWindow(PVROSDGuide)</onclick>
-				<!-- <onclick>Dialog.Close(VideoOSD)</onclick> -->
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="350">
