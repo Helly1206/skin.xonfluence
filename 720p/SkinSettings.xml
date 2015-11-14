@@ -552,6 +552,20 @@
 						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="126">
+						<description>Keyboard autocomplete</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31376]</label>
+						<onclick>Skin.ToggleSetting(DisableAutoComplete)</onclick>
+						<selected>!Skin.HasSetting(DisableAutoComplete)</selected>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>System.HasAddon(script.extendedinfo)</visible>
+					</control>
 					<control type="label" id="135">
 						<width>750</width>
 						<height>45</height>
@@ -7829,6 +7843,18 @@
 						<enable>Skin.HasSetting(Enable_CustomHSuspend)</enable>
 					</control>
 					<control type="radiobutton" id="683">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31151]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(RestartNotReboot)</onclick>
+						<selected>Skin.HasSetting(RestartNotReboot)</selected>
+					</control>
+					<control type="radiobutton" id="684">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>

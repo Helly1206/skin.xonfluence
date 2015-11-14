@@ -693,7 +693,7 @@
 					<height>35</height>
 					<texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
 					<colordiffuse>CCFFFFFF</colordiffuse>
-					<animation effect="zoom" start="0,0,205,35" end="0,0,465,35" delay="0" time="300" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
+					<animation effect="zoom" start="0,0,205,35" end="0,0,500,35" delay="0" time="300" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
 					<visible>Player.HasMedia | Skin.HasSetting(EnableHomeStats)</visible>
 				</control>
 				<control type="group">

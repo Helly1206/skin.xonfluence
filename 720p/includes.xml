@@ -1850,4 +1850,68 @@
 			</control>
 		</control>
 	</include>
+	<include name="ExtendedInfoAutoComplete">
+		<control type="group" id="5000">
+			<animation effect="slide" start="0,-240" end="0,0" time="300" tween="quadratic" easing="out">VisibleChange</animation>
+			<visible>!IsEmpty(Control.GetLabel(312).index(1)) + !Window.IsVisible(1130) + !Control.IsVisible(313)</visible>
+			<top>-120</top>
+			<left>0</left>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>860</width>
+				<height>120</height>
+				<texture border="20">OverlayDialogBackground.png</texture>
+			</control>
+			<control type="panel" id="5001">
+				<left>15</left>
+				<top>20</top>
+				<width>860</width>
+				<height>120</height>
+				<onleft>5001</onleft>
+				<onright>5001</onright>
+				<onup>4000</onup>
+				<ondown>4000</ondown>
+				<onback>noop</onback>
+				<orientation>vertical</orientation>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<itemlayout height="40" width="210">
+					<control type="image">
+						<top>5</top>
+						<width>200</width>
+						<height>30</height>
+						<texture>KeyboardKeyNF.png</texture>
+					</control>
+					<control type="label">
+						<top>5</top>
+						<width>200</width>
+						<height>30</height>
+						<align>center</align>
+						<textcolor>grey</textcolor>
+						<textoffsetx>5</textoffsetx>
+						<font>font13</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40" width="210">
+					<control type="image">
+						<top>5</top>
+						<width>200</width>
+						<height>30</height>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texture>
+					</control>
+					<control type="label">
+						<top>5</top>
+						<width>200</width>
+						<height>30</height>
+						<align>center</align>
+						<textoffsetx>5</textoffsetx>
+						<font>font13</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>plugin://script.extendedinfo?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=8</content>
+			</control>
+		</control>
+	</include>
 </includes>

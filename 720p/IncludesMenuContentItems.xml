@@ -412,6 +412,24 @@
 			</item>
 			<!-- Streaming Menu -->
 			<item>
+				<description>Streaming Navigator</description>
+				<label>$LOCALIZE[33213]</label>
+				<include>ClearButtonChoice</include>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[33002])</onclick>
+				<onclick>Skin.Setpath(UsrSelectAddon,library://video/)</onclick>
+				<onclick>Skin.SetString(StreamingMediaPath,$INFO[Skin.String(UsrSelectAddon)])</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,ActivateWindow(Videos,$INFO[Skin.String(UsrSelectAddon)],return))</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Streaming)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+				<visible>StringCompare(Window.Property(MenuItemType),StreamingMenu)</visible>
+				<include>CloseMenuChoice</include>
+			</item>
+			<item>
 				<description>Video Streaming File</description>
 				<label>$LOCALIZE[31212]</label>
 				<include>ClearButtonChoice</include>
@@ -1620,7 +1638,8 @@
 				<description>Shutdown</description>
 				<label>$LOCALIZE[13005]</label>
 				<include>ClearButtonChoice</include>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,Shutdown)</onclick>
+				<onclick condition="!Skin.HasSetting(Enable_CustomShutDown)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,Shutdown)</onclick>
+				<onclick condition="Skin.HasSetting(Enable_CustomShutDown)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,XBMC.RunScript($VAR[CustomShutdown],$VAR[CustomShutdownArg]))</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[13005])</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
@@ -1637,7 +1656,8 @@
 				<description>Suspend</description>
 				<label>$LOCALIZE[13011]</label>
 				<include>ClearButtonChoice</include>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,Suspend)</onclick>
+				<onclick condition="!Skin.HasSetting(Enable_CustomSuspend)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,Suspend)</onclick>
+				<onclick condition="Skin.HasSetting(Enable_CustomSuspend)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,XBMC.RunScript($VAR[CustomSuspend],$VAR[CustomSuspendArg]))</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[13011])</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
@@ -1654,7 +1674,8 @@
 				<description>Hibernate</description>
 				<label>$LOCALIZE[13010]</label>
 				<include>ClearButtonChoice</include>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,Hibernate)</onclick>
+				<onclick condition="!Skin.HasSetting(Enable_CustomHibernate)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,Hibernate)</onclick>
+				<onclick condition="Skin.HasSetting(Enable_CustomHibernate)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,XBMC.RunScript($VAR[CustomHibernate],$VAR[CustomHibernateArg]))</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[13010])</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
@@ -1671,7 +1692,8 @@
 				<description>Reboot</description>
 				<label>$LOCALIZE[13013]</label>
 				<include>ClearButtonChoice</include>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,Reboot)</onclick>
+				<onclick condition="!Skin.HasSetting(RestartNotReboot)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,Reboot)</onclick>
+				<onclick condition="Skin.HasSetting(RestartNotReboot)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RestartApp)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[13013])</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>

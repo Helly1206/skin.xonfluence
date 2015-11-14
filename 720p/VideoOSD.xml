@@ -50,6 +50,7 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
 			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4)</visible>
 			<visible>![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<onup>1000</onup>

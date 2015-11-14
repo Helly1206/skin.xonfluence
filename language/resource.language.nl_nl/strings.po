@@ -608,6 +608,10 @@ msgctxt "#31150"
 msgid "Select UPnP server"
 msgstr "Selecteer UPnP server"
 
+msgctxt "#31151"
+msgid "Restart kodi instead of system reboot"
+msgstr "Kodi herstarten in plaats van systeem herstart"
+
 msgctxt "#31152"
 msgid "Enable kiosk mode"
 msgstr "Kioskmodus activeren (geen zij menu's)"
@@ -719,6 +723,10 @@ msgstr "Node"
 msgctxt "#31212"
 msgid "Streaming media"
 msgstr "Streaming media"
+
+msgctxt "#31213"
+msgid "Streams navigator"
+msgstr "Streams navigator"
 
 msgctxt "#31215"
 msgid "Watch it later"
@@ -1279,6 +1287,10 @@ msgstr "Activeer Video codec informatie bij pauze en OSD Menu"
 msgctxt "#31375"
 msgid "Use graphical textures on keyboards"
 msgstr "Gebruik grafische knoppen op toetsenborden"
+
+msgctxt "#31376"
+msgid "Use autocomplete on keyboards"
+msgstr "Gebruik woordenzoeker op toetsenborden"
 
 msgctxt "#31380"
 msgid "Enable playlist widget script"
@@ -1852,6 +1864,10 @@ msgstr "Seconden"
 msgctxt "#31941"
 msgid "Enable running artwork downloader automaticaly after updating library"
 msgstr "Activeer draaien van artwork downloader automatisch na updaten bibliotheek "
+
+msgctxt "#31942"
+msgid "YouTube"
+msgstr "YouTube"
 
 msgctxt "#31943"
 msgid "Choose a scraper"

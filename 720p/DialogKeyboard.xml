@@ -95,7 +95,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>DialogHeader.png</texture>
 			</control>
-			<control type="group">
+			<control type="group" id="4000">
 				<left>30</left>
 				<top>140</top>
 				<!-- 1st row -->
@@ -107,7 +107,8 @@
 						<width>200</width>
 						<height>50</height>
 						<label>20177</label>
-						<onup>300</onup>
+						<onup condition="!Control.IsVisible(5000)">300</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>302</ondown>
 						<texturenofocus border="25,25,5,5">KeyboardCornerTopNF.png</texturenofocus>
 						<texturefocus border="25,25,5,5" colordiffuse="$VAR[MainColorOne]">KeyboardCornerTop.png</texturefocus>
@@ -118,73 +119,85 @@
 					</control>
 					<control type="button" id="100">
 						<description>(0,0) key button</description>
-						<onup>32</onup>
+						<onup condition="!Control.IsVisible(5000)">32</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>120</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="101">
 						<description>(0,1) key button</description>
-						<onup>32</onup>
+						<onup condition="!Control.IsVisible(5000)">32</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>121</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="102">
 						<description>(0,2) key button</description>
-						<onup>32</onup>
+						<onup condition="!Control.IsVisible(5000)">32</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>122</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="103">
 						<description>(0,3) key button</description>
-						<onup>32</onup>
+						<onup condition="!Control.IsVisible(5000)">32</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>123</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="104">
 						<description>(0,4) key button</description>
-						<onup>8</onup>
+						<onup condition="!Control.IsVisible(5000)">8</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>124</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="105">
 						<description>(0,5) key button</description>
-						<onup>8</onup>
+						<onup condition="!Control.IsVisible(5000)">8</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>125</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="106">
 						<description>(0,6) key button</description>
-						<onup>8</onup>
+						<onup condition="!Control.IsVisible(5000)">8</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>126</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="107">
 						<description>(0,7) key button</description>
-						<onup>8</onup>
+						<onup condition="!Control.IsVisible(5000)">8</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>127</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="108">
 						<description>(0,8) key button</description>
-						<onup>305</onup>
+						<onup condition="!Control.IsVisible(5000)">305</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>128</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="109">
 						<description>(0,9) key button</description>
-						<onup>305</onup>
+						<onup condition="!Control.IsVisible(5000)">305</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>129</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="110">
 						<description>(0,10) key button</description>
-						<onup>306</onup>
+						<onup condition="!Control.IsVisible(5000)">306</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>130</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="111">
 						<description>(0,11) key button</description>
-						<onup>306</onup>
+						<onup condition="!Control.IsVisible(5000)">306</onup>
+						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>131</ondown>
 						<texturenofocus flipx="true" border="5,25,25,5">KeyboardCornerTopNF.png</texturenofocus>
 						<texturefocus flipx="true" border="5,25,25,5" colordiffuse="$VAR[MainColorOne]">KeyboardCornerTop.png</texturefocus>
@@ -539,7 +552,8 @@
 						<texturefocus border="25,5,25,5" colordiffuse="$VAR[MainColorOne]">KeyboardCornerBottom.png</texturefocus>
 						<label>-</label>
 						<onup>304</onup>
-						<ondown>309</ondown>
+						<ondown condition="!Control.IsVisible(5000)">309</ondown>
+						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 					</control>
 					<control type="button" id="32">
 						<description>SPACE button</description>
@@ -549,7 +563,8 @@
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texturefocus>
 						<onup>161</onup>
-						<ondown>101</ondown>
+						<ondown condition="!Control.IsVisible(5000)">101</ondown>
+						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 					</control>
 					<control type="button" id="8">
 						<description>BACKSPACE button</description>
@@ -557,7 +572,8 @@
 						<height>50</height>
 						<label>-</label>
 						<onup>165</onup>
-						<ondown>105</ondown>
+						<ondown condition="!Control.IsVisible(5000)">105</ondown>
+						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texturefocus>
 					</control>
@@ -573,7 +589,8 @@
 						<font>font30</font>
 						<focusedcolor>white</focusedcolor>
 						<onup>168</onup>
-						<ondown>108</ondown>
+						<ondown condition="!Control.IsVisible(5000)">108</ondown>
+						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 					</control>
 					<control type="button" id="306">
 						<description>next button</description>
@@ -587,7 +604,8 @@
 						<font>font30</font>
 						<focusedcolor>white</focusedcolor>
 						<onup>170</onup>
-						<ondown>110</ondown>
+						<ondown condition="!Control.IsVisible(5000)">110</ondown>
+						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -653,6 +671,7 @@
 					</control>
 				</control>
 			</control>
+			<include condition="System.HasAddon(script.extendedinfo) + !System.HasHiddenInput + !Skin.HasSetting(DisableAutoComplete)">ExtendedInfoAutoComplete</include>
 		</control>
 	</controls>
 </window>

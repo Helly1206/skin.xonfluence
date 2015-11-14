@@ -7,6 +7,102 @@
 	<controls>
 		<control type="group" id="100">
 			<include>VisibleFadeEffect</include>
+			<!-- control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[Container(111).ListItem.Property(Fanart_Image)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="200">Hidden</animation>
+				<visible>Control.HasFocus(111)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[Container(121).ListItem.Property(Fanart_Image)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="200">Hidden</animation>
+				<visible>Control.HasFocus(121)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[Container(131).ListItem.Property(Fanart_Image)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="200">Hidden</animation>
+				<visible>Control.HasFocus(131)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[Container(141).ListItem.Property(Fanart_Image)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="200">Hidden</animation>
+				<visible>Control.HasFocus(141)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[Container(151).ListItem.Property(Fanart_Image)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="200">Hidden</animation>
+				<visible>Control.HasFocus(151)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[Container(161).ListItem.Property(Fanart_Image)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="200">Hidden</animation>
+				<visible>Control.HasFocus(161)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[Container(171).ListItem.Property(Fanart_Image)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="200">Hidden</animation>
+				<visible>Control.HasFocus(171)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[Container(181).ListItem.Property(Fanart_Image)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="200">Hidden</animation>
+				<visible>Control.HasFocus(181)</visible>
+			</control -->
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -60,10 +156,10 @@
 				</control>
 				<control type="image">
 					<description>LOGO</description>
-					<left>55</left>
-					<top>18</top>
-					<width>150</width>
-					<height>55</height>
+					<left>30</left>
+					<top>10</top>
+					<width>220</width>
+					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<texture>Xonfluence_Logo.png</texture>
 				</control>
@@ -198,7 +294,7 @@
 						</item>
 						<item id="10">
 							<label>$LOCALIZE[134]</label>
-							<label2>$LOCALIZE[31348] $INFO[Control.GetLabel(180)] $LOCALIZE[31025]</label2>
+							<label2>$LOCALIZE[31206] $INFO[Control.GetLabel(180)] $LOCALIZE[31025]</label2>
 							<onclick>noop</onclick>
 							<visible>Control.IsVisible(189)</visible>
 						</item>
@@ -1283,6 +1379,7 @@
 									<top>5</top>
 									<width>150</width>
 									<height>90</height>
+									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
 									<aspectratio>keep</aspectratio>
 								</control>
@@ -1337,6 +1434,7 @@
 									<top>5</top>
 									<width>150</width>
 									<height>90</height>
+									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
 									<aspectratio>keep</aspectratio>
 								</control>
@@ -1426,7 +1524,7 @@
 							<textcolor>-</textcolor>
 						</control>
 						<control type="panel" id="151">
-							<visible>Container(9000).HasFocus(6)</visible>
+							<visible>Container(9000).HasFocus(7)</visible>
 							<include>VisibleFadeEffect</include>
 							<left>0</left>
 							<top>0</top>

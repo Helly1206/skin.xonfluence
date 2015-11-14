@@ -1,3 +1,12 @@
+[B]3.1.6[/B]
+- Align buttons correctly in OSD when no video artwork enabled #195
+- Align correctly when using stats-bar
+- Added option for streaming navigator menu (can be navigated through .strm files from separate folder or video library)
+- Added option to resart kodi instead of reboot when pressing reboot
+- Added autocomplete option on keyboards when script.extendedinfo is installed #232
+- Added music artist info from script.extendedinfo
+- Added actor info from script.extendedinfo when pressing 'back'
+
 [B]3.1.5[/B]
 - Changed entering sidebar for picture full wall view to up/down #159
 - Show slide index on a paused slideshow #159

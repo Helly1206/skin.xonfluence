@@ -625,7 +625,9 @@ msgctxt "#31150"
 msgid "Select UPnP server"
 msgstr ""
 
-#empty string id 31151
+msgctxt "#31151"
+msgid "Restart kodi instead of system reboot"
+msgstr ""
 
 msgctxt "#31152"
 msgid "Enable kiosk mode"
@@ -746,7 +748,11 @@ msgctxt "#31212"
 msgid "Streaming media"
 msgstr ""
 
-#empty strings from id 31213 to 31214
+msgctxt "#31213"
+msgid "Streams navigator"
+msgstr ""
+
+#empty strings from id 31214 to 31214
 
 msgctxt "#31215"
 msgid "Watch it later"
@@ -1326,7 +1332,11 @@ msgctxt "#31375"
 msgid "Use graphical textures on keyboards"
 msgstr ""
 
-#empty strings from id 31376 to 31379
+msgctxt "#31376"
+msgid "Use autocomplete on keyboards"
+msgstr ""
+
+#empty strings from id 31377 to 31379
 
 msgctxt "#31380"
 msgid "Enable playlist widget script"
@@ -1927,7 +1937,9 @@ msgctxt "#31941"
 msgid "Enable running artwork downloader automaticaly after updating library"
 msgstr ""
 
-#empty string id 31942
+msgctxt "#31942"
+msgid "YouTube"
+msgstr ""
 
 msgctxt "#31943"
 msgid "Choose a scraper"

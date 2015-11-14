@@ -619,7 +619,8 @@
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Suspend) + System.CanSuspend + Skin.HasSetting(Enable_CustomSuspend)">XBMC.RunScript($VAR[CustomSuspend],$VAR[CustomSuspendArg])</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Hibernate) + System.CanHibernate + !Skin.HasSetting(Enable_CustomHibernate)">Hibernate()</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Hibernate) + System.CanHibernate + Skin.HasSetting(Enable_CustomHibernate)">XBMC.RunScript($VAR[CustomHibernate],$VAR[CustomHibernateArg])</value>
-		<value condition="StringCompare(Skin.String(PowerBtnAction),Reboot) + System.CanReboot">Reset()</value>
+		<value condition="StringCompare(Skin.String(PowerBtnAction),Reboot) + System.CanReboot + !Skin.HasSetting(RestartNotReboot)">Reset()</value>
+		<value condition="StringCompare(Skin.String(PowerBtnAction),Reboot) + System.CanReboot + Skin.HasSetting(RestartNotReboot)">RestartApp()</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Logoff) + System.Loggedon">System.LogOff</value>
 		<value>ActivateWindow(ShutdownMenu)</value>
 	</variable>
@@ -2725,5 +2726,8 @@
 		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,90)">SetVolume(91,true)</value>
 		<value condition="!Skin.HasSetting(SmallVolumeJump) + !IntegerGreaterThan(player.volume,99)">SetVolume(100,true)</value>
 		<value>VolumeUp</value>
+	</variable>
+		<variable name="StreamingMediaPath" type="text">
+		<value condition="!IsEmpty(Skin.String(StreamingMediaPath))">$INFO[Skin.String(StreamingMediaPath)]</value>
 	</variable>
 </includes>
