@@ -229,6 +229,7 @@
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 			<control type="group">
+				<depth>DepthContent-</depth>
 				<left>850</left>
 				<top>100</top>
 				<visible>Control.IsVisible(50)</visible>
@@ -556,6 +557,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
+						<visible>!Skin.HasSetting(HideWideViewLabels)</visible>
 					</control>
 					<control type="image">
 						<left>250</left>
@@ -597,6 +599,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
+						<visible>!Skin.HasSetting(HideWideViewLabels)</visible>
 					</control>
 					<control type="image">
 						<left>250</left>

@@ -299,7 +299,7 @@
 							<visible>Control.IsVisible(189)</visible>
 						</item>
 						<item id="11">
-							<label>[COLOR=blue]$INFO[Control.GetLabel(198)][/COLOR]</label>
+							<label>[COLOR=$VAR[MainColorOne]]$INFO[Control.GetLabel(198)][/COLOR]</label>
 							<label2>$LOCALIZE[31207]</label2>
 							<onclick>Control.Setfocus(9000,0)</onclick>
 							<onclick>SendClick(198)</onclick>
@@ -560,7 +560,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<textcolor>grey</textcolor>
-							<label>([COLOR=blue]$INFO[Container(221).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(221).CurrentPage]/$INFO[Container(221).NumPages][/COLOR])</label>
+							<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(221).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(221).CurrentPage]/$INFO[Container(221).NumPages][/COLOR])</label>
 							<visible>Container(9000).HasFocus(1)</visible>
 						</control>
 					</control>

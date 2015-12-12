@@ -84,7 +84,7 @@
 			<size>80</size>
 		</font>
 	</fontset>
-	<fontset id="LargeFont" idloc="15110">
+	<fontset id="Massive" idloc="15110">
 		<!-- Normal Fonts -->
 		<font>
 			<name>font10</name>
@@ -345,7 +345,7 @@
 			<style>bold</style>
 		</font>
 	</fontset>
-	<fontset id="Massive" idloc="31393" unicode="true">
+	<fontset id="LargeFont" idloc="31393" unicode="true">
 		<!-- Normal Fonts -->
 		<font>
 			<name>font10</name>
@@ -426,6 +426,174 @@
 		<font>
 			<name>WeatherTemp</name>
 			<filename>Massive.ttf</filename>
+			<size>86</size>
+		</font>
+	</fontset>
+	<fontset id="Ubuntu Normal" idloc="31270">
+		<!-- Normal Fonts -->
+		<font>
+			<name>font10</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>12</size>
+		</font>
+		<font>
+			<name>font12</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>17</size>
+		</font>
+		<font>
+			<name>font13</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>font16</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>font30</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>fontContextMenu</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>18</size>
+		</font>
+		<!-- Title Fonts -->
+		<font>
+			<name>font10_title</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>14</size>
+		</font>
+		<font>
+			<name>font12_title</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>font13_title</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>font24_title</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>font28_title</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>font30_title</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>font35_title</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>38</size>
+		</font>
+		<font>
+			<name>font_MainMenu</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>44</size>
+		</font>
+		<font>
+			<name>WeatherTemp</name>
+			<filename>Ubuntu-M.ttf</filename>
+			<size>86</size>
+		</font>
+	</fontset>
+	<fontset id="Ubuntu Bold" idloc="31271">
+		<!-- Normal Fonts -->
+		<font>
+			<name>font10</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>12</size>
+		</font>
+		<font>
+			<name>font12</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>17</size>
+		</font>
+		<font>
+			<name>font13</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>font16</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>font30</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>fontContextMenu</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>18</size>
+		</font>
+		<!-- Title Fonts -->
+		<font>
+			<name>font10_title</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>14</size>
+		</font>
+		<font>
+			<name>font12_title</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>font13_title</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>font24_title</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>font28_title</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>font30_title</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>font35_title</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>38</size>
+		</font>
+		<font>
+			<name>font_MainMenu</name>
+			<filename>Ubuntu-B.ttf</filename>
+			<size>44</size>
+		</font>
+		<font>
+			<name>WeatherTemp</name>
+			<filename>Ubuntu-B.ttf</filename>
 			<size>86</size>
 		</font>
 	</fontset>

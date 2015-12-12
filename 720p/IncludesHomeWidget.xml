@@ -133,12 +133,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8000,-1)</onclick>
-					<visible>Container(8000).HasPrevious</visible>
+					<visible>Control.HasFocus(8000) + Container(8000).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8000,1)</onclick>
-					<visible>Container(8000).HasNext</visible>
+					<visible>Control.HasFocus(8000) + Container(8000).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -221,12 +222,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8001,-1)</onclick>
-					<visible>Container(8001).HasPrevious</visible>
+					<visible>Control.HasFocus(8001) + Container(8001).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8001,1)</onclick>
-					<visible>Container(8001).HasNext</visible>
+					<visible>Control.HasFocus(8001) + Container(8001).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -352,12 +354,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8002,-1)</onclick>
-					<visible>Container(8002).HasPrevious</visible>
+					<visible>Control.HasFocus(8002) + Container(8002).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8002,1)</onclick>
-					<visible>Container(8002).HasNext</visible>
+					<visible>Control.HasFocus(8002) + Container(8002).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -440,12 +443,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8003,-1)</onclick>
-					<visible>Container(8003).HasPrevious</visible>
+					<visible>Control.HasFocus(8003) + Container(8003).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8003,1)</onclick>
-					<visible>Container(8003).HasNext</visible>
+					<visible>Control.HasFocus(8003) + Container(8003).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -571,12 +575,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8004,-1)</onclick>
-					<visible>Container(8004).HasPrevious</visible>
+					<visible>Control.HasFocus(8004) + Container(8004).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8004,1)</onclick>
-					<visible>Container(8004).HasNext</visible>
+					<visible>Control.HasFocus(8004) + Container(8004).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -659,12 +664,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8005,-1)</onclick>
-					<visible>Container(8005).HasPrevious</visible>
+					<visible>Control.HasFocus(8005) + Container(8005).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8005,1)</onclick>
-					<visible>Container(8005).HasNext</visible>
+					<visible>Control.HasFocus(8005) + Container(8005).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -790,12 +796,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8006,-1)</onclick>
-					<visible>Container(8006).HasPrevious</visible>
+					<visible>Control.HasFocus(8006) + Container(8006).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8006,1)</onclick>
-					<visible>Container(8006).HasNext</visible>
+					<visible>Control.HasFocus(8006) + Container(8006).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -878,12 +885,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8007,-1)</onclick>
-					<visible>Container(8007).HasPrevious</visible>
+					<visible>Control.HasFocus(8007) + Container(8007).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8007,1)</onclick>
-					<visible>Container(8007).HasNext</visible>
+					<visible>Control.HasFocus(8007) + Container(8007).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -1055,12 +1063,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8008,-1)</onclick>
-					<visible>Container(8008).HasPrevious</visible>
+					<visible>Control.HasFocus(8008) + Container(8008).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8008,1)</onclick>
-					<visible>Container(8008).HasNext</visible>
+					<visible>Control.HasFocus(8008) + Container(8008).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -1227,11 +1236,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8009,-1)</onclick>
 					<visible>Control.HasFocus(8009) + Container(8009).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8009,1)</onclick>
 					<visible>Control.HasFocus(8009) + Container(8009).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -1401,12 +1412,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8010,-1)</onclick>
-					<visible>Container(8010).HasPrevious</visible>
+					<visible>Control.HasFocus(8010) + Container(8010).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8010,1)</onclick>
-					<visible>Container(8010).HasNext</visible>
+					<visible>Control.HasFocus(8010) + Container(8010).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -1573,11 +1585,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8011,-1)</onclick>
 					<visible>Control.HasFocus(8011) + Container(8011).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8011,1)</onclick>
 					<visible>Control.HasFocus(8011) + Container(8011).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -1747,12 +1761,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8012,-1)</onclick>
-					<visible>Container(8012).HasPrevious</visible>
+					<visible>Control.HasFocus(8012) + Container(8012).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8012,1)</onclick>
-					<visible>Container(8012).HasNext</visible>
+					<visible>Control.HasFocus(8012) + Container(8012).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -1919,11 +1934,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8013,-1)</onclick>
 					<visible>Control.HasFocus(8013) + Container(8013).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8013,1)</onclick>
 					<visible>Control.HasFocus(8013) + Container(8013).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -2074,12 +2091,13 @@
 				<control type="button">
 					<include>SmallWidgetAlbumLeft</include>
 					<onclick>Control.Move(8014,-1)</onclick>
-					<visible>Container(8014).HasPrevious</visible>
+					<visible>Control.HasFocus(8014) + Container(8014).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetAlbumRight</include>
 					<onclick>Control.Move(8014,1)</onclick>
-					<visible>Container(8014).HasNext</visible>
+					<visible>Control.HasFocus(8014) + Container(8014).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -2227,11 +2245,13 @@
 					<include>LargeWidgetAlbumLeft</include>
 					<onclick>Control.Move(8015,-1)</onclick>
 					<visible>Control.HasFocus(8015) + Container(8015).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetAlbumRight</include>
 					<onclick>Control.Move(8015,1)</onclick>
 					<visible>Control.HasFocus(8015) + Container(8015).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -2381,12 +2401,13 @@
 				<control type="button">
 					<include>SmallWidgetAlbumLeft</include>
 					<onclick>Control.Move(8016,-1)</onclick>
-					<visible>Container(8016).HasPrevious</visible>
+					<visible>Control.HasFocus(8016) + Container(8016).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetAlbumRight</include>
 					<onclick>Control.Move(8016,1)</onclick>
-					<visible>Container(8016).HasNext</visible>
+					<visible>Control.HasFocus(8016) + Container(8016).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -2534,11 +2555,13 @@
 					<include>LargeWidgetAlbumLeft</include>
 					<onclick>Control.Move(8017,-1)</onclick>
 					<visible>Control.HasFocus(8017) + Container(8017).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetAlbumRight</include>
 					<onclick>Control.Move(8017,1)</onclick>
 					<visible>Control.HasFocus(8017) + Container(8017).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -2688,12 +2711,13 @@
 				<control type="button">
 					<include>SmallWidgetAlbumLeft</include>
 					<onclick>Control.Move(8018,-1)</onclick>
-					<visible>Container(8018).HasPrevious</visible>
+					<visible>Control.HasFocus(8018) + Container(8018).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetAlbumRight</include>
 					<onclick>Control.Move(8018,1)</onclick>
-					<visible>Container(8018).HasNext</visible>
+					<visible>Control.HasFocus(8018) + Container(8018).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -2841,11 +2865,13 @@
 					<include>LargeWidgetAlbumLeft</include>
 					<onclick>Control.Move(8019,-1)</onclick>
 					<visible>Control.HasFocus(8019) + Container(8019).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetAlbumRight</include>
 					<onclick>Control.Move(8019,1)</onclick>
 					<visible>Control.HasFocus(8019) + Container(8019).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -2998,12 +3024,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8020,-1)</onclick>
-					<visible>Container(8020).HasPrevious</visible>
+					<visible>Control.HasFocus(8020) + Container(8020).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8020,1)</onclick>
-					<visible>Container(8020).HasNext</visible>
+					<visible>Control.HasFocus(8020) + Container(8020).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -3152,11 +3179,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8021,-1)</onclick>
 					<visible>Control.HasFocus(8021) + Container(8021).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8021,1)</onclick>
 					<visible>Control.HasFocus(8021) + Container(8021).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -3308,12 +3337,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8022,-1)</onclick>
-					<visible>Container(8022).HasPrevious</visible>
+					<visible>Control.HasFocus(8022) + Container(8022).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8022,1)</onclick>
-					<visible>Container(8022).HasNext</visible>
+					<visible>Control.HasFocus(8022) + Container(8022).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -3462,11 +3492,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8023,-1)</onclick>
 					<visible>Control.HasFocus(8023) + Container(8023).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8023,1)</onclick>
 					<visible>Control.HasFocus(8023) + Container(8023).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -3618,12 +3650,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8024,-1)</onclick>
-					<visible>Container(8024).HasPrevious</visible>
+					<visible>Control.HasFocus(8024) + Container(8024).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8024,1)</onclick>
-					<visible>Container(8024).HasNext</visible>
+					<visible>Control.HasFocus(8024) + Container(8024).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -3772,11 +3805,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8025,-1)</onclick>
 					<visible>Control.HasFocus(8025) + Container(8025).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8025,1)</onclick>
 					<visible>Control.HasFocus(8025) + Container(8025).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -4058,12 +4093,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8026,-1)</onclick>
-					<visible>Container(8026).HasPrevious</visible>
+					<visible>Control.HasFocus(8026) + Container(8026).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8026,1)</onclick>
-					<visible>Container(8026).HasNext</visible>
+					<visible>Control.HasFocus(8026) + Container(8026).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -4366,12 +4402,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8027,-1)</onclick>
-					<visible>Container(8027).HasPrevious</visible>
+					<visible>Control.HasFocus(8027) + Container(8027).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8027,1)</onclick>
-					<visible>Container(8027).HasNext</visible>
+					<visible>Control.HasFocus(8027) + Container(8027).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -4666,12 +4703,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8028,-1)</onclick>
-					<visible>Container(8028).HasPrevious</visible>
+					<visible>Control.HasFocus(8028) + Container(8028).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8028,1)</onclick>
-					<visible>Container(8028).HasNext</visible>
+					<visible>Control.HasFocus(8028) + Container(8028).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -4974,12 +5012,13 @@
 				<control type="button">
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8029,-1)</onclick>
-					<visible>Container(8029).HasPrevious</visible>
+					<visible>Control.HasFocus(8029) + Container(8029).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8029,1)</onclick>
-					<visible>Container(8029).HasNext</visible>
+					<visible>Control.HasFocus(8029) + Container(8029).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5321,12 +5360,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8032,-1)</onclick>
-					<visible>Container(8032).HasPrevious</visible>
+					<visible>Control.HasFocus(8032) + Container(8032).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8032,1)</onclick>
-					<visible>Container(8032).HasNext</visible>
+					<visible>Control.HasFocus(8032) + Container(8032).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5493,11 +5533,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8033,-1)</onclick>
 					<visible>Control.HasFocus(8033) + Container(8033).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8033,1)</onclick>
 					<visible>Control.HasFocus(8033) + Container(8033).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -5623,12 +5665,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8035,-1)</onclick>
-					<visible>Container(8035).HasPrevious</visible>
+					<visible>Control.HasFocus(8035) + Container(8035).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8035,1)</onclick>
-					<visible>Container(8035).HasNext</visible>
+					<visible>Control.HasFocus(8035) + Container(8035).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5711,12 +5754,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8036,-1)</onclick>
-					<visible>Container(8036).HasPrevious</visible>
+					<visible>Control.HasFocus(8036) + Container(8036).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8036,1)</onclick>
-					<visible>Container(8036).HasNext</visible>
+					<visible>Control.HasFocus(8036) + Container(8036).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5842,12 +5886,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8037,-1)</onclick>
-					<visible>Container(8037).HasPrevious</visible>
+					<visible>Control.HasFocus(8037) + Container(8037).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8037,1)</onclick>
-					<visible>Container(8037).HasNext</visible>
+					<visible>Control.HasFocus(8037) + Container(8037).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5929,12 +5974,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8038,-1)</onclick>
-					<visible>Container(8038).HasPrevious</visible>
+					<visible>Control.HasFocus(8038) + Container(8038).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8038,1)</onclick>
-					<visible>Container(8038).HasNext</visible>
+					<visible>Control.HasFocus(8038) + Container(8038).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -10499,7 +10545,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.1.NextDay)] $INFO[Window(home).Property(NextAired.1.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.1.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.1.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.1.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.1.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.1.NextDay))</visible>
 			</item>
 			<item>
@@ -10507,7 +10553,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.2.NextDay)] $INFO[Window(home).Property(NextAired.2.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.2.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.2.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.2.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.2.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.2.NextDay))</visible>
 			</item>
 			<item>
@@ -10515,7 +10561,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.3.NextDay)] $INFO[Window(home).Property(NextAired.3.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.3.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.3.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.3.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.3.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.3.NextDay))</visible>
 			</item>
 			<item>
@@ -10523,7 +10569,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.4.NextDay)] $INFO[Window(home).Property(NextAired.4.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.4.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.4.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.4.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.4.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.4.NextDay))</visible>
 			</item>
 			<item>
@@ -10531,7 +10577,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.5.NextDay)] $INFO[Window(home).Property(NextAired.5.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.5.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.5.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.5.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.5.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.5.NextDay))</visible>
 			</item>
 			<item>
@@ -10539,7 +10585,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.6.NextDay)] $INFO[Window(home).Property(NextAired.6.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.6.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.6.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.6.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.6.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.6.NextDay))</visible>
 			</item>
 			<item>
@@ -10547,7 +10593,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.7.NextDay)] $INFO[Window(home).Property(NextAired.7.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.7.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.7.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.7.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.7.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.7.NextDay))</visible>
 			</item>
 			<item>
@@ -10555,7 +10601,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.8.NextDay)] $INFO[Window(home).Property(NextAired.8.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.8.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.8.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.8.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.8.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.8.NextDay))</visible>
 			</item>
 			<item>
@@ -10563,7 +10609,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.9.NextDay)] $INFO[Window(home).Property(NextAired.9.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.9.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.9.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.9.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.9.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.9.NextDay))</visible>
 			</item>
 			<item>
@@ -10571,7 +10617,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.10.NextDay)] $INFO[Window(home).Property(NextAired.10.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.10.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.10.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.10.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.10.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.10.NextDay))</visible>
 			</item>
 		</content>

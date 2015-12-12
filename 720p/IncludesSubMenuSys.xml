@@ -2,6 +2,7 @@
 <includes>
 	<include name="HomeSubMenuControl">
 		<control type="group" id="9001">
+			<depth>DepthMenu-</depth>
 			<left>0</left>
 			<top>70</top>
 			<onup>9000</onup>
@@ -822,7 +823,7 @@
 		<item>
 			<label>$VAR[SubMenuMusicOne]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.1.Path))">ActivateWindow(MusicLibrary,Artists,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.1.Path))">ActivateWindow(Music,Artists,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.1.Path))">$INFO[Skin.String(SubMusic.1.Path)]</onclick>
 			<visible>Library.HasContent(Music) | !IsEmpty(Skin.String(SubMusic.1.Path))</visible>
 			<visible>!stringcompare(Skin.String(SubMusic.1.Path),Hidden)</visible>
@@ -830,7 +831,7 @@
 		<item>
 			<label>$VAR[SubMenuMusicTwo]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.2.Path))">ActivateWindow(MusicLibrary,Albums,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.2.Path))">ActivateWindow(Music,Albums,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.2.Path))">$INFO[Skin.String(SubMusic.2.Path)]</onclick>
 			<visible>Library.HasContent(Music) | !IsEmpty(Skin.String(SubMusic.2.Path))</visible>
 			<visible>!stringcompare(Skin.String(SubMusic.2.Path),Hidden)</visible>
@@ -838,7 +839,7 @@
 		<item>
 			<label>$VAR[SubMenuMusicThree]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.3.Path))">ActivateWindow(MusicLibrary,Songs,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.3.Path))">ActivateWindow(Music,Songs,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.3.Path))">$INFO[Skin.String(SubMusic.3.Path)]</onclick>
 			<visible>Library.HasContent(Music) | !IsEmpty(Skin.String(SubMusic.3.Path))</visible>
 			<visible>!stringcompare(Skin.String(SubMusic.3.Path),Hidden)</visible>
@@ -846,14 +847,14 @@
 		<item>
 			<label>$VAR[SubMenuMusicFour]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.4.Path))">ActivateWindow(MusicFiles)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.4.Path))">ActivateWindow(Music,Files,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.4.Path))">$INFO[Skin.String(SubMusic.4.Path)]</onclick>
 			<visible>!stringcompare(Skin.String(SubMusic.4.Path),Hidden)</visible>
 		</item>
 		<item>
 			<label>$VAR[SubMenuMusicFive]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.5.Path))">ActivateWindow(MusicLibrary,root)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.5.Path))">ActivateWindow(Music,root)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.5.Path))">$INFO[Skin.String(SubMusic.5.Path)]</onclick>
 			<visible>Library.HasContent(Music) | !IsEmpty(Skin.String(SubMusic.5.Path))</visible>
 			<visible>!stringcompare(Skin.String(SubMusic.5.Path),Hidden)</visible>
@@ -861,8 +862,7 @@
 		<item>
 			<label>$VAR[SubMenuMusicSix]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.6.Path)) + Library.HasContent(Music)">ActivateWindow(MusicLibrary,Addons,return)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.6.Path)) + !Library.HasContent(Music)">ActivateWindow(MusicFiles,Addons,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.6.Path))">ActivateWindow(Music,Addons,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.6.Path))">$INFO[Skin.String(SubMusic.6.Path)]</onclick>
 			<visible>!stringcompare(Skin.String(SubMusic.6.Path),Hidden)</visible>
 		</item>

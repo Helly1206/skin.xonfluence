@@ -25,7 +25,7 @@
 				<align>justify</align>
 				<textcolor>white</textcolor>
 				<font>font13</font>
-				<label>$VAR[VideoPlayingDescription,[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[207]$LOCALIZE[31001] [/COLOR][/B]]</label>
+				<label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[207]$LOCALIZE[31001] [/COLOR][/B]$VAR[VideoPlayingDescription]</label>
 				<autoscroll delay="3000" time="1800" repeat="10000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
 			</control>
 		</control>
@@ -53,7 +53,7 @@
 				<align>justify</align>
 				<textcolor>white</textcolor>
 				<font>font13</font>
-				<label>$VAR[VideoPlayingDescription,[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[207]$LOCALIZE[31001] [/COLOR][/B]]</label>
+				<label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[207]$LOCALIZE[31001] [/COLOR][/B]$VAR[VideoPlayingDescription]</label>
 				<autoscroll delay="3000" time="1800" repeat="10000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
 			</control>
 		</control>
@@ -102,6 +102,7 @@
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>!Skin.HasSetting(EnableDVDCases)</visible>
+				<visible>[Skin.HasSetting(DisableClearArt) | IsEmpty(Player.Art(clearart))] + [IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
 			</control>
 			<control type="image" id="1">
 				<left>30</left>
@@ -110,7 +111,7 @@
 				<height>345</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>$VAR[VideoPlayerCase,ClearCase/,.png]</texture>
-				<visible>!Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | IsEmpty(Player.Art(clearart))] + [IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
+				<visible>!Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | IsEmpty(Player.Art(clearart))] + [IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt) + IsEmpty(Player.Art(thumb))]</visible>
 				<visible>Skin.HasSetting(EnableDVDCases)</visible>
 			</control>
 			<control type="image" id="1">
@@ -121,7 +122,7 @@
 				<height>230</height>
 				<texture>$VAR[StreamingVideoIcon]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<visible>Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | IsEmpty(Player.Art(clearart))] + [IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
+				<visible>Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | IsEmpty(Player.Art(clearart))] + [IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt) + IsEmpty(Player.Art(poster)) + IsEmpty(Player.Art(thumb))]</visible>
 			</control>
 			<visible>!Skin.HasSetting(HideArtWorkOSD)</visible>
 		</control>
@@ -369,7 +370,7 @@
 			<height>25</height>
 			<align>left</align>
 			<font>font12</font>
-			<label>$INFO[VideoPlayer.ChannelNumberLabel,([COLOR=blue],[/COLOR]) ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.EpisodeName, (,)]</label>
+			<label>([COLOR=$VAR[MainColorOne]],[/COLOR]) $INFO[VideoPlayer.ChannelNumberLabel]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.EpisodeName, (,)]</label>
 			<textcolor>grey2</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -381,7 +382,7 @@
 			<visible>!Skin.HasSetting(HideHomeNowPlaying)</visible>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<timeperimage>10000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>600</fadetime>
 				<aspectratio>keep</aspectratio>
@@ -391,7 +392,7 @@
 			</control>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<timeperimage>10000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>600</fadetime>
 				<aspectratio>keep</aspectratio>
@@ -409,7 +410,7 @@
 			</control>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<timeperimage>10000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>600</fadetime>
 				<aspectratio>keep</aspectratio>
@@ -425,7 +426,7 @@
 			<visible>!stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum) + !stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<timeperimage>10000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>600</fadetime>
 				<aspectratio>keep</aspectratio>
@@ -437,7 +438,7 @@
 			</control>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<timeperimage>10000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>600</fadetime>
 				<aspectratio>keep</aspectratio>
@@ -459,7 +460,7 @@
 			</control>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<timeperimage>10000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>600</fadetime>
 				<aspectratio>keep</aspectratio>

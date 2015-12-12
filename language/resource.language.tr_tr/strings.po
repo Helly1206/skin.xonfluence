@@ -260,6 +260,14 @@ msgctxt "#31062"
 msgid "Episode backdrop"
 msgstr ""
 
+msgctxt "#31063"
+msgid "Show volume buttons"
+msgstr ""
+
+msgctxt "#31064"
+msgid "Volume buttons small jump"
+msgstr ""
+
 msgctxt "#31065"
 msgid "Favourites button action"
 msgstr ""
@@ -388,6 +396,14 @@ msgctxt "#31096"
 msgid "Enable suggested movies or TV shows info"
 msgstr ""
 
+msgctxt "#31097"
+msgid "Enable Floor Return Buttons (for touch)"
+msgstr ""
+
+msgctxt "#31098"
+msgid "Top left widget on all screens"
+msgstr ""
+
 msgctxt "#31099"
 msgid "Enable [COLOR=grey3](Slower)[/COLOR] File system search for additional artwork"
 msgstr ""
@@ -472,8 +488,16 @@ msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Arka plan fanartını gizle"
 
+msgctxt "#31120"
+msgid "Hide page count info"
+msgstr ""
+
+msgctxt "#31121"
+msgid "Show plot info on info screen"
+msgstr ""
+
 msgctxt "#31122"
-msgid "Enable busy animation"
+msgid "Hide EPG if RDS is present on channel window"
 msgstr ""
 
 msgctxt "#31123"
@@ -504,9 +528,21 @@ msgctxt "#31129"
 msgid "Hide fanart in full screen visualisation"
 msgstr "Tam ekran görsel öğede fanart'ı gizle"
 
+msgctxt "#31130"
+msgid "Hide favorites button"
+msgstr ""
+
+msgctxt "#31131"
+msgid "Hide top left info on windows"
+msgstr ""
+
 msgctxt "#31132"
 msgid "Lyrics add-on"
 msgstr "Şarkı sözleri eklentisi"
+
+msgctxt "#31133"
+msgid "Minimize on exit button"
+msgstr ""
 
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
@@ -556,6 +592,10 @@ msgctxt "#31145"
 msgid "Plex"
 msgstr ""
 
+msgctxt "#31146"
+msgid "Enable busy animation"
+msgstr ""
+
 msgctxt "#31147"
 msgid "Setup UPnP library"
 msgstr ""
@@ -572,8 +612,20 @@ msgctxt "#31150"
 msgid "Select UPnP server"
 msgstr ""
 
+msgctxt "#31151"
+msgid "Restart kodi instead of system reboot"
+msgstr ""
+
 msgctxt "#31152"
 msgid "Enable kiosk mode"
+msgstr ""
+
+msgctxt "#31153"
+msgid "Show minimal picture info"
+msgstr ""
+
+msgctxt "#31154"
+msgid "Notifications at top left"
 msgstr ""
 
 msgctxt "#31185"
@@ -674,6 +726,14 @@ msgstr ""
 
 msgctxt "#31212"
 msgid "Streaming media"
+msgstr ""
+
+msgctxt "#31213"
+msgid "Streams navigator"
+msgstr ""
+
+msgctxt "#31214"
+msgid "Show addon names"
 msgstr ""
 
 msgctxt "#31215"
@@ -872,6 +932,14 @@ msgctxt "#31269"
 msgid "Unfinished"
 msgstr ""
 
+msgctxt "#31270"
+msgid "Ubuntu Normal"
+msgstr ""
+
+msgctxt "#31271"
+msgid "Ubuntu Bold"
+msgstr ""
+
 msgctxt "#31272"
 msgid "Enable holiday theme"
 msgstr ""
@@ -1045,8 +1113,8 @@ msgid "Last logged in"
 msgstr "Son giriş yapan"
 
 msgctxt "#31321"
-msgid "Karaoke song selector"
-msgstr "Karaoke şarkı seçici"
+msgid "Library mode"
+msgstr ""
 
 msgctxt "#31322"
 msgid "Aired"
@@ -1212,6 +1280,10 @@ msgctxt "#31368"
 msgid "Kryptonite"
 msgstr ""
 
+msgctxt "#31369"
+msgid "Select main OSD colour"
+msgstr ""
+
 msgctxt "#31370"
 msgid "Instant"
 msgstr ""
@@ -1232,6 +1304,14 @@ msgctxt "#31374"
 msgid "Enable video codec info on pause and OSD menu"
 msgstr ""
 
+msgctxt "#31375"
+msgid "Use graphical textures on keyboards"
+msgstr ""
+
+msgctxt "#31376"
+msgid "Use autocomplete on keyboards"
+msgstr ""
+
 msgctxt "#31380"
 msgid "Enable playlist widget script"
 msgstr ""
@@ -1246,6 +1326,14 @@ msgstr ""
 
 msgctxt "#31383"
 msgid "Enable video artwork to show with OSD information"
+msgstr ""
+
+msgctxt "#31384"
+msgid "Enable music artwork to show with OSD information"
+msgstr ""
+
+msgctxt "#31385"
+msgid "Hide text label in wide icon view"
 msgstr ""
 
 msgctxt "#31386"
@@ -1305,8 +1393,8 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]VİDEO AYARLARINI YAPILANDIR[/B][CR][CR]Video kitaplığını yönet · Video oynatma seçeneklerini ayarla · Video listeleme seçeneklerini değiştir[CR]Altyazı yazı tiplerini ayarla"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
-msgstr "[B]MÜZİK AYARLARINI YAPILANDIR[/B][CR][CR]Müzik kitaplığını yönet · Müzik çalma seçeneklerini ayarla · Müzik listeleme seçeneklerini değiştir · Şarkı sunumu ayarları · Karaoke seçeneklerini ayarla"
+msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
+msgstr ""
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
@@ -1804,28 +1892,8 @@ msgctxt "#31941"
 msgid "Enable running artwork downloader automaticaly after updating library"
 msgstr ""
 
-msgctxt "#31943"
-msgid "Choose a scraper"
-msgstr ""
-
-msgctxt "#31944"
-msgid "Current scraper"
-msgstr ""
-
-msgctxt "#31945"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr ""
-
-msgctxt "#31946"
-msgid "Track number"
-msgstr ""
-
-msgctxt "#31947"
-msgid "Memory used:"
-msgstr ""
-
-msgctxt "#31948"
-msgid "Created"
+msgctxt "#31942"
+msgid "YouTube"
 msgstr ""
 
 msgctxt "#31950"
@@ -1877,15 +1945,19 @@ msgid "Choose your song"
 msgstr ""
 
 msgctxt "#31962"
-msgid "Lyrics source"
+msgid "Reset paths to skin default"
 msgstr ""
 
 msgctxt "#31963"
-msgid "Album details"
+msgid "Reset fanart to skin default"
 msgstr ""
 
 msgctxt "#31964"
-msgid "Click button to play[CR][CR]Movie trailer"
+msgid "Use alternative background folder"
+msgstr ""
+
+msgctxt "#31965"
+msgid "Multi-image background time per image"
 msgstr ""
 
 msgctxt "#31969"

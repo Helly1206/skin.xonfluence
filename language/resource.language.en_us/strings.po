@@ -497,8 +497,8 @@ msgid "Show plot info on info screen"
 msgstr "Show plot info on info screen"
 
 msgctxt "#31122"
-msgid "Enable busy animation"
-msgstr "Enable busy animation"
+msgid "Hide EPG if RDS is present on channel window"
+msgstr "Hide EPG if RDS is present on channel window"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -591,6 +591,10 @@ msgstr "Windows home server"
 msgctxt "#31145"
 msgid "Plex"
 msgstr "Plex"
+
+msgctxt "#31146"
+msgid "Enable busy animation"
+msgstr "Enable busy animation"
 
 msgctxt "#31147"
 msgid "Setup UPnP library"
@@ -727,6 +731,10 @@ msgstr "Streaming media"
 msgctxt "#31213"
 msgid "Streams navigator"
 msgstr "Streams navigator"
+
+msgctxt "#31214"
+msgid "Show addon names"
+msgstr "Show addon names"
 
 msgctxt "#31215"
 msgid "Watch it later"
@@ -924,6 +932,14 @@ msgctxt "#31269"
 msgid "Unfinished"
 msgstr "Unfinished"
 
+msgctxt "#31270"
+msgid "Ubuntu Normal"
+msgstr "Ubuntu Normal"
+
+msgctxt "#31271"
+msgid "Ubuntu Bold"
+msgstr "Ubuntu Bold"
+
 msgctxt "#31272"
 msgid "Enable holiday theme"
 msgstr "Enable holiday theme"
@@ -1097,8 +1113,8 @@ msgid "Last logged in"
 msgstr "Last logged in"
 
 msgctxt "#31321"
-msgid "Karaoke song selector"
-msgstr "Karaoke song selector"
+msgid "Library mode"
+msgstr "Library mode"
 
 msgctxt "#31322"
 msgid "Aired"
@@ -1264,6 +1280,10 @@ msgctxt "#31368"
 msgid "Kryptonite"
 msgstr "Kryptonite"
 
+msgctxt "#31369"
+msgid "Select main OSD colour"
+msgstr "Select main OSD color"
+
 msgctxt "#31370"
 msgid "Instant"
 msgstr "Instant"
@@ -1307,6 +1327,14 @@ msgstr "Playlist widget should [B]randomize[/B] the playlist sort order"
 msgctxt "#31383"
 msgid "Enable video artwork to show with OSD information"
 msgstr "Enable video artwork to show with OSD information"
+
+msgctxt "#31384"
+msgid "Enable music artwork to show with OSD information"
+msgstr "Enable music artwork to show with OSD information"
+
+msgctxt "#31385"
+msgid "Hide text label in wide icon view"
+msgstr "Hide text label in wide icon view"
 
 msgctxt "#31386"
 msgid "Music OSD settings"
@@ -1365,8 +1393,8 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
-msgstr "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
+msgstr "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
@@ -1868,30 +1896,6 @@ msgctxt "#31942"
 msgid "YouTube"
 msgstr "YouTube"
 
-msgctxt "#31943"
-msgid "Choose a scraper"
-msgstr "Choose a scraper"
-
-msgctxt "#31944"
-msgid "Current scraper"
-msgstr "Current scraper"
-
-msgctxt "#31945"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-
-msgctxt "#31946"
-msgid "Track number"
-msgstr "Track number"
-
-msgctxt "#31947"
-msgid "Memory used:"
-msgstr "Memory used:"
-
-msgctxt "#31948"
-msgid "Created"
-msgstr "Created"
-
 msgctxt "#31950"
 msgid "WEATHER"
 msgstr "WEATHER"
@@ -1941,16 +1945,20 @@ msgid "Choose your song"
 msgstr "Choose your song"
 
 msgctxt "#31962"
-msgid "Lyrics source"
-msgstr "Lyrics source"
+msgid "Reset paths to skin default"
+msgstr "Reset paths to skin default"
 
 msgctxt "#31963"
-msgid "Album details"
-msgstr "Album details"
+msgid "Reset fanart to skin default"
+msgstr "Reset fanart to skin default"
 
 msgctxt "#31964"
-msgid "Click button to play[CR][CR]Movie trailer"
-msgstr "Click button to play[CR][CR]Movie trailer"
+msgid "Use alternative background folder"
+msgstr "Use alternative background folder"
+
+msgctxt "#31965"
+msgid "Multi-image background time per image"
+msgstr "Multi-image background time per image"
 
 msgctxt "#31969"
 msgid "Airs"

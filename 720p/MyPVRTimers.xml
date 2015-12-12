@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
+	<menucontrol>9000</menucontrol>
 	<views>50</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
@@ -60,7 +61,7 @@
 				<top>60</top>
 				<control type="label">
 					<description>Channel header label</description>
-					<left>20</left>
+					<left>50</left>
 					<top>20</top>
 					<width>220</width>
 					<height>20</height>
@@ -74,7 +75,7 @@
 					<description>Title header label</description>
 					<left>240</left>
 					<top>20</top>
-					<width>300</width>
+					<width>200</width>
 					<height>20</height>
 					<font>font13_title</font>
 					<textcolor>white</textcolor>
@@ -84,15 +85,27 @@
 				</control>
 				<control type="label">
 					<description>Schedule Time header label</description>
-					<left>600</left>
+					<left>480</left>
 					<top>20</top>
-					<width>300</width>
+					<width>200</width>
 					<height>20</height>
 					<font>font13_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<aligny>center</aligny>
 					<label>31501</label>
+				</control>
+				<control type="label">
+					<description>Type header label</description>
+					<left>770</left>
+					<top>20</top>
+					<width>150</width>
+					<height>20</height>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<aligny>center</aligny>
+					<label>467</label>
 				</control>
 				<control type="label">
 					<description>Status header label</description>
@@ -119,7 +132,7 @@
 					<left>0</left>
 					<top>55</top>
 					<width>1100</width>
-					<height>480</height>
+					<height>330</height>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<onleft>103</onleft>
@@ -170,7 +183,7 @@
 							<control type="label">
 								<left>240</left>
 								<top>0</top>
-								<width>290</width>
+								<width>200</width>
 								<height>40</height>
 								<font>font12</font>
 								<aligny>center</aligny>
@@ -178,9 +191,9 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>600</left>
+								<left>480</left>
 								<top>0</top>
-								<width>400</width>
+								<width>250</width>
 								<height>40</height>
 								<font>font12</font>
 								<aligny>center</aligny>
@@ -188,9 +201,19 @@
 								<info>ListItem.Date</info>
 							</control>
 							<control type="label">
+								<left>770</left>
+								<top>0</top>
+								<width>180</width>
+								<height>40</height>
+								<font>font12</font>
+								<aligny>center</aligny>
+								<selectedcolor>selected</selectedcolor>
+								<info>ListItem.Timertype</info>
+							</control>
+							<control type="label">
 								<left>980</left>
 								<top>0</top>
-								<width>170</width>
+								<width>150</width>
 								<height>40</height>
 								<font>font12</font>
 								<aligny>center</aligny>
@@ -252,7 +275,7 @@
 							<control type="label">
 								<left>240</left>
 								<top>0</top>
-								<width>290</width>
+								<width>200</width>
 								<height>40</height>
 								<font>font12</font>
 								<aligny>center</aligny>
@@ -260,14 +283,24 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>600</left>
+								<left>480</left>
 								<top>0</top>
-								<width>400</width>
+								<width>250</width>
 								<height>40</height>
 								<font>font12</font>
 								<aligny>center</aligny>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Date</info>
+							</control>
+							<control type="label">
+								<left>770</left>
+								<top>0</top>
+								<width>180</width>
+								<height>40</height>
+								<font>font12</font>
+								<aligny>center</aligny>
+								<selectedcolor>selected</selectedcolor>
+								<info>ListItem.Timertype</info>
 							</control>
 							<control type="label">
 								<left>980</left>
@@ -286,7 +319,7 @@
 					<left>1105</left>
 					<top>50</top>
 					<width>25</width>
-					<height>480</height>
+					<height>330</height>
 					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -299,9 +332,77 @@
 				</control>
 				<control type="image">
 					<description>separator image</description>
-					<left>55</left>
+					<left>0</left>
+					<top>390</top>
+					<width>1100</width>
+					<height>1</height>
+					<colordiffuse>88FFFFFF</colordiffuse>
+					<texture>separator2.png</texture>
+				</control>
+				<control type="group">
+					<visible>!ListItem.HasEPG</visible>
+					<left>0</left>
+					<top>400</top>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>1100</width>
+						<height>20</height>
+						<label>$LOCALIZE[19055]</label>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<align>center</align>
+					</control>
+				</control>
+				<control type="group">
+					<visible>ListItem.HasEPG</visible>
+					<left>0</left>
+					<top>400</top>
+					<control type="image">
+						<left>62</left>
+						<top>6</top>
+						<width>130</width>
+						<height>130</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<left>280</left>
+						<top>0</top>
+						<width>800</width>
+						<height>20</height>
+						<label>[B]$INFO[ListItem.EpgEventTitle]$INFO[ListItem.EpisodeName, (,)][/B]</label>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<left>280</left>
+						<top>25</top>
+						<width>800</width>
+						<height>20</height>
+						<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Season, • $LOCALIZE[20373] ]$INFO[ListItem.Episode, • $LOCALIZE[20359] ]$INFO[ListItem.Genre, • ]</label>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="textbox">
+						<description>Plot value</description>
+						<left>280</left>
+						<top>57</top>
+						<width>800</width>
+						<height>63</height>
+						<font>font12</font>
+						<align>justify</align>
+						<textcolor>grey</textcolor>
+						<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
+						<label>$INFO[ListItem.Plot]</label>
+					</control>
+				</control>
+				<control type="image">
+					<description>separator image</description>
+					<left>0</left>
 					<top>540</top>
-					<width>1010</width>
+					<width>1100</width>
 					<height>1</height>
 					<colordiffuse>88FFFFFF</colordiffuse>
 					<texture>separator2.png</texture>
@@ -322,6 +423,7 @@
 				</control>
 			</control>
 			<control type="label">
+				<depth>DepthFooter</depth>
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
 				<left>100</left>
@@ -338,7 +440,10 @@
 				<visible>[!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)] + !Skin.HasSetting(HidePageCountInfo)</visible>
 			</control>
 		</control>
-		<include>CommonNowPlaying</include>
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<include>CommonNowPlaying</include>
+		</control>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
@@ -352,6 +457,5 @@
 			<visible>Window.IsActive(FileBrowser) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGroupManager) | Window.IsActive(PVRGuideSearch)</visible>
 		</control>
 		<include>PVRSideBlade</include>
-		<include>Clock</include>
 	</controls>
 </window>

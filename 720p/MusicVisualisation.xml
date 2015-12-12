@@ -29,11 +29,11 @@
 		<!-- media infos -->
 		<control type="group">
 			<animation effect="fade" time="150">VisibleChange</animation>
-			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
 			<control type="image">
-				<left>0</left>
+				<left>-20</left>
 				<top>-150</top>
-				<width>1280</width>
+				<width>1320</width>
 				<height>256</height>
 				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
 				<visible>!Skin.String(MusicOSDInfo,never)</visible>
@@ -42,16 +42,16 @@
 			<include condition="!Skin.String(MusicOSDInfo,never)">Clock</include>
 			<include condition="!Skin.String(MusicOSDInfo,never)">Date</include>
 			<control type="image">
-				<left>0</left>
+				<left>-20</left>
 				<top>230r</top>
-				<width>1280</width>
+				<width>1320</width>
 				<height>230</height>
 				<texture border="1">HomeNowPlayingBack.png</texture>
 				<visible>!Skin.String(MusicOSDInfo,never) | Window.IsActive(MusicOSD)</visible>
 				<animation effect="slide" end="0,60" time="0" tween="back" easing="out" condition="Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)" reversible="true">Conditional</animation>
 			</control>
 			<control type="group">
-				<visible>!Skin.String(MusicOSDInfo,never) + Skin.HasSetting(EnableCDArtWork) + !Player.IsInternetStream</visible>
+				<visible>!Skin.String(MusicOSDInfo,never) + Skin.HasSetting(EnableCDArtWork) + !Skin.HasSetting(HideMusicArtWorkOSD) + !Player.IsInternetStream</visible>
 				<left>10</left>
 				<top>265r</top>
 				<animation effect="slide" start="0,0" end="0,20" time="0" condition="!Skin.HasSetting(HidePopUpSeekBar) + Skin.HasSetting(HideNextSongsInfo)">Conditional</animation>
@@ -84,6 +84,7 @@
 				</control>
 			</control>
 			<control type="image">
+				<depth>DepthOSDPopout</depth>
 				<description>orig cover image</description>
 				<animation effect="slide" start="0,0" end="0,20" time="0" condition="!Skin.HasSetting(HidePopUpSeekBar) + Skin.HasSetting(HideNextSongsInfo)">Conditional</animation>
 				<left>10</left>
@@ -94,10 +95,11 @@
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
 				<bordersize>8</bordersize>
-				<visible>!Skin.String(MusicOSDInfo,never) + [!Skin.HasSetting(EnableCDArtWork) | Player.IsInternetStream]</visible>
+				<visible>!Skin.String(MusicOSDInfo,never) + !Skin.HasSetting(HideMusicArtWorkOSD) + [!Skin.HasSetting(EnableCDArtWork) | Player.IsInternetStream]</visible>
 			</control>
 			<control type="group">
 				<visible>!Skin.String(MusicOSDInfo,never)</visible>
+				<animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideMusicArtWorkOSD)" reversible="true">Conditional</animation>
 				<left>330</left>
 				<top>255r</top>
 				<control type="image">
@@ -107,7 +109,7 @@
 					<height>78</height>
 					<texture>$INFO[Player.FolderPath,,../logo.png]</texture>
 					<aspectratio aligny="bottom" align="left">keep</aspectratio>
-					<visible>IsEmpty(Skin.String(PhysicalMusicFolder))</visible>
+					<visible>IsEmpty(Skin.String(PhysicalMusicFolder)) + !Skin.HasSetting(HideMusicArtWorkOSD)</visible>
 					<visible>!Player.IsInternetStream</visible>
 				</control>
 				<control type="image">
@@ -117,7 +119,7 @@
 					<height>78</height>
 					<texture>$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist]/logo.png</texture>
 					<aspectratio aligny="bottom" align="left">keep</aspectratio>
-					<visible>!IsEmpty(Skin.String(PhysicalMusicFolder))</visible>
+					<visible>!IsEmpty(Skin.String(PhysicalMusicFolder)) + !Skin.HasSetting(HideMusicArtWorkOSD)</visible>
 				</control>
 				<control type="label" id="1">
 					<description>Artist label</description>
@@ -150,6 +152,7 @@
 					<height>35</height>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
+					<visible>!system.getbool(audiooutput.dspaddonsenabled)</visible>
 					<control type="label">
 						<width min="10" max="700">auto</width>
 						<height>30</height>
@@ -166,6 +169,73 @@
 						<height>35</height>
 						<aspectratio align="right">keep</aspectratio>
 						<texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
+						<visible>!Player.ChannelPreviewActive</visible>
+					</control>
+					<control type="group">
+						<description>Rating</description>
+						<width>110</width>
+						<height>35</height>
+						<control type="image">
+							<description>rating back</description>
+							<left>0</left>
+							<top>0</top>
+							<width>110</width>
+							<height>35</height>
+							<aspectratio align="left">stretch</aspectratio>
+							<texture border="5">flagging/blank.png</texture>
+						</control>
+						<control type="image">
+							<description>Rating</description>
+							<left>5</left>
+							<top>0</top>
+							<width>100</width>
+							<height>35</height>
+							<aspectratio align="center">keep</aspectratio>
+							<texture fallback="LeftRating/rating0.png">$INFO[Player.StarRating,LeftRating/]</texture>
+						</control>
+					</control>
+				</control>
+				<control type="grouplist">
+					<left>20</left>
+					<top>60</top>
+					<width>910</width>
+					<height>35</height>
+					<itemgap>5</itemgap>
+					<orientation>horizontal</orientation>
+					<visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
+					<control type="label">
+						<width min="10" max="620">auto</width>
+						<height>30</height>
+						<font>font30</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Player.Title]</label>
+						<textcolor>orange</textcolor>
+						<scroll>true</scroll>
+					</control>
+					<control type="image">
+						<description>ADSP Master Mode Image</description>
+						<width>80</width>
+						<height>35</height>
+						<aspectratio align="right">keep</aspectratio>
+						<visible>![IsEmpty(ADSP.MasterOwnIcon) | Player.ChannelPreviewActive]</visible>
+						<texture>$INFO[ADSP.MasterOwnIcon]</texture>
+					</control>
+					<control type="image">
+						<description>Audio Codec Image</description>
+						<width>80</width>
+						<height>35</height>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>IsEmpty(ADSP.MasterOverrideIcon) + !Player.ChannelPreviewActive</visible>
+						<texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
+					</control>
+					<control type="image">
+						<description>ADSP Audio Codec Override Image</description>
+						<width>80</width>
+						<height>35</height>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>![IsEmpty(ADSP.MasterOwnIcon) | Player.ChannelPreviewActive]</visible>
+						<texture>$INFO[ADSP.MasterOverrideIcon]</texture>
 					</control>
 					<control type="group">
 						<description>Rating</description>
@@ -262,14 +332,15 @@
 				</control>
 				<visible>IntegerGreaterThan(Player.time,0)</visible>
 				<visible>!Skin.String(MusicOSDInfo,never) | Window.IsActive(MusicOSD)</visible>
-				<animation effect="slide" end="-150,0" time="0" tween="back" easing="out" condition="Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)" reversible="true">Conditional</animation>
+				<animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideMusicArtWorkOSD) | [Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)]" reversible="true">Conditional</animation>
 			</control>
 		</control>
 		<!-- codec & viz infos -->
 		<control type="group" id="0">
+			<depth>DepthOSD+</depth>
 			<left>0</left>
 			<top>50</top>
-			<visible>Player.ShowCodec + ![Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
+			<visible>Player.ShowCodec + ![Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<control type="image">
 				<description>media info background image</description>
@@ -339,7 +410,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[MainColorOne]</textcolor>
 				</control>
 				<control type="label">
 					<description>Backend</description>

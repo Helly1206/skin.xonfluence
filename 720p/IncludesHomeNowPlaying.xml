@@ -71,7 +71,7 @@
 				<posy>310</posy>
 				<height>30</height>
 				<width>300</width>
-				<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+				<label>$INFO[Player.Time][COLOR=$VAR[MainColorOne]] / [/COLOR]$INFO[Player.Duration]</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -125,7 +125,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[MainColorOne]</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
@@ -147,7 +147,7 @@
 					<posy>50</posy>
 					<height>25</height>
 					<width>800</width>
-					<label>$INFO[PVR.NextRecordingTitle][COLOR=grey]$INFO[PVR.NextRecordingChannel, - [COLOR=blue]([/COLOR],[COLOR=blue])[/COLOR]][/COLOR]</label>
+					<label>$INFO[PVR.NextRecordingTitle][COLOR=grey] - [/COLOR][COLOR=$VAR[MainColorOne]]([/COLOR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR][COLOR=$VAR[MainColorOne]])[/COLOR]</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -192,7 +192,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[MainColorOne]</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
@@ -214,7 +214,7 @@
 					<posy>50</posy>
 					<height>30</height>
 					<width>800</width>
-					<label>$INFO[PVR.NowRecordingTitle][COLOR=grey]$INFO[PVR.NowRecordingChannel, - [COLOR=blue]([/COLOR],[COLOR=blue])[/COLOR]][/COLOR]</label>
+					<label>$INFO[PVR.NowRecordingTitle][COLOR=grey] - [/COLOR][COLOR=$VAR[MainColorOne]]([/COLOR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR][COLOR=$VAR[MainColorOne]])[/COLOR]</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -263,7 +263,7 @@
 					<posy>310</posy>
 					<height>30</height>
 					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+					<label>$INFO[Player.Time][COLOR=$VAR[MainColorOne]] / [/COLOR]$INFO[Player.Duration]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -316,7 +316,7 @@
 					<posy>310</posy>
 					<height>30</height>
 					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+					<label>$INFO[Player.Time][COLOR=$VAR[MainColorOne]] / [/COLOR]$INFO[Player.Duration]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -369,7 +369,7 @@
 					<posy>310</posy>
 					<height>30</height>
 					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+					<label>$INFO[Player.Time][COLOR=$VAR[MainColorOne]] / [/COLOR]$INFO[Player.Duration]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -422,7 +422,7 @@
 					<posy>310</posy>
 					<height>30</height>
 					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+					<label>$INFO[Player.Time][COLOR=$VAR[MainColorOne]] / [/COLOR]$INFO[Player.Duration]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>

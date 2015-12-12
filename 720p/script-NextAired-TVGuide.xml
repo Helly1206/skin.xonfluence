@@ -497,7 +497,7 @@
 		<include>BehindDialogFadeOut</include>
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
-			<left>-251</left>
+			<left>-250</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<left>0</left>
@@ -535,6 +535,7 @@
 					<onleft>ClearProperty(SideBladeOpen)</onleft>
 					<onright>200</onright>
 				</control>
+				<!-- include>CommonNowPlaying_Controls</include -->
 			</control>
 		</control>
 		<include>Clock</include>

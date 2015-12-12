@@ -89,6 +89,92 @@
 			<textcolor>grey</textcolor>
 			<scroll>true</scroll>
 		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(HidePopUpSeekBar)+ !Skin.HasSetting(Show_SlideShow_Paused)</visible>
+			<visible>SlideShow.IsPaused</visible>
+			<animation effect="slide" start="0,0" end="-100,0" time="0" condition="system.getbool(input.enablemouse)">conditional</animation>
+			<left>505r</left>
+			<top>-6</top>
+			<include>VisibleFadeEffect</include>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>150</width>
+				<height>70</height>
+				<colordiffuse>EEFFFFFF</colordiffuse>
+				<texture border="12">OverlayDialogBackground.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>Chapter Pos No</description>
+				<left>20</left>
+				<top>10</top>
+				<width>110</width>
+				<height>20</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>$VAR[MainColorOne]</textcolor>
+				<label>$LOCALIZE[21804]</label>
+				<!-- <visible>player.chaptercount</visible> -->
+			</control>
+			<control type="label" id="1">
+				<description>Chapter Pos No</description>
+				<left>20</left>
+				<top>30</top>
+				<width>110</width>
+				<height>20</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[Slideshow.SlideIndex]</label>
+				<!-- <visible>player.chaptercount</visible> -->
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(Show_SlideShow_Paused)</visible>
+			<visible>SlideShow.IsPaused</visible>
+			<animation effect="slide" start="0,0" end="185,665" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-100,0" time="0" condition="!Skin.HasSetting(HidePopUpSeekBar) + system.getbool(input.enablemouse)">conditional</animation>
+			<left>360r</left>
+			<top>-6</top>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>180</width>
+				<height>70</height>
+				<colordiffuse>EEFFFFFF</colordiffuse>
+				<texture border="12">OverlayDialogBackground.png</texture>
+				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
+			</control>
+			<control type="image">
+				<left>80</left>
+				<top>10</top>
+				<width>80</width>
+				<height>50</height>
+				<texture>OSDSeekFrame.png</texture>
+			</control>
+			<control type="image">
+				<left>101</left>
+				<top>14</top>
+				<width>40</width>
+				<height>40</height>
+				<texture>OSDPause.png</texture>
+			</control>
+			<control type="label">
+				<description>Paused Label</description>
+				<animation effect="slide" start="0,0" end="0,19" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
+				<left>20</left>
+				<top>7</top>
+				<width>240</width>
+				<height>20</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font10_title</font>
+				<textcolor>$VAR[MainColorOne]</textcolor>
+				<label>31043</label>
+			</control>
+		</control>
 		<control type="grouplist" id="100">
 			<left>625</left>
 			<top>60r</top>
@@ -104,7 +190,7 @@
 				<height>55</height>
 				<label>-</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPrevTrackFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPrevTrackFO.png</texturefocus>
 				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
 				<onclick>Action(PreviousPicture,SlideShow)</onclick>
 			</control>
@@ -113,10 +199,10 @@
 				<height>55</height>
 				<label>-</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPlayFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPlayFO.png</texturefocus>
 				<texturenofocus>OSDPlayNF.png</texturenofocus>
 				<usealttexture>!SlideShow.IsPaused + SlideShow.IsActive</usealttexture>
-				<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</alttexturefocus>
+				<alttexturefocus colordiffuse="$VAR[MainColorTwo]">OSDPauseFO.png</alttexturefocus>
 				<alttexturenofocus>OSDPauseNF.png</alttexturenofocus>
 				<onclick>Action(Pause,SlideShow)</onclick>
 			</control>
@@ -125,7 +211,7 @@
 				<height>55</height>
 				<label>-</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDNextTrackFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDNextTrackFO.png</texturefocus>
 				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 				<onclick>Action(NextPicture,SlideShow)</onclick>
 			</control>
@@ -134,7 +220,7 @@
 				<height>55</height>
 				<label>-</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRepeatFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRepeatFO.png</texturefocus>
 				<texturenofocus>OSDRepeatNF.png</texturenofocus>
 				<onclick>Action(Rotate,SlideShow)</onclick>
 			</control>
@@ -143,7 +229,7 @@
 				<height>55</height>
 				<label>-</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDZoomInFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDZoomInFO.png</texturefocus>
 				<texturenofocus>OSDZoomInNF.png</texturenofocus>
 				<onclick>Action(ZoomIn,SlideShow)</onclick>
 			</control>
@@ -152,7 +238,7 @@
 				<height>55</height>
 				<label>_</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDZoomOutFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDZoomOutFO.png</texturefocus>
 				<texturenofocus>OSDZoomOutNF.png</texturenofocus>
 				<onclick>Action(ZoomOut,SlideShow)</onclick>
 			</control>
@@ -161,7 +247,7 @@
 				<height>55</height>
 				<label>-</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDInfoFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDInfoFO.png</texturefocus>
 				<texturenofocus>OSDInfoNF.png</texturenofocus>
 				<onclick>Action(CodecInfo,SlideShow)</onclick>
 			</control>
@@ -189,7 +275,7 @@
 				<height>55</height>
 				<label>210</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolUpFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDVolUpFO.png</texturefocus>
 				<texturenofocus>OSDVolUpNF.png</texturenofocus>
 				<onclick>$VAR[VolumeStepUp]</onclick>
 				<onclick>VolumeUp</onclick>
@@ -200,7 +286,7 @@
 				<height>50</height>
 				<label>210</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolDownFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDVolDownFO.png</texturefocus>
 				<texturenofocus>OSDVolDownNF.png</texturenofocus>
 				<onclick>$VAR[VolumeStepDown]</onclick>
 				<onclick>VolumeDown</onclick>
@@ -211,7 +297,7 @@
 				<height>55</height>
 				<label>210</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPrevTrackFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPrevTrackFO.png</texturefocus>
 				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
 				<onclick>PlayerControl(Previous)</onclick>
 				<visible>!MusicPlayer.Content(LiveTV)</visible>
@@ -221,7 +307,7 @@
 				<height>55</height>
 				<label>31354</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRewindFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRewindFO.png</texturefocus>
 				<texturenofocus>OSDRewindNF.png</texturenofocus>
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
 				<onclick>PlayerControl(Rewind)</onclick>
@@ -233,10 +319,10 @@
 				<label>31351</label>
 				<altlabel>208</altlabel>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPauseFO.png</texturefocus>
 				<texturenofocus>OSDPauseNF.png</texturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-				<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDPlayFO.png</alttexturefocus>
+				<alttexturefocus colordiffuse="$VAR[MainColorTwo]">OSDPlayFO.png</alttexturefocus>
 				<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.PauseEnabled">Conditional</animation>
 				<onclick>PlayerControl(Play)</onclick>
@@ -247,7 +333,7 @@
 				<height>55</height>
 				<label>31352</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDStopFO.png</texturefocus>
 				<texturenofocus>OSDStopNF.png</texturenofocus>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
@@ -256,7 +342,7 @@
 				<height>55</height>
 				<label>31353</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDForwardFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDForwardFO.png</texturefocus>
 				<texturenofocus>OSDForwardNF.png</texturenofocus>
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
 				<onclick>PlayerControl(Forward)</onclick>
@@ -267,7 +353,7 @@
 				<height>55</height>
 				<label>209</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDNextTrackFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDNextTrackFO.png</texturefocus>
 				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 				<visible>!MusicPlayer.Content(LiveTV)</visible>
 				<onclick>PlayerControl(Next)</onclick>
