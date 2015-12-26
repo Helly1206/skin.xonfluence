@@ -442,7 +442,7 @@ msgstr "Ukrywaj etykiety mediów wczytane z nazw pliku [COLOR=grey3](Blu-ray, HD
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
-msgstr "Ukryj przyciski menu"
+msgstr "Ukrywaj przyciski menu"
 
 msgctxt "#31109"
 msgid "Enable custom background"
@@ -498,7 +498,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr ""
+msgstr "Ukrywaj przewodnik, gdy dostępne są informacje RDS"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -514,11 +514,11 @@ msgstr "Wyświetlaj wizualizację muzyki w tle interfejsu"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "Odtwarzaj motywy muzyczne w bibliotece wideo (dodatek TvTunes)"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "Dodatek TvTunes"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -692,9 +692,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Skróty"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "Wybierz swój utwór"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -789,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -1078,11 +1090,11 @@ msgstr "Fototapeta[CR][CR]niedostępna[CR][CR]Naciśnij przycisk, aby dodać"
 
 msgctxt "#31312"
 msgid "Current scraper"
-msgstr "Aktualny ekstraktor"
+msgstr "Aktualny dostawca"
 
 msgctxt "#31313"
 msgid "Choose a scraper"
-msgstr "Wybierz ekstraktor"
+msgstr "Wybierz dostawcę"
 
 msgctxt "#31314"
 msgid "Content scanning options"
@@ -1394,7 +1406,7 @@ msgstr "[B]KONFIGURACJA WIDEO[/B][CR][CR]Biblioteka wideo · Odtwarzanie · Akce
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
+msgstr "[B]KONFIGURACJA MUZYKI[/B][CR][CR]Biblioteka muzyki · Odtwarzanie · Listy utworów · CD-Audio"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"

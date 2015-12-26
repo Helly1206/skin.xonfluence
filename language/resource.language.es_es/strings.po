@@ -498,7 +498,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr ""
+msgstr "Ocultar EPG si EDS está presente en la ventana del canal"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -514,11 +514,11 @@ msgstr "Mostrar de fondo la visualización \"Ahora reproduciendo\""
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "Reproducir sintonías en la colección de vídeo (complemento TvTunes)"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "TvTunes"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -692,9 +692,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Accesos directos"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "Elige tu canción"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -789,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -1394,7 +1406,7 @@ msgstr "[B]Configura las opciones de VÍDEO[/B][CR][CR]Administra tu colección 
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
+msgstr "[B]Configura las opciones de MÚSICA[/B][CR][CR]Administra tu colección de música · Ajusta reproducción de música · Cambia opciones de listas de música[CR]Configura sumisión de canciones"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"

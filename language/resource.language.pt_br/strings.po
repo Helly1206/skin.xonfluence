@@ -498,7 +498,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr ""
+msgstr "Esconder EPG se RDS está presente na janela do canal"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -514,11 +514,11 @@ msgstr "Apresentar visualização de fundo em \\\"Agora reproduzindo\\\""
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "Reproduzir música tema do seriado na biblioteca de vídeo (add-on TvTunes)"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "TvTunes"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -692,9 +692,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Atalhos"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "Escolha sua música"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -789,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -1394,7 +1406,7 @@ msgstr "[B]AJUSTES DE VÍDEO[/B][CR][CR]Gerencie sua coleção de vídeos · Def
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
+msgstr "[B]AJUSTES DE MÚSICAS[/B][CR][CR]Gerencie sua coleção de músicas · Defina opções de execução de música[CR]Altere opções de listagem de música · Configure submissão de música"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
@@ -1638,7 +1650,7 @@ msgstr "Renomear grupo"
 
 msgctxt "#31505"
 msgid "Delete group"
-msgstr "Deletar gurpo"
+msgstr "Deletar grupo"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"

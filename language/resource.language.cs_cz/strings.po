@@ -498,7 +498,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr ""
+msgstr "Schovat EPG jestliže je RDS zobrazeno v okně kanálu"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -514,11 +514,11 @@ msgstr "Zobrazit právě přehrávanou vizualizaci na pozadí"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "Přehrát znělky v knihovně videí (doplněk TvTunes)"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "TvTunes"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -692,9 +692,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Zkratky"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "Vyberte Vaši skladbu"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -789,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -1394,7 +1406,7 @@ msgstr "[B]NASTAVENÍ MOŽNOSTÍ VIDEA[/B][CR][CR]Správa knihovny videí · Mo�
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
+msgstr "[B]NASTAVENÍ MOŽNOSTÍ HUDBY[/B][CR][CR]Správa knihovny hudby · Možnosti přehrávání hudby · Možnosti zobrazení hudebních souborů[CR] Nastavení služby odesílání informací o přehrávaných skladbách "
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
@@ -1908,7 +1920,7 @@ msgstr "OBRÁZKY"
 
 msgctxt "#31952"
 msgid "TV"
-msgstr "Televize"
+msgstr "TELEVIZE"
 
 msgctxt "#31953"
 msgid "VIDEOS"

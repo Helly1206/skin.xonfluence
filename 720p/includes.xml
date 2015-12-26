@@ -334,7 +334,7 @@
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>40</height>
 		<width>170</width>
-		<textoffsetx>20</textoffsetx>
+		<textoffsetx>5</textoffsetx>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font12_title</font>
@@ -2080,6 +2080,8 @@
 		<param name="Control" default="9000" />
 		<param name="Up" default="900" />
 		<param name="Down" default="901" />
+		<param name="Left" default="9000" />
+		<param name="Right" default="800" />
 		<definition>
 			<control type="group" id="$PARAM[Id]">
 				<control type="button" id="8001">
@@ -2091,7 +2093,7 @@
 					<texturenofocus>scroll-down-2.png</texturenofocus>
 					<texturefocus>scroll-down-focus-2.png</texturefocus>
 					<onclick>Control.Move($PARAM[Control],1)</onclick>
-					<onleft>9000</onleft>
+					<onleft>$PARAM[Left]</onleft>
 					<onright>8002</onright>
 					<onup>$PARAM[Up]</onup>
 					<ondown>$PARAM[Down]</ondown>
@@ -2106,7 +2108,7 @@
 					<texturefocus>scroll-up-focus-2.png</texturefocus>
 					<onclick>Control.Move($PARAM[Control],-1)</onclick>
 					<onleft>8001</onleft>
-					<onright>800</onright>
+					<onright>$PARAM[Right]</onright>
 					<onup>$PARAM[Up]</onup>
 					<ondown>$PARAM[Down]</ondown>
 				</control>

@@ -130,7 +130,7 @@ msgstr "Sted"
 
 msgctxt "#31028"
 msgid "Poster wrap"
-msgstr ""
+msgstr "Plakatsvøpe"
 
 msgctxt "#31029"
 msgid "Fanart"
@@ -146,7 +146,7 @@ msgstr "Bildeminiatyrer"
 
 msgctxt "#31032"
 msgid "Image wrap"
-msgstr ""
+msgstr "Bildesvøpe"
 
 msgctxt "#31033"
 msgid "Info"
@@ -514,11 +514,11 @@ msgstr "Vis «spilles nå» bakgrunnen i visualisering"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "Spill av kjenningsmelodier i videobiblioteket (TvTunes-utvidelse)"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "TvTunes"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -692,9 +692,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Snarveier"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "Velg din låt"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -789,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -1398,11 +1410,11 @@ msgstr ""
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
-msgstr ""
+msgstr "[B]KONFIGURER BILDE INSTILLINGER[/B][CR][CR]Forandre bilde opplistings alternativer · Konfigurer bildefremvisning"
 
 msgctxt "#31404"
 msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set various cities to collect weather information"
-msgstr ""
+msgstr "[B]KONFIGURER VÆR INSTILLINGER[/B][CR][CR]Skriv inn hvilke byer informasjon skal vises for"
 
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
@@ -1414,7 +1426,7 @@ msgstr ""
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed add-ons · Browse for and install add-ons from kodi.tv[CR]Modify add-on settings"
-msgstr ""
+msgstr "[B]KONFIGURER UTVIDELSER[/B][CR][CR]Håndter dine installerte utvidelser · Se etter og installer utvidelser fra kodi.tv[CR]Forandre utvidelses innstillinger"
 
 msgctxt "#31409"
 msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
@@ -1430,7 +1442,7 @@ msgstr "Førstegangsintroduksjon..."
 
 msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
-msgstr ""
+msgstr "Denne fanen viser at det er en meny på siden av vinduet om inneholder ekstra alternativer for denne avdelingen. For å få åpne menyen, trykk til venstre med fjernkontrollen, tastaturet eller plaser musepekeren over fanen. [CR][CR]Trykk \"OK\" for å lukke denne ruten. Den vil ikke vises igjen."
 
 msgctxt "#31413"
 msgid "Local subtitle available"

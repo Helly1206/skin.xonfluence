@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">9090</defaultcontrol>
+    <controls>
+        <control type="group">
+			<animation effect="slide" start="0,0" end="-300,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-50,0" end="0,0" time="225" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<left>-20</left>
+				<top>0</top>
+				<width>280</width>
+				<height>720</height>
+				<texture border="0,0,10,0">MediaBladeSub.png</texture>
+			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<left>40</left>
+				<top>10</top>
+				<width>150</width>
+				<height>55</height>
+				<aspectratio>keep</aspectratio>
+				<texture>Xonfluence_Logo.png</texture>
+			</control>
+            <control type="panel" id="9090">
+                <left>15</left>
+                <top>60</top>
+                <width>208</width>
+                <height>300</height>
+                <onleft>9090</onleft>
+                <onright>Action(Close)</onright>
+                <onup condition="IntegerGreaterThan(Container(9091).NumItems,0)">Control.SetFocus(9091,999)</onup>
+                <ondown condition="IntegerGreaterThan(Container(9091).NumItems,0)">Control.SetFocus(9091,0)</ondown>
+                <onback>noop</onback>
+                <orientation>vertical</orientation>
+                <scrolltime tween="quadratic" easing="out">200</scrolltime>
+                <itemlayout height="55" width="60">
+                    <control type="image">
+                        <left>0</left>
+                        <top>14</top>
+                        <width>60</width>
+                        <height>55</height>
+                        <texture border="5">KeyboardKeyNF.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>4</top>
+                        <width>60</width>
+                        <height>55</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>19</top>
+                        <width>60</width>
+                        <height>55</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font10</font>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="110" width="120">
+                    <control type="image">
+                        <left>0</left>
+                        <top>14</top>
+                        <width>60</width>
+                        <height>55</height>
+                        <texture colordiffuse="$VAR[MainColorOne]" border="5">KeyboardKey.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>4</top>
+                        <width>60</width>
+                        <height>55</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>19</top>
+                        <width>60</width>
+                        <height>55</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font10</font>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="list" id="9091">
+                <left>15</left>
+                <top>400</top>
+                <width>200</width>
+                <height>300</height>
+                <onleft>9091</onleft>
+                <onright>Action(Close)</onright>
+                <onup>9090</onup>
+                <ondown>9090</ondown>
+                <onback>noop</onback>
+                <orientation>vertical</orientation>
+                <scrolltime tween="quadratic" easing="out">200</scrolltime>
+                <itemlayout height="30" width="200">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>200</width>
+                        <height>30</height>
+                        <texture border="5">KeyboardKeyNF.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>10</left>
+                        <top>2</top>
+                        <width>180</width>
+                        <height>26</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="30" width="200">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>200</width>
+                        <height>30</height>
+                        <texture border="5">KeyboardKeyNF.png</texture>
+                        <visible>!Control.HasFocus(9091)</visible>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>200</width>
+                        <height>30</height>
+                        <texture colordiffuse="$VAR[MainColorOne]" border="5">KeyboardKey.png</texture>
+                        <visible>Control.HasFocus(9091)</visible>
+                    </control>
+                    <control type="label">
+                        <left>10</left>
+                        <top>2</top>
+                        <width>180</width>
+                        <height>26</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="label" id="600">
+                <left>15</left>
+                <top>350</top>
+                <width>200</width>
+                <height>40</height>
+                <align>center</align>
+                <textoffsetx>5</textoffsetx>
+                <textcolor>white</textcolor>
+                <scroll>true</scroll>
+                <scrollspeed>20</scrollspeed>
+            </control>
+        </control>
+    </controls>
+</window>

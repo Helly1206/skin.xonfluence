@@ -19,6 +19,10 @@
 - Updated picture OSD
 - Disappearing home screen arrow buttons when not focused for all home screen widgets #319
 - Added option to hide text label in Wide view #276
+- Added xonfluence skin for script.extendedinfo and added button to videoinfo
+- Open PVRSideBlade on guide grid view when pressing info button
+- Added possibility to add Custom widgets by entering the complete plugin item #339 (2nd emample)
+  e.g. Skin settings/Home menu items/Widget set/Custom widgets/ enter the new label: plugin://plugin.video.genesis/?action=movies&url=popular
 
 [B]3.1.6[/B]
 - Align buttons correctly in OSD when no video artwork enabled #195

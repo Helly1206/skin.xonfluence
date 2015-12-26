@@ -18,7 +18,7 @@ msgstr ""
 
 msgctxt "#31000"
 msgid "Change your"
-msgstr ""
+msgstr "修改你的"
 
 msgctxt "#31001"
 msgid ":"
@@ -30,7 +30,7 @@ msgstr ""
 
 msgctxt "#31003"
 msgid "Power options"
-msgstr ""
+msgstr "電源選項"
 
 msgctxt "#31004"
 msgid "Working..."
@@ -38,7 +38,7 @@ msgstr "處理中..."
 
 msgctxt "#31005"
 msgid "Hide information"
-msgstr ""
+msgstr "隱藏資訊"
 
 msgctxt "#31006"
 msgid "View options"
@@ -54,7 +54,7 @@ msgstr "全螢幕"
 
 msgctxt "#31009"
 msgid "Total duration"
-msgstr ""
+msgstr "總計時間"
 
 msgctxt "#31010"
 msgid "OpenELEC OS"
@@ -122,7 +122,7 @@ msgstr "個項目"
 
 msgctxt "#31026"
 msgid "Misc options"
-msgstr ""
+msgstr "其他選項"
 
 msgctxt "#31027"
 msgid "Location"
@@ -130,7 +130,7 @@ msgstr "位置"
 
 msgctxt "#31028"
 msgid "Poster wrap"
-msgstr ""
+msgstr "海報捲動"
 
 msgctxt "#31029"
 msgid "Fanart"
@@ -142,11 +142,11 @@ msgstr ""
 
 msgctxt "#31031"
 msgid "Pic thumbs"
-msgstr ""
+msgstr "圖片縮圖"
 
 msgctxt "#31032"
 msgid "Image wrap"
-msgstr ""
+msgstr "圖片捲動"
 
 msgctxt "#31033"
 msgid "Info"
@@ -178,7 +178,7 @@ msgstr "動作"
 
 msgctxt "#31040"
 msgid "Now playing"
-msgstr ""
+msgstr "現正播放"
 
 msgctxt "#31041"
 msgid "UPnP error"
@@ -186,7 +186,7 @@ msgstr ""
 
 msgctxt "#31042"
 msgid "PLAYING"
-msgstr "正在播放"
+msgstr "播放中"
 
 msgctxt "#31043"
 msgid "PAUSED"
@@ -206,7 +206,7 @@ msgstr "查找"
 
 msgctxt "#31048"
 msgid "Visualisation presets"
-msgstr ""
+msgstr "視覺效果預設值"
 
 msgctxt "#31049"
 msgid "End time"
@@ -254,7 +254,7 @@ msgstr "這個檔案已堆疊，請選擇您要從哪個部分開始播放。"
 
 msgctxt "#31061"
 msgid "Current selected"
-msgstr ""
+msgstr "目前所選"
 
 msgctxt "#31062"
 msgid "Episode backdrop"
@@ -422,11 +422,11 @@ msgstr "背景"
 
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slideshow"
-msgstr ""
+msgstr "在圖片幻燈片秀中顯示\"已暫停\"狀態"
 
 msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
-msgstr ""
+msgstr "在視窗中播放預告片[COLOR=grey3](只在影片資訊對話框中)[/COLOR]"
 
 msgctxt "#31105"
 msgid "Artwork"
@@ -438,11 +438,11 @@ msgstr "其他選項"
 
 msgctxt "#31107"
 msgid "Hide flagging read from video filenames [COLOR=grey3](e.g. Blu-ray, HD-DVD)[/COLOR]"
-msgstr ""
+msgstr "隱藏影片檔案名稱的媒體標示 [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
-msgstr ""
+msgstr "隱藏主選單按鈕"
 
 msgctxt "#31109"
 msgid "Enable custom background"
@@ -474,19 +474,19 @@ msgstr ""
 
 msgctxt "#31116"
 msgid "Show recently added albums"
-msgstr ""
+msgstr "顯示最近加入的專輯"
 
 msgctxt "#31117"
 msgid "Show recently added videos"
-msgstr ""
+msgstr "顯示最近加入的影片"
 
 msgctxt "#31118"
 msgid "Home page programs submenu"
-msgstr ""
+msgstr "首頁程式子選單"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
-msgstr ""
+msgstr "隱藏背景 Fanart"
 
 msgctxt "#31120"
 msgid "Hide page count info"
@@ -498,7 +498,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr ""
+msgstr "如果該頻道畫面中有自帶RDS訊息，則不顯示電子節目表"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -506,19 +506,19 @@ msgstr ""
 
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr ""
+msgstr "在背景顯示正在播放的影片"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr ""
+msgstr "在背景顯示正在播放的視覺效果"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "在影片資料庫中播放電視主題曲（TvTunes 附加元件）"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "TvTunes"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -526,7 +526,7 @@ msgstr "歌詞"
 
 msgctxt "#31129"
 msgid "Hide fanart in full screen visualisation"
-msgstr ""
+msgstr "在全螢幕視覺效果中隱藏 Fanart"
 
 msgctxt "#31130"
 msgid "Hide favorites button"
@@ -538,7 +538,7 @@ msgstr ""
 
 msgctxt "#31132"
 msgid "Lyrics add-on"
-msgstr ""
+msgstr "歌詞附加元件"
 
 msgctxt "#31133"
 msgid "Minimize on exit button"
@@ -546,15 +546,15 @@ msgstr ""
 
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
-msgstr ""
+msgstr "首頁影片子選單"
 
 msgctxt "#31135"
 msgid "Home page \"Music\" submenu"
-msgstr ""
+msgstr "首頁音樂子選單"
 
 msgctxt "#31136"
 msgid "Home page \"Pictures\" submenu"
-msgstr ""
+msgstr "首頁圖片子選單"
 
 msgctxt "#31137"
 msgid "Enable low main menu bar"
@@ -692,13 +692,25 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "捷徑"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
+msgstr "選擇你的歌曲"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
 msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
-msgstr ""
+msgstr "歌詞來源"
 
 msgctxt "#31206"
 msgid "Found"
@@ -706,11 +718,11 @@ msgstr "已找到"
 
 msgctxt "#31207"
 msgid "Find more items"
-msgstr ""
+msgstr "尋找更多項目"
 
 msgctxt "#31208"
 msgid "Upcoming episodes"
-msgstr ""
+msgstr "劇集預告"
 
 msgctxt "#31209"
 msgid "Global search"
@@ -789,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -1030,11 +1042,11 @@ msgstr ""
 
 msgctxt "#31300"
 msgid "Current temperature"
-msgstr ""
+msgstr "現在溫度"
 
 msgctxt "#31301"
 msgid "Last updated"
-msgstr ""
+msgstr "最後更新"
 
 msgctxt "#31302"
 msgid "Outlook - "
@@ -1058,19 +1070,19 @@ msgstr ""
 
 msgctxt "#31307"
 msgid "Hide fanart"
-msgstr ""
+msgstr "隱藏 Fanart"
 
 msgctxt "#31308"
 msgid "Movie details"
-msgstr ""
+msgstr "電影詳細資訊"
 
 msgctxt "#31309"
 msgid "Memory used:"
-msgstr ""
+msgstr "已使用記憶體："
 
 msgctxt "#31310"
 msgid "Track number"
-msgstr ""
+msgstr "音軌編號"
 
 msgctxt "#31311"
 msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
@@ -1078,15 +1090,15 @@ msgstr "無法取得[CR][CR]Fanart 圖片[CR][CR] 請點擊按鈕來設定"
 
 msgctxt "#31312"
 msgid "Current scraper"
-msgstr ""
+msgstr "目前的站台"
 
 msgctxt "#31313"
 msgid "Choose a scraper"
-msgstr ""
+msgstr "選擇一個站台"
 
 msgctxt "#31314"
 msgid "Content scanning options"
-msgstr ""
+msgstr "內容掃描選項"
 
 msgctxt "#31315"
 msgid "Submenu item"
@@ -1098,7 +1110,7 @@ msgstr ""
 
 msgctxt "#31317"
 msgid "Set fanart path"
-msgstr ""
+msgstr "設定 Fanart 路徑"
 
 msgctxt "#31318"
 msgid "Up one level"
@@ -1106,11 +1118,11 @@ msgstr ""
 
 msgctxt "#31319"
 msgid "Selected profile"
-msgstr ""
+msgstr "選擇的設定檔"
 
 msgctxt "#31320"
 msgid "Last logged in"
-msgstr ""
+msgstr "上次登入在"
 
 msgctxt "#31321"
 msgid "Library mode"
@@ -1130,7 +1142,7 @@ msgstr ""
 
 msgctxt "#31325"
 msgid "Playlist options"
-msgstr ""
+msgstr "播放清單選項"
 
 msgctxt "#31326"
 msgid "Created"
@@ -1142,7 +1154,7 @@ msgstr "解析度"
 
 msgctxt "#31328"
 msgid "Recently added"
-msgstr ""
+msgstr "最近加入的"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
@@ -1150,11 +1162,11 @@ msgstr "[B]計時器啟動！[/B] [COLOR=grey2] - 系統將自動關機於：[/C
 
 msgctxt "#31330"
 msgid "Click button to play[CR][CR]movie trailer"
-msgstr ""
+msgstr "點擊按鈕播放[CR][CR]電影預告片"
 
 msgctxt "#31331"
 msgid "Album details"
-msgstr ""
+msgstr "專輯詳細資訊"
 
 msgctxt "#31332"
 msgid "Alternate fanArt"
@@ -1226,7 +1238,7 @@ msgstr "停止"
 
 msgctxt "#31353"
 msgid "Fast forward"
-msgstr ""
+msgstr "快轉"
 
 msgctxt "#31354"
 msgid "Rewind"
@@ -1238,7 +1250,7 @@ msgstr "電影選單"
 
 msgctxt "#31356"
 msgid "Download subtitles"
-msgstr ""
+msgstr "下載字幕"
 
 msgctxt "#31359"
 msgid "User video OSD button"
@@ -1354,7 +1366,7 @@ msgstr "主題預設"
 
 msgctxt "#31391"
 msgid "Skin default with no caps"
-msgstr ""
+msgstr "佈景主題預設（沒有開頭大寫）"
 
 msgctxt "#31392"
 msgid "Arial based"
@@ -1394,15 +1406,15 @@ msgstr "[B]配置視訊設定[/B][CR][CR]管理你的音樂資料庫 · 設定�
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
+msgstr "[B]配置設定[/B][CR][CR]管理你的音樂資料庫 · 設定音樂播放選項 · 修改音樂清單選項[CR]設定歌曲提交"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
-msgstr ""
+msgstr "[B]配置圖片設定[/B][CR][CR]設定圖片清單選項 · 設定幻燈片秀"
 
 msgctxt "#31404"
 msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set various cities to collect weather information"
-msgstr ""
+msgstr "[B]配置天氣設定[/B][CR][CR]設定幾個要收集天氣資料的城市"
 
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
@@ -1414,7 +1426,7 @@ msgstr ""
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed add-ons · Browse for and install add-ons from kodi.tv[CR]Modify add-on settings"
-msgstr ""
+msgstr "[B]配置附加元件[/B][CR][CR]管理已安裝的附加元件 · 從 kodi.tv 瀏覽並安裝附加元件[CR]修改附加元件設定"
 
 msgctxt "#31409"
 msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
@@ -1426,11 +1438,11 @@ msgstr "[B]配置服務設定[/B][CR][CR]設定透過 UPnP 和 HTTP 控製 Kodi 
 
 msgctxt "#31411"
 msgid "First run help..."
-msgstr ""
+msgstr "第一次使用說明..."
 
 msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
-msgstr ""
+msgstr "這個標籤表示這個部分在視窗的側邊有提供額外選項的選單。你可以使用遙控器或鍵盤的左鍵或者是將滑鼠指標移動到這個標籤的範圍來存取這個選單。[CR][CR]按一下\"Ok\" 可以關閉這個對話框。它不會再出現。"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
@@ -1446,7 +1458,7 @@ msgstr "登入"
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr ""
+msgstr "選擇您的 Kodi 使用者設定檔[CR]登入並繼續"
 
 msgctxt "#31422"
 msgid "Show or hide the login screen at startup."
@@ -1622,7 +1634,7 @@ msgstr ""
 
 msgctxt "#31501"
 msgid "Scheduled time"
-msgstr ""
+msgstr "已排程的時間"
 
 msgctxt "#31502"
 msgid "TV"
@@ -1630,15 +1642,15 @@ msgstr "電視"
 
 msgctxt "#31503"
 msgid "Add group"
-msgstr ""
+msgstr "新增群組"
 
 msgctxt "#31504"
 msgid "Rename group"
-msgstr ""
+msgstr "重新命名群組"
 
 msgctxt "#31505"
 msgid "Delete group"
-msgstr ""
+msgstr "刪除群組"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"
@@ -1646,15 +1658,15 @@ msgstr "可用的[CR]群組"
 
 msgctxt "#31509"
 msgid "Channel group"
-msgstr ""
+msgstr "頻道群組"
 
 msgctxt "#31510"
 msgid "Timer set"
-msgstr ""
+msgstr "計時器設定"
 
 msgctxt "#31511"
 msgid "Channel options"
-msgstr ""
+msgstr "頻道選項"
 
 msgctxt "#31600"
 msgid "Transcoding settings"
@@ -1770,19 +1782,19 @@ msgstr ""
 
 msgctxt "#31901"
 msgid "36-hour forecast"
-msgstr ""
+msgstr "36小時預報"
 
 msgctxt "#31902"
 msgid "Hourly forecast"
-msgstr ""
+msgstr "每小時預報"
 
 msgctxt "#31903"
 msgid "Weekend forecast"
-msgstr ""
+msgstr "一週預報"
 
 msgctxt "#31904"
 msgid "Daily forecast"
-msgstr ""
+msgstr "每日氣象預測"
 
 msgctxt "#31905"
 msgid "Forecast"
@@ -1790,7 +1802,7 @@ msgstr "預報"
 
 msgctxt "#31908"
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "降雨機率"
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."

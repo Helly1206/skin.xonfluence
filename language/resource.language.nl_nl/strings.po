@@ -450,7 +450,7 @@ msgstr "Gebruik achtergrond naar keuze"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr "Achtergrond map:"
+msgstr "Achtergrond locatie:"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -498,7 +498,7 @@ msgstr "Laat plot informatie op info scherm zien"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr "Verberg EPG als RDS aanwezig is op kanaal scherm"
+msgstr "Verberg EPG wanneer RDS aanwezig is op kanaalvenster"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -692,9 +692,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Snelkoppelingen"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr "Aangepaste widgets"
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr "Aangepast"
+
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "Kies je lied"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr "UitgebreideInfo"
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -789,7 +801,7 @@ msgid "HD-movies"
 msgstr "HD-films"
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr "Niet bekeken films"
 
 msgctxt "#31229"
@@ -1098,7 +1110,7 @@ msgstr "Selecteer add-on instelling"
 
 msgctxt "#31317"
 msgid "Set fanart path"
-msgstr "Instellen Fanart map"
+msgstr "Instellen Fanart locatie"
 
 msgctxt "#31318"
 msgid "Up one level"
@@ -1394,7 +1406,7 @@ msgstr "[B]VIDEO-INSTELLINGEN CONFIGUREREN[/B][CR][CR]Beheer uw videobibliotheek
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr "[B]MUZIEKINSTELLINGEN CONFIGUREREN[/B][CR][CR]Beheer uw muziekbibliotheek · Configureer muziekafspeelopties en -bestandslijstopties · Configureer nummer indienen"
+msgstr "[B]CONFIGUREER MUZIEKINSTELLINGEN[/B][CR][CR]Beheer uw muziekbibliotheek · Instellen muziek afspeel opties · Verander muzieklijsten opties[CR]Instellen nummer indiening "
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
@@ -1991,3 +2003,4 @@ msgstr "Recent toegevoegd"
 msgctxt "#31999"
 msgid "Resolution"
 msgstr "Resolutie"
+

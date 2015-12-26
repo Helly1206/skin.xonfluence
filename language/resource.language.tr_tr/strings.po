@@ -422,7 +422,7 @@ msgstr "Arka Plan"
 
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slideshow"
-msgstr "Resim slayt gösterisinde \"Duraklatıldı\"yı göster"
+msgstr "Resim slayt gösterisinde \"Duraklatıldı\" mesajını göster"
 
 msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
@@ -498,7 +498,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr ""
+msgstr "Eğer kanal penceresinde RDS varsa EPG'yi gizle"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -506,19 +506,19 @@ msgstr ""
 
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "\"Video oynatılıyorken\" arka planı göster"
+msgstr "Arkaplanda oynatılan videoyu göster"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr "\"Görsel efektler oynatılıyorken\" arka planı göster"
+msgstr "Arkaplanda görsel öğeyi göster"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "TV tema şarkılarını video kitaplığında çal (TvTunes eklentisi)"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "TvTunes"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -692,9 +692,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "Şarkını seç"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -789,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -1030,7 +1042,7 @@ msgstr ""
 
 msgctxt "#31300"
 msgid "Current temperature"
-msgstr "Sıcaklık"
+msgstr "Geçerli sıcaklık"
 
 msgctxt "#31301"
 msgid "Last updated"
@@ -1118,7 +1130,7 @@ msgstr ""
 
 msgctxt "#31322"
 msgid "Aired"
-msgstr "Gösterim"
+msgstr "Yayınlanma"
 
 msgctxt "#31323"
 msgid "Use banners"
@@ -1394,7 +1406,7 @@ msgstr "[B]VİDEO AYARLARINI YAPILANDIR[/B][CR][CR]Video kitaplığını yönet 
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
+msgstr "[B]MÜZİK AYARLARINI YAPILANDIR[/B][CR][CR]Müzik kitaplığını yönet · Müzik çalma seçeneklerini ayarla · Müzik listeleme seçeneklerini değiştir[CR]Şarkı sunumu ayarları"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"

@@ -962,9 +962,9 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>210</left>
+					<left>295</left>
 					<top>660</top>
-					<width>1030</width>
+					<width>860</width>
 					<height>40</height>
 					<itemgap>2</itemgap>
 					<align>center</align>
@@ -986,6 +986,14 @@
 						<description>Cast/Review</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>206</label>
+					</control>
+                    <control type="button" id="106">
+						<description>ExtendedInfo</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>31204</label>
+						<onclick>RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[ListItem.IMDBNumber])</onclick>
+						<enable>System.HasAddon(script.extendedinfo)</enable>
+						<visible>[Container.Content(movies) | Container.Content(tvshows)] + System.HasAddon(script.extendedinfo)</visible>
 					</control>
 					<control type="button" id="6">
 						<description>Refresh</description>
@@ -1015,19 +1023,14 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>38023</label>
 					</control>
-<!--                     <control type="button" id="204">
+                    <!--<control type="button" id="204">
 						<description>YouTube</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>31942</label>
-						<onclick>noop</onclick>
+						<onclick>RunScript(script.extendedinfo,info=youtubesearch,id=$INFO[ListItem.Title])</onclick>
 						<enable>System.HasAddon(script.extendedinfo)</enable>
 						<visible>[Container.Content(movies) | Container.Content(tvshows)] + System.HasAddon(script.extendedinfo)</visible>
-					</control> -->
-					<control type="button" id="10">
-						<description>Get Thumb</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>13511</label>
-					</control>
+					</control>-->
 					<control type="button" id="100">
 						<description>Get Artwork</description>
 						<include>ButtonInfoDialogsCommonValues</include>

@@ -5984,6 +5984,226 @@
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
+			<control type="group">
+				<!-- CustomWidgets-->
+				<left>190</left>
+				<top>60</top>
+				<visible>
+					!Skin.HasSetting(EnableLargeWidgets) | 
+					[Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]
+				</visible>
+				<include>CustomWidgetVisibility</include>
+				<include>VisibleFadeEffect</include>
+				<control type="list" id="8039">
+					<animation effect="slide" start="0,0" end="90,0" time="0" condition="StringCompare(Container(8039).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="180,0" time="0" condition="StringCompare(Container(8039).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="270,0" time="0" condition="StringCompare(Container(8039).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8039).NumItems,1)">conditional</animation>
+					<left>0</left>
+					<top>0</top>
+					<width>900</width>
+					<height>220</height>
+					<onleft>8039</onleft>
+					<onright>8039</onright>
+					<onup>21</onup>
+					<ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">610</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="220" width="180">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>180</width>
+							<height>220</height>
+							<texture border="15">RecentAddedBack.png</texture>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>160</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>185</top>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="220" width="180">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>180</width>
+							<height>220</height>
+							<texture border="15">RecentAddedBack.png</texture>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>160</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+							<bordersize>5</bordersize>
+							<visible>Control.HasFocus(8039)</visible>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>160</width>
+							<height>170</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+							<visible>!Control.HasFocus(8039)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>185</top>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>185</top>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(8039)</visible>
+						</control>
+					</focusedlayout>
+					<content target="video" limit="10">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+				</control>
+				<control type="button">
+					<include>SmallWidgetPosterLeft</include>
+					<onclick>Control.Move(8039,-1)</onclick>
+					<visible>Control.HasFocus(8039) + Container(8039).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="button">
+					<include>SmallWidgetPosterRight</include>
+					<onclick>Control.Move(8039,1)</onclick>
+					<visible>Control.HasFocus(8039) + Container(8039).HasNext</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</control>
+			<control type="group">
+				<left>0</left>
+				<top>54</top>
+				<visible>
+				[Skin.HasSetting(EnableLargeWidgets) + !Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]
+				</visible>
+				<include>CustomWidgetVisibility</include>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<left>-20</left>
+					<top>-5</top>
+					<width>1320</width>
+					<height>295</height>
+					<texture border="5">ContentPanel.png</texture>
+					<visible>IntegerGreaterThan(Container(8040).NumItems,0)</visible>
+				</control>
+				<control type="list" id="8040">
+					<animation effect="slide" start="0,0" end="485,0" time="0" condition="StringCompare(Container(8040).NumItems,1)">conditional</animation>
+					<animation effect="slide" start="0,0" end="387,0" time="0" condition="StringCompare(Container(8040).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="290,0" time="0" condition="StringCompare(Container(8040).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="192,0" time="0" condition="StringCompare(Container(8040).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="96,0" time="0" condition="StringCompare(Container(8040).NumItems,5)">conditional</animation>
+					<left>58</left>
+					<top>0</top>
+					<width>1170</width>
+					<height>320</height>
+					<onleft>8040</onleft>
+					<onright>8040</onright>
+					<onup>21</onup>
+					<ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">610</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="285" width="195">
+						<control type="image">
+							<left>9</left>
+							<top>8</top>
+							<width>176</width>
+							<height>268</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="285" width="195">
+						<control type="image">
+							<left>9</left>
+							<top>8</top>
+							<width>176</width>
+							<height>268</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+							<bordersize>5</bordersize>
+							<visible>Control.HasFocus(8040)</visible>
+						</control>
+						<control type="image">
+							<left>9</left>
+							<top>8</top>
+							<width>176</width>
+							<height>268</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+							<visible>!Control.HasFocus(8040)</visible>
+						</control>
+					</focusedlayout>
+					<content target="video" limit="10">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+				</control>
+				<control type="button">
+					<include>LargeWidgetPosterLeft</include>
+					<onclick>Control.Move(8040,-1)</onclick>
+					<visible>Control.HasFocus(8040) + Container(8040).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="button">
+					<include>LargeWidgetPosterRight</include>
+					<onclick>Control.Move(8040,1)</onclick>
+					<visible>Control.HasFocus(8040) + Container(8040).HasNext</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</control>
 		</control>
 	</include>
 	<include name="MovieSmallWidgetLayout">
@@ -10621,5 +10841,30 @@
 				<visible>!IsEmpty(Window(home).Property(NextAired.10.NextDay))</visible>
 			</item>
 		</content>
+	</include>
+	<include name="CustomWidgetVisibility">
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),VideoNode)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),UPnPMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentEpisodes)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomEpisodes)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedEpisodes)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomArtists)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentAlbums)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomAlbums)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedAlbums)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentConcerts)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomConcerts)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedConcerts)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),UnWatchedMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),VideoPlayList)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),MusicPlayList)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),Weather)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),Favourites)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),NextAired)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),None)</visible>
+		<visible>!Skin.String(Container(9000).ListItem.Property(WidgetSet))</visible>
 	</include>
 </includes>

@@ -482,7 +482,7 @@ msgstr "Prikaži nedavno dodane video snimke"
 
 msgctxt "#31118"
 msgid "Home page programs submenu"
-msgstr "Početna stranica podizbornika programa "
+msgstr "Početna stranica \"Programi\" podizbornika"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
@@ -498,7 +498,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr ""
+msgstr "Sakrij EPG ako je RDS prisutan na prozoru programa"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -514,11 +514,11 @@ msgstr "Prikaži pozadinu \"Trenutno se reproducira\" vizualizacije"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "Reproduciraj pjesme TV tema iz videoteke (TvTunes dodatak)"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "Tv melodije"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -546,15 +546,15 @@ msgstr ""
 
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
-msgstr "Početna stranica \"video\"  podizbornika"
+msgstr "Početna stranica \"Video\"  podizbornika"
 
 msgctxt "#31135"
 msgid "Home page \"Music\" submenu"
-msgstr "Početna stranica \"glazbenog\" podizbornika"
+msgstr "Početna stranica \"Glazba\" podizbornika"
 
 msgctxt "#31136"
 msgid "Home page \"Pictures\" submenu"
-msgstr "Početna stranica podizbornika \"slika\""
+msgstr "Početna stranica \"Slike\" podizbornika"
 
 msgctxt "#31137"
 msgid "Enable low main menu bar"
@@ -692,9 +692,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Prečaci"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "Odaberite svoju pjesmu"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -789,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -1394,7 +1406,7 @@ msgstr "[B]PRILAGODITE VIDEO POSTAVKE[/B][CR][CR]Upravljajte svojom videotekom �
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
+msgstr "[B]PRILAGODITE POSTAVKE GLAZBE[/B][CR][CR]Upravljajte svojm fonotekom · Postavite mogućnosti reprodukcije glazbe · Promjenite mogućnosti popisivanja glazbenoga sadržaja[CR]Postavite slanje pjesama"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
