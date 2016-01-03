@@ -1733,6 +1733,41 @@
 		<animation effect="fade" start="100" end="80" time="0" condition="SubString(skin.string(MediaPanelTrans),25)">Conditional</animation>
 		<animation effect="fade" start="100" end="90" time="0" condition="SubString(skin.string(MediaPanelTrans),10)">Conditional</animation>
 	</include>
+	<include name="HomeTransparentEffect">
+		<animation effect="fade" start="100" end="40" time="0" condition="SubString(skin.string(HomeTrans),85)">Conditional</animation>
+		<animation effect="fade" start="100" end="50" time="0" condition="SubString(skin.string(HomeTrans),70)">Conditional</animation>
+		<animation effect="fade" start="100" end="60" time="0" condition="SubString(skin.string(HomeTrans),55)">Conditional</animation>
+		<animation effect="fade" start="100" end="70" time="0" condition="SubString(skin.string(HomeTrans),40)">Conditional</animation>
+		<animation effect="fade" start="100" end="80" time="0" condition="SubString(skin.string(HomeTrans),25)">Conditional</animation>
+		<animation effect="fade" start="100" end="90" time="0" condition="SubString(skin.string(HomeTrans),10)">Conditional</animation>
+	</include>
+	<include name="TextureBorderAddons">
+		<include condition="Skin.String(TextureBorder,Medium)">Border5</include>
+		<include condition="Skin.String(TextureBorder,Large)">Border7</include>
+		<include condition="IsEmpty(Skin.String(TextureBorder))">Border3</include>
+	</include>
+	<include name="TextureBorderWidgets">
+		<include condition="Skin.String(TextureBorder,Medium)">Border7</include>
+		<include condition="Skin.String(TextureBorder,Large)">Border9</include>
+		<include condition="IsEmpty(Skin.String(TextureBorder))">Border5</include>
+	</include>
+	<include name="TextureBorderViews">
+		<include condition="Skin.String(TextureBorder,Medium)">Border7</include>
+		<include condition="Skin.String(TextureBorder,Large)">Border9</include>
+		<include condition="IsEmpty(Skin.String(TextureBorder))">Border5</include>
+	</include>
+	<include name="Border3">
+		<bordersize>3</bordersize>
+	</include>
+	<include name="Border5">
+		<bordersize>5</bordersize>
+	</include>
+	<include name="Border7">
+		<bordersize>7</bordersize>
+	</include>
+	<include name="Border9">
+		<bordersize>9</bordersize>
+	</include>
 	<include name="KBurnsAnimateFanart">
 		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateFanart)">Conditional</animation>
 		<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateFanart)">Conditional</animation>

@@ -948,6 +948,10 @@
 		<value condition="!IsEmpty(Skin.String(SubSettings.6.Label))">$INFO[Skin.String(SubSettings.6.Label)]</value>
 		<value>$LOCALIZE[10040]</value>
 	</variable>
+	<variable name="SubMenuSystemSeven" type="text">
+		<value condition="!IsEmpty(Skin.String(SubSettings.7.Label))">$INFO[Skin.String(SubSettings.7.Label)]</value>
+		<value>$LOCALIZE[14111]</value>
+	</variable>
 	<variable name="MenuOneBackgroundLabel" type="text">
 		<value condition="StringCompare(Skin.String(HomeItem.1.Display),Theme) | Skin.HasSetting(HolidayEffects) | Skin.HasSetting(SingleGlobalBackground)">$LOCALIZE[31366]</value>
 		<value condition="StringCompare(Skin.String(HomeItem.1.Display),Live)">$LOCALIZE[31295]</value>
@@ -2327,7 +2331,8 @@
 		<value condition="StringCompare(Container(9005).ListItem.Property(HiLiteItem),Holiday) + stringcompare(Container(9005).ListItem.Thumb,special://skin/extras/Holiday/xmastree.jpg)">$LOCALIZE[31257]</value>
 		<value condition="StringCompare(Container(9005).ListItem.Property(HiLiteItem),StartUp) + Skin.HasSetting(HideStartUpBackground)">$LOCALIZE[31438]</value>
 		<value condition="StringCompare(Container(9005).ListItem.Property(HiLiteItem),StartUp) + stringcompare(Container(9005).ListItem.Thumb,special://skin/backgrounds/startup.jpg)">$LOCALIZE[31257]</value>
-		<value condition="StringCompare(Container(9005).ListItem.Property(HiLiteItem),Global) + IsEmpty(Skin.String(GlobalBackGroundPath))">$LOCALIZE[31366]</value>
+		<value condition="StringCompare(Container(9005).ListItem.Property(HiLiteItem),Global) + IsEmpty(Skin.String(GlobalBackGroundPath)) + !Skin.HasSetting(GlobalLiveWeatherImage)">$LOCALIZE[31366]</value>
+		<value condition="StringCompare(Container(9005).ListItem.Property(HiLiteItem),Global) + Skin.HasSetting(GlobalLiveWeatherImage)">$LOCALIZE[31995]</value>
 		<value condition="!IsEmpty(Container(9005).ListItem.Thumb)">$INFO[Container(9005).ListItem.Thumb]</value>
 		<value>$LOCALIZE[31366]</value>
 	</variable>
@@ -2413,7 +2418,7 @@
 		<value condition="ListItem.IsResumable">InProgress/English</value>
 	</variable>
 	<variable name="WeatherFanArtDirLabel" type="text">
-		<value condition="IsEmpty(Skin.String(WeatherFanartDir)) | StringCompare(Skin.String(WeatherFanartDir),special://skin/extras/Weather/) | SubString(Skin.String(WeatherFanartDir),skin.ccm.helix\extras\Weather\,right)">$LOCALIZE[31257]</value>
+		<value condition="IsEmpty(Skin.String(WeatherFanartDir)) | StringCompare(Skin.String(WeatherFanartDir),special://skin/extras/Weather/) | SubString(Skin.String(WeatherFanartDir),skin.xonfluence\extras\Weather\,right)">$LOCALIZE[31257]</value>
 		<value>$INFO[Skin.String(WeatherFanartDir)]</value>
 	</variable>
 	<variable name="MainColorOne" type="text">
@@ -2437,6 +2442,15 @@
 	<variable name="TransparentValue">
 		<value condition="!IsEmpty(Skin.String(mediapaneltrans))">$LOCALIZE[31248]</value>
 		<value>$LOCALIZE[31257]</value>
+	</variable>
+	<variable name="HomeTransparentValue">
+		<value condition="!IsEmpty(Skin.String(HomeTrans))">$LOCALIZE[31248]</value>
+		<value>$LOCALIZE[31257]</value>
+	</variable>
+	<variable name="TextureBorderValue">
+		<value condition="Skin.String(TextureBorder,Medium)">$LOCALIZE[31993]</value>
+		<value condition="Skin.String(TextureBorder,Large)">$LOCALIZE[31994]</value>
+		<value>$LOCALIZE[31992]</value>
 	</variable>
 	<variable name="UsrOSDBtnLabel">
 		<value condition="Skin.String(OSDBtnUsrCmd,AspectRatio)">$LOCALIZE[31500]</value>

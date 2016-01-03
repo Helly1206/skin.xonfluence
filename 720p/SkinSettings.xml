@@ -38,6 +38,7 @@
 				<width>1090</width>
 				<height>630</height>
 				<texture border="15">ContentPanel.png</texture>
+				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>5</left>
@@ -602,6 +603,20 @@
 								<onclick>Skin.ToggleSetting(HideEPGwithRDS)</onclick>
 								<selected>Skin.HasSetting(HideEPGwithRDS)</selected>
 							</control>
+							<control type="button" id="128">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label>$LOCALIZE[31991]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(HomeTrans)]$VAR[TextureBorderValue][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+								<texturenofocus>MenuItemNF.png</texturenofocus>
+								<onclick condition="IsEmpty(Skin.String(TextureBorder))">Skin.SetString(TextureBorder,Medium)</onclick>
+								<onclick condition="Skin.String(TextureBorder,Medium)">Skin.SetString(TextureBorder,Large)</onclick>
+								<onclick condition="Skin.String(TextureBorder,Large)">Skin.Reset(TextureBorder)</onclick>
+							</control>
 						</control>
 						<control type="grouplist" id="9101">
 							<visible>Container(9001).HasFocus(2)</visible>
@@ -811,6 +826,24 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.ToggleSetting(HideHomeAddonName)</onclick>
 								<selected>!Skin.HasSetting(HideHomeAddonName)</selected>
+							</control>
+							<control type="button" id="150">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label>$LOCALIZE[31249]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(HomeTrans)]$VAR[HomeTransparentValue][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+								<texturenofocus>MenuItemNF.png</texturenofocus>
+								<onclick condition="IsEmpty(Skin.String(HomeTrans))">Skin.SetString(HomeTrans,10)</onclick>
+								<onclick condition="Skin.String(HomeTrans,10)">Skin.SetString(HomeTrans,25)</onclick>
+								<onclick condition="Skin.String(HomeTrans,25)">Skin.SetString(HomeTrans,40)</onclick>
+								<onclick condition="Skin.String(HomeTrans,40)">Skin.SetString(HomeTrans,55)</onclick>
+								<onclick condition="Skin.String(HomeTrans,55)">Skin.SetString(HomeTrans,70)</onclick>
+								<onclick condition="Skin.String(HomeTrans,70)">Skin.SetString(HomeTrans,85)</onclick>
+								<onclick condition="Skin.String(HomeTrans,85)">Skin.Reset(HomeTrans)</onclick>
 							</control>
 						</control>
 						<control type="grouplist" id="9101">
@@ -1158,6 +1191,19 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick condition="IsEmpty(Skin.String(OSDBtnUsrCmd))">Skin.SetString(OSDBtnUsrCmd,AspectRatio)</onclick>
 								<onclick condition="Skin.String(OSDBtnUsrCmd,AspectRatio)">Skin.Reset(OSDBtnUsrCmd)</onclick>
+							</control>
+							<control type="radiobutton" id="184">
+								<description>Show Full Screen Clock</description>
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<label>$LOCALIZE[31997]</label>
+								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+								<texturenofocus>MenuItemNF.png</texturenofocus>
+								<onclick>Skin.ToggleSetting(ShowFullScreenClock)</onclick>
+								<selected>Skin.HasSetting(ShowFullScreenClock)</selected>
 							</control>
 						</control>
 						<control type="grouplist" id="9101">
@@ -4233,7 +4279,7 @@
 								<height>40</height>
 								<font>font13</font>
 								<label>$LOCALIZE[31315] - 6</label>
-								<label2>[COLOR=selected]$INFO[Skin.String(SubSettings.6.Label)][/COLOR]</label2>
+								<label2>[COLOR=selected]$VAR[SubMenuSystemSix][/COLOR]</label2>
 								<textcolor>grey</textcolor>
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
@@ -4246,7 +4292,7 @@
 								<height>40</height>
 								<font>font13</font>
 								<label>$LOCALIZE[31315] - 7</label>
-								<label2>[COLOR=selected]$INFO[Skin.String(SubSettings.7.Label)][/COLOR]</label2>
+								<label2>[COLOR=selected]$VAR[SubMenuSystemSeven][/COLOR]</label2>
 								<textcolor>grey</textcolor>
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
@@ -6247,8 +6293,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.1.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.1.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.1.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.1.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -6328,8 +6374,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.2.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.2.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.2.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.2.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -6409,8 +6455,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.3.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.3.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.3.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.3.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -6490,8 +6536,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.4.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.4.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.4.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.4.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -6571,8 +6617,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.5.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.5.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.5.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.5.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -6652,8 +6698,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.6.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.6.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.6.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.6.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -6733,8 +6779,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.7.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.7.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.7.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.7.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -6814,8 +6860,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.8.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.8.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.8.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.8.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -6895,8 +6941,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.9.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.9.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.9.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.9.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -6976,8 +7022,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.10.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.10.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.10.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.10.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -7057,8 +7103,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.11.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.11.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.11.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.11.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -7138,8 +7184,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.12.Fanart,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.12.Fanart,,special://skin/backgrounds/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.12.Fanart,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HomeItem.12.Fanart,special://skin/backgrounds/)</onclick>
 								<onleft>503</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -7208,9 +7254,9 @@
 							<visible>Container(9005).HasFocus(13)</visible>
 							<control type="button" id="500">
 								<description>Single Image button</description>
-								<left>55</left>
+								<left>5</left>
 								<top>0</top>
-								<width>180</width>
+								<width>160</width>
 								<height>40</height>
 								<label>31436</label>
 								<font>font12_title</font>
@@ -7219,8 +7265,9 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(GlobalBackGroundPath,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(GlobalBackGroundPath,,special://skin/backgrounds/)</onclick>
+								<onclick>Skin.Reset(GlobalLiveWeatherImage)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(GlobalBackGroundPath,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(GlobalBackGroundPath,special://skin/backgrounds/)</onclick>
 								<onleft>502</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -7228,9 +7275,9 @@
 							</control>
 							<control type="button" id="501">
 								<description>Multi Image button</description>
-								<left>240</left>
+								<left>170</left>
 								<top>0</top>
-								<width>180</width>
+								<width>160</width>
 								<height>40</height>
 								<label>31437</label>
 								<font>font12_title</font>
@@ -7239,6 +7286,7 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(GlobalLiveWeatherImage)</onclick>
 								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetPath(GlobalBackGroundPath,special://)</onclick>
 								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetPath(GlobalBackGroundPath,special://skin/backgrounds/)</onclick>
 								<onleft>500</onleft>
@@ -7248,9 +7296,9 @@
 							</control>
 							<control type="button" id="502">
 								<description>Theme Default button</description>
-								<left>425</left>
+								<left>335</left>
 								<top>0</top>
-								<width>180</width>
+								<width>160</width>
 								<height>40</height>
 								<label>31255</label>
 								<font>font12_title</font>
@@ -7259,8 +7307,29 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(GlobalLiveWeatherImage)</onclick>
 								<onclick>Skin.Reset(GlobalBackGroundPath)</onclick>
 								<onleft>501</onleft>
+								<onright>503</onright>
+								<onup>504</onup>
+								<ondown>506</ondown>
+							</control>
+							<control type="button" id="503">
+								<description>Live Weather button</description>
+								<left>500</left>
+								<top>0</top>
+								<width>160</width>
+								<height>40</height>
+								<label>31995</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+								<onclick>Skin.SetBool(GlobalLiveWeatherImage)</onclick>
+								<onclick>Skin.SetString(GlobalBackGroundPath,special://skin/extras/Weather/weather.jpg)</onclick>
+								<onleft>502</onleft>
 								<onright>500</onright>
 								<onup>504</onup>
 								<ondown>506</ondown>
@@ -7281,8 +7350,8 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HolidayThemePath,,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HolidayThemePath,,special://skin/extras/Holiday/)</onclick>
+								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HolidayThemePath,special://)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(HolidayThemePath,special://skin/extras/Holiday/)</onclick>
 								<onleft>502</onleft>
 								<onright>501</onright>
 								<onup>504</onup>
@@ -7344,8 +7413,7 @@
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
 								<onclick condition="Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(StartUpBackgroundPath,special://)</onclick>
-								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(StartUpBackgroundPath)</onclick>
-								<onclick>Skin.Reset(HideStartUpBackground)</onclick>
+								<onclick condition="!Skin.HasSetting(AlternativeBackgroundPath)">Skin.SetImage(StartUpBackgroundPath,special://skin/backgrounds/)</onclick>*
 								<onleft>502</onleft>
 								<onright>501</onright>
 								<onup>504</onup>

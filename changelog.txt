@@ -1,3 +1,16 @@
+[B]3.2.1[/B]
+- Fixed bug in system submenu editing items #359
+- Added Events to default system submenu
+- Implemented conditional visibility on TV and Radio on main menu (do not display if no channels available)
+- Added option to show clock in video full screen #363
+- Fixed bug in skinsettings changing backgrounds
+- Added possibility for live weather content as single global background #366
+- Fixed bug in home screen addons
+- Added option for transparency selection for home screen #385
+- Fixed non working transparency settings on weather and settings views
+- Added option for larger selection border #384
+- Added large widgets for weather widgets
+
 [B]3.2.0[/B]
 - Updated 720p for Jarvis
 - Updated Textures for Jarvis

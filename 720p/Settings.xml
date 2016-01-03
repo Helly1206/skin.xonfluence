@@ -39,6 +39,7 @@
 				<width>1090</width>
 				<height>630</height>
 				<texture border="15">ContentPanel.png</texture>
+				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>5</left>

@@ -27,6 +27,7 @@
 			</control>
 		</control>
 		<!-- media infos -->
+		<include condition="Skin.HasSetting(ShowFullScreenClock) + !StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4) + ![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]">Clock</include>
 		<control type="group" id="1">
 			<depth>DepthOSD</depth>
 			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4)</visible>

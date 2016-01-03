@@ -4,7 +4,7 @@
 	<menucontrol>9000</menucontrol>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
-		<include>CommonBackground</include>
+		<include condition="!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))">CommonBackground</include>
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
 			<include>BackgroundDimensions</include>
@@ -51,6 +51,7 @@
 					<width>500</width>
 					<height>620</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -411,6 +412,7 @@
 					<width>650</width>
 					<height>620</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 				</control>
 				<control type="image">
 					<left>0</left>

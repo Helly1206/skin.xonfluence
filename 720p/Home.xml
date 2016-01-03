@@ -660,6 +660,7 @@
 				<height>35</height>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<animation effect="slide" start="0,0" end="115,0" time="0" condition="Skin.HasSetting(DisableGlobalSearch)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="610">
@@ -678,6 +679,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus flipy="true" border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texturefocus>
 				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<pulseonselect>false</pulseonselect>
 				<label>137</label>
 				<onclick>RunScript(script.globalsearch)</onclick>
@@ -706,13 +708,13 @@
 					<width>255</width>
 					<height>35</height>
 					<texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<colordiffuse>CCFFFFFF</colordiffuse>
 					<animation effect="zoom" start="0,0,205,35" end="0,0,500,35" delay="0" time="300" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
 					<visible>Player.HasMedia | Skin.HasSetting(EnableHomeStats)</visible>
 				</control>
 				<control type="group">
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<animation effect="slide" end="0,35" time="300" condition="!Player.HasMedia">conditional</animation>
+					<visible>!VideoPlayer.Content(LiveTV)+Player.HasMedia</visible>
 					<control type="button" id="601">
 						<left>10</left>
 						<top>2</top>
@@ -994,6 +996,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus flipy="true" border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texturefocus>
 				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<pulseonselect>false</pulseonselect>
 				<label>31008</label>
 				<onclick>fullscreen</onclick>
@@ -1007,6 +1010,7 @@
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 				<ondown>9000</ondown>
 				<enable>Player.HasMedia</enable>
+				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="label">
 				<left>190</left>
@@ -1041,6 +1045,7 @@
 				<width>1480</width>
 				<height>75</height>
 				<texture border="0,6,0,6">HomeBack.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -1048,6 +1053,7 @@
 				<width>1280</width>
 				<height>6</height>
 				<texture>HomeOverlay1.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<include condition="Skin.HasSetting(WrapAroundHomeMenu)">WrapHomeMainMenu</include>
 			<include condition="!Skin.HasSetting(WrapAroundHomeMenu)">FixedHomeMainMenu</include>
@@ -1057,6 +1063,7 @@
 				<width>138</width>
 				<height>63</height>
 				<texture>SideFade.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>128r</left>
@@ -1064,6 +1071,7 @@
 				<width>138</width>
 				<height>63</height>
 				<texture flipx="true">SideFade.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 		</control>
 		<include>HomeAddonsDisplay</include>
@@ -1139,6 +1147,7 @@
 				<width>24</width>
 				<height>24</height>
 				<texture>icon-rss.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 		</control>
 		<control type="grouplist" id="21">
@@ -1160,6 +1169,7 @@
 				<onclick>$VAR[FavBtnCommand]</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<visible>!Skin.HasSetting(HideFavorites)</visible>
 			</control>
 			<control type="image" id="24">
@@ -1177,6 +1187,7 @@
 				<onclick>$VAR[HomePowerBtnCommand]</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
 			</control>
 		</control>

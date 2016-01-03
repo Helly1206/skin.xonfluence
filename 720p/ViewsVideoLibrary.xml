@@ -1846,7 +1846,7 @@
 						<height>70</height>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true">$INFO[ListItem.Art(banner)]</texture>
 						<visible>!IsEmpty(ListItem.Art(banner))</visible>
 					</control>
@@ -1897,7 +1897,7 @@
 						<height>70</height>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true">$INFO[ListItem.Art(banner)]</texture>
 						<visible>!IsEmpty(ListItem.Art(banner))</visible>
 					</control>
@@ -2300,7 +2300,7 @@
 						<top>0</top>
 						<width>139</width>
 						<height>202</height>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<include>VisibleFadeEffect</include>
@@ -2311,7 +2311,7 @@
 						<top>0</top>
 						<width>139</width>
 						<height>202</height>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>
@@ -2341,7 +2341,7 @@
 						<top>0</top>
 						<width>139</width>
 						<height>202</height>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>

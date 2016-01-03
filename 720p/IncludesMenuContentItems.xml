@@ -1837,6 +1837,22 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
 			</item>
+			<item>
+				<description>Events</description>
+				<label>$LOCALIZE[14111]</label>
+				<include>ClearButtonChoice</include>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,ActivateWindow(EventLog,events://,return))</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[14111])</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Settings)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+				<include>CloseMenuChoice</include>
+				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+			</item>
 			<!-- UPnP Music Menu -->
 			<item>
 				<description>Music</description>

@@ -293,7 +293,7 @@
 						<width>214</width>
 						<height>160</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(Episodes)</visible>
@@ -305,7 +305,7 @@
 						<height>160</height>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<visible>Container.Content(Episodes)</visible>
 						<visible>StringCompare(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
@@ -317,7 +317,7 @@
 						<height>160</height>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
@@ -358,7 +358,7 @@
 						<width>214</width>
 						<height>160</height>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(Episodes)</visible>
@@ -370,7 +370,7 @@
 						<height>160</height>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<visible>Container.Content(Episodes)</visible>
 						<visible>StringCompare(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
@@ -382,7 +382,7 @@
 						<height>160</height>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
@@ -423,7 +423,7 @@
 						<width>214</width>
 						<height>240</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -464,7 +464,7 @@
 						<width>214</width>
 						<height>240</height>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -542,7 +542,7 @@
 						<width>538</width>
 						<height>105</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$VAR[BannerThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -584,7 +584,7 @@
 						<width>538</width>
 						<height>105</height>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$VAR[BannerThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>

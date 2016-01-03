@@ -247,7 +247,7 @@
 						<top>0</top>
 						<width>139</width>
 						<height>202</height>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<include>VisibleFadeEffect</include>
@@ -258,7 +258,7 @@
 						<top>0</top>
 						<width>139</width>
 						<height>202</height>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>
@@ -270,7 +270,7 @@
 						<top>0</top>
 						<width>139</width>
 						<height>202</height>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>

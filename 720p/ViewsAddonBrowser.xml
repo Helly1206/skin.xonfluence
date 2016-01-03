@@ -246,7 +246,7 @@
 						<width>191</width>
 						<height>160</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<fadetime>100</fadetime>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
@@ -257,7 +257,7 @@
 						<width>191</width>
 						<height>160</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<fadetime>100</fadetime>
 						<colordiffuse>ff333333</colordiffuse>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -299,7 +299,7 @@
 						<width>191</width>
 						<height>160</height>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<fadetime>100</fadetime>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
@@ -310,7 +310,7 @@
 						<width>191</width>
 						<height>160</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<include>TextureBorderViews</include>
 						<fadetime>100</fadetime>
 						<colordiffuse>ff333333</colordiffuse>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
