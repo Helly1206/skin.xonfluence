@@ -260,6 +260,14 @@ msgctxt "#31062"
 msgid "Episode backdrop"
 msgstr ""
 
+msgctxt "#31063"
+msgid "Show volume buttons"
+msgstr ""
+
+msgctxt "#31064"
+msgid "Volume buttons small jump"
+msgstr ""
+
 msgctxt "#31065"
 msgid "Favourites button action"
 msgstr ""
@@ -388,6 +396,14 @@ msgctxt "#31096"
 msgid "Enable suggested movies or TV shows info"
 msgstr ""
 
+msgctxt "#31097"
+msgid "Enable Floor Return Buttons (for touch)"
+msgstr ""
+
+msgctxt "#31098"
+msgid "Top left widget on all screens"
+msgstr ""
+
 msgctxt "#31099"
 msgid "Enable [COLOR=grey3](Slower)[/COLOR] File system search for additional artwork"
 msgstr ""
@@ -472,8 +488,16 @@ msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr ""
 
+msgctxt "#31120"
+msgid "Hide page count info"
+msgstr ""
+
+msgctxt "#31121"
+msgid "Show plot info on info screen"
+msgstr ""
+
 msgctxt "#31122"
-msgid "Enable busy animation"
+msgid "Hide EPG if RDS is present on channel window"
 msgstr ""
 
 msgctxt "#31123"
@@ -490,11 +514,11 @@ msgstr ""
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "Пахш кардани суруди мавзӯи телевизионӣ дар китобхонаи видеоӣ (Барномаи иловагии TvTunes)"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "TvTunes"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -504,8 +528,20 @@ msgctxt "#31129"
 msgid "Hide fanart in full screen visualisation"
 msgstr ""
 
+msgctxt "#31130"
+msgid "Hide favorites button"
+msgstr ""
+
+msgctxt "#31131"
+msgid "Hide top left info on windows"
+msgstr ""
+
 msgctxt "#31132"
 msgid "Lyrics add-on"
+msgstr ""
+
+msgctxt "#31133"
+msgid "Minimize on exit button"
 msgstr ""
 
 msgctxt "#31134"
@@ -556,6 +592,10 @@ msgctxt "#31145"
 msgid "Plex"
 msgstr ""
 
+msgctxt "#31146"
+msgid "Enable busy animation"
+msgstr ""
+
 msgctxt "#31147"
 msgid "Setup UPnP library"
 msgstr ""
@@ -572,8 +612,20 @@ msgctxt "#31150"
 msgid "Select UPnP server"
 msgstr ""
 
+msgctxt "#31151"
+msgid "Restart kodi instead of system reboot"
+msgstr ""
+
 msgctxt "#31152"
 msgid "Enable kiosk mode"
+msgstr ""
+
+msgctxt "#31153"
+msgid "Show minimal picture info"
+msgstr ""
+
+msgctxt "#31154"
+msgid "Notifications at top left"
 msgstr ""
 
 msgctxt "#31185"
@@ -640,8 +692,20 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Миёнбурҳо"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
+msgstr ""
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
 msgstr ""
 
 msgctxt "#31205"
@@ -674,6 +738,14 @@ msgstr ""
 
 msgctxt "#31212"
 msgid "Streaming media"
+msgstr ""
+
+msgctxt "#31213"
+msgid "Streams navigator"
+msgstr ""
+
+msgctxt "#31214"
+msgid "Show addon names"
 msgstr ""
 
 msgctxt "#31215"
@@ -729,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -870,6 +942,14 @@ msgstr ""
 
 msgctxt "#31269"
 msgid "Unfinished"
+msgstr ""
+
+msgctxt "#31270"
+msgid "Ubuntu Normal"
+msgstr ""
+
+msgctxt "#31271"
+msgid "Ubuntu Bold"
 msgstr ""
 
 msgctxt "#31272"
@@ -1045,7 +1125,7 @@ msgid "Last logged in"
 msgstr ""
 
 msgctxt "#31321"
-msgid "Karaoke song selector"
+msgid "Library mode"
 msgstr ""
 
 msgctxt "#31322"
@@ -1212,6 +1292,10 @@ msgctxt "#31368"
 msgid "Kryptonite"
 msgstr ""
 
+msgctxt "#31369"
+msgid "Select main OSD colour"
+msgstr ""
+
 msgctxt "#31370"
 msgid "Instant"
 msgstr ""
@@ -1232,6 +1316,14 @@ msgctxt "#31374"
 msgid "Enable video codec info on pause and OSD menu"
 msgstr ""
 
+msgctxt "#31375"
+msgid "Use graphical textures on keyboards"
+msgstr ""
+
+msgctxt "#31376"
+msgid "Use autocomplete on keyboards"
+msgstr ""
+
 msgctxt "#31380"
 msgid "Enable playlist widget script"
 msgstr ""
@@ -1246,6 +1338,14 @@ msgstr ""
 
 msgctxt "#31383"
 msgid "Enable video artwork to show with OSD information"
+msgstr ""
+
+msgctxt "#31384"
+msgid "Enable music artwork to show with OSD information"
+msgstr ""
+
+msgctxt "#31385"
+msgid "Hide text label in wide icon view"
 msgstr ""
 
 msgctxt "#31386"
@@ -1305,8 +1405,8 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]ТАНЗИМОТИ ПАРАМЕТРҲОИ ВИДЕО[/B][CR][CR]Идоракунии китобхонаи видеоӣ • Имконоти пахши видео[CR]Тағйир додани имконоти рӯйхати видеоҳо • Танзимоти шрифтҳои зерунвон"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
-msgstr "[B]ТАНЗИМОТИ ПАРАМЕТРҲОИ МУСИҚӢ[/B][CR][CR]Идоракунии китобхонаи мусиқӣ · Имконоти пахши мусиқӣ · Тағйир додани имконоти рӯйхати мусиқӣ[CR]Танзими иловакунии мусиқӣ · Танзими имконоти караоке"
+msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
+msgstr ""
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
@@ -1804,28 +1904,8 @@ msgctxt "#31941"
 msgid "Enable running artwork downloader automaticaly after updating library"
 msgstr ""
 
-msgctxt "#31943"
-msgid "Choose a scraper"
-msgstr ""
-
-msgctxt "#31944"
-msgid "Current scraper"
-msgstr ""
-
-msgctxt "#31945"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr ""
-
-msgctxt "#31946"
-msgid "Track number"
-msgstr ""
-
-msgctxt "#31947"
-msgid "Memory used:"
-msgstr ""
-
-msgctxt "#31948"
-msgid "Created"
+msgctxt "#31942"
+msgid "YouTube"
 msgstr ""
 
 msgctxt "#31950"
@@ -1877,15 +1957,19 @@ msgid "Choose your song"
 msgstr ""
 
 msgctxt "#31962"
-msgid "Lyrics source"
+msgid "Reset paths to skin default"
 msgstr ""
 
 msgctxt "#31963"
-msgid "Album details"
+msgid "Reset fanart to skin default"
 msgstr ""
 
 msgctxt "#31964"
-msgid "Click button to play[CR][CR]Movie trailer"
+msgid "Use alternative background folder"
+msgstr ""
+
+msgctxt "#31965"
+msgid "Multi-image background time per image"
 msgstr ""
 
 msgctxt "#31969"
@@ -1908,8 +1992,32 @@ msgctxt "#31973"
 msgid "DVD drive"
 msgstr ""
 
+msgctxt "#31991"
+msgid "Item border size"
+msgstr ""
+
+msgctxt "#31992"
+msgid "Small"
+msgstr ""
+
+msgctxt "#31993"
+msgid "Medium"
+msgstr ""
+
+msgctxt "#31994"
+msgid "Large"
+msgstr ""
+
+msgctxt "#31995"
+msgid "Live weather"
+msgstr ""
+
 msgctxt "#31996"
 msgid "Shortcuts"
+msgstr ""
+
+msgctxt "#31997"
+msgid "Show clock on full screen video"
 msgstr ""
 
 msgctxt "#31998"

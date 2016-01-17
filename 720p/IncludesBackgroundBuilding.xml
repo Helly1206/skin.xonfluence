@@ -2,14 +2,15 @@
 <includes>
 	<include name="CommonBackground">
 		<control type="group">
+			<depth>DepthBackground</depth>
 			<visible>Skin.HasSetting(SingleGlobalBackground) + !Skin.HasSetting(HolidayEffects)</visible>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
 				<imagepath background="true">$INFO[Skin.String(GlobalBackGroundPath)]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>FanartCrossfadeTime</fadetime>
-				<visible>!IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
+				<visible>!IsEmpty(Skin.String(GlobalBackGroundPath)) + !Skin.HasSetting(GlobalLiveWeatherImage)</visible>
 			</control>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
@@ -18,10 +19,21 @@
 				<include>BackgroundFade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<include>Window_OpenClose_Animation</include>
-				<visible>IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
+				<visible>IsEmpty(Skin.String(GlobalBackGroundPath)) + !Skin.HasSetting(GlobalLiveWeatherImage)</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+				<include>BackgroundTimePerImage</include>
+				<randomize>true</randomize>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>Skin.HasSetting(GlobalLiveWeatherImage)</visible>
 			</control>
 		</control>
 		<control type="group">
+			<depth>DepthBackground</depth>
 			<visible>Skin.HasSetting(HolidayEffects)</visible>
 			<control type="image">
 				<description>Holiday Theme Default Image</description>
@@ -37,7 +49,7 @@
 				<description>Holiday Theme Images</description>
 				<include>Dimensions_Fullscreen</include>
 				<imagepath background="true" fallback="special://skin/extras/Holiday/xmastree.jpg">$INFO[Skin.String(HolidayThemePath)]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<visible>Window.IsVisible(Home)</visible>
@@ -45,6 +57,7 @@
 			</control>
 		</control>
 		<control type="group">
+			<depth>DepthBackground</depth>
 			<visible>Skin.HasSetting(HideHomeNowPlaying) | !Player.HasAudio | Player.Paused | SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE) | [Player.HasAudio + !Skin.HasSetting(VizOnlyOnHome) + Skin.HasSetting(HideBackgroundCDWall)]</visible>
 			<visible>!Skin.HasSetting(SingleGlobalBackground) + !StringCompare(Window(Home).Property(MenuBackground),Theme) + !StringCompare(Container(9000).ListItem.Property(Background),Theme) + !Skin.HasSetting(HolidayEffects)</visible>
 			<control type="group">
@@ -57,7 +70,7 @@
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
 				<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<include>BackgroundFade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
@@ -68,7 +81,7 @@
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
 				<imagepath background="true">$VAR[HomeMenuItemBackground]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<visible>Window.IsVisible(Home)</visible>
@@ -77,7 +90,7 @@
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
 				<imagepath background="true">$VAR[WeatherBackground]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<visible>StringCompare(Window(Home).Property(MenuItemSelected),Weather)</visible>
@@ -87,28 +100,30 @@
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
 				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<visible>!Window.IsVisible(Home) + !StringCompare(Window(Home).Property(MenuItemSelected),Weather) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
 			</control>
 		</control>
 		<control type="multiimage">
+			<depth>DepthBackground</depth>
 			<include>Dimensions_Fullscreen</include>
 			<aspectratio>scale</aspectratio>
 			<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
-			<timeperimage>8000</timeperimage>
+			<include>BackgroundTimePerImage</include>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<visible>!Skin.HasSetting(SingleGlobalBackground) + !Skin.HasSetting(HolidayEffects) + !Window.IsVisible(Home) + !Player.HasVideo + Skin.HasSetting(HideBackGroundFanart)</visible>
 		</control>
 		<control type="group">
+			<depth>DepthBackground</depth>
 			<visible>!Window.IsVisible(Home) + !Player.HasVideo + !Skin.HasSetting(HideBackGroundFanart)</visible>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
 				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<visible>!StringCompare(Window(Home).Property(MenuItemSelected),Weather) + Player.HasAudio</visible>
@@ -116,7 +131,7 @@
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
 				<imagepath background="true">$VAR[WeatherBackground]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<visible>StringCompare(Window(Home).Property(MenuItemSelected),Weather) + Player.HasAudio</visible>
@@ -135,7 +150,7 @@
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
 				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<visible>[StringCompare(ListItem.Label,..) | IsEmpty(ListItem.Property(Fanart_Image))] + Container.Content(Episodes) + IsEmpty(Fanart.Image)</visible>
@@ -325,6 +340,7 @@
 			<visible>!stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum) + !stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
 		</control>
 		<control type="group">
+			<depth>DepthBackground</depth>
 			<visible>Window.IsVisible(Home) + !Skin.HasSetting(HideHomeNowPlaying) + Player.HasAudio + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
@@ -335,7 +351,7 @@
 			<include>AlbumArtMusicVizWall</include>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<timeperimage>10000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<aspectratio>keep</aspectratio>
@@ -346,7 +362,7 @@
 			</control>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<timeperimage>10000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<aspectratio>keep</aspectratio>
@@ -367,7 +383,7 @@
 			</control>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<timeperimage>10000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<aspectratio>keep</aspectratio>
@@ -383,12 +399,14 @@
 			<visible>Skin.HasSetting(NoDiffuseVizFanart) | stringcompare(Visualisation.Name,Waveform) | stringcompare(Visualisation.Name,DirectX Spectrum) | stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
 		</control>
 		<control type="image">
+			<depth>DepthBackground</depth>
 			<include>Dimensions_Fullscreen</include>
 			<texture>special://skin/backgrounds/media-overlay.jpg</texture>
 			<visible>Player.HasVideo + !Skin.HasSetting(HideHomeNowPlaying) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVChannels) | [Player.HasVideo + Window.IsVisible(TVChannels) + !Skin.HasSetting(HidePVRNowPlaying)]</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="videowindow">
+			<depth>DepthBackground</depth>
 			<include>Dimensions_Fullscreen</include>
 			<visible>Player.HasVideo + !Skin.HasSetting(HideHomeNowPlaying) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVChannels) | [Window.IsVisible(TVChannels) + !Skin.HasSetting(HidePVRNowPlaying)]</visible>
 		</control>
@@ -432,11 +450,14 @@
 	</include>
 	<include name="ContentPanelBackgrounds">
 		<control type="image">
-			<left>0</left>
-			<top>100r</top>
-			<width>1280</width>
+			<depth>DepthFloor</depth>
+			<left>-20</left>
+			<top></top>
+			<bottom>0</bottom>
+			<width>1320</width>
 			<height>100</height>
 			<texture>floor.png</texture>
+			<animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
 			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
@@ -691,4 +712,40 @@
 			</control>
 		</control>
 	</include>
+	<include name="Time1"><timeperimage>1000</timeperimage></include>	
+	<include name="Time2"><timeperimage>2000</timeperimage></include>
+	<include name="Time3"><timeperimage>3000</timeperimage></include>
+	<include name="Time4"><timeperimage>4000</timeperimage></include>
+	<include name="Time5"><timeperimage>5000</timeperimage></include>
+	<include name="Time6"><timeperimage>6000</timeperimage></include>
+	<include name="Time7"><timeperimage>7000</timeperimage></include>
+	<include name="Time8"><timeperimage>8000</timeperimage></include>
+	<include name="Time9"><timeperimage>9000</timeperimage></include>
+	<include name="Time10"><timeperimage>10000</timeperimage></include>
+	<include name="Time15"><timeperimage>15000</timeperimage></include>
+	<include name="Time20"><timeperimage>20000</timeperimage></include>
+	<include name="Time30"><timeperimage>30000</timeperimage></include>
+	<include name="Time40"><timeperimage>40000</timeperimage></include>
+	<include name="Time50"><timeperimage>50000</timeperimage></include>
+	<include name="Time60"><timeperimage>60000</timeperimage></include>
+    <include name="BackgroundTimePerImage">
+		<include condition="IsEmpty(Skin.String(MultiImageTimer))">Time8</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),1)">Time1</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),2)">Time2</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),3)">Time3</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),4)">Time4</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),5)">Time5</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),6)">Time6</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),7)">Time7</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),8)">Time8</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),9)">Time9</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),10)">Time10</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),15)">Time15</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),20)">Time20</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),30)">Time30</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),40)">Time40</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),50)">Time50</include>
+		<include condition="StringCompare(Skin.String(MultiImageTimer),60)">Time60</include>
+    </include>
+
 </includes>

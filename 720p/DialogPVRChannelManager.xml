@@ -256,7 +256,7 @@
 						<width>380</width>
 						<height>40</height>
 						<font>font12</font>
-						<texturefocus border="5">button-focus2.png</texturefocus>
+						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 						<texturenofocus border="5">button-nofocus.png</texturenofocus>
 						<label>19202</label>
 						<onleft>60</onleft>
@@ -375,7 +375,7 @@
 					<font>font12</font>
 					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<alttexturefocus border="5">button-focus2.png</alttexturefocus>
+					<alttexturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</alttexturefocus>
 					<alttexturenofocus border="5">button-nofocus.png</alttexturenofocus>
 					<align>center</align>
 					<aligny>center</aligny>

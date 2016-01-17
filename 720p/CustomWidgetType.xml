@@ -177,7 +177,7 @@
 					</item>
 					<item>
 						<description>UnWatched Movies</description>
-						<label>$LOCALIZE[16101] $LOCALIZE[342]</label>
+						<label>$LOCALIZE[31228]</label>
 						<onclick>Dialog.Close(2118)</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,UnWatchedMovies)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
@@ -261,6 +261,14 @@
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedConcerts)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 						<visible>Library.HasContent(MusicVideos)</visible>
+					</item>
+					<item>
+						<description>Custom</description>
+						<label>$LOCALIZE[31201]</label>
+						<onclick>Dialog.Close(2118)</onclick>
+						<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Widget)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 				</content>
 			</control>

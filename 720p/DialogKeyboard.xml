@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">300</defaultcontrol>
 	<include>dialogeffect</include>
+	<depth>DepthDialog+</depth>
 	<coordinates>
 		<left>205</left>
 		<top>120</top>
@@ -46,7 +47,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture>separator.png</texture>
 				</control>
-				<!-- <control type="label" id="313">
+				<control type="label" id="313">
 					<description>HZCODE label</description>
 					<left>55</left>
 					<top>18</top>
@@ -65,7 +66,7 @@
 					<font>font13</font>
 					<align>center</align>
 					<aligny>center</aligny>
-				</control> -->
+				</control>
 			</control>
 			<control type="image">
 				<left>50</left>

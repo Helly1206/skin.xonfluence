@@ -1,3 +1,42 @@
+[B]3.2.1[/B]
+- Fixed bug in system submenu editing items #359
+- Added Events to default system submenu
+- Implemented conditional visibility on TV and Radio on main menu (do not display if no channels available)
+- Added option to show clock in video full screen #363
+- Fixed bug in skinsettings changing backgrounds
+- Added possibility for live weather content as single global background #366
+- Fixed bug in home screen addons
+- Added option for transparency selection for home screen #385
+- Fixed non working transparency settings on weather and settings views
+- Added option for larger selection border #384
+- Added large widgets for weather widgets
+
+[B]3.2.0[/B]
+- Updated 720p for Jarvis
+- Updated Textures for Jarvis
+- Updated Language files for Jarvis
+- Updated colors
+- Implemented different OSD color (confluence like) #288
+- Updated position of home stats bar (if no global search is installed) #277
+- Added Library mode switch for music (like videos) as its functionality disappeared in Jarvis 
+- Changed overlapping dialog positions on OSDs when mouse is used
+- Updated Centralized Fanart folders
+- Added option for multi-image timer #251
+- Added option for navigating to background images in alternative image folder #238
+- Updated skinsettings menu (in groups) #188
+- Do not jump alternate pause icon if thumbnail is disabled #244
+- Changed implementation of default focused menu item (to solve issues on some systems) #321
+- Changed conditions on overlapping artwork on OSD #327
+- Added option to hide addon names on home screen #262
+- Added option to switch off audio logos in OSD
+- Updated picture OSD
+- Disappearing home screen arrow buttons when not focused for all home screen widgets #319
+- Added option to hide text label in Wide view #276
+- Added xonfluence skin for script.extendedinfo and added button to videoinfo
+- Open PVRSideBlade on guide grid view when pressing info button
+- Added possibility to add Custom widgets by entering the complete plugin item #339 (2nd emample)
+  e.g. Skin settings/Home menu items/Widget set/Custom widgets/ enter the new label: plugin://plugin.video.genesis/?action=movies&url=popular
+
 [B]3.1.6[/B]
 - Align buttons correctly in OSD when no video artwork enabled #195
 - Align correctly when using stats-bar

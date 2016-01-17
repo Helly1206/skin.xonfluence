@@ -378,7 +378,7 @@
 					<scroll>false</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$VAR[MediaRuntime,[B][COLOR=blue]$LOCALIZE[2050]: [/COLOR][/B]]</label>
+					<label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[2050]: [/COLOR][/B]$VAR[MediaRuntime]</label>
 					<visible>!Container.Content(TVShows) + !IsEmpty(ListItem.Duration)</visible>
 				</control>
 				<control type="label">
@@ -392,7 +392,7 @@
 					<scroll>false</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[listitem.episode,[B][COLOR=blue]$LOCALIZE[20360]: [/COLOR][/B]]</label>
+					<label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[20360]: [/COLOR][/B]$INFO[listitem.episode]</label>
 					<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.episode)</visible>
 				</control>
 				<control type="label">
@@ -406,7 +406,7 @@
 					<scroll>false</scroll>
 					<align>right</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Director,[B][COLOR=blue]$LOCALIZE[20339]: [/COLOR][/B]]</label>
+					<label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[20339]: [/COLOR][/B]$INFO[ListItem.Director]</label>
 					<visible>!IsEmpty(ListItem.Director)</visible>
 				</control>
 				<control type="label">
@@ -420,7 +420,7 @@
 					<scroll>false</scroll>
 					<align>right</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Premiered,[B][COLOR=blue]$LOCALIZE[31322]: [/COLOR][/B]]</label>
+					<label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[31322]: [/COLOR][/B]$INFO[ListItem.Premiered]</label>
 					<visible>IsEmpty(ListItem.Director) + !IsEmpty(ListItem.Premiered)</visible>
 				</control>
 				<control type="image">

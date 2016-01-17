@@ -283,7 +283,7 @@
 						<onclick>Dialog.Close(2119)</onclick>
 						<onclick>Skin.SetFile(UsrSelectAddon,.xsp,special://videoplaylists/)</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[559])</onclick>
-						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,"$INFO[Skin.String(UsrSelectAddon)]",return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,ActivateWindow(Videos,"$INFO[Skin.String(UsrSelectAddon)]",return))</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,DefaultVideoPlaylists.png)</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>

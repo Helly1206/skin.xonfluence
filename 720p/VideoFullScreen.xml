@@ -27,16 +27,18 @@
 			</control>
 		</control>
 		<!-- media infos -->
+		<include condition="Skin.HasSetting(ShowFullScreenClock) + !StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4) + ![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]">Clock</include>
 		<control type="group" id="1">
+			<depth>DepthOSD</depth>
 			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4)</visible>
 			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] | Player.Seeking | Player.displayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
 			<visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<control type="image" id="1">
-				<left>-100</left>
-				<top>-60</top>
-				<width>1480</width>
-				<height>160</height>
+				<left>-20</left>
+				<top>-150</top>
+				<width>1320</width>
+				<height>256</height>
 				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
 				<visible>!Skin.HasSetting(HideSystemTime)</visible>
@@ -47,9 +49,9 @@
 			<include condition="Player.ShowInfo | !Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)">Date</include>
 			<include>OSDMediaPlot</include>
 			<control type="image" id="1">
-				<left>0</left>
+				<left>-20</left>
 				<top>230r</top>
-				<width>1280</width>
+				<width>1320</width>
 				<height>230</height>
 				<texture border="1">HomeNowPlayingBack.png</texture>
 				<visible>Player.ShowInfo | Window.IsActive(VideoOSD) | !Skin.HasSetting(HideSeekBarOSD)</visible>
@@ -57,6 +59,7 @@
 				<animation effect="slide" end="0,45" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
 			</control>
 			<control type="group" id="1">
+				<depth>DepthOSDPopout</depth>
 				<include condition="!Skin.HasSetting(HideArtWorkOSD) + VideoPlayer.Content(Movies)">OSDMovieCover</include>
 				<include condition="!Skin.HasSetting(HideArtWorkOSD) + VideoPlayer.Content(Episodes)">OSDTVShowCover</include>
 				<control type="image" id="1">
@@ -145,6 +148,7 @@
 					<height>16</height>
 					<info>Player.ProgressCache</info>
 					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+					<visible>!Player.ChannelPreviewActive</visible>
 				</control>
 				<control type="progress" id="1">
 					<description>Progressbar</description>
@@ -180,6 +184,7 @@
 		</control>
 		<!-- codec info -->
 		<control type="group" id="0">
+			<depth>DepthOSD+</depth>
 			<left>0</left>
 			<top>20</top>
 			<animation effect="fade" time="150">VisibleChange</animation>
@@ -226,6 +231,7 @@
 			</control>
 		</control>
 		<control type="group">
+			<depth>DepthOSD+</depth>
 			<visible>Player.ShowCodec + VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
 			<top>185</top>
 			<control type="image">

@@ -2,6 +2,7 @@
 <includes>
 	<include name="HomeAddonsDisplay">
 		<control type="group" id="9002">
+			<depth>DepthMenu</depth>
 			<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 			<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
 			<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">610</ondown>
@@ -522,7 +523,7 @@
 		</animation>
 		<animation type="Hidden">
 			<effect type="fade" start="100" end="0" time="150" />
-		</animation>
+		</animation>-
 		<hitrect x="0" y="530" w="1280" h="120" />
 		<left>65</left>
 		<top>190r</top>
@@ -539,7 +540,7 @@
 				<height>108</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<include>TextureBorderAddons</include>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="image">
@@ -560,6 +561,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
+				<visible>!Skin.HasSetting(HideHomeAddonName)</visible>
 			</control>
 		</itemlayout>
 		<focusedlayout height="180" width="164">
@@ -570,7 +572,7 @@
 				<height>108</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<include>TextureBorderAddons</include>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<visible>!ControlGroup(9002).HasFocus</visible>
 			</control>
@@ -581,7 +583,7 @@
 				<height>108</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<include>TextureBorderAddons</include>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<visible>ControlGroup(9002).HasFocus</visible>
 			</control>
@@ -603,7 +605,8 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>Control.HasFocus(9002)</visible>
+				<visible>ControlGroup(9002).HasFocus</visible>
+				<visible>!Skin.HasSetting(HideHomeAddonName)</visible>
 			</control>
 			<control type="label">
 				<left>1</left>
@@ -615,7 +618,8 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>!Control.HasFocus(9002)</visible>
+				<visible>!ControlGroup(9002).HasFocus</visible>
+				<visible>!Skin.HasSetting(HideHomeAddonName)</visible>
 			</control>
 		</focusedlayout>
 	</include>
@@ -645,7 +649,7 @@
 				<height>108</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<include>TextureBorderAddons</include>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="image">
@@ -666,6 +670,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
+				<visible>!Skin.HasSetting(HideHomeAddonName)</visible>
 			</control>
 		</itemlayout>
 		<focusedlayout height="180" width="164">
@@ -676,7 +681,7 @@
 				<height>108</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<include>TextureBorderAddons</include>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<visible>!ControlGroup(9002).HasFocus</visible>
 			</control>
@@ -687,7 +692,7 @@
 				<height>108</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<include>TextureBorderAddons</include>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<visible>ControlGroup(9002).HasFocus</visible>
 			</control>
@@ -709,7 +714,8 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>Control.HasFocus(9002)</visible>
+				<visible>ControlGroup(9002).HasFocus</visible>
+				<visible>!Skin.HasSetting(HideHomeAddonName)</visible>
 			</control>
 			<control type="label">
 				<left>1</left>
@@ -721,7 +727,8 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>!Control.HasFocus(9002)</visible>
+				<visible>!ControlGroup(9002).HasFocus</visible>
+				<visible>!Skin.HasSetting(HideHomeAddonName)</visible>
 			</control>
 		</focusedlayout>
 	</include>

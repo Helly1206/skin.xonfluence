@@ -116,6 +116,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistOne.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.1.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.1.Type),Radio) | [StringCompare(Skin.String(HomeItem.1.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.1.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.1.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="2">
 				<description>Home Menu Item Two</description>
@@ -133,6 +135,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwo.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.2.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.2.Type),Radio) | [StringCompare(Skin.String(HomeItem.2.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.2.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.2.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="3">
 				<description>Home Menu Item Three</description>
@@ -150,6 +154,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistThree.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.3.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.3.Type),Radio) | [StringCompare(Skin.String(HomeItem.3.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.3.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.3.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="4">
 				<description>Home Menu Item Four</description>
@@ -167,6 +173,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFour.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.4.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.4.Type),Radio) | [StringCompare(Skin.String(HomeItem.4.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.4.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.4.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="5">
 				<description>Home Menu Item Five</description>
@@ -184,6 +192,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFive.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.5.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.5.Type),Radio) | [StringCompare(Skin.String(HomeItem.5.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.5.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.5.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="6">
 				<description>Home Menu Item Six</description>
@@ -201,6 +211,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSix.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.6.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.6.Type),Radio) | [StringCompare(Skin.String(HomeItem.6.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.6.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.6.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="7">
 				<description>Home Menu Item Seven</description>
@@ -218,6 +230,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSeven.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.7.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.7.Type),Radio) | [StringCompare(Skin.String(HomeItem.7.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.7.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.7.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="8">
 				<description>Home Menu Item Eight</description>
@@ -235,6 +249,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEight.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.8.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.8.Type),Radio) | [StringCompare(Skin.String(HomeItem.8.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.8.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.8.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="9">
 				<description>Home Menu Item Nine</description>
@@ -252,6 +268,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistNine.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.9.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.9.Type),Radio) | [StringCompare(Skin.String(HomeItem.9.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.9.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.9.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="10">
 				<description>Home Menu Item Ten</description>
@@ -269,6 +287,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTen.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.10.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.10.Type),Radio) | [StringCompare(Skin.String(HomeItem.10.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.10.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.10.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="11">
 				<description>Home Menu Item Eleven</description>
@@ -286,6 +306,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEleven.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.11.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.11.Type),Radio) | [StringCompare(Skin.String(HomeItem.11.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.11.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.11.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 			<item id="12">
 				<description>Home Menu Item Twelve</description>
@@ -303,6 +325,8 @@
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwelve.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.12.Display)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.12.Type),Radio) | [StringCompare(Skin.String(HomeItem.12.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.12.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.12.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
 		</content>
 	</include>
@@ -454,5 +478,20 @@
 	<include name="UpdatesV314">
 		<onload>RunScript(special://skin/scripts/CopyKeymap.py)</onload>
 		<onload>Skin.SetBool(Updates_V314)</onload>
+	</include>
+	<include name="UpdatesV320">
+		<onload condition="Skin.String(HomeItem.1.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.1.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.2.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.2.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.3.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.3.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.4.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.4.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.5.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.5.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.6.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.6.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.7.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.7.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.8.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.8.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.9.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.9.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.10.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.10.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.11.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.11.Path,ActivateWindow(1197))</onload>
+		<onload condition="Skin.String(HomeItem.12.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.12.Path,ActivateWindow(1197))</onload>
+		<onload>Skin.SetBool(Updates_V320)</onload>
 	</include>
 </includes>

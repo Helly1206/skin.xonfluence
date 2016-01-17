@@ -83,7 +83,7 @@
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5">button-focus2.png</texturefocus>
+      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
       <label>$ADDON[pvr.nextpvr 30120]</label>
       <onright>21</onright>
       <onleft>21</onleft>
@@ -100,7 +100,7 @@
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5">button-focus2.png</texturefocus>
+      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
       <label>$ADDON[pvr.nextpvr 30132]</label>
       <onright>23</onright>
       <onleft>23</onleft>
@@ -117,7 +117,7 @@
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5">button-focus2.png</texturefocus>
+      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
       <label>$ADDON[pvr.nextpvr 30133]</label>
       <onright>23</onright>
       <onleft>23</onleft>
@@ -134,7 +134,7 @@
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5">button-focus2.png</texturefocus>
+      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
       <label>$ADDON[pvr.nextpvr 30130]</label>
       <onright>23</onright>
       <onleft>23</onleft>
@@ -151,7 +151,7 @@
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5">button-focus2.png</texturefocus>
+      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
       <label>$ADDON[pvr.nextpvr 30134]</label>
       <onright>23</onright>
       <onleft>23</onleft>
@@ -170,7 +170,7 @@
         <align>center</align>
         <aligny>center</aligny>
         <texturenofocus border="5">button-nofocus.png</texturenofocus>
-        <texturefocus border="5">button-focus.png</texturefocus>
+        <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
         <label>186</label>
         <font>font12_title</font>
         <onup>27</onup>
@@ -187,7 +187,7 @@
         <align>center</align>
         <aligny>center</aligny>
         <texturenofocus border="5">button-nofocus.png</texturenofocus>
-        <texturefocus border="5">button-focus.png</texturefocus>
+        <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
         <label>222</label>
         <font>font12_title</font>
         <onup>27</onup>

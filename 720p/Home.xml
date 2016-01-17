@@ -4,6 +4,7 @@
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
 	<include condition="!Skin.HasSetting(Updates_V312)">UpdatesV312</include>
 	<include condition="!Skin.HasSetting(Updates_V314)">UpdatesV314</include>
+	<include condition="!Skin.HasSetting(Updates_V320)">UpdatesV320</include>
 	<onload condition="!IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
 	<onload condition="!IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
 	<onload condition="!IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
@@ -28,26 +29,35 @@
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.11.Type,VideoPlayList) | Skin.String(HomeItem.11.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.11.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistEleven)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.12.Type,VideoPlayList) | Skin.String(HomeItem.12.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.12.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwelve)</onload>
 	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
-	<onload condition="Window.Previous(Startup)">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
+	<onload condition="IsEmpty(Window.Property(ReturnHome))">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
+	<onload condition="IsEmpty(Window.Property(ReturnHome))">SetProperty(ReturnHome,True)</onload>
+	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
+	<onunload condition="ControlGroup(9011).HasFocus">SetProperty(MusicDirectLink,True)</onunload>
+	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
+	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(3)">ClearProperty(MusicDirectLink)</onunload>
 	<controls>
 		<include condition="Skin.HasSetting(EnableHomeStats)">VideoNodeStatsList</include>
 		<include>CommonBackground</include>
 		<include condition="Skin.HasSetting(EnableRainDropEffect) | Skin.HasSetting(HolidayEffects)">AnimatedBackgroundEffect</include>
 		<control type="image">
-			<left>0</left>
-			<top>90r</top>
-			<width>1280</width>
+			<depth>DepthFloor</depth>
+			<left>-20</left>
+			<top></top>
+			<bottom>0</bottom>
+			<width>1320</width>
 			<height>90</height>
 			<texture>floor.png</texture>
-			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
+			<animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<include>TopLeftInfo</include>
 		<!-- Music Info -->
 		<control type="group">
+			<depth>DepthMenu</depth>
 			<left>0</left>
-			<top>65</top>
+			<top>60</top>
 			<visible>Player.HasAudio + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
@@ -105,6 +115,7 @@
 		</control>
 		<!-- LiveTV Info -->
 		<control type="group">
+			<depth>DepthMenu</depth>
 			<left>490r</left>
 			<top>70</top>
 			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),None)</visible>
@@ -250,8 +261,9 @@
 		</control>
 		<!-- Video Info -->
 		<control type="group">
+			<depth>DepthMenu</depth>
 			<left>0</left>
-			<top>60</top>
+			<top>50</top>
 			<visible>Player.HasVideo + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
@@ -623,6 +635,7 @@
 			<visible>false</visible>
 		</control>
 		<control type="group">
+			<depth>DepthMenu-</depth>
 			<description>Controls for currently playing media</description>
 			<left>545r</left>
 			<top>370</top>
@@ -638,6 +651,7 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
+			<visible>IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 			<control type="image">
 				<description>Background End image</description>
 				<left>0</left>
@@ -646,7 +660,8 @@
 				<height>35</height>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
-				<animation effect="slide" start="0,0" end="145,0" time="0" condition="Skin.HasSetting(DisableGlobalSearch)">Conditional</animation>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<animation effect="slide" start="0,0" end="115,0" time="0" condition="Skin.HasSetting(DisableGlobalSearch)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="610">
 				<colordiffuse>CCFFFFFF</colordiffuse>
@@ -664,6 +679,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus flipy="true" border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texturefocus>
 				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<pulseonselect>false</pulseonselect>
 				<label>137</label>
 				<onclick>RunScript(script.globalsearch)</onclick>
@@ -692,20 +708,20 @@
 					<width>255</width>
 					<height>35</height>
 					<texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<colordiffuse>CCFFFFFF</colordiffuse>
 					<animation effect="zoom" start="0,0,205,35" end="0,0,500,35" delay="0" time="300" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
 					<visible>Player.HasMedia | Skin.HasSetting(EnableHomeStats)</visible>
 				</control>
 				<control type="group">
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<animation effect="slide" end="0,35" time="300" condition="!Player.HasMedia">conditional</animation>
+					<visible>!VideoPlayer.Content(LiveTV)+Player.HasMedia</visible>
 					<control type="button" id="601">
 						<left>10</left>
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPrevTrackFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPrevTrackFO.png</texturefocus>
 						<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
 						<onleft>610</onleft>
 						<onright>602</onright>
@@ -720,7 +736,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRewindFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRewindFO.png</texturefocus>
 						<texturenofocus>OSDRewindNF.png</texturenofocus>
 						<onleft>601</onleft>
 						<onright>603</onright>
@@ -735,10 +751,10 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPauseFO.png</texturefocus>
 						<texturenofocus>OSDPauseNF.png</texturenofocus>
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-						<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDPlayFO.png</alttexturefocus>
+						<alttexturefocus colordiffuse="$VAR[MainColorTwo]">OSDPlayFO.png</alttexturefocus>
 						<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
 						<onleft>602</onleft>
 						<onright>604</onright>
@@ -753,7 +769,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDStopFO.png</texturefocus>
 						<texturenofocus>OSDStopNF.png</texturenofocus>
 						<onleft>603</onleft>
 						<onright>605</onright>
@@ -769,7 +785,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDForwardFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDForwardFO.png</texturefocus>
 						<texturenofocus>OSDForwardNF.png</texturenofocus>
 						<onleft>604</onleft>
 						<onright>606</onright>
@@ -784,7 +800,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDNextTrackFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDNextTrackFO.png</texturefocus>
 						<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 						<onleft>605</onleft>
 						<onright>607</onright>
@@ -799,7 +815,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolUpFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDVolUpFO.png</texturefocus>
 						<texturenofocus>OSDVolUpNF.png</texturenofocus>
 						<onleft>606</onleft>
 						<onright>608</onright>
@@ -816,7 +832,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolDownFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDVolDownFO.png</texturefocus>
 						<texturenofocus>OSDVolDownNF.png</texturenofocus>
 						<onleft>607</onleft>
 						<onright>609</onright>
@@ -836,7 +852,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelUPFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDChannelUPFO.png</texturefocus>
 						<texturenofocus>OSDChannelUPNF.png</texturenofocus>
 						<onleft>608</onleft>
 						<onright>602</onright>
@@ -851,7 +867,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDChannelDownFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDChannelDownFO.png</texturefocus>
 						<texturenofocus>OSDChannelDownNF.png</texturenofocus>
 						<onleft>601</onleft>
 						<onright>603</onright>
@@ -866,7 +882,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDStopFO.png</texturefocus>
 						<texturenofocus>OSDStopNF.png</texturenofocus>
 						<onleft>602</onleft>
 						<onright>604</onright>
@@ -882,13 +898,13 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPauseFO.png</texturefocus>
 						<texturenofocus>OSDPauseNF.png</texturenofocus>
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-						<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDPlayFO.png</alttexturefocus>
+						<alttexturefocus colordiffuse="$VAR[MainColorTwo]">OSDPlayFO.png</alttexturefocus>
 						<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
 						<onleft>603</onleft>
-						<onright>606</onright>
+						<onright>605</onright>
 						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
 						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
@@ -896,15 +912,31 @@
 						<enable>Player.PauseEnabled</enable>
 						<animation effect="fade" start="100" end="30" time="75" condition="!Player.PauseEnabled">Conditional</animation>
 					</control>
+					<control type="button" id="605">
+						<left>130</left>
+						<top>2</top>
+						<width>30</width>
+						<height>30</height>
+						<label>-</label>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRadioRDSFO.png</texturefocus>
+						<texturenofocus>OSDRadioRDSNF.png</texturenofocus>
+						<onleft>604</onleft>
+						<onright>606</onright>
+						<onup>9003</onup>
+						<ondown>9000</ondown>
+						<onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
+						<enable>RDS.HasRadiotextPlus</enable>
+						<animation effect="fade" start="100" end="30" time="75" condition="!RDS.HasRadiotextPlus">Conditional</animation>
+					</control>
 					<control type="button" id="606">
 						<left>160</left>
 						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRecordOffFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRecordOffFO.png</texturefocus>
 						<texturenofocus>OSDRecordOffNF.png</texturenofocus>
-						<onleft>604</onleft>
+						<onleft>605</onleft>
 						<onright>607</onright>
 						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
 						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
@@ -934,7 +966,7 @@
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVolDownFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDVolDownFO.png</texturefocus>
 						<texturenofocus>OSDVolDownNF.png</texturenofocus>
 						<onleft>607</onleft>
 						<onright>609</onright>
@@ -964,6 +996,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus flipy="true" border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texturefocus>
 				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<pulseonselect>false</pulseonselect>
 				<label>31008</label>
 				<onclick>fullscreen</onclick>
@@ -977,6 +1010,7 @@
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 				<ondown>9000</ondown>
 				<enable>Player.HasMedia</enable>
+				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="label">
 				<left>190</left>
@@ -993,6 +1027,7 @@
 			</control>
 		</control>
 		<control type="group">
+			<depth>DepthMenu</depth>
 			<top>400</top>
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
 			<animation type="WindowOpen" reversible="false">
@@ -1010,6 +1045,7 @@
 				<width>1480</width>
 				<height>75</height>
 				<texture border="0,6,0,6">HomeBack.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -1017,26 +1053,30 @@
 				<width>1280</width>
 				<height>6</height>
 				<texture>HomeOverlay1.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<include condition="Skin.HasSetting(WrapAroundHomeMenu)">WrapHomeMainMenu</include>
 			<include condition="!Skin.HasSetting(WrapAroundHomeMenu)">FixedHomeMainMenu</include>
 			<control type="image">
-				<left>0</left>
+				<left>-10</left>
 				<top>6</top>
-				<width>128</width>
+				<width>138</width>
 				<height>63</height>
 				<texture>SideFade.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>128r</left>
 				<top>6</top>
-				<width>128</width>
+				<width>138</width>
 				<height>63</height>
 				<texture flipx="true">SideFade.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 		</control>
 		<include>HomeAddonsDisplay</include>
 		<control type="group">
+			<depth>DepthMenu-</depth>
 			<left>0</left>
 			<top>33r</top>
 			<visible>system.getbool(lookandfeel.enablerssfeeds) | [Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)]</visible>
@@ -1107,9 +1147,11 @@
 				<width>24</width>
 				<height>24</height>
 				<texture>icon-rss.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 		</control>
 		<control type="grouplist" id="21">
+			<depth>DepthFooter</depth>
 			<include>Window_OpenClose_Animation</include>
 			<left>20</left>
 			<top>55r</top>
@@ -1127,6 +1169,7 @@
 				<onclick>$VAR[FavBtnCommand]</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<visible>!Skin.HasSetting(HideFavorites)</visible>
 			</control>
 			<control type="image" id="24">
@@ -1144,6 +1187,7 @@
 				<onclick>$VAR[HomePowerBtnCommand]</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
 			</control>
 		</control>
@@ -1176,7 +1220,10 @@
 				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
 			</control>
 		</control>
-		<include>Clock</include>
-		<include>Date</include>
+		<control type="group">
+			<depth>DepthHeader</depth>
+			<include>Clock</include>
+			<include>Date</include>
+		</control>
 	</controls>
 </window>

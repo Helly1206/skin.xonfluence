@@ -9,6 +9,7 @@
 	<controls>
 		<control type="group">
 			<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
+			<depth>DepthDialog+</depth>			
 			<left>1070</left>
 			<top>640</top>
 			<control type="image">

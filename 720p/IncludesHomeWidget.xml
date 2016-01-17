@@ -46,6 +46,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -55,7 +56,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -78,6 +79,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -87,7 +89,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8000)</visible>
 						</control>
 						<control type="image">
@@ -98,7 +100,7 @@
 							<texture>$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8000)</visible>
 						</control>
 						<control type="label">
@@ -133,12 +135,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8000,-1)</onclick>
-					<visible>Container(8000).HasPrevious</visible>
+					<visible>Control.HasFocus(8000) + Container(8000).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8000,1)</onclick>
-					<visible>Container(8000).HasNext</visible>
+					<visible>Control.HasFocus(8000) + Container(8000).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -159,6 +162,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8001">
@@ -189,7 +193,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -201,7 +205,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8001)</visible>
 						</control>
 						<control type="image">
@@ -212,7 +216,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8001)</visible>
 						</control>
 					</focusedlayout>
@@ -221,12 +225,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8001,-1)</onclick>
-					<visible>Container(8001).HasPrevious</visible>
+					<visible>Control.HasFocus(8001) + Container(8001).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8001,1)</onclick>
-					<visible>Container(8001).HasNext</visible>
+					<visible>Control.HasFocus(8001) + Container(8001).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -265,6 +270,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -274,7 +280,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -297,6 +303,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -306,7 +313,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8002)</visible>
 						</control>
 						<control type="image">
@@ -317,7 +324,7 @@
 							<texture>$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8002)</visible>
 						</control>
 						<control type="label">
@@ -352,12 +359,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8002,-1)</onclick>
-					<visible>Container(8002).HasPrevious</visible>
+					<visible>Control.HasFocus(8002) + Container(8002).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8002,1)</onclick>
-					<visible>Container(8002).HasNext</visible>
+					<visible>Control.HasFocus(8002) + Container(8002).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -378,6 +386,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8003).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8003">
@@ -408,7 +417,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -420,7 +429,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8003)</visible>
 						</control>
 						<control type="image">
@@ -431,7 +440,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8003)</visible>
 						</control>
 					</focusedlayout>
@@ -440,12 +449,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8003,-1)</onclick>
-					<visible>Container(8003).HasPrevious</visible>
+					<visible>Control.HasFocus(8003) + Container(8003).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8003,1)</onclick>
-					<visible>Container(8003).HasNext</visible>
+					<visible>Control.HasFocus(8003) + Container(8003).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -484,6 +494,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -493,7 +504,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -516,6 +527,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -525,7 +537,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8004)</visible>
 						</control>
 						<control type="image">
@@ -536,7 +548,7 @@
 							<texture>$INFO$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8004)</visible>
 						</control>
 						<control type="label">
@@ -571,12 +583,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8004,-1)</onclick>
-					<visible>Container(8004).HasPrevious</visible>
+					<visible>Control.HasFocus(8004) + Container(8004).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8004,1)</onclick>
-					<visible>Container(8004).HasNext</visible>
+					<visible>Control.HasFocus(8004) + Container(8004).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -597,6 +610,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8005).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8005">
@@ -627,7 +641,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -639,7 +653,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8005)</visible>
 						</control>
 						<control type="image">
@@ -650,7 +664,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8005)</visible>
 						</control>
 					</focusedlayout>
@@ -659,12 +673,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8005,-1)</onclick>
-					<visible>Container(8005).HasPrevious</visible>
+					<visible>Control.HasFocus(8005) + Container(8005).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8005,1)</onclick>
-					<visible>Container(8005).HasNext</visible>
+					<visible>Control.HasFocus(8005) + Container(8005).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -703,6 +718,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -712,7 +728,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -735,6 +751,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -744,7 +761,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8006)</visible>
 						</control>
 						<control type="image">
@@ -755,7 +772,7 @@
 							<texture>$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8006)</visible>
 						</control>
 						<control type="label">
@@ -790,12 +807,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8006,-1)</onclick>
-					<visible>Container(8006).HasPrevious</visible>
+					<visible>Control.HasFocus(8006) + Container(8006).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8006,1)</onclick>
-					<visible>Container(8006).HasNext</visible>
+					<visible>Control.HasFocus(8006) + Container(8006).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -816,6 +834,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8007).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8007">
@@ -846,7 +865,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -858,7 +877,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8007)</visible>
 						</control>
 						<control type="image">
@@ -869,7 +888,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8007)</visible>
 						</control>
 					</focusedlayout>
@@ -878,12 +897,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8007,-1)</onclick>
-					<visible>Container(8007).HasPrevious</visible>
+					<visible>Control.HasFocus(8007) + Container(8007).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8007,1)</onclick>
-					<visible>Container(8007).HasNext</visible>
+					<visible>Control.HasFocus(8007) + Container(8007).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -924,6 +944,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -933,7 +954,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -978,6 +999,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -987,7 +1009,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8008)</visible>
 						</control>
 						<control type="image">
@@ -998,7 +1020,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8008)</visible>
 						</control>
 						<control type="image">
@@ -1055,12 +1077,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8008,-1)</onclick>
-					<visible>Container(8008).HasPrevious</visible>
+					<visible>Control.HasFocus(8008) + Container(8008).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8008,1)</onclick>
-					<visible>Container(8008).HasNext</visible>
+					<visible>Control.HasFocus(8008) + Container(8008).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -1081,6 +1104,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8009).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8009">
@@ -1111,7 +1135,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -1158,7 +1182,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8009)</visible>
 						</control>
 						<control type="image">
@@ -1169,7 +1193,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture>$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8009)</visible>
 						</control>
 						<control type="image">
@@ -1227,11 +1251,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8009,-1)</onclick>
 					<visible>Control.HasFocus(8009) + Container(8009).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8009,1)</onclick>
 					<visible>Control.HasFocus(8009) + Container(8009).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -1270,6 +1296,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -1279,7 +1306,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -1324,6 +1351,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -1333,7 +1361,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8010)</visible>
 						</control>
 						<control type="image">
@@ -1344,7 +1372,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8010)</visible>
 						</control>
 						<control type="image">
@@ -1401,12 +1429,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8010,-1)</onclick>
-					<visible>Container(8010).HasPrevious</visible>
+					<visible>Control.HasFocus(8010) + Container(8010).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8010,1)</onclick>
-					<visible>Container(8010).HasNext</visible>
+					<visible>Control.HasFocus(8010) + Container(8010).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -1427,6 +1456,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8011">
@@ -1457,7 +1487,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -1504,7 +1534,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8011)</visible>
 						</control>
 						<control type="image">
@@ -1515,7 +1545,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture>$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8011)</visible>
 						</control>
 						<control type="image">
@@ -1573,11 +1603,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8011,-1)</onclick>
 					<visible>Control.HasFocus(8011) + Container(8011).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8011,1)</onclick>
 					<visible>Control.HasFocus(8011) + Container(8011).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -1616,6 +1648,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -1625,7 +1658,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -1670,6 +1703,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -1679,7 +1713,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8012)</visible>
 						</control>
 						<control type="image">
@@ -1690,7 +1724,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8012)</visible>
 						</control>
 						<control type="image">
@@ -1747,12 +1781,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8012,-1)</onclick>
-					<visible>Container(8012).HasPrevious</visible>
+					<visible>Control.HasFocus(8012) + Container(8012).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8012,1)</onclick>
-					<visible>Container(8012).HasNext</visible>
+					<visible>Control.HasFocus(8012) + Container(8012).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -1773,6 +1808,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8013).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8013">
@@ -1803,7 +1839,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -1850,7 +1886,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8013)</visible>
 						</control>
 						<control type="image">
@@ -1861,7 +1897,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture>$VAR[EpisodeThumbImage]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8013)</visible>
 						</control>
 						<control type="image">
@@ -1919,11 +1955,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8013,-1)</onclick>
 					<visible>Control.HasFocus(8013) + Container(8013).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8013,1)</onclick>
 					<visible>Control.HasFocus(8013) + Container(8013).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -1961,6 +1999,7 @@
 							<width>200</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -1970,7 +2009,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -2006,6 +2045,7 @@
 							<width>200</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -2015,7 +2055,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8014)</visible>
 						</control>
 						<control type="image">
@@ -2026,7 +2066,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8014)</visible>
 						</control>
 						<control type="label">
@@ -2074,12 +2114,13 @@
 				<control type="button">
 					<include>SmallWidgetAlbumLeft</include>
 					<onclick>Control.Move(8014,-1)</onclick>
-					<visible>Container(8014).HasPrevious</visible>
+					<visible>Control.HasFocus(8014) + Container(8014).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetAlbumRight</include>
 					<onclick>Control.Move(8014,1)</onclick>
-					<visible>Container(8014).HasNext</visible>
+					<visible>Control.HasFocus(8014) + Container(8014).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -2100,6 +2141,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8015).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8015">
@@ -2129,7 +2171,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -2167,7 +2209,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8015)</visible>
 						</control>
 						<control type="image">
@@ -2178,7 +2220,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8015)</visible>
 						</control>
 						<control type="label">
@@ -2227,11 +2269,13 @@
 					<include>LargeWidgetAlbumLeft</include>
 					<onclick>Control.Move(8015,-1)</onclick>
 					<visible>Control.HasFocus(8015) + Container(8015).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetAlbumRight</include>
 					<onclick>Control.Move(8015,1)</onclick>
 					<visible>Control.HasFocus(8015) + Container(8015).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -2268,6 +2312,7 @@
 							<width>200</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -2277,7 +2322,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -2313,6 +2358,7 @@
 							<width>200</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -2322,7 +2368,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8016)</visible>
 						</control>
 						<control type="image">
@@ -2333,7 +2379,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8016)</visible>
 						</control>
 						<control type="label">
@@ -2381,12 +2427,13 @@
 				<control type="button">
 					<include>SmallWidgetAlbumLeft</include>
 					<onclick>Control.Move(8016,-1)</onclick>
-					<visible>Container(8016).HasPrevious</visible>
+					<visible>Control.HasFocus(8016) + Container(8016).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetAlbumRight</include>
 					<onclick>Control.Move(8016,1)</onclick>
-					<visible>Container(8016).HasNext</visible>
+					<visible>Control.HasFocus(8016) + Container(8016).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -2407,6 +2454,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8017).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8017">
@@ -2436,7 +2484,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -2474,7 +2522,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8017)</visible>
 						</control>
 						<control type="image">
@@ -2485,7 +2533,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8017)</visible>
 						</control>
 						<control type="label">
@@ -2534,11 +2582,13 @@
 					<include>LargeWidgetAlbumLeft</include>
 					<onclick>Control.Move(8017,-1)</onclick>
 					<visible>Control.HasFocus(8017) + Container(8017).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetAlbumRight</include>
 					<onclick>Control.Move(8017,1)</onclick>
 					<visible>Control.HasFocus(8017) + Container(8017).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -2575,6 +2625,7 @@
 							<width>200</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -2584,7 +2635,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -2620,6 +2671,7 @@
 							<width>200</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -2629,7 +2681,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8018)</visible>
 						</control>
 						<control type="image">
@@ -2688,12 +2740,13 @@
 				<control type="button">
 					<include>SmallWidgetAlbumLeft</include>
 					<onclick>Control.Move(8018,-1)</onclick>
-					<visible>Container(8018).HasPrevious</visible>
+					<visible>Control.HasFocus(8018) + Container(8018).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetAlbumRight</include>
 					<onclick>Control.Move(8018,1)</onclick>
-					<visible>Container(8018).HasNext</visible>
+					<visible>Control.HasFocus(8018) + Container(8018).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -2714,6 +2767,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8019).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8019">
@@ -2841,11 +2895,13 @@
 					<include>LargeWidgetAlbumLeft</include>
 					<onclick>Control.Move(8019,-1)</onclick>
 					<visible>Control.HasFocus(8019) + Container(8019).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetAlbumRight</include>
 					<onclick>Control.Move(8019,1)</onclick>
 					<visible>Control.HasFocus(8019) + Container(8019).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -2885,6 +2941,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -2930,6 +2987,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -2998,12 +3056,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8020,-1)</onclick>
-					<visible>Container(8020).HasPrevious</visible>
+					<visible>Control.HasFocus(8020) + Container(8020).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8020,1)</onclick>
-					<visible>Container(8020).HasNext</visible>
+					<visible>Control.HasFocus(8020) + Container(8020).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -3024,6 +3083,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8021).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8021">
@@ -3152,11 +3212,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8021,-1)</onclick>
 					<visible>Control.HasFocus(8021) + Container(8021).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8021,1)</onclick>
 					<visible>Control.HasFocus(8021) + Container(8021).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -3195,6 +3257,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -3204,7 +3267,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>20</left>
@@ -3240,6 +3303,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -3249,7 +3313,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8022)</visible>
 						</control>
 						<control type="image">
@@ -3260,7 +3324,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8022)</visible>
 						</control>
 						<control type="label">
@@ -3308,12 +3372,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8022,-1)</onclick>
-					<visible>Container(8022).HasPrevious</visible>
+					<visible>Control.HasFocus(8022) + Container(8022).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8022,1)</onclick>
-					<visible>Container(8022).HasNext</visible>
+					<visible>Control.HasFocus(8022) + Container(8022).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -3334,6 +3399,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8023).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8023">
@@ -3364,7 +3430,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -3402,7 +3468,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8023)</visible>
 						</control>
 						<control type="image">
@@ -3413,7 +3479,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8023)</visible>
 						</control>
 						<control type="label">
@@ -3462,11 +3528,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8023,-1)</onclick>
 					<visible>Control.HasFocus(8023) + Container(8023).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8023,1)</onclick>
 					<visible>Control.HasFocus(8023) + Container(8023).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -3505,6 +3573,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -3514,7 +3583,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>20</left>
@@ -3550,6 +3619,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -3559,7 +3629,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8024)</visible>
 						</control>
 						<control type="image">
@@ -3570,7 +3640,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8024)</visible>
 						</control>
 						<control type="label">
@@ -3618,12 +3688,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8024,-1)</onclick>
-					<visible>Container(8024).HasPrevious</visible>
+					<visible>Control.HasFocus(8024) + Container(8024).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8024,1)</onclick>
-					<visible>Container(8024).HasNext</visible>
+					<visible>Control.HasFocus(8024) + Container(8024).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -3644,6 +3715,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8025).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8025">
@@ -3674,7 +3746,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -3712,7 +3784,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8025)</visible>
 						</control>
 						<control type="image">
@@ -3723,7 +3795,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8025)</visible>
 						</control>
 						<control type="label">
@@ -3772,11 +3844,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8025,-1)</onclick>
 					<visible>Control.HasFocus(8025) + Container(8025).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8025,1)</onclick>
 					<visible>Control.HasFocus(8025) + Container(8025).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -4058,12 +4132,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8026,-1)</onclick>
-					<visible>Container(8026).HasPrevious</visible>
+					<visible>Control.HasFocus(8026) + Container(8026).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8026,1)</onclick>
-					<visible>Container(8026).HasNext</visible>
+					<visible>Control.HasFocus(8026) + Container(8026).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -4085,6 +4160,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8027).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8027">
@@ -4366,12 +4442,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8027,-1)</onclick>
-					<visible>Container(8027).HasPrevious</visible>
+					<visible>Control.HasFocus(8027) + Container(8027).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8027,1)</onclick>
-					<visible>Container(8027).HasNext</visible>
+					<visible>Control.HasFocus(8027) + Container(8027).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -4666,12 +4743,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8028,-1)</onclick>
-					<visible>Container(8028).HasPrevious</visible>
+					<visible>Control.HasFocus(8028) + Container(8028).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8028,1)</onclick>
-					<visible>Container(8028).HasNext</visible>
+					<visible>Control.HasFocus(8028) + Container(8028).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -4693,6 +4771,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8029).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8029">
@@ -4974,12 +5053,13 @@
 				<control type="button">
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8029,-1)</onclick>
-					<visible>Container(8029).HasPrevious</visible>
+					<visible>Control.HasFocus(8029) + Container(8029).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8029,1)</onclick>
-					<visible>Container(8029).HasNext</visible>
+					<visible>Control.HasFocus(8029) + Container(8029).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -4989,6 +5069,9 @@
 				<top>60</top>
 				<visible>!IsEmpty(Weather.Plugin) + Weather.IsFetched</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),Weather)</visible>
+				<visible>
+					!Skin.HasSetting(EnableLargeWidgets) | 
+					[Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="list" id="8030">
 					<animation effect="slide" start="0,0" end="120,0" time="0" condition="StringCompare(Container(8030).NumItems,3)">conditional</animation>
@@ -5015,6 +5098,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5024,7 +5108,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>50</left>
@@ -5074,6 +5158,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5083,7 +5168,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8030)</visible>
 						</control>
 						<control type="image">
@@ -5094,7 +5179,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8030)</visible>
 						</control>
 						<control type="label">
@@ -5154,6 +5239,174 @@
 				</control>
 			</control>
 			<control type="group">
+				<left>0</left>
+				<top>54</top>
+				<visible>!IsEmpty(Weather.Plugin) + Weather.IsFetched</visible>
+				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),Weather)</visible>
+				<visible>
+				[Skin.HasSetting(EnableLargeWidgets) + !Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]
+				</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<left>-20</left>
+					<top>-5</top>
+					<width>1320</width>
+					<height>295</height>
+					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+					<visible>IntegerGreaterThan(Container(8031).NumItems,0)</visible>
+				</control>
+				<control type="list" id="8031">
+					<animation effect="slide" start="0,0" end="488,0" time="0" condition="StringCompare(Container(8031).NumItems,1)">conditional</animation>
+					<animation effect="slide" start="0,0" end="366,0" time="0" condition="StringCompare(Container(8031).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="244,0" time="0" condition="StringCompare(Container(8031).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="122,0" time="0" condition="StringCompare(Container(8031).NumItems,4)">conditional</animation>
+					<left>28</left>
+					<top>0</top>
+					<width>1220</width>
+					<height>285</height>
+					<onleft>8031</onleft>
+					<onright>8031</onright>
+					<onup>21</onup>
+					<ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">610</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="285" width="245">
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>225</width>
+							<height>225</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<include>TextureBorderWidgets</include>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>15</top>
+							<width>145</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[B]$INFO[ListItem.Label][/B]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>235</top>
+							<width>225</width>
+							<height>20</height>
+							<font>font10</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>top</aligny>
+							<label>$INFO[ListItem.Property(Temperatures)]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>253</top>
+							<width>225</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="285" width="245">
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>225</width>
+							<height>225</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+							<include>TextureBorderWidgets</include>
+							<visible>Control.HasFocus(8031)</visible>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>225</width>
+							<height>225</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<include>TextureBorderWidgets</include>
+							<visible>!Control.HasFocus(8031)</visible>
+						</control>						
+						<control type="label">
+							<left>50</left>
+							<top>15</top>
+							<width>145</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[B]$INFO[ListItem.Label][/B]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>235</top>
+							<width>225</width>
+							<height>20</height>
+							<font>font10</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Temperatures)]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>253</top>
+							<width>225</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>253</top>
+							<width>225</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>Control.HasFocus(8031)</visible>
+						</control>
+					</focusedlayout>
+					<include>WeatherForecastContent</include>
+				</control>
+			</control>
+			<control type="group">
 				<!-- NextAired-->
 				<left>160</left>
 				<top>60</top>
@@ -5190,6 +5443,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5199,7 +5453,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -5244,6 +5498,7 @@
 							<width>240</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5253,7 +5508,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.icon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8032)</visible>
 						</control>
 						<control type="image">
@@ -5264,7 +5519,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8032)</visible>
 						</control>
 						<control type="image">
@@ -5321,12 +5576,13 @@
 				<control type="button">
 					<include>SmallWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8032,-1)</onclick>
-					<visible>Container(8032).HasPrevious</visible>
+					<visible>Control.HasFocus(8032) + Container(8032).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetEpisodeRight</include>
 					<onclick>Control.Move(8032,1)</onclick>
-					<visible>Container(8032).HasNext</visible>
+					<visible>Control.HasFocus(8032) + Container(8032).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5347,6 +5603,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8033).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8033">
@@ -5377,7 +5634,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -5424,7 +5681,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.icon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8033)</visible>
 						</control>
 						<control type="image">
@@ -5435,7 +5692,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8033)</visible>
 						</control>
 						<control type="image">
@@ -5493,11 +5750,13 @@
 					<include>LargeWidgetEpisodeLeft</include>
 					<onclick>Control.Move(8033,-1)</onclick>
 					<visible>Control.HasFocus(8033) + Container(8033).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetEpisodeRight</include>
 					<onclick>Control.Move(8033,1)</onclick>
 					<visible>Control.HasFocus(8033) + Container(8033).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 			<control type="group">
@@ -5536,6 +5795,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5545,7 +5805,7 @@
 							<texture background="true">$INFO[ListItem..Art(poster)]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -5568,6 +5828,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5577,7 +5838,7 @@
 							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8035)</visible>
 						</control>
 						<control type="image">
@@ -5588,7 +5849,7 @@
 							<texture>$INFO[ListItem.Art(poster)]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8035)</visible>
 						</control>
 						<control type="label">
@@ -5623,12 +5884,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8035,-1)</onclick>
-					<visible>Container(8035).HasPrevious</visible>
+					<visible>Control.HasFocus(8035) + Container(8035).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8035,1)</onclick>
-					<visible>Container(8035).HasNext</visible>
+					<visible>Control.HasFocus(8035) + Container(8035).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5649,6 +5911,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8036).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8036">
@@ -5679,7 +5942,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -5691,7 +5954,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8036)</visible>
 						</control>
 						<control type="image">
@@ -5702,7 +5965,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8036)</visible>
 						</control>
 					</focusedlayout>
@@ -5711,12 +5974,13 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8036,-1)</onclick>
-					<visible>Container(8036).HasPrevious</visible>
+					<visible>Control.HasFocus(8036) + Container(8036).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8036,1)</onclick>
-					<visible>Container(8036).HasNext</visible>
+					<visible>Control.HasFocus(8036) + Container(8036).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5755,6 +6019,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5764,7 +6029,7 @@
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -5787,6 +6052,7 @@
 							<width>180</width>
 							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -5796,7 +6062,7 @@
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8037)</visible>
 						</control>
 						<control type="image">
@@ -5807,7 +6073,7 @@
 							<texture>$INFO[ListItem.Thumb]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8037)</visible>
 						</control>
 						<control type="label">
@@ -5842,12 +6108,13 @@
 				<control type="button">
 					<include>SmallWidgetPosterLeft</include>
 					<onclick>Control.Move(8037,-1)</onclick>
-					<visible>Container(8037).HasPrevious</visible>
+					<visible>Control.HasFocus(8037) + Container(8037).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>SmallWidgetPosterRight</include>
 					<onclick>Control.Move(8037,1)</onclick>
-					<visible>Container(8037).HasNext</visible>
+					<visible>Control.HasFocus(8037) + Container(8037).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5867,6 +6134,7 @@
 					<width>1320</width>
 					<height>295</height>
 					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<visible>IntegerGreaterThan(Container(8038).NumItems,0)</visible>
 				</control>
 				<control type="list" id="8038">
@@ -5897,7 +6165,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -5909,7 +6177,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>Control.HasFocus(8038)</visible>
 						</control>
 						<control type="image">
@@ -5920,7 +6188,7 @@
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8038)</visible>
 						</control>
 					</focusedlayout>
@@ -5929,12 +6197,236 @@
 				<control type="button">
 					<include>LargeWidgetPosterLeft</include>
 					<onclick>Control.Move(8038,-1)</onclick>
-					<visible>Container(8038).HasPrevious</visible>
+					<visible>Control.HasFocus(8038) + Container(8038).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<include>LargeWidgetPosterRight</include>
 					<onclick>Control.Move(8038,1)</onclick>
-					<visible>Container(8038).HasNext</visible>
+					<visible>Control.HasFocus(8038) + Container(8038).HasNext</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</control>
+			<control type="group">
+				<!-- CustomWidgets-->
+				<left>190</left>
+				<top>60</top>
+				<visible>
+					!Skin.HasSetting(EnableLargeWidgets) | 
+					[Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]
+				</visible>
+				<include>CustomWidgetVisibility</include>
+				<include>VisibleFadeEffect</include>
+				<control type="list" id="8039">
+					<animation effect="slide" start="0,0" end="90,0" time="0" condition="StringCompare(Container(8039).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="180,0" time="0" condition="StringCompare(Container(8039).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="270,0" time="0" condition="StringCompare(Container(8039).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8039).NumItems,1)">conditional</animation>
+					<left>0</left>
+					<top>0</top>
+					<width>900</width>
+					<height>220</height>
+					<onleft>8039</onleft>
+					<onright>8039</onright>
+					<onup>21</onup>
+					<ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">610</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="220" width="180">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>180</width>
+							<height>220</height>
+							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>160</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<include>TextureBorderWidgets</include>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>185</top>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="220" width="180">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>180</width>
+							<height>220</height>
+							<texture border="15">RecentAddedBack.png</texture>
+							<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>160</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+							<include>TextureBorderWidgets</include>
+							<visible>Control.HasFocus(8039)</visible>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>160</width>
+							<height>170</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<include>TextureBorderWidgets</include>
+							<visible>!Control.HasFocus(8039)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>185</top>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>185</top>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(8039)</visible>
+						</control>
+					</focusedlayout>
+					<content target="video" limit="10">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+				</control>
+				<control type="button">
+					<include>SmallWidgetPosterLeft</include>
+					<onclick>Control.Move(8039,-1)</onclick>
+					<visible>Control.HasFocus(8039) + Container(8039).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="button">
+					<include>SmallWidgetPosterRight</include>
+					<onclick>Control.Move(8039,1)</onclick>
+					<visible>Control.HasFocus(8039) + Container(8039).HasNext</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</control>
+			<control type="group">
+				<left>0</left>
+				<top>54</top>
+				<visible>
+				[Skin.HasSetting(EnableLargeWidgets) + !Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]
+				</visible>
+				<include>CustomWidgetVisibility</include>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<left>-20</left>
+					<top>-5</top>
+					<width>1320</width>
+					<height>295</height>
+					<texture border="5">ContentPanel.png</texture>
+					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+					<visible>IntegerGreaterThan(Container(8040).NumItems,0)</visible>
+				</control>
+				<control type="list" id="8040">
+					<animation effect="slide" start="0,0" end="485,0" time="0" condition="StringCompare(Container(8040).NumItems,1)">conditional</animation>
+					<animation effect="slide" start="0,0" end="387,0" time="0" condition="StringCompare(Container(8040).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="290,0" time="0" condition="StringCompare(Container(8040).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="192,0" time="0" condition="StringCompare(Container(8040).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="96,0" time="0" condition="StringCompare(Container(8040).NumItems,5)">conditional</animation>
+					<left>58</left>
+					<top>0</top>
+					<width>1170</width>
+					<height>320</height>
+					<onleft>8040</onleft>
+					<onright>8040</onright>
+					<onup>21</onup>
+					<ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">610</ondown>
+					<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="285" width="195">
+						<control type="image">
+							<left>9</left>
+							<top>8</top>
+							<width>176</width>
+							<height>268</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<include>TextureBorderWidgets</include>
+						</control>
+					</itemlayout>
+					<focusedlayout height="285" width="195">
+						<control type="image">
+							<left>9</left>
+							<top>8</top>
+							<width>176</width>
+							<height>268</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+							<include>TextureBorderWidgets</include>
+							<visible>Control.HasFocus(8040)</visible>
+						</control>
+						<control type="image">
+							<left>9</left>
+							<top>8</top>
+							<width>176</width>
+							<height>268</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<include>TextureBorderWidgets</include>
+							<visible>!Control.HasFocus(8040)</visible>
+						</control>
+					</focusedlayout>
+					<content target="video" limit="10">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+				</control>
+				<control type="button">
+					<include>LargeWidgetPosterLeft</include>
+					<onclick>Control.Move(8040,-1)</onclick>
+					<visible>Control.HasFocus(8040) + Container(8040).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="button">
+					<include>LargeWidgetPosterRight</include>
+					<onclick>Control.Move(8040,1)</onclick>
+					<visible>Control.HasFocus(8040) + Container(8040).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -5948,6 +6440,7 @@
 				<width>180</width>
 				<height>220</height>
 				<texture border="15">RecentAddedBack.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>10</left>
@@ -5957,7 +6450,7 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 			</control>
 			<control type="label">
 				<left>15</left>
@@ -5980,6 +6473,7 @@
 				<width>180</width>
 				<height>220</height>
 				<texture border="15">RecentAddedBack.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>10</left>
@@ -5989,7 +6483,7 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 				<visible>Control.HasFocus(8026)</visible>
 			</control>
 			<control type="image">
@@ -6000,7 +6494,7 @@
 				<texture>$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 				<visible>!Control.HasFocus(8026)</visible>
 			</control>
 			<control type="label">
@@ -6041,7 +6535,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 			</control>
 		</itemlayout>
 		<focusedlayout height="285" width="195">
@@ -6053,7 +6547,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 				<visible>Control.HasFocus(8027)</visible>
 			</control>
 			<control type="image">
@@ -6064,7 +6558,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 				<visible>!Control.HasFocus(8027)</visible>
 			</control>
 		</focusedlayout>
@@ -6077,6 +6571,7 @@
 				<width>240</width>
 				<height>220</height>
 				<texture border="15">RecentAddedBack.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>10</left>
@@ -6086,7 +6581,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$VAR[EpisodeThumbImage]</texture>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 			</control>
 			<control type="label">
 				<left>20</left>
@@ -6122,6 +6617,7 @@
 				<width>240</width>
 				<height>220</height>
 				<texture border="15">RecentAddedBack.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>10</left>
@@ -6131,7 +6627,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$VAR[EpisodeThumbImage]</texture>
 				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 				<visible>Control.HasFocus(8028)</visible>
 			</control>
 			<control type="image">
@@ -6142,7 +6638,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$VAR[EpisodeThumbImage]</texture>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 				<visible>!Control.HasFocus(8028)</visible>
 			</control>
 			<control type="label">
@@ -6196,7 +6692,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$VAR[EpisodeThumbImage]</texture>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 			</control>
 			<control type="label">
 				<left>10</left>
@@ -6234,7 +6730,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$VAR[EpisodeThumbImage]</texture>
 				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 				<visible>Control.HasFocus(8029)</visible>
 			</control>
 			<control type="image">
@@ -6245,7 +6741,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture>$VAR[EpisodeThumbImage]</texture>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<include>TextureBorderWidgets</include>
 				<visible>!Control.HasFocus(8029)</visible>
 			</control>
 			<control type="label">
@@ -10499,7 +10995,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.1.NextDay)] $INFO[Window(home).Property(NextAired.1.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.1.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.1.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.1.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.1.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.1.NextDay))</visible>
 			</item>
 			<item>
@@ -10507,7 +11003,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.2.NextDay)] $INFO[Window(home).Property(NextAired.2.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.2.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.2.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.2.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.2.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.2.NextDay))</visible>
 			</item>
 			<item>
@@ -10515,7 +11011,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.3.NextDay)] $INFO[Window(home).Property(NextAired.3.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.3.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.3.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.3.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.3.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.3.NextDay))</visible>
 			</item>
 			<item>
@@ -10523,7 +11019,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.4.NextDay)] $INFO[Window(home).Property(NextAired.4.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.4.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.4.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.4.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.4.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.4.NextDay))</visible>
 			</item>
 			<item>
@@ -10531,7 +11027,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.5.NextDay)] $INFO[Window(home).Property(NextAired.5.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.5.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.5.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.5.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.5.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.5.NextDay))</visible>
 			</item>
 			<item>
@@ -10539,7 +11035,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.6.NextDay)] $INFO[Window(home).Property(NextAired.6.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.6.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.6.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.6.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.6.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.6.NextDay))</visible>
 			</item>
 			<item>
@@ -10547,7 +11043,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.7.NextDay)] $INFO[Window(home).Property(NextAired.7.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.7.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.7.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.7.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.7.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.7.NextDay))</visible>
 			</item>
 			<item>
@@ -10555,7 +11051,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.8.NextDay)] $INFO[Window(home).Property(NextAired.8.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.8.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.8.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.8.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.8.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.8.NextDay))</visible>
 			</item>
 			<item>
@@ -10563,7 +11059,7 @@
 				<label2>$INFO[Window(home).Property(NextAired.9.NextDay)] $INFO[Window(home).Property(NextAired.9.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.9.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.9.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.9.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.9.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.9.NextDay))</visible>
 			</item>
 			<item>
@@ -10571,9 +11067,34 @@
 				<label2>$INFO[Window(home).Property(NextAired.10.NextDay)] $INFO[Window(home).Property(NextAired.10.ShortTime)]</label2>
 				<icon>$INFO[Window(home).Property(NextAired.10.Art(fanart))]</icon>
 				<property name="Logo">$INFO[Window(home).Property(NextAired.10.Art(clearlogo))]</property>
-				<onclick>ActivateWindow(VideoLibrary,$INFO[Window(home).Property(NextAired.10.Library)],return)</onclick>
+				<onclick>ActivateWindow(Videos,$INFO[Window(home).Property(NextAired.10.Library)],return)</onclick>
 				<visible>!IsEmpty(Window(home).Property(NextAired.10.NextDay))</visible>
 			</item>
 		</content>
+	</include>
+	<include name="CustomWidgetVisibility">
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),VideoNode)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),UPnPMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentEpisodes)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomEpisodes)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedEpisodes)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomArtists)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentAlbums)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomAlbums)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedAlbums)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentConcerts)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomConcerts)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedConcerts)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),UnWatchedMovies)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),VideoPlayList)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),MusicPlayList)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),Weather)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),Favourites)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),NextAired)</visible>
+		<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),None)</visible>
+		<visible>!Skin.String(Container(9000).ListItem.Property(WidgetSet))</visible>
 	</include>
 </includes>

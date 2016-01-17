@@ -510,7 +510,7 @@ msgid "Show plot info on info screen"
 msgstr ""
 
 msgctxt "#31122"
-msgid "Enable busy animation"
+msgid "Hide EPG if RDS is present on channel window"
 msgstr ""
 
 msgctxt "#31123"
@@ -605,9 +605,9 @@ msgctxt "#31145"
 msgid "Plex"
 msgstr ""
 
-#msgctxt "#31146"
-#msgid "Select parent folder of [COLOR=white]kodi UPnp server[/COLOR] containing video and music libraries"
-#msgstr ""
+msgctxt "#31146"
+msgid "Enable busy animation"
+msgstr ""
 
 msgctxt "#31147"
 msgid "Setup UPnP library"
@@ -708,13 +708,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr ""
 
-#empty strings from id 31201 to 31202
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
 
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr ""
 
-#empty string with id 31204
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -752,7 +760,9 @@ msgctxt "#31213"
 msgid "Streams navigator"
 msgstr ""
 
-#empty strings from id 31214 to 31214
+msgctxt "#31214"
+msgid "Show addon names"
+msgstr ""
 
 msgctxt "#31215"
 msgid "Watch it later"
@@ -807,7 +817,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -950,7 +960,13 @@ msgctxt "#31269"
 msgid "Unfinished"
 msgstr ""
 
-#empty strings from id 31270 to 31271
+msgctxt "#31270"
+msgid "Ubuntu Normal"
+msgstr ""
+
+msgctxt "#31271"
+msgid "Ubuntu Bold"
+msgstr ""
 
 msgctxt "#31272"
 msgid "Enable holiday theme"
@@ -1129,7 +1145,7 @@ msgid "Last logged in"
 msgstr ""
 
 msgctxt "#31321"
-msgid "Karaoke song selector"
+msgid "Library mode"
 msgstr ""
 
 msgctxt "#31322"
@@ -1306,7 +1322,9 @@ msgctxt "#31368"
 msgid "Kryptonite"
 msgstr ""
 
-#empty strings from id 31367 to 31369
+msgctxt "#31369"
+msgid "Select main OSD colour"
+msgstr ""
 
 msgctxt "#31370"
 msgid "Instant"
@@ -1354,7 +1372,13 @@ msgctxt "#31383"
 msgid "Enable video artwork to show with OSD information"
 msgstr ""
 
-#empty strings from id 31384 to 31385
+msgctxt "#31384"
+msgid "Enable music artwork to show with OSD information"
+msgstr ""
+
+msgctxt "#31385"
+msgid "Hide text label in wide icon view"
+msgstr ""
 
 msgctxt "#31386"
 msgid "Music OSD settings"
@@ -1415,7 +1439,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr ""
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
 msgstr ""
 
 msgctxt "#31403"
@@ -1941,33 +1965,7 @@ msgctxt "#31942"
 msgid "YouTube"
 msgstr ""
 
-msgctxt "#31943"
-msgid "Choose a scraper"
-msgstr ""
-
-msgctxt "#31944"
-msgid "Current scraper"
-msgstr ""
-
-msgctxt "#31945"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr ""
-
-msgctxt "#31946"
-msgid "Track number"
-msgstr ""
-
-msgctxt "#31947"
-msgid "Memory used:"
-msgstr ""
-
-msgctxt "#31948"
-msgid "Created"
-msgstr ""
-
-#msgctxt "#31949"
-#msgid "Set fanart path"
-#msgstr ""
+#empty strings from id 31943 to 31949
 
 msgctxt "#31950"
 msgid "WEATHER"
@@ -2018,16 +2016,22 @@ msgid "Choose your song"
 msgstr ""
 
 msgctxt "#31962"
-msgid "Lyrics source"
+msgid "Reset paths to skin default"
 msgstr ""
 
 msgctxt "#31963"
-msgid "Album details"
+msgid "Reset fanart to skin default"
 msgstr ""
 
 msgctxt "#31964"
-msgid "Click button to play[CR][CR]Movie trailer"
+msgid "Use alternative background folder"
 msgstr ""
+
+msgctxt "#31965"
+msgid "Multi-image background time per image"
+msgstr ""
+
+#empty strings from id 31966 to 31968
 
 msgctxt "#31969"
 msgid "Airs"
@@ -2049,8 +2053,34 @@ msgctxt "#31973"
 msgid "DVD drive"
 msgstr ""
 
+#empty strings from id 31974 to 31990
+
+msgctxt "#31991"
+msgid "Item border size"
+msgstr ""
+
+msgctxt "#31992"
+msgid "Small"
+msgstr ""
+
+msgctxt "#31993"
+msgid "Medium"
+msgstr ""
+
+msgctxt "#31994"
+msgid "Large"
+msgstr ""
+
+msgctxt "#31995"
+msgid "Live weather"
+msgstr ""
+
 msgctxt "#31996"
 msgid "Shortcuts"
+msgstr ""
+
+msgctxt "#31997"
+msgid "Show clock on full screen video"
 msgstr ""
 
 msgctxt "#31998"

@@ -57,7 +57,7 @@
 				<height>390</height>
 				<aspectratio>scale</aspectratio>
 				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<visible>!Player.HasVideo</visible>
@@ -471,7 +471,7 @@
 				<height>174</height>
 				<aspectratio>scale</aspectratio>
 				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
-				<timeperimage>8000</timeperimage>
+				<include>BackgroundTimePerImage</include>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<visible>!Player.HasVideo</visible>
@@ -1076,7 +1076,7 @@
 					<height>430</height>
 					<aspectratio>scale</aspectratio>
 					<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
-					<timeperimage>8000</timeperimage>
+					<include>BackgroundTimePerImage</include>
 					<randomize>true</randomize>
 					<fadetime>1000</fadetime>
 					<visible>!Player.HasVideo</visible>
@@ -1132,7 +1132,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font10_title</font>
-						<textcolor>blue</textcolor>
+						<textcolor>$VAR[MainColorOne]</textcolor>
 						<visible>Container(5060).ListItem.HasEpg</visible>
 						<animation effect="fade" start="100" end="0" time="2000" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)">Conditional</animation>
 						<label>$INFO[Container(5060).ListItem.StartTime]</label>
@@ -1155,7 +1155,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font10_title</font>
-						<textcolor>blue</textcolor>
+						<textcolor>$VAR[MainColorOne]</textcolor>
 						<visible>Container(5060).ListItem.HasEpg</visible>
 						<animation effect="fade" start="100" end="0" time="2000" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)">Conditional</animation>
 						<label>$INFO[Container(5060).ListItem.EndTime]</label>
@@ -1200,7 +1200,7 @@
 						<width>690</width>
 						<height>20</height>
 						<font>font13</font>
-						<textcolor>blue</textcolor>
+						<textcolor>$VAR[MainColorOne]</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
@@ -1218,7 +1218,7 @@
 						<label>$INFO[ListItem.ChannelGroup]</label>
 						<align>right</align>
 						<aligny>center</aligny>
-						<textcolor>blue</textcolor>
+						<textcolor>$VAR[MainColorOne]</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<visible>!pvr.IsPlayingRadio</visible>
 					</control>

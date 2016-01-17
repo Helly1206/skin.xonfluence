@@ -18,7 +18,7 @@ msgstr ""
 
 msgctxt "#31000"
 msgid "Change your"
-msgstr ""
+msgstr "ปรับเปลี่ยน"
 
 msgctxt "#31001"
 msgid ":"
@@ -30,7 +30,7 @@ msgstr ""
 
 msgctxt "#31003"
 msgid "Power options"
-msgstr ""
+msgstr "ตัวเลือกด้านพลังงาน"
 
 msgctxt "#31004"
 msgid "Working..."
@@ -38,7 +38,7 @@ msgstr "ทำงานอยู่..."
 
 msgctxt "#31005"
 msgid "Hide information"
-msgstr ""
+msgstr "ซ่อนรายละเอียดข้อมูล"
 
 msgctxt "#31006"
 msgid "View options"
@@ -54,7 +54,7 @@ msgstr "เต็มจอ"
 
 msgctxt "#31009"
 msgid "Total duration"
-msgstr ""
+msgstr "รวมระยะเวลา"
 
 msgctxt "#31010"
 msgid "OpenELEC OS"
@@ -122,7 +122,7 @@ msgstr "รายการ"
 
 msgctxt "#31026"
 msgid "Misc options"
-msgstr ""
+msgstr "ตัวเลือกอื่นๆ"
 
 msgctxt "#31027"
 msgid "Location"
@@ -130,7 +130,7 @@ msgstr "ที่ตั้ง"
 
 msgctxt "#31028"
 msgid "Poster wrap"
-msgstr ""
+msgstr "ย่อโปสเตอร์"
 
 msgctxt "#31029"
 msgid "Fanart"
@@ -142,11 +142,11 @@ msgstr ""
 
 msgctxt "#31031"
 msgid "Pic thumbs"
-msgstr ""
+msgstr "รูปย่อของภาพ"
 
 msgctxt "#31032"
 msgid "Image wrap"
-msgstr ""
+msgstr "ย่อส่วนภาพ"
 
 msgctxt "#31033"
 msgid "Info"
@@ -178,7 +178,7 @@ msgstr "การกระทำ"
 
 msgctxt "#31040"
 msgid "Now playing"
-msgstr ""
+msgstr "ขณะนี้กำลังเล่น"
 
 msgctxt "#31041"
 msgid "UPnP error"
@@ -206,7 +206,7 @@ msgstr "ค้นหา"
 
 msgctxt "#31048"
 msgid "Visualisation presets"
-msgstr ""
+msgstr "ชุดรูปแบบการแสดงแสงสี"
 
 msgctxt "#31049"
 msgid "End time"
@@ -254,10 +254,18 @@ msgstr "แฟ้มนี้ซ้อนกันอยู่เลือกส
 
 msgctxt "#31061"
 msgid "Current selected"
-msgstr ""
+msgstr "ที่เลือกในปัจจุบัน"
 
 msgctxt "#31062"
 msgid "Episode backdrop"
+msgstr ""
+
+msgctxt "#31063"
+msgid "Show volume buttons"
+msgstr ""
+
+msgctxt "#31064"
+msgid "Volume buttons small jump"
 msgstr ""
 
 msgctxt "#31065"
@@ -388,6 +396,14 @@ msgctxt "#31096"
 msgid "Enable suggested movies or TV shows info"
 msgstr ""
 
+msgctxt "#31097"
+msgid "Enable Floor Return Buttons (for touch)"
+msgstr ""
+
+msgctxt "#31098"
+msgid "Top left widget on all screens"
+msgstr ""
+
 msgctxt "#31099"
 msgid "Enable [COLOR=grey3](Slower)[/COLOR] File system search for additional artwork"
 msgstr ""
@@ -406,11 +422,11 @@ msgstr "พื้นหลัง"
 
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slideshow"
-msgstr ""
+msgstr "แสดง \"หยุดชั่วขณะ\" ในการนำเสนอภาพนิ่ง"
 
 msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
-msgstr ""
+msgstr "เล่นตัวอย่างภาพยนตร์ในหน้าต่าง [COLOR=grey3](กล่องโต้ตอบข้อมูลวิดีโอเท่านั้น)[/COLOR]"
 
 msgctxt "#31105"
 msgid "Artwork"
@@ -422,11 +438,11 @@ msgstr "ตัวเลือก อื่นๆ"
 
 msgctxt "#31107"
 msgid "Hide flagging read from video filenames [COLOR=grey3](e.g. Blu-ray, HD-DVD)[/COLOR]"
-msgstr ""
+msgstr "ซ่อนป้ายกำกับ ที่อ่านได้จากชื่อแฟ้มวิดีโอ [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
-msgstr ""
+msgstr "ซ่อนปุ่มเมนูหลัก"
 
 msgctxt "#31109"
 msgid "Enable custom background"
@@ -458,22 +474,30 @@ msgstr ""
 
 msgctxt "#31116"
 msgid "Show recently added albums"
-msgstr ""
+msgstr "แสดงอัลบัมที่เพิ่งเพิ่ม"
 
 msgctxt "#31117"
 msgid "Show recently added videos"
-msgstr ""
+msgstr "แสดงวิดีโอที่เพิ่งเพิ่ม"
 
 msgctxt "#31118"
 msgid "Home page programs submenu"
-msgstr ""
+msgstr "หน้าหลัก เมนูย่อยโปรแกรม"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
+msgstr "ซ่อนพื้นหลังแฟนอาร์ต"
+
+msgctxt "#31120"
+msgid "Hide page count info"
+msgstr ""
+
+msgctxt "#31121"
+msgid "Show plot info on info screen"
 msgstr ""
 
 msgctxt "#31122"
-msgid "Enable busy animation"
+msgid "Hide EPG if RDS is present on channel window"
 msgstr ""
 
 msgctxt "#31123"
@@ -482,19 +506,19 @@ msgstr ""
 
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr ""
+msgstr "แสดงพื้นหลังวิดีโอ \"ที่กำลังเล่น\""
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr ""
+msgstr "แสดงพื้นหลังแสงสีประกอบเพลง \"ที่กำลังเล่น\""
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "เล่นเพลงธีมรายการทีวีในคลังข้อมูลวิดีโอ (ส่วนเสริม TvTunes)"
+msgstr ""
 
 msgctxt "#31127"
 msgid "TvTunes"
-msgstr "TvTunes"
+msgstr ""
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -502,23 +526,35 @@ msgstr "เนื้อเพลง"
 
 msgctxt "#31129"
 msgid "Hide fanart in full screen visualisation"
+msgstr "ซ่อนแฟนอาร์ตในการแสดงแสงสีแบบเต็มจอ"
+
+msgctxt "#31130"
+msgid "Hide favorites button"
+msgstr ""
+
+msgctxt "#31131"
+msgid "Hide top left info on windows"
 msgstr ""
 
 msgctxt "#31132"
 msgid "Lyrics add-on"
+msgstr "ส่วนเสริมเนื้อเพลง"
+
+msgctxt "#31133"
+msgid "Minimize on exit button"
 msgstr ""
 
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
-msgstr ""
+msgstr "หน้าหลัก เมนูย่อย \"วิดีโอ\""
 
 msgctxt "#31135"
 msgid "Home page \"Music\" submenu"
-msgstr ""
+msgstr "หน้าหลัก เมนูย่อย \"เพลง\""
 
 msgctxt "#31136"
 msgid "Home page \"Pictures\" submenu"
-msgstr ""
+msgstr "หน้าหลัก เมนูย่อย \"รูปภาพ\""
 
 msgctxt "#31137"
 msgid "Enable low main menu bar"
@@ -556,6 +592,10 @@ msgctxt "#31145"
 msgid "Plex"
 msgstr ""
 
+msgctxt "#31146"
+msgid "Enable busy animation"
+msgstr ""
+
 msgctxt "#31147"
 msgid "Setup UPnP library"
 msgstr ""
@@ -572,8 +612,20 @@ msgctxt "#31150"
 msgid "Select UPnP server"
 msgstr ""
 
+msgctxt "#31151"
+msgid "Restart kodi instead of system reboot"
+msgstr ""
+
 msgctxt "#31152"
 msgid "Enable kiosk mode"
+msgstr ""
+
+msgctxt "#31153"
+msgid "Show minimal picture info"
+msgstr ""
+
+msgctxt "#31154"
+msgid "Notifications at top left"
 msgstr ""
 
 msgctxt "#31185"
@@ -640,13 +692,25 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "ปุ่มลัด"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr ""
+
 msgctxt "#31203"
 msgid "Choose your song"
+msgstr "เลือกเพลงของคุณ"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
 msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
-msgstr ""
+msgstr "แหล่งเนื้อเพลง"
 
 msgctxt "#31206"
 msgid "Found"
@@ -654,11 +718,11 @@ msgstr "ค้นพบ"
 
 msgctxt "#31207"
 msgid "Find more items"
-msgstr ""
+msgstr "ค้นหารายการเพิ่มเติม"
 
 msgctxt "#31208"
 msgid "Upcoming episodes"
-msgstr ""
+msgstr "ตอนที่กำลังจะมา"
 
 msgctxt "#31209"
 msgid "Global search"
@@ -674,6 +738,14 @@ msgstr ""
 
 msgctxt "#31212"
 msgid "Streaming media"
+msgstr ""
+
+msgctxt "#31213"
+msgid "Streams navigator"
+msgstr ""
+
+msgctxt "#31214"
+msgid "Show addon names"
 msgstr ""
 
 msgctxt "#31215"
@@ -729,7 +801,7 @@ msgid "HD-movies"
 msgstr ""
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr ""
 
 msgctxt "#31229"
@@ -872,6 +944,14 @@ msgctxt "#31269"
 msgid "Unfinished"
 msgstr ""
 
+msgctxt "#31270"
+msgid "Ubuntu Normal"
+msgstr ""
+
+msgctxt "#31271"
+msgid "Ubuntu Bold"
+msgstr ""
+
 msgctxt "#31272"
 msgid "Enable holiday theme"
 msgstr ""
@@ -962,11 +1042,11 @@ msgstr ""
 
 msgctxt "#31300"
 msgid "Current temperature"
-msgstr ""
+msgstr "อุณหภูมิปัจจุบัน"
 
 msgctxt "#31301"
 msgid "Last updated"
-msgstr ""
+msgstr "ปรับปรุงล่าสุด"
 
 msgctxt "#31302"
 msgid "Outlook - "
@@ -990,19 +1070,19 @@ msgstr ""
 
 msgctxt "#31307"
 msgid "Hide fanart"
-msgstr ""
+msgstr "ซ่อนแฟนอาร์ต"
 
 msgctxt "#31308"
 msgid "Movie details"
-msgstr ""
+msgstr "รายละเอียดภาพยนตร์"
 
 msgctxt "#31309"
 msgid "Memory used:"
-msgstr ""
+msgstr "หน่วยความจำที่ใช้:"
 
 msgctxt "#31310"
 msgid "Track number"
-msgstr ""
+msgstr "หมายเลขแทรค"
 
 msgctxt "#31311"
 msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
@@ -1010,15 +1090,15 @@ msgstr "รูปภาพแฟนอาร์ต[CR][CR]ไม่มี[CR][CR
 
 msgctxt "#31312"
 msgid "Current scraper"
-msgstr ""
+msgstr "ตัวดึงข้อมูลปัจจุบัน"
 
 msgctxt "#31313"
 msgid "Choose a scraper"
-msgstr ""
+msgstr "เลือกตัวดึงข้อมูล"
 
 msgctxt "#31314"
 msgid "Content scanning options"
-msgstr ""
+msgstr "ตัวเลือกการสืบค้นเนื้อหา"
 
 msgctxt "#31315"
 msgid "Submenu item"
@@ -1030,7 +1110,7 @@ msgstr ""
 
 msgctxt "#31317"
 msgid "Set fanart path"
-msgstr ""
+msgstr "กำหนดเส้นทางของแฟนอาร์ต"
 
 msgctxt "#31318"
 msgid "Up one level"
@@ -1038,14 +1118,14 @@ msgstr ""
 
 msgctxt "#31319"
 msgid "Selected profile"
-msgstr ""
+msgstr "โปรไฟล์ที่เลือก"
 
 msgctxt "#31320"
 msgid "Last logged in"
-msgstr ""
+msgstr "เข้าระบบล่าสุด"
 
 msgctxt "#31321"
-msgid "Karaoke song selector"
+msgid "Library mode"
 msgstr ""
 
 msgctxt "#31322"
@@ -1062,7 +1142,7 @@ msgstr ""
 
 msgctxt "#31325"
 msgid "Playlist options"
-msgstr ""
+msgstr "ตัวเลือกของรายการเล่น"
 
 msgctxt "#31326"
 msgid "Created"
@@ -1074,7 +1154,7 @@ msgstr "ความละเอียดจอ"
 
 msgctxt "#31328"
 msgid "Recently added"
-msgstr ""
+msgstr "ที่เพิ่งเพิ่ม"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
@@ -1082,11 +1162,11 @@ msgstr "[B]ตั้งค่า ตัวจับเวลา![/B] [COLOR=grey
 
 msgctxt "#31330"
 msgid "Click button to play[CR][CR]movie trailer"
-msgstr ""
+msgstr "คลิกปุ่มเพื่อเล่น[CR][CR]ตัวอย่างภาพยนตร์"
 
 msgctxt "#31331"
 msgid "Album details"
-msgstr ""
+msgstr "รายละเอียดอัลบั้ม"
 
 msgctxt "#31332"
 msgid "Alternate fanArt"
@@ -1158,7 +1238,7 @@ msgstr "หยุด"
 
 msgctxt "#31353"
 msgid "Fast forward"
-msgstr ""
+msgstr "ไปหน้าแบบเร็ว"
 
 msgctxt "#31354"
 msgid "Rewind"
@@ -1170,7 +1250,7 @@ msgstr "เมนู ภาพยนตร์"
 
 msgctxt "#31356"
 msgid "Download subtitles"
-msgstr ""
+msgstr "ดาวน์โหลดคำบรรยาย"
 
 msgctxt "#31359"
 msgid "User video OSD button"
@@ -1212,6 +1292,10 @@ msgctxt "#31368"
 msgid "Kryptonite"
 msgstr ""
 
+msgctxt "#31369"
+msgid "Select main OSD colour"
+msgstr ""
+
 msgctxt "#31370"
 msgid "Instant"
 msgstr ""
@@ -1232,6 +1316,14 @@ msgctxt "#31374"
 msgid "Enable video codec info on pause and OSD menu"
 msgstr ""
 
+msgctxt "#31375"
+msgid "Use graphical textures on keyboards"
+msgstr ""
+
+msgctxt "#31376"
+msgid "Use autocomplete on keyboards"
+msgstr ""
+
 msgctxt "#31380"
 msgid "Enable playlist widget script"
 msgstr ""
@@ -1246,6 +1338,14 @@ msgstr ""
 
 msgctxt "#31383"
 msgid "Enable video artwork to show with OSD information"
+msgstr ""
+
+msgctxt "#31384"
+msgid "Enable music artwork to show with OSD information"
+msgstr ""
+
+msgctxt "#31385"
+msgid "Hide text label in wide icon view"
 msgstr ""
 
 msgctxt "#31386"
@@ -1266,7 +1366,7 @@ msgstr "หน้าตาพื้นฐาน"
 
 msgctxt "#31391"
 msgid "Skin default with no caps"
-msgstr ""
+msgstr "ค่าเริ่มต้นของสกินโดยไม่ใช้ caps"
 
 msgctxt "#31392"
 msgid "Arial based"
@@ -1305,16 +1405,16 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]ปรับเปลี่ยนการตั้งค่าวิดีโอ[/B][CR][CR]จัดการคลังข้อมูลวิดีโอของคุณ · ตั้งค่าตัวเลือกการเล่นวิดีโอ · เปลี่ยนตัวเลือกจัดเรียงรายการวิดีโอ[CR]ตั้งค่าแบบอักษรคำบรรยาย"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
-msgstr "[B]ปรับเปลี่ยนการตั้งค่าเพลง[/B][CR][CR]จัดการคลังข้อมูลเพลงของคุณ · ตั้งค่าตัวเลือกการเล่นเพลง · เปลี่ยนตัวเลือกจัดเรียงรายการเพลง[CR]ตั้งค่าการส่งเพลง · ตั้งค่าตัวเลือกคาราโอเกะ"
+msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
+msgstr ""
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
-msgstr ""
+msgstr "[B]กำหนดการตั้งค่ารูปภาพ[/B][CR][CR]ตั้งค่าตัวเลือกจัดเรียงรายการรูปภาพ · กำหนดค่าแสดงภาพนิ่ง"
 
 msgctxt "#31404"
 msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set various cities to collect weather information"
-msgstr ""
+msgstr "[B]กำหนดการตั้งค่าสภาพอากาศ[/B][CR][CR]กำหนดเมืองต่างๆ ในการเก็บรวบรวมข้อมูลสภาพอากาศ"
 
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
@@ -1326,7 +1426,7 @@ msgstr ""
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed add-ons · Browse for and install add-ons from kodi.tv[CR]Modify add-on settings"
-msgstr ""
+msgstr "[B]กำหนดค่าส่วนเสริม[/B][CR][CR]จัดการส่วนเสริมที่ติดตั้งไว้ของคุณ · เรียกดูและติดตั้งส่วนเสริมจาก kodi.tv[CR]ปรับแต่งการตั้งค่าส่วนเสริม"
 
 msgctxt "#31409"
 msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
@@ -1338,11 +1438,11 @@ msgstr "[B]ปรับเปลี่ยนการตั้งค่าบร
 
 msgctxt "#31411"
 msgid "First run help..."
-msgstr ""
+msgstr "ช่วยเหลือในการเริ่มใช้งาน..."
 
 msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
-msgstr ""
+msgstr "แท็บนี้มีเครื่องหมายที่แสดงว่า มีเมนูหลบอยู่ข้างของหน้าต่าง ซึ่งมีเมนูการปรับแต่งพิเศษสำหรับส่วนนี้ ในการเข้าถึงเมนูนี้, ให้เลื่อนลูกศรซ้ายด้วยรีโมทหรือคีย์บอร์ด หรือวางตัวชี้ของเมาท์เหนือแท็บ [CR][CR]กด \"ตกลง\" เพื่อปิดกล่องโต้ตอบนี้ ซึ่งจะไม่แสดงขึ้นมาอีก"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
@@ -1358,7 +1458,7 @@ msgstr "ลงชื่อเข้าใช้"
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr ""
+msgstr "เลือกโปรไฟล์ผู้ใช้ Kodi ของคุณ[CR]เพื่อเข้าสู่ระบบและดำเนินการต่อไป"
 
 msgctxt "#31422"
 msgid "Show or hide the login screen at startup."
@@ -1534,7 +1634,7 @@ msgstr ""
 
 msgctxt "#31501"
 msgid "Scheduled time"
-msgstr ""
+msgstr "เวลาที่กำหนด"
 
 msgctxt "#31502"
 msgid "TV"
@@ -1542,15 +1642,15 @@ msgstr "ทีวี"
 
 msgctxt "#31503"
 msgid "Add group"
-msgstr ""
+msgstr "เพิ่มกลุ่ม"
 
 msgctxt "#31504"
 msgid "Rename group"
-msgstr ""
+msgstr "เปลี่ยนชื่อกลุ่ม"
 
 msgctxt "#31505"
 msgid "Delete group"
-msgstr ""
+msgstr "ลบกลุ่ม"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"
@@ -1558,15 +1658,15 @@ msgstr "กลุ่มทีมีอยู่"
 
 msgctxt "#31509"
 msgid "Channel group"
-msgstr ""
+msgstr "กลุ่มช่องสัญญาณ"
 
 msgctxt "#31510"
 msgid "Timer set"
-msgstr ""
+msgstr "กำหนดตัวตั้งเวลา"
 
 msgctxt "#31511"
 msgid "Channel options"
-msgstr ""
+msgstr "ตัวเลือกของช่อง"
 
 msgctxt "#31600"
 msgid "Transcoding settings"
@@ -1682,19 +1782,19 @@ msgstr ""
 
 msgctxt "#31901"
 msgid "36-hour forecast"
-msgstr ""
+msgstr "พยากรณ์ใน 36 ชั่วโมง"
 
 msgctxt "#31902"
 msgid "Hourly forecast"
-msgstr ""
+msgstr "พยากรณ์รายชั่วโมง"
 
 msgctxt "#31903"
 msgid "Weekend forecast"
-msgstr ""
+msgstr "พยากรณ์สุดสัปดาห์"
 
 msgctxt "#31904"
 msgid "Daily forecast"
-msgstr ""
+msgstr "พยากรณ์ประจำวัน"
 
 msgctxt "#31905"
 msgid "Forecast"
@@ -1702,7 +1802,7 @@ msgstr "พยากรณ์"
 
 msgctxt "#31908"
 msgid "Chance of precipitation"
-msgstr ""
+msgstr "โอกาสเกิดฝน"
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."
@@ -1804,28 +1904,8 @@ msgctxt "#31941"
 msgid "Enable running artwork downloader automaticaly after updating library"
 msgstr ""
 
-msgctxt "#31943"
-msgid "Choose a scraper"
-msgstr ""
-
-msgctxt "#31944"
-msgid "Current scraper"
-msgstr ""
-
-msgctxt "#31945"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr ""
-
-msgctxt "#31946"
-msgid "Track number"
-msgstr ""
-
-msgctxt "#31947"
-msgid "Memory used:"
-msgstr ""
-
-msgctxt "#31948"
-msgid "Created"
+msgctxt "#31942"
+msgid "YouTube"
 msgstr ""
 
 msgctxt "#31950"
@@ -1877,15 +1957,19 @@ msgid "Choose your song"
 msgstr ""
 
 msgctxt "#31962"
-msgid "Lyrics source"
+msgid "Reset paths to skin default"
 msgstr ""
 
 msgctxt "#31963"
-msgid "Album details"
+msgid "Reset fanart to skin default"
 msgstr ""
 
 msgctxt "#31964"
-msgid "Click button to play[CR][CR]Movie trailer"
+msgid "Use alternative background folder"
+msgstr ""
+
+msgctxt "#31965"
+msgid "Multi-image background time per image"
 msgstr ""
 
 msgctxt "#31969"
@@ -1908,8 +1992,32 @@ msgctxt "#31973"
 msgid "DVD drive"
 msgstr ""
 
+msgctxt "#31991"
+msgid "Item border size"
+msgstr ""
+
+msgctxt "#31992"
+msgid "Small"
+msgstr ""
+
+msgctxt "#31993"
+msgid "Medium"
+msgstr ""
+
+msgctxt "#31994"
+msgid "Large"
+msgstr ""
+
+msgctxt "#31995"
+msgid "Live weather"
+msgstr ""
+
 msgctxt "#31996"
 msgid "Shortcuts"
+msgstr ""
+
+msgctxt "#31997"
+msgid "Show clock on full screen video"
 msgstr ""
 
 msgctxt "#31998"
