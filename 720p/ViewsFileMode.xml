@@ -34,7 +34,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>Window.IsVisible(pictures)</visible>
 					</control>
 					<control type="label">
@@ -141,7 +141,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label] - $INFO[ListItem.PictureDatetime]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>Window.IsVisible(pictures)</visible>
 					</control>
 					<control type="label">
@@ -690,7 +690,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>Window.IsVisible(pictures)</visible>
 					</control>
 					<control type="label">
@@ -815,7 +815,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>Window.IsVisible(pictures)</visible>
 					</control>
 					<control type="label">
