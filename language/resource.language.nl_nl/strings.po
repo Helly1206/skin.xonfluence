@@ -30,7 +30,7 @@ msgstr "Activeer handmatige opening van media weergave glij menu"
 
 msgctxt "#31003"
 msgid "Power options"
-msgstr "vermogen opties"
+msgstr "Energiebeheer"
 
 msgctxt "#31004"
 msgid "Working..."
@@ -122,7 +122,7 @@ msgstr "Items"
 
 msgctxt "#31026"
 msgid "Misc options"
-msgstr "Diverse Opties"
+msgstr "Overige opties"
 
 msgctxt "#31027"
 msgid "Location"
@@ -442,7 +442,7 @@ msgstr "Verberg markeringen gelezen uit bestandsnamen[COLOR=grey3](Bijv. Blu-ray
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
-msgstr "Verberg hoofd menu knoppen"
+msgstr "Verberg knoppen in het hoofdmenu"
 
 msgctxt "#31109"
 msgid "Enable custom background"
@@ -506,7 +506,7 @@ msgstr "Popup:"
 
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "Toon achtergrond \"nu afspelend\" video"
+msgstr "Toon achtergrond \"Nu afspelend\" video"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
@@ -564,7 +564,7 @@ msgctxt "#31138"
 msgid "Play party mode music on screensaver"
 msgstr "Speel feest modus muziek bij schermbeveiliging"
 
-msgctxt "#31339"
+msgctxt "#31139"
 msgid "Enable automatic fullscreen music playback"
 msgstr "Activeer automatisch volledig scherm bij muziek afspelen"
 
@@ -627,6 +627,10 @@ msgstr "Laat minimale foto info zien"
 msgctxt "#31154"
 msgid "Notifications at top left"
 msgstr "Notificaties linksboven"
+
+msgctxt "#31155"
+msgid "Show global search button on bottom left"
+msgstr "Laat globaal zoeken know linksonder zien"
 
 msgctxt "#31185"
 msgid "Random songs"
@@ -1196,6 +1200,10 @@ msgctxt "#31338"
 msgid "Favourites window"
 msgstr "Favorieten scherm"
 
+msgctxt "#31339"
+msgid "User video OSD button user selection"
+msgstr "Gebruiker video OSD knop selectie"
+
 msgctxt "#31340"
 msgid "Enable logo artwork for all media"
 msgstr "Activeer logo artwork voor alle media"
@@ -1215,6 +1223,10 @@ msgstr "Art downloaden"
 msgctxt "#31344"
 msgid "Extra fanart"
 msgstr "Extra fanart"
+
+msgctxt "#31345"
+msgid "Show user video OSD button"
+msgstr "Laat gebruiker video OSD knop zien"
 
 msgctxt "#31346"
 msgid "Up one level"
@@ -2027,3 +2039,4 @@ msgstr "Recent toegevoegd"
 msgctxt "#31999"
 msgid "Resolution"
 msgstr "Resolutie"
+

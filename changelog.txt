@@ -1,3 +1,20 @@
+[B]3.2.2[/B]
+- Remove the dash before the displayed picture date if no date can be found #417
+- Wide view: restore number-of-items-per-page to 10 instead of 8 when no label selected #416
+- Fixed negated hide label for wide ange view #416
+- Updated wide view layout with label (now 8 complete items are displayed,and selected text is displayed correctly)
+- Fixed position of chapter count on full screen video when mouse input enabled
+- Synced with latest changes on confluence jarvis
+- Moved extended progressbar a little bit to the left to prevent possible overlap
+- Added 3 extra mainmenu item options and 3 extra submenu item options for better configurability
+- Solved bug for displaying logo for R-rated movies #471
+- Solved bug in "User videoOSD button" that never displayed on the video OSD #463
+- Added record button for stream if dreamcather addon installed for video and audio #464
+- Added possiblility to display user video osd button in music OSD and adding a user command to this button #488
+- Added possibility to hide skin settings by setting 'HideSkinSettings'. This setting can only be set in the XML-file.
+- Added an option to move Global Search to the bottom (next to Favorites and Shutdown) #432
+- Fixed bug in extrathumbs slideshow in Media Info and Media Info 3 view #441
+
 [B]3.2.1[/B]
 - Fixed bug in system submenu editing items #359
 - Added Events to default system submenu

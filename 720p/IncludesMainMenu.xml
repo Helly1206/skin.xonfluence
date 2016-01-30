@@ -328,6 +328,63 @@
 				<visible>!StringCompare(Skin.String(HomeItem.12.Type),Radio) | [StringCompare(Skin.String(HomeItem.12.Type),Radio) + PVR.HasRadioChannels]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.12.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.12.Type),LiveTV) + PVR.HasTVChannels]</visible>
 			</item>
+			<item id="13">
+				<description>Home Menu Item Thirteen</description>
+				<label>$INFO[Skin.String(HomeItem.13.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemThirteen,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.13.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.13.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.13.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.13.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.13.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.13.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.13.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.13.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistThirteen.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.13.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.13.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.13.Type),Radio) | [StringCompare(Skin.String(HomeItem.13.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.13.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.13.Type),LiveTV) + PVR.HasTVChannels]</visible>
+			</item>
+			<item id="14">
+				<description>Home Menu Item Fourteen</description>
+				<label>$INFO[Skin.String(HomeItem.14.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemFourteen,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.14.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.14.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.14.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.14.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.14.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.14.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.14.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.14.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFourteen.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.14.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.14.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.14.Type),Radio) | [StringCompare(Skin.String(HomeItem.14.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.14.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.14.Type),LiveTV) + PVR.HasTVChannels]</visible>
+			</item>
+			<item id="15">
+				<description>Home Menu Item Fifteen</description>
+				<label>$INFO[Skin.String(HomeItem.15.Label)]</label>
+				<onclick>SetProperty(MenuItemActive,ItemFifteen,Home)</onclick>
+				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.15.Type)],Home)</onclick>
+				<onclick>SetProperty(MenuBackground,$INFO[Skin.String(HomeItem.15.Display)],Home)</onclick>
+				<onclick>$INFO[Skin.String(HomeItem.15.Path)]</onclick>
+				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+				<thumb>$INFO[Skin.String(HomeItem.15.Fanart)]</thumb>
+				<property name="SubMenu">$INFO[Skin.String(HomeItem.15.Sub)]</property>
+				<property name="HiLiteItem">$INFO[Skin.String(HomeItem.15.Type)]</property>
+				<property name="AddOnSet">$INFO[Skin.String(HomeItem.15.Addon)]</property>
+				<property name="WidgetSet">$INFO[Skin.String(HomeItem.15.Widget)]</property>
+				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFifteen.Type)]</property>
+				<property name="Background">$INFO[Skin.String(HomeItem.15.Display)]</property>
+				<visible>!IsEmpty(Skin.String(HomeItem.15.Path))</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.15.Type),Radio) | [StringCompare(Skin.String(HomeItem.15.Type),Radio) + PVR.HasRadioChannels]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.15.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.15.Type),LiveTV) + PVR.HasTVChannels]</visible>
+			</item>
 		</content>
 	</include>
 	<include name="DefaultInitialSetup">

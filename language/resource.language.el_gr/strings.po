@@ -18,7 +18,7 @@ msgstr ""
 
 msgctxt "#31000"
 msgid "Change your"
-msgstr "Αλλάξτε"
+msgstr "Αλλαγή"
 
 msgctxt "#31001"
 msgid ":"
@@ -30,7 +30,7 @@ msgstr ""
 
 msgctxt "#31003"
 msgid "Power options"
-msgstr "Επιλογές Ισχύος"
+msgstr "Επιλογές Ενέργειας"
 
 msgctxt "#31004"
 msgid "Working..."
@@ -130,7 +130,7 @@ msgstr "Τοποθεσία"
 
 msgctxt "#31028"
 msgid "Poster wrap"
-msgstr "Wrap αφίσας"
+msgstr "Αφίσες"
 
 msgctxt "#31029"
 msgid "Fanart"
@@ -142,11 +142,11 @@ msgstr ""
 
 msgctxt "#31031"
 msgid "Pic thumbs"
-msgstr "Εικόνα επισκοπήσεων"
+msgstr "Μικρογραφίες"
 
 msgctxt "#31032"
 msgid "Image wrap"
-msgstr "Wrap εικόνα"
+msgstr "Εικόνες"
 
 msgctxt "#31033"
 msgid "Info"
@@ -178,7 +178,7 @@ msgstr "Ενέργειες"
 
 msgctxt "#31040"
 msgid "Now playing"
-msgstr "Αναπαραγωγή σε εκτέλεση"
+msgstr "Τώρα εκτελείται"
 
 msgctxt "#31041"
 msgid "UPnP error"
@@ -498,7 +498,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr ""
+msgstr "Απόκρυψη EPG αν το RDS είναι στο παράθυρο καναλιών"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -564,7 +564,7 @@ msgctxt "#31138"
 msgid "Play party mode music on screensaver"
 msgstr ""
 
-msgctxt "#31339"
+msgctxt "#31139"
 msgid "Enable automatic fullscreen music playback"
 msgstr ""
 
@@ -626,6 +626,10 @@ msgstr ""
 
 msgctxt "#31154"
 msgid "Notifications at top left"
+msgstr ""
+
+msgctxt "#31155"
+msgid "Show global search button on bottom left"
 msgstr ""
 
 msgctxt "#31185"
@@ -1196,6 +1200,10 @@ msgctxt "#31338"
 msgid "Favourites window"
 msgstr ""
 
+msgctxt "#31339"
+msgid "User video OSD button user selection"
+msgstr ""
+
 msgctxt "#31340"
 msgid "Enable logo artwork for all media"
 msgstr ""
@@ -1214,6 +1222,10 @@ msgstr ""
 
 msgctxt "#31344"
 msgid "Extra fanart"
+msgstr ""
+
+msgctxt "#31345"
+msgid "Show user video OSD button"
 msgstr ""
 
 msgctxt "#31346"
@@ -1398,15 +1410,15 @@ msgstr ""
 
 msgctxt "#31400"
 msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver"
-msgstr "[B]ΡΥΘΜΙΣΕΙΣ ΕΞΑΤΟΜΙΚΕΥΣΗΣ ΕΜΦΑΝΙΣΗΣ[/B][CR][CR]Αλλαγή αμφίεσης · Αλλαγή χώρας και γλώσσας συστήματος · Επιλογές καταλόγου αρχείων[CR]Προσαρμογή της προφύλαξης οθόνης"
+msgstr "[B]ΔΙΑΜΟΡΦΩΣΗ ΡΥΘΜΙΣΕΩΝ ΕΞΑΤΟΜΙΚΕΥΣΗΣ[/B][CR][CR]Αλλαγή αμφίεσης · Αλλαγή χώρας και γλώσσας συστήματος · Επιλογές καταλόγου αρχείων[CR]Προσαρμογή της προφύλαξης οθόνης"
 
 msgctxt "#31401"
 msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
-msgstr "[B]ΡΥΘΜΙΣΕΙΣ ΕΞΑΤΟΜΙΚΕΥΣΗΣ ΒΙΝΤΕΟ[/B][CR][CR]Διαχείριση της συλλογής βίντεο · Ρύθμιση αναπαραγωγής βίντεο · Επιλογές καταλόγου ταινιών[CR]Ρύθμιση γραμματοσειράς υπότιτλου"
+msgstr "[B]ΔΙΑΜΟΡΦΩΣΗ ΡΥΘΜΙΣΕΩΝ ΒΙΝΤΕΟ[/B][CR][CR]Διαχείριση της συλλογής βίντεο · Ρύθμιση αναπαραγωγής βίντεο · Επιλογές καταλόγου ταινιών[CR]Ρύθμιση γραμματοσειράς υπότιτλου"
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
+msgstr "[B]ΔΙΑΜΟΡΦΩΣΗ ΡΥΘΜΙΣΕΩΝ ΜΟΥΣΙΚΗΣ ΜΟΥΣΙΚΗΣ[/B][CR][CR]Διαχείριση της μουσικής συλλογής · Ρύθμιση αναπαραγωγής μουσικής · Επιλογές καταλόγου μουσικής[CR]Ρύθμιση υποβολής τραγουδιού"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
@@ -1426,15 +1438,15 @@ msgstr ""
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed add-ons · Browse for and install add-ons from kodi.tv[CR]Modify add-on settings"
-msgstr "[B]ΡΥΘΜΙΣΕΙΣ ΔΙΑΜΟΡΦΩΣΗΣ ΠΡΟΣΘΕΤΩΝ[/B][CR][CR]Διαχείριση εγκατεστημένων προσθέτων · Αναζήτηση και εγκατάσταση προσθέτων από το kodi.tv[CR]Τροποποίηση ρυθμίσεων των προσθέτων"
+msgstr "[B]ΔΙΑΜΟΡΦΩΣΗ ΡΥΘΜΙΣΕΩΝ ΠΡΟΣΘΕΤΩΝ[/B][CR][CR]Διαχείριση εγκατεστημένων προσθέτων · Αναζήτηση και εγκατάσταση προσθέτων από το kodi.tv[CR]Τροποποίηση ρυθμίσεων των προσθέτων"
 
 msgctxt "#31409"
 msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
-msgstr "[B]ΡΥΘΜΙΣΗ ΤΗΛΕΟΡΑΣΗΣ[/B][CR][CR]Αλλαγή πληροφοριών πλήρους οθόνης · Διαχείριση των ρυθμίσεων δεδομένων EPG"
+msgstr "[B]ΔΙΑΜΟΡΦΩΣΗ ΡΥΘΜΙΣΕΩΝ ΤΗΛΕΟΡΑΣΗΣ[/B][CR][CR]Αλλαγή πληροφοριών πλήρους οθόνης · Διαχείριση των ρυθμίσεων δεδομένων EPG"
 
 msgctxt "#31410"
 msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr "[B]ΡΥΘΜΙΣΕΙΣ ΥΠΗΡΕΣΙΩΝ[/B][CR][CR]Χειρισμός του Kodi μέσω UPnP και HTTP · Ρύθμιση κοινής χρήσης αρχείων[CR]Ενεργοποίηση Zeroconf · Ρύθμιση AirPlay"
+msgstr "[B]ΔΙΑΜΟΡΦΩΣΗ ΡΥΘΜΙΣΕΩΝ ΥΠΗΡΕΣΙΩΝ[/B][CR][CR]Χειρισμός του Kodi μέσω UPnP και HTTP · Ρύθμιση κοινής χρήσης αρχείων[CR]Ενεργοποίηση Zeroconf · Ρύθμιση AirPlay"
 
 msgctxt "#31411"
 msgid "First run help..."

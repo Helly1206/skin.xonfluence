@@ -35,7 +35,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
-						<visible>Window.IsVisible(pictures)</visible>
+						<visible>Window.IsVisible(pictures) + !IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -48,7 +48,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!Window.IsVisible(pictures)</visible>
+						<visible>!Window.IsVisible(pictures) | IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>280</left>
@@ -142,7 +142,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label] - $INFO[ListItem.PictureDatetime]</label>
-						<visible>Window.IsVisible(pictures)</visible>
+						<visible>Window.IsVisible(pictures) + !IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -155,7 +155,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!Window.IsVisible(pictures)</visible>
+						<visible>!Window.IsVisible(pictures) | IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>280</left>
@@ -526,7 +526,7 @@
 				<left>95</left>
 				<top>80</top>
 				<width>1080</width>
-				<height>550</height>
+				<height>540</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>505</onup>
@@ -535,7 +535,7 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
-				<itemlayout height="150" width="540">
+				<itemlayout height="135" width="540" condition="!Skin.HasSetting(HideWideViewLabels)">
 					<control type="image">
 						<left>1</left>
 						<top>0</top>
@@ -548,7 +548,7 @@
 					</control>
 					<control type="label">
 						<left>1</left>
-						<top>125</top>
+						<top>105</top>
 						<width>538</width>
 						<height>25</height>
 						<font>font12</font>
@@ -557,7 +557,6 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
-						<visible>!Skin.HasSetting(HideWideViewLabels)</visible>
 					</control>
 					<control type="image">
 						<left>250</left>
@@ -577,7 +576,7 @@
 						<visible>!ListItem.IsResumable</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="150" width="540">
+				<focusedlayout height="135" width="540" condition="!Skin.HasSetting(HideWideViewLabels)">
 					<control type="image">
 						<left>1</left>
 						<top>0</top>
@@ -590,16 +589,73 @@
 					</control>
 					<control type="label">
 						<left>1</left>
-						<top>125</top>
+						<top>105</top>
 						<width>538</width>
 						<height>25</height>
 						<font>font12</font>
-						<textcolor>grey2</textcolor>
+						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
-						<visible>!Skin.HasSetting(HideWideViewLabels)</visible>
+					</control>
+					<control type="image">
+						<left>250</left>
+						<top>70</top>
+						<width>35</width>
+						<height>35</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>250</left>
+						<top>70</top>
+						<width>35</width>
+						<height>35</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>!ListItem.IsResumable</visible>
+					</control>
+				</focusedlayout>
+				<itemlayout height="108" width="540" condition="Skin.HasSetting(HideWideViewLabels)">
+					<control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>538</width>
+						<height>105</height>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<include>TextureBorderViews</include>
+						<texture background="true" fallback="DefaultVideoCover.png">$VAR[BannerThumb]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<left>250</left>
+						<top>70</top>
+						<width>35</width>
+						<height>35</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>250</left>
+						<top>70</top>
+						<width>35</width>
+						<height>35</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>!ListItem.IsResumable</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="108" width="540" condition="Skin.HasSetting(HideWideViewLabels)">
+					<control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>538</width>
+						<height>105</height>
+						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+						<include>TextureBorderViews</include>
+						<texture background="true" fallback="DefaultVideoCover.png">$VAR[BannerThumb]</texture>
+						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="image">
 						<left>250</left>
@@ -691,7 +747,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
-						<visible>Window.IsVisible(pictures)</visible>
+						<visible>Window.IsVisible(pictures) + !IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -704,7 +760,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!Window.IsVisible(pictures)</visible>
+						<visible>!Window.IsVisible(pictures) | IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -816,7 +872,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
-						<visible>Window.IsVisible(pictures)</visible>
+						<visible>Window.IsVisible(pictures) + !IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -829,7 +885,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!Window.IsVisible(pictures)</visible>
+						<visible>!Window.IsVisible(pictures) | IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>

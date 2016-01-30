@@ -131,6 +131,7 @@
 						<label2>31407</label2>
 						<onclick>ActivateWindow(SkinSettings)</onclick>
 						<icon>-</icon>
+						<visible>!Skin.HasSetting(HideSkinSettings)</visible>
 					</item>
 					<item id="2">
 						<label>480</label>

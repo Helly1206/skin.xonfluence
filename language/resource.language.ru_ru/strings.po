@@ -498,7 +498,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr ""
+msgstr "Скрыть EPG если на каналe присутствует RDS"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -564,7 +564,7 @@ msgctxt "#31138"
 msgid "Play party mode music on screensaver"
 msgstr ""
 
-msgctxt "#31339"
+msgctxt "#31139"
 msgid "Enable automatic fullscreen music playback"
 msgstr ""
 
@@ -626,6 +626,10 @@ msgstr ""
 
 msgctxt "#31154"
 msgid "Notifications at top left"
+msgstr ""
+
+msgctxt "#31155"
+msgid "Show global search button on bottom left"
 msgstr ""
 
 msgctxt "#31185"
@@ -1196,6 +1200,10 @@ msgctxt "#31338"
 msgid "Favourites window"
 msgstr ""
 
+msgctxt "#31339"
+msgid "User video OSD button user selection"
+msgstr ""
+
 msgctxt "#31340"
 msgid "Enable logo artwork for all media"
 msgstr ""
@@ -1214,6 +1222,10 @@ msgstr ""
 
 msgctxt "#31344"
 msgid "Extra fanart"
+msgstr ""
+
+msgctxt "#31345"
+msgid "Show user video OSD button"
 msgstr ""
 
 msgctxt "#31346"
@@ -1406,7 +1418,7 @@ msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ВИДЕО[/B][CR][CR]Упр�
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ МУЗЫКИ[/B][CR][CR]Управление медиатекой аудио • Параметры воспроизведения аудио[CR]Настройка списка аудио • Настройка добавления песен"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"

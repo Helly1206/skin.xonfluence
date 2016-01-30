@@ -2,7 +2,7 @@
 <includes>
 	<include name="OSDMediaPlot">
 		<control type="group" id="1">
-			<visible>!Skin.HasSetting(EnablePauseInfo) + !IsEmpty(VideoPlayer.Plot) + Player.Paused + !Player.Caching</visible>
+			<visible>!Skin.HasSetting(EnablePauseInfo) + [!IsEmpty(VideoPlayer.Plot) | !IsEmpty(VideoPlayer.PlotOutline)] + Player.Paused + !Player.Caching</visible>
 			<animation effect="slide" end="-140,110" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
 			<animation effect="slide" end="-140,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [!Skin.HasSetting(HideSeekBarOSD) | Player.ShowInfo]" reversible="true">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,25" time="0" condition="Player.ShowInfo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
@@ -30,7 +30,7 @@
 			</control>
 		</control>
 		<control type="group" id="1">
-			<visible>Player.ShowInfo + !IsEmpty(VideoPlayer.Plot) + Skin.HasSetting(EnablePlotInfo) + !Player.Caching</visible>
+			<visible>Player.ShowInfo + [!IsEmpty(VideoPlayer.Plot) | !IsEmpty(VideoPlayer.PlotOutline)] + Skin.HasSetting(EnablePlotInfo) + !Player.Caching</visible>
 			<animation effect="slide" end="-140,110" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
 			<animation effect="slide" end="-140,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [!Skin.HasSetting(HideSeekBarOSD) | Player.ShowInfo]" reversible="true">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,25" time="0" condition="Player.ShowInfo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>

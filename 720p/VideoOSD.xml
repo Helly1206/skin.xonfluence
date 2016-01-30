@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
 	<onload condition="!VideoPlayer.Content(LiveTV)">SetFocus(202)</onload>
+	<onload>SetProperty(UsrTextureNoFocus,/home/helly/.kodi/addons/skin.xonfluence/media/OSDUserButtonNF.png)</onload>
 	<include>dialogeffect</include>
 	<depth>DepthOSD</depth>
 	<coordinates>
@@ -195,16 +196,26 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2100">
-				<width>105</width>
+				<width>110</width>
 				<height>55</height>
 				<texture>-</texture>
 				<visible>!Skin.HasSetting(EnableVolumeButtons)</visible>
 			</control>
 			<control type="image" id="2200">
-				<width>165</width>
+				<width>550</width>
 				<texture>-</texture>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 				<visible>VideoPlayer.HasMenu</visible>
+			</control>
+			<control type="image" id="2250">
+				<width>55</width>
+				<texture>-</texture>
+				<visible>!VideoPlayer.Content(LiveTV) + !System.HasAddon(plugin.program.dreamcatcher)</visible>
+			</control>
+			<control type="image" id="2260">
+				<width>55</width>
+				<texture>-</texture>
+				<visible>!Skin.String(OSDBtnUsrCmd)</visible>
 			</control>
 			<control type="image" id="2300">
 				<width>60</width>
@@ -212,7 +223,7 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2600">
-				<width>220</width>
+				<width>110</width>
 				<texture>-</texture>
 				<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu</visible>
 			</control>
@@ -225,13 +236,21 @@
 				<font>-</font>
 				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDStereoscopicFO.png</texturefocus>
 				<texturenofocus>OSDStereoscopicNF.png</texturenofocus>
-				<onleft>255</onleft>
-				<onright>250</onright>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
-				<onclick condition="Skin.String(OSDBtnUsrCmd)">$VAR[UsrOSDBtnCmdOne]</onclick>
-				<onclick condition="Skin.String(OSDBtnUsrCmd)">$VAR[UsrOSDBtnCmdTwo]</onclick>
-				<onclick condition="Skin.String(OSDBtnUsrCmd)">$VAR[UsrOSDBtnCmdThree]</onclick>
+			</control>
+			<control type="button" id="256">
+				<visible>Skin.String(OSDBtnUsrCmd)</visible>
+				<width>55</width>
+				<height>55</height>
+				<label>31359</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPresetSettingsFO.png</texturefocus>
+				<texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<onclick condition="Skin.String(OSDBtnUsrCmd)">Dialog.Close(VideoOSD,true)</onclick>
+				<onclick condition="Skin.String(OSDBtnUsrCmd)">$VAR[UsrOSDBtnCmd]</onclick>
 			</control>
 			<control type="button" id="250">
 				<width>55</width>
@@ -311,6 +330,16 @@
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.CanRecord">Conditional</animation>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
+			<control type="button" id="206">
+                <width>55</width>
+                <height>55</height>
+                <label>264</label>
+                <font>-</font>
+                <texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRecordOffFO.png</texturefocus>
+                <texturenofocus>OSDRecordOffNF.png</texturenofocus>
+                <onclick>RunPlugin(plugin://plugin.program.dreamcatcher/?mode=Record)</onclick>
+                <visible>!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher)</visible>
+            </control>
 		</control>
 		<control type="button" id="410">
 			<description>Fake button for mouse control</description>

@@ -376,6 +376,21 @@
 				<animation effect="fade" start="100" end="30" time="75" condition="!Player.CanRecord">Conditional</animation>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
+			<control type="button" id="706">
+				<left>280</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
+				<label>-</label>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRecordOffFO.png</texturefocus>
+				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
+				<onleft>705</onleft>
+				<onright>701</onright>
+				<onup>300</onup>
+				<ondown>200</ondown>
+				<onclick>RunPlugin(plugin://plugin.program.dreamcatcher/?mode=Record)</onclick>
+				<visible>!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher)</visible>
+			</control>
 			<control type="button" id="707">
 				<left>400</left>
 				<top>0</top>

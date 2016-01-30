@@ -365,7 +365,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
 					</item>
 					<item id="11">
-						<description>Home Menu Item Ten</description>
+						<description>Home Menu Item Eleven</description>
 						<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$INFO[Skin.String(HomeItem.11.Label)])</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,$INFO[Skin.String(HomeItem.11.Path)])</onclick>
@@ -390,7 +390,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
 					</item>
 					<item id="12">
-						<description>Home Menu Item Ten</description>
+						<description>Home Menu Item Twelve</description>
 						<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$INFO[Skin.String(HomeItem.12.Label)])</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,$INFO[Skin.String(HomeItem.12.Path)])</onclick>
@@ -413,6 +413,81 @@
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 						<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
+					</item>
+					<item id="13">
+						<description>Home Menu Item Twelve</description>
+						<label>$INFO[Skin.String(HomeItem.13.Label)]</label>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$INFO[Skin.String(HomeItem.13.Label)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,$INFO[Skin.String(HomeItem.13.Path)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,$INFO[Skin.String(HomeItem.13.Sub)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,$INFO[Skin.String(HomeItem.13.Addon)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,$INFO[Skin.String(HomeItem.13.Widget)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,$INFO[Skin.String(HomeItem.13.Type)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.13.Fanart)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.13.Display)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.13.Playlist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Widget,$INFO[Window(Home).Property(SwapItemWidget)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Type,$INFO[Window(Home).Property(SwapItemType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Dialog.Close(1128)</onclick>
+						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
+						<visible>!IsEmpty(Skin.String(HomeItem.13.Path))</visible>
+					</item>					
+					<item id="14">
+						<description>Home Menu Item Twelve</description>
+						<label>$INFO[Skin.String(HomeItem.14.Label)]</label>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$INFO[Skin.String(HomeItem.14.Label)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,$INFO[Skin.String(HomeItem.14.Path)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,$INFO[Skin.String(HomeItem.14.Sub)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,$INFO[Skin.String(HomeItem.14.Addon)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,$INFO[Skin.String(HomeItem.14.Widget)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,$INFO[Skin.String(HomeItem.14.Type)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.14.Fanart)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.14.Display)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.14.Playlist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Widget,$INFO[Window(Home).Property(SwapItemWidget)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Type,$INFO[Window(Home).Property(SwapItemType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Dialog.Close(1128)</onclick>
+						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
+						<visible>!IsEmpty(Skin.String(HomeItem.14.Path))</visible>
+					</item>					
+					<item id="15">
+						<description>Home Menu Item Twelve</description>
+						<label>$INFO[Skin.String(HomeItem.15.Label)]</label>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$INFO[Skin.String(HomeItem.15.Label)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,$INFO[Skin.String(HomeItem.15.Path)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,$INFO[Skin.String(HomeItem.15.Sub)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,$INFO[Skin.String(HomeItem.15.Addon)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,$INFO[Skin.String(HomeItem.15.Widget)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,$INFO[Skin.String(HomeItem.15.Type)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.15.Fanart)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.15.Display)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.15.Playlist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Widget,$INFO[Window(Home).Property(SwapItemWidget)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Type,$INFO[Window(Home).Property(SwapItemType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Dialog.Close(1128)</onclick>
+						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
+						<visible>!IsEmpty(Skin.String(HomeItem.15.Path))</visible>
 					</item>
 				</content>
 			</control>

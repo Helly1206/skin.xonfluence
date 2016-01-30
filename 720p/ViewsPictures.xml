@@ -203,6 +203,7 @@
 					<font>font13</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(listItem.PictureDatetime)</visible>
 				</control>
 				<control type="label">
 					<description>Resolution txt</description>
@@ -216,6 +217,7 @@
 					<font>font13</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(listItem.PictureResolution)</visible>
 				</control>
 			</control>
 		</control>

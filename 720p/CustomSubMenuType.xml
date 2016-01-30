@@ -175,6 +175,27 @@
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
+						<description>User Selection 3</description>
+						<label>$VAR[UsersSubSelectThreeName]</label>
+						<onclick>Dialog.Close(2116)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,UserThree)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>User Selection 4</description>
+						<label>$VAR[UsersSubSelectFourName]</label>
+						<onclick>Dialog.Close(2116)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,UserFour)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>User Selection 5</description>
+						<label>$VAR[UsersSubSelectFiveName]</label>
+						<onclick>Dialog.Close(2116)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,UserFive)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
 						<description>LiveTV</description>
 						<label>$LOCALIZE[31502]</label>
 						<onclick>Dialog.Close(2116)</onclick>

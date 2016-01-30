@@ -28,6 +28,9 @@
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.10.Type,VideoPlayList) | Skin.String(HomeItem.10.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.10.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTen)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.11.Type,VideoPlayList) | Skin.String(HomeItem.11.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.11.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistEleven)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.12.Type,VideoPlayList) | Skin.String(HomeItem.12.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.12.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwelve)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.13.Type,VideoPlayList) | Skin.String(HomeItem.13.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.13.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistThirteen)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.14.Type,VideoPlayList) | Skin.String(HomeItem.14.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.14.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFourteen)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.15.Type,VideoPlayList) | Skin.String(HomeItem.15.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.15.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFifteen)</onload>
 	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
 	<onload condition="IsEmpty(Window.Property(ReturnHome))">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
 	<onload condition="IsEmpty(Window.Property(ReturnHome))">SetProperty(ReturnHome,True)</onload>
@@ -630,8 +633,8 @@
 			<onright>9000</onright>
 			<onup>21</onup>
 			<ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
-			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">610</ondown>
-			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
+			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)">610</ondown>
+			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + [Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)]">603</ondown>
 			<visible>false</visible>
 		</control>
 		<control type="group">
@@ -661,7 +664,7 @@
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
 				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-				<animation effect="slide" start="0,0" end="115,0" time="0" condition="Skin.HasSetting(DisableGlobalSearch)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="115,0" time="0" condition="Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="610">
 				<colordiffuse>CCFFFFFF</colordiffuse>
@@ -692,7 +695,7 @@
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 				<ondown>9000</ondown>
-				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
+				<visible>!Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)</visible>
 			</control>
 			<control type="group" id="600">
 				<left>150</left>
@@ -1084,19 +1087,6 @@
 			<include>Window_OpenClose_Animation</include>
 			<control type="rss">
 				<description>RSS feed</description>
-				<left>100</left>
-				<top>0</top>
-				<height>30</height>
-				<width>1145</width>
-				<font>font12</font>
-				<urlset>1</urlset>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<titlecolor>$VAR[MainColorOne]</titlecolor>
-				<headlinecolor>white</headlinecolor>
-				<visible>!Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
-			</control>
-			<control type="rss">
-				<description>RSS feed</description>
 				<left>55</left>
 				<top>0</top>
 				<height>30</height>
@@ -1106,23 +1096,7 @@
 				<textcolor>$VAR[MainColorOne]</textcolor>
 				<titlecolor>$VAR[MainColorOne]</titlecolor>
 				<headlinecolor>white</headlinecolor>
-				<visible>Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
-			</control>
-			<control type="fadelabel" id="1">
-				<description>Next Five Songs</description>
-				<left>100</left>
-				<top>0</top>
-				<height>30</height>
-				<width>1145</width>
-				<scroll>true</scroll>
-				<scrollout>true</scrollout>
-				<pauseatend>200</pauseatend>
-				<label>$VAR[NextFiveSongScroller]</label>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<textoffsetx>20</textoffsetx>
-				<visible>!Skin.HasSetting(HideHomePowerBtn) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
+				<visible>[!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
 			</control>
 			<control type="fadelabel" id="1">
 				<description>Next Five Songs</description>
@@ -1138,7 +1112,7 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<textoffsetx>20</textoffsetx>
-				<visible>Skin.HasSetting(HideHomePowerBtn) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
+				<visible>Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
 			</control>
 			<control type="image">
 				<description>RSS background</description>
@@ -1178,6 +1152,24 @@
 				<texture>-</texture>
 				<visible>!Skin.HasSetting(HideFavorites)</visible>
 			</control>
+			<control type="button" id="25">
+				<description>GlobSearch push button</description>
+				<width>45</width>
+				<height>45</height>
+				<label>1036</label>
+				<font>-</font>
+				<onclick>RunScript(script.globalsearch)</onclick>
+				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<visible>!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)</visible>
+			</control>
+			<control type="image" id="26">
+				<width>1</width>
+				<height>45</height>
+				<texture>-</texture>
+				<visible>!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)</visible>
+			</control>
 			<control type="button" id="23">
 				<description>Power push button</description>
 				<width>45</width>
@@ -1210,6 +1202,20 @@
 				<height>45</height>
 				<texture>-</texture>
 				<visible>!Skin.HasSetting(HideFavorites)</visible>
+			</control>
+			<control type="image">
+				<description>Search Icon</description>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_search.png</texture>
+				<visible>!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)</visible>
+			</control>
+			<control type="image">
+				<width>11</width>
+				<height>45</height>
+				<texture>-</texture>
+				<visible>!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)</visible>
 			</control>
 			<control type="image">
 				<description>Power Icon</description>

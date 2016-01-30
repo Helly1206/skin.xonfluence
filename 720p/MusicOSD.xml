@@ -282,7 +282,7 @@
 				<onclick>PlayerControl(Random)</onclick>
 			</control>
 			<control type="image" id="2200">
-				<width>105</width>
+				<width>110</width>
 				<height>55</height>
 				<texture>-</texture>
 				<visible>!Skin.HasSetting(EnableVolumeButtons)</visible>
@@ -290,7 +290,7 @@
 			<control type="image" id="2300">
 				<width>55</width>
 				<texture>-</texture>
-				<visible>!MusicPlayer.Content(LiveTV)</visible>
+				<visible>!MusicPlayer.Content(LiveTV) + !System.HasAddon(plugin.program.dreamcatcher)</visible>
 			</control>
 			<control type="image" id="2400">
 				<width>55</width>
@@ -300,12 +300,23 @@
 			<control type="image" id="2500">
 				<width>55</width>
 				<texture>-</texture>
-				<visible>MusicPlayer.Content(LiveTV)</visible>
+				<visible>MusicPlayer.Content(LiveTV) + !Player.CanRecord</visible>
 			</control>
 			<control type="image" id="2600">
 				<width>55</width>
 				<texture>-</texture>
-				<visible>!Player.CanRecord</visible>
+				<visible>!Skin.HasSetting(ShowUsrVideoOSDButton) | [Skin.HasSetting(ShowUsrVideoOSDButton) + !Skin.String(OSDBtnUsrCmd)]</visible>
+			</control>
+			<control type="button" id="256">
+				<visible>Skin.HasSetting(ShowUsrVideoOSDButton) + Skin.String(OSDBtnUsrCmd)</visible>
+				<width>55</width>
+				<height>55</height>
+				<label>31359</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPresetSettingsFO.png</texturefocus>
+				<texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
+				<onclick condition="Skin.String(OSDBtnUsrCmd)">Dialog.Close(MusicOSD,true)</onclick>
+				<onclick condition="Skin.String(OSDBtnUsrCmd)">$VAR[UsrOSDBtnCmd]</onclick>
 			</control>
 			<control type="button" id="700">
 				<width>55</width>
@@ -374,6 +385,16 @@
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.CanRecord">Conditional</animation>
 				<visible>Player.CanRecord</visible>
 			</control>
+			<control type="button" id="206">
+                <width>55</width>
+                <height>55</height>
+                <label>264</label>
+                <font>-</font>
+                <texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRecordOffFO.png</texturefocus>
+                <texturenofocus>OSDRecordOffNF.png</texturenofocus>
+                <onclick>RunPlugin(plugin://plugin.program.dreamcatcher/?mode=Record)</onclick>
+                <visible>!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher)</visible>
+            </control>
 		</control>
 	</controls>
 </window>

@@ -10,6 +10,8 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
 			<visible>player.chaptercount + Window.IsVisible(FullScreenVideo)</visible>
+            <animation effect="slide" start="0,0" end="-100,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
 			<left>705r</left>
 			<top>-6</top>
 			<include>VisibleFadeEffect</include>

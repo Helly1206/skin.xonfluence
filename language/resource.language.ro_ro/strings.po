@@ -54,7 +54,7 @@ msgstr "Ecran complet"
 
 msgctxt "#31009"
 msgid "Total duration"
-msgstr "Durată totală"
+msgstr "Durata totală"
 
 msgctxt "#31010"
 msgid "OpenELEC OS"
@@ -564,7 +564,7 @@ msgctxt "#31138"
 msgid "Play party mode music on screensaver"
 msgstr ""
 
-msgctxt "#31339"
+msgctxt "#31139"
 msgid "Enable automatic fullscreen music playback"
 msgstr ""
 
@@ -626,6 +626,10 @@ msgstr ""
 
 msgctxt "#31154"
 msgid "Notifications at top left"
+msgstr ""
+
+msgctxt "#31155"
+msgid "Show global search button on bottom left"
 msgstr ""
 
 msgctxt "#31185"
@@ -1110,7 +1114,7 @@ msgstr ""
 
 msgctxt "#31317"
 msgid "Set fanart path"
-msgstr "Definire cale creație artistică"
+msgstr "Stabilire cale creație artistică"
 
 msgctxt "#31318"
 msgid "Up one level"
@@ -1196,6 +1200,10 @@ msgctxt "#31338"
 msgid "Favourites window"
 msgstr ""
 
+msgctxt "#31339"
+msgid "User video OSD button user selection"
+msgstr ""
+
 msgctxt "#31340"
 msgid "Enable logo artwork for all media"
 msgstr ""
@@ -1214,6 +1222,10 @@ msgstr ""
 
 msgctxt "#31344"
 msgid "Extra fanart"
+msgstr ""
+
+msgctxt "#31345"
+msgid "Show user video OSD button"
 msgstr ""
 
 msgctxt "#31346"
@@ -1250,7 +1262,7 @@ msgstr "Meniu film"
 
 msgctxt "#31356"
 msgid "Download subtitles"
-msgstr "Descarcă subtitrări"
+msgstr "Descarcă subtitluri"
 
 msgctxt "#31359"
 msgid "User video OSD button"
@@ -1402,7 +1414,7 @@ msgstr "[B]CONFIGURAȚI STABILIRI ASPECT[/B][CR][CR]Schimbați costumul · Alege
 
 msgctxt "#31401"
 msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
-msgstr "[B]CONFIGURAȚI STABILIRI VIDEO[/B][CR][CR]Administrați  mediateca video · Configurați opțiuni redare video · Modificați opțiuni afișare liste de fișiere video[CR]Alegeți font subtitrare"
+msgstr "[B]CONFIGURAȚI STABILIRI VIDEO[/B][CR][CR]Administrați  mediateca video · Configurați opțiuni redare video · Modificați opțiuni afișare liste de fișiere video[CR]Alegeți font subtitlu"
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
@@ -1446,7 +1458,7 @@ msgstr "Acestă săgeată indică prezența unui meniu în partea stângă a fer
 
 msgctxt "#31413"
 msgid "Local subtitle available"
-msgstr "Este disponibilă o subtitrare locală"
+msgstr "Este disponibil un subtitlu local"
 
 msgctxt "#31414"
 msgid "Enable clock and profile on media OSD"
