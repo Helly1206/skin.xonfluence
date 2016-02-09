@@ -14,38 +14,26 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<control type="image">
-				<left>0</left>
-				<top>100r</top>
-				<width>1280</width>
-				<height>100</height>
-				<texture>floor.png</texture>
-				<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-				<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-				<visible>!Skin.HasSetting(HideHomeFloor)</visible>
-			</control>
 			<control type="group">
-				<include>Window_OpenClose_Animation</include>
-				<control type="group">
-					<include>VisibleFadeEffect</include>
-					<control type="image">
-						<left>55</left>
-						<top>60</top>
-						<width>1170</width>
-						<height>600</height>
-						<texture border="15">ContentPanel.png</texture>
-					</control>
-					<control type="image">
-						<left>55</left>
-						<top>652</top>
-						<width>1170</width>
-						<height>64</height>
-						<texture border="15">ContentPanelMirror.png</texture>
-					</control>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<left>55</left>
+					<top>60</top>
+					<width>1170</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>55</left>
+					<top>652</top>
+					<width>1170</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
 			</control>
 		</control>

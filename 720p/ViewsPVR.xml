@@ -101,6 +101,7 @@
 			<control type="group">
 				<left>530</left>
 				<top>490</top>
+				<visible>![Control.IsVisible(50) + !IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(HideEPGwithRDS) + RDS.HasRDS]</visible>
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
@@ -112,7 +113,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>[B]$INFO[Container(50).ListItem.Title][/B]</label>
+					<label>[B]$INFO[Container(50).ListItem.Title]$INFO[ListItem.EpisodeName, (,)][/B]</label>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -173,6 +174,91 @@
 					<scroll>false</scroll>
 					<visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>
 					<label>$LOCALIZE[19031]: $INFO[Container(50).ListItem.NextTitle]</label>
+				</control>
+			</control>
+			<control type="group">
+				<left>530</left>
+				<top>490</top>
+				<visible>Control.IsVisible(50) + !IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(HideEPGwithRDS) + RDS.HasRDS</visible>
+				<control type="image">
+					<left>580</left>
+					<top>-3</top>
+					<width>104</width>
+					<height>40</height>
+					<visible>!RDS.HasRadioText</visible>
+					<texture>flagging/rds/rds-logo.png</texture>
+				</control>
+				<control type="image">
+					<left>580</left>
+					<top>-3</top>
+					<width>104</width>
+					<height>34</height>
+					<visible>RDS.HasRadioText + !RDS.HasRadioTextPlus</visible>
+					<texture>flagging/rds/rds-radiotext-logo.png</texture>
+				</control>
+				<control type="image">
+					<left>580</left>
+					<top>-3</top>
+					<width>104</width>
+					<height>40</height>
+					<visible>RDS.HasRadioTextPlus</visible>
+					<texture>flagging/rds/rds-radiotext-plus-logo.png</texture>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>40</top>
+					<width>690</width>
+					<height>20</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<visible>RDS.HasRDS</visible>
+					<label>$INFO[RDS.Getline(3)]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>65</top>
+					<width>690</width>
+					<height>20</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<visible>RDS.HasRDS</visible>
+					<label>$INFO[RDS.Getline(2)]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>90</top>
+					<width>690</width>
+					<height>20</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<visible>RDS.HasRDS</visible>
+					<label>$INFO[RDS.Getline(1)]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>115</top>
+					<width>690</width>
+					<height>20</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<visible>RDS.HasRDS</visible>
+					<label>$INFO[RDS.Getline(0)]</label>
 				</control>
 			</control>
 			<control type="list" id="50">

@@ -1,3 +1,13 @@
+[B]3.2.3[/B]
+- Fixed MusicOSD recording bug (http://forum.kodi.tv/showthread.php?tid=258799)
+- Updated with latest confluence jarvis changes (Added RDS info)
+- Added user button texture for OSD
+- Fixed alignment of subtitles submenu on video OSD #521
+- Added transparency to home floor #519
+- Fixed content panel bug on PVR windows
+- Fixed too short flagging panel in Media Info 3 view #525
+- Removed 0 stats in videos and drive if unavailable #513
+
 [B]3.2.2[/B]
 - Remove the dash before the displayed picture date if no date can be found #417
 - Wide view: restore number-of-items-per-page to 10 instead of 8 when no label selected #416

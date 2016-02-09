@@ -313,8 +313,8 @@
 				<height>55</height>
 				<label>31359</label>
 				<font>-</font>
-				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDPresetSettingsFO.png</texturefocus>
-				<texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDUserFO.png</texturefocus>
+				<texturenofocus>OSDUserNF.png</texturenofocus>
 				<onclick condition="Skin.String(OSDBtnUsrCmd)">Dialog.Close(MusicOSD,true)</onclick>
 				<onclick condition="Skin.String(OSDBtnUsrCmd)">$VAR[UsrOSDBtnCmd]</onclick>
 			</control>
@@ -377,13 +377,17 @@
 				<width>55</width>
 				<height>55</height>
 				<label>264</label>
+				<altlabel>265</altlabel>
 				<font>-</font>
 				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRecordOffFO.png</texturefocus>
 				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
-				<onclick>PlayerControl(record)</onclick>
+				<usealttexture>Player.Recording</usealttexture>
+				<alttexturefocus colordiffuse="$VAR[MainColorTwo]">OSDRecordOnFO.png</alttexturefocus>
+				<alttexturenofocus>OSDRecordOnNF.png</alttexturenofocus>
+				<onclick>PlayerControl(Record)</onclick>
 				<enable>Player.CanRecord</enable>
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.CanRecord">Conditional</animation>
-				<visible>Player.CanRecord</visible>
+				<visible>MusicPlayer.Content(LiveTV)</visible>	
 			</control>
 			<control type="button" id="206">
                 <width>55</width>

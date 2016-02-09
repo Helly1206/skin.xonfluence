@@ -53,6 +53,7 @@
 			<animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
 			<animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<include>TopLeftInfo</include>
