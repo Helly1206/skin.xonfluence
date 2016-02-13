@@ -1149,6 +1149,8 @@
 			</control>
 		</control>
 	</include>
+	<include name="ClockDefault"><label>$INFO[System.Time]</label></include>
+	<include name="ClockSeconds"><label>$INFO[System.Time(hh:mm:ss xx)]</label></include>
 	<include name="Clock">
 		<control type="label"  id="1">
 			<description>time label</description>
@@ -1161,13 +1163,15 @@
 			<font>font28_title</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
-			<label>$INFO[System.Time]</label>
+			<include condition="!Skin.HasSetting(ClockShowSeconds)">ClockDefault</include>
+			<include condition="Skin.HasSetting(ClockShowSeconds)">ClockSeconds</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="system.getbool(input.enablemouse)+Window.IsVisible(1198)">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
+			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
 	</include>
@@ -1190,6 +1194,7 @@
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="system.getbool(input.enablemouse)+Window.IsVisible(1198)">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
+			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
 	</include>
@@ -2243,5 +2248,31 @@
 				</control>
 			</focusedlayout>
 		</definition>
+	</include>
+	<include name="Button0">
+	    <left>20</left>
+	    <width>1229</width>
+	</include>
+	<include name="Button1">
+	    <left>66</left>
+	    <width>1183</width>
+	</include>
+	<include name="Button2">
+	    <left>122</left>
+	    <width>1127</width>
+	</include>
+	<include name="Button3">
+	    <left>178</left>
+	    <width>1071</width>
+	</include>
+	<include name="RSSPosition">
+	    <include condition="[!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)] + Skin.HasSetting(HideHomePowerBtn) + Skin.HasSetting(HideFavorites)">Button1</include>
+	    <include condition="[Skin.HasSetting(DisableGlobalSearch) | !Skin.HasSetting(FloorGlobalSearch)] + Skin.HasSetting(HideHomePowerBtn) + !Skin.HasSetting(HideFavorites)">Button1</include>
+	    <include condition="[Skin.HasSetting(DisableGlobalSearch) | !Skin.HasSetting(FloorGlobalSearch)] + !Skin.HasSetting(HideHomePowerBtn) + Skin.HasSetting(HideFavorites)">Button1</include>
+	    <include condition="[!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)] + Skin.HasSetting(HideHomePowerBtn) + !Skin.HasSetting(HideFavorites)">Button2</include>
+	    <include condition="[!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)] + !Skin.HasSetting(HideHomePowerBtn) + Skin.HasSetting(HideFavorites)">Button2</include>
+	    <include condition="[Skin.HasSetting(DisableGlobalSearch) | !Skin.HasSetting(FloorGlobalSearch)] + !Skin.HasSetting(HideHomePowerBtn) + !Skin.HasSetting(HideFavorites)">Button2</include>
+	    <include condition="[!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)] + !Skin.HasSetting(HideHomePowerBtn) + !Skin.HasSetting(HideFavorites)">Button3</include>
+	    <include condition="[Skin.HasSetting(DisableGlobalSearch) | !Skin.HasSetting(FloorGlobalSearch)] + Skin.HasSetting(HideHomePowerBtn) + Skin.HasSetting(HideFavorites)">Button0</include>
 	</include>
 </includes>

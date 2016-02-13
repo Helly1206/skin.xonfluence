@@ -1,3 +1,11 @@
+[B]3.2.4[/B]
+- Fixed image position in file browser #555
+- Fixed OSD issue while playing DVDs #560
+- Fixed RRS feeds (and next 5 songs scroller) position #541
+- Fixed next aired in video navigation #553
+- Added transparency to clock and date label #541
+- Added option to show seconds on clock label #541
+
 [B]3.2.3[/B]
 - Fixed MusicOSD recording bug (http://forum.kodi.tv/showthread.php?tid=258799)
 - Updated with latest confluence jarvis changes (Added RDS info)

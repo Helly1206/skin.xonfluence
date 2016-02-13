@@ -281,7 +281,7 @@
 							<height>480</height>
 							<itemgap>-1</itemgap>
 							<pagecontrol>60</pagecontrol>
-							<control type="radiobutton" id="101">
+							<control type="radiobutton" id="100">
 								<description>Global Background</description>
 								<width>750</width>
 								<height>40</height>
@@ -294,7 +294,7 @@
 								<onclick>Skin.ToggleSetting(SingleGlobalBackground)</onclick>
 								<selected>Skin.HasSetting(SingleGlobalBackground)</selected>
 							</control>
-							<control type="radiobutton" id="102">
+							<control type="radiobutton" id="101">
 								<description>Christmas Theme</description>
 								<width>750</width>
 								<height>40</height>
@@ -308,7 +308,7 @@
 								<selected>Skin.HasSetting(HolidayEffects)</selected>
 								<visible>System.Date(11-24,1-6)</visible>
 							</control>
-							<control type="radiobutton" id="103">
+							<control type="radiobutton" id="102">
 								<description>Hide Clock</description>
 								<width>750</width>
 								<height>40</height>
@@ -320,6 +320,20 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.ToggleSetting(HideSystemTime)</onclick>
 								<selected>!Skin.HasSetting(HideSystemTime)</selected>
+							</control>
+							<control type="radiobutton" id="103">
+								<description>Seconds Clock</description>
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<label>$LOCALIZE[31974]</label>
+								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+								<texturenofocus>MenuItemNF.png</texturenofocus>
+								<onclick>Skin.ToggleSetting(ClockShowSeconds)</onclick>
+								<selected>Skin.HasSetting(ClockShowSeconds)</selected>
+								<enable>!Skin.HasSetting(HideSystemTime)</enable>
 							</control>
 							<control type="button" id="104">
 								<description>Main Colour One</description>

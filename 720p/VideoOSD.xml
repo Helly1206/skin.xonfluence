@@ -202,7 +202,7 @@
 				<visible>!Skin.HasSetting(EnableVolumeButtons)</visible>
 			</control>
 			<control type="image" id="2200">
-				<width>550</width>
+				<width>110</width>
 				<texture>-</texture>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 				<visible>VideoPlayer.HasMenu</visible>
@@ -218,7 +218,7 @@
 				<visible>!Skin.String(OSDBtnUsrCmd)</visible>
 			</control>
 			<control type="image" id="2300">
-				<width>60</width>
+				<width>55</width>
 				<texture>-</texture>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
@@ -339,6 +339,7 @@
                 <texturenofocus>OSDRecordOffNF.png</texturenofocus>
                 <onclick>RunPlugin(plugin://plugin.program.dreamcatcher/?mode=Record)</onclick>
                 <visible>!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher)</visible>
+				<visible>!VideoPlayer.HasMenu</visible>
             </control>
 		</control>
 		<control type="button" id="410">
@@ -362,7 +363,7 @@
 			<animation effect="slide" start="0,0" end="0,80" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
 			<animation effect="slide" start="0,0" end="55,0" time="0" condition="!VideoPlayer.HasMenu">Conditional</animation>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="![VideoPlayer.Content(LiveTV)|[!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher)]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="55,0" time="0" condition="![VideoPlayer.Content(LiveTV)|[!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher) + !VideoPlayer.HasMenu]]">Conditional</animation>
 			<animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
 			<right>200</right>
 			<bottom>45</bottom>

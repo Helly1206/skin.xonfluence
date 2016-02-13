@@ -1088,10 +1088,9 @@
 			<include>Window_OpenClose_Animation</include>
 			<control type="rss">
 				<description>RSS feed</description>
-				<left>55</left>
+				<include>RSSPosition</include>
 				<top>0</top>
 				<height>30</height>
-				<width>1190</width>
 				<font>font12</font>
 				<urlset>1</urlset>
 				<textcolor>$VAR[MainColorOne]</textcolor>
@@ -1101,10 +1100,9 @@
 			</control>
 			<control type="fadelabel" id="1">
 				<description>Next Five Songs</description>
-				<left>55</left>
+				<include>RSSPosition</include>
 				<top>0</top>
 				<height>30</height>
-				<width>1190</width>
 				<scroll>true</scroll>
 				<scrollout>true</scrollout>
 				<pauseatend>200</pauseatend>

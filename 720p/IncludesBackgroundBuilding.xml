@@ -748,5 +748,4 @@
 		<include condition="StringCompare(Skin.String(MultiImageTimer),50)">Time50</include>
 		<include condition="StringCompare(Skin.String(MultiImageTimer),60)">Time60</include>
     </include>
-
 </includes>

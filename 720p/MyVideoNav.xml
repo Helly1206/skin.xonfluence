@@ -52,6 +52,7 @@
 		<include>FloorReturnButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
+		<include condition="!Skin.HasSetting(DisableTVNextAired)">NextAired</include>
 		<include name="CommonWindowHeader">
 			<param name="Icon" value="icon_video" />
 			<param name="Label" value="$LOCALIZE[3]" />
