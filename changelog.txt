@@ -1,5 +1,10 @@
-[B]3.2.4patch[/B]
+[B]3.2.5[/B]
 - Fixed home stats bug when drive is unavailable #589
+- Updated fonts to fix cut off of text #614
+- Fixed Channel name and number not showing correctly when playing Live TV #601
+- Fixed non working now playing buttons when search button is at bottom position #615
+- Fixed OSD button position when playing DVD #602
+- Added nodes option in skinsettings - submenu for music, movies, tvshows and concerts
 
 [B]3.2.4[/B]
 - Fixed image position in file browser #555

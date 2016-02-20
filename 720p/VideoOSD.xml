@@ -210,7 +210,7 @@
 			<control type="image" id="2250">
 				<width>55</width>
 				<texture>-</texture>
-				<visible>!VideoPlayer.Content(LiveTV) + !System.HasAddon(plugin.program.dreamcatcher)</visible>
+				<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu + !System.HasAddon(plugin.program.dreamcatcher)</visible>
 			</control>
 			<control type="image" id="2260">
 				<width>55</width>
@@ -338,8 +338,7 @@
                 <texturefocus colordiffuse="$VAR[MainColorTwo]">OSDRecordOffFO.png</texturefocus>
                 <texturenofocus>OSDRecordOffNF.png</texturenofocus>
                 <onclick>RunPlugin(plugin://plugin.program.dreamcatcher/?mode=Record)</onclick>
-                <visible>!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher)</visible>
-				<visible>!VideoPlayer.HasMenu</visible>
+                <visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu + System.HasAddon(plugin.program.dreamcatcher)</visible>
             </control>
 		</control>
 		<control type="button" id="410">
@@ -353,7 +352,7 @@
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<animation effect="slide" start="0,0" end="55,0" time="0" condition="!VideoPlayer.HasMenu">Conditional</animation>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="![VideoPlayer.Content(LiveTV)|[!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher)]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="55,0" time="0" condition="![VideoPlayer.Content(LiveTV)|[!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher) + !VideoPlayer.HasMenu]]">Conditional</animation>
 			<visible>Control.HasFocus(410) | Control.HasFocus(250) | ControlGroup(400).HasFocus</visible>
 		</control>
 		<control type="grouplist" id="400">
