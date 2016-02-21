@@ -668,7 +668,9 @@
 								<onclick condition="StringCompare(Container(9011).Position,9)">Skin.SetString(InitialMenuItem,8)</onclick>
 								<onclick condition="StringCompare(Container(9011).Position,10)">Skin.SetString(InitialMenuItem,9)</onclick>
 								<onclick condition="StringCompare(Container(9011).Position,11)">Skin.SetString(InitialMenuItem,10)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,12)">Skin.SetString(InitialMenuItem,-2)</onclick>
+								<onclick condition="StringCompare(Container(9011).Position,12)">Skin.SetString(InitialMenuItem,11)</onclick>
+								<onclick condition="StringCompare(Container(9011).Position,13)">Skin.SetString(InitialMenuItem,12)</onclick>
+								<onclick condition="StringCompare(Container(9011).Position,14)">Skin.SetString(InitialMenuItem,-2)</onclick>
 							</control>
 							<control type="radiobutton" id="137">
 								<description>lower menu bar</description>
@@ -9581,6 +9583,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.1.Type),Radio) | [StringCompare(Skin.String(HomeItem.1.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.1.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.1.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
@@ -9588,6 +9592,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.2.Type),Radio) | [StringCompare(Skin.String(HomeItem.2.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.2.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.2.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.3.Label)]</label>
@@ -9595,6 +9601,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.3.Type),Radio) | [StringCompare(Skin.String(HomeItem.3.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.3.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.3.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.4.Label)]</label>
@@ -9602,6 +9610,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.4.Type),Radio) | [StringCompare(Skin.String(HomeItem.4.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.4.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.4.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.5.Label)]</label>
@@ -9609,6 +9619,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.5.Type),Radio) | [StringCompare(Skin.String(HomeItem.5.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.5.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.5.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.6.Label)]</label>
@@ -9616,6 +9628,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.6.Type),Radio) | [StringCompare(Skin.String(HomeItem.6.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.6.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.6.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.7.Label)]</label>
@@ -9623,6 +9637,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.7.Type),Radio) | [StringCompare(Skin.String(HomeItem.7.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.7.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.7.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.8.Label)]</label>
@@ -9630,6 +9646,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.8.Type),Radio) | [StringCompare(Skin.String(HomeItem.8.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.8.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.8.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.9.Label)]</label>
@@ -9637,6 +9655,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.9.Type),Radio) | [StringCompare(Skin.String(HomeItem.9.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.9.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.9.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.10.Label)]</label>
@@ -9644,6 +9664,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.10.Type),Radio) | [StringCompare(Skin.String(HomeItem.10.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.10.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.10.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
@@ -9651,6 +9673,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.11.Type),Radio) | [StringCompare(Skin.String(HomeItem.11.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.11.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.11.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
@@ -9658,6 +9682,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.12.Type),Radio) | [StringCompare(Skin.String(HomeItem.12.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.12.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.12.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.13.Label)]</label>
@@ -9665,6 +9691,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.13.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.13.Type),Radio) | [StringCompare(Skin.String(HomeItem.13.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.13.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.13.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.14.Label)]</label>
@@ -9672,6 +9700,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.14.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.14.Type),Radio) | [StringCompare(Skin.String(HomeItem.14.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.14.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.14.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.15.Label)]</label>
@@ -9679,6 +9709,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.15.Path))</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.15.Type),Radio) | [StringCompare(Skin.String(HomeItem.15.Type),Radio) + PVR.HasRadioChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.15.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.15.Type),LiveTV) + PVR.HasTVChannels]</visible>
 					</item>
 				</content>
 			</control>
