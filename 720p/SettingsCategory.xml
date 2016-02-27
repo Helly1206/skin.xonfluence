@@ -12,7 +12,8 @@
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
 			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
+			<animation effect="fade" start="100" end="65" time="0" condition="IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
+			<visible>!IsEmpty(Skin.String(HomeFloor)</visible>
 		</control>
 		<control type="group">
 			<left>90</left>

@@ -1,5 +1,11 @@
-[B]3.2.5patch[/B]
-- Fixed default displayed meny item
+[B]3.2.6[/B]
+- Fixed default displayed meny item #651
+- Fixed default displayed menu item with TV/ radio enabled
+- Added arrows to main submenu items when scollable #623
+- Fixed extended info script for Xonfluence skin
+- Removed extended info from TVshows info cause the contents doesn't make sense #622
+- Updated autocomplete with plugin.program.autocompletion instead of script.extendedinfo
+- Added transparency settings for homefloor (only 50%) #623
 
 [B]3.2.5[/B]
 - Fixed home stats bug when drive is unavailable #589

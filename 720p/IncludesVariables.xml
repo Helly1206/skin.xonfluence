@@ -2962,6 +2962,11 @@
 		<value condition="Skin.String(TextureBorder,Large)">$LOCALIZE[31994]</value>
 		<value>$LOCALIZE[31992]</value>
 	</variable>
+		<variable name="HomeFloorValue">
+		<value condition="Skin.String(HomeFloor,Enabled)">$LOCALIZE[31362]</value>
+		<value condition="Skin.String(HomeFloor,Transparent)">50$LOCALIZE[31248]</value>
+		<value>$LOCALIZE[1223]</value>
+	</variable>
 	<variable name="UsrOSDBtnLabel">
 		<value condition="Skin.String(OSDBtnUsrCmd,AspectRatio)">$LOCALIZE[31500]</value>
 		<value condition="Skin.String(OSDBtnUsrCmd,UserSelect)">$LOCALIZE[31258]</value>

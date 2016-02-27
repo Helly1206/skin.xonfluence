@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-    <defaultcontrol always="true">5001</defaultcontrol>
+    <defaultcontrol always="true">4000</defaultcontrol>
     <controls>
 		<!-- live image background -->
 		<control type="image">
@@ -28,7 +28,8 @@
 			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
 			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
+			<animation effect="fade" start="100" end="65" time="0" condition="IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
+			<visible>!IsEmpty(Skin.String(HomeFloor)</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -72,15 +73,15 @@
         <control type="group">
 			<control type="group">
 				<include>VisibleFadeEffect</include>
-				<control type="list" id="5001">
+				<control type="list" id="4000">
 					<left>20</left>
 					<top>90</top>
 					<width>230</width>
 					<height>541</height>
 					<onleft>132</onleft>
 					<onright>5000</onright>
-					<onup>5001</onup>
-					<ondown>5001</ondown>
+					<onup>4000</onup>
+					<ondown>4000</ondown>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="34" width="260">
@@ -110,7 +111,7 @@
 							<width>230</width>
 							<height>35</height>
 							<texture border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
-							<animation effect="fade" start="100" end="30" time="75" condition="!Control.HasFocus(5001)">Conditional</animation>
+							<animation effect="fade" start="100" end="30" time="75" condition="!Control.HasFocus(4000)">Conditional</animation>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -166,10 +167,10 @@
 					<left>263</left>
 					<top>78</top>
 					<control type="panel" id="150">
-						<visible>Container(5001).HasFocus(1)</visible>
+						<visible>Container(4000).HasFocus(1)</visible>
 						<width>579</width>
 						<height>558</height>
-						<onleft>5001</onleft>
+						<onleft>4000</onleft>
 						<onright>60</onright>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime>200</scrolltime>
@@ -281,10 +282,10 @@
 						</focusedlayout>
 					</control>
 					<control type="panel" id="250">
-						<visible>Container(5001).HasFocus(2)</visible>
+						<visible>Container(4000).HasFocus(2)</visible>
 						<width>579</width>
 						<height>558</height>
-						<onleft>5001</onleft>
+						<onleft>4000</onleft>
 						<onright>60</onright>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime>200</scrolltime>
@@ -396,10 +397,10 @@
 						</focusedlayout>
 					</control>
 					<control type="panel" id="550">
-						<visible>Container(5001).HasFocus(3)</visible>
+						<visible>Container(4000).HasFocus(3)</visible>
 						<width>579</width>
 						<height>558</height>
-						<onleft>5001</onleft>
+						<onleft>4000</onleft>
 						<onright>60</onright>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime>200</scrolltime>
@@ -511,10 +512,10 @@
 						</focusedlayout>
 					</control>
 					<control type="panel" id="650">
-						<visible>Container(5001).HasFocus(4)</visible>
+						<visible>Container(4000).HasFocus(4)</visible>
 						<width>579</width>
 						<height>558</height>
-						<onleft>5001</onleft>
+						<onleft>4000</onleft>
 						<onright>60</onright>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime>200</scrolltime>
@@ -626,10 +627,10 @@
 						</focusedlayout>
 					</control>
 					<control type="panel" id="350">
-						<visible>Container(5001).HasFocus(5)</visible>
+						<visible>Container(4000).HasFocus(5)</visible>
 						<width>579</width>
 						<height>558</height>
-						<onleft>5001</onleft>
+						<onleft>4000</onleft>
 						<onright>60</onright>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime>200</scrolltime>
@@ -685,10 +686,10 @@
 						</focusedlayout>
 					</control>
 					<control type="panel" id="450">
-						<visible>Container(5001).HasFocus(6)</visible>
+						<visible>Container(4000).HasFocus(6)</visible>
 						<width>579</width>
 						<height>558</height>
-						<onleft>5001</onleft>
+						<onleft>4000</onleft>
 						<onright>60</onright>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime>200</scrolltime>
@@ -720,10 +721,10 @@
 						</focusedlayout>
 					</control>
 					<control type="panel" id="750">
-						<visible>Container(5001).HasFocus(7)</visible>
+						<visible>Container(4000).HasFocus(7)</visible>
 						<width>579</width>
 						<height>558</height>
-						<onleft>5001</onleft>
+						<onleft>4000</onleft>
 						<onright>60</onright>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime>200</scrolltime>
@@ -923,7 +924,7 @@
     	                        <onup>SetFocus(20000)</onup>
     	                        <ondown>150</ondown>
 								<onleft>60</onleft>
-								<onright>5001</onright>
+								<onright>4000</onright>
     	                        <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
     	                        <texturenofocus border="5">MenuItemNF.png</texturenofocus>
     	                        <label>-</label>

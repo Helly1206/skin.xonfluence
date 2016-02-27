@@ -17,7 +17,8 @@
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
 			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
+			<animation effect="fade" start="100" end="65" time="0" condition="IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
+			<visible>!IsEmpty(Skin.String(HomeFloor)</visible>
 		</control>
 		<include name="CommonWindowHeader">
 			<param name="Icon" value="icon_system" />
@@ -451,7 +452,7 @@
 								<onclick>Skin.ToggleSetting(HideBusyAnimation)</onclick>
 								<selected>!Skin.HasSetting(HideBusyAnimation)</selected>
 							</control>
-							<control type="radiobutton" id="113">
+							<control type="button" id="113">
 								<description>hide home floor</description>
 								<width>750</width>
 								<height>40</height>
@@ -461,8 +462,10 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<label>$LOCALIZE[31069]</label>
-								<onclick>Skin.ToggleSetting(HideHomeFloor)</onclick>
-								<selected>!Skin.HasSetting(HideHomeFloor)</selected>
+								<label2>[COLOR=selected]$VAR[HomeFloorValue][/COLOR]</label2>
+								<onclick condition="IsEmpty(Skin.String(HomeFloor))">Skin.SetString(HomeFloor,Transparent)</onclick>
+								<onclick condition="Skin.String(HomeFloor,Transparent)">Skin.SetString(HomeFloor,Enabled)</onclick>
+								<onclick condition="Skin.String(HomeFloor,Enabled)">Skin.Reset(HomeFloor)</onclick>
 							</control>
 							<control type="radiobutton" id="114">
 								<description>Orig Popup Seektime Window</description>
@@ -9583,8 +9586,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.1.Type),Radio) | [StringCompare(Skin.String(HomeItem.1.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.1.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.1.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.1.Type),Radio) | [StringCompare(Skin.String(HomeItem.1.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.1.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.1.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
@@ -9592,8 +9595,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.2.Type),Radio) | [StringCompare(Skin.String(HomeItem.2.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.2.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.2.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.2.Type),Radio) | [StringCompare(Skin.String(HomeItem.2.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.2.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.2.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.3.Label)]</label>
@@ -9601,8 +9604,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.3.Type),Radio) | [StringCompare(Skin.String(HomeItem.3.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.3.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.3.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.3.Type),Radio) | [StringCompare(Skin.String(HomeItem.3.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.3.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.3.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.4.Label)]</label>
@@ -9610,8 +9613,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.4.Type),Radio) | [StringCompare(Skin.String(HomeItem.4.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.4.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.4.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.4.Type),Radio) | [StringCompare(Skin.String(HomeItem.4.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.4.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.4.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.5.Label)]</label>
@@ -9619,8 +9622,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.5.Type),Radio) | [StringCompare(Skin.String(HomeItem.5.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.5.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.5.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.5.Type),Radio) | [StringCompare(Skin.String(HomeItem.5.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.5.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.5.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.6.Label)]</label>
@@ -9628,8 +9631,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.6.Type),Radio) | [StringCompare(Skin.String(HomeItem.6.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.6.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.6.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.6.Type),Radio) | [StringCompare(Skin.String(HomeItem.6.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.6.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.6.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.7.Label)]</label>
@@ -9637,8 +9640,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.7.Type),Radio) | [StringCompare(Skin.String(HomeItem.7.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.7.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.7.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.7.Type),Radio) | [StringCompare(Skin.String(HomeItem.7.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.7.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.7.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.8.Label)]</label>
@@ -9646,8 +9649,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.8.Type),Radio) | [StringCompare(Skin.String(HomeItem.8.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.8.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.8.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.8.Type),Radio) | [StringCompare(Skin.String(HomeItem.8.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.8.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.8.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.9.Label)]</label>
@@ -9655,8 +9658,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.9.Type),Radio) | [StringCompare(Skin.String(HomeItem.9.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.9.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.9.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.9.Type),Radio) | [StringCompare(Skin.String(HomeItem.9.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.9.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.9.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.10.Label)]</label>
@@ -9664,8 +9667,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.10.Type),Radio) | [StringCompare(Skin.String(HomeItem.10.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.10.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.10.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.10.Type),Radio) | [StringCompare(Skin.String(HomeItem.10.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.10.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.10.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
@@ -9673,8 +9676,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.11.Type),Radio) | [StringCompare(Skin.String(HomeItem.11.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.11.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.11.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.11.Type),Radio) | [StringCompare(Skin.String(HomeItem.11.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.11.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.11.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
@@ -9682,8 +9685,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.12.Type),Radio) | [StringCompare(Skin.String(HomeItem.12.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.12.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.12.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.12.Type),Radio) | [StringCompare(Skin.String(HomeItem.12.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.12.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.12.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.13.Label)]</label>
@@ -9691,8 +9694,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.13.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.13.Type),Radio) | [StringCompare(Skin.String(HomeItem.13.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.13.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.13.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.13.Type),Radio) | [StringCompare(Skin.String(HomeItem.13.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.13.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.13.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.14.Label)]</label>
@@ -9700,8 +9703,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.14.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.14.Type),Radio) | [StringCompare(Skin.String(HomeItem.14.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.14.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.14.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.14.Type),Radio) | [StringCompare(Skin.String(HomeItem.14.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.14.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.14.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.15.Label)]</label>
@@ -9709,8 +9712,8 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!IsEmpty(Skin.String(HomeItem.15.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.15.Type),Radio) | [StringCompare(Skin.String(HomeItem.15.Type),Radio) + PVR.HasRadioChannels]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.15.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.15.Type),LiveTV) + PVR.HasTVChannels]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.15.Type),Radio) | [StringCompare(Skin.String(HomeItem.15.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.15.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.15.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
 					</item>
 				</content>
 			</control>
