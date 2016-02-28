@@ -18,7 +18,7 @@
 			<include>VisibleFadeEffect</include>
 			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			<animation effect="fade" start="100" end="65" time="0" condition="IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
-			<visible>!IsEmpty(Skin.String(HomeFloor)</visible>
+			<visible>!IsEmpty(Skin.String(HomeFloor))</visible>
 		</control>
 		<include name="CommonWindowHeader">
 			<param name="Icon" value="icon_system" />
