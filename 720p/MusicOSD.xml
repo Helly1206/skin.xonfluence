@@ -297,6 +297,11 @@
 				<texture>-</texture>
 				<visible>!system.getbool(audiooutput.dspaddonsenabled)</visible>
 			</control>
+			<control type="image" id="2450">
+				<width>55</width>
+				<texture>-</texture>
+				<visible>MusicPlayer.Content(LiveTV)</visible>
+			</control>
 			<control type="image" id="2500">
 				<width>55</width>
 				<texture>-</texture>

@@ -217,11 +217,6 @@
 				<texture>-</texture>
 				<visible>!Skin.String(OSDBtnUsrCmd)</visible>
 			</control>
-			<control type="image" id="2300">
-				<width>55</width>
-				<texture>-</texture>
-				<visible>VideoPlayer.Content(LiveTV)</visible>
-			</control>
 			<control type="image" id="2600">
 				<width>110</width>
 				<texture>-</texture>
@@ -351,8 +346,11 @@
 			<font>-</font>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
+			<animation effect="slide" start="0,0" end="0,80" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
 			<animation effect="slide" start="0,0" end="55,0" time="0" condition="!VideoPlayer.HasMenu">Conditional</animation>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="![VideoPlayer.Content(LiveTV)|[!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher) + !VideoPlayer.HasMenu]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="55,0" time="0" condition="VideoPlayer.Content(LiveTV) | [!System.HasAddon(plugin.program.dreamcatcher) + !VideoPlayer.HasMenu]">Conditional</animation>
+			<animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
 			<visible>Control.HasFocus(410) | Control.HasFocus(250) | ControlGroup(400).HasFocus</visible>
 		</control>
 		<control type="grouplist" id="400">
@@ -362,7 +360,7 @@
 			<animation effect="slide" start="0,0" end="0,80" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
 			<animation effect="slide" start="0,0" end="55,0" time="0" condition="!VideoPlayer.HasMenu">Conditional</animation>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="![VideoPlayer.Content(LiveTV)|[!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher) + !VideoPlayer.HasMenu]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="55,0" time="0" condition="VideoPlayer.Content(LiveTV) | [!System.HasAddon(plugin.program.dreamcatcher) + !VideoPlayer.HasMenu]">Conditional</animation>
 			<animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
 			<right>200</right>
 			<bottom>45</bottom>

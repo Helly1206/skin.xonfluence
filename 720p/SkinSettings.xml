@@ -627,7 +627,7 @@
 								<height>40</height>
 								<font>font13</font>
 								<label>$LOCALIZE[31991]</label>
-								<label2>[COLOR=selected]$INFO[Skin.String(HomeTrans)]$VAR[TextureBorderValue][/COLOR]</label2>
+								<label2>[COLOR=selected]$VAR[TextureBorderValue][/COLOR]</label2>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
@@ -635,6 +635,21 @@
 								<onclick condition="IsEmpty(Skin.String(TextureBorder))">Skin.SetString(TextureBorder,Medium)</onclick>
 								<onclick condition="Skin.String(TextureBorder,Medium)">Skin.SetString(TextureBorder,Large)</onclick>
 								<onclick condition="Skin.String(TextureBorder,Large)">Skin.Reset(TextureBorder)</onclick>
+							</control>
+							<control type="button" id="129">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label>$LOCALIZE[31975]</label>
+								<label2>[COLOR=selected]$VAR[SideBladeLabelValue][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+								<texturenofocus>MenuItemNF.png</texturenofocus>
+								<onclick condition="IsEmpty(Skin.String(SideBladeLabel))">Skin.SetString(SideBladeLabel,Small)</onclick>
+								<onclick condition="Skin.String(SideBladeLabel,Small)">Skin.SetString(SideBladeLabel,Top)</onclick>
+								<onclick condition="Skin.String(SideBladeLabel,Top)">Skin.SetString(SideBladeLabel,Bottom)</onclick>
+								<onclick condition="Skin.String(SideBladeLabel,Bottom)">Skin.Reset(SideBladeLabel)</onclick>
 							</control>
 						</control>
 						<control type="grouplist" id="9101">

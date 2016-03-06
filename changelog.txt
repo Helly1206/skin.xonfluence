@@ -1,5 +1,11 @@
-[B]3.2.6[/B]
-- Fixed typo on home floor
+[B]3.2.7[/B]
+- Fixed typo on home floor transparency #721
+- Fixed OSD buttons position on LiveTV and Radio
+- Removed UPnP error when no UPnP is enabled #721
+- Removed GetDirectory error for empty VideoNodes and CustomWidgets (not all errors can be solved because of widgets timing, you have to live with them) #721
+- Removed 'can't find window peripherals' error
+- Fixed border size error in skinsettings when setting home transparency
+- Added customized sideblade label size and position option #730
 
 [B]3.2.6[/B]
 - Fixed default displayed meny item #651
