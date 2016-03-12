@@ -367,9 +367,9 @@
 			<visible>IsEmpty(Skin.String(SideBladeLabel))</visible>
 		</control>
 		<control type="button" id="9001">
-			<left>255</left> 
+			<left>250</left> 
 			<top>303</top>
-			<width>10</width> 
+			<width>42</width> 
 			<height>42</height> 
 			<font>-</font>
 			<texturefocus colordiffuse="$VAR[MainColorOne]">HasSubAltFocus.png</texturefocus>
@@ -381,9 +381,9 @@
 			<visible>Skin.String(SideBladeLabel,Small)</visible>
 		</control>
 		<control type="button" id="9001">
-			<left>255</left> 
+			<left>250</left> 
 			<top>0</top>
-			<width>10</width> 
+			<width>42</width> 
 			<height>42</height> 
 			<font>-</font>
 			<texturefocus colordiffuse="$VAR[MainColorOne]">HasSubAltFocus.png</texturefocus>
@@ -395,9 +395,9 @@
 			<visible>Skin.String(SideBladeLabel,Top)</visible>
 		</control>
 		<control type="button" id="9001">
-			<left>255</left> 
+			<left>250</left> 
 			<bottom>0</bottom>
-			<width>10</width> 
+			<width>42</width> 
 			<height>42</height> 
 			<font>-</font>
 			<texturefocus colordiffuse="$VAR[MainColorOne]">HasSubAltFocus.png</texturefocus>
