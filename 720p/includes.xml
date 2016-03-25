@@ -426,12 +426,12 @@
 		</control>
 	</include>
 	<include name="FloorReturnButtons">
-		<control type="grouplist" id="800">
+		<control type="grouplist" id="810">
 			<left>280r</left>
 			<top>55r</top>
 			<onup>50</onup>
 			<ondown>50</ondown>
-			<align>right</align>align>
+			<align>right</align>
 			<orientation>horizontal</orientation>
 			<animation effect="fade" time="200" condition="Window.Previous(home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(home)">WindowClose</animation>
@@ -479,7 +479,7 @@
 				<texturenofocus border="5">FloorButtons/FloorBackNF.png</texturenofocus>
 				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
 			</control>
-			<control type="button" id="805">
+			<control type="button" id="800">
 				<description>Home push button</description>
 				<width>45</width>
 				<height>45</height>
