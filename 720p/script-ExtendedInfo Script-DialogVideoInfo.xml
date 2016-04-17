@@ -1639,7 +1639,7 @@
                 <control type="button" id="100">
 					<include>ButtonCommonValues</include>
                     <label>$ADDON[script.extendedinfo 32132]</label>
-                    <onclick>XBMC.RunScript(script.videoextras,display,"$INFO[Window.Property(FilenameAndPath)]")</onclick>
+                    <onclick>RunScript(script.videoextras,display,"$INFO[Window.Property(FilenameAndPath)]")</onclick>
                     <visible>System.HasAddon(script.videoextras) + IsEmpty(Window(movieinformation).Property(HideVideoExtrasButton))</visible>
                     <visible>!IsEmpty(Window.Property(FilenameAndPath))</visible>
                 </control>

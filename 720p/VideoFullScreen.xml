@@ -5,7 +5,7 @@
 	<controls>
 		<!-- Intro infos -->
 		<control type="group" id="1">
-			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4)</visible>
+			<visible>!StringCompare(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
 			<visible>IntegerGreaterThan(Player.time,3) + !IntegerGreaterThan(Player.time,8) + !Skin.HasSetting(HideInfoStartOSD)</visible>
 			<visible>![Window.IsActive(VideoOSD) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<visible>!Player.Paused  + !Player.ShowInfo</visible>
@@ -27,10 +27,10 @@
 			</control>
 		</control>
 		<!-- media infos -->
-		<include condition="Skin.HasSetting(ShowFullScreenClock) + !StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4) + ![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]">Clock</include>
+		<include condition="Skin.HasSetting(ShowFullScreenClock) + !StringCompare(Player.Filenameandpath,Skin.String(KodiIntroVideo)) + ![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]">Clock</include>
 		<control type="group" id="1">
 			<depth>DepthOSD</depth>
-			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4)</visible>
+			<visible>!StringCompare(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
 			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] | Player.Seeking | Player.displayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
 			<visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>

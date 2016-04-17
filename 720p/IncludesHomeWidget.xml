@@ -11875,12 +11875,93 @@
 		<visible>!Skin.String(Container(9000).ListItem.Property(WidgetSet))</visible>
 	</include>
 	<include name="UPnP_RecentMovies">
+		<include condition="IsEmpty(Skin.String(CustomWidgets))">UPnP_RecentMovies10</include>
+		<include condition="Skin.String(CustomWidgets,20)">UPnP_RecentMovies20</include>
+		<include condition="Skin.String(CustomWidgets,30)">UPnP_RecentMovies30</include>
+		<include condition="Skin.String(CustomWidgets,40)">UPnP_RecentMovies40</include>
+		<include condition="Skin.String(CustomWidgets,50)">UPnP_RecentMovies50</include>
+		<include condition="Skin.String(CustomWidgets,75)">UPnP_RecentMovies75</include>
+		<include condition="Skin.String(CustomWidgets,100)">UPnP_RecentMovies100</include>
+	</include>
+	<include name="UPnP_RecentMovies10">
 		<content target="video" limit="10">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>
 	</include>
+	<include name="UPnP_RecentMovies20">
+		<content target="video" limit="20">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>
+	</include>
+	<include name="UPnP_RecentMovies30">
+		<content target="video" limit="30">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>
+	</include>
+	<include name="UPnP_RecentMovies40">
+		<content target="video" limit="40">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>
+	</include>
+	<include name="UPnP_RecentMovies50">
+		<content target="video" limit="50">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>
+	</include>
+	<include name="UPnP_RecentMovies75">
+		<content target="video" limit="75">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>
+	</include>
+	<include name="UPnP_RecentMovies100">
+		<content target="video" limit="100">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>
+	</include>
 	<include name="VideoNodeContent">
+		<include condition="IsEmpty(Skin.String(CustomWidgets))">VideoNodeContent10</include>
+		<include condition="Skin.String(CustomWidgets,20)">VideoNodeContent20</include>
+		<include condition="Skin.String(CustomWidgets,30)">VideoNodeContent30</include>
+		<include condition="Skin.String(CustomWidgets,40)">VideoNodeContent40</include>
+		<include condition="Skin.String(CustomWidgets,50)">VideoNodeContent50</include>
+		<include condition="Skin.String(CustomWidgets,75)">VideoNodeContent75</include>
+		<include condition="Skin.String(CustomWidgets,100)">VideoNodeContent100</include>
+	</include>
+	<include name="VideoNodeContent10">
 		<content target="video" limit="10">$VAR[VideoNodeContent]</content>
 	</include>
+	<include name="VideoNodeContent20">
+		<content target="video" limit="20">$VAR[VideoNodeContent]</content>
+	</include>
+	<include name="VideoNodeContent30">
+		<content target="video" limit="30">$VAR[VideoNodeContent]</content>
+	</include>
+	<include name="VideoNodeContent40">
+		<content target="video" limit="40">$VAR[VideoNodeContent]</content>
+	</include>
+	<include name="VideoNodeContent50">
+		<content target="video" limit="50">$VAR[VideoNodeContent]</content>
+	</include>
+	<include name="VideoNodeContent75">
+		<content target="video" limit="75">$VAR[VideoNodeContent]</content>
+	</include>
+	<include name="VideoNodeContent100">
+		<content target="video" limit="100">$VAR[VideoNodeContent]</content>
+	</include>
 	<include name="CustomWidgetContent">
+		<include condition="IsEmpty(Skin.String(CustomWidgets))">CustomWidgetContent10</include>
+		<include condition="Skin.String(CustomWidgets,20)">CustomWidgetContent20</include>
+		<include condition="Skin.String(CustomWidgets,30)">CustomWidgetContent30</include>
+		<include condition="Skin.String(CustomWidgets,40)">CustomWidgetContent40</include>
+		<include condition="Skin.String(CustomWidgets,50)">CustomWidgetContent50</include>
+		<include condition="Skin.String(CustomWidgets,75)">CustomWidgetContent75</include>
+		<include condition="Skin.String(CustomWidgets,100)">CustomWidgetContent100</include>
+	</include>
+	<include name="CustomWidgetContent10">
 		<content target="video" limit="10">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+	</include>
+	<include name="CustomWidgetContent20">
+		<content target="video" limit="20">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+	</include>
+	<include name="CustomWidgetContent30">
+		<content target="video" limit="30">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+	</include>
+	<include name="CustomWidgetContent40">
+		<content target="video" limit="40">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+	</include>
+	<include name="CustomWidgetContent50">
+		<content target="video" limit="50">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+	</include>
+	<include name="CustomWidgetContent75">
+		<content target="video" limit="75">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+	</include>
+	<include name="CustomWidgetContent100">
+		<content target="video" limit="100">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
 	</include>
 </includes>

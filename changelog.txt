@@ -1,3 +1,12 @@
+[B]3.2.11[/B]
+- Added DVD-drive to main menu options
+- Only show DVD-drive when disc loaded
+- Added option to change the intro video to a user specific one (disabling the intro video and enabling again switches back to default)
+- Added option to add custom widgets from favourites (easier than writing down a complete line of text)
+- Added option to reload the skin after changing parameters (should save the parameters, so may help users suffering skin settings) #960
+- Cleanup code
+- Added option to increase the number of custom widgets (only custom widgets, video nodes and PnP) #977
+
 [B]3.2.10[/B]
 - Moved Page Count info on the Weather screen to prevent overlap with Home/Back/Volume floor buttons. #841
 - Updated images for sideblade label #863

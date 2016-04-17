@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
 	<onload condition="!VideoPlayer.Content(LiveTV)">SetFocus(202)</onload>
-	<onload>SetProperty(UsrTextureNoFocus,/home/helly/.kodi/addons/skin.xonfluence/media/OSDUserButtonNF.png)</onload>
 	<include>dialogeffect</include>
 	<depth>DepthOSD</depth>
 	<coordinates>
@@ -28,6 +27,7 @@
 			<ondown>100</ondown>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)</visible>
+			<visible>!StringCompare(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
 		</control>
 		<control type="slider" id="87">
 			<depth>DepthOSD+</depth>
@@ -44,7 +44,7 @@
 			<textureslidernibfocus colordiffuse="$VAR[MainColorTwo]">osd_slider_nib.png</textureslidernibfocus>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
-			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4)</visible>
+			<visible>!StringCompare(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
 			<visible>![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
 		</control>
 		<control type="grouplist" id="100">
@@ -54,7 +54,7 @@
 			<itemgap>0</itemgap>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
-			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mp4)</visible>
+			<visible>!StringCompare(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
 			<visible>![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<onup>1000</onup>
 			<control type="button" id="300">

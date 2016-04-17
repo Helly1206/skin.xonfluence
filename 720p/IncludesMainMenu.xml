@@ -118,6 +118,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.1.Type),Radio) | [StringCompare(Skin.String(HomeItem.1.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.1.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.1.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.1.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.1.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="2">
 				<description>Home Menu Item Two</description>
@@ -137,6 +138,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.2.Type),Radio) | [StringCompare(Skin.String(HomeItem.2.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.2.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.2.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.2.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.2.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="3">
 				<description>Home Menu Item Three</description>
@@ -156,6 +158,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.3.Type),Radio) | [StringCompare(Skin.String(HomeItem.3.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.3.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.3.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.3.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.3.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="4">
 				<description>Home Menu Item Four</description>
@@ -175,6 +178,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.4.Type),Radio) | [StringCompare(Skin.String(HomeItem.4.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.4.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.4.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.4.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.4.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="5">
 				<description>Home Menu Item Five</description>
@@ -194,6 +198,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.5.Type),Radio) | [StringCompare(Skin.String(HomeItem.5.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.5.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.5.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.5.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.5.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="6">
 				<description>Home Menu Item Six</description>
@@ -213,6 +218,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.6.Type),Radio) | [StringCompare(Skin.String(HomeItem.6.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.6.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.6.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.6.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.6.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="7">
 				<description>Home Menu Item Seven</description>
@@ -232,6 +238,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.7.Type),Radio) | [StringCompare(Skin.String(HomeItem.7.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.7.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.7.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.7.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.7.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="8">
 				<description>Home Menu Item Eight</description>
@@ -251,6 +258,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.8.Type),Radio) | [StringCompare(Skin.String(HomeItem.8.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.8.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.8.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.8.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.8.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="9">
 				<description>Home Menu Item Nine</description>
@@ -270,6 +278,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.9.Type),Radio) | [StringCompare(Skin.String(HomeItem.9.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.9.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.9.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.9.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.9.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="10">
 				<description>Home Menu Item Ten</description>
@@ -289,6 +298,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.10.Type),Radio) | [StringCompare(Skin.String(HomeItem.10.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.10.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.10.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.10.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.10.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="11">
 				<description>Home Menu Item Eleven</description>
@@ -308,6 +318,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.11.Type),Radio) | [StringCompare(Skin.String(HomeItem.11.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.11.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.11.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.11.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.11.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="12">
 				<description>Home Menu Item Twelve</description>
@@ -327,6 +338,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.12.Type),Radio) | [StringCompare(Skin.String(HomeItem.12.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.12.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.12.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.12.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.12.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="13">
 				<description>Home Menu Item Thirteen</description>
@@ -346,6 +358,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.13.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.13.Type),Radio) | [StringCompare(Skin.String(HomeItem.13.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.13.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.13.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.13.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.13.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="14">
 				<description>Home Menu Item Fourteen</description>
@@ -365,6 +378,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.14.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.14.Type),Radio) | [StringCompare(Skin.String(HomeItem.14.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.14.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.14.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.14.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.14.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="15">
 				<description>Home Menu Item Fifteen</description>
@@ -384,6 +398,7 @@
 				<visible>!IsEmpty(Skin.String(HomeItem.15.Path))</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.15.Type),Radio) | [StringCompare(Skin.String(HomeItem.15.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 				<visible>!StringCompare(Skin.String(HomeItem.15.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.15.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+				<visible>!StringCompare(Skin.String(HomeItem.15.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.15.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 		</content>
 	</include>
@@ -469,14 +484,6 @@
 		<onload>Skin.SetString(HomeItem.10.Type,Streaming)</onload>
 		<onload>Skin.SetString(HomeItem.10.Fanart,special://skin/backgrounds/musicvideos.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.10.Display,Default)</onload>
-		<onload>Skin.SetString(HomeItem.11.Label,$LOCALIZE[31973])</onload>
-		<onload>Skin.SetString(HomeItem.11.Path,PlayDVD())</onload>
-		<onload>Skin.SetString(HomeItem.11.Sub,PlayDisc)</onload>
-		<onload>Skin.SetString(HomeItem.11.Addon,None)</onload>
-		<onload>Skin.SetString(HomeItem.11.Widget,None)</onload>
-		<onload>Skin.SetString(HomeItem.11.Type,PlayDisc)</onload>
-		<onload>Skin.SetString(HomeItem.11.Fanart,special://skin/backgrounds/playdisc.jpg)</onload>
-		<onload>Skin.SetString(HomeItem.11.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.12.Label,$LOCALIZE[13000])</onload>
 		<onload>Skin.SetString(HomeItem.12.Path,ActivateWindow(Settings))</onload>
 		<onload>Skin.SetString(HomeItem.12.Sub,Settings)</onload>
@@ -485,6 +492,14 @@
 		<onload>Skin.SetString(HomeItem.12.Type,Settings)</onload>
 		<onload>Skin.SetString(HomeItem.12.Fanart,special://skin/backgrounds/settings.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.12.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.15.Label,$LOCALIZE[31973])</onload>
+		<onload>Skin.SetString(HomeItem.15.Path,PlayDVD())</onload>
+		<onload>Skin.SetString(HomeItem.15.Sub,PlayDisc)</onload>
+		<onload>Skin.SetString(HomeItem.15.Addon,None)</onload>
+		<onload>Skin.SetString(HomeItem.15.Widget,None)</onload>
+		<onload>Skin.SetString(HomeItem.15.Type,PlayDisc)</onload>
+		<onload>Skin.SetString(HomeItem.15.Fanart,special://skin/backgrounds/playdisc.jpg)</onload>
+		<onload>Skin.SetString(HomeItem.15.Display,Default)</onload>
 		<onload>Skin.SetBool(SingleGlobalBackground)</onload>
 		<onload>Skin.SetBool(EnableFanartScript)</onload>
 		<onload>Skin.SetString(FanArtCycleRate,10)</onload>

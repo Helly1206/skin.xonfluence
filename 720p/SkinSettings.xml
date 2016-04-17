@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
 	<onload condition="Skin.HasSetting(HideSkinSettings)">PreviousMenu</onload>
-	<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
+	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
 	<onload condition="stringcompare(Container(9011).Position,0) + !stringcompare(Skin.String(InitialMenuPosi),0)">Control.Move(9011,$INFO[Skin.String(InitialMenuPosi)])</onload>
 	<onunload condition="IsEmpty(Skin.String(WeatherFanartDir)) | SubString(Skin.String(WeatherFanartDir),skin.xonfluence\extras\Weather\,right)">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onunload>
 	<onunload condition="!Skin.HasSetting(DisableFanartScript)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onunload>
@@ -191,7 +191,7 @@
 					</item>
 					<item id="7">
 						<label>$LOCALIZE[166] $LOCALIZE[31306]</label>
-						<label2>31305</label2>
+						<label2>$LOCALIZE[31979]/ $LOCALIZE[31305]</label2>
 						<onclick>noop</onclick>
 					</item>
 				</content>
@@ -880,6 +880,24 @@
 								<onclick condition="Skin.String(HomeTrans,55)">Skin.SetString(HomeTrans,70)</onclick>
 								<onclick condition="Skin.String(HomeTrans,70)">Skin.SetString(HomeTrans,85)</onclick>
 								<onclick condition="Skin.String(HomeTrans,85)">Skin.Reset(HomeTrans)</onclick>
+							</control>
+							<control type="button" id="151">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label>$LOCALIZE[31982]</label>
+								<label2>[COLOR=selected]$VAR[CustomWidgetsValue][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+								<texturenofocus>MenuItemNF.png</texturenofocus>
+								<onclick condition="IsEmpty(Skin.String(CustomWidgets))">Skin.SetString(CustomWidgets,20)</onclick>
+								<onclick condition="Skin.String(CustomWidgets,20)">Skin.SetString(CustomWidgets,30)</onclick>
+								<onclick condition="Skin.String(CustomWidgets,30)">Skin.SetString(CustomWidgets,40)</onclick>
+								<onclick condition="Skin.String(CustomWidgets,40)">Skin.SetString(CustomWidgets,50)</onclick>
+								<onclick condition="Skin.String(CustomWidgets,50)">Skin.SetString(CustomWidgets,75)</onclick>
+								<onclick condition="Skin.String(CustomWidgets,75)">Skin.SetString(CustomWidgets,100)</onclick>
+								<onclick condition="Skin.String(CustomWidgets,100)">Skin.Reset(CustomWidgets)</onclick>
 							</control>
 						</control>
 						<control type="grouplist" id="9101">
@@ -9099,10 +9117,24 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.ToggleSetting(HideKodiIntro)</onclick>
-								<onclick>Skin.Reset(EnableStartUpPlaylistPath)</onclick>
+								<onclick condition="Skin.HasSetting(HideKodiIntro)">Skin.SetString(KodiIntroVideo,special://skin/extras/Intro/KODI-Intro-Video.mp4)</onclick>
 								<selected>!Skin.HasSetting(HideKodiIntro)</selected>
 							</control>
-							<control type="radiobutton" id="632">
+							<control type="button" id="634">
+								<description>Kodi Intro Movie path</description>
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<label>31981</label>
+								<label2>$INFO[Skin.String(KodiIntroVideo)]</label2>
+								<onclick>Skin.SetFile(KodiIntroVideo,,special://)</onclick>
+								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+								<texturenofocus>MenuItemNF.png</texturenofocus>
+								<enable>!Skin.HasSetting(HideKodiIntro)</enable>
+							</control>
+							<control type="radiobutton" id="633">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -9114,7 +9146,7 @@
 								<onclick>Skin.ToggleSetting(UseStartUpPlaylistPath)</onclick>
 								<selected>Skin.HasSetting(UseStartUpPlaylistPath)</selected>
 							</control>
-							<control type="button" id="633">
+							<control type="button" id="634">
 								<description>Startup Playlist Path</description>
 								<width>750</width>
 								<height>40</height>
@@ -9558,7 +9590,7 @@
 				<control type="grouplist" id="9007">
 					<visible>Container(9000).Hasfocus(7)</visible>
 					<left>290</left>
-					<top>180</top>
+					<top>100</top>
 					<width>750</width>
 					<height>530</height>
 					<itemgap>-1</itemgap>
@@ -9566,13 +9598,34 @@
 					<onright>800</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
-					<control type="image" id="801">
+					<control type="button" id="801">
+						<description>Reload Skin</description>
+						<width>750</width>
+						<height>45</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<align>center</align>
+						<textoffsetx>20</textoffsetx>
+						<textwidth>730</textwidth>
+						<label>$LOCALIZE[31979] - $LOCALIZE[31980]</label>
+						<onclick>ReloadSkin()</onclick>
+						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+						<texturenofocus border="5">button-nofocus.png</texturenofocus>
+						<pulseonselect>false</pulseonselect>
+					</control>
+					<control type="image" id="802">
+						<width>750</width>
+						<height>140</height>
+						<texture>-</texture>
+					</control>
+					<control type="image" id="803">
 						<width>750</width>
 						<height>140</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture>warning.png</texture>
 					</control>
-					<control type="button" id="802">
+					<control type="button" id="804">
 						<description>Reset Skin Values</description>
 						<width>750</width>
 						<height>45</height>
@@ -9603,6 +9656,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.1.Type),Radio) | [StringCompare(Skin.String(HomeItem.1.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.1.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.1.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.1.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
@@ -9612,6 +9666,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.2.Type),Radio) | [StringCompare(Skin.String(HomeItem.2.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.2.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.2.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.2.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.3.Label)]</label>
@@ -9621,6 +9676,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.3.Type),Radio) | [StringCompare(Skin.String(HomeItem.3.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.3.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.3.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.3.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.4.Label)]</label>
@@ -9630,6 +9686,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.4.Type),Radio) | [StringCompare(Skin.String(HomeItem.4.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.4.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.4.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.4.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.5.Label)]</label>
@@ -9639,6 +9696,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.5.Type),Radio) | [StringCompare(Skin.String(HomeItem.5.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.5.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.5.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.5.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.6.Label)]</label>
@@ -9648,6 +9706,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.6.Type),Radio) | [StringCompare(Skin.String(HomeItem.6.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.6.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.6.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.6.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.7.Label)]</label>
@@ -9657,6 +9716,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.7.Type),Radio) | [StringCompare(Skin.String(HomeItem.7.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.7.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.7.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.7.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.8.Label)]</label>
@@ -9666,6 +9726,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.8.Type),Radio) | [StringCompare(Skin.String(HomeItem.8.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.8.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.8.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.8.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.9.Label)]</label>
@@ -9675,6 +9736,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.9.Type),Radio) | [StringCompare(Skin.String(HomeItem.9.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.9.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.9.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.9.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.10.Label)]</label>
@@ -9684,6 +9746,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.10.Type),Radio) | [StringCompare(Skin.String(HomeItem.10.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.10.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.10.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.10.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
@@ -9693,6 +9756,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.11.Type),Radio) | [StringCompare(Skin.String(HomeItem.11.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.11.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.11.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.11.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
@@ -9702,6 +9766,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.12.Type),Radio) | [StringCompare(Skin.String(HomeItem.12.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.12.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.12.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.12.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.13.Label)]</label>
@@ -9711,6 +9776,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.13.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.13.Type),Radio) | [StringCompare(Skin.String(HomeItem.13.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.13.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.13.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.13.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.14.Label)]</label>
@@ -9720,6 +9786,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.14.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.14.Type),Radio) | [StringCompare(Skin.String(HomeItem.14.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.14.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.14.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.14.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.15.Label)]</label>
@@ -9729,6 +9796,7 @@
 						<visible>!IsEmpty(Skin.String(HomeItem.15.Path))</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.15.Type),Radio) | [StringCompare(Skin.String(HomeItem.15.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
 						<visible>!StringCompare(Skin.String(HomeItem.15.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.15.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
+						<visible>!StringCompare(Skin.String(HomeItem.15.Type),PlayDisc)</visible>
 					</item>
 				</content>
 			</control>

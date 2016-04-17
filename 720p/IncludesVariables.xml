@@ -716,11 +716,11 @@
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Exit) + System.ShowExitButton + !Skin.HasSetting(MinimizeOnExit)">Quit()</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Exit) + System.ShowExitButton + Skin.HasSetting(MinimizeOnExit)">Minimize</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),PowerDown) + System.CanPowerDown + !Skin.HasSetting(Enable_CustomShutDown)">Powerdown()</value>
-		<value condition="StringCompare(Skin.String(PowerBtnAction),PowerDown) + System.CanPowerDown + Skin.HasSetting(Enable_CustomShutDown)">XBMC.RunScript($VAR[CustomShutdown],$VAR[CustomShutdownArg])</value>
+		<value condition="StringCompare(Skin.String(PowerBtnAction),PowerDown) + System.CanPowerDown + Skin.HasSetting(Enable_CustomShutDown)">RunScript($VAR[CustomShutdown],$VAR[CustomShutdownArg])</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Suspend) + System.CanSuspend + !Skin.HasSetting(Enable_CustomSuspend)">Suspend()</value>
-		<value condition="StringCompare(Skin.String(PowerBtnAction),Suspend) + System.CanSuspend + Skin.HasSetting(Enable_CustomSuspend)">XBMC.RunScript($VAR[CustomSuspend],$VAR[CustomSuspendArg])</value>
+		<value condition="StringCompare(Skin.String(PowerBtnAction),Suspend) + System.CanSuspend + Skin.HasSetting(Enable_CustomSuspend)">RunScript($VAR[CustomSuspend],$VAR[CustomSuspendArg])</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Hibernate) + System.CanHibernate + !Skin.HasSetting(Enable_CustomHibernate)">Hibernate()</value>
-		<value condition="StringCompare(Skin.String(PowerBtnAction),Hibernate) + System.CanHibernate + Skin.HasSetting(Enable_CustomHibernate)">XBMC.RunScript($VAR[CustomHibernate],$VAR[CustomHibernateArg])</value>
+		<value condition="StringCompare(Skin.String(PowerBtnAction),Hibernate) + System.CanHibernate + Skin.HasSetting(Enable_CustomHibernate)">RunScript($VAR[CustomHibernate],$VAR[CustomHibernateArg])</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Reboot) + System.CanReboot + !Skin.HasSetting(RestartNotReboot)">Reset()</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Reboot) + System.CanReboot + Skin.HasSetting(RestartNotReboot)">RestartApp()</value>
 		<value condition="StringCompare(Skin.String(PowerBtnAction),Logoff) + System.Loggedon">System.LogOff</value>
@@ -2956,6 +2956,10 @@
 	<variable name="HomeTransparentValue">
 		<value condition="!IsEmpty(Skin.String(HomeTrans))">$LOCALIZE[31248]</value>
 		<value>$LOCALIZE[31257]</value>
+	</variable>
+	<variable name="CustomWidgetsValue">
+		<value condition="!IsEmpty(Skin.String(CustomWidgets))">$INFO[Skin.String(CustomWidgets)]</value>
+		<value>$LOCALIZE[31257] (10)</value>
 	</variable>
 	<variable name="TextureBorderValue">
 		<value condition="Skin.String(TextureBorder,Medium)">$LOCALIZE[31993]</value>

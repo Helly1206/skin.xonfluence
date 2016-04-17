@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
 	<include condition="!Skin.HasSetting(DisableTVTunes)">LoadTvTunes</include>
-	<onload condition="System.HasAddon(script.videoextras)">XBMC.RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
+	<onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<controls>
 		<control type="group">
 			<depth>DepthSideBlade</depth>
@@ -1044,9 +1044,9 @@
 						<description>Get Artwork</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>$LOCALIZE[31343]</label>
-						<onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-						<onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-						<onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="Container.Content(musicvideos)">RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
 						<visible>Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos)</visible>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
@@ -1061,7 +1061,7 @@
 						<description>Extras</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>31699</label>
-						<onclick>XBMC.RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
+						<onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
 						<visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
 					</control>
 				</control>

@@ -98,7 +98,7 @@
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
  				<onclick condition="!Skin.HasSetting(Enable_CustomShutDown)">Powerdown()</onclick>
-				<onclick condition="Skin.HasSetting(Enable_CustomShutDown)">XBMC.RunScript($VAR[CustomShutdown],$VAR[CustomShutdownArg])</onclick>
+				<onclick condition="Skin.HasSetting(Enable_CustomShutDown)">RunScript($VAR[CustomShutdown],$VAR[CustomShutdownArg])</onclick>
 				<visible>System.CanPowerDown</visible>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
@@ -115,7 +115,7 @@
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
  				<onclick condition="!Skin.HasSetting(Enable_CustomTimer)">AlarmClock(shutdowntimer,Shutdown())</onclick>
-				<onclick condition="Skin.HasSetting(Enable_CustomTimer)">XBMC.AlarmClock(shutdowntimer,XBMC.RunScript($VAR[CustomTimer],$VAR[CustomTimerArg]))</onclick>
+				<onclick condition="Skin.HasSetting(Enable_CustomTimer)">AlarmClock(shutdowntimer,RunScript($VAR[CustomTimer],$VAR[CustomTimerArg]))</onclick>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>20150</label>
@@ -149,7 +149,7 @@
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
  				<onclick condition="!Skin.HasSetting(Enable_CustomSuspend)">Suspend()</onclick>
-				<onclick condition="Skin.HasSetting(Enable_CustomSuspend)">XBMC.RunScript($VAR[CustomSuspend],$VAR[CustomSuspendArg])</onclick>
+				<onclick condition="Skin.HasSetting(Enable_CustomSuspend)">RunScript($VAR[CustomSuspend],$VAR[CustomSuspendArg])</onclick>
 				<visible>Skin.HasSetting(Show_Suspend) + System.CanSuspend</visible>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
@@ -166,7 +166,7 @@
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
  				<onclick condition="!Skin.HasSetting(Enable_CustomHibernate)">Hibernate()</onclick>
-				<onclick condition="Skin.HasSetting(Enable_CustomHibernate)">XBMC.RunScript($VAR[CustomHibernate],$VAR[CustomHibernateArg])</onclick>
+				<onclick condition="Skin.HasSetting(Enable_CustomHibernate)">RunScript($VAR[CustomHibernate],$VAR[CustomHibernateArg])</onclick>
 				<visible>Skin.HasSetting(Show_Hibernate) + System.CanHibernate</visible>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
