@@ -683,7 +683,7 @@
 		<value condition="StringCompare(VideoPlayer.Title,player.swf playpath=105Test1 live=true)">[B]$LOCALIZE[31430][/B]  ([COLOR=$VAR[MainColorOne]]$LOCALIZE[31212][/COLOR])</value>
 		<value condition="StringCompare(VideoPlayer.Title,player.swf playpath=rmc1 live=true)">[B]$LOCALIZE[31221][/B]  ([COLOR=$VAR[MainColorOne]]$LOCALIZE[31212][/COLOR])</value>
 		<value condition="Player.IsInternetStream + SubString(VideoPlayer.Title,Virgin 1,Left)">[B]$LOCALIZE[31222][/B]  ([COLOR=$VAR[MainColorOne]]$LOCALIZE[31212][/COLOR])</value>
-		<value>[B]$INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title][/B]  ([COLOR=$VAR[MainColorOne]]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</value>
+		<value>[B]$INFO[Player.Title][/B]  ([COLOR=$VAR[MainColorOne]]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</value>
 	</variable>
 	<variable name="VideoNowPlaying">
 		<value condition="StringCompare(VideoPlayer.Title,player.swf playpath=105Test1 live=true)">$LOCALIZE[31430]</value>
