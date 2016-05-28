@@ -28,8 +28,8 @@
                 <height>300</height>
                 <onleft>9090</onleft>
                 <onright>Action(Close)</onright>
-                <onup condition="IntegerGreaterThan(Container(9091).NumItems,0)">Control.SetFocus(9091,999)</onup>
-                <ondown condition="IntegerGreaterThan(Container(9091).NumItems,0)">Control.SetFocus(9091,0)</ondown>
+                <onup condition="Integer.IsGreater(Container(9091).NumItems,0)">Control.SetFocus(9091,999)</onup>
+                <ondown condition="Integer.IsGreater(Container(9091).NumItems,0)">Control.SetFocus(9091,0)</ondown>
                 <onback>noop</onback>
                 <orientation>vertical</orientation>
                 <scrolltime tween="quadratic" easing="out">200</scrolltime>

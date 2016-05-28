@@ -47,58 +47,74 @@
 	<constant name="DepthFloor">-0.20</constant>
 	<constant name="DepthSideBlade">0.15</constant>
 	<!-- VARIABLES -->
+	<variable name="MusicInfoHeader">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Artist]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Album]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Title]</value>
+	</variable>
+	<variable name="MusicInfoLabel">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
+	</variable>
+	<variable name="MusicInfoListThumb">
+		<value condition="Container.Content(Artists) + !String.IsEmpty(Container(50).Listitem.Icon)">$INFO[Container(50).Listitem.Icon]</value>
+		<value condition="[Container.Content(Albums) | Container.Content(Songs)] + !String.IsEmpty(Container.Art(artist.thumb))">$INFO[Container.Art(artist.thumb)]</value>
+		<value condition="Container.Content(Artists)">DefaultAlbumCover.png</value>
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">DefaultArtist.png</value>
+	</variable>
 	<variable name="MediaInfoOverlayVar">
 		<value condition="ListItem.IsCollection">flagging/video/Set.png</value>
 		<value condition="!ListItem.IsStereoscopic">$INFO[ListItem.VideoResolution,flagging/lists/,.png]</value>
 		<value>flagging/lists/3D.png</value>
 	</variable>
 	<variable name="BannerThumb">
-		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PosterThumb">
-		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	<variable name="AlbumInfoPanelLabel">
+	<variable name="MusicInfoPanelLabel">
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Label]</value>
 		<value>$INFO[ListItem.TrackNumber,([COLOR=selected][B],[/B][/COLOR]) - ]$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="PlayList">
-		<value condition="Window.IsActive(Videos) + !StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
+		<value condition="Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
 		<value>ActivateWindow(musicplaylist)</value>
 	</variable>
 	<include name="LoadTvTunes">
-		<onload condition="System.HasAddon(script.tvtunes) + !SubString(Window(10025).Property(CinemaExperienceRunning),True)">RunScript(script.tvtunes,backend=True)</onload>
+		<onload condition="System.HasAddon(script.tvtunes) + !String.Contains(Window(10025).Property(CinemaExperienceRunning),True)">RunScript(script.tvtunes,backend=True)</onload>
 	</include>
 	<variable name="SelectBack">
 		<value condition="![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]">DialogBack.png</value>
 		<value>DialogBack2.png</value>
 	</variable>
 	<variable name="typehackflagging">
-		<value condition="[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,brrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]">bluray</value>
-		<value condition="substring(ListItem.FilenameAndPath,hddvd)">hddvd</value>
-		<value condition="substring(ListItem.FilenameAndPath,dvd)">dvd</value>
-		<value condition="[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)]">TV</value>
-		<value condition="substring(ListItem.FilenameAndPath,vhs)">vhs</value>
+		<value condition="[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50)]">bluray</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,hddvd)">hddvd</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,dvd)">dvd</value>
+		<value condition="[String.Contains(ListItem.FilenameAndPath,pdtv) | String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,dsr)]">TV</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,vhs)">vhs</value>
 	</variable>
 	<variable name="rating">
-		<value condition="substring(listitem.mpaa,Rated G)">mpaa_general</value>
-		<value condition="substring(listitem.mpaa,Rated PG-13)">mpaa_pg13</value>
-		<value condition="substring(listitem.mpaa,Rated PG)">mpaa_pg</value>
-		<value condition="substring(Listitem.mpaa,Rated R)">mpaa_restricted</value>
-		<value condition="substring(Listitem.mpaa,Rated NC)">mpaa_nc17</value>
-		<value condition="substring(Listitem.mpaa,Not Rated)">mpaa_notrated</value>
+		<value condition="String.Contains(listitem.mpaa,Rated G)">mpaa_general</value>
+		<value condition="String.Contains(listitem.mpaa,Rated PG-13)">mpaa_pg13</value>
+		<value condition="String.Contains(listitem.mpaa,Rated PG)">mpaa_pg</value>
+		<value condition="String.Contains(Listitem.mpaa,Rated R)">mpaa_restricted</value>
+		<value condition="String.Contains(Listitem.mpaa,Rated NC)">mpaa_nc17</value>
+		<value condition="String.Contains(Listitem.mpaa,Not Rated)">mpaa_notrated</value>
 	</variable>
 	<variable name="videocodec">
-		<value condition="[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]">divx</value>
+		<value condition="[String.StartsWith(ListItem.VideoCodec,div) | String.IsEqual(ListItem.VideoCodec,dx50)]">divx</value>
 		<value>$INFO[ListItem.VideoCodec]</value>
 	</variable>
 	<variable name="SeekLabel">
 		<value condition="Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31042]</value>
 		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31043]</value>
 		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$LOCALIZE[15107] $INFO[Player.CacheLevel]%</value>
-		<value condition="!IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekStepSize][/COLOR]</value>
+		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekStepSize][/COLOR]</value>
 		<value condition="Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]">$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekOffset][/COLOR]</value>
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[31046]</value>
 		<value condition="Player.Forwarding">$LOCALIZE[31044]</value>
@@ -119,19 +135,36 @@
 		<value>OSDRepeatNF.png</value>
 	</variable>
 	<variable name="PVRChannelMgrHeader">
-		<value condition="!IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
+		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
 		<value>$LOCALIZE[19199] - $LOCALIZE[19023]</value>
 	</variable>
+	<variable name="PVRTimerIcon">
+	  <value condition="ListItem.IsRecording">PVR-IsRecording.png</value>
+	  <value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">PVR-HasTimerScheduleError.png</value>
+	  <value condition="ListItem.HasTimer + ListItem.TimerHasError">PVR-HasTimerError.png</value>
+	  <value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">PVR-HasTimerScheduleConflict.png</value>
+	  <value condition="ListItem.HasTimer + ListItem.TimerHasConflict">PVR-HasTimerConflict.png</value>
+	  <value condition="ListItem.HasRecording">PVR-HasRecording.png</value>
+	  <value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">PVR-HasTimerScheduleDisabled.png</value>
+	  <value condition="ListItem.HasTimer + !ListItem.TimerIsActive">PVR-HasTimerDisabled.png</value>
+	  <value condition="ListItem.HasTimerSchedule">PVR-HasTimerSchedule.png</value>
+	  <value condition="ListItem.HasTimer">PVR-HasTimer.png</value>
+	</variable>
+	<variable name="PVRTimerLabel">
+	  <value condition="ListItem.IsRecording">$LOCALIZE[19043]</value>
+	  <value condition="ListItem.HasTimer + !ListItem.TimerIsActive">$LOCALIZE[19057]</value>
+	  <value condition="ListItem.HasTimer">$LOCALIZE[31510]</value>
+	</variable>
 	<!-- INCLUDES -->
-	<include name="AlbumInfoPanel">
+	<include name="MusicInfoPanel">
 		<control type="panel" id="50">
 			<left>$PARAM[panel-left]</left>
 			<top>520</top>
 			<width>$PARAM[panel-width]</width>
 			<height>120</height>
-			<onleft>9000</onleft>
-			<onright>61</onright>
-			<onup>61</onup>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>49</onup>
 			<ondown>9000</ondown>
 			<viewtype label="">list</viewtype>
 			<pagecontrol>61</pagecontrol>
@@ -154,7 +187,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<selectedcolor>selected</selectedcolor>
-					<label>$VAR[AlbumInfoPanelLabel]</label>
+					<label>$VAR[MusicInfoPanelLabel]</label>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -194,7 +227,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<selectedcolor>selected</selectedcolor>
-					<label>$VAR[AlbumInfoPanelLabel]</label>
+					<label>$VAR[MusicInfoPanelLabel]</label>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -281,7 +314,7 @@
 		<scroll>false</scroll>
 		<align>left</align>
 		<aligny>center</aligny>
-		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
 	</include>
 	<include name="ButtonCommonValues">
 		<height>40</height>
@@ -330,9 +363,9 @@
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SideBladeLeft">
-		<animation effect="slide" start="0,0" end="250,0" time="300" tween="quadratic" easing="out" condition="[!IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
-		<animation effect="slide" start="0,0" end="-300,0" time="300" tween="quadratic" easing="out" condition="!IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus">WindowClose</animation>
-		<animation effect="slide" start="0,0" end="-50,0" time="225" tween="quadratic" easing="out" condition="IsEmpty(Window.Property(SideBladeOpen)) | !ControlGroup(9000).HasFocus">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="250,0" time="300" tween="quadratic" easing="out" condition="[!String.IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-300,0" time="300" tween="quadratic" easing="out" condition="!String.IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="-50,0" time="225" tween="quadratic" easing="out" condition="String.IsEmpty(Window.Property(SideBladeOpen)) | !ControlGroup(9000).HasFocus">WindowClose</animation>
 		<animation effect="slide" start="-50,0" end="0,0" time="225" tween="quadratic" easing="out">WindowOpen</animation>
 		<control type="button" id="8999">
 			<description>Fake button for mouse control</description>
@@ -344,13 +377,13 @@
 			<font>-</font>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+			<onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<onleft>50</onleft>
 			<onright>ClearProperty(SideBladeOpen)</onright>
 			<onback>ClearProperty(SideBladeOpen)</onback>
-			<visible>!IsEmpty(Window.Property(SideBladeOpen))</visible>
+			<visible>!String.IsEmpty(Window.Property(SideBladeOpen))</visible>
 		</control>
 		<control type="button" id="9001">
 			<left>250</left>
@@ -362,9 +395,9 @@
 			<texturenofocus>HasSub.png</texturenofocus>
 			<onright>ClearProperty(SideBladeOpen)</onright>
 			<onleft>50</onleft>
-			<onclick condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onclick>
-			<visible>IsEmpty(Skin.String(SideBladeLabel))</visible>
+			<onclick condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onclick>
+			<visible>String.IsEmpty(Skin.String(SideBladeLabel))</visible>
 		</control>
 		<control type="button" id="9001">
 			<left>250</left> 
@@ -376,8 +409,8 @@
 			<texturenofocus>HasSubAlt.png</texturenofocus>
 			<onright>ClearProperty(SideBladeOpen)</onright>
 			<onleft>50</onleft>
-			<onclick condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onclick>
+			<onclick condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onclick>
 			<visible>Skin.String(SideBladeLabel,Small)</visible>
 		</control>
 		<control type="button" id="9001">
@@ -390,8 +423,8 @@
 			<texturenofocus>HasSubAlt.png</texturenofocus>
 			<onright>ClearProperty(SideBladeOpen)</onright>
 			<onleft>50</onleft>
-			<onclick condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onclick>
+			<onclick condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onclick>
 			<visible>Skin.String(SideBladeLabel,Top)</visible>
 		</control>
 		<control type="button" id="9001">
@@ -404,8 +437,8 @@
 			<texturenofocus>HasSubAlt.png</texturenofocus>
 			<onright>ClearProperty(SideBladeOpen)</onright>
 			<onleft>50</onleft>
-			<onclick condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onclick>
+			<onclick condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onclick>
 			<visible>Skin.String(SideBladeLabel,Bottom)</visible>
 		</control>
 		<control type="image">
@@ -443,7 +476,7 @@
 				<texturefocus border="5">FloorButtons/FloorTrailerFO.png</texturefocus>
 				<texturenofocus border="5">FloorButtons/FloorTrailerNF.png</texturenofocus>
 				<visible>!Skin.HasSetting(HideTrailerBtn)</visible>
-				<visible>!Player.HasMedia + !IsEmpty(ListItem.Trailer)</visible>
+				<visible>!Player.HasMedia + !String.IsEmpty(ListItem.Trailer)</visible>
 				<visible>!Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
 				<visible>![Control.IsVisible(500) | Control.IsVisible(732)]</visible>
 				<visible>Skin.HasSetting(EnableFloorReturnButtons)</visible>
@@ -493,7 +526,7 @@
 	</include>
 	<include name="CommonNowPlaying">
 		<control type="group">
-			<visible>Player.HasMedia + IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(HideNowPlayingInfo)</visible>
+			<visible>Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
@@ -638,7 +671,7 @@
 	</include>
 	<include name="NextAired">
 		<control type="group">
-			<visible>!Skin.HasSetting(DisableTVNextAired) + !Player.HasMedia + !IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+			<visible>!Skin.HasSetting(DisableTVNextAired) + !Player.HasMedia + !String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 			<animation effect="slide" start="0,0" end="22,0" time="0" condition="Control.IsVisible(51) | Control.IsVisible(500) | Control.IsVisible(505)">Conditional</animation>
 			<include>VisibleFadeEffect</include>
 			<left>60</left>
@@ -651,7 +684,7 @@
 				<fadetime>200</fadetime>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture background="true">arrow-big-right.png</texture>
-				<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+				<visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 			</control>
 			<control type="label">
 				<left>40</left>
@@ -664,7 +697,7 @@
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[Window(Home).Property(NextAired.NextNumber),[COLOR=white]$LOCALIZE[209]:[/COLOR] ]$INFO[Window(Home).Property(NextAired.NextTitle), • ]</label>
-				<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+				<visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 			</control>
 			<control type="label">
 				<left>40</left>
@@ -677,7 +710,7 @@
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[Window(Home).Property(NextAired.NextDate),[COLOR=white]$LOCALIZE[31969]:[/COLOR] ]$INFO[Window(Home).Property(NextAired.AirTime), • ]</label>
-				<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+				<visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 			</control>
 		</control>
 	</include>
@@ -1148,13 +1181,13 @@
 			<include>ButtonCommonValues</include>
 			<label>13350</label>
 			<onclick>$VAR[PlayList]</onclick>
-			<visible>[Window.IsActive(Videos) + !StringCompare(Playlist.Length(video),0)] | [[Window.IsActive(Music) | Window.IsActive(musicfiles)] + !StringCompare(Playlist.Length(music),0)]</visible>
+			<visible>[Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)] | [[Window.IsActive(Music) | Window.IsActive(musicfiles)] + !String.IsEqual(Playlist.Length(music),0)]</visible>
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">
 		<control type="group">
 			<depth>DepthSideBlade</depth>
-			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
+			<visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
 			<animation effect="slide" start="0,0" end="0,-60" time="75">Visible</animation>
 			<animation effect="slide" start="0,-60" end="0,0" delay="300" time="75">Hidden</animation>
 			<left>300r</left>
@@ -1196,12 +1229,12 @@
 			<include condition="!Skin.HasSetting(ClockShowSeconds)">ClockDefault</include>
 			<include condition="Skin.HasSetting(ClockShowSeconds)">ClockSeconds</include>
 			<include>Window_OpenClose_Animation</include>
-			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Player.Muted">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="system.getbool(input.enablemouse)+Window.IsVisible(1198)">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
-			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+			<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
 	</include>
@@ -1219,12 +1252,12 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Date]</label>
 			<include>Window_OpenClose_Animation</include>
-			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Player.Muted">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-80,0" time="0" condition="system.getbool(input.enablemouse)+Window.IsVisible(1198)">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-55" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
-			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+			<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
 	</include>
@@ -1243,7 +1276,7 @@
 		<animation effect="rotate" end="720" center="auto" time="400" loop="true" reversible="false" condition="Player.Rewinding32x">Conditional</animation>
 	</include>
 	<include name="MediaInfoPopup">
-		<animation effect="fade" start="0" end="100" time="1600" delay="2000" condition="IsEmpty(Skin.String(MediaPopupControl))">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="1600" delay="2000" condition="String.IsEmpty(Skin.String(MediaPopupControl))">Visible</animation>
 		<animation effect="fade" start="0" end="100" time="300" delay="300" condition="Skin.String(MediaPopupControl,Instant)">Visible</animation>
 		<animation effect="fade" start="0" end="100" time="1600" delay="3000" condition="Skin.String(MediaPopupControl,Delayed)">Visible</animation>
 		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
@@ -1300,13 +1333,13 @@
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
 				<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.String(GlobalBackGroundPath)]</texture>
-				<visible>!IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
+				<visible>!String.IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
 			</control>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
 				<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
-				<visible>IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
+				<visible>String.IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
 			</control>
 			<control type="group">
 				<left>-133</left>
@@ -1425,7 +1458,7 @@
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
-				<visible>[Library.HasContent(Music) + [StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music) | StringCompare(Container(9000).ListItem.Property(HiLiteItem),MusicPlayList)]]| StringCompare(Container(9000).ListItem.Property(HiLiteItem),Concerts)</visible>
+				<visible>[Library.HasContent(Music) + [String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Music) | String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),MusicPlayList)]]| String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Concerts)</visible>
 			</control>
 			<control type="group">
 				<left>-133</left>
@@ -1549,7 +1582,7 @@
 					</control>
 					<include>VideoBoxGlass</include>
 				</control>
-				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) | StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows) | StringCompare(Container(9000).ListItem.Property(HiLiteItem),Videos) | StringCompare(Container(9000).ListItem.Property(HiLiteItem),VideoPlayList)</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Movies) | String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),TVShows) | String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Videos) | String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),VideoPlayList)</visible>
 			</control>
 		</control>
 	</include>
@@ -1570,7 +1603,7 @@
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
 			</control>
 			<control type="image">
 				<description>Banner</description>
@@ -1580,7 +1613,7 @@
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
 			</control>
 			<control type="image">
 				<description>Logo</description>
@@ -1590,7 +1623,7 @@
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
 			</control>
 			<control type="label">
 				<description>Episode Number</description>
@@ -1653,7 +1686,7 @@
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
 			</control>
 			<control type="image">
 				<description>Banner</description>
@@ -1663,7 +1696,7 @@
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
 			</control>
 			<control type="image">
 				<description>Logo</description>
@@ -1673,7 +1706,7 @@
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
 			</control>
 			<control type="label">
 				<description>Episode Number</description>
@@ -1723,7 +1756,7 @@
 	</include>
 	<include name="VideoNodeStatsList">
 		<control type="list" id="8051">
-			<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),VideoNode)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),VideoNode)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1</width>
@@ -1761,35 +1794,35 @@
 		<focusedcolor>white</focusedcolor>
 	</include>
 	<include name="TransparentEffect">
-		<animation effect="fade" start="100" end="40" time="0" condition="SubString(skin.string(MediaPanelTrans),85)">Conditional</animation>
-		<animation effect="fade" start="100" end="50" time="0" condition="SubString(skin.string(MediaPanelTrans),70)">Conditional</animation>
-		<animation effect="fade" start="100" end="60" time="0" condition="SubString(skin.string(MediaPanelTrans),55)">Conditional</animation>
-		<animation effect="fade" start="100" end="70" time="0" condition="SubString(skin.string(MediaPanelTrans),40)">Conditional</animation>
-		<animation effect="fade" start="100" end="80" time="0" condition="SubString(skin.string(MediaPanelTrans),25)">Conditional</animation>
-		<animation effect="fade" start="100" end="90" time="0" condition="SubString(skin.string(MediaPanelTrans),10)">Conditional</animation>
+		<animation effect="fade" start="100" end="40" time="0" condition="String.Contains(Skin.String(MediaPanelTrans),85)">Conditional</animation>
+		<animation effect="fade" start="100" end="50" time="0" condition="String.Contains(Skin.String(MediaPanelTrans),70)">Conditional</animation>
+		<animation effect="fade" start="100" end="60" time="0" condition="String.Contains(Skin.String(MediaPanelTrans),55)">Conditional</animation>
+		<animation effect="fade" start="100" end="70" time="0" condition="String.Contains(Skin.String(MediaPanelTrans),40)">Conditional</animation>
+		<animation effect="fade" start="100" end="80" time="0" condition="String.Contains(Skin.String(MediaPanelTrans),25)">Conditional</animation>
+		<animation effect="fade" start="100" end="90" time="0" condition="String.Contains(Skin.String(MediaPanelTrans),10)">Conditional</animation>
 	</include>
 	<include name="HomeTransparentEffect">
-		<animation effect="fade" start="100" end="40" time="0" condition="SubString(skin.string(HomeTrans),85)">Conditional</animation>
-		<animation effect="fade" start="100" end="50" time="0" condition="SubString(skin.string(HomeTrans),70)">Conditional</animation>
-		<animation effect="fade" start="100" end="60" time="0" condition="SubString(skin.string(HomeTrans),55)">Conditional</animation>
-		<animation effect="fade" start="100" end="70" time="0" condition="SubString(skin.string(HomeTrans),40)">Conditional</animation>
-		<animation effect="fade" start="100" end="80" time="0" condition="SubString(skin.string(HomeTrans),25)">Conditional</animation>
-		<animation effect="fade" start="100" end="90" time="0" condition="SubString(skin.string(HomeTrans),10)">Conditional</animation>
+		<animation effect="fade" start="100" end="40" time="0" condition="String.Contains(Skin.String(HomeTrans),85)">Conditional</animation>
+		<animation effect="fade" start="100" end="50" time="0" condition="String.Contains(Skin.String(HomeTrans),70)">Conditional</animation>
+		<animation effect="fade" start="100" end="60" time="0" condition="String.Contains(Skin.String(HomeTrans),55)">Conditional</animation>
+		<animation effect="fade" start="100" end="70" time="0" condition="String.Contains(Skin.String(HomeTrans),40)">Conditional</animation>
+		<animation effect="fade" start="100" end="80" time="0" condition="String.Contains(Skin.String(HomeTrans),25)">Conditional</animation>
+		<animation effect="fade" start="100" end="90" time="0" condition="String.Contains(Skin.String(HomeTrans),10)">Conditional</animation>
 	</include>
 	<include name="TextureBorderAddons">
 		<include condition="Skin.String(TextureBorder,Medium)">Border5</include>
 		<include condition="Skin.String(TextureBorder,Large)">Border7</include>
-		<include condition="IsEmpty(Skin.String(TextureBorder))">Border3</include>
+		<include condition="String.IsEmpty(Skin.String(TextureBorder))">Border3</include>
 	</include>
 	<include name="TextureBorderWidgets">
 		<include condition="Skin.String(TextureBorder,Medium)">Border7</include>
 		<include condition="Skin.String(TextureBorder,Large)">Border9</include>
-		<include condition="IsEmpty(Skin.String(TextureBorder))">Border5</include>
+		<include condition="String.IsEmpty(Skin.String(TextureBorder))">Border5</include>
 	</include>
 	<include name="TextureBorderViews">
 		<include condition="Skin.String(TextureBorder,Medium)">Border7</include>
 		<include condition="Skin.String(TextureBorder,Large)">Border9</include>
-		<include condition="IsEmpty(Skin.String(TextureBorder))">Border5</include>
+		<include condition="String.IsEmpty(Skin.String(TextureBorder))">Border5</include>
 	</include>
 	<include name="Border3">
 		<bordersize>3</bordersize>
@@ -1840,59 +1873,59 @@
 	</include>
 	<include name="MenuMoviePlayListCheck">
 		<visible>
-			!IsEmpty(Skin.String(HomeItem.1.Playlist)) + Skin.String(HomeItem.1.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.1) |
-			!IsEmpty(Skin.String(HomeItem.2.Playlist)) + Skin.String(HomeItem.2.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.2) |
-			!IsEmpty(Skin.String(HomeItem.3.Playlist)) + Skin.String(HomeItem.3.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.3) |
-			!IsEmpty(Skin.String(HomeItem.4.Playlist)) + Skin.String(HomeItem.4.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.4) |
-			!IsEmpty(Skin.String(HomeItem.5.Playlist)) + Skin.String(HomeItem.5.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.5) |
-			!IsEmpty(Skin.String(HomeItem.6.Playlist)) + Skin.String(HomeItem.6.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.6) |
-			!IsEmpty(Skin.String(HomeItem.7.Playlist)) + Skin.String(HomeItem.7.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.7) |
-			!IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.8) |
-			!IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.9) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.10) |
-			!IsEmpty(Skin.String(HomeItem.11.Playlist)) + Skin.String(HomeItem.11.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.11) |
-			!IsEmpty(Skin.String(HomeItem.12.Playlist)) + Skin.String(HomeItem.12.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.12) |
-			!IsEmpty(Skin.String(HomeItem.13.Playlist)) + Skin.String(HomeItem.13.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.13) |
-			!IsEmpty(Skin.String(HomeItem.14.Playlist)) + Skin.String(HomeItem.14.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.14) |
-			!IsEmpty(Skin.String(HomeItem.15.Playlist)) + Skin.String(HomeItem.15.Type,VideoPlayList) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.15)
+			!String.IsEmpty(Skin.String(HomeItem.1.Playlist)) + Skin.String(HomeItem.1.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.1) |
+			!String.IsEmpty(Skin.String(HomeItem.2.Playlist)) + Skin.String(HomeItem.2.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.2) |
+			!String.IsEmpty(Skin.String(HomeItem.3.Playlist)) + Skin.String(HomeItem.3.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.3) |
+			!String.IsEmpty(Skin.String(HomeItem.4.Playlist)) + Skin.String(HomeItem.4.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.4) |
+			!String.IsEmpty(Skin.String(HomeItem.5.Playlist)) + Skin.String(HomeItem.5.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.5) |
+			!String.IsEmpty(Skin.String(HomeItem.6.Playlist)) + Skin.String(HomeItem.6.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.6) |
+			!String.IsEmpty(Skin.String(HomeItem.7.Playlist)) + Skin.String(HomeItem.7.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.7) |
+			!String.IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.8) |
+			!String.IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.9) |
+			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.10) |
+			!String.IsEmpty(Skin.String(HomeItem.11.Playlist)) + Skin.String(HomeItem.11.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.11) |
+			!String.IsEmpty(Skin.String(HomeItem.12.Playlist)) + Skin.String(HomeItem.12.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.12) |
+			!String.IsEmpty(Skin.String(HomeItem.13.Playlist)) + Skin.String(HomeItem.13.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.13) |
+			!String.IsEmpty(Skin.String(HomeItem.14.Playlist)) + Skin.String(HomeItem.14.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.14) |
+			!String.IsEmpty(Skin.String(HomeItem.15.Playlist)) + Skin.String(HomeItem.15.Type,VideoPlayList) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.15)
 		</visible>
 	</include>
 	<include name="MenuMusicPlayListCheck">
 		<visible>
-			!IsEmpty(Skin.String(HomeItem.1.Playlist)) + Skin.String(HomeItem.1.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.1) |
-			!IsEmpty(Skin.String(HomeItem.2.Playlist)) + Skin.String(HomeItem.2.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.2) |
-			!IsEmpty(Skin.String(HomeItem.3.Playlist)) + Skin.String(HomeItem.3.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.3) |
-			!IsEmpty(Skin.String(HomeItem.4.Playlist)) + Skin.String(HomeItem.4.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.4) |
-			!IsEmpty(Skin.String(HomeItem.5.Playlist)) + Skin.String(HomeItem.5.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.5) |
-			!IsEmpty(Skin.String(HomeItem.6.Playlist)) + Skin.String(HomeItem.6.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.6) |
-			!IsEmpty(Skin.String(HomeItem.7.Playlist)) + Skin.String(HomeItem.7.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.7) |
-			!IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.8) |
-			!IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.9) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.10) |
-			!IsEmpty(Skin.String(HomeItem.11.Playlist)) + Skin.String(HomeItem.11.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.11) |
-			!IsEmpty(Skin.String(HomeItem.12.Playlist)) + Skin.String(HomeItem.12.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.12) |
-			!IsEmpty(Skin.String(HomeItem.13.Playlist)) + Skin.String(HomeItem.13.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.13) |
-			!IsEmpty(Skin.String(HomeItem.14.Playlist)) + Skin.String(HomeItem.14.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.14) |
-			!IsEmpty(Skin.String(HomeItem.15.Playlist)) + Skin.String(HomeItem.15.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.15)
+			!String.IsEmpty(Skin.String(HomeItem.1.Playlist)) + Skin.String(HomeItem.1.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.1) |
+			!String.IsEmpty(Skin.String(HomeItem.2.Playlist)) + Skin.String(HomeItem.2.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.2) |
+			!String.IsEmpty(Skin.String(HomeItem.3.Playlist)) + Skin.String(HomeItem.3.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.3) |
+			!String.IsEmpty(Skin.String(HomeItem.4.Playlist)) + Skin.String(HomeItem.4.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.4) |
+			!String.IsEmpty(Skin.String(HomeItem.5.Playlist)) + Skin.String(HomeItem.5.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.5) |
+			!String.IsEmpty(Skin.String(HomeItem.6.Playlist)) + Skin.String(HomeItem.6.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.6) |
+			!String.IsEmpty(Skin.String(HomeItem.7.Playlist)) + Skin.String(HomeItem.7.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.7) |
+			!String.IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.8) |
+			!String.IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.9) |
+			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.10) |
+			!String.IsEmpty(Skin.String(HomeItem.11.Playlist)) + Skin.String(HomeItem.11.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.11) |
+			!String.IsEmpty(Skin.String(HomeItem.12.Playlist)) + Skin.String(HomeItem.12.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.12) |
+			!String.IsEmpty(Skin.String(HomeItem.13.Playlist)) + Skin.String(HomeItem.13.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.13) |
+			!String.IsEmpty(Skin.String(HomeItem.14.Playlist)) + Skin.String(HomeItem.14.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.14) |
+			!String.IsEmpty(Skin.String(HomeItem.15.Playlist)) + Skin.String(HomeItem.15.Type,MusicPlaylist) + String.IsEqual(Window(Home).Property(UsrSelectBtn),HomeItem.15)
 		</visible>
 	</include>
 	<include name="MenuVideoNodeListCheck">
 		<visible>
-			!IsEmpty(Skin.String(HomeItem.1.Playlist)) + Skin.String(HomeItem.1.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.1) |
-			!IsEmpty(Skin.String(HomeItem.2.Playlist)) + Skin.String(HomeItem.2.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.2) |
-			!IsEmpty(Skin.String(HomeItem.3.Playlist)) + Skin.String(HomeItem.3.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.3) |
-			!IsEmpty(Skin.String(HomeItem.4.Playlist)) + Skin.String(HomeItem.4.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.4) |
-			!IsEmpty(Skin.String(HomeItem.5.Playlist)) + Skin.String(HomeItem.5.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.5) |
-			!IsEmpty(Skin.String(HomeItem.6.Playlist)) + Skin.String(HomeItem.6.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.6) |
-			!IsEmpty(Skin.String(HomeItem.7.Playlist)) + Skin.String(HomeItem.7.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.7) |
-			!IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.8) |
-			!IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.9) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.10) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.11) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.12) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.13.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.13) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.14.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.14) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.15.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.15)
+			!String.IsEmpty(Skin.String(HomeItem.1.Playlist)) + Skin.String(HomeItem.1.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.1) |
+			!String.IsEmpty(Skin.String(HomeItem.2.Playlist)) + Skin.String(HomeItem.2.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.2) |
+			!String.IsEmpty(Skin.String(HomeItem.3.Playlist)) + Skin.String(HomeItem.3.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.3) |
+			!String.IsEmpty(Skin.String(HomeItem.4.Playlist)) + Skin.String(HomeItem.4.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.4) |
+			!String.IsEmpty(Skin.String(HomeItem.5.Playlist)) + Skin.String(HomeItem.5.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.5) |
+			!String.IsEmpty(Skin.String(HomeItem.6.Playlist)) + Skin.String(HomeItem.6.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.6) |
+			!String.IsEmpty(Skin.String(HomeItem.7.Playlist)) + Skin.String(HomeItem.7.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.7) |
+			!String.IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.8) |
+			!String.IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.9) |
+			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.10) |
+			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.11) |
+			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.12) |
+			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.13.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.13) |
+			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.14.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.14) |
+			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.15.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.15)
 		</visible>
 	</include>
 	<include name="TopLeftInfo">
@@ -1906,8 +1939,8 @@
 			<texture>kodi-logo.png</texture>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
-			<visible>IsEmpty(Skin.String(TopLeftHomeInfo)) | StringCompare(Skin.String(TopLeftHomeInfo),Logo)</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
+			<visible>String.IsEmpty(Skin.String(TopLeftHomeInfo)) | String.IsEqual(Skin.String(TopLeftHomeInfo),Logo)</visible>
 		</control>
 		<control type="label" id="1">
 			<description>Logged User</description>
@@ -1923,13 +1956,13 @@
 			<info>System.ProfileName</info>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
-			<visible>!StringCompare(System.ProfileName,Master user) + StringCompare(Skin.String(TopLeftHomeInfo),Profile)</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
+			<visible>!String.IsEqual(System.ProfileName,Master user) + String.IsEqual(Skin.String(TopLeftHomeInfo),Profile)</visible>
 		</control>
 		<control type="group" id="1">
 			<left>20</left>
 			<top>0</top>
-			<visible>!IsEmpty(Weather.Plugin) + StringCompare(Skin.String(TopLeftHomeInfo),Weather)</visible>
+			<visible>!String.IsEmpty(Weather.Plugin) + String.IsEqual(Skin.String(TopLeftHomeInfo),Weather)</visible>
 			<include>Window_OpenClose_Animation</include>
 			<control type="image" id="1">
 				<description>Weather image</description>
@@ -1981,7 +2014,7 @@
 					<label>$INFO[System.TemperatureUnits]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+					<visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
 				</control>
 				<control type="label" id="1">
 					<description>Conditions Label</description>
@@ -1999,7 +2032,7 @@
 	<include name="ExtendedInfoAutoComplete">
 		<control type="group" id="5000">
 			<animation effect="slide" start="0,-240" end="0,0" time="300" tween="quadratic" easing="out">VisibleChange</animation>
-			<visible>!IsEmpty(Control.GetLabel(312).index(1)) + !Window.IsVisible(1130) + !Control.IsVisible(313)</visible>
+			<visible>!String.IsEmpty(Control.GetLabel(312).index(1)) + !Window.IsVisible(1130) + !Control.IsVisible(313)</visible>
 			<top>-120</top>
 			<left>0</left>
 			<control type="image">
@@ -2030,7 +2063,7 @@
 					</control>
 					<control type="label">
 						<top>5</top>
-						<width>200</width>
+						<width>196</width>
 						<height>30</height>
 						<align>center</align>
 						<textcolor>grey</textcolor>
@@ -2059,52 +2092,6 @@
 				<content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=8</content>
 			</control>
 		</control>
-	</include>
-		<include name="CommonWindowHeader">
-		<param name="Icon" default="icon_home" />
-		<param name="Label" default="" />
-		<param name="ShowLabel2" default="False" />
-		<definition>
-			<control type="group">
-				<depth>DepthHeader</depth>
-				<control type="image">
-					<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
-					<description>Section header image</description>
-					<left>20</left>
-					<top>3</top>
-					<width>35</width>
-					<height>35</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$PARAM[Icon].png</texture>
-				</control>
-				<control type="grouplist">
-					<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
-					<left>65</left>
-					<top>5</top>
-					<width>1000</width>
-					<height>30</height>
-					<orientation>horizontal</orientation>
-					<align>left</align>
-					<itemgap>5</itemgap>
-					<control type="label">
-						<include>WindowTitleCommons</include>
-						<label>$PARAM[Label]</label>
-					</control>
-					<control type="label">
-						<include>WindowTitleCommons</include>
-						<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$INFO[Container.FolderName]</label>
-						<visible>!IsEmpty(Container.FolderName)</visible>
-					</control>
-					<control type="label">
-						<include>WindowTitleCommons</include>
-						<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$INFO[Control.GetLabel(2)]</label>
-						<visible>$PARAM[ShowLabel2]</visible>
-					</control>
-				</control>
-				<include>Clock</include>
-				<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
-			</control>
-		</definition>
 	</include>
 	<include name="CommonWindowHeader">
 		<param name="Icon" default="icon_home" />
@@ -2137,7 +2124,7 @@
 					<control type="label">
 						<include>WindowTitleCommons</include>
 						<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$INFO[Container.FolderName]</label>
-						<visible>!IsEmpty(Container.FolderName)</visible>
+						<visible>!String.IsEmpty(Container.FolderName)</visible>
 					</control>
 					<control type="label">
 						<include>WindowTitleCommons</include>
@@ -2152,7 +2139,235 @@
 	<include name="BackgroundDimensions">
 		<width>1280</width>
 		<height>720</height>
-		<animation effect="zoom" center="auto" end="101,101" time="0" condition="IntegerGreaterThan(System.StereoscopicMode,0)">conditional</animation>
+		<animation effect="zoom" center="auto" end="101,101" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+	</include>
+	<include name="MusicInfoArtistInfo">
+		<item>
+			<label>$LOCALIZE[21893]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Born)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21894]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Formed)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Formed))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[515]:</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Genre)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[175]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Mood)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Mood))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[176]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Style)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Style))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21892]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Instrument))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21897]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Died)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Died))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21896]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Disbanded)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21898]:</label>
+			<label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+		</item>
+	</include>
+	<include name="MusicInfoAlbumInfo">
+		<item>
+			<label>$LOCALIZE[557]:</label>
+			<label2>$INFO[ListItem.Artist]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Artist)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[515]:</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Genre)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[563]:</label>
+			<label2>$INFO[ListItem.RatingAndVotes]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38018]:</label>
+			<label2>$INFO[ListItem.Userrating]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Userrating)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[175]:</label>
+			<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[176]:</label>
+			<label2>$INFO[ListItem.Property(Album_Style)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Style))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21895]:</label>
+			<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Theme))</visible>
+		</item>
+		<item>
+			<label>146</label>
+			<label2>$INFO[ListItem.Property(Album_Type)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Type))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[21899]:</label>
+			<label2>$INFO[ListItem.Property(Album_Label)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[562]:</label>
+			<label2>$INFO[ListItem.Year]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Year)</visible>
+		</item>
+	</include>
+	<include name="MusicInfoSongInfo">
+		<item>
+			<label>$LOCALIZE[557]:</label>
+			<label2>$INFO[ListItem.Artist]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Artist)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[558]:</label>
+			<label2>$INFO[ListItem.Album]$INFO[listitem.discnumber, - $LOCALIZE[427] ]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Album)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[515]:</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Genre)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[175]:</label>
+			<label2>$INFO[ListItem.Mood]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Mood)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[562]:</label>
+			<label2>$INFO[ListItem.Year]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Year)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[554]:</label>
+			<label2>$INFO[ListItem.TrackNumber]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.TrackNumber)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[563]:</label>
+			<label2>$INFO[ListItem.RatingAndVotes]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38018]:</label>
+			<label2>$INFO[ListItem.Userrating]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Userrating)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[29903]:</label>
+			<label2>$INFO[ListItem.Property(Role.Composer)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Composer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[29905]:</label>
+			<label2>$INFO[ListItem.Property(Role.Conductor)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Conductor))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38034]:</label>
+			<label2>$INFO[ListItem.Property(Role.Orchestra)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Orchestra))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38035]:</label>
+			<label2>$INFO[ListItem.Property(Role.Lyricist)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Lyricist))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38036]:</label>
+			<label2>$INFO[ListItem.Property(Role.Remixer)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Remixer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38037]:</label>
+			<label2>$INFO[ListItem.Property(Role.Arranger)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Arranger))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38038]:</label>
+			<label2>$INFO[ListItem.Property(Role.Engineer)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Engineer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38039]:</label>
+			<label2>$INFO[ListItem.Property(Role.Producer)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Producer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38040]:</label>
+			<label2>$INFO[ListItem.Property(Role.DJMixer)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.DJMixer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[38041]:</label>
+			<label2>$INFO[ListItem.Property(Role.Mixer)]</label2>
+			<onclick>noop</onclick>
+			<visible>!String.IsEmpty(ListItem.Property(Role.Mixer))</visible>
+		</item>
 	</include>
 	<include name="SkinSettingsSubMenuButtons">
 		<param name="Id" default="8000" />

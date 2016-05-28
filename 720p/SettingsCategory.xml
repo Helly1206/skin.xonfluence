@@ -11,9 +11,9 @@
 			<height>100</height>
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
-			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			<animation effect="fade" start="100" end="65" time="0" condition="IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
-			<visible>!IsEmpty(Skin.String(HomeFloor))</visible>
+			<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+			<animation effect="fade" start="100" end="65" time="0" condition="String.IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
+			<visible>!String.IsEmpty(Skin.String(HomeFloor))</visible>
 		</control>
 		<control type="group">
 			<left>90</left>
@@ -283,7 +283,7 @@
 			<include>CommonNowPlaying</include>
 		</control>
 		<include>FloorReturnButtons</include>
-		<include name="CommonWindowHeader">
+		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_system" />
 			<param name="Label" value="$LOCALIZE[5]" />
 			<param name="ShowLabel2" value="true" />

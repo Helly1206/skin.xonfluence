@@ -137,7 +137,7 @@
 						<onclick>Skin.SetString(HomeItem.1.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 					</item>
 					<item id="2">
 						<description>Home Menu Item Two</description>
@@ -162,7 +162,7 @@
 						<onclick>Skin.SetString(HomeItem.2.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.2.Path))</visible>
 					</item>
 					<item id="3">
 						<description>Home Menu Item Three</description>
@@ -187,7 +187,7 @@
 						<onclick>Skin.SetString(HomeItem.3.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.3.Path))</visible>
 					</item>
 					<item id="4">
 						<description>Home Menu Item Four</description>
@@ -212,7 +212,7 @@
 						<onclick>Skin.SetString(HomeItem.4.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.4.Path))</visible>
 					</item>
 					<item id="5">
 						<description>Home Menu Item Five</description>
@@ -237,7 +237,7 @@
 						<onclick>Skin.SetString(HomeItem.5.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.5.Path))</visible>
 					</item>
 					<item id="6">
 						<description>Home Menu Item Six</description>
@@ -262,7 +262,7 @@
 						<onclick>Skin.SetString(HomeItem.6.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.6.Path))</visible>
 					</item>
 					<item id="7">
 						<description>Home Menu Item Seven</description>
@@ -287,7 +287,7 @@
 						<onclick>Skin.SetString(HomeItem.7.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.7.Path))</visible>
 					</item>
 					<item id="8">
 						<description>Home Menu Item Eight</description>
@@ -312,7 +312,7 @@
 						<onclick>Skin.SetString(HomeItem.8.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.8.Path))</visible>
 					</item>
 					<item id="9">
 						<description>Home Menu Item Nine</description>
@@ -337,7 +337,7 @@
 						<onclick>Skin.SetString(HomeItem.9.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.9.Path))</visible>
 					</item>
 					<item id="10">
 						<description>Home Menu Item Ten</description>
@@ -362,7 +362,7 @@
 						<onclick>Skin.SetString(HomeItem.10.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.10.Path))</visible>
 					</item>
 					<item id="11">
 						<description>Home Menu Item Eleven</description>
@@ -387,7 +387,7 @@
 						<onclick>Skin.SetString(HomeItem.11.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.11.Path))</visible>
 					</item>
 					<item id="12">
 						<description>Home Menu Item Twelve</description>
@@ -412,7 +412,7 @@
 						<onclick>Skin.SetString(HomeItem.12.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.12.Path))</visible>
 					</item>
 					<item id="13">
 						<description>Home Menu Item Twelve</description>
@@ -437,7 +437,7 @@
 						<onclick>Skin.SetString(HomeItem.13.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.13.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.13.Path))</visible>
 					</item>					
 					<item id="14">
 						<description>Home Menu Item Twelve</description>
@@ -462,7 +462,7 @@
 						<onclick>Skin.SetString(HomeItem.14.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.14.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.14.Path))</visible>
 					</item>					
 					<item id="15">
 						<description>Home Menu Item Twelve</description>
@@ -487,7 +487,7 @@
 						<onclick>Skin.SetString(HomeItem.15.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
 						<onclick>Dialog.Close(1128)</onclick>
 						<onclick>Skin.Reset(UsrSelectAddon)</onclick>
-						<visible>!IsEmpty(Skin.String(HomeItem.15.Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.15.Path))</visible>
 					</item>
 				</content>
 			</control>

@@ -28,7 +28,7 @@
 		<include>FloorReturnButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
-		<include name="CommonWindowHeader">
+		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_addons" />
 			<param name="Label" value="$LOCALIZE[0]" />
 		</include>
@@ -41,7 +41,7 @@
 				<top>110</top>
 				<width>250</width>
 				<height>600</height>
-				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+				<onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 				<onleft>50</onleft>
 				<onright>ClearProperty(SideBladeOpen)</onright>
 				<onright>50</onright>
@@ -92,6 +92,24 @@
 					<label>587</label>
 					<onclick>right</onclick>
 					<onclick>Filter</onclick>
+				</control>
+				<control type="label" id="203">
+					<width>250</width>
+					<height>35</height>
+					<font>font12</font>
+					<label>31039</label>
+					<textcolor>$VAR[MainColorOne]</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<visible>Container.Content(addons)</visible>
+				</control>
+				<control type="button" id="204">
+					<description>Get more</description>
+					<textwidth>235</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>21452</label>
+					<onclick>ActivateWindow(addonbrowser,addons://more/executable/,return)</onclick>
+					<visible>Container.Content(addons)</visible>
 				</control>
 				<include>CommonNowPlaying_Controls</include>
 			</control>

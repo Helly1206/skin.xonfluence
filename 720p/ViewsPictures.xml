@@ -203,7 +203,7 @@
 					<font>font13</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>!IsEmpty(listItem.PictureDatetime)</visible>
+					<visible>!String.IsEmpty(listItem.PictureDatetime)</visible>
 				</control>
 				<control type="label">
 					<description>Resolution txt</description>
@@ -217,12 +217,12 @@
 					<font>font13</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>!IsEmpty(listItem.PictureResolution)</visible>
+					<visible>!String.IsEmpty(listItem.PictureResolution)</visible>
 				</control>
 			</control>
 		</control>
 	</include>
-		<include name="PictureFullWallView">
+	<include name="PictureFullWallView">
 		<control type="group">
 			<visible>Control.IsVisible(532)</visible>
 			<control type="image">
@@ -265,7 +265,7 @@
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>
 						<colordiffuse>AAFFFFFF</colordiffuse>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -277,8 +277,8 @@
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>
 						<colordiffuse>AAFFFFFF</colordiffuse>
-						<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="205" width="142">

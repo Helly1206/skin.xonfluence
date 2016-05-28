@@ -101,7 +101,7 @@
 			<control type="group">
 				<left>530</left>
 				<top>490</top>
-				<visible>![Control.IsVisible(50) + !IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(HideEPGwithRDS) + RDS.HasRDS]</visible>
+				<visible>![Control.IsVisible(50) + !String.IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(HideEPGwithRDS) + RDS.HasRDS]</visible>
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
@@ -172,14 +172,14 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<scroll>false</scroll>
-					<visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>
+					<visible>!String.IsEmpty(Container(50).ListItem.NextTitle)</visible>
 					<label>$LOCALIZE[19031]: $INFO[Container(50).ListItem.NextTitle]</label>
 				</control>
 			</control>
 			<control type="group">
 				<left>530</left>
 				<top>490</top>
-				<visible>Control.IsVisible(50) + !IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(HideEPGwithRDS) + RDS.HasRDS</visible>
+				<visible>Control.IsVisible(50) + !String.IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(HideEPGwithRDS) + RDS.HasRDS</visible>
 				<control type="image">
 					<left>580</left>
 					<top>-3</top>
@@ -317,7 +317,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>IsEmpty(Listitem.Icon)</visible>
+						<visible>String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>50</left>
@@ -330,7 +330,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!IsEmpty(Listitem.Icon)</visible>
+						<visible>!String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="progress">
 						<description>Progressbar</description>
@@ -413,7 +413,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>IsEmpty(Listitem.Icon)</visible>
+						<visible>String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>50</left>
@@ -426,7 +426,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!IsEmpty(Listitem.Icon)</visible>
+						<visible>!String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="progress">
 						<description>Progressbar</description>
@@ -548,7 +548,7 @@
 				<height>117</height>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>!IsEmpty(Listitem.Icon)</visible>
+				<visible>!String.IsEmpty(Listitem.Icon)</visible>
 			</control>
 			<control type="multiimage">
 				<left>225</left>
@@ -649,7 +649,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<scroll>false</scroll>
-					<visible>!IsEmpty(Container(5010).ListItem.NextTitle)</visible>
+					<visible>!String.IsEmpty(Container(5010).ListItem.NextTitle)</visible>
 					<label>$LOCALIZE[19031]: $INFO[Container(5010).ListItem.NextTitle]</label>
 				</control>
 				<control type="label">
@@ -662,7 +662,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<scroll>false</scroll>
-					<visible>!IsEmpty(Container(5010).ListItem.NextTitle)</visible>
+					<visible>!String.IsEmpty(Container(5010).ListItem.NextTitle)</visible>
 					<label>$INFO[Container(5010).ListItem.NextStartTime]$INFO[Container(5010).ListItem.NextEndTime, - ,]</label>
 				</control>
 			</control>
@@ -730,7 +730,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>IsEmpty(Listitem.Icon)</visible>
+						<visible>String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>270</left>
@@ -743,7 +743,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!IsEmpty(Listitem.Icon)</visible>
+						<visible>!String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="progress">
 						<description>Progressbar</description>
@@ -826,7 +826,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>IsEmpty(Listitem.Icon)</visible>
+						<visible>String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>270</left>
@@ -839,7 +839,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!IsEmpty(Listitem.Icon)</visible>
+						<visible>!String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="progress">
 						<description>Progressbar</description>
@@ -971,7 +971,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>IsEmpty(Listitem.Icon)</visible>
+						<visible>String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>50</left>
@@ -984,7 +984,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!IsEmpty(Listitem.Icon)</visible>
+						<visible>!String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="progress">
 						<description>Progressbar</description>
@@ -1067,7 +1067,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>IsEmpty(Listitem.Icon)</visible>
+						<visible>String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>50</left>
@@ -1080,7 +1080,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!IsEmpty(Listitem.Icon)</visible>
+						<visible>!String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="progress">
 						<description>Progressbar</description>
@@ -1277,7 +1277,7 @@
 						<width>170</width>
 						<height>140</height>
 						<texture>$INFO[ListItem.Icon]</texture>
-						<visible>Control.IsVisible(5060) + IsEmpty(ListItem.PlotOutline)</visible>						
+						<visible>Control.IsVisible(5060) + String.IsEmpty(ListItem.PlotOutline)</visible>						
 						<animation effect="fade" start="100" end="0" time="2000" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)">Conditional</animation>
 					</control>
 					<control type="label">
@@ -1290,7 +1290,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
-						<visible>!IsEmpty(Container(5060).ListItem.NextTitle)</visible>
+						<visible>!String.IsEmpty(Container(5060).ListItem.NextTitle)</visible>
 						<label>$LOCALIZE[19031]: $INFO[Container(5060).ListItem.NextTitle]</label>
 						<animation effect="fade" start="100" end="0" time="2000" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)">Conditional</animation>
 					</control>

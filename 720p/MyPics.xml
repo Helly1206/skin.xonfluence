@@ -46,7 +46,7 @@
 		<include>FloorReturnButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
-		<include name="CommonWindowHeader">
+		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_pictures" />
 			<param name="Label" value="$LOCALIZE[1]" />
 		</include>
@@ -59,7 +59,7 @@
 				<top>110</top>
 				<width>250</width>
 				<height>600</height>
-				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+				<onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 				<onleft>50</onleft>
 				<onright>ClearProperty(SideBladeOpen)</onright>
 				<onright>50</onright>

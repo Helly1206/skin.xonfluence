@@ -4,8 +4,8 @@
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
 	<onload condition="Skin.HasSetting(HideSkinSettings)">PreviousMenu</onload>
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
-	<onload condition="stringcompare(Container(9011).Position,0) + !stringcompare(Skin.String(InitialMenuPosi),0)">Control.Move(9011,$INFO[Skin.String(InitialMenuPosi)])</onload>
-	<onunload condition="IsEmpty(Skin.String(WeatherFanartDir)) | SubString(Skin.String(WeatherFanartDir),skin.xonfluence\extras\Weather\,right)">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onunload>
+	<onload condition="String.IsEqual(Container(9011).Position,0) + !String.IsEqual(Skin.String(InitialMenuPosi),0)">Control.Move(9011,$INFO[Skin.String(InitialMenuPosi)])</onload>
+	<onunload condition="String.IsEmpty(Skin.String(WeatherFanartDir)) | String.Contains(Skin.String(WeatherFanartDir),skin.xonfluence\extras\Weather\,right)">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onunload>
 	<onunload condition="!Skin.HasSetting(DisableFanartScript)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onunload>
 	<controls>
 		<include>CommonBackground</include>
@@ -16,11 +16,11 @@
 			<height>100</height>
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
-			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			<animation effect="fade" start="100" end="65" time="0" condition="IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
-			<visible>!IsEmpty(Skin.String(HomeFloor))</visible>
+			<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+			<animation effect="fade" start="100" end="65" time="0" condition="String.IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
+			<visible>!String.IsEmpty(Skin.String(HomeFloor))</visible>
 		</control>
-		<include name="CommonWindowHeader">
+		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_system" />
 			<param name="Label" value="$LOCALIZE[20077]" />
 		</include>
@@ -41,7 +41,7 @@
 				<width>1090</width>
 				<height>630</height>
 				<texture border="15">ContentPanel.png</texture>
-				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>5</left>
@@ -230,14 +230,14 @@
 					<top>60</top>
 					<width>750</width>
 					<height>530</height>
-					<include name="SkinSettingsSubMenuButtons">
+					<include content="SkinSettingsSubMenuButtons">
 						<param name="Id">9199</param>
     					<param name="Control">9001</param>
    						<param name="Up">9101</param>
 						<param name="Down">9101</param>
 					</include>
 					<control type="list" id="9001">
-						<include name="SkinSettingsSubMenuList">
+						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9001</param>
 							<param name="Right">9101</param>
 							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
@@ -463,7 +463,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<label>$LOCALIZE[31069]</label>
 								<label2>[COLOR=selected]$VAR[HomeFloorValue][/COLOR]</label2>
-								<onclick condition="IsEmpty(Skin.String(HomeFloor))">Skin.SetString(HomeFloor,Transparent)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(HomeFloor))">Skin.SetString(HomeFloor,Transparent)</onclick>
 								<onclick condition="Skin.String(HomeFloor,Transparent)">Skin.SetString(HomeFloor,Enabled)</onclick>
 								<onclick condition="Skin.String(HomeFloor,Enabled)">Skin.Reset(HomeFloor)</onclick>
 							</control>
@@ -632,7 +632,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick condition="IsEmpty(Skin.String(TextureBorder))">Skin.SetString(TextureBorder,Medium)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(TextureBorder))">Skin.SetString(TextureBorder,Medium)</onclick>
 								<onclick condition="Skin.String(TextureBorder,Medium)">Skin.SetString(TextureBorder,Large)</onclick>
 								<onclick condition="Skin.String(TextureBorder,Large)">Skin.Reset(TextureBorder)</onclick>
 							</control>
@@ -646,7 +646,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick condition="IsEmpty(Skin.String(SideBladeLabel))">Skin.SetString(SideBladeLabel,Small)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(SideBladeLabel))">Skin.SetString(SideBladeLabel,Small)</onclick>
 								<onclick condition="Skin.String(SideBladeLabel,Small)">Skin.SetString(SideBladeLabel,Top)</onclick>
 								<onclick condition="Skin.String(SideBladeLabel,Top)">Skin.SetString(SideBladeLabel,Bottom)</onclick>
 								<onclick condition="Skin.String(SideBladeLabel,Bottom)">Skin.Reset(SideBladeLabel)</onclick>
@@ -674,21 +674,21 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Control.Move(9011,1)</onclick>
 								<onclick>Skin.SetString(InitialMenuPosi,$INFO[Container(9011).Position])</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,0)">Skin.SetString(InitialMenuItem,-1)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,1)">Skin.SetString(InitialMenuItem,0)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,2)">Skin.SetString(InitialMenuItem,1)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,3)">Skin.SetString(InitialMenuItem,2)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,4)">Skin.SetString(InitialMenuItem,3)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,5)">Skin.SetString(InitialMenuItem,4)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,6)">Skin.SetString(InitialMenuItem,5)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,7)">Skin.SetString(InitialMenuItem,6)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,8)">Skin.SetString(InitialMenuItem,7)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,9)">Skin.SetString(InitialMenuItem,8)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,10)">Skin.SetString(InitialMenuItem,9)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,11)">Skin.SetString(InitialMenuItem,10)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,12)">Skin.SetString(InitialMenuItem,11)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,13)">Skin.SetString(InitialMenuItem,12)</onclick>
-								<onclick condition="StringCompare(Container(9011).Position,14)">Skin.SetString(InitialMenuItem,-2)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,0)">Skin.SetString(InitialMenuItem,-1)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,1)">Skin.SetString(InitialMenuItem,0)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,2)">Skin.SetString(InitialMenuItem,1)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,3)">Skin.SetString(InitialMenuItem,2)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,4)">Skin.SetString(InitialMenuItem,3)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,5)">Skin.SetString(InitialMenuItem,4)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,6)">Skin.SetString(InitialMenuItem,5)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,7)">Skin.SetString(InitialMenuItem,6)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,8)">Skin.SetString(InitialMenuItem,7)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,9)">Skin.SetString(InitialMenuItem,8)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,10)">Skin.SetString(InitialMenuItem,9)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,11)">Skin.SetString(InitialMenuItem,10)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,12)">Skin.SetString(InitialMenuItem,11)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,13)">Skin.SetString(InitialMenuItem,12)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,14)">Skin.SetString(InitialMenuItem,-2)</onclick>
 							</control>
 							<control type="radiobutton" id="137">
 								<description>lower menu bar</description>
@@ -830,7 +830,7 @@
 								<focusedcolor>white</focusedcolor>
 								<label>$LOCALIZE[31072]</label>
 								<label2>[COLOR=selected]$VAR[TopLeftInfoType][/COLOR]</label2>
-								<onclick condition="IsEmpty(Skin.String(TopLeftHomeInfo))">Skin.SetString(TopLeftHomeInfo,Weather)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(TopLeftHomeInfo))">Skin.SetString(TopLeftHomeInfo,Weather)</onclick>
 								<onclick condition="Skin.String(TopLeftHomeInfo,Weather)">Skin.SetString(TopLeftHomeInfo,Profile)</onclick>
 								<onclick condition="Skin.String(TopLeftHomeInfo,Profile)">Skin.SetString(TopLeftHomeInfo,Blank)</onclick>
 								<onclick condition="Skin.String(TopLeftHomeInfo,Blank)">Skin.SetString(TopLeftHomeInfo,Logo)</onclick>
@@ -873,7 +873,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick condition="IsEmpty(Skin.String(HomeTrans))">Skin.SetString(HomeTrans,10)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(HomeTrans))">Skin.SetString(HomeTrans,10)</onclick>
 								<onclick condition="Skin.String(HomeTrans,10)">Skin.SetString(HomeTrans,25)</onclick>
 								<onclick condition="Skin.String(HomeTrans,25)">Skin.SetString(HomeTrans,40)</onclick>
 								<onclick condition="Skin.String(HomeTrans,40)">Skin.SetString(HomeTrans,55)</onclick>
@@ -891,13 +891,26 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick condition="IsEmpty(Skin.String(CustomWidgets))">Skin.SetString(CustomWidgets,20)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(CustomWidgets))">Skin.SetString(CustomWidgets,20)</onclick>
 								<onclick condition="Skin.String(CustomWidgets,20)">Skin.SetString(CustomWidgets,30)</onclick>
 								<onclick condition="Skin.String(CustomWidgets,30)">Skin.SetString(CustomWidgets,40)</onclick>
 								<onclick condition="Skin.String(CustomWidgets,40)">Skin.SetString(CustomWidgets,50)</onclick>
 								<onclick condition="Skin.String(CustomWidgets,50)">Skin.SetString(CustomWidgets,75)</onclick>
 								<onclick condition="Skin.String(CustomWidgets,75)">Skin.SetString(CustomWidgets,100)</onclick>
 								<onclick condition="Skin.String(CustomWidgets,100)">Skin.Reset(CustomWidgets)</onclick>
+							</control>
+							<control type="radiobutton" id="152">
+								<description>disable PVR in view</description>
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<label>$LOCALIZE[31961]</label>
+								<onclick>Skin.ToggleSetting(DisablePVRinView)</onclick>
+								<selected>Skin.HasSetting(DisablePVRinView)</selected>
+								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+								<texturenofocus>MenuItemNF.png</texturenofocus>
 							</control>
 						</control>
 						<control type="grouplist" id="9101">
@@ -932,7 +945,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick condition="IsEmpty(Skin.String(MPAACertificate))">Skin.SetString(MPAACertificate,UK)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(MPAACertificate))">Skin.SetString(MPAACertificate,UK)</onclick>
 								<onclick condition="Skin.String(MPAACertificate,UK)">Skin.SetString(MPAACertificate,Aus)</onclick>
 								<onclick condition="Skin.String(MPAACertificate,Aus)">Skin.SetString(MPAACertificate,Fr)</onclick>
 								<onclick condition="Skin.String(MPAACertificate,Fr)">Skin.SetString(MPAACertificate,DE)</onclick>
@@ -974,7 +987,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick condition="IsEmpty(Skin.String(MediaPanelTrans))">Skin.SetString(MediaPanelTrans,10)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(MediaPanelTrans))">Skin.SetString(MediaPanelTrans,10)</onclick>
 								<onclick condition="Skin.String(MediaPanelTrans,10)">Skin.SetString(MediaPanelTrans,25)</onclick>
 								<onclick condition="Skin.String(MediaPanelTrans,25)">Skin.SetString(MediaPanelTrans,40)</onclick>
 								<onclick condition="Skin.String(MediaPanelTrans,40)">Skin.SetString(MediaPanelTrans,55)</onclick>
@@ -1112,7 +1125,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick condition="IsEmpty(Skin.String(MusicOSDInfo))">Skin.SetString(MusicOSDInfo,permanent)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(MusicOSDInfo))">Skin.SetString(MusicOSDInfo,permanent)</onclick>
 								<onclick condition="Skin.String(MusicOSDInfo,permanent)">Skin.SetString(MusicOSDInfo,never)</onclick>
 								<onclick condition="Skin.String(MusicOSDInfo,never)">Skin.Reset(MusicOSDInfo)</onclick>
 							</control>
@@ -1168,7 +1181,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.ToggleSetting(ShowUsrVideoOSDButton)</onclick>
 								<selected>Skin.HasSetting(ShowUsrVideoOSDButton)</selected>
-								<enable>!IsEmpty(Skin.String(OSDBtnUsrCmd))</enable>
+								<enable>!String.IsEmpty(Skin.String(OSDBtnUsrCmd))</enable>
 							</control>
 						</control>
 						<control type="grouplist" id="9101">
@@ -1257,7 +1270,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick condition="IsEmpty(Skin.String(OSDBtnUsrCmd))">Skin.SetString(OSDBtnUsrCmd,AspectRatio)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(OSDBtnUsrCmd))">Skin.SetString(OSDBtnUsrCmd,AspectRatio)</onclick>
 							    <onclick condition="Skin.String(OSDBtnUsrCmd,AspectRatio)">Skin.SetString(OSDBtnUsrCmd,UserSelect)</onclick>
 								<onclick condition="Skin.String(OSDBtnUsrCmd,UserSelect)">Skin.Reset(OSDBtnUsrCmd)</onclick>
 							</control>
@@ -1362,7 +1375,7 @@
 								<focusedcolor>white</focusedcolor>
 								<label>$LOCALIZE[31078]</label>
 								<label2>[COLOR=selected]$VAR[PowerBtnCommandLabel][/COLOR]</label2>
-								<onclick condition="IsEmpty(Skin.String(PowerBtnAction))">Skin.SetString(PowerBtnAction,Settings)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(PowerBtnAction))">Skin.SetString(PowerBtnAction,Settings)</onclick>
 								<onclick condition="Skin.String(PowerBtnAction,Settings)">Skin.SetString(PowerBtnAction,Exit)</onclick>
 								<onclick condition="Skin.String(PowerBtnAction,Exit)">Skin.SetString(PowerBtnAction,PowerDown)</onclick>
 								<onclick condition="Skin.String(PowerBtnAction,PowerDown)">Skin.SetString(PowerBtnAction,Suspend)</onclick>
@@ -1482,14 +1495,14 @@
 					<top>60</top>
 					<width>750</width>
 					<height>530</height>
-					<include name="SkinSettingsSubMenuButtons">
+					<include content="SkinSettingsSubMenuButtons">
 						<param name="Id">9299</param>
     					<param name="Control">9002</param>
    						<param name="Up">9201</param>
 						<param name="Down">9201</param>
 					</include>
 					<control type="list" id="9002">
-						<include name="SkinSettingsSubMenuList">
+						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9002</param>
 							<param name="Right">9201</param>
 							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
@@ -1597,7 +1610,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.1,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 							</control>
 							<control type="button" id="202">
 								<width>750</width>
@@ -1611,7 +1624,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.1,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 							</control>
 							<control type="button" id="203">
 								<width>750</width>
@@ -1625,7 +1638,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.1,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 							</control>
 							<control type="button" id="204">
 								<description>Menu BackGround Type</description>
@@ -1640,7 +1653,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.1.Display,$VAR[MenuOneBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 							</control>
 							<control type="button" id="205">
 								<width>750</width>
@@ -1663,7 +1676,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.1.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.1.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -1703,7 +1716,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.2,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
 							</control>
 							<control type="button" id="208">
 								<width>750</width>
@@ -1717,7 +1730,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.2,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
 							</control>
 							<control type="button" id="209">
 								<width>750</width>
@@ -1731,7 +1744,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.2,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
 							</control>
 							<control type="button" id="210">
 								<description>Menu BackGround Type</description>
@@ -1746,7 +1759,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.2.Display,$VAR[MenuTwoBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
 							</control>
 							<control type="button" id="211">
 								<width>750</width>
@@ -1769,7 +1782,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.2.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.2.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -1809,7 +1822,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.3,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
 							</control>
 							<control type="button" id="214">
 								<width>750</width>
@@ -1823,7 +1836,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.3,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
 							</control>
 							<control type="button" id="215">
 								<width>750</width>
@@ -1837,7 +1850,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.3,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
 							</control>
 							<control type="button" id="216">
 								<description>Menu BackGround Type</description>
@@ -1852,7 +1865,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.3.Display,$VAR[MenuThreeBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
 							</control>
 							<control type="button" id="217">
 								<width>750</width>
@@ -1875,7 +1888,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.3.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.3.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -1915,7 +1928,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.4,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
 							</control>
 							<control type="button" id="220">
 								<width>750</width>
@@ -1929,7 +1942,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.4,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
 							</control>
 							<control type="button" id="221">
 								<width>750</width>
@@ -1943,7 +1956,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.4,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
 							</control>
 							<control type="button" id="222">
 								<description>Menu BackGround Type</description>
@@ -1958,7 +1971,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.4.Display,$VAR[MenuFourBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
 							</control>
 							<control type="button" id="223">
 								<width>750</width>
@@ -1981,7 +1994,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.4.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.4.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2021,7 +2034,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.5,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
 							</control>
 							<control type="button" id="226">
 								<width>750</width>
@@ -2035,7 +2048,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.5,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
 							</control>
 							<control type="button" id="227">
 								<width>750</width>
@@ -2049,7 +2062,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.5,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
 							</control>
 							<control type="button" id="228">
 								<description>Menu BackGround Type</description>
@@ -2064,7 +2077,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.5.Display,$VAR[MenuFiveBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
 							</control>
 							<control type="button" id="229">
 								<width>750</width>
@@ -2087,7 +2100,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.5.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.5.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2127,7 +2140,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.6,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.6.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
 							</control>
 							<control type="button" id="232">
 								<width>750</width>
@@ -2141,7 +2154,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.6,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.6.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
 							</control>
 							<control type="button" id="233">
 								<width>750</width>
@@ -2155,7 +2168,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.6,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.6.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
 							</control>
 							<control type="button" id="234">
 								<description>Menu BackGround Type</description>
@@ -2170,7 +2183,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.6.Display,$VAR[MenuSixBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.6.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
 							</control>
 							<control type="button" id="235">
 								<width>750</width>
@@ -2193,7 +2206,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.6.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.6.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.6.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2233,7 +2246,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.7,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
 							</control>
 							<control type="button" id="238">
 								<width>750</width>
@@ -2247,7 +2260,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.7,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
 							</control>
 							<control type="button" id="239">
 								<width>750</width>
@@ -2261,7 +2274,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.7,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
 							</control>
 							<control type="button" id="240">
 								<description>Menu BackGround Type</description>
@@ -2276,7 +2289,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.7.Display,$VAR[MenuSevenBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
 							</control>
 							<control type="button" id="241">
 								<width>750</width>
@@ -2299,7 +2312,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.7.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.7.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2339,7 +2352,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.8,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
 							</control>
 							<control type="button" id="244">
 								<width>750</width>
@@ -2353,7 +2366,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.8,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
 							</control>
 							<control type="button" id="245">
 								<width>750</width>
@@ -2367,7 +2380,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.8,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
 							</control>
 							<control type="button" id="246">
 								<description>Menu BackGround Type</description>
@@ -2382,7 +2395,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.8.Display,$VAR[MenuEightBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
 							</control>
 							<control type="button" id="247">
 								<width>750</width>
@@ -2405,7 +2418,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.8.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.8.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2445,7 +2458,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.9,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
 							</control>
 							<control type="button" id="250">
 								<width>750</width>
@@ -2459,7 +2472,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.9,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
 							</control>
 							<control type="button" id="251">
 								<width>750</width>
@@ -2473,7 +2486,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.9,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
 							</control>
 							<control type="button" id="252">
 								<description>Menu BackGround Type</description>
@@ -2488,7 +2501,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.9.Display,$VAR[MenuNineBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
 							</control>
 							<control type="button" id="253">
 								<width>750</width>
@@ -2511,7 +2524,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.9.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.9.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2551,7 +2564,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.10,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
 							</control>
 							<control type="button" id="257">
 								<width>750</width>
@@ -2565,7 +2578,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.10,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
 							</control>
 							<control type="button" id="258">
 								<width>750</width>
@@ -2579,7 +2592,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.10,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
 							</control>
 							<control type="button" id="259">
 								<description>Menu BackGround Type</description>
@@ -2594,7 +2607,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.10.Display,$VAR[MenuTenBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
 							</control>
 							<control type="button" id="260">
 								<width>750</width>
@@ -2617,7 +2630,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.10.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.10.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2657,7 +2670,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.11,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
 							</control>
 							<control type="button" id="263">
 								<width>750</width>
@@ -2671,7 +2684,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.11,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
 							</control>
 							<control type="button" id="264">
 								<width>750</width>
@@ -2685,7 +2698,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.11,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
 							</control>
 							<control type="button" id="265">
 								<description>Menu BackGround Type</description>
@@ -2700,7 +2713,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.11.Display,$VAR[MenuElevenBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
 							</control>
 							<control type="button" id="266">
 								<width>750</width>
@@ -2723,7 +2736,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.11.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.11.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2763,7 +2776,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.12,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
 							</control>
 							<control type="button" id="269">
 								<width>750</width>
@@ -2777,7 +2790,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.12,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
 							</control>
 							<control type="button" id="270">
 								<width>750</width>
@@ -2791,7 +2804,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.12,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
 							</control>
 							<control type="button" id="271">
 								<description>Menu BackGround Type</description>
@@ -2806,7 +2819,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.12.Display,$VAR[MenuTwelveBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
 							</control>
 							<control type="button" id="272">
 								<width>750</width>
@@ -2829,7 +2842,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.12.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.12.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2869,7 +2882,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.13,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
 							</control>
 							<control type="button" id="275">
 								<width>750</width>
@@ -2883,7 +2896,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.13,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
 							</control>
 							<control type="button" id="276">
 								<width>750</width>
@@ -2897,7 +2910,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.13,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
 							</control>
 							<control type="button" id="277">
 								<description>Menu BackGround Type</description>
@@ -2912,7 +2925,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.13.Display,$VAR[MenuThirteenBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
 							</control>
 							<control type="button" id="278">
 								<width>750</width>
@@ -2935,7 +2948,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.13.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.13.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -2975,7 +2988,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.14,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
 							</control>
 							<control type="button" id="281">
 								<width>750</width>
@@ -2989,7 +3002,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.14,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
 							</control>
 							<control type="button" id="282">
 								<width>750</width>
@@ -3003,7 +3016,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.14,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
 							</control>
 							<control type="button" id="283">
 								<description>Menu BackGround Type</description>
@@ -3018,7 +3031,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.14.Display,$VAR[MenuFourteenBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
 							</control>
 							<control type="button" id="284">
 								<width>750</width>
@@ -3041,7 +3054,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.14.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.14.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
 							</control>
 						</control>
 						<control type="grouplist" id="9201">
@@ -3081,7 +3094,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.15,Home)</onclick>
 								<onclick>ActivateWindow(2116)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
 							</control>
 							<control type="button" id="287">
 								<width>750</width>
@@ -3095,7 +3108,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.15,Home)</onclick>
 								<onclick>ActivateWindow(2117)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
 							</control>
 							<control type="button" id="288">
 								<width>750</width>
@@ -3109,7 +3122,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.15,Home)</onclick>
 								<onclick>ActivateWindow(2118)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
 							</control>
 							<control type="button" id="289">
 								<description>Menu BackGround Type</description>
@@ -3124,7 +3137,7 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetString(HomeItem.15.Display,$VAR[MenuFifteenBackgroundType])</onclick>
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
-								<visible>!IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
 							</control>
 							<control type="button" id="290">
 								<width>750</width>
@@ -3147,7 +3160,7 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.15.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.15.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
-								<visible>!IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
 							</control>
 						</control>	
 					</control>
@@ -3173,14 +3186,14 @@
 					<top>60</top>
 					<width>750</width>
 					<height>530</height>
-					<include name="SkinSettingsSubMenuButtons">
+					<include content="SkinSettingsSubMenuButtons">
 						<param name="Id">9399</param>
     					<param name="Control">9003</param>
    						<param name="Up">9301</param>
 						<param name="Down">9301</param>
 					</include>
 					<control type="list" id="9003">
-						<include name="SkinSettingsSubMenuList">
+						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9003</param>
 							<param name="Right">9301</param>
 							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
@@ -5569,14 +5582,14 @@
 					<top>60</top>
 					<width>750</width>
 					<height>530</height>
-					<include name="SkinSettingsSubMenuButtons">
+					<include content="SkinSettingsSubMenuButtons">
 						<param name="Id">9499</param>
     					<param name="Control">9004</param>
    						<param name="Up">9401</param>
 						<param name="Down">9401</param>
 					</include>
 					<control type="list" id="9004">
-						<include name="SkinSettingsSubMenuList">
+						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9004</param>
 							<param name="Right">9401</param>
 							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
@@ -7024,17 +7037,17 @@
 					<left>290</left>
 					<top>60</top>
 					<visible>Container(9000).Hasfocus(5)</visible>
-					<include name="SkinSettingsSubMenuButtons">
+					<include content="SkinSettingsSubMenuButtons">
 						<param name="Id">504</param>
     					<param name="Control">9005</param>
    						<param name="Up">507</param>
 						<param name="Down">500</param>
 					</include>
 					<control type="list" id="9005">
-						<include name="SkinSettingsSubMenuList">
+						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9005</param>
 							<param name="Right">500</param>
-							<param name="Label">$LOCALIZE[31434]</param>
+							<param name="Label">$LOCALIZE[31494]</param>
 						</include>
 						<content>
 							<item id="1">
@@ -7044,7 +7057,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.1.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.1.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.1.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="2">
 								<description>Home Menu Item Two</description>
@@ -7053,7 +7066,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.2.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.2.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.2.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="3">
 								<description>Home Menu Item Three</description>
@@ -7062,7 +7075,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.3.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.3.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.3.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="4">
 								<description>Home Menu Item Four</description>
@@ -7071,7 +7084,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.4.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.4.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.4.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="5">
 								<description>Home Menu Item Five</description>
@@ -7080,7 +7093,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.5.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.5.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.5.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="6">
 								<description>Home Menu Item Six</description>
@@ -7089,7 +7102,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.6.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.6.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.6.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="7">
 								<description>Home Menu Item Seven</description>
@@ -7098,7 +7111,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.7.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.7.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.7.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="8">
 								<description>Home Menu Item Eight</description>
@@ -7107,7 +7120,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.8.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.8.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.8.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="9">
 								<description>Home Menu Item Nine</description>
@@ -7116,7 +7129,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.9.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.9.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.9.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="10">
 								<description>Home Menu Item Ten</description>
@@ -7125,7 +7138,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.10.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.10.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.10.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="11">
 								<description>Home Menu Item Eleven</description>
@@ -7134,7 +7147,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.11.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.11.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.11.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="12">
 								<description>Home Menu Item Twelve</description>
@@ -7143,7 +7156,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.12.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.12.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.12.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="13">
 								<description>Home Menu Item Thirteen</description>
@@ -7152,7 +7165,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.13.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.13.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.13.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="14">
 								<description>Home Menu Item Fourteen</description>
@@ -7161,7 +7174,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.14.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.14.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.14.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="15">
 								<description>Home Menu Item Fifteen</description>
@@ -7170,7 +7183,7 @@
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.15.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.15.Type)]</property>
-								<visible>!IsEmpty(Skin.String(HomeItem.15.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Path)) + !Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</visible>
 							</item>
 							<item id="16">
 								<description>Global Background</description>
@@ -7192,7 +7205,7 @@
 							</item>
 							<item id="18">
 								<description>Startup Window</description>
-								<label>$LOCALIZE[31435]</label>
+								<label>$LOCALIZE[31495]</label>
 								<onclick>noop</onclick>
 								<icon>special://skin/backgrounds/startup.jpg</icon>
 								<thumb>$INFO[Skin.String(StartUpBackgroundPath)]</thumb>
@@ -7211,7 +7224,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7231,7 +7244,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7292,7 +7305,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7312,7 +7325,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7373,7 +7386,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7393,7 +7406,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7454,7 +7467,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7474,7 +7487,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7535,7 +7548,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7555,7 +7568,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7616,7 +7629,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7636,7 +7649,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7697,7 +7710,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7717,7 +7730,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7778,7 +7791,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7798,7 +7811,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7859,7 +7872,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7879,7 +7892,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7940,7 +7953,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -7960,7 +7973,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8021,7 +8034,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8041,7 +8054,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8102,7 +8115,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8122,7 +8135,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8183,7 +8196,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8203,7 +8216,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8264,7 +8277,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8284,7 +8297,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8345,7 +8358,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8365,7 +8378,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8426,7 +8439,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8447,7 +8460,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8511,7 +8524,7 @@
 								<top>0</top>
 								<width>180</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8531,7 +8544,7 @@
 								<top>0</top>
 								<width>180</width>
 								<height>40</height>
-								<label>31437</label>
+								<label>31497</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8573,7 +8586,7 @@
 								<top>0</top>
 								<width>180</width>
 								<height>40</height>
-								<label>31436</label>
+								<label>31496</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8593,7 +8606,7 @@
 								<top>0</top>
 								<width>180</width>
 								<height>40</height>
-								<label>31438</label>
+								<label>31498</label>
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
@@ -8638,7 +8651,7 @@
 						<timeperimage>6000</timeperimage>
 						<randomize>true</randomize>
 						<fadetime>500</fadetime>
-						<visible>![StringCompare(Container(9005).ListItem.Property(HiLiteItem),StartUp) + Skin.HasSetting(HideStartUpBackground)]</visible>
+						<visible>![String.IsEqual(Container(9005).ListItem.Property(HiLiteItem),StartUp) + Skin.HasSetting(HideStartUpBackground)]</visible>
 					</control>
 					<control type="label">
 						<left>95</left>
@@ -8697,14 +8710,14 @@
 					<top>60</top>
 					<width>750</width>
 					<height>530</height>
-					<include name="SkinSettingsSubMenuButtons">
+					<include content="SkinSettingsSubMenuButtons">
 						<param name="Id">9699</param>
     					<param name="Control">9006</param>
    						<param name="Up">9601</param>
 						<param name="Down">9601</param>
 					</include>
 					<control type="list" id="9006">
-						<include name="SkinSettingsSubMenuList">
+						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9006</param>
 							<param name="Right">9601</param>
 							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
@@ -8856,7 +8869,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick condition="IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,Kodi)</onclick>
+								<onclick condition="String.IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,Kodi)</onclick>
 								<onclick condition="Skin.String(UPnPServer,Kodi)">Skin.SetString(UPnPServer,Plex)</onclick>
 								<onclick condition="Skin.String(UPnPServer,Plex)">Skin.SetString(UPnPServer,WinHomeServer)</onclick>
 								<onclick condition="Skin.String(UPnPServer,WinHomeServer)">Skin.SetString(UPnPServer,Kodi)</onclick>
@@ -9192,7 +9205,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<enable>!IsEmpty(Skin.String(LyricScript_Path))</enable>
+								<enable>!String.IsEmpty(Skin.String(LyricScript_Path))</enable>
 								<onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
 							</control>
 							<control type="radiobutton" id="637">
@@ -9635,7 +9648,7 @@
 						<align>center</align>
 						<textoffsetx>20</textoffsetx>
 						<textwidth>730</textwidth>
-						<label>$LOCALIZE[31433]</label>
+						<label>$LOCALIZE[31493]</label>
 						<onclick>ActivateWindow(2121)</onclick>
 						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
 						<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -9653,150 +9666,150 @@
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.1.Type),Radio) | [StringCompare(Skin.String(HomeItem.1.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.1.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.1.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.1.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.1.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.1.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.2.Type),Radio) | [StringCompare(Skin.String(HomeItem.2.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.2.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.2.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.2.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.2.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.2.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.3.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.3.Type),Radio) | [StringCompare(Skin.String(HomeItem.3.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.3.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.3.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.3.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.3.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.3.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.4.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.4.Type),Radio) | [StringCompare(Skin.String(HomeItem.4.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.4.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.4.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.4.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.4.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.4.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.5.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.5.Type),Radio) | [StringCompare(Skin.String(HomeItem.5.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.5.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.5.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.5.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.5.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.5.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.6.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.6.Type),Radio) | [StringCompare(Skin.String(HomeItem.6.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.6.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.6.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.6.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.6.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.6.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.7.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.7.Type),Radio) | [StringCompare(Skin.String(HomeItem.7.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.7.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.7.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.7.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.7.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.7.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.8.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.8.Type),Radio) | [StringCompare(Skin.String(HomeItem.8.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.8.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.8.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.8.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.8.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.8.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.9.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.9.Type),Radio) | [StringCompare(Skin.String(HomeItem.9.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.9.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.9.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.9.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.9.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.9.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.10.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.10.Type),Radio) | [StringCompare(Skin.String(HomeItem.10.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.10.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.10.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.10.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.10.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.10.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.11.Type),Radio) | [StringCompare(Skin.String(HomeItem.11.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.11.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.11.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.11.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.11.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.11.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.12.Type),Radio) | [StringCompare(Skin.String(HomeItem.12.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.12.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.12.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.12.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.12.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.12.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.13.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.13.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.13.Type),Radio) | [StringCompare(Skin.String(HomeItem.13.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.13.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.13.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.13.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.13.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.13.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.14.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.14.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.14.Type),Radio) | [StringCompare(Skin.String(HomeItem.14.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.14.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.14.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.14.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.14.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.14.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),PlayDisc)</visible>
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.15.Label)]</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!IsEmpty(Skin.String(HomeItem.15.Path))</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.15.Type),Radio) | [StringCompare(Skin.String(HomeItem.15.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.15.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.15.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-						<visible>!StringCompare(Skin.String(HomeItem.15.Type),PlayDisc)</visible>
+						<visible>!String.IsEmpty(Skin.String(HomeItem.15.Path))</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.15.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+						<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),PlayDisc)</visible>
 					</item>
 				</content>
 			</control>

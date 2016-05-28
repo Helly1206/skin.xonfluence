@@ -106,7 +106,7 @@
 				<content>
 					<item>
 						<description>Clear Setting</description>
-						<label>$LOCALIZE[31439]</label>
+						<label>$LOCALIZE[31499]</label>
 						<onclick>Dialog.Close(2116)</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>

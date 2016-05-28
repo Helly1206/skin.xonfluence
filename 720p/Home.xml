@@ -5,16 +5,16 @@
 	<include condition="!Skin.HasSetting(Updates_V312)">UpdatesV312</include>
 	<include condition="!Skin.HasSetting(Updates_V314)">UpdatesV314</include>
 	<include condition="!Skin.HasSetting(Updates_V320)">UpdatesV320</include>
-	<onload condition="!IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
-	<onload condition="!IsEmpty(Window(Home).Property(MenuBackground))">ClearProperty(MenuBackground,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(MenuBackground))">ClearProperty(MenuBackground,Home)</onload>
 	<onload condition="Skin.HasSetting(HolidayEffects) + System.Date(1-6,11-23)">Skin.Reset(HolidayEffects)</onload>
-	<onload condition="IsEmpty(Window.Property(PingAlarmSet)) + Skin.HasSetting(EnablePingWOL) + Skin.String(WOLPingTimer) + Skin.String(PingMacAddr)">AlarmClock(WOLPingAlarm,WakeOnLan($INFO[Skin.String(PingMacAddr)]),$INFO[Skin.String(WOLPingTimer)]:00,silent,loop)</onload>
+	<onload condition="String.IsEmpty(Window.Property(PingAlarmSet)) + Skin.HasSetting(EnablePingWOL) + Skin.String(WOLPingTimer) + Skin.String(PingMacAddr)">AlarmClock(WOLPingAlarm,WakeOnLan($INFO[Skin.String(PingMacAddr)]),$INFO[Skin.String(WOLPingTimer)]:00,silent,loop)</onload>
 	<onload condition="Skin.HasSetting(EnablePingWOL) + Skin.String(WOLPingTimer) + Skin.String(PingMacAddr)">SetProperty(PingAlarmSet,1)</onload>
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
-	<onload condition="IsEmpty(Skin.String(WeatherFanartDir))">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onload>
-	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
+	<onload condition="String.IsEmpty(Skin.String(WeatherFanartDir))">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onload>
+	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + Library.HasContent(Movies)">RunScript(script.randomandlastitems,type=Movie,limit=12,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.1.Type,VideoPlayList) | Skin.String(HomeItem.1.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.1.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistOne)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.2.Type,VideoPlayList) | Skin.String(HomeItem.2.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.2.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwo)</onload>
@@ -31,9 +31,9 @@
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.13.Type,VideoPlayList) | Skin.String(HomeItem.13.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.13.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistThirteen)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.14.Type,VideoPlayList) | Skin.String(HomeItem.14.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.14.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFourteen)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.15.Type,VideoPlayList) | Skin.String(HomeItem.15.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.15.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFifteen)</onload>
-	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
-	<onload condition="IsEmpty(Window.Property(ReturnHome))">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
-	<onload condition="IsEmpty(Window.Property(ReturnHome))">SetProperty(ReturnHome,True)</onload>
+	<onload condition="!String.IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
+	<onload condition="String.IsEmpty(Window.Property(ReturnHome))">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
+	<onload condition="String.IsEmpty(Window.Property(ReturnHome))">SetProperty(ReturnHome,True)</onload>
 	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
 	<onunload condition="ControlGroup(9011).HasFocus">SetProperty(MusicDirectLink,True)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
@@ -53,9 +53,9 @@
 			<animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
 			<animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			<animation effect="fade" start="100" end="65" time="0" condition="IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
-			<visible>!IsEmpty(Skin.String(HomeFloor))</visible>
+			<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+			<animation effect="fade" start="100" end="65" time="0" condition="String.IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
+			<visible>!String.IsEmpty(Skin.String(HomeFloor))</visible>
 		</control>
 		<include>TopLeftInfo</include>
 		<!-- Music Info -->
@@ -123,7 +123,7 @@
 			<depth>DepthMenu</depth>
 			<left>490r</left>
 			<top>70</top>
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),None)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),None)</visible>
 			<visible>!Skin.HasSetting(HideTVRecordingInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
@@ -216,16 +216,16 @@
 					<bordersize>4</bordersize>
 				</control>
 				<control type="image">
-					<left>360</left>
+					<left>365</left>
 					<top>5</top>
-					<width>30</width>
+					<width>25</width>
 					<height>25</height>
 					<aspectratio>keep</aspectratio>
 					<texture>PVR-IsRecording.png</texture>
 				</control>
 				<control type="label">
 					<description>Is Recording Header label</description>
-					<left>-50</left>
+					<left>-45</left>
 					<top>5</top>
 					<height>25</height>
 					<width>400</width>
@@ -478,9 +478,9 @@
 			<left>0</left>
 			<top>60</top>
 			<visible>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</visible>
-			<visible>!Player.HasMedia + !IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
-			<visible>!IntegerGreaterThan(Window(Home).Property(RecommendedMovie.1.PercentPlayed),95)</visible>
-			<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies)</visible>
+			<visible>!Player.HasMedia + !String.IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
+			<visible>!Integer.IsGreater(Window(Home).Property(RecommendedMovie.1.PercentPlayed),95)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Movies)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
@@ -553,8 +553,8 @@
 			<left>0</left>
 			<top>60</top>
 			<visible>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</visible>
-			<visible>!Player.HasMedia + !IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
-			<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows)</visible>
+			<visible>!Player.HasMedia + !String.IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),TVShows)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
@@ -656,7 +656,7 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
-			<visible>IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+			<visible>String.IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
 			<control type="image">
 				<description>Background End image</description>
 				<left>0</left>
@@ -665,7 +665,7 @@
 				<height>35</height>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<animation effect="slide" start="0,0" end="115,0" time="0" condition="Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="610">
@@ -684,7 +684,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus flipy="true" border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texturefocus>
 				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<pulseonselect>false</pulseonselect>
 				<label>137</label>
 				<onclick>RunScript(script.globalsearch)</onclick>
@@ -713,7 +713,7 @@
 					<width>255</width>
 					<height>35</height>
 					<texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
-					<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 					<colordiffuse>CCFFFFFF</colordiffuse>
 					<animation effect="zoom" start="0,0,205,35" end="0,0,500,35" delay="0" time="300" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
 					<visible>Player.HasMedia | Skin.HasSetting(EnableHomeStats)</visible>
@@ -1001,7 +1001,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus flipy="true" border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texturefocus>
 				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<pulseonselect>false</pulseonselect>
 				<label>31008</label>
 				<onclick>fullscreen</onclick>
@@ -1050,7 +1050,7 @@
 				<width>1480</width>
 				<height>75</height>
 				<texture border="0,6,0,6">HomeBack.png</texture>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -1058,7 +1058,7 @@
 				<width>1280</width>
 				<height>6</height>
 				<texture>HomeOverlay1.png</texture>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<include condition="Skin.HasSetting(WrapAroundHomeMenu)">WrapHomeMainMenu</include>
 			<include condition="!Skin.HasSetting(WrapAroundHomeMenu)">FixedHomeMainMenu</include>
@@ -1068,7 +1068,7 @@
 				<width>138</width>
 				<height>63</height>
 				<texture>SideFade.png</texture>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>128r</left>
@@ -1076,7 +1076,7 @@
 				<width>138</width>
 				<height>63</height>
 				<texture flipx="true">SideFade.png</texture>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 		</control>
 		<include>HomeAddonsDisplay</include>
@@ -1084,7 +1084,7 @@
 			<depth>DepthMenu-</depth>
 			<left>0</left>
 			<top>33r</top>
-			<visible>system.getbool(lookandfeel.enablerssfeeds) | [Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)]</visible>
+			<visible>system.getbool(lookandfeel.enablerssfeeds) | [Player.HasAudio + !String.IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)]</visible>
 			<animation effect="slide" start="0,0" end="0,35" time="150" condition="Skin.HasSetting(HidePopUpSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 			<include>Window_OpenClose_Animation</include>
 			<control type="rss">
@@ -1097,7 +1097,7 @@
 				<textcolor>$VAR[MainColorOne]</textcolor>
 				<titlecolor>$VAR[MainColorOne]</titlecolor>
 				<headlinecolor>white</headlinecolor>
-				<visible>[!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
+				<visible>[!Player.HasAudio | String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
 			</control>
 			<control type="fadelabel" id="1">
 				<description>Next Five Songs</description>
@@ -1112,7 +1112,7 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<textoffsetx>20</textoffsetx>
-				<visible>Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
+				<visible>Player.HasAudio + !String.IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
 			</control>
 			<control type="image">
 				<description>RSS background</description>
@@ -1121,7 +1121,7 @@
 				<width>24</width>
 				<height>24</height>
 				<texture>icon-rss.png</texture>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 		</control>
 		<control type="grouplist" id="21">
@@ -1143,7 +1143,7 @@
 				<onclick>$VAR[FavBtnCommand]</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<visible>!Skin.HasSetting(HideFavorites)</visible>
 			</control>
 			<control type="image" id="24">
@@ -1161,7 +1161,7 @@
 				<onclick>RunScript(script.globalsearch)</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<visible>!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)</visible>
 			</control>
 			<control type="image" id="26">
@@ -1179,7 +1179,7 @@
 				<onclick>$VAR[HomePowerBtnCommand]</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
 			</control>
 		</control>

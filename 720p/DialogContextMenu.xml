@@ -49,8 +49,8 @@
                 <focusedcolor>white</focusedcolor>
                 <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
                 <label>$LOCALIZE[20410]</label>
-                <onclick condition="!IsEmpty(ListItem.Trailer)">PlayMedia("$INFO[ListItem.Trailer]")</onclick>
-                <onclick condition="IsEmpty(ListItem.Trailer)">ActivateWindow(videos,$ESCINFO[ListItem.Label,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=, Trailer],return)</onclick>
+                <onclick condition="!String.IsEmpty(ListItem.Trailer)">PlayMedia("$INFO[ListItem.Trailer]")</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Trailer)">ActivateWindow(videos,$ESCINFO[ListItem.Label,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=, Trailer],return)</onclick>
                 <visible>!Skin.HasSetting(HideTrailerBtn) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
         	</control>
 		</control>

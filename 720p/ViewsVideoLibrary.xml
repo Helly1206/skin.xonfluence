@@ -136,7 +136,7 @@
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 				<fadetime>FanartCrossfadeTime</fadetime>
-				<visible>!Skin.HasSetting(DisableLogoArt) + !IsEmpty(ListItem.Art(clearlogo)) + !Skin.HasSetting(View515Hidelogo)</visible>
+				<visible>!Skin.HasSetting(DisableLogoArt) + !String.IsEmpty(ListItem.Art(clearlogo)) + !Skin.HasSetting(View515Hidelogo)</visible>
 			</control>
 			<control type="label">
 				<left>30</left>
@@ -150,7 +150,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>Skin.HasSetting(DisableLogoArt) | IsEmpty(ListItem.Art(clearlogo)) | Skin.HasSetting(View515Hidelogo)</visible>
+				<visible>Skin.HasSetting(DisableLogoArt) | String.IsEmpty(ListItem.Art(clearlogo)) | Skin.HasSetting(View515Hidelogo)</visible>
 			</control>
 			<control type="label">
 				<left>0</left>
@@ -164,7 +164,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Year]</label>
-				<visible>Skin.HasSetting(DisableLogoArt) | IsEmpty(ListItem.Art(clearlogo)) | Skin.HasSetting(View515Hidelogo)</visible>
+				<visible>Skin.HasSetting(DisableLogoArt) | String.IsEmpty(ListItem.Art(clearlogo)) | Skin.HasSetting(View515Hidelogo)</visible>
 			</control>
 			<control type="label">
 				<left>0</left>
@@ -257,7 +257,7 @@
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 				<fadetime>FanartCrossfadeTime</fadetime>
-				<visible>!Skin.HasSetting(DisableLogoArt) + !IsEmpty(ListItem.Art(clearlogo)) + !Skin.HasSetting(View515Hidelogo)</visible>
+				<visible>!Skin.HasSetting(DisableLogoArt) + !String.IsEmpty(ListItem.Art(clearlogo)) + !Skin.HasSetting(View515Hidelogo)</visible>
 			</control>
 			<control type="label">
 				<left>30</left>
@@ -270,7 +270,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>Skin.HasSetting(DisableLogoArt) | IsEmpty(ListItem.Art(clearlogo)) | Skin.HasSetting(View515Hidelogo)</visible>
+				<visible>Skin.HasSetting(DisableLogoArt) | String.IsEmpty(ListItem.Art(clearlogo)) | Skin.HasSetting(View515Hidelogo)</visible>
 			</control>
 			<control type="label">
 				<left>0</left>
@@ -283,7 +283,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Genre]</label>
-				<visible>Skin.HasSetting(DisableLogoArt) | IsEmpty(ListItem.Art(clearlogo)) | Skin.HasSetting(View515Hidelogo)</visible>
+				<visible>Skin.HasSetting(DisableLogoArt) | String.IsEmpty(ListItem.Art(clearlogo)) | Skin.HasSetting(View515Hidelogo)</visible>
 			</control>
 			<control type="label">
 				<left>0</left>
@@ -440,7 +440,7 @@
 			<top>40</top>
 			<visible>Control.IsVisible(508) + ![ListItem.IsFolder + Container.Content(Movies)] + !Container.Content(Sets)</visible>
 			<include>MediaInfoPopup</include>
-			<visible>!Skin.String(MediaPopupControl,Hidden) + !IsEmpty(ListItem.Title) + !Container.OnNext + !Container.OnPrevious</visible>
+			<visible>!Skin.String(MediaPopupControl,Hidden) + !String.IsEmpty(ListItem.Title) + !Container.OnNext + !Container.OnPrevious</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<left>0</left>
@@ -448,7 +448,7 @@
 				<width>920</width>
 				<height>410</height>
 				<texture border="20">ContentPanel.png</texture>
-				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 			</control>
 			<control type="label">
 				<left>40</left>
@@ -961,7 +961,7 @@
 						<width>200</width>
 						<height>31</height>
 						<texture border="0,0,14,0" colordiffuse="$VAR[MainColorOne]">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(503) + !IsEmpty(ListItem.Label2)</visible>
+						<visible>Control.HasFocus(503) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -1154,7 +1154,7 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>StringCompare(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
+					<visible>String.IsEqual(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -1166,7 +1166,7 @@
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -1409,7 +1409,7 @@
 						<width>200</width>
 						<height>31</height>
 						<texture border="0,0,14,0" colordiffuse="$VAR[MainColorOne]">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(504) + !IsEmpty(ListItem.Label2)</visible>
+						<visible>Control.HasFocus(504) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -1494,7 +1494,7 @@
 					<timeperimage>5000</timeperimage>
 					<randomize>true</randomize>
 					<imagepath background="true">$INFO[ListItem.path,,extrathumbs/]</imagepath>
-					<visible>!IsEmpty(Control.GetLabel(5045))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(5045))</visible>
 					<visible>!Skin.HasSetting(Disable504FanArt) + Container.Content(Movies)</visible>
 				</control>
 				<control type="image">
@@ -1505,7 +1505,7 @@
 					<aspectratio>scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.Art(fanart)]</texture>
-					<visible>IsEmpty(Control.GetLabel(5045)) | Skin.HasSetting(Disable504FanArt)</visible>
+					<visible>String.IsEmpty(Control.GetLabel(5045)) | Skin.HasSetting(Disable504FanArt)</visible>
 					<visible>Container.Content(Movies)</visible>
 					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
@@ -1628,7 +1628,7 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>StringCompare(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
+					<visible>String.IsEqual(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -1640,7 +1640,7 @@
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -1850,7 +1850,7 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderViews</include>
 						<texture background="true">$INFO[ListItem.Art(banner)]</texture>
-						<visible>!IsEmpty(ListItem.Art(banner))</visible>
+						<visible>!String.IsEmpty(ListItem.Art(banner))</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -1858,7 +1858,7 @@
 						<width>345</width>
 						<height>71</height>
 						<texture border="0,2,0,2">MenuItemNF.png</texture>
-						<visible>IsEmpty(ListItem.Art(banner))</visible>
+						<visible>String.IsEmpty(ListItem.Art(banner))</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -1871,7 +1871,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.label]</label>
-						<visible>IsEmpty(ListItem.Art(banner))</visible>
+						<visible>String.IsEmpty(ListItem.Art(banner))</visible>
 					</control>
 					<control type="image">
 						<left>300</left>
@@ -1901,7 +1901,7 @@
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<include>TextureBorderViews</include>
 						<texture background="true">$INFO[ListItem.Art(banner)]</texture>
-						<visible>!IsEmpty(ListItem.Art(banner))</visible>
+						<visible>!String.IsEmpty(ListItem.Art(banner))</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -1909,7 +1909,7 @@
 						<width>345</width>
 						<height>71</height>
 						<texture border="0,2,0,2">MenuItemNF.png</texture>
-						<visible>!Control.HasFocus(515) + IsEmpty(ListItem.Art(banner))</visible>
+						<visible>!Control.HasFocus(515) + String.IsEmpty(ListItem.Art(banner))</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
@@ -1918,7 +1918,7 @@
 						<width>345</width>
 						<height>71</height>
 						<texture border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
-						<visible>Control.HasFocus(515) + IsEmpty(ListItem.Art(banner))</visible>
+						<visible>Control.HasFocus(515) + String.IsEmpty(ListItem.Art(banner))</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
@@ -1932,7 +1932,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.label]</label>
-						<visible>IsEmpty(ListItem.Art(banner))</visible>
+						<visible>String.IsEmpty(ListItem.Art(banner))</visible>
 					</control>
 					<control type="image">
 						<left>300</left>
@@ -1983,7 +1983,7 @@
 					<timeperimage>5000</timeperimage>
 					<randomize>true</randomize>
 					<imagepath diffuse="Fanart_Diffuse.png" background="true">$INFO[ListItem.path,,extrathumbs/]</imagepath>
-					<visible>!IsEmpty(Control.GetLabel(5045))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(5045))</visible>
 					<visible>!Skin.HasSetting(Disable504FanArt)</visible>
 				</control>
 				<control type="image">
@@ -1994,7 +1994,7 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.Art(fanart)]</texture>
-					<visible>IsEmpty(Control.GetLabel(5045)) | Skin.HasSetting(Disable504FanArt)</visible>
+					<visible>String.IsEmpty(Control.GetLabel(5045)) | Skin.HasSetting(Disable504FanArt)</visible>
 				</control>
 				<control type="image">
 					<left>10</left>
@@ -2004,7 +2004,7 @@
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-					<visible>!Skin.HasSetting(DisableLogoArt) + !Skin.HasSetting(View515Hidelogo) + !IsEmpty(ListItem.Title)</visible>
+					<visible>!Skin.HasSetting(DisableLogoArt) + !Skin.HasSetting(View515Hidelogo) + !String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -2017,7 +2017,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.label]</label>
-					<visible>Skin.HasSetting(DisableLogoArt) | Skin.HasSetting(View515Hidelogo) | IsEmpty(ListItem.Title)</visible>
+					<visible>Skin.HasSetting(DisableLogoArt) | Skin.HasSetting(View515Hidelogo) | String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="textbox">
 					<description>Description Value for Video</description>
@@ -2081,7 +2081,7 @@
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-					<visible>!Skin.HasSetting(DisableLogoArt) + !Skin.HasSetting(View515Hidelogo) + !IsEmpty(ListItem.Title)</visible>
+					<visible>!Skin.HasSetting(DisableLogoArt) + !Skin.HasSetting(View515Hidelogo) + !String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -2094,7 +2094,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.label]</label>
-					<visible>Skin.HasSetting(DisableLogoArt) | Skin.HasSetting(View515Hidelogo) | IsEmpty(ListItem.Title)</visible>
+					<visible>Skin.HasSetting(DisableLogoArt) | Skin.HasSetting(View515Hidelogo) | String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="textbox">
 					<description>Description Value for Video</description>
@@ -2183,7 +2183,7 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.icon]</texture>
-					<visible>!StringCompare(ListItem.Label,..) + Skin.HasSetting(EpisodeBackground)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + Skin.HasSetting(EpisodeBackground)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -2193,7 +2193,7 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.Art(fanart)]</texture>
-					<visible>!StringCompare(ListItem.Label,..) + !Skin.HasSetting(EpisodeBackground)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..) + !Skin.HasSetting(EpisodeBackground)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -2203,7 +2203,7 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[Fanart.Image]</texture>
-					<visible>StringCompare(ListItem.Label,..)</visible>
+					<visible>String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -2256,7 +2256,7 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>StringCompare(ListItem.Label,..) | [!Skin.HasSetting(EpisodeBackground) + !Skin.HasSetting(HideEpisodeThumb)]</visible>
+					<visible>String.IsEqual(ListItem.Label,..) | [!Skin.HasSetting(EpisodeBackground) + !Skin.HasSetting(HideEpisodeThumb)]</visible>
 				</control>
 				<control type="image">
 					<left>420</left>
@@ -2268,7 +2268,7 @@
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					<visible>Skin.HasSetting(EpisodeBackground) | Skin.HasSetting(HideEpisodeThumb)</visible>
 				</control>
 			</control>
@@ -2318,7 +2318,7 @@
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>
 						<colordiffuse>AAFFFFFF</colordiffuse>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
 						<left>54</left>
@@ -2327,7 +2327,7 @@
 						<height>80</height>
 						<fadetime>IconCrossfadeTime</fadetime>
 						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-						<visible>Skin.HasSetting(EnableStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>Skin.HasSetting(EnableStatusBanner) + !String.IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="image">
 						<left>105</left>
@@ -2336,7 +2336,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(EnableStatusBanner) + !IsEmpty(ListItem.Overlay) + !ListItem.IsResumable</visible>
+						<visible>!Skin.HasSetting(EnableStatusBanner) + !String.IsEmpty(ListItem.Overlay) + !ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -2348,8 +2348,8 @@
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>
 						<colordiffuse>AAFFFFFF</colordiffuse>
-						<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="205" width="142">
@@ -2380,7 +2380,7 @@
 							<height>80</height>
 							<fadetime>IconCrossfadeTime</fadetime>
 							<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-							<visible>Skin.HasSetting(EnableStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
+							<visible>Skin.HasSetting(EnableStatusBanner) + !String.IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
 							<left>105</left>
@@ -2389,7 +2389,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.Overlay]</texture>
-							<visible>!Skin.HasSetting(EnableStatusBanner) + !IsEmpty(ListItem.Overlay) + !ListItem.IsResumable</visible>
+							<visible>!Skin.HasSetting(EnableStatusBanner) + !String.IsEmpty(ListItem.Overlay) + !ListItem.IsResumable</visible>
 						</control>
 					</control>
 				</focusedlayout>

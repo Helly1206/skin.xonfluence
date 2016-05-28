@@ -1,3 +1,14 @@
+[B]3.3.0[/B]
+- Updated 720p for Krypton
+- Updated Xonfluence to latest confluence version
+- Updated and cleanup of Textures for Krypton
+- Updated and cleanup of Language files for Krypton
+- Implemented skinning API changes
+- Added option to disable PVR in view, as PVR cannot be disabled anymore and a user would not like to remove the menu items.
+- Removed old/ unused XML files
+- Thorough code cleanup
+- Recompiled XBT with latest version of texturepacker to be compatible with krypton
+
 [B]3.2.13[/B]
 - Removed duplicate audio title #1046
 

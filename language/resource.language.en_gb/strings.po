@@ -4,12 +4,12 @@
 # Addon Provider: Helly1206
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Skins\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"Project-Id-Version: KODI Main\n"
+"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
-"Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/xbmc-skins/language/en_GB/)\n"
+"Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/kodi-main/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,9 +46,7 @@ msgctxt "#31006"
 msgid "View options"
 msgstr ""
 
-msgctxt "#31007"
-msgid ".."
-msgstr ""
+#empty string with id 31007
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -106,9 +104,7 @@ msgctxt "#31021"
 msgid "Enable trailers button"
 msgstr ""
 
-msgctxt "#31022"
-msgid "Music - Files"
-msgstr ""
+#empty string with id 31022
 
 msgctxt "#31023"
 msgid "Playing"
@@ -168,9 +164,7 @@ msgctxt "#31036"
 msgid "Please set path to UPnP server"
 msgstr ""
 
-msgctxt "#31037"
-msgid "Edit menu item"
-msgstr ""
+#empty string with id 31037
 
 msgctxt "#31038"
 msgid "Select item to swap"
@@ -259,9 +253,7 @@ msgctxt "#31059"
 msgid "Current playlist"
 msgstr ""
 
-msgctxt "#31060"
-msgid "This file is stacked, select the part you want to play from."
-msgstr ""
+#empty string with id 31060
 
 msgctxt "#31061"
 msgid "Current selected"
@@ -415,10 +407,7 @@ msgctxt "#31098"
 msgid "Top left widget on all screens"
 msgstr ""
 
-msgctxt "#31099"
-msgid "Enable [COLOR=grey3](Slower)[/COLOR] File system search for additional artwork"
-msgstr ""
-
+#empty string with id 31099
 #Skin Settings labels
 
 msgctxt "#31100"
@@ -525,9 +514,7 @@ msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
 msgstr ""
 
-msgctxt "#31126"
-msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr ""
+#empty string with id 31126
 
 msgctxt "#31127"
 msgid "TvTunes"
@@ -585,9 +572,7 @@ msgctxt "#31140"
 msgid "Music OSD"
 msgstr ""
 
-msgctxt "#31141"
-msgid "Video OSD"
-msgstr ""
+#empty string with id 31141
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -645,20 +630,7 @@ msgctxt "#31155"
 msgid "Show global search button on bottom left"
 msgstr ""
 
-#empty strings from id 31156 to 31184
-#Widget Names 31185
-
-msgctxt "#31185"
-msgid "Random songs"
-msgstr ""
-
-msgctxt "#31186"
-msgid "Random artists"
-msgstr ""
-
-msgctxt "#31187"
-msgid "Recent tracks"
-msgstr ""
+#empty strings from id 31156 to 31187
 
 msgctxt "#31188"
 msgid "Random concerts"
@@ -760,9 +732,7 @@ msgctxt "#31212"
 msgid "Streaming media"
 msgstr ""
 
-msgctxt "#31213"
-msgid "Streams navigator"
-msgstr ""
+#empty string with id 31213
 
 msgctxt "#31214"
 msgid "Show addon names"
@@ -824,9 +794,7 @@ msgctxt "#31228"
 msgid "Unwatched movies"
 msgstr ""
 
-msgctxt "#31229"
-msgid "No rating"
-msgstr ""
+#empty string with id 31229
 
 msgctxt "#31230"
 msgid "User selection one"
@@ -892,9 +860,7 @@ msgctxt "#31245"
 msgid "Next aired episodes"
 msgstr ""
 
-msgctxt "#31246"
-msgid "Add year to movie title in media list titles"
-msgstr ""
+#empty string with id 31246
 
 msgctxt "#31247"
 msgid "Move menu item"
@@ -908,9 +874,7 @@ msgctxt "#31249"
 msgid "Background transparency"
 msgstr ""
 
-msgctxt "#31250"
-msgid "Replace symbol \"..\" in media list titles with"
-msgstr ""
+#empty string with id 31250
 
 msgctxt "#31251"
 msgid "Suggested"
@@ -944,6 +908,8 @@ msgctxt "#31258"
 msgid "User select"
 msgstr ""
 
+#empty string with id 31259
+
 msgctxt "#31260"
 msgid "No disc media detected"
 msgstr ""
@@ -951,6 +917,8 @@ msgstr ""
 msgctxt "#31261"
 msgid "Next tracks"
 msgstr ""
+
+#empty strings from id 31262 to 31266
 
 msgctxt "#31267"
 msgid "Playing"
@@ -1108,21 +1076,7 @@ msgctxt "#31310"
 msgid "Track number"
 msgstr ""
 
-msgctxt "#31311"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr ""
-
-msgctxt "#31312"
-msgid "Current scraper"
-msgstr ""
-
-msgctxt "#31313"
-msgid "Choose a scraper"
-msgstr ""
-
-msgctxt "#31314"
-msgid "Content scanning options"
-msgstr ""
+#empty strings from id 31311 to 31314
 
 msgctxt "#31315"
 msgid "Submenu item"
@@ -1240,9 +1194,7 @@ msgctxt "#31343"
 msgid "Download art"
 msgstr ""
 
-msgctxt "#31344"
-msgid "Extra fanart"
-msgstr ""
+#empty string with id 31344
 
 msgctxt "#31345"
 msgid "Show user video OSD button"
@@ -1252,15 +1204,7 @@ msgctxt "#31346"
 msgid "Up one level"
 msgstr ""
 
-msgctxt "#31347"
-msgid "Find more items"
-msgstr ""
-
-msgctxt "#31348"
-msgid "Found"
-msgstr ""
-
-#empty strings from id 31349 to 31350
+#empty strings from id 31347 to 31350
 #Video and Music OSD Labels
 
 msgctxt "#31351"
@@ -1322,13 +1266,7 @@ msgctxt "#31366"
 msgid "Current theme"
 msgstr ""
 
-msgctxt "#31367"
-msgid "Fire"
-msgstr ""
-
-msgctxt "#31368"
-msgid "Kryptonite"
-msgstr ""
+#empty strings from id 31367 to 31378
 
 msgctxt "#31369"
 msgid "Select main OSD colour"
@@ -1400,6 +1338,8 @@ msgctxt "#31388"
 msgid "Media View settings"
 msgstr ""
 
+#empty string with id 31389
+
 msgctxt "#31390"
 msgid "Skin default"
 msgstr ""
@@ -1416,13 +1356,7 @@ msgctxt "#31393"
 msgid "Massive"
 msgstr ""
 
-msgctxt "#31394"
-msgid "Enable video extras"
-msgstr ""
-
-msgctxt "#31395"
-msgid "Configure script.videoextras"
-msgstr ""
+#empty strings from id 31394 to 31395
 
 msgctxt "#31397"
 msgid "Enable TV show next aired"
@@ -1432,53 +1366,7 @@ msgctxt "#31398"
 msgid "Configure script.tv.show.next.aired"
 msgstr ""
 
-msgctxt "#31399"
-msgid "Roboto"
-msgstr ""
-
-#Description Labels
-
-msgctxt "#31400"
-msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver"
-msgstr ""
-
-msgctxt "#31401"
-msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
-msgstr ""
-
-msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
-msgstr ""
-
-msgctxt "#31403"
-msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
-msgstr ""
-
-msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set various cities to collect weather information"
-msgstr ""
-
-#empty string with id 31405
-
-msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
-msgstr ""
-
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Xonfluence skin · Add and remove home menu items[CR]Change skin backgrounds"
-msgstr ""
-
-msgctxt "#31408"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed add-ons · Browse for and install add-ons from kodi.tv[CR]Modify add-on settings"
-msgstr ""
-
-msgctxt "#31409"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
-msgstr ""
-
-msgctxt "#31410"
-msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr ""
+#empty strings from id 31399 to 31410
 
 msgctxt "#31411"
 msgid "First run help..."
@@ -1492,11 +1380,7 @@ msgctxt "#31413"
 msgid "Local subtitle available"
 msgstr ""
 
-msgctxt "#31414"
-msgid "Enable clock and profile on media OSD"
-msgstr ""
-
-#empty strings from id 31415 to 31419
+#empty strings from id 31414 to 31419
 
 msgctxt "#31420"
 msgid "Login"
@@ -1522,61 +1406,51 @@ msgctxt "#31425"
 msgid "Concerts"
 msgstr ""
 
-msgctxt "#31426"
-msgid "Live TV"
-msgstr ""
+#empty string with id 31426
 
 msgctxt "#31427"
 msgid "Concerts"
 msgstr ""
 
-msgctxt "#31428"
-msgid "PseudoTV"
-msgstr ""
+#empty string with id 31428
 
 msgctxt "#31429"
 msgid "Cinema"
 msgstr ""
 
 msgctxt "#31430"
-msgid "Radio 105"
+msgid "[B]PLAYER SETTINGS[/B][CR][CR]Configure actions that can be used during playback · Configure how media content is played"
 msgstr ""
 
 msgctxt "#31431"
-msgid "Launcher"
+msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content ·  Configure how library lists/views are navigated · Configure the media database options"
 msgstr ""
 
 msgctxt "#31432"
-msgid "User data"
+msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed  · Configure how Live TV and recordings are managed"
 msgstr ""
 
 msgctxt "#31433"
-msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset skin values to initial install defaults"
+msgid "[B]ADD-ONS SETTINGS[/B][CR][CR]Configure your installed add-ons · Browse for and install add-ons from kodi.tv"
 msgstr ""
 
 msgctxt "#31434"
-msgid "Background path:"
+msgid "[B]SERVICES SETTINGS[/B][CR][CR]Configure & manage media sharing services · Configure web server · Configure & manage the weather service"
 msgstr ""
 
 msgctxt "#31435"
-msgid "Startup"
+msgid "[B]SYSTEM SETTINGS[/B][CR][CR]Configure display · Configure audio · Configure internet access · Configure power saving· Configure logging"
 msgstr ""
 
 msgctxt "#31436"
-msgid "Single image"
+msgid "[B]INTERFACE SETTINGS[/B][CR][CR]Configure skin · Configure region · Configure control · Configure screensaver · Configure master lock"
 msgstr ""
 
 msgctxt "#31437"
-msgid "Multi image"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Xonfluence skin · Add and remove home menu items · Change skin backgrounds"
 msgstr ""
 
-msgctxt "#31438"
-msgid "No background"
-msgstr ""
-
-msgctxt "#31439"
-msgid "Clear menu option"
-msgstr ""
+#empty strings from id 31438 to 31439
 
 msgctxt "#31440"
 msgid "Select widget set"
@@ -1676,7 +1550,47 @@ msgctxt "#31467"
 msgid "Custom suspend argument"
 msgstr ""
 
-#empty strings from id 31468 to 31499
+#empty strings from id 31468 to 31489
+
+msgctxt "#31490"
+msgid "Radio 105"
+msgstr ""
+
+msgctxt "#31491"
+msgid "Launcher"
+msgstr ""
+
+msgctxt "#31492"
+msgid "User data"
+msgstr ""
+
+msgctxt "#31493"
+msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset skin values to initial install defaults"
+msgstr ""
+
+msgctxt "#31494"
+msgid "Background path:"
+msgstr ""
+
+msgctxt "#31495"
+msgid "Startup"
+msgstr ""
+
+msgctxt "#31496"
+msgid "Single image"
+msgstr ""
+
+msgctxt "#31497"
+msgid "Multi image"
+msgstr ""
+
+msgctxt "#31498"
+msgid "No background"
+msgstr ""
+
+msgctxt "#31499"
+msgid "Clear menu option"
+msgstr ""
 
 msgctxt "#31500"
 msgid "Aspect ratio"
@@ -1720,61 +1634,7 @@ msgctxt "#31511"
 msgid "Channel options"
 msgstr ""
 
-#empty strings from id 31512 to 31599
-
-msgctxt "#31600"
-msgid "Transcoding settings"
-msgstr ""
-
-msgctxt "#31601"
-msgid "Enable transcoding"
-msgstr ""
-
-msgctxt "#31602"
-msgid "Audio codec"
-msgstr ""
-
-msgctxt "#31603"
-msgid "Video codec"
-msgstr ""
-
-msgctxt "#31604"
-msgid "Resolution"
-msgstr ""
-
-msgctxt "#31605"
-msgid "Schedule settings"
-msgstr ""
-
-msgctxt "#31606"
-msgid "Frequency"
-msgstr ""
-
-msgctxt "#31607"
-msgid "Airtime"
-msgstr ""
-
-msgctxt "#31608"
-msgid "Channels"
-msgstr ""
-
-msgctxt "#31609"
-msgid "Keep"
-msgstr ""
-
-msgctxt "#31610"
-msgid "Record minutes before start"
-msgstr ""
-
-msgctxt "#31611"
-msgid "Record minutes after end"
-msgstr ""
-
-#empty strings from id 31612 to 31646
-
-msgctxt "#31647"
-msgid "Coverflow"
-msgstr ""
+#empty strings from id 31512 to 31647
 
 msgctxt "#31648"
 msgid "Low List"
@@ -1861,11 +1721,7 @@ msgctxt "#31905"
 msgid "Forecast"
 msgstr ""
 
-#empty strings from id 31906 to 31907
-
-msgctxt "#31908"
-msgid "Chance of precipitation"
-msgstr ""
+#empty strings from id 31906 to 31908
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."
@@ -1893,9 +1749,7 @@ msgctxt "#31922"
 msgid "Enable fanart script"
 msgstr ""
 
-msgctxt "#31923"
-msgid "Configure script.grab.fanart"
-msgstr ""
+#empty string with id 31923
 
 msgctxt "#31924"
 msgid "Album thumbnails"
@@ -1909,13 +1763,7 @@ msgctxt "#31926"
 msgid "Configure script.tvtunes"
 msgstr ""
 
-msgctxt "#31927"
-msgid "Configure required scripts"
-msgstr ""
-
-msgctxt "#31928"
-msgid "Configure service.skin.widgets"
-msgstr ""
+#empty strings from id 31927 to 31928
 
 msgctxt "#31929"
 msgid "Enable artist slideshow"
@@ -1949,9 +1797,7 @@ msgctxt "#31936"
 msgid "Configure service.skin.widgets"
 msgstr ""
 
-msgctxt "#31937"
-msgid "Hide fanart"
-msgstr ""
+#empty string with id 31937
 
 msgctxt "#31938"
 msgid "Movie details"
@@ -1965,15 +1811,7 @@ msgctxt "#31940"
 msgid "Seconds"
 msgstr ""
 
-msgctxt "#31941"
-msgid "Enable running artwork downloader automaticaly after updating library"
-msgstr ""
-
-msgctxt "#31942"
-msgid "YouTube"
-msgstr ""
-
-#empty strings from id 31943 to 31949
+#empty strings from id 31941 to 31949
 
 msgctxt "#31950"
 msgid "WEATHER"
@@ -2020,7 +1858,7 @@ msgid "RADIO"
 msgstr ""
 
 msgctxt "#31961"
-msgid "Choose your song"
+msgid "Disable PVR in view"
 msgstr ""
 
 msgctxt "#31962"

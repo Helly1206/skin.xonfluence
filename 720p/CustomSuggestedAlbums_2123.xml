@@ -123,7 +123,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.1.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.1.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.1.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.1.Title))</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.2.Title)]</label>
@@ -134,7 +134,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.2.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.2.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.2.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.2.Title))</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.3.Title)]</label>
@@ -145,7 +145,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.3.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.3.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.3.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.3.Title))</visible>
 					</item>
 					<item id="4">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.4.Title)]</label>
@@ -156,7 +156,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.4.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.4.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.4.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.4.Title))</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.5.Title)]</label>
@@ -167,7 +167,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.5.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.5.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.5.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.5.Title))</visible>
 					</item>
 					<item id="6">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.6.Title)]</label>
@@ -178,7 +178,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.6.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.6.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.6.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.6.Title))</visible>
 					</item>
 					<item id="7">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.7.Title)]</label>
@@ -189,7 +189,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.7.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.7.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.7.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.7.Title))</visible>
 					</item>
 					<item id="8">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.8.Title)]</label>
@@ -200,7 +200,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.8.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.8.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.8.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.8.Title))</visible>
 					</item>
 					<item id="9">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.9.Title)]</label>
@@ -211,7 +211,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.9.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.9.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.9.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.9.Title))</visible>
 					</item>
 					<item id="10">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.10.Title)]</label>
@@ -222,7 +222,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.10.Thumb )]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.10.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.10.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.10.Title))</visible>
 					</item>
 					<item id="11">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.11.Title)]</label>
@@ -233,7 +233,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.11.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.11.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.11.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.11.Title))</visible>
 					</item>
 					<item id="12">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.12.Title)]</label>
@@ -244,7 +244,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.12.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.12.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.12.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.12.Title))</visible>
 					</item>
 					<item id="13">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.13.Title)]</label>
@@ -255,7 +255,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.13.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.13.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.13.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.13.Title))</visible>
 					</item>
 					<item id="14">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.14.Title)]</label>
@@ -266,7 +266,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.14.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.14.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.14.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.14.Title))</visible>
 					</item>
 					<item id="15">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.15.Title)]</label>
@@ -277,7 +277,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.15.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.15.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.15.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.15.Title))</visible>
 					</item>
 					<item id="16">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.16.Title)]</label>
@@ -288,7 +288,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.16.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.16.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.16.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.16.Title))</visible>
 					</item>
 					<item id="17">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.17.Title)]</label>
@@ -299,7 +299,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.17.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.17.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.17.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.17.Title))</visible>
 					</item>
 					<item id="18">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.18.Title)]</label>
@@ -310,7 +310,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.18.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.18.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.18.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.18.Title))</visible>
 					</item>
 					<item id="19">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.19.Title)]</label>
@@ -321,7 +321,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.19.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.19.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.19.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.19.Title))</visible>
 					</item>
 					<item id="20">
 						<label>$INFO[Window(home).Property(RecommendedAlbum.20.Title)]</label>
@@ -332,7 +332,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedAlbum.20.Thumb )]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedAlbum.20.fanart)]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedAlbum.20.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.20.Title))</visible>
 					</item>
 					<item id="21">
 						<label>$INFO[Window(home).Property(RecentAlbum.1.Title)]</label>
@@ -343,7 +343,7 @@
 						<onclick>fullscreen</onclick>
 						<icon>$INFO[Window(home).Property(RecentAlbum.1.Thumb)]</icon>
 						<thumb>$INFO[Window(home).Property(RecentAlbum.1.fanart)]</thumb>
-						<visible>IsEmpty(Window(home).Property(RecommendedAlbum.1.Title)) + !IsEmpty(Window(home).Property(RecentAlbum.1.Title))</visible>
+						<visible>String.IsEmpty(Window(home).Property(RecommendedAlbum.1.Title)) + !String.IsEmpty(Window(home).Property(RecentAlbum.1.Title))</visible>
 					</item>
 					<item id="22">
 						<label>31252</label>
@@ -351,7 +351,7 @@
 						<onclick>PreviousMenu</onclick>
 						<icon>DefaultAlbumCover.png</icon>
 						<thumb>Fanart_Fallback_Music_Small.jpg</thumb>
-						<visible>IsEmpty(Window(home).Property(RecommendedAlbum.1.Title)) + IsEmpty(Window(home).Property(RecentAlbum.1.Title))</visible>
+						<visible>String.IsEmpty(Window(home).Property(RecommendedAlbum.1.Title)) + String.IsEmpty(Window(home).Property(RecentAlbum.1.Title))</visible>
 					</item>
 				</content>
 			</control>

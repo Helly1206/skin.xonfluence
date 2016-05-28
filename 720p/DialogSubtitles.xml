@@ -203,7 +203,7 @@
 							<top>0</top>
 							<width>780</width>
 							<height>38</height>
-							<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+							<texture>MenuItemFO.png</texture>
 							<visible>Control.HasFocus(120)</visible>
 						</control>
 						<control type="image">

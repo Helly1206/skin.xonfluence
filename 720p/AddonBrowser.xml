@@ -26,7 +26,7 @@
 		<include>FloorReturnButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
-		<include name="CommonWindowHeader">
+		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_addons" />
 			<param name="Label" value="$LOCALIZE[24001]" />
 		</include>
@@ -39,7 +39,7 @@
 				<top>110</top>
 				<width>250</width>
 				<height>600</height>
-				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+				<onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 				<onleft>50</onleft>
 				<onright>ClearProperty(SideBladeOpen)</onright>
 				<onright>50</onright>
@@ -85,7 +85,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
-				<control type="button" id="5">
+<!--				<control type="button" id="5">
 					<description>addon-updates</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
@@ -94,7 +94,7 @@
 				<control type="radiobutton" id="6">
 					<description>No notifications</description>
 					<include>ButtonCommonValues</include>
-					<label>25000</label>
+					<label>25000</label>-->
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Hide foreign</description>

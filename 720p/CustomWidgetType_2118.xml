@@ -5,7 +5,7 @@
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
-	<onunload condition="!IsEmpty(Skin.String(WidgetFav.List))">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,$INFO[Skin.String(WidgetFav.List)])</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(WidgetFav.List))">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,$INFO[Skin.String(WidgetFav.List)])</onunload>
 	<onunload>ClearProperty(UsrSelectBtn,Home)</onunload>
 	<controls>
 		<control type="group">
@@ -108,7 +108,7 @@
 				<content>
 					<item>
 						<description>Clear Setting</description>
-						<label>$LOCALIZE[31439]</label>
+						<label>$LOCALIZE[31499]</label>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 						<onclick>Dialog.Close(2118)</onclick>
@@ -152,7 +152,7 @@
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,Weather)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 						<onclick>Dialog.Close(2118)</onclick>
-						<visible>!IsEmpty(Weather.Plugin)</visible>
+						<visible>!String.IsEmpty(Weather.Plugin)</visible>
 					</item>
 					<item>
 						<description>Recent Movies</description>

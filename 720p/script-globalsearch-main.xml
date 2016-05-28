@@ -4,6 +4,7 @@
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
+	<depth>DepthDialog</depth>
 	<controls>
 		<control type="group" id="100">
 			<include>VisibleFadeEffect</include>
@@ -299,6 +300,12 @@
 							<visible>Control.IsVisible(189)</visible>
 						</item>
 						<item id="11">
+							<label>$LOCALIZE[20348]</label>
+							<label2>$LOCALIZE[31206] $INFO[Control.GetLabel(230)] $LOCALIZE[31025]</label2>
+							<onclick>noop</onclick>
+							<visible>Control.IsVisible(239)</visible>
+						</item>
+						<item id="12">
 							<label>[COLOR=$VAR[MainColorOne]]$INFO[Control.GetLabel(198)][/COLOR]</label>
 							<label2>$LOCALIZE[31207]</label2>
 							<onclick>Control.Setfocus(9000,0)</onclick>
@@ -434,12 +441,12 @@
 							<width>750</width>
 							<height>530</height>
 							<onleft>9000</onleft>
-							<onright>178</onright>
+							<onright>228</onright>
 							<onup>221</onup>
 							<ondown>221</ondown>
 							<viewtype label="535">list</viewtype>
 							<preloaditems>2</preloaditems>
-							<pagecontrol>178</pagecontrol>
+							<pagecontrol>228</pagecontrol>
 							<itemlayout width="750" height="106">
 								<control type="image">
 									<left>0</left>
@@ -615,7 +622,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>100</left>
@@ -636,7 +643,7 @@
 									<font>font12</font>
 									<textcolor>grey2</textcolor>
 									<aligny>center</aligny>
-									<visible>!SubString(ListItem.Property(Duration),min)</visible>
+									<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
 								</control>
 								<control type="label">
 									<left>100</left>
@@ -647,7 +654,7 @@
 									<font>font12</font>
 									<textcolor>grey2</textcolor>
 									<aligny>center</aligny>
-									<visible>SubString(ListItem.Property(Duration),min)</visible>
+									<visible>String.Contains(ListItem.Property(Duration),min)</visible>
 								</control>
 								<control type="textbox">
 									<left>100</left>
@@ -666,7 +673,7 @@
 									<label>$INFO[ListItem.Property(PlotOutline)]</label>
 									<font>font10</font>
 									<textcolor>white</textcolor>
-									<visible>IsEmpty(ListItem.Property(TagLine))</visible>
+									<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
 								</control>
 								<control type="textbox">
 									<left>100</left>
@@ -676,7 +683,7 @@
 									<label>$INFO[ListItem.Property(Plot)]</label>
 									<font>font10</font>
 									<textcolor>white</textcolor>
-									<visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
+									<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
 								</control>
 							</itemlayout>
 							<focusedlayout width="375" height="130">
@@ -685,7 +692,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>125</height>
-									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+									<texture border="5">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -701,7 +708,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>100</left>
@@ -722,7 +729,7 @@
 									<font>font12</font>
 									<textcolor>grey2</textcolor>
 									<aligny>center</aligny>
-									<visible>!SubString(ListItem.Property(Duration),min)</visible>
+									<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
 								</control>
 								<control type="label">
 									<left>100</left>
@@ -733,7 +740,7 @@
 									<font>font12</font>
 									<textcolor>grey2</textcolor>
 									<aligny>center</aligny>
-									<visible>SubString(ListItem.Property(Duration),min)</visible>
+									<visible>String.Contains(ListItem.Property(Duration),min)</visible>
 								</control>
 								<control type="textbox">
 									<left>100</left>
@@ -752,7 +759,7 @@
 									<label>$INFO[ListItem.Property(PlotOutline)]</label>
 									<font>font10</font>
 									<textcolor>white</textcolor>
-									<visible>IsEmpty(ListItem.Property(TagLine))</visible>
+									<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
 								</control>
 								<control type="textbox">
 									<left>100</left>
@@ -762,7 +769,7 @@
 									<label>$INFO[ListItem.Property(Plot)]</label>
 									<font>font10</font>
 									<textcolor>white</textcolor>
-									<visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
+									<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
 								</control>
 							</focusedlayout>
 						</control>
@@ -825,7 +832,7 @@
 							<ondown>211</ondown>
 							<viewtype label="535">panel</viewtype>
 							<preloaditems>2</preloaditems>
-							<pagecontrol>118</pagecontrol>
+							<pagecontrol>218</pagecontrol>
 							<itemlayout width="375" height="130">
 								<control type="image">
 									<left>0</left>
@@ -848,7 +855,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>100</left>
@@ -869,7 +876,7 @@
 									<font>font12</font>
 									<textcolor>grey2</textcolor>
 									<aligny>center</aligny>
-									<visible>!SubString(ListItem.Property(Duration),min)</visible>
+									<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
 								</control>
 								<control type="label">
 									<left>100</left>
@@ -880,7 +887,7 @@
 									<font>font12</font>
 									<textcolor>grey2</textcolor>
 									<aligny>center</aligny>
-									<visible>SubString(ListItem.Property(Duration),min)</visible>
+									<visible>String.Contains(ListItem.Property(Duration),min)</visible>
 								</control>
 								<control type="textbox">
 									<left>100</left>
@@ -899,7 +906,7 @@
 									<label>$INFO[ListItem.Property(PlotOutline)]</label>
 									<font>font10</font>
 									<textcolor>white</textcolor>
-									<visible>IsEmpty(ListItem.Property(TagLine))</visible>
+									<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
 								</control>
 								<control type="textbox">
 									<left>100</left>
@@ -909,7 +916,7 @@
 									<label>$INFO[ListItem.Property(Plot)]</label>
 									<font>font10</font>
 									<textcolor>white</textcolor>
-									<visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
+									<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
 								</control>
 							</itemlayout>
 							<focusedlayout width="375" height="130">
@@ -934,7 +941,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>100</left>
@@ -955,7 +962,7 @@
 									<font>font12</font>
 									<textcolor>grey2</textcolor>
 									<aligny>center</aligny>
-									<visible>!SubString(ListItem.Property(Duration),min)</visible>
+									<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
 								</control>
 								<control type="label">
 									<left>100</left>
@@ -966,7 +973,7 @@
 									<font>font12</font>
 									<textcolor>grey2</textcolor>
 									<aligny>center</aligny>
-									<visible>SubString(ListItem.Property(Duration),min)</visible>
+									<visible>String.Contains(ListItem.Property(Duration),min)</visible>
 								</control>
 								<control type="textbox">
 									<left>100</left>
@@ -985,7 +992,7 @@
 									<label>$INFO[ListItem.Property(PlotOutline)]</label>
 									<font>font10</font>
 									<textcolor>white</textcolor>
-									<visible>IsEmpty(ListItem.Property(TagLine))</visible>
+									<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
 								</control>
 								<control type="textbox">
 									<left>100</left>
@@ -995,7 +1002,7 @@
 									<label>$INFO[ListItem.Property(Plot)]</label>
 									<font>font10</font>
 									<textcolor>white</textcolor>
-									<visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
+									<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
 								</control>
 							</focusedlayout>
 						</control>
@@ -1009,6 +1016,8 @@
 							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
 							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+							<onup>218</onup>
+							<ondown>218</ondown>
 							<onleft>211</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -1081,7 +1090,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>7</left>
@@ -1138,7 +1147,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>7</left>
@@ -1379,7 +1388,6 @@
 									<top>5</top>
 									<width>150</width>
 									<height>90</height>
-									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
 									<aspectratio>keep</aspectratio>
 								</control>
@@ -1389,7 +1397,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>160</left>
@@ -1434,7 +1442,6 @@
 									<top>5</top>
 									<width>150</width>
 									<height>90</height>
-									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
 									<aspectratio>keep</aspectratio>
 								</control>
@@ -1444,7 +1451,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>160</left>
@@ -1559,7 +1566,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>135</left>
@@ -1624,7 +1631,7 @@
 									<width>30</width>
 									<height>30</height>
 									<texture>OverlayWatched.png</texture>
-									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="label">
 									<left>135</left>
@@ -2178,6 +2185,239 @@
 							<textcolor>grey</textcolor>
 							<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(181).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(181).CurrentPage]/$INFO[Container(181).NumPages][/COLOR])</label>
 							<visible>Container(9000).HasFocus(10)</visible>
+						</control>
+					</control>
+					<control type="group" id="239">
+						<left>0</left>
+						<top>0</top>
+						<width>750</width>
+						<height>530</height>
+						<control type="label" id="230">
+							<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
+							<left>2000</left>
+							<top>2000</top>
+							<width>100</width>
+							<height>0</height>
+							<label>-</label>
+							<font>-</font>
+							<textcolor>-</textcolor>
+						</control>
+						<control type="panel" id="231">
+							<visible>Container(9000).Hasfocus(11)</visible>
+							<include>VisibleFadeEffect</include>
+							<left>0</left>
+							<top>0</top>
+							<width>750</width>
+							<height>530</height>
+							<onleft>9000</onleft>
+							<onright>238</onright>
+							<onup>231</onup>
+							<ondown>231</ondown>
+							<viewtype label="535">panel</viewtype>
+							<preloaditems>2</preloaditems>
+							<pagecontrol>238</pagecontrol>
+							<itemlayout width="375" height="130">
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>370</width>
+									<height>125</height>
+									<texture border="5">button-nofocus.png</texture>
+								</control>
+								<control type="image">
+									<left>5</left>
+									<top>5</top>
+									<width>80</width>
+									<height>115</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<aspectratio>keep</aspectratio>
+								</control>
+								<control type="image">
+									<left>50</left>
+									<top>70</top>
+									<width>30</width>
+									<height>30</height>
+									<texture>OverlayWatched.png</texture>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
+								</control>
+								<control type="label">
+									<left>100</left>
+									<top>10</top>
+									<width>265</width>
+									<height>12</height>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
+									<font>font12</font>
+									<textcolor>white</textcolor>
+									<aligny>center</aligny>
+								</control>
+								<control type="label">
+									<left>100</left>
+									<top>30</top>
+									<width>265</width>
+									<height>15</height>
+									<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
+									<font>font12</font>
+									<textcolor>grey2</textcolor>
+									<aligny>center</aligny>
+									<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
+								</control>
+								<control type="label">
+									<left>100</left>
+									<top>30</top>
+									<width>265</width>
+									<height>15</height>
+									<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
+									<font>font12</font>
+									<textcolor>grey2</textcolor>
+									<aligny>center</aligny>
+									<visible>String.Contains(ListItem.Property(Duration),min)</visible>
+								</control>
+								<control type="textbox">
+									<left>100</left>
+									<top>47</top>
+									<width>265</width>
+									<height>73</height>
+									<label>$INFO[ListItem.Property(Tagline)]</label>
+									<font>font10</font>
+									<textcolor>white</textcolor>
+								</control>
+								<control type="textbox">
+									<left>100</left>
+									<top>47</top>
+									<width>265</width>
+									<height>73</height>
+									<label>$INFO[ListItem.Property(PlotOutline)]</label>
+									<font>font10</font>
+									<textcolor>white</textcolor>
+									<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
+								</control>
+								<control type="textbox">
+									<left>100</left>
+									<top>47</top>
+									<width>265</width>
+									<height>73</height>
+									<label>$INFO[ListItem.Property(Plot)]</label>
+									<font>font10</font>
+									<textcolor>white</textcolor>
+									<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
+								</control>
+							</itemlayout>
+							<focusedlayout width="375" height="130">
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>370</width>
+									<height>125</height>
+									<texture border="5">button-focus2.png</texture>
+								</control>
+								<control type="image">
+									<left>5</left>
+									<top>5</top>
+									<width>80</width>
+									<height>115</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<aspectratio>keep</aspectratio>
+								</control>
+								<control type="image">
+									<left>50</left>
+									<top>70</top>
+									<width>30</width>
+									<height>30</height>
+									<texture>OverlayWatched.png</texture>
+									<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
+								</control>
+								<control type="label">
+									<left>100</left>
+									<top>10</top>
+									<width>265</width>
+									<height>12</height>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
+									<font>font12</font>
+									<textcolor>white</textcolor>
+									<aligny>center</aligny>
+								</control>
+								<control type="label">
+									<left>100</left>
+									<top>30</top>
+									<width>265</width>
+									<height>15</height>
+									<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
+									<font>font12</font>
+									<textcolor>grey2</textcolor>
+									<aligny>center</aligny>
+									<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
+								</control>
+								<control type="label">
+									<left>100</left>
+									<top>30</top>
+									<width>265</width>
+									<height>15</height>
+									<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
+									<font>font12</font>
+									<textcolor>grey2</textcolor>
+									<aligny>center</aligny>
+									<visible>String.Contains(ListItem.Property(Duration),min)</visible>
+								</control>
+								<control type="textbox">
+									<left>100</left>
+									<top>47</top>
+									<width>265</width>
+									<height>73</height>
+									<label>$INFO[ListItem.Property(Tagline)]</label>
+									<font>font10</font>
+									<textcolor>white</textcolor>
+								</control>
+								<control type="textbox">
+									<left>100</left>
+									<top>47</top>
+									<width>265</width>
+									<height>73</height>
+									<label>$INFO[ListItem.Property(PlotOutline)]</label>
+									<font>font10</font>
+									<textcolor>white</textcolor>
+									<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
+								</control>
+								<control type="textbox">
+									<left>100</left>
+									<top>47</top>
+									<width>265</width>
+									<height>73</height>
+									<label>$INFO[ListItem.Property(Plot)]</label>
+									<font>font10</font>
+									<textcolor>white</textcolor>
+									<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
+								</control>
+							</focusedlayout>
+						</control>
+						<control type="scrollbar" id="238">
+							<left>770</left>
+							<top>0</top>
+							<width>25</width>
+							<height>530</height>
+							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib>ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<onleft>231</onleft>
+							<onright>9000</onright>
+							<showonepage>false</showonepage>
+							<orientation>vertical</orientation>
+							<visible>Container(9000).Hasfocus(11)</visible>
+						</control>
+						<control type="label">
+							<description>number of files/pages in list text label</description>
+							<left>250</left>
+							<top>530</top>
+							<width>500</width>
+							<height>35</height>
+							<font>font12</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<textcolor>grey</textcolor>
+							<label>([COLOR=blue]$INFO[Container(231).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(231).CurrentPage]/$INFO[Container(231).NumPages][/COLOR])</label>
+							<visible>Container(9000).Hasfocus(11)</visible>
 						</control>
 					</control>
 				</control>

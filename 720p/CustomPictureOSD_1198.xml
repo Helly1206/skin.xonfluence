@@ -12,7 +12,7 @@
 			<top>-60</top>
 			<width>1480</width>
 			<height>160</height>
-			<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+			<include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 			<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>

@@ -7,7 +7,7 @@
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
-		<include name="DialogBackgroundCommons">
+		<include content="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="1120" />
 			<param name="DialogBackgroundHeight" value="570" />
 			<param name="DialogHeaderWidth" value="1020" />
@@ -381,7 +381,7 @@
 					<aligny>center</aligny>
 					<label>19024</label>
 					<altlabel>19023</altlabel>
-					<usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
+					<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
 				</control>
 			</control>
 		</control>

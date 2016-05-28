@@ -9,7 +9,7 @@
 	<onload condition="!Skin.HasSetting(DisableTVTunes) + !System.HasAddon(script.tvtunes)">Skin.Setbool(DisableTVTunes)</onload>
 	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + !System.HasAddon(script.artistslideshow)">Skin.Setbool(DisableSlideShowArt)</onload>
 	<onload condition="!Skin.HasSetting(DisableWatchItLater) + !System.HasAddon(script.simpleplaylists)">Skin.Setbool(DisableWatchItLater)</onload>
-	<onload condition="!Skin.HasSetting(DisableFanartScript) + IntegerGreaterThan(Skin.String(FanArtCycleRate),0)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onload>
+	<onload condition="!Skin.HasSetting(DisableFanartScript) + Integer.IsGreater(Skin.String(FanArtCycleRate),0)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onload>
 	<onload condition="!Skin.String(KodiIntroVideo)">Skin.SetString(KodiIntroVideo,special://skin/extras/Intro/KODI-Intro-Video.mp4)</onload>
 	<controls>
 		<control type="image">

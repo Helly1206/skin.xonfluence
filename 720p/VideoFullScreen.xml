@@ -5,8 +5,8 @@
 	<controls>
 		<!-- Intro infos -->
 		<control type="group" id="1">
-			<visible>!StringCompare(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
-			<visible>IntegerGreaterThan(Player.time,3) + !IntegerGreaterThan(Player.time,8) + !Skin.HasSetting(HideInfoStartOSD)</visible>
+			<visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
+			<visible>Integer.IsGreater(Player.time,3) + !Integer.IsGreater(Player.time,8) + !Skin.HasSetting(HideInfoStartOSD)</visible>
 			<visible>![Window.IsActive(VideoOSD) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<visible>!Player.Paused  + !Player.ShowInfo</visible>
 			<animation effect="fade" time="150">VisibleChange</animation>
@@ -27,10 +27,10 @@
 			</control>
 		</control>
 		<!-- media infos -->
-		<include condition="Skin.HasSetting(ShowFullScreenClock) + !StringCompare(Player.Filenameandpath,Skin.String(KodiIntroVideo)) + ![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]">Clock</include>
+		<include condition="Skin.HasSetting(ShowFullScreenClock) + !String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo)) + ![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]">Clock</include>
 		<control type="group" id="1">
 			<depth>DepthOSD</depth>
-			<visible>!StringCompare(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
+			<visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
 			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] | Player.Seeking | Player.displayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
 			<visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
@@ -39,7 +39,7 @@
 				<top>-150</top>
 				<width>1320</width>
 				<height>256</height>
-				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
 				<visible>!Skin.HasSetting(HideSystemTime)</visible>
 				<visible>Player.ShowInfo | !Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
@@ -232,7 +232,7 @@
 		</control>
 		<control type="group">
 			<depth>DepthOSD+</depth>
-			<visible>Player.ShowCodec + VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
+			<visible>VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
 			<top>185</top>
 			<control type="image">
 				<description>media info background image</description>

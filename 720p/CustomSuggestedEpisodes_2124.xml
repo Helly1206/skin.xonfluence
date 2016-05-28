@@ -60,7 +60,7 @@
 				<height>100</height>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<texture background="true">$INFO[Container(450).ListItem.Property(Logo)]</texture>
-				<visible>!IsEmpty(Container(450).ListItem.Property(Logo))</visible>
+				<visible>!String.IsEmpty(Container(450).ListItem.Property(Logo))</visible>
 			</control>
 			<control type="list" id="450">
 				<left>390r</left>
@@ -133,7 +133,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.1.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.1.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.1.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.1.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.1.TVshowTitle))</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.2.Title)]</label>
@@ -145,7 +145,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.2.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.2.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.2.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.2.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.2.TVshowTitle))</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.3.Title)]</label>
@@ -157,7 +157,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.3.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.3.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.3.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.3.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.3.TVshowTitle))</visible>
 					</item>
 					<item id="4">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.4.Title)]</label>
@@ -169,7 +169,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.4.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.4.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.4.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.4.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.4.TVshowTitle))</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.5.Title)]</label>
@@ -181,7 +181,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.5.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.5.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.5.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.5.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.5.TVshowTitle))</visible>
 					</item>
 					<item id="6">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.6.Title)]</label>
@@ -193,7 +193,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.6.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.6.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.6.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.6.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.6.TVshowTitle))</visible>
 					</item>
 					<item id="7">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.7.Title)]</label>
@@ -205,7 +205,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.7.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.7.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.7.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.7.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.7.TVshowTitle))</visible>
 					</item>
 					<item id="8">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.8.Title)]</label>
@@ -217,7 +217,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.8.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.8.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.8.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.8.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.8.TVshowTitle))</visible>
 					</item>
 					<item id="9">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.9.Title)]</label>
@@ -229,7 +229,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.9.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.9.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.9.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.9.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.9.TVshowTitle))</visible>
 					</item>
 					<item id="10">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.10.Title)]</label>
@@ -241,7 +241,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.10.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.10.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.10.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.10.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.10.TVshowTitle))</visible>
 					</item>
 					<item id="11">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.11.Title)]</label>
@@ -253,7 +253,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.11.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.11.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.11.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.11.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.11.TVshowTitle))</visible>
 					</item>
 					<item id="12">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.12.Title)]</label>
@@ -265,7 +265,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.12.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.12.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.12.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.12.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.12.TVshowTitle))</visible>
 					</item>
 					<item id="13">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.13.Title)]</label>
@@ -277,7 +277,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.13.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.13.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.13.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.13.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.13.TVshowTitle))</visible>
 					</item>
 					<item id="14">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.14.Title)]</label>
@@ -289,7 +289,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.14.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.14.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.14.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.14.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.14.TVshowTitle))</visible>
 					</item>
 					<item id="15">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.15.Title)]</label>
@@ -301,7 +301,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.15.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.15.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.15.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.15.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.15.TVshowTitle))</visible>
 					</item>
 					<item id="16">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.16.Title)]</label>
@@ -313,7 +313,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.16.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.16.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.16.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.16.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.16.TVshowTitle))</visible>
 					</item>
 					<item id="17">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.17.Title)]</label>
@@ -325,7 +325,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.17.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.17.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.17.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.17.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.17.TVshowTitle))</visible>
 					</item>
 					<item id="18">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.18.Title)]</label>
@@ -337,7 +337,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.18.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.18.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.18.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.18.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.18.TVshowTitle))</visible>
 					</item>
 					<item id="19">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.19.Title)]</label>
@@ -349,7 +349,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.19.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.19.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.19.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.19.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.19.TVshowTitle))</visible>
 					</item>
 					<item id="20">
 						<label>$INFO[Window(home).Property(RecommendedEpisode.20.Title)]</label>
@@ -361,7 +361,7 @@
 						<icon>$INFO[Window(home).Property(RecommendedEpisode.20.Art(thumb))]</icon>
 						<property name="Logo">$INFO[Window(home).Property(RecommendedEpisode.20.Art(tvshow.clearlogo))]</property>
 						<property name="PercentPlayed">$INFO[Window(home).Property(RecommendedEpisode.20.PercentPlayed)]</property>
-						<visible>!IsEmpty(Window(home).Property(RecommendedEpisode.20.TVshowTitle))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.20.TVshowTitle))</visible>
 					</item>
 					<item id="21">
 						<label>31252</label>
@@ -369,7 +369,7 @@
 						<onclick>PreviousMenu</onclick>
 						<icon>DefaultVideo.png</icon>
 						<thumb>Fanart_Fallback_Small.jpg</thumb>
-						<visible>IsEmpty(Window(home).Property(RecommendedEpisode.1.TVshowTitle))</visible>
+						<visible>String.IsEmpty(Window(home).Property(RecommendedEpisode.1.TVshowTitle))</visible>
 					</item>
 				</content>
 			</control>

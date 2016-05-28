@@ -43,7 +43,7 @@
 			<height>35</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[RatingMPAA,flagging/ratings/,.png]</texture>
-			<visible>!IsEmpty(ListItem.Mpaa) + Skin.String(MPAACertificate)</visible>
+			<visible>!String.IsEmpty(ListItem.Mpaa) + Skin.String(MPAACertificate)</visible>
 		</control>
 	</include>
 	<include name="AudioCodecFlaggingConditions">

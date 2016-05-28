@@ -115,10 +115,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.1.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistOne.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.1.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.1.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.1.Type),Radio) | [StringCompare(Skin.String(HomeItem.1.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.1.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.1.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.1.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.1.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.1.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.1.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.1.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="2">
 				<description>Home Menu Item Two</description>
@@ -135,10 +135,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.2.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwo.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.2.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.2.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.2.Type),Radio) | [StringCompare(Skin.String(HomeItem.2.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.2.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.2.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.2.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.2.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.2.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.2.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.2.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="3">
 				<description>Home Menu Item Three</description>
@@ -155,10 +155,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.3.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistThree.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.3.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.3.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.3.Type),Radio) | [StringCompare(Skin.String(HomeItem.3.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.3.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.3.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.3.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.3.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.3.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.3.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.3.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="4">
 				<description>Home Menu Item Four</description>
@@ -175,10 +175,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.4.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFour.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.4.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.4.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.4.Type),Radio) | [StringCompare(Skin.String(HomeItem.4.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.4.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.4.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.4.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.4.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.4.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.4.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.4.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="5">
 				<description>Home Menu Item Five</description>
@@ -195,10 +195,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.5.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFive.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.5.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.5.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.5.Type),Radio) | [StringCompare(Skin.String(HomeItem.5.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.5.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.5.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.5.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.5.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.5.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.5.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.5.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="6">
 				<description>Home Menu Item Six</description>
@@ -215,10 +215,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.6.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSix.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.6.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.6.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.6.Type),Radio) | [StringCompare(Skin.String(HomeItem.6.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.6.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.6.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.6.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.6.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.6.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.6.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.6.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="7">
 				<description>Home Menu Item Seven</description>
@@ -235,10 +235,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.7.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSeven.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.7.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.7.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.7.Type),Radio) | [StringCompare(Skin.String(HomeItem.7.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.7.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.7.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.7.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.7.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.7.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.7.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.7.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="8">
 				<description>Home Menu Item Eight</description>
@@ -255,10 +255,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.8.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEight.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.8.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.8.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.8.Type),Radio) | [StringCompare(Skin.String(HomeItem.8.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.8.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.8.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.8.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.8.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.8.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.8.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.8.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="9">
 				<description>Home Menu Item Nine</description>
@@ -275,10 +275,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.9.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistNine.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.9.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.9.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.9.Type),Radio) | [StringCompare(Skin.String(HomeItem.9.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.9.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.9.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.9.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.9.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.9.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.9.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.9.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="10">
 				<description>Home Menu Item Ten</description>
@@ -295,10 +295,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.10.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTen.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.10.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.10.Type),Radio) | [StringCompare(Skin.String(HomeItem.10.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.10.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.10.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.10.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.10.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.10.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.10.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.10.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="11">
 				<description>Home Menu Item Eleven</description>
@@ -315,10 +315,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.11.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEleven.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.11.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.11.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.11.Type),Radio) | [StringCompare(Skin.String(HomeItem.11.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.11.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.11.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.11.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.11.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.11.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.11.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.11.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="12">
 				<description>Home Menu Item Twelve</description>
@@ -335,10 +335,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.12.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwelve.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.12.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.12.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.12.Type),Radio) | [StringCompare(Skin.String(HomeItem.12.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.12.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.12.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.12.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.12.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.12.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.12.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.12.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="13">
 				<description>Home Menu Item Thirteen</description>
@@ -355,10 +355,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.13.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistThirteen.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.13.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.13.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.13.Type),Radio) | [StringCompare(Skin.String(HomeItem.13.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.13.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.13.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.13.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.13.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.13.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.13.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.13.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="14">
 				<description>Home Menu Item Fourteen</description>
@@ -375,10 +375,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.14.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFourteen.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.14.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.14.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.14.Type),Radio) | [StringCompare(Skin.String(HomeItem.14.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.14.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.14.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.14.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.14.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.14.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.14.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.14.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 			<item id="15">
 				<description>Home Menu Item Fifteen</description>
@@ -395,10 +395,10 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.15.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFifteen.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.15.Display)]</property>
-				<visible>!IsEmpty(Skin.String(HomeItem.15.Path))</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.15.Type),Radio) | [StringCompare(Skin.String(HomeItem.15.Type),Radio) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.15.Type),LiveTV) | [StringCompare(Skin.String(HomeItem.15.Type),LiveTV) + System.Getbool(pvrmanager.enabled)]</visible>
-				<visible>!StringCompare(Skin.String(HomeItem.15.Type),PlayDisc) | [StringCompare(Skin.String(HomeItem.15.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!String.IsEmpty(Skin.String(HomeItem.15.Path))</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.15.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
+				<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.15.Type),PlayDisc) + System.HasMediaDVD]</visible>
 			</item>
 		</content>
 	</include>

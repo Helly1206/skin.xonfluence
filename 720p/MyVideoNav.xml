@@ -53,7 +53,7 @@
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<include condition="!Skin.HasSetting(DisableTVNextAired)">NextAired</include>
-		<include name="CommonWindowHeader">
+		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_video" />
 			<param name="Label" value="$LOCALIZE[3]" />
 		</include>
@@ -66,7 +66,7 @@
 				<top>60</top>
 				<width>250</width>
 				<height>650</height>
-				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+				<onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 				<onleft>50</onleft>
 				<onright>ClearProperty(SideBladeOpen)</onright>
 				<onright>50</onright>
@@ -138,7 +138,7 @@
 					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<pulseonselect>false</pulseonselect>
-					<onclick condition="IsEmpty(Skin.String(MediaPopupControl))">Skin.SetString(MediaPopupControl,Delayed)</onclick>
+					<onclick condition="String.IsEmpty(Skin.String(MediaPopupControl))">Skin.SetString(MediaPopupControl,Delayed)</onclick>
 					<onclick condition="Skin.String(MediaPopupControl,Delayed)">Skin.SetString(MediaPopupControl,Hidden)</onclick>
 					<onclick condition="Skin.String(MediaPopupControl,Hidden)">Skin.SetString(MediaPopupControl,Instant)</onclick>
 					<onclick condition="Skin.String(MediaPopupControl,Instant)">Skin.Reset(MediaPopupControl)</onclick>

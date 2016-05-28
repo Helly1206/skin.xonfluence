@@ -204,8 +204,7 @@
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
-				<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
-				<visible>Skin.HasSetting(Show_Logoff) + System.Loggedon</visible>
+				<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>				<visible>Skin.HasSetting(Show_Logoff) + System.Loggedon</visible>
 			</control>
 			<control type="togglebutton" id="10">
 				<description>Master mode button</description>

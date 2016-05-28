@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="3001">
 	<!-- The following property allows TvTunes to keep playing when this window is displayed -->
-	<onload condition="!IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "TvShows")</onload>
-	<onload condition="IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "Movies")</onload>
+	<onload condition="!String.IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "TvShows")</onload>
+	<onload condition="String.IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "Movies")</onload>
 	<include condition="!Skin.HasSetting(DisableTVTunes)">LoadTvTunes</include>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<controls>
@@ -42,7 +42,7 @@
 			</control>
 			<control type="label" id="321">
 				<include>WindowTitleCommons</include>
-				<visible>!IsEmpty(ListItem.Title)</visible>
+				<visible>!String.IsEmpty(ListItem.Title)</visible>
 				<label>[COLOR=$VAR[MainColorOne]] - [/COLOR] $INFO[ListItem.Title]</label>
 			</control>
 		</control>
@@ -100,7 +100,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<visible>!IsEmpty(ListItem.Label2)</visible>
+						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
@@ -117,7 +117,7 @@
 						<width>20</width>
 						<height>20</height>
 						<texture>OverlayWatched.png</texture>
-						<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+						<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40" width="1080">
@@ -170,7 +170,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<visible>!IsEmpty(ListItem.Label2)</visible>
+						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
@@ -187,7 +187,7 @@
 						<width>20</width>
 						<height>20</height>
 						<texture>OverlayWatched.png</texture>
-						<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+						<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -217,7 +217,7 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
-			<visible>!IsEmpty(ListItem.Plot)</visible>
+			<visible>!String.IsEmpty(ListItem.Plot)</visible>
 			<control type="label">
 				<posx>0</posx>
 				<posy>0</posy>

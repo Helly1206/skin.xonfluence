@@ -10,13 +10,13 @@
 			<depth>DepthBackground</depth>
 			<include>Dimensions_Fullscreen</include>
 			<texture>$INFO[Container(500).ListItem.Property(Fanart_small)]</texture>
-			<visible>!IsEmpty(Container(500).ListItem.Property(Fanart_small))</visible>
+			<visible>!String.IsEmpty(Container(500).ListItem.Property(Fanart_small))</visible>
 		</control>
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true" fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
-			<visible>IsEmpty(Container(500).ListItem.Property(Fanart_small))</visible>
+			<visible>String.IsEmpty(Container(500).ListItem.Property(Fanart_small))</visible>
 		</control>
 		<!-- panel background -->
 		<control type="image">
@@ -30,23 +30,23 @@
 			<animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
 			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
-			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			<animation effect="fade" start="100" end="65" time="0" condition="IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
-			<visible>!IsEmpty(Skin.String(HomeFloor))</visible>
+			<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+			<animation effect="fade" start="100" end="65" time="0" condition="String.IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
+			<visible>!String.IsEmpty(Skin.String(HomeFloor))</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 		</control>
 		<control type="group">
 			<include>VisibleFadeEffect</include>
-			<!--<visible>IsEmpty(Window.Property(alt_layout))</visible>-->
+			<!--<visible>String.IsEmpty(Window.Property(alt_layout))</visible>-->
 			<control type="image">
 				<left>50</left>
 				<top>60</top>
 				<width>840</width>
 				<height>600</height>
 				<texture border="15">ContentPanel.png</texture>
-				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>50</left>
@@ -61,7 +61,7 @@
 				<width>330</width>
 				<height>600</height>
 				<texture border="15">ContentPanel.png</texture>
-				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				<include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>900</left>
@@ -77,7 +77,7 @@
         <control type="group">
             <posy>0</posy>
 			<control type="group">
-				<!--<visible>IsEmpty(Window.Property(alt_layout))</visible>-->
+				<!--<visible>String.IsEmpty(Window.Property(alt_layout))</visible>-->
 				<include>VisibleFadeEffect</include>
 				<control type="panel" id="500">
 					<left>70</left>
@@ -120,7 +120,7 @@
                             <top>0</top>
                             <left>118</left>
                             <texture>special://home/addons/script.extendedinfo/resources/skins/Default/media/flags/local.png</texture>
-                            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
                         </control>
 						<control type="image">
                             <width>20</width>
@@ -128,7 +128,7 @@
                             <top>5</top>
                             <left>50</left>
                             <texture>special://home/addons/script.extendedinfo/resources/skins/Default/media/circle.png</texture>
-                            <visible>!IsEmpty(ListItem.Property(User_Rating))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(User_Rating))</visible>
                         </control>
                         <control type="label">
                             <width>20</width>
@@ -140,7 +140,7 @@
                             <font>font10</font>
                             <textcolor>FF000000</textcolor>
                             <label>$INFO[ListItem.Property(User_Rating)]</label>
-                            <visible>!IsEmpty(ListItem.Property(User_Rating))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(User_Rating))</visible>
                         </control>
 					</itemlayout>
 					<focusedlayout height="186" width="193">
@@ -173,7 +173,7 @@
                             <top>0</top>
                             <left>118</left>
                             <texture>special://home/addons/script.extendedinfo/resources/skins/Default/media/flags/local.png</texture>
-                            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
                         </control>
 						<control type="image">
                             <width>20</width>
@@ -181,7 +181,7 @@
                             <top>5</top>
                             <left>50</left>
                             <texture>special://home/addons/script.extendedinfo/resources/skins/Default/media/circle.png</texture>
-                            <visible>!IsEmpty(ListItem.Property(User_Rating))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(User_Rating))</visible>
                         </control>
                         <control type="label">
                             <width>20</width>
@@ -193,7 +193,7 @@
                             <font>font10</font>
                             <textcolor>FF000000</textcolor>
                             <label>$INFO[ListItem.Property(User_Rating)]</label>
-                            <visible>!IsEmpty(ListItem.Property(User_Rating))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(User_Rating))</visible>
                         </control>
 					</focusedlayout>
 				</control>
@@ -279,7 +279,7 @@
 		                    <top>50</top>
 		                    <width>135</width>
 		                    <height>26</height>
-		                    <animation effect="fade" start="100" end="60" time="0" condition="IsEmpty(Container(500).ListItem.Rating)">Conditional</animation>
+		                    <animation effect="fade" start="100" end="60" time="0" condition="String.IsEmpty(Container(500).ListItem.Rating)">Conditional</animation>
 		                    <texture fallback="special://home/addons/script.extendedinfo/resources/skins/Default/media/flags/stars/0.0.png">$INFO[Container(500).ListItem.Rating,special://home/addons/script.extendedinfo/resources/skins/Default/media/flags/stars/,.png]</texture>
 		                </control>
 		                <control type="textbox">
@@ -319,7 +319,7 @@
                    	<height>30</height>
                    	<animation effect="fade" end="100" time="360">WindowOpen</animation>
                    	<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
-                   	<visible>!IsEmpty(Window.Property(ArrowDown)) | Container(500).HasNext</visible>
+                   	<visible>!String.IsEmpty(Window.Property(ArrowDown)) | Container(500).HasNext</visible>
                	</control>
                	<control type="image">
                    	<texture>arrow-big-up.png</texture>
@@ -330,7 +330,7 @@
                    	<height>30</height>
                    	<animation effect="fade" end="100" time="360">WindowOpen</animation>
                    	<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
-                   	<visible>!IsEmpty(Window.Property(ArrowUp)) | Container(500).HasPrevious</visible>
+                   	<visible>!String.IsEmpty(Window.Property(ArrowUp)) | Container(500).HasPrevious</visible>
                	</control>
             </control>
         </control>
@@ -374,7 +374,7 @@
 		<include>FloorReturnButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
-		<include name="CommonWindowHeader">
+		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_video" />
 			<param name="Label" value="ExtendedInfo Script" />
 		</include>
@@ -388,7 +388,7 @@
 				<top>60</top>
 				<width>250</width>
 				<height>650</height>
-				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+				<onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 				<onleft>500</onleft>
 				<onright>ClearProperty(SideBladeOpen)</onright>
 				<onright>500</onright>

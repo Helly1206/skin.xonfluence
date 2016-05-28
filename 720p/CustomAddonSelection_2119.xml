@@ -106,13 +106,13 @@
 				<content>
 					<item>
 						<description>Clear Setting</description>
-						<label>$LOCALIZE[31439]</label>
+						<label>$LOCALIZE[31499]</label>
 						<onclick>Dialog.Close(2119)</onclick>
 						<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 						<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 						<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Icon)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>!StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>!String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 					</item>
 					<item>
 						<description>Favourites Window</description>
@@ -121,7 +121,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(Favourites),return)</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31338])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 					</item>
 					<item>
 						<description>Favourites</description>
@@ -138,7 +138,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,LastVideo)</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31018])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 					</item>
 					<item>
 						<description>Suggested Movies</description>
@@ -147,7 +147,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(2125))</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31197])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item>
@@ -157,7 +157,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(2124))</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31194])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 						<visible>Library.HasContent(TVShows)</visible>
 					</item>
 					<item>
@@ -167,7 +167,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(2123))</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31191])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 						<visible>Library.HasContent(Music)</visible>
 					</item>
 					<item>
@@ -177,7 +177,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(2126))</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31199])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 						<visible>Library.HasContent(MusicVideos)</visible>
 					</item>
 					<item>
@@ -187,7 +187,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,AutoSuggest)</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31020])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 					</item>
 					<item>
 						<description>Eject DVD</description>
@@ -196,7 +196,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,EjectTray())</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31019] DVD)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 					</item>
 					<item>
 						<description>Skin Settings</description>
@@ -205,7 +205,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(SkinSettings),return)</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[166] $LOCALIZE[5])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 					</item>
 					<item>
 						<description>Shutdown Menu</description>
@@ -214,7 +214,7 @@
 						<onclick>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(ShutdownMenu))</onclick>
 						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31077])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+						<visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 					</item>
 					<item>
 						<description>Video addons</description>

@@ -121,7 +121,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.1.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.1.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.1.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.1.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.1.Title))</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.2.Title)]</label>
@@ -130,7 +130,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.2.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.2.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.2.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.2.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.2.Title))</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.3.Title)]</label>
@@ -139,7 +139,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.3.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.3.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.3.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.3.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.3.Title))</visible>
 					</item>
 					<item id="4">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.4.Title)]</label>
@@ -148,7 +148,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.4.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.4.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.4.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.4.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.4.Title))</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.5.Title)]</label>
@@ -157,7 +157,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.5.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.5.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.5.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.5.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.5.Title))</visible>
 					</item>
 					<item id="6">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.6.Title)]</label>
@@ -166,7 +166,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.6.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.6.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.6.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.6.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.6.Title))</visible>
 					</item>
 					<item id="7">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.7.Title)]</label>
@@ -175,7 +175,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.7.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.7.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.7.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.7.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.7.Title))</visible>
 					</item>
 					<item id="8">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.8.Title)]</label>
@@ -184,7 +184,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.8.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.8.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.8.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.8.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.8.Title))</visible>
 					</item>
 					<item id="9">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.9.Title)]</label>
@@ -193,7 +193,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.9.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.9.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.9.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.9.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.9.Title))</visible>
 					</item>
 					<item id="10">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.10.Title)]</label>
@@ -202,7 +202,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.10.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.10.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.10.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.10.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.10.Title))</visible>
 					</item>
 					<item id="11">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.11.Title)]</label>
@@ -211,7 +211,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.11.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.11.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.11.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.11.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.11.Title))</visible>
 					</item>
 					<item id="12">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.12.Title)]</label>
@@ -220,7 +220,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.12.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.12.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.12.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.12.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.12.Title))</visible>
 					</item>
 					<item id="13">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.13.Title)]</label>
@@ -229,7 +229,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.13.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.13.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.13.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.13.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.13.Title))</visible>
 					</item>
 					<item id="14">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.14.Title)]</label>
@@ -238,7 +238,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.14.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.14.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.14.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.14.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.14.Title))</visible>
 					</item>
 					<item id="15">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.15.Title)]</label>
@@ -247,7 +247,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.15.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.15.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.15.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.15.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.15.Title))</visible>
 					</item>
 					<item id="16">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.16.Title)]</label>
@@ -256,7 +256,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.16.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.16.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.16.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.16.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.16.Title))</visible>
 					</item>
 					<item id="17">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.17.Title)]</label>
@@ -265,7 +265,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.17.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.17.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.17.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.17.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.17.Title))</visible>
 					</item>
 					<item id="18">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.18.Title)]</label>
@@ -274,7 +274,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.18.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.18.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.18.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.18.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.18.Title))</visible>
 					</item>
 					<item id="19">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.19.Title)]</label>
@@ -283,7 +283,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.19.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.19.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.19.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.19.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.19.Title))</visible>
 					</item>
 					<item id="20">
 						<label>$INFO[Window(home).Property(RecommendedMusicVideo.20.Title)]</label>
@@ -292,7 +292,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(home).Property(RecommendedMusicVideo.20.File)])</onclick>
 						<icon>$INFO[Window(home).Property(RecommendedMusicVideo.20.Art(poster))]</icon>
 						<thumb>$INFO[Window(home).Property(RecommendedMusicVideo.20.Art(fanart))]</thumb>
-						<visible>!IsEmpty(Window(home).Property(RecommendedMusicVideo.20.Title))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.20.Title))</visible>
 					</item>
 					<item id="21">
 						<label>31252</label>
@@ -300,7 +300,7 @@
 						<onclick>PreviousMenu</onclick>
 						<icon>DefaultVideo.png</icon>
 						<thumb>Fanart_Fallback_Music_Small.jpg</thumb>
-						<visible>IsEmpty(Window(home).Property(RecommendedMusicVideo.1.Title))</visible>
+						<visible>String.IsEmpty(Window(home).Property(RecommendedMusicVideo.1.Title))</visible>
 					</item>
 				</content>
 			</control>

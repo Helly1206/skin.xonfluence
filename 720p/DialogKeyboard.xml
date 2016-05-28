@@ -11,7 +11,7 @@
 		<control type="group">
 			<include>VisibleFadeEffect</include>
 			<visible>!Window.IsVisible(numericinput)</visible>
-			<include name="DialogBackgroundCommons">
+			<include content="DialogBackgroundCommons">
 				<param name="DialogBackgroundWidth" value="860" />
 				<param name="DialogBackgroundHeight" value="430" />
 				<param name="DialogHeaderWidth" value="780" />
@@ -169,35 +169,35 @@
 					</control>
 					<control type="button" id="107">
 						<description>(0,7) key button</description>
-						<onup condition="!Control.IsVisible(5000)">8</onup>
+						<onup condition="!Control.IsVisible(5000)">305</onup>
 						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>127</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="108">
 						<description>(0,8) key button</description>
-						<onup condition="!Control.IsVisible(5000)">305</onup>
+						<onup condition="!Control.IsVisible(5000)">306</onup>
 						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>128</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="109">
 						<description>(0,9) key button</description>
-						<onup condition="!Control.IsVisible(5000)">305</onup>
+						<onup condition="!Control.IsVisible(5000)">308</onup>
 						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>129</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="110">
 						<description>(0,10) key button</description>
-						<onup condition="!Control.IsVisible(5000)">306</onup>
+						<onup condition="!Control.IsVisible(5000)">308</onup>
 						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>130</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="111">
 						<description>(0,11) key button</description>
-						<onup condition="!Control.IsVisible(5000)">306</onup>
+						<onup condition="!Control.IsVisible(5000)">308</onup>
 						<onup condition="Control.IsVisible(5000)">5000</onup>
 						<ondown>131</ondown>
 						<texturenofocus flipx="true" border="5,25,25,5">KeyboardCornerTopNF.png</texturenofocus>
@@ -512,31 +512,31 @@
 					<control type="button" id="167">
 						<description>(3,7) key button</description>
 						<onup>147</onup>
-						<ondown>8</ondown>
+						<ondown>305</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="168">
 						<description>(3,8) key button</description>
 						<onup>148</onup>
-						<ondown>305</ondown>
+						<ondown>306</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="169">
 						<description>(3,9) key button</description>
 						<onup>149</onup>
-						<ondown>305</ondown>
+						<ondown>308</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="170">
 						<description>(3,10) key button</description>
 						<onup>150</onup>
-						<ondown>306</ondown>
+						<ondown>308</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="171">
 						<description>(3,11) key button</description>
 						<onup>151</onup>
-						<ondown>306</ondown>
+						<ondown>308</ondown>
 						<include>KeyboardButton</include>
 					</control>
 				</control>
@@ -569,20 +569,35 @@
 					</control>
 					<control type="button" id="8">
 						<description>BACKSPACE button</description>
-						<width>200</width>
+						<width>150</width>
 						<height>50</height>
 						<label>-</label>
-						<onup>165</onup>
-						<ondown condition="!Control.IsVisible(5000)">105</ondown>
+						<onup>164</onup>
+						<ondown condition="!Control.IsVisible(5000)">104</ondown>
 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texturefocus>
 					</control>
 					<control type="button" id="305">
 						<description>previous button</description>
-						<width>100</width>
+						<width>50</width>
 						<height>50</height>
 						<label>&lt;</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texturefocus>
+						<font>font30</font>
+						<focusedcolor>white</focusedcolor>
+						<onup>167</onup>
+						<ondown condition="!Control.IsVisible(5000)">107</ondown>
+						<ondown condition="Control.IsVisible(5000)">5000</ondown>
+					</control>
+					<control type="button" id="306">
+						<description>next button</description>
+						<width>50</width>
+						<height>50</height>
+						<label>&gt;</label>
 						<align>center</align>
 						<aligny>center</aligny>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -593,20 +608,16 @@
 						<ondown condition="!Control.IsVisible(5000)">108</ondown>
 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
 					</control>
-					<control type="button" id="306">
-						<description>next button</description>
-						<width>100</width>
+					<control type="button" id="308">
+						<description>cancel button</description>
+						<width>150</width>
 						<height>50</height>
-						<label>&gt;</label>
-						<align>center</align>
-						<aligny>center</aligny>
 						<texturenofocus flipx="true" border="5,5,25,25">KeyboardCornerBottomNF.png</texturenofocus>
 						<texturefocus flipx="true" border="5,5,25,25" colordiffuse="$VAR[MainColorOne]">KeyboardCornerBottom.png</texturefocus>
-						<font>font30</font>
-						<focusedcolor>white</focusedcolor>
-						<onup>170</onup>
-						<ondown condition="!Control.IsVisible(5000)">110</ondown>
+						<onup>169</onup>
+						<ondown condition="!Control.IsVisible(5000)">109</ondown>
 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
+						<onclick>Close</onclick>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -634,9 +645,29 @@
 						<visible>!Skin.HasSetting(KeyboardGraphicalTextures)</visible>
 					</control>
 					<control type="label">
-						<width>200</width>
+						<width>150</width>
 						<height>50</height>
 						<label>20181</label>
+						<font>font13</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<visible>!Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+					</control>
+					<control type="label">
+						<width>100</width>
+						<height>50</height>
+						<label>-</label>
+						<font>font13</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<visible>!Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+					</control>
+					<control type="label">
+						<width>150</width>
+						<height>50</height>
+						<label>222</label>
 						<font>font13</font>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -664,10 +695,18 @@
 					</control>
 					<control type="image">
 						<description>Backspace icon</description>
-						<left>485</left>
+						<left>460</left>
 						<width>30</width>
 						<height>30</height>
 						<texture>KeyboardBackKey.png</texture>
+						<visible>Skin.HasSetting(KeyboardGraphicalTextures)</visible>
+					</control>
+					<control type="image">
+						<description>Cancel icon</description>
+						<left>710</left>
+						<width>30</width>
+						<height>30</height>
+						<texture>KeyboardCancelKey.png</texture>
 						<visible>Skin.HasSetting(KeyboardGraphicalTextures)</visible>
 					</control>
 				</control>

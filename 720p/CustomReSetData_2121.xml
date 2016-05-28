@@ -29,7 +29,7 @@
 			<width>530</width>
 			<height>30</height>
 			<font>font13_title</font>
-			<label>$LOCALIZE[31306] $LOCALIZE[31432]</label>
+			<label>$LOCALIZE[31306] $LOCALIZE[31492]</label>
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>selected</textcolor>
@@ -67,7 +67,7 @@
 			<height>30</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31433]</label>
+			<label>$LOCALIZE[31493]</label>
 			<font>font13</font>
 		</control>
 		<control type="button" id="11">

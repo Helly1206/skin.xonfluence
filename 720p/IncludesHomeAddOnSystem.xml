@@ -9,13 +9,13 @@
 			<ondown condition="Skin.HasSetting(LowerMainMenuBar) + [Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)]">603</ondown>
 			<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 			<control type="list" id="700">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(700).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(700).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(700).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(700).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(700).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(700).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetOne)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(700).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(700).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(700).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(700).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(700).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(700).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetOne)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>700</onleft>
 				<onright>700</onright>
@@ -30,13 +30,13 @@
 				</content>
 			</control>
 			<control type="list" id="700">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(700).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(700).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(700).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(700).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(700).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(700).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetOne)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(700).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(700).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(700).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(700).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(700).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(700).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetOne)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>700</onleft>
 				<onright>700</onright>
@@ -51,13 +51,13 @@
 				</content>
 			</control>
 			<control type="list" id="701">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(701).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(701).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(701).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(701).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(701).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(701).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetTwo)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(701).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(701).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(701).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(701).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(701).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(701).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetTwo)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>701</onleft>
 				<onright>701</onright>
@@ -72,13 +72,13 @@
 				</content>
 			</control>
 			<control type="list" id="701">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(701).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(701).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(701).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(701).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(701).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(701).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetTwo)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(701).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(701).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(701).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(701).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(701).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(701).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetTwo)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>701</onleft>
 				<onright>701</onright>
@@ -93,13 +93,13 @@
 				</content>
 			</control>
 			<control type="list" id="702">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(702).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(702).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(702).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(702).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(702).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(702).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetThree)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(702).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(702).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(702).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(702).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(702).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(702).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetThree)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>702</onleft>
 				<onright>702</onright>
@@ -114,13 +114,13 @@
 				</content>
 			</control>
 			<control type="list" id="702">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(702).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(702).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(702).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(702).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(702).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(702).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetThree)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(702).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(702).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(702).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(702).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(702).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(702).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetThree)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>702</onleft>
 				<onright>702</onright>
@@ -135,13 +135,13 @@
 				</content>
 			</control>
 			<control type="list" id="704">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(704).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(704).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(704).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(704).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(704).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(704).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetFour)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(704).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(704).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(704).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(704).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(704).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(704).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetFour)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>704</onleft>
 				<onright>704</onright>
@@ -156,13 +156,13 @@
 				</content>
 			</control>
 			<control type="list" id="704">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(704).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(704).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(704).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(704).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(704).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(704).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetFour)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(704).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(704).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(704).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(704).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(704).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(704).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetFour)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>704</onleft>
 				<onright>704</onright>
@@ -177,13 +177,13 @@
 				</content>
 			</control>
 			<control type="list" id="705">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(705).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(705).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(705).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(705).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(705).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(705).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetFive)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(705).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(705).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(705).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(705).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(705).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(705).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetFive)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>705</onleft>
 				<onright>705</onright>
@@ -198,13 +198,13 @@
 				</content>
 			</control>
 			<control type="list" id="705">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(705).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(705).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(705).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(705).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(705).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(705).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetFive)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(705).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(705).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(705).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(705).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(705).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(705).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetFive)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>705</onleft>
 				<onright>705</onright>
@@ -219,13 +219,13 @@
 				</content>
 			</control>
 			<control type="list" id="706">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(706).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(706).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(706).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(706).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(706).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(706).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetSix)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(706).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(706).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(706).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(706).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(706).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(706).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetSix)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>706</onleft>
 				<onright>706</onright>
@@ -240,13 +240,13 @@
 				</content>
 			</control>
 			<control type="list" id="706">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(706).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(706).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(706).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(706).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(706).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(706).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetSix)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(706).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(706).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(706).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(706).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(706).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(706).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetSix)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>706</onleft>
 				<onright>706</onright>
@@ -261,13 +261,13 @@
 				</content>
 			</control>
 			<control type="list" id="707">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(707).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(707).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(707).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(707).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(707).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(707).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetSeven)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(707).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(707).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(707).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(707).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(707).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(707).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetSeven)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>707</onleft>
 				<onright>707</onright>
@@ -282,13 +282,13 @@
 				</content>
 			</control>
 			<control type="list" id="707">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(707).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(707).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(707).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(707).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(707).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(707).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetSeven)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(707).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(707).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(707).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(707).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(707).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(707).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetSeven)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>707</onleft>
 				<onright>707</onright>
@@ -303,13 +303,13 @@
 				</content>
 			</control>
 			<control type="list" id="708">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(708).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(708).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(708).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(708).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(708).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(708).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetEight)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(708).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(708).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(708).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(708).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(708).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(708).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetEight)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>708</onleft>
 				<onright>708</onright>
@@ -324,13 +324,13 @@
 				</content>
 			</control>
 			<control type="list" id="708">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(708).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(708).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(708).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(708).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(708).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(708).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetEight)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(708).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(708).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(708).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(708).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(708).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(708).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetEight)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>708</onleft>
 				<onright>708</onright>
@@ -345,13 +345,13 @@
 				</content>
 			</control>
 			<control type="list" id="709">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(709).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(709).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(709).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(709).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(709).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(709).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetNine)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(709).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(709).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(709).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(709).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(709).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(709).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetNine)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>709</onleft>
 				<onright>709</onright>
@@ -366,13 +366,13 @@
 				</content>
 			</control>
 			<control type="list" id="709">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(709).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(709).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(709).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(709).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(709).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(709).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetNine)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(709).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(709).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(709).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(709).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(709).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(709).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetNine)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>709</onleft>
 				<onright>709</onright>
@@ -387,13 +387,13 @@
 				</content>
 			</control>
 			<control type="list" id="710">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(710).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(710).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(710).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(710).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(710).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(710).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetTen)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(710).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(710).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(710).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(710).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(710).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(710).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetTen)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>710</onleft>
 				<onright>710</onright>
@@ -408,13 +408,13 @@
 				</content>
 			</control>
 			<control type="list" id="710">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(710).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(710).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(710).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(710).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(710).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(710).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetTen)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(710).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(710).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(710).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(710).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(710).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(710).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetTen)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>710</onleft>
 				<onright>710</onright>
@@ -429,13 +429,13 @@
 				</content>
 			</control>
 			<control type="list" id="711">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(711).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(711).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(711).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(711).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(711).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(711).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetEleven)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(711).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(711).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(711).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(711).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(711).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(711).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetEleven)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>711</onleft>
 				<onright>711</onright>
@@ -450,13 +450,13 @@
 				</content>
 			</control>
 			<control type="list" id="711">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(711).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(711).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(711).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(711).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(711).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(711).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetEleven)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(711).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(711).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(711).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(711).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(711).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(711).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetEleven)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>711</onleft>
 				<onright>711</onright>
@@ -471,13 +471,13 @@
 				</content>
 			</control>
 			<control type="list" id="712"># Twelve
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(712).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(712).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(712).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(712).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(712).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(712).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetTwelve)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(712).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(712).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(712).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(712).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(712).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(712).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetTwelve)</visible>
 				<visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>712</onleft>
 				<onright>712</onright>
@@ -492,13 +492,13 @@
 				</content>
 			</control>
 			<control type="list" id="712">
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(712).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(712).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(712).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(712).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(712).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(712).NumItems,1)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetTwelve)</visible>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="String.IsEqual(Container(712).NumItems,6)">conditional</animation>
+				<animation effect="slide" start="0,0" end="164,0" time="0" condition="String.IsEqual(Container(712).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(712).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="328,0" time="0" condition="String.IsEqual(Container(712).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="410,0" time="0" condition="String.IsEqual(Container(712).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="492,0" time="0" condition="String.IsEqual(Container(712).NumItems,1)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(AddOnSet),AddonSetTwelve)</visible>
 				<visible>Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 				<onleft>712</onleft>
 				<onright>712</onright>
@@ -738,49 +738,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetOne.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetOne.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetOne.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetOne.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetOne.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetOne.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetOne.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetTwo">
@@ -789,49 +789,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwo.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwo.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwo.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwo.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwo.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwo.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwo.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetThree">
@@ -840,49 +840,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetThree.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetThree.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetThree.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetThree.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetThree.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetThree.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetThree.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetFour">
@@ -891,49 +891,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFour.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFour.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFour.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFour.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFour.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFour.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFour.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetFive">
@@ -942,49 +942,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFive.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFive.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFive.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFive.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFive.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFive.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetFive.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetSix">
@@ -993,49 +993,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSix.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSix.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSix.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSix.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSix.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSix.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSix.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetSeven">
@@ -1044,49 +1044,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSeven.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSeven.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSeven.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSeven.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSeven.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSeven.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSeven.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSeven.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSeven.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSeven.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSeven.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSeven.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetSeven.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetSeven.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetEight">
@@ -1095,49 +1095,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEight.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEight.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEight.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEight.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEight.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEight.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEight.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEight.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEight.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEight.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEight.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEight.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEight.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEight.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetNine">
@@ -1146,49 +1146,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetNine.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetNine.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetNine.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetNine.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetNine.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetNine.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetNine.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetNine.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetNine.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetNine.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetNine.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetNine.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetNine.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetNine.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetTen">
@@ -1197,49 +1197,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTen.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTen.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTen.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTen.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTen.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTen.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTen.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTen.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTen.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTen.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTen.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTen.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTen.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTen.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetEleven">
@@ -1248,49 +1248,49 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEleven.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEleven.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.2.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.2.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEleven.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEleven.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEleven.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEleven.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEleven.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEleven.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEleven.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEleven.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEleven.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEleven.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetEleven.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetEleven.7.Path))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonSetTwelve">
@@ -1299,7 +1299,7 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.1.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwelve.1.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwelve.1.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.2.Label)]</label>
@@ -1307,42 +1307,42 @@
 			<onclick>$INFO[Skin.String(AddonSetTwelve.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.2.Icon)]</icon>
 			<thumb>-</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetTwelve.2.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwelve.2.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.3.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.3.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwelve.3.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwelve.3.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.4.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.4.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwelve.4.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwelve.4.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.5.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.5.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwelve.5.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwelve.5.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.6.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.6.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwelve.6.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwelve.6.Path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.7.Label)]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.7.Icon)]</icon>
-			<visible>!IsEmpty(Skin.String(AddonSetTwelve.7.Path))</visible>
+			<visible>!String.IsEmpty(Skin.String(AddonSetTwelve.7.Path))</visible>
 		</item>
 	</include>
 </includes>

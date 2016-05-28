@@ -123,7 +123,7 @@
 				<content>
 					<item>
 						<description>Clear Setting</description>
-						<label>$LOCALIZE[31439]</label>
+						<label>$LOCALIZE[31499]</label>
 						<icon>DefaultIconWarning.png</icon>
 						<thumb>DefaultIconWarning.png</thumb>
 						<onclick>Skin.Reset(UPnP_Path)</onclick>
@@ -137,7 +137,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(0).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(0).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,0)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,0)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(1).label]</label>
@@ -146,7 +146,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(1).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(1).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,1)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,1)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(2).label]</label>
@@ -155,7 +155,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(2).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(2).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,2)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,2)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(3).label]</label>
@@ -164,7 +164,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(3).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(3).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,3)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,3)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(4).label]</label>
@@ -173,7 +173,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(4).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(4).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,4)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,4)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(5).label]</label>
@@ -182,7 +182,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(5).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(5).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,5)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,5)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(6).label]</label>
@@ -191,7 +191,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(6).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(6).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,6)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,6)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(7).label]</label>
@@ -200,7 +200,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(7).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(7).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,7)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,7)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(8).label]</label>
@@ -209,7 +209,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(8).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(8).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,8)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,8)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(9).label]</label>
@@ -218,7 +218,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(9).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(9).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,9)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,9)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(10).label]</label>
@@ -227,7 +227,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(10).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(10).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,10)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,10)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(11).label]</label>
@@ -236,7 +236,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(11).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(11).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,11)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,11)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(12).label]</label>
@@ -245,7 +245,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(12).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(12).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,12)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,12)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(13).label]</label>
@@ -254,7 +254,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(13).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(13).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,13)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,13)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(14).label]</label>
@@ -263,7 +263,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(14).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(14).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,14)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,14)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(15).label]</label>
@@ -272,7 +272,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(15).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(15).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,15)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,15)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(16).label]</label>
@@ -281,7 +281,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(16).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(16).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,16)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,16)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(17).label]</label>
@@ -290,7 +290,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(17).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(17).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,17)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,17)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(18).label]</label>
@@ -299,7 +299,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(18).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(18).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,18)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,18)</visible>
 					</item>
 					<item>
 						<label>$INFO[Container(8050).ListItem(19).label]</label>
@@ -308,7 +308,7 @@
 						<onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(19).FileNameAndPath])</onclick>
 						<onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(19).label])</onclick>
 						<onclick>Dialog.Close(2132)</onclick>
-						<visible>IntegerGreaterThan(Container(8050).NumItems,19)</visible>
+						<visible>Integer.IsGreater(Container(8050).NumItems,19)</visible>
 					</item>
 					<item>
 						<description>Manual Browse</description>
