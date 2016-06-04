@@ -1339,7 +1339,7 @@
 								<selected>Skin.HasSetting(FloorGlobalSearch)</selected>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<enable>!Skin.HasSetting(DisableGlobalSearch)</enable>
+								<enable>!Skin.HasSetting(ScriptDisableGlobalSearch)</enable>
 								<visible>System.HasAddon(script.globalsearch)</visible>
 							</control>
 							<control type="radiobutton" id="190">
