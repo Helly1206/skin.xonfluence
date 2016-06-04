@@ -4,6 +4,7 @@
 	<menucontrol>9000</menucontrol>
 	<views>50,51,550,551</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
+	<include>UnloadsScripts</include>
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
@@ -84,17 +85,6 @@
 					<textcolor>$VAR[MainColorOne]</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-				</control>
-<!--				<control type="button" id="5">
-					<description>addon-updates</description>
-					<textwidth>235</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>24063</label>
-				</control>
-				<control type="radiobutton" id="6">
-					<description>No notifications</description>
-					<include>ButtonCommonValues</include>
-					<label>25000</label>-->
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Hide foreign</description>
