@@ -7,6 +7,7 @@
 	<onload condition="stringcompare(Container(9011).Position,0) + !stringcompare(Skin.String(InitialMenuPosi),0)">Control.Move(9011,$INFO[Skin.String(InitialMenuPosi)])</onload>
 	<onunload condition="IsEmpty(Skin.String(WeatherFanartDir)) | SubString(Skin.String(WeatherFanartDir),skin.xonfluence\extras\Weather\,right)">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onunload>
 	<onunload condition="!Skin.HasSetting(DisableFanartScript)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onunload>
+	<include>UnloadsScripts</include>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
@@ -1325,7 +1326,7 @@
 								<selected>Skin.HasSetting(FloorGlobalSearch)</selected>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<enable>!Skin.HasSetting(DisableGlobalSearch)</enable>
+								<enable>!Skin.HasSetting(ScriptDisableGlobalSearch)</enable>
 								<visible>System.HasAddon(script.globalsearch)</visible>
 							</control>
 							<control type="radiobutton" id="190">
@@ -9204,8 +9205,8 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>Skin.ToggleSetting(DisableTVTunes)</onclick>
-								<selected>!Skin.HasSetting(DisableTVTunes)</selected>
+								<onclick>Skin.ToggleSetting(ScriptDisableTVTunes)</onclick>
+								<selected>!Skin.HasSetting(ScriptDisableTVTunes)</selected>
 								<enable>System.HasAddon(script.tvtunes)</enable>
 							</control>
 							<control type="button" id="638">
@@ -9218,7 +9219,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Addon.OpenSettings(script.tvtunes)</onclick>
-								<enable>!Skin.HasSetting(DisableTVTunes)</enable>
+								<enable>!Skin.HasSetting(ScriptDisableTVTunes)</enable>
 								<visible>System.HasAddon(script.tvtunes)</visible>
 							</control>
 							<control type="radiobutton" id="639">
@@ -9230,8 +9231,8 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>Skin.ToggleSetting(DisableSlideShowArt)</onclick>
-								<selected>!Skin.HasSetting(DisableSlideShowArt)</selected>
+								<onclick>Skin.ToggleSetting(ScriptDisableSlideShowArt)</onclick>
+								<selected>!Skin.HasSetting(ScriptDisableSlideShowArt)</selected>
 								<enable>System.HasAddon(script.artistslideshow)</enable>
 							</control>
 							<control type="button" id="640">
@@ -9244,7 +9245,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Addon.OpenSettings(script.artistslideshow)</onclick>
-								<enable>!Skin.HasSetting(DisableSlideShowArt)</enable>
+								<enable>!Skin.HasSetting(ScriptDisableSlideShowArt)</enable>
 								<visible>System.HasAddon(script.artistslideshow)</visible>
 							</control>
 							<control type="radiobutton" id="641">
@@ -9256,8 +9257,8 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>Skin.ToggleSetting(DisableGlobalSearch)</onclick>
-								<selected>!Skin.HasSetting(DisableGlobalSearch)</selected>
+								<onclick>Skin.ToggleSetting(ScriptDisableGlobalSearch)</onclick>
+								<selected>!Skin.HasSetting(ScriptDisableGlobalSearch)</selected>
 								<enable>System.HasAddon(script.globalsearch)</enable>
 							</control>
 							<control type="button" id="642">
@@ -9270,7 +9271,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Addon.OpenSettings(script.globalsearch)</onclick>
-								<enable>!Skin.HasSetting(DisableGlobalSearch)</enable>
+								<enable>!Skin.HasSetting(ScriptDisableGlobalSearch)</enable>
 								<visible>System.HasAddon(script.globalsearch)</visible>
 							</control>
 							<control type="radiobutton" id="643">
@@ -9282,8 +9283,8 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>Skin.ToggleSetting(DisableTVNextAired)</onclick>
-								<selected>!Skin.HasSetting(DisableTVNextAired)</selected>
+								<onclick>Skin.ToggleSetting(ScriptDisableTVNextAired)</onclick>
+								<selected>!Skin.HasSetting(ScriptDisableTVNextAired)</selected>
 								<enable>System.HasAddon(script.tv.show.next.aired)</enable>
 							</control>
 							<control type="button" id="644">
@@ -9296,7 +9297,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
-								<enable>!Skin.HasSetting(DisableTVNextAired)</enable>
+								<enable>!Skin.HasSetting(ScriptDisableTVNextAired)</enable>
 								<visible>System.HasAddon(script.tv.show.next.aired)</visible>
 							</control>
 							<control type="radiobutton" id="645">
@@ -9308,8 +9309,8 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>Skin.ToggleSetting(DisableWatchitLater)</onclick>
-								<selected>!Skin.HasSetting(DisableWatchitLater)</selected>
+								<onclick>Skin.ToggleSetting(ScriptDisableWatchitLater)</onclick>
+								<selected>!Skin.HasSetting(ScriptDisableWatchitLater)</selected>
 								<enable>System.HasAddon(script.simpleplaylists)</enable>
 							</control>
 							<control type="button" id="646">
@@ -9322,7 +9323,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Addon.OpenSettings(script.simpleplaylists)</onclick>
-								<enable>!Skin.HasSetting(DisableWatchitLater)</enable>
+								<enable>!Skin.HasSetting(ScriptDisableWatchitLater)</enable>
 								<visible>System.HasAddon(script.simpleplaylists)</visible>
 							</control>
 							<control type="radiobutton" id="647">
@@ -9334,8 +9335,8 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>Skin.ToggleSetting(DisableScriptPlaylist)</onclick>
-								<selected>!Skin.HasSetting(DisableScriptPlaylist)</selected>
+								<onclick>Skin.ToggleSetting(ScriptDisableScriptPlaylist)</onclick>
+								<selected>!Skin.HasSetting(ScriptDisableScriptPlaylist)</selected>
 								<enable>System.HasAddon(script.randomandlastitems)</enable>
 							</control>
 							<control type="button" id="648">
@@ -9348,7 +9349,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>ActivateWindow(1127)</onclick>
-								<enable>!Skin.HasSetting(DisableScriptPlaylist)</enable>
+								<enable>!Skin.HasSetting(ScriptDisableScriptPlaylist)</enable>
 								<visible>System.HasAddon(script.randomandlastitems)</visible>
 							</control>
 						</control>

@@ -2,13 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
-	<onload condition="!Skin.HasSetting(DisableTVNextAired) + !System.HasAddon(script.tv.show.next.aired)">Skin.Setbool(DisableTVNextAired)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlaylist)</onload>
-	<onload condition="Skin.HasSetting(EnableFanartScript) + !System.HasAddon(script.grab.fanart)">Skin.Reset(EnableFanartScript)</onload>
-	<onload condition="!Skin.HasSetting(DisableGlobalSearch) + !System.HasAddon(script.globalsearch)">Skin.Setbool(DisableGlobalSearch)</onload>
-	<onload condition="!Skin.HasSetting(DisableTVTunes) + !System.HasAddon(script.tvtunes)">Skin.Setbool(DisableTVTunes)</onload>
-	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + !System.HasAddon(script.artistslideshow)">Skin.Setbool(DisableSlideShowArt)</onload>
-	<onload condition="!Skin.HasSetting(DisableWatchItLater) + !System.HasAddon(script.simpleplaylists)">Skin.Setbool(DisableWatchItLater)</onload>
+	<include>UnloadsScripts</include>
 	<onload condition="!Skin.HasSetting(DisableFanartScript) + IntegerGreaterThan(Skin.String(FanArtCycleRate),0)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onload>
 	<onload condition="!Skin.String(KodiIntroVideo)">Skin.SetString(KodiIntroVideo,special://skin/extras/Intro/KODI-Intro-Video.mp4)</onload>
 	<controls>

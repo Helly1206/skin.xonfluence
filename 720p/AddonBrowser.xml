@@ -4,6 +4,7 @@
 	<menucontrol>9000</menucontrol>
 	<views>50,51,550,551</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
+	<include>UnloadsScripts</include>
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
