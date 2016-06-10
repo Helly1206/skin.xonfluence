@@ -8908,9 +8908,9 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>Skin.ToggleSetting(EnableFanartScript)</onclick>
+								<onclick>Skin.ToggleSetting(ScriptEnableFanartScript)</onclick>
 								<onclick>Skin.SetString(FanArtCycleRate,10)</onclick>
-								<selected>Skin.HasSetting(EnableFanartScript)</selected>
+								<selected>Skin.HasSetting(ScriptEnableFanartScript)</selected>
 								<enable>System.HasAddon(script.grab.fanart)</enable>
 							</control>
 							<control type="button" id="614">
@@ -8924,7 +8924,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Skin.SetNumeric(FanArtCycleRate)</onclick>
-								<enable>Skin.HasSetting(EnableFanartScript)</enable>
+								<enable>Skin.HasSetting(ScriptEnableFanartScript)</enable>
 							</control>
 							<control type="button" id="615">
 								<description>User Album Thumbnails Path</description>
@@ -8951,7 +8951,7 @@
 								<onclick>Skin.SetPath(UsrMovieFanArtDir)</onclick>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<enable>!Skin.HasSetting(EnableFanartScript,"special://")</enable>
+								<enable>!Skin.HasSetting(ScriptEnableFanartScript,"special://")</enable>
 							</control>
 							<control type="button" id="617">
 								<description>User TVShow FanArt Path</description>
@@ -8965,7 +8965,7 @@
 								<onclick>Skin.SetPath(UsrTVShowFanArtDir)</onclick>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<enable>!Skin.HasSetting(EnableFanartScript,"special://")</enable>
+								<enable>!Skin.HasSetting(ScriptEnableFanartScript,"special://")</enable>
 							</control>
 							<control type="button" id="618">
 								<description>User Artists FanArt Path</description>
@@ -8979,7 +8979,7 @@
 								<onclick>Skin.SetPath(UsrArtistsFanArtDir)</onclick>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<enable>!Skin.HasSetting(EnableFanartScript,"special://")</enable>
+								<enable>!Skin.HasSetting(ScriptEnableFanartScript,"special://")</enable>
 							</control>
 							<control type="button" id="619">
 								<description>User Concerts FanArt Path</description>
