@@ -2529,7 +2529,7 @@
 		<onunload condition="Skin.HasSetting(ScriptEnableFanartScript) + System.HasAddon(script.grab.fanart)">Skin.Setbool(EnableFanartScript)</onunload>
 		<onunload condition="Skin.HasSetting(ScriptDisableGlobalSearch) | [!Skin.HasSetting(ScriptDisableGlobalSearch) + !System.HasAddon(script.globalsearch)]">Skin.Setbool(DisableGlobalSearch)</onunload>
 		<onunload condition="!Skin.HasSetting(ScriptDisableGlobalSearch) + System.HasAddon(script.globalsearch)">Skin.Reset(DisableGlobalSearch)</onunload>
-		<onunload condition="Skin.HasSetting(ScriptDisableTVTunes) | [!Skin.HasSetting(ScriptDisableTVTunes) + !System.HasAddon(script.tvtunes)">Skin.Setbool(DisableTVTunes)]</onunload>
+		<onunload condition="Skin.HasSetting(ScriptDisableTVTunes) | [!Skin.HasSetting(ScriptDisableTVTunes) + !System.HasAddon(script.tvtunes)]">Skin.Setbool(DisableTVTunes)</onunload>
 		<onunload condition="!Skin.HasSetting(ScriptDisableTVTunes) + System.HasAddon(script.tvtunes)">Skin.Reset(DisableTVTunes)</onunload>
 		<onunload condition="Skin.HasSetting(ScriptDisableSlideShowArt) | [!Skin.HasSetting(ScriptDisableSlideShowArt) + !System.HasAddon(script.artistslideshow)]">Skin.Setbool(DisableSlideShowArt)</onunload>
 		<onunload condition="!Skin.HasSetting(ScriptDisableSlideShowArt) + System.HasAddon(script.artistslideshow)">Skin.Reset(DisableSlideShowArt)</onunload>
