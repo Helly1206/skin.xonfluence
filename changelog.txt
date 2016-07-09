@@ -1,3 +1,7 @@
+[B]3.3.4[/B]
+- Added german language translation (thank to Rainman)
+- Changed xbmc.gui to 5.12.0 in order to be compatible with Krypton Alpha 2 releases and beyond. (Note that this release won't work on Alpha 1 to earlier releases, you will get a dependencies not met error)
+
 [B]3.3.3[/B]
 - Fixed typo in includes.xml regarding tvtunes script #1152
 - Fixed error in fanart script #1150

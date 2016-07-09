@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.xonfluence"
-  version="3.3.3"
+  version="3.3.4"
   name="Xonfluence"
   provider-name="Helly">
   <requires>
-    <import addon="xbmc.gui" version="5.11.0"/>
+    <import addon="xbmc.gui" version="5.12.0"/>
 	  <import addon="script.favourites" version="6.0.3"/>
 	  <import addon="service.skin.widgets" version="0.0.32"/>
 	  <import addon="service.library.data.provider" version="0.1.6"/>
