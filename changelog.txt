@@ -1,3 +1,24 @@
+[B]3.3.5[/B]
+- Synchronized with confluence 3.0.36 September 24 2016 (e.g. PVR_Guide updates, codec info updates, library menu, remove changelog, 0.8-1.5x play speed, etc)
+- Removed old window names
+- Fixed slider issue on video and music OSD #1245/ #1262 
+- Changed correct filenames for extended info script
+- Changed correct fanart for extended info script
+- Added accidentally removed strings 31941 and 31942
+- Added missing Default*.png and OverlayUnwatched.png textures
+- Removed old library lists from home menu (generated warnings)
+- added updates to convert playlist settings to new window naming
+- Changed close window button color
+- Changed DialogButtonMenu colors to theme colors
+- Changed Subtitle and stereoscopic dialog colors to theme colors
+- Removed double artwork on streaming media OSD
+- Split 'Enable video codec info on pause' and 'Enable video codec info on OSD menu' On skin settings OSD menu
+- Some changes and updates in language files
+- Updated picture OSD as there is no codec info for pictures anymore (Normal info is used now)
+- Added option to change dialog look and feel to classic (default), modern and max (for maximum contrast) to modernize the skin a bit
+- Added icons to main menu items and option to change in skin settings
+- Added option to use icons/ graphics on main menu and settings menu (like zeistgeist or estuary) to modernize the skin a bit
+
 [B]3.3.4[/B]
 - Added german language translation (thank to Rainman)
 - Changed xbmc.gui to 5.12.0 in order to be compatible with Krypton Alpha 2 releases and beyond. (Note that this release won't work on Alpha 1 to earlier releases, you will get a dependencies not met error)

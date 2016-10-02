@@ -76,7 +76,7 @@
 					<width>525</width>
 					<height>41</height>
 					<visible>Control.HasFocus(10)</visible>
-					<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+					<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -119,8 +119,7 @@
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+				<include>NormalButton1</include>
 				<onup>18</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
@@ -136,8 +135,7 @@
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+				<include>NormalButton1</include>
 				<onup>11</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
@@ -153,8 +151,7 @@
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+				<include>NormalButton1</include>
 				<onup>13</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
@@ -184,8 +181,7 @@
 			<aligny>center</aligny>
 			<label>-</label>
 			<font>font13</font>
-			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			<include>NormalButton2</include>
 			<onup>10</onup>
 			<onleft>12</onleft>
 			<onright>19</onright>
@@ -202,8 +198,7 @@
 				<height>40</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+				<include>NormalButton1</include>
 				<label>186</label>
 				<font>font12_title</font>
 				<onup>12</onup>
@@ -219,8 +214,7 @@
 				<height>40</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+				<include>NormalButton1</include>
 				<label>222</label>
 				<font>font12_title</font>
 				<onup>12</onup>

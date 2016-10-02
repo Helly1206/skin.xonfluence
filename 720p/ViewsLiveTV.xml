@@ -65,7 +65,7 @@
 						<top>0</top>
 						<width>760</width>
 						<height>41</height>
-						<texture border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(560)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>

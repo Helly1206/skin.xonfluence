@@ -147,7 +147,7 @@
 					<label>-</label>
 					<font>-</font>
 					<onclick>PreviousMenu</onclick>
-					<texturefocus>DialogCloseButton-focus.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 					<texturenofocus>DialogCloseButton.png</texturenofocus>
 					<onleft>1</onleft>
 					<onright>1</onright>
@@ -212,7 +212,7 @@
 							<top>0</top>
 							<width>260</width>
 							<height>61</height>
-							<texture border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 							<animation effect="fade" start="100" end="50" time="75" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
 						<control type="label">
@@ -409,8 +409,7 @@
 					<textcolor>white</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<include>NormalButton1</include>
 					<onup>101</onup>
 					<ondown>101</ondown>
 					<onleft>101</onleft>
@@ -499,7 +498,7 @@
 									<top>0</top>
 									<width>750</width>
 									<height>101</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -692,7 +691,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>125</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -925,7 +924,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>125</height>
-									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1131,7 +1130,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>170</height>
-									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1285,7 +1284,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>125</height>
-									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1435,7 +1434,7 @@
 									<top>0</top>
 									<width>750</width>
 									<height>101</height>
-									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1615,7 +1614,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>101</height>
-									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1787,7 +1786,7 @@
 									<top>0</top>
 									<width>750</width>
 									<height>101</height>
-									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1940,7 +1939,7 @@
 									<top>0</top>
 									<width>750</width>
 									<height>101</height>
-									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -2104,7 +2103,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>101</height>
-									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -2308,7 +2307,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>125</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5">b$VAR[SelectButton2]</texture>
 								</control>
 								<control type="image">
 									<left>5</left>

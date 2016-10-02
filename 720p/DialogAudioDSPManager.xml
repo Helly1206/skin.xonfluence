@@ -30,7 +30,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<visible>system.getbool(input.enablemouse)</visible>
 				<include>VisibleFadeEffect</include>
@@ -97,7 +97,7 @@
 					<top>0</top>
 					<width>228</width>
 					<height>40</height>
-					<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+					<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 					<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9000)">conditional</animation>
 				</control>
 				<control type="label">
@@ -127,7 +127,7 @@
 				<posy>0</posy>
 				<width>1140</width>
 				<height>500</height>
-				<texture border="5">button-focus3.png</texture>
+				<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 				<colordiffuse>80FFFFFF</colordiffuse>
 			</control>
 			<control type="label">
@@ -254,7 +254,7 @@
 							<top>3</top>
 							<width>528</width>
 							<height>60</height>
-							<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 							<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(20)">conditional</animation>
 						</control>
 						<control type="image">
@@ -424,7 +424,7 @@
 							<top>3</top>
 							<width>528</width>
 							<height>60</height>
-							<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 							<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(21)">conditional</animation>
 						</control>
 						<control type="image">
@@ -513,8 +513,7 @@
 				<font>font13</font>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<include>NormalButton2</include>
 				<label>15064</label>
 				<include>ButtonCommonValues</include>
 			</control>
@@ -532,7 +531,7 @@
 				<disabledcolor>15FFFFFF</disabledcolor>
 				<textcolor>grey3</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+				<include>NormalButton2</include>
 				<label>14070</label>
 				<align>center</align>
 			</control>
@@ -550,7 +549,7 @@
 				<disabledcolor>30FFFFFF</disabledcolor>
 				<textcolor>grey3</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+				<include>NormalButton2</include>
 				<label>15066</label>
 				<align>center</align>
 			</control>

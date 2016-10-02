@@ -125,7 +125,7 @@
 						<top>0</top>
 						<width>690</width>
 						<height>95</height>
-						<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 						<visible>Control.HasFocus(52)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>

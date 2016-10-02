@@ -19,7 +19,7 @@
 			<font>-</font>
 			<onclick>Dialog.Close(MusicOSD,true)</onclick>
 			<onclick>FullScreen</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="Player.Muted">conditional</animation>

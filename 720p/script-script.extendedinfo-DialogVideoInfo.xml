@@ -112,7 +112,7 @@
 							<top>0</top>
 							<width>230</width>
 							<height>35</height>
-							<texture border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 							<animation effect="fade" start="100" end="30" time="75" condition="!Control.HasFocus(4000)">Conditional</animation>
 						</control>
 						<control type="label">
@@ -1527,8 +1527,7 @@
     	                        <ondown>150</ondown>
 								<onleft>60</onleft>
 								<onright>4000</onright>
-    	                        <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-    	                        <texturenofocus border="5">MenuItemNF.png</texturenofocus>
+    	                        <include>MenuButton</include>
     	                        <label>-</label>
     	                    </control>
     	                    <control type="textbox" id="800">

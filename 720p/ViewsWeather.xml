@@ -118,7 +118,7 @@
 						<top>0</top>
 						<width>600</width>
 						<height>136</height>
-						<texture border="10" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+						<texture border="10" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 						<visible>Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -237,7 +237,7 @@
 						<top>0</top>
 						<width>600</width>
 						<height>136</height>
-						<texture border="10" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+						<texture border="10" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 						<visible>Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -953,7 +953,7 @@
 						<top>0</top>
 						<width>600</width>
 						<height>136</height>
-						<texture border="10" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+						<texture border="10" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 						<visible>Control.HasFocus(52)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>

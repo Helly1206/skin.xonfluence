@@ -50,7 +50,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<onleft>1</onleft>
 				<onright>1</onright>
@@ -85,8 +85,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+					<include>MenuButton</include>
 					<pulseonselect>false</pulseonselect>
 					<label>20037</label>
 				</control>
@@ -100,8 +99,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+					<include>MenuButton</include>
 					<pulseonselect>false</pulseonselect>
 					<label>13277</label>
 				</control>
@@ -115,8 +113,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+					<include>MenuButton</include>
 					<pulseonselect>false</pulseonselect>
 					<label>13279</label>
 				</control>
@@ -130,8 +127,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+					<include>MenuButton</include>
 					<pulseonselect>false</pulseonselect>
 					<label>13280</label>
 				</control>
@@ -145,8 +141,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+					<include>MenuButton</include>
 					<pulseonselect>false</pulseonselect>
 					<label>13281</label>
 				</control>
@@ -160,8 +155,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+					<include>MenuButton</include>
 					<pulseonselect>false</pulseonselect>
 					<label>19191</label>
 				</control>

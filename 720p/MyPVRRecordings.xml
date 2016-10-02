@@ -86,7 +86,7 @@
 						<top>5</top>
 						<width>30</width>
 						<height>30</height>
-						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -137,7 +137,7 @@
 						<top>0</top>
 						<width>760</width>
 						<height>41</height>
-						<texture border="2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="2" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -163,7 +163,7 @@
 						<top>5</top>
 						<width>30</width>
 						<height>30</height>
-						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">

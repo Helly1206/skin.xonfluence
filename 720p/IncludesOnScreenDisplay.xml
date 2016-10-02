@@ -3,8 +3,8 @@
 	<include name="OSDMediaPlot">
 		<control type="group" id="1">
 			<visible>!Skin.HasSetting(EnablePauseInfo) + [!String.IsEmpty(VideoPlayer.Plot) | !String.IsEmpty(VideoPlayer.PlotOutline)] + Player.Paused + !Player.Caching</visible>
-			<animation effect="slide" end="-140,110" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
-			<animation effect="slide" end="-140,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [!Skin.HasSetting(HideSeekBarOSD) | Player.ShowInfo]" reversible="true">Conditional</animation>
+			<animation effect="slide" end="-140,110" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) | !Skin.HasSetting(HideSeekBarOSD2) + !Player.ShowInfo" reversible="true">Conditional</animation>
+			<animation effect="slide" end="-140,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [!Skin.HasSetting(HideSeekBarOSD) + !Skin.HasSetting(HideSeekBarOSD2) | Player.ShowInfo]" reversible="true">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,25" time="0" condition="Player.ShowInfo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
 			<left>320</left>
 			<top>395r</top>
@@ -31,8 +31,8 @@
 		</control>
 		<control type="group" id="1">
 			<visible>Player.ShowInfo + [!String.IsEmpty(VideoPlayer.Plot) | !String.IsEmpty(VideoPlayer.PlotOutline)] + Skin.HasSetting(EnablePlotInfo) + !Player.Caching</visible>
-			<animation effect="slide" end="-140,110" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
-			<animation effect="slide" end="-140,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [!Skin.HasSetting(HideSeekBarOSD) | Player.ShowInfo]" reversible="true">Conditional</animation>
+			<animation effect="slide" end="-140,110" time="0" tween="back" easing="out" condition="[Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [Skin.HasSetting(HideSeekBarOSD2) + !Player.Paused] + !Player.ShowInfo" reversible="true">Conditional</animation>
+			<animation effect="slide" end="-140,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [[!Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [!Skin.HasSetting(HideSeekBarOSD2) + !Player.Paused] | Player.ShowInfo]" reversible="true">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,25" time="0" condition="Player.ShowInfo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
 			<left>320</left>
 			<top>395r</top>
@@ -111,7 +111,7 @@
 				<height>345</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>$VAR[VideoPlayerCase,ClearCase/,.png]</texture>
-				<visible>!Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt) + String.IsEmpty(Player.Art(thumb))]</visible>
+				<visible>!Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)] + String.IsEmpty(Player.Art(poster))</visible>
 				<visible>Skin.HasSetting(EnableDVDCases)</visible>
 			</control>
 			<control type="image" id="1">
@@ -122,7 +122,7 @@
 				<height>230</height>
 				<texture>$VAR[StreamingVideoIcon]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<visible>Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt) + String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(thumb))]</visible>
+				<visible>Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)] + [Skin.HasSetting(EnableDVDCases) + String.IsEmpty(Player.Art(poster))] + [!Skin.HasSetting(EnableDVDCases) + String.IsEmpty(Player.Art(thumb))]</visible>
 			</control>
 			<visible>!Skin.HasSetting(HideArtWorkOSD)</visible>
 		</control>

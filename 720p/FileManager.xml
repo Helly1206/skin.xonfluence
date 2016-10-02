@@ -139,7 +139,7 @@
 						<texture border="0,2,0,2">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>10</left>
 						<top>0</top>
 						<width>500</width>
 						<height>40</height>
@@ -151,7 +151,7 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>330</left>
+						<left>320</left>
 						<top>0</top>
 						<width>200</width>
 						<height>40</height>
@@ -178,10 +178,10 @@
 						<width>540</width>
 						<height>41</height>
 						<visible>Control.HasFocus(20)</visible>
-						<texture border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 					</control>
 					<control type="image">
-						<left>340</left>
+						<left>330</left>
 						<top>5</top>
 						<width>200</width>
 						<height>31</height>
@@ -189,7 +189,7 @@
 						<visible>Control.HasFocus(20) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>10</left>
 						<top>0</top>
 						<width>500</width>
 						<height>40</height>
@@ -201,7 +201,7 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>330</left>
+						<left>320</left>
 						<top>0</top>
 						<width>200</width>
 						<height>40</height>
@@ -313,7 +313,7 @@
 						<texture border="0,2,0,2">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>10</left>
 						<top>0</top>
 						<width>500</width>
 						<height>40</height>
@@ -325,7 +325,7 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>330</left>
+						<left>320</left>
 						<top>0</top>
 						<width>200</width>
 						<height>40</height>
@@ -339,7 +339,7 @@
 				</itemlayout>
 				<focusedlayout height="40">
 					<control type="image">
-						<left>0</left>
+						<left>00</left>
 						<top>0</top>
 						<width>540</width>
 						<height>41</height>
@@ -352,10 +352,10 @@
 						<width>540</width>
 						<height>41</height>
 						<visible>Control.HasFocus(21)</visible>
-						<texture border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="4" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 					</control>
 					<control type="image">
-						<left>340</left>
+						<left>330</left>
 						<top>5</top>
 						<width>200</width>
 						<height>31</height>
@@ -363,7 +363,7 @@
 						<visible>Control.HasFocus(21) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>10</left>
 						<top>0</top>
 						<width>500</width>
 						<height>40</height>
@@ -375,7 +375,7 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>330</left>
+						<left>320</left>
 						<top>0</top>
 						<width>200</width>
 						<height>40</height>

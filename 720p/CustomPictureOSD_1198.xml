@@ -16,18 +16,16 @@
 			<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
-		<include condition="!Skin.HasSetting(HideSystemTime) + !Skin.HasSetting(HideSeekBarOSD)">TopLeftInfo</include>
-		<include condition="!Skin.HasSetting(HideSeekBarOSD)">Clock</include>
-		<include condition="!Skin.HasSetting(HideSeekBarOSD)">Date</include>
+		<include condition="!Skin.HasSetting(HideSystemTime)">TopLeftInfo</include>
+		<include condition="!Skin.HasSetting(HideSystemTime)">Clock</include>
+		<include condition="!Skin.HasSetting(HideSystemTime)">Date</include>
 		<control type="image" id="1">
 			<left>0</left>
 			<top>230r</top>
 			<width>1280</width>
 			<height>230</height>
 			<texture border="1">HomeNowPlayingBack.png</texture>
-			<visible>!Skin.HasSetting(HideSeekBarOSD)</visible>
-			<animation effect="slide" end="0,45" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD)" reversible="true">Conditional</animation>
-			<animation effect="slide" end="0,45" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) + !Player.ShowInfo" reversible="true">Conditional</animation>
+			<animation effect="slide" end="0,45" time="0" tween="back" easing="out" condition="!Player.ShowInfo" reversible="true">Conditional</animation>
 		</control>
 		<control type="group">
 			<left>20</left>
@@ -44,7 +42,7 @@
 			<height>32</height>
 			<label>-</label>
 			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<onleft>1000</onleft>
 			<onright>1000</onright>
@@ -249,7 +247,7 @@
 				<font>-</font>
 				<texturefocus colordiffuse="$VAR[MainColorTwo]">OSDInfoFO.png</texturefocus>
 				<texturenofocus>OSDInfoNF.png</texturenofocus>
-				<onclick>Action(CodecInfo,SlideShow)</onclick>
+				<onclick>Action(Info,SlideShow)</onclick>
 			</control>
 		</control>
 		<control type="group">

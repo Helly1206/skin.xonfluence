@@ -32,7 +32,7 @@
 				<align>center</align>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+				<include>NormalButton1</include>
 				<label>$LOCALIZE[31215]</label>
 				<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
 				<visible>!Skin.HasSetting(DisableWatchItLater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
@@ -47,7 +47,7 @@
                 <align>center</align>
                 <textcolor>grey2</textcolor>
                 <focusedcolor>white</focusedcolor>
-                <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+                <include>NormalButton1</include>
                 <label>$LOCALIZE[20410]</label>
                 <onclick condition="!String.IsEmpty(ListItem.Trailer)">PlayMedia("$INFO[ListItem.Trailer]")</onclick>
                 <onclick condition="String.IsEmpty(ListItem.Trailer)">ActivateWindow(videos,$ESCINFO[ListItem.Label,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=, Trailer],return)</onclick>
@@ -63,7 +63,7 @@
 			<label>-</label>
 			<font>-</font>
 			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<onleft>2</onleft>
 			<onright>2</onright>
@@ -81,7 +81,7 @@
 			<align>center</align>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+			<include>NormalButton1</include>
 		</control>
 	</controls>
 </window>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.xonfluence"
-  version="3.3.4"
+  version="3.3.5"
   name="Xonfluence"
   provider-name="Helly">
   <requires>
@@ -28,5 +28,10 @@
     <disclaimer lang="en_US">You break it - You get to keep the pieces</disclaimer>
     <disclaimer lang="nl">Wie zijn billen brandt - moet op de blaren zitten</disclaimer>
     <platform>all</platform>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news>See changelog for latest changes</news>
   </extension>
 </addon>

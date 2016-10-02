@@ -1048,9 +1048,9 @@
 	</variable>
 	<variable name="SubMenuSystemOne" type="text">
 		<value condition="!String.IsEmpty(Skin.String(SubSettings.1.Label))">$INFO[Skin.String(SubSettings.1.Label)]</value>
-		<value condition="String.IsEmpty(Skin.String(SubSettings.1.Label)) + System.HasAddon(script.raspbmc.settings)">$LOCALIZE[31011]</value>
-		<value condition="String.IsEmpty(Skin.String(SubSettings.1.Label)) + System.HasAddon(os.openelec.settings)">$LOCALIZE[31010]</value>
-		<value condition="String.IsEmpty(Skin.String(SubSettings.1.Label)) + System.HasAddon(service.openelec.settings)">$LOCALIZE[31010]</value>
+		<value condition="String.IsEmpty(Skin.String(SubSettings.1.Label)) + System.HasAddon(script.raspbmc.settings)">$LOCALIZE[31401]</value>
+		<value condition="String.IsEmpty(Skin.String(SubSettings.1.Label)) + System.HasAddon(os.openelec.settings)">$LOCALIZE[31400]</value>
+		<value condition="String.IsEmpty(Skin.String(SubSettings.1.Label)) + System.HasAddon(service.openelec.settings)">$LOCALIZE[31400]</value>
 		<value>$LOCALIZE[5]</value>
 	</variable>
 	<variable name="SubMenuSystemTwo" type="text">
@@ -2972,6 +2972,17 @@
 		<value condition="Skin.String(SideBladeLabel,Small)">$LOCALIZE[31977]</value>
 		<value>$LOCALIZE[571]</value>
 	</variable>
+	<variable name="DialogLAFValue">
+		<value condition="Skin.String(DialogLAF,Modern)">$LOCALIZE[31985]</value>
+		<value condition="Skin.String(DialogLAF,Max)">$LOCALIZE[31986]</value>
+		<value>$LOCALIZE[31984]</value>
+	</variable>
+	<variable name="MenuLAFValue">
+		<value condition="Skin.String(MenuLAF,Graph)">$LOCALIZE[31988]</value>
+		<value condition="Skin.String(MenuLAF,GraphFocused)">$LOCALIZE[31989]</value>
+		<value condition="Skin.String(MenuLAF,GraphText)">$LOCALIZE[31990]</value>
+		<value>$LOCALIZE[31984]</value>
+	</variable>
 	<variable name="HomeFloorValue">
 		<value condition="Skin.String(HomeFloor,Enabled)">$LOCALIZE[31362]</value>
 		<value condition="Skin.String(HomeFloor,Transparent)">50$LOCALIZE[31248]</value>
@@ -3310,5 +3321,20 @@
 	<variable name="MultiImageTimerString" type="text">
 		<value condition="String.IsEmpty(Skin.String(MultiImageTimer)) | String.IsEqual(Skin.String(MultiImageTimer),8)">[COLOR=selected]$LOCALIZE[31257][/COLOR]</value>
 		<value>[COLOR=selected]$INFO[Skin.String(MultiImageTimer)][/COLOR] s</value>
+	</variable>
+	<variable name="SelectMenuItem">
+		<value condition="Skin.String(DialogLAF,Modern)">button-focus2.png</value>
+		<value condition="Skin.String(DialogLAF,Max)">button-focus.png</value>
+		<value>MenuItemFO.png</value>
+	</variable>
+	<variable name="SelectButton1">
+		<value condition="Skin.String(DialogLAF,Modern)">button-focus2.png</value>
+		<value condition="Skin.String(DialogLAF,Max)">button-focus.png</value>
+		<value>button-focus.png</value>
+	</variable>
+	<variable name="SelectButton2">
+		<value condition="Skin.String(DialogLAF,Modern)">button-focus2.png</value>
+		<value condition="Skin.String(DialogLAF,Max)">button-focus.png</value>
+		<value>button-focus2.png</value>
 	</variable>
 </includes>

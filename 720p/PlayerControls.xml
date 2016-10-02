@@ -436,7 +436,7 @@
 			<label>-</label>
 			<font>-</font>
 			<onclick>back</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<onleft>100</onleft>
 			<onright>100</onright>

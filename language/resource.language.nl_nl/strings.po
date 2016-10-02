@@ -44,6 +44,10 @@ msgctxt "#31006"
 msgid "View options"
 msgstr "Weergaveopties"
 
+msgctxt "#31007"
+msgid "Video process information"
+msgstr ""
+
 msgctxt "#31008"
 msgid "Full screen"
 msgstr "Volledig scherm"
@@ -53,24 +57,24 @@ msgid "Total duration"
 msgstr "Totale duur"
 
 msgctxt "#31010"
-msgid "OpenELEC OS"
-msgstr "OpenELEC OS"
+msgid "Hardware decoding"
+msgstr "Hardwaredecodering"
 
 msgctxt "#31011"
-msgid "Raspberry OS"
-msgstr "Raspberry OS"
+msgid "Inactive"
+msgstr "Inactief"
 
 msgctxt "#31012"
-msgid "Enable disk type media cases"
-msgstr "Activeer DVD type media hoesjes"
+msgid "Decoder"
+msgstr "Decoder"
 
 msgctxt "#31013"
-msgid "Enable single global background"
-msgstr "Activeer enkele Globale Achtergrond"
+msgid "Audio process information"
+msgstr "Audiovoortgangsinformatie"
 
 msgctxt "#31014"
-msgid "Default focused menu item"
-msgstr "Standaard gefocust menu item"
+msgid "Memory used"
+msgstr "Geheugen gebruikt"
 
 msgctxt "#31015"
 msgid "Never"
@@ -704,6 +708,10 @@ msgctxt "#31212"
 msgid "Streaming media"
 msgstr "Streaming media"
 
+msgctxt "#31213"
+msgid "Streaming navigator"
+msgstr "Streaming navigatie"
+
 msgctxt "#31214"
 msgid "Show addon names"
 msgstr "Laat addon namen zien"
@@ -947,6 +955,22 @@ msgstr "Thuis menu"
 msgctxt "#31283"
 msgid "Enable background video in PVR windows"
 msgstr "Activeer achtergrond video in PVR scherm"
+
+msgctxt "#31286"
+msgid "Remote"
+msgstr ""
+
+msgctxt "#31287"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#31288"
+msgid "Select icon"
+msgstr "Ikoon selecteren"
+
+msgctxt "#31289"
+msgid "Icon"
+msgstr "Ikoon"
 
 msgctxt "#31290"
 msgid "Menu item"
@@ -1233,8 +1257,8 @@ msgid "Enable video OSD plot on pause"
 msgstr "Activeer Video OSD plot bij pauze"
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause and OSD menu"
-msgstr "Activeer Video codec informatie bij pauze en OSD Menu"
+msgid "Enable video codec info on pause"
+msgstr ""
 
 msgctxt "#31375"
 msgid "Use graphical textures on keyboards"
@@ -1243,6 +1267,10 @@ msgstr "Gebruik grafische knoppen op toetsenborden"
 msgctxt "#31376"
 msgid "Use autocomplete on keyboards"
 msgstr "Gebruik woordenzoeker op toetsenborden"
+
+msgctxt "#31377"
+msgid "Enable video codec info on OSD menu"
+msgstr "Activeer Video codec informatie bij OSD Menu"
 
 msgctxt "#31380"
 msgid "Enable playlist widget script"
@@ -1303,6 +1331,26 @@ msgstr "Activeer TV serie volgende uitzending"
 msgctxt "#31398"
 msgid "Configure script.tv.show.next.aired"
 msgstr "Configureer script.tv.show.next.aired"
+
+msgctxt "#31400"
+msgid "OpenELEC OS"
+msgstr "OpenELEC OS"
+
+msgctxt "#31401"
+msgid "Raspberry OS"
+msgstr "Raspberry OS"
+
+msgctxt "#31402"
+msgid "Enable disk type media cases"
+msgstr "Activeer DVD type media hoesjes"
+
+msgctxt "#31403"
+msgid "Enable single global background"
+msgstr "Activeer enkele Globale Achtergrond"
+
+msgctxt "#31404"
+msgid "Default focused menu item"
+msgstr "Standaard gefocust menu item"
 
 msgctxt "#31411"
 msgid "First run help..."
@@ -1716,6 +1764,14 @@ msgctxt "#31940"
 msgid "Seconds"
 msgstr "Seconden"
 
+msgctxt "#31941"
+msgid "Enable running artwork downloader automaticaly after updating library"
+msgstr "Activeer draaien van artwork downloader automatisch na updaten bibliotheek"
+
+msgctxt "#31942"
+msgid "YouTube"
+msgstr "YouTube"
+
 msgctxt "#31950"
 msgid "WEATHER"
 msgstr "WEER"
@@ -1836,6 +1892,38 @@ msgctxt "#31982"
 msgid "Custom widgets limit amount"
 msgstr "Max aantal aangepaste widgets"
 
+msgctxt "#31983"
+msgid "Dialog look and feel"
+msgstr "Dialoog uiterlijk"
+
+msgctxt "#31984"
+msgid "Classic"
+msgstr "Klassiek"
+
+msgctxt "#31985"
+msgid "Modern"
+msgstr "Modern"
+
+msgctxt "#31986"
+msgid "Max"
+msgstr "Max"
+
+msgctxt "#31987"
+msgid "Menu look and feel"
+msgstr "Menu uiterlijk"
+
+msgctxt "#31988"
+msgid "Graphics"
+msgstr "Grafisch"
+
+msgctxt "#31989"
+msgid "Graphics & focused text"
+msgstr "Grafisch & focused tekst"
+
+msgctxt "#31990"
+msgid "Graphics & text"
+msgstr "Grafisch & tekst"
+
 msgctxt "#31991"
 msgid "Item border size"
 msgstr "Onderdeel rand grootte"
@@ -1871,3 +1959,4 @@ msgstr "Recent toegevoegd"
 msgctxt "#31999"
 msgid "Resolution"
 msgstr "Resolutie"
+

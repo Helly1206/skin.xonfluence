@@ -59,7 +59,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<onleft>1</onleft>
 				<onright>1</onright>
@@ -105,6 +105,18 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>String.IsEmpty(Skin.String(MenuLAF)) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>0</top>
+						<width>86</width>
+						<height>55</height>
+						<aspectratio>keep</aspectratio>
+						<colordiffuse>33FFFFFF</colordiffuse>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)|String.IsEqual(Skin.String(MenuLAF),GraphFocused)">Conditional</animation>
+						<visible>!String.IsEmpty(Skin.String(MenuLAF))</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="54" width="260">
@@ -113,7 +125,7 @@
 						<top>0</top>
 						<width>260</width>
 						<height>55</height>
-						<texture border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -125,57 +137,82 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>String.IsEmpty(Skin.String(MenuLAF)) | String.IsEqual(Skin.String(MenuLAF),GraphFocused) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>0</top>
+						<width>86</width>
+						<height>55</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<animation effect="slide" start="160,0" end="0,0" time="100" condition="String.IsEqual(Skin.String(MenuLAF),GraphFocused)">Focus</animation>
+						<animation effect="slide" start="0,0" end="160,0" time="100" condition="String.IsEqual(Skin.String(MenuLAF),GraphFocused)">Unfocus</animation>
+						<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+						<visible>!String.IsEmpty(Skin.String(MenuLAF))</visible>
+						<visible>Control.HasFocus(9000)</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>0</top>
+						<width>86</width>
+						<height>55</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+						<visible>!String.IsEmpty(Skin.String(MenuLAF))</visible>
+						<visible>!Control.HasFocus(9000)</visible>
 					</control>
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<label>166</label>
+						<label>$LOCALIZE[166] $LOCALIZE[5]</label>
 						<label2>31437</label2>
 						<onclick>ActivateWindow(SkinSettings)</onclick>
-						<icon>-</icon>
+						<icon>Xonfluence_Logo.png</icon>
 						<visible>!Skin.HasSetting(HideSkinSettings)</visible>
 					</item>
 					<item id="2">
 						<label>14200</label>
 						<label2>31430</label2>
 						<onclick>ActivateWindow(PlayerSettings)</onclick>
-						<icon>-</icon>
+						<icon>Icons/video.png</icon>
 					</item>
 					<item id="3">
-						<label>14202</label>
+						<label>14211</label>
 						<label2>31431</label2>
-						<onclick>ActivateWindow(LibrarySettings)</onclick>
-						<icon>-</icon>
+						<onclick>ActivateWindow(MediaSettings)</onclick>
+						<icon>Icons/library.png</icon>
 					</item>
 					<item id="4">
 						<label>14204</label>
 						<label2>31432</label2>
 						<onclick>ActivateWindow(PVRSettings)</onclick>
-						<icon>special://skin/backgrounds/tv.jpg</icon>
+						<icon>Icons/tv.png</icon>
 					</item>
 					<item id="5">
 						<label>24001</label>
 						<label2>31433</label2>
 						<onclick>ActivateWindow(AddonBrowser)</onclick>
-						<icon>-</icon>
+						<icon>Icons/addons.png</icon>
 					</item>
 					<item id="6">
 						<label>14036</label>
 						<label2>31434</label2>
 						<onclick>ActivateWindow(ServiceSettings)</onclick>
-						<icon>-</icon>
+						<icon>Icons/network.png</icon>
 					</item>
 					<item id="7">
 						<label>14206</label>
 						<label2>31436</label2>
 						<onclick>ActivateWindow(InterfaceSettings)</onclick>
-						<icon>-</icon>
+						<icon>Icons/skin.png</icon>
 					</item>
 					<item id="8">
 						<label>13000</label>
 						<label2>31435</label2>
 						<onclick>ActivateWindow(SystemSettings)</onclick>
-						<icon>-</icon>
+						<icon>Icons/system.png</icon>
 					</item>
 				</content>
 			</control>

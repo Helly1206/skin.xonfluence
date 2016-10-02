@@ -9,14 +9,14 @@
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>Dimensions_Fullscreen</include>
-			<texture>$INFO[Container(500).ListItem.Property(Fanart_small)]</texture>
-			<visible>!String.IsEmpty(Container(500).ListItem.Property(Fanart_small))</visible>
+			<texture>$INFO[ListItem.Art(fanart_small)]</texture>
+			<visible>!String.IsEmpty(ListItem.Art(fanart_small))</visible>
 		</control>
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true" fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
-			<visible>String.IsEmpty(Container(500).ListItem.Property(Fanart_small))</visible>
+			<visible>String.IsEmpty(ListItem.Art(fanart_small))</visible>
 		</control>
 		<!-- panel background -->
 		<control type="image">
@@ -234,7 +234,7 @@
                 		</animation>
             		</control>
 		            <control type="image">
-        		        <texture>$INFO[Container(500).ListItem.Property(Fanart_small)]</texture>
+        		        <texture>$INFO[ListItem.Art(fanart_small)]</texture>
         		        <left>0</left>
         		        <top>20</top>
         		        <width>300</width>

@@ -58,7 +58,7 @@
 		</control>
 		<control type="group">
 			<depth>DepthBackground</depth>
-			<visible>Skin.HasSetting(HideHomeNowPlaying) | !Player.HasAudio | Player.Paused | String.Contains(Window(videolibrary).Property(TvTunesIsAlive),TRUE) | [Player.HasAudio + !Skin.HasSetting(VizOnlyOnHome) + Skin.HasSetting(HideBackgroundCDWall)]</visible>
+			<visible>Skin.HasSetting(HideHomeNowPlaying) | !Player.HasAudio | Player.Paused | String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) | [Player.HasAudio + !Skin.HasSetting(VizOnlyOnHome) + Skin.HasSetting(HideBackgroundCDWall)]</visible>
 			<visible>!Skin.HasSetting(SingleGlobalBackground) + !String.IsEqual(Window(Home).Property(MenuBackground),Theme) + !String.IsEqual(Container(9000).ListItem.Property(Background),Theme) + !Skin.HasSetting(HolidayEffects)</visible>
 			<control type="group">
 				<include>BackgroundFade</include>
@@ -336,12 +336,12 @@
 		</control>
 		<control type="visualisation">
 			<include>Dimensions_Fullscreen</include>
-			<visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome) + Player.HasAudio + !String.Contains(Window(videolibrary).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+			<visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome) + Player.HasAudio + !String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 			<visible>!String.IsEqual(Visualisation.Name,Waveform) + !String.IsEqual(Visualisation.Name,DirectX Spectrum) + !String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
 		</control>
 		<control type="group">
 			<depth>DepthBackground</depth>
-			<visible>Window.IsVisible(Home) + !Skin.HasSetting(HideHomeNowPlaying) + Player.HasAudio + !String.Contains(Window(videolibrary).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+			<visible>Window.IsVisible(Home) + !Skin.HasSetting(HideHomeNowPlaying) + Player.HasAudio + !String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
 				<texture>special://skin/backgrounds/media-overlay.jpg</texture>
@@ -395,7 +395,7 @@
 		</control>
 		<control type="visualisation">
 			<include>Dimensions_Fullscreen</include>
-			<visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome) + Player.HasAudio + !String.Contains(Window(videolibrary).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+			<visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome) + Player.HasAudio + !String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 			<visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEqual(Visualisation.Name,Waveform) | String.IsEqual(Visualisation.Name,DirectX Spectrum) | String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
 		</control>
 		<control type="image">

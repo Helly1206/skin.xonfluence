@@ -32,7 +32,7 @@
 			<label>-</label>
 			<font>-</font>
 			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<visible>system.getbool(input.enablemouse)</visible>
 		</control>

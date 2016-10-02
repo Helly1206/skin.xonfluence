@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include file="IncludesHomeWidget.xml" />
-	<include file="defaults.xml" />
+	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
 	<include file="IncludesMainMenu.xml" />
 	<include file="IncludesMenuContentItems.xml" />
@@ -47,6 +47,10 @@
 	<constant name="DepthFloor">-0.20</constant>
 	<constant name="DepthSideBlade">0.15</constant>
 	<!-- VARIABLES -->
+	<variable name="AddonLabel2">
+		<value condition="!String.IsEmpty(ListItem.Property(Addon.Status))">$INFO[ListItem.Property(Addon.Status)]</value>
+		<value condition="!String.IsEmpty(ListItem.AddonSize)">$INFO[ListItem.AddonSize]</value>
+	</variable>
 	<variable name="MusicInfoHeader">
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(Albums)">$INFO[ListItem.Album]</value>
@@ -111,6 +115,8 @@
 		<value>$INFO[ListItem.VideoCodec]</value>
 	</variable>
 	<variable name="SeekLabel">
+		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,0.)">$LOCALIZE[31045]</value>
+		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,1.)">$LOCALIZE[31044]</value>
 		<value condition="Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31042]</value>
 		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31043]</value>
 		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$LOCALIZE[15107] $INFO[Player.CacheLevel]%</value>
@@ -216,7 +222,7 @@
 					<width>$PARAM[item-width]</width>
 					<height>40</height>
 					<visible>Control.HasFocus(50)</visible>
-					<texture border="5">button-focus2.png</texture>
+					<texture border="5">$VAR[SelectButton2]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -282,7 +288,7 @@
 			<label>-</label>
 			<font>-</font>
 			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<onleft>$PARAM[CloseButtonNav]</onleft>
 			<onright>$PARAM[CloseButtonNav]</onright>
@@ -323,7 +329,7 @@
 		<textwidth>200</textwidth>
 		<aligny>center</aligny>
 		<font>font13</font>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+		<include>NormalButton3</include>
 		<texturenofocus>-</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
@@ -334,8 +340,7 @@
 		<textwidth>195</textwidth>
 		<aligny>center</aligny>
 		<font>font12_title</font>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<include>NormalButton1</include>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="ButtonHomeSubCommonValues">
@@ -347,8 +352,8 @@
 		<font>font12</font>
 		<textcolor>grey2</textcolor>
 		<focusedcolor>white</focusedcolor>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texturefocus>
-		<texturenofocus border="5">HomeSubNF.png</texturenofocus>
+		<scroll>true</scroll>
+		<include>NormalButton1</include>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="ButtonInfoDialogsCommonValues">
@@ -358,8 +363,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font12_title</font>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<include>NormalButton</include>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SideBladeLeft">
@@ -1181,7 +1185,7 @@
 			<include>ButtonCommonValues</include>
 			<label>13350</label>
 			<onclick>$VAR[PlayList]</onclick>
-			<visible>[Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)] | [[Window.IsActive(Music) | Window.IsActive(musicfiles)] + !String.IsEqual(Playlist.Length(music),0)]</visible>
+			<visible>[Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)] | [Window.IsActive(Music) + !String.IsEqual(Playlist.Length(music),0)]</visible>
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">
@@ -1676,7 +1680,7 @@
 				<top>0</top>
 				<width>280</width>
 				<height>145</height>
-				<texture border="10" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+				<include>NormalButton4</include>
 			</control>
 			<control type="image">
 				<description>Thumb</description>
@@ -2440,7 +2444,7 @@
 					<top>0</top>
 					<width>750</width>
 					<height>40</height>
-					<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+					<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 					<visible>[Control.HasFocus(8001) | Control.HasFocus(8002)]</visible>
 				</control>
 				<control type="label">
@@ -2535,5 +2539,86 @@
 		<onunload condition="!Skin.HasSetting(ScriptDisableSlideShowArt) + System.HasAddon(script.artistslideshow)">Skin.Reset(DisableSlideShowArt)</onunload>
 		<onunload condition="Skin.HasSetting(ScriptDisableWatchItLater) | [!Skin.HasSetting(ScriptDisableWatchItLater) + !System.HasAddon(script.simpleplaylists)]">Skin.Setbool(DisableWatchItLater)</onunload>
 		<onunload condition="!Skin.HasSetting(ScriptDisableWatchItLater) + System.HasAddon(script.simpleplaylists)">Skin.Reset(DisableWatchItLater)</onunload>
+	</include>
+	<include name="MenuButtonClassic">
+		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+	</include>
+	<include name="MenuButtonModern">
+		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+	</include>
+	<include name="MenuButtonMax">
+		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+	</include>
+	<include name="MenuButton">
+		<include condition="String.IsEmpty(Skin.String(DialogLAF))">MenuButtonClassic</include>
+		<include condition="Skin.String(DialogLAF,Modern)">MenuButtonModern</include>
+		<include condition="Skin.String(DialogLAF,Max)">MenuButtonMax</include>
+		<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+	</include>
+	<include name="MenuButtonClassic2">
+		<texturefocus border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+	</include>
+	<include name="MenuButtonModern2">
+		<texturefocus border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+	</include>
+	<include name="MenuButtonMax2">
+		<texturefocus border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+	</include>
+	<include name="MenuButton2">
+		<include condition="String.IsEmpty(Skin.String(DialogLAF))">MenuButtonClassic2</include>
+		<include condition="Skin.String(DialogLAF,Modern)">MenuButtonModern2</include>
+		<include condition="Skin.String(DialogLAF,Max)">MenuButtonMax2</include>
+		<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+	</include>
+	<include name="ButtonModern1">
+		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+	</include>
+	<include name="ButtonMax1">
+		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+	</include>
+	<include name="NormalButton1">
+		<include condition="String.IsEmpty(Skin.String(DialogLAF))">ButtonMax1</include>
+		<include condition="Skin.String(DialogLAF,Modern)">ButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Max)">ButtonMax1</include>
+		<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+	</include>
+	<include name="NormalButton2">
+		<include condition="String.IsEmpty(Skin.String(DialogLAF))">ButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Modern)">ButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Max)">ButtonMax1</include>
+		<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+	</include>
+	<include name="NormalButton3">
+		<include condition="String.IsEmpty(Skin.String(DialogLAF))">ButtonMax1</include>
+		<include condition="Skin.String(DialogLAF,Modern)">ButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Max)">ButtonMax1</include>
+	</include>
+	<include name="NormalButton4">
+		<include condition="String.IsEmpty(Skin.String(DialogLAF))">ButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Modern)">ButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Max)">ButtonMax1</include>
+	</include>
+	<include name="AltButtonModern1">
+		<alttexturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</alttexturefocus>
+	</include>
+	<include name="AltButtonMax1">
+		<alttexturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</alttexturefocus>
+	</include>
+	<include name="AltButton1">
+		<include condition="String.IsEmpty(Skin.String(DialogLAF))">AltButtonMax1</include>
+		<include condition="Skin.String(DialogLAF,Modern)">AltButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Max)">AltButtonMax1</include>
+		<alttexturenofocus border="5">MenuItemNF.png</alttexturenofocus>
+	</include>
+		<include name="AltButton2">
+		<include condition="String.IsEmpty(Skin.String(DialogLAF))">AltButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Modern)">AltButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Max)">AltButtonMax1</include>
+		<alttexturenofocus border="5">MenuItemNF.png</alttexturenofocus>
+	</include>
+	<include name="AltButton3">
+		<include condition="String.IsEmpty(Skin.String(DialogLAF))">AltButtonMax1</include>
+		<include condition="Skin.String(DialogLAF,Modern)">AltButtonModern1</include>
+		<include condition="Skin.String(DialogLAF,Max)">AltButtonMax1</include>
 	</include>
 </includes>

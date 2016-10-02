@@ -374,7 +374,7 @@
 						<top>0</top>
 						<width>390</width>
 						<height>61</height>
-						<texture border="2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="2" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -779,7 +779,7 @@
 						<top>0</top>
 						<width>555</width>
 						<height>35</height>
-						<texture border="2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="2" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(5010)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -1028,7 +1028,7 @@
 						<top>0</top>
 						<width>390</width>
 						<height>61</height>
-						<texture border="2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="2" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(5060)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>

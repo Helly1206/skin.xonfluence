@@ -54,7 +54,7 @@
 					<label>-</label>
 					<font>-</font>
 					<onclick>PreviousMenu</onclick>
-					<texturefocus>DialogCloseButton-focus.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 					<texturenofocus>DialogCloseButton.png</texturenofocus>
 					<onleft>2</onleft>
 					<onright>13</onright>
@@ -63,34 +63,68 @@
 					<visible>system.getbool(input.enablemouse)</visible>
 				</control>
 			</control>
-			<control type="button" id="2">
-				<description>Resume button</description>
+			<control type="group" id="200">
 				<width>340</width>
 				<height>40</height>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<align>center</align>
-				<textwidth>290</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
-				<pulseonselect>no</pulseonselect>
-				<font>font13</font>
-				<label>$ADDON[script.videoextras 32104] </label>
+				<control type="image">
+					<description>background image</description>
+					<left>0</left>
+					<top>0</top>
+					<width>340</width>
+					<height>40</height>
+					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+				</control>
+				<control type="button" id="2">
+					<description>Resume button</description>
+					<left>18</left>
+					<top>0</top>
+					<width>304</width>
+					<height>40</height>
+					<onleft>400</onleft>
+					<onright>1</onright>
+					<onup>1</onup>
+					<ondown>400</ondown>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<align>center</align>
+					<textwidth>290</textwidth>
+					<include>NormalButton2</include>
+					<pulseonselect>no</pulseonselect>
+					<font>font13</font>
+					<label>$ADDON[script.videoextras 32104] </label>
+				</control>
 			</control>
-			<control type="button" id="40">
-				<description>Start from beginning button</description>
+			<control type="group" id="400">
 				<width>340</width>
 				<height>40</height>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<align>center</align>
-				<textwidth>290</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
-				<pulseonselect>no</pulseonselect>
-				<font>font13</font>
-				<label>$ADDON[script.videoextras 32105]</label>
-			</control>
+				<control type="image">
+					<description>background image</description>
+					<left>0</left>
+					<top>0</top>
+					<width>340</width>
+					<height>40</height>
+					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+				</control>
+				<control type="button" id="40">
+					<description>Start from beginning button</description>
+					<left>18</left>
+					<top>0</top>
+					<width>304</width>
+					<height>40</height>
+					<onleft>1</onleft>
+					<onright>200</onright>
+					<onup>200</onup>
+					<ondown>1</ondown>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<align>center</align>
+					<textwidth>290</textwidth>
+					<include>NormalButton2</include>
+					<pulseonselect>no</pulseonselect>
+					<font>font13</font>
+					<label>$ADDON[script.videoextras 32105]</label>
+				</control>
+			</control>			
 			<control type="image" id="14">
 				<description>background bottom image</description>
 				<posx>0</posx>

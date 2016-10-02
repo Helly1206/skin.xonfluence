@@ -60,7 +60,7 @@
 					<width>640</width>
 					<height>30</height>
 					<visible>Control.HasFocus(49)</visible>
-					<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+					<texture colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="label">
@@ -197,6 +197,11 @@
 			<onright>9000</onright>
 			<onup>60</onup>
 			<ondown>60</ondown>
+			<control type="button" id="9">
+				<description>Timer</description>
+				<include>ButtonInfoDialogsCommonValues</include>
+				<label>19061</label>
+			</control>
 			<control type="button" id="4">
 				<description>Find similar</description>
 				<include>ButtonInfoDialogsCommonValues</include>

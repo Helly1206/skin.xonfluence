@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TO BE DONE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<window type="dialog" id="2113">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="400,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<left>400r</left>
+				<top>0</top>
+				<width>400</width>
+				<height>720</height>
+				<texture border="15,0,0,0" flipx="true">MediaBladeSub.png</texture>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<left>380r</left>
+				<top>0</top>
+				<width>64</width>
+				<height>32</height>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+			<control type="label">
+				<left>380r</left>
+				<top>35</top>
+				<width>360</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[MainColorOne]</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$LOCALIZE[31288]</label>
+				<visible>!String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
+			</control>
+			<control type="list" id="450">
+				<left>390r</left>
+				<top>130</top>
+				<width>440</width>
+				<height>480</height>
+				<onup>450</onup>
+				<onleft>Dialog.Close(2114)</onleft>
+				<onright>60</onright>
+				<ondown>450</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>360</width>
+						<height>40</height>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>340</width>
+						<height>40</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<left>280</left>
+						<top>-5</top>
+						<width>80</width>
+						<height>50</height>
+						<colordiffuse>33FFFFFF</colordiffuse>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>360</width>
+						<height>40</height>
+						<visible>!Control.HasFocus(450)</visible>
+						<texture border="3">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>360</width>
+						<height>40</height>
+						<visible>Control.HasFocus(450)</visible>
+						<texture border="3" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton1]</texture>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>340</width>
+						<height>40</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<left>280</left>
+						<top>-5</top>
+						<width>80</width>
+						<height>50</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<description>Addons</description>
+						<label>$LOCALIZE[10040]</label>
+						<icon>Icons/addons.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/addons.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Android</description>
+						<label>$LOCALIZE[31287]</label>
+						<icon>Icons/android.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/android.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Appearance</description>
+						<label>$LOCALIZE[480]</label>
+						<icon>Icons/appearance.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/appearance.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Favourites</description>
+						<label>$LOCALIZE[1036]</label>
+						<icon>Icons/favorites.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>FileManager</description>
+						<label>$LOCALIZE[10003]</label>
+						<icon>Icons/filemanager.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/filemanager.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Library</description>
+						<label>$LOCALIZE[14022]</label>
+						<icon>Icons/library.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/library.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Movies</description>
+						<label>$LOCALIZE[342]</label>
+						<icon>Icons/movies.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Music</description>
+						<label>$LOCALIZE[1211]</label>
+						<icon>Icons/music.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Music 2</description>
+						<label>$LOCALIZE[1211] 2</label>
+						<icon>Icons/music2.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Network</description>
+						<label>$LOCALIZE[13279]</label>
+						<icon>Icons/network.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/network.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Pictures</description>
+						<label>$LOCALIZE[1213]</label>
+						<icon>Icons/pictures.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/pictures.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Pictures 2</description>
+						<label>$LOCALIZE[1213] 2</label>
+						<icon>Icons/pictures2.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/pictures2.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>PlayDVD</description>
+						<label>$LOCALIZE[341]</label>
+						<icon>Icons/playdvd.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/playdvd.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Profiles</description>
+						<label>$LOCALIZE[13200]</label>
+						<icon>Icons/profiles.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/profiles.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Programs</description>
+						<label>$LOCALIZE[0]</label>
+						<icon>Icons/programs.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/programs.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Radio</description>
+						<label>$LOCALIZE[19021]</label>
+						<icon>Icons/radio.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/radio.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Settings</description>
+						<label>$LOCALIZE[21417]</label>
+						<icon>Icons/settings.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/settings.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Settings 2</description>
+						<label>$LOCALIZE[21417] 2</label>
+						<icon>Icons/settings2.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/settings2.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Skin</description>
+						<label>$LOCALIZE[166]</label>
+						<icon>Icons/skin.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/skin.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Skin Settings</description>
+						<label>$LOCALIZE[20077]</label>
+						<icon>Xonfluence_logo.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Xonfluence_logo.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Sysinfo</description>
+						<label>$LOCALIZE[130]</label>
+						<icon>Icons/sysinfo.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/sysinfo.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>System</description>
+						<label>$LOCALIZE[13000]</label>
+						<icon>Icons/system.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/system.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>LiveTV</description>
+						<label>$LOCALIZE[31502]</label>
+						<icon>Icons/livetv.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/livetv.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>TV 2</description>
+						<label>$LOCALIZE[31502] 2</label>
+						<icon>Icons/tv.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tv.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>TVGuide</description>
+						<label>$LOCALIZE[31502] $LOCALIZE[22020]</label>
+						<icon>Icons/tvguide.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvguide.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>TVRemote</description>
+						<label>$LOCALIZE[31502] $LOCALIZE[31286]</label>
+						<icon>Icons/tvremote.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvremote.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>TVShows</description>
+						<label>$LOCALIZE[36903]</label>
+						<icon>Icons/tvshows.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Video</description>
+						<label>$LOCALIZE[36912]</label>
+						<icon>Icons/video.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Video 2</description>
+						<label>$LOCALIZE[36912] 2</label>
+						<icon>Icons/video2.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video2.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Weather</description>
+						<label>$LOCALIZE[8]</label>
+						<icon>Icons/weather.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/weather.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>Weather 2</description>
+						<label>$LOCALIZE[8] 2</label>
+						<icon>Icons/weather2.png</icon>
+						<onclick>Dialog.Close(2113)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/weather2.png)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1250</left>
+				<top>95</top>
+				<width>25</width>
+				<height>550</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<showonepage>true</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(450)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

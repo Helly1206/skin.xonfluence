@@ -27,7 +27,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<onleft>101</onleft>
 				<onright>101</onright>
@@ -242,7 +242,7 @@
 						<width>550</width>
 						<height>41</height>
 						<visible>Control.HasFocus(120)</visible>
-						<texture border="5">MenuItemFO.png</texture>
+						<texture border="5">$VAR[SelectMenuItem]</texture>
 					</control>
 					<control type="label">
 						<posx>10</posx>

@@ -218,7 +218,7 @@
 							<top>0</top>
 							<width>1100</width>
 							<height>41</height>
-							<texture border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -226,7 +226,7 @@
 							<width>1100</width>
 							<height>41</height>
 							<colordiffuse>33FFFFFF</colordiffuse>
-							<texture border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="group">

@@ -44,6 +44,10 @@ msgctxt "#31006"
 msgid "View options"
 msgstr "View options"
 
+msgctxt "#31007"
+msgid "Video process information"
+msgstr ""
+
 msgctxt "#31008"
 msgid "Full screen"
 msgstr "Full screen"
@@ -53,24 +57,24 @@ msgid "Total duration"
 msgstr "Total duration"
 
 msgctxt "#31010"
-msgid "OpenELEC OS"
-msgstr "OpenELEC OS"
+msgid "Hardware decoding"
+msgstr "Hardware decoding"
 
 msgctxt "#31011"
-msgid "Raspberry OS"
-msgstr "Raspberry OS"
+msgid "Inactive"
+msgstr "Inactive"
 
 msgctxt "#31012"
-msgid "Enable disk type media cases"
-msgstr "Enable disk type media cases"
+msgid "Decoder"
+msgstr "Decoder"
 
 msgctxt "#31013"
-msgid "Enable single global background"
-msgstr "Enable single global background"
+msgid "Audio process information"
+msgstr "Audio process information"
 
 msgctxt "#31014"
-msgid "Default focused menu item"
-msgstr "Default focused menu item"
+msgid "Memory used"
+msgstr "Memory used"
 
 msgctxt "#31015"
 msgid "Never"
@@ -704,6 +708,10 @@ msgctxt "#31212"
 msgid "Streaming media"
 msgstr "Streaming media"
 
+msgctxt "#31213"
+msgid "Streaming navigator"
+msgstr "Streaming navigator"
+
 msgctxt "#31214"
 msgid "Show addon names"
 msgstr "Show addon names"
@@ -947,6 +955,22 @@ msgstr "Home menu"
 msgctxt "#31283"
 msgid "Enable background video in PVR windows"
 msgstr "Enable background video in PVR windows"
+
+msgctxt "#31286"
+msgid "Remote"
+msgstr "Remote"
+
+msgctxt "#31287"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#31288"
+msgid "Select icon"
+msgstr "Select icon"
+
+msgctxt "#31289"
+msgid "Icon"
+msgstr "Icon"
 
 msgctxt "#31290"
 msgid "Menu item"
@@ -1233,8 +1257,8 @@ msgid "Enable video OSD plot on pause"
 msgstr "Enable video OSD plot on pause"
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause and OSD menu"
-msgstr "Enable video codec info on pause and OSD menu"
+msgid "Enable video codec info on pause"
+msgstr "Enable video codec info on pause"
 
 msgctxt "#31375"
 msgid "Use graphical textures on keyboards"
@@ -1243,6 +1267,10 @@ msgstr "Use graphical textures on keyboards"
 msgctxt "#31376"
 msgid "Use autocomplete on keyboards"
 msgstr "Use autocomplete on keyboards"
+
+msgctxt "#31377"
+msgid "Enable video codec info on OSD menu"
+msgstr "Enable video codec info on OSD menu"
 
 msgctxt "#31380"
 msgid "Enable playlist widget script"
@@ -1303,6 +1331,26 @@ msgstr "Enable TV show next aired"
 msgctxt "#31398"
 msgid "Configure script.tv.show.next.aired"
 msgstr "Configure script.tv.show.next.aired"
+
+msgctxt "#31400"
+msgid "OpenELEC OS"
+msgstr "OpenELEC OS"
+
+msgctxt "#31401"
+msgid "Raspberry OS"
+msgstr "Raspberry OS"
+
+msgctxt "#31402"
+msgid "Enable disk type media cases"
+msgstr "Enable disk type media cases"
+
+msgctxt "#31403"
+msgid "Enable single global background"
+msgstr "Enable single global background"
+
+msgctxt "#31404"
+msgid "Default focused menu item"
+msgstr "Default focused menu item"
 
 msgctxt "#31411"
 msgid "First run help..."
@@ -1716,6 +1764,14 @@ msgctxt "#31940"
 msgid "Seconds"
 msgstr "Seconds"
 
+msgctxt "#31941"
+msgid "Enable running artwork downloader automaticaly after updating library"
+msgstr "Enable running artwork downloader automaticaly after updating library"
+
+msgctxt "#31942"
+msgid "YouTube"
+msgstr "YouTube"
+
 msgctxt "#31950"
 msgid "WEATHER"
 msgstr "WEATHER"
@@ -1836,6 +1892,38 @@ msgctxt "#31982"
 msgid "Custom widgets limit amount"
 msgstr "Custom widgets limit amount"
 
+msgctxt "#31983"
+msgid "Dialog look and feel"
+msgstr "Dialog look and feel"
+
+msgctxt "#31984"
+msgid "Classic"
+msgstr "Classic"
+
+msgctxt "#31985"
+msgid "Modern"
+msgstr "Modern"
+
+msgctxt "#31986"
+msgid "Max"
+msgstr "Max"
+
+msgctxt "#31987"
+msgid "Menu look and feel"
+msgstr "Menu look and feel"
+
+msgctxt "#31988"
+msgid "Graphics"
+msgstr "Graphics"
+
+msgctxt "#31989"
+msgid "Graphics & focused text"
+msgstr "Graphics & focused text"
+
+msgctxt "#31990"
+msgid "Graphics & text"
+msgstr "Graphics & text"
+
 msgctxt "#31991"
 msgid "Item border size"
 msgstr "Item border size"
@@ -1871,4 +1959,3 @@ msgstr "Recently added"
 msgctxt "#31999"
 msgid "Resolution"
 msgstr "Resolution"
-

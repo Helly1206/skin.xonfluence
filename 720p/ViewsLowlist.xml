@@ -39,7 +39,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>430</left>
+						<left>410</left>
 						<top>0</top>
 						<width>400</width>
 						<height>40</height>
@@ -51,7 +51,7 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
-						<left>430</left>
+						<left>410</left>
 						<top>14</top>
 						<width>20</width>
 						<height>16</height>
@@ -72,14 +72,14 @@
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>460</width>
+						<width>470</width>
 						<height>41</height>
-						<texture border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(724)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>370</left>
+						<left>360</left>
 						<top>5</top>
 						<width>100</width>
 						<height>31</height>
@@ -99,7 +99,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>430</left>
+						<left>410</left>
 						<top>0</top>
 						<width>400</width>
 						<height>40</height>
@@ -111,7 +111,7 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
-						<left>430</left>
+						<left>410</left>
 						<top>14</top>
 						<width>20</width>
 						<height>16</height>

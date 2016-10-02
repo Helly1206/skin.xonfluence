@@ -21,8 +21,7 @@
 	<default type="button">
 		<width>300</width>
 		<height>42</height>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<include>NormalButton1</include>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
@@ -91,7 +90,7 @@
 		<height>42</height>
 		<spinwidth>33</spinwidth>
 		<spinheight>22</spinheight>
-		<texturefocus colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+		<include>NormalButton3</include>
 		<texturenofocus>-</texturenofocus>
 		<textureup>scroll-up-2.png</textureup>
 		<texturedown>scroll-down-2.png</texturedown>
@@ -120,8 +119,7 @@
 		<textureradiooffnofocus>radiobutton-nofocus.png</textureradiooffnofocus>
 		<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus.png</textureradioondisabled>
 		<textureradiooffdisabled colordiffuse="40FFFFFF">radiobutton-nofocus.png</textureradiooffdisabled>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<include>NormalButton1</include>
 		<label>215</label>
 		<font>font13</font>
 		<textcolor>white</textcolor>
@@ -151,13 +149,13 @@
 	<default type="slider">
 		<controloffsetx>75</controloffsetx>
 		<controloffsety>0</controloffsety>
+		<orientation>horizontal</orientation>
 	</default>
 	<default type="sliderex">
 		<height>35</height>
 		<textoffsetx>7</textoffsetx>
 		<aligny>center</aligny>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<include>NormalButton1</include>
 		<sliderwidth>150</sliderwidth>
 		<sliderheight>20</sliderheight>
 		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
@@ -170,22 +168,19 @@
 	<default type="mover">
 		<left>60</left>
 		<top>192</top>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<include>NormalButton1</include>
 	</default>
 	<default type="resize">
 		<left>60</left>
 		<top>192</top>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<include>NormalButton1</include>
 	</default>
 	<default type="edit">
 		<left>300</left>
 		<top>200</top>
 		<width>300</width>
 		<height>42</height>
-		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<include>NormalButton1</include>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>

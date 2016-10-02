@@ -5,6 +5,7 @@
 	<include condition="!Skin.HasSetting(Updates_V312)">UpdatesV312</include>
 	<include condition="!Skin.HasSetting(Updates_V314)">UpdatesV314</include>
 	<include condition="!Skin.HasSetting(Updates_V320)">UpdatesV320</include>
+	<include condition="!Skin.HasSetting(Updates_V335)">UpdatesV335</include>
 	<onload condition="!String.IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
@@ -66,6 +67,7 @@
 			<visible>Player.HasAudio + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="0,-30" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
 			<control type="image">
 				<description>Cover image</description>
@@ -272,6 +274,7 @@
 			<visible>Player.HasVideo + !Skin.HasSetting(HideNowPlayingInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="0,-30" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
 			<control type="group">
 				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
@@ -483,6 +486,7 @@
 			<visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Movies)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="0,-30" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
 			<control type="image">
 				<description>Cover image</description>
@@ -557,6 +561,7 @@
 			<visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),TVShows)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="0,-30" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
 			<control type="image">
 				<description>Cover image</description>
@@ -644,6 +649,7 @@
 			<description>Controls for currently playing media</description>
 			<left>545r</left>
 			<top>370</top>
+			<animation effect="slide" start="0,0" end="0,-30" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-100,0" time="225" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
 			<animation effect="fade" start="100" end="65" time="150" condition="Window.IsVisible(2123) | Window.IsVisible(2124) | Window.IsVisible(2125) | Window.IsVisible(Favourites)">conditional</animation>
@@ -656,7 +662,7 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
-			<visible>String.IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
+			<visible>String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 			<control type="image">
 				<description>Background End image</description>
 				<left>0</left>
@@ -1034,6 +1040,7 @@
 		<control type="group">
 			<depth>DepthMenu</depth>
 			<top>400</top>
+			<animation effect="slide" start="0,0" end="0,-30" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
@@ -1044,40 +1051,8 @@
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
 			<include>HomeSubMenuControl</include>
-			<control type="image">
-				<left>-100</left>
-				<top>0</top>
-				<width>1480</width>
-				<height>75</height>
-				<texture border="0,6,0,6">HomeBack.png</texture>
-				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>5</top>
-				<width>1280</width>
-				<height>6</height>
-				<texture>HomeOverlay1.png</texture>
-				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			</control>
 			<include condition="Skin.HasSetting(WrapAroundHomeMenu)">WrapHomeMainMenu</include>
 			<include condition="!Skin.HasSetting(WrapAroundHomeMenu)">FixedHomeMainMenu</include>
-			<control type="image">
-				<left>-10</left>
-				<top>6</top>
-				<width>138</width>
-				<height>63</height>
-				<texture>SideFade.png</texture>
-				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			</control>
-			<control type="image">
-				<left>128r</left>
-				<top>6</top>
-				<width>138</width>
-				<height>63</height>
-				<texture flipx="true">SideFade.png</texture>
-				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			</control>
 		</control>
 		<include>HomeAddonsDisplay</include>
 		<control type="group">

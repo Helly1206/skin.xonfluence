@@ -44,7 +44,7 @@
       <height>32</height>
       <label>-</label>
       <font>-</font>
-      <texturefocus>DialogCloseButton-focus.png</texturefocus>
+      <texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
       <texturenofocus>DialogCloseButton.png</texturenofocus>
       <onleft>10</onleft>
       <onright>10</onright>
@@ -82,8 +82,7 @@
       <font>font13</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+      <include>NormalButton2</include>
       <label>$ADDON[pvr.nextpvr 30120]</label>
       <onright>21</onright>
       <onleft>21</onleft>
@@ -99,8 +98,7 @@
       <font>font13</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+      <include>NormalButton2</include>
       <label>$ADDON[pvr.nextpvr 30132]</label>
       <onright>23</onright>
       <onleft>23</onleft>
@@ -116,8 +114,7 @@
       <font>font13</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+      <include>NormalButton2</include>
       <label>$ADDON[pvr.nextpvr 30133]</label>
       <onright>23</onright>
       <onleft>23</onleft>
@@ -133,8 +130,7 @@
       <font>font13</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+      <include>NormalButton2</include>
       <label>$ADDON[pvr.nextpvr 30130]</label>
       <onright>23</onright>
       <onleft>23</onleft>
@@ -150,8 +146,7 @@
       <font>font13</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturenofocus border="5">button-nofocus.png</texturenofocus>
-      <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
+      <include>NormalButton2</include>>
       <label>$ADDON[pvr.nextpvr 30134]</label>
       <onright>23</onright>
       <onleft>23</onleft>
@@ -169,8 +164,7 @@
         <height>40</height>
         <align>center</align>
         <aligny>center</aligny>
-        <texturenofocus border="5">button-nofocus.png</texturenofocus>
-        <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+        <include>NormalButton2</include>
         <label>186</label>
         <font>font12_title</font>
         <onup>27</onup>
@@ -186,8 +180,7 @@
         <height>40</height>
         <align>center</align>
         <aligny>center</aligny>
-        <texturenofocus border="5">button-nofocus.png</texturenofocus>
-        <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+        <include>NormalButton1</include>
         <label>222</label>
         <font>font12_title</font>
         <onup>27</onup>

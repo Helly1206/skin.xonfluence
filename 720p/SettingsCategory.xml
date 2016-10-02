@@ -49,7 +49,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<onleft>1</onleft>
 				<onright>1</onright>
@@ -93,8 +93,7 @@
 				<font>font13</font>
 				<textcolor>selected</textcolor>
 				<focusedcolor>selected</focusedcolor>
-				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+				<include>MenuButton</include>
 				<pulseonselect>false</pulseonselect>
 				<onleft>5</onleft>
 				<onright>5</onright>
@@ -200,8 +199,7 @@
 			<font>font13_title</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-			<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+			<include>MenuButton</include>
 			<pulseonselect>false</pulseonselect>
 		</control>
 		<control type="button" id="7">
@@ -213,8 +211,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<invalidcolor>invalid</invalidcolor>
-			<texturefocus border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<include>MenuButton2</include>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
@@ -224,8 +221,7 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<include>MenuButton2</include>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
@@ -235,8 +231,7 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<include>MenuButton2</include>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
 		</control>
@@ -248,8 +243,7 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<include>MenuButton2</include>
 			<aligny>center</aligny>
 		</control>
 		<control type="image" id="11">

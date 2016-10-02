@@ -25,7 +25,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
@@ -177,7 +177,7 @@
 								<width>740</width>
 								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
-								<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+								<texture colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
@@ -363,7 +363,7 @@
 								<width>740</width>
 								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
-								<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+								<texture colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
@@ -514,7 +514,7 @@
 								<width>640</width>
 								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
-								<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+								<texture colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
@@ -685,7 +685,7 @@
 								<width>640</width>
 								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
-								<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+								<texture colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
@@ -900,7 +900,7 @@
 							<width>430</width>
 							<height>40</height>
 							<visible>Control.HasFocus(50)</visible>
-							<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 						</control>
 						<control type="label">
 							<description>Actor and Role</description>
@@ -932,8 +932,7 @@
 						<description>Play/browse to Show</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>208</label>
-						<alttexturefocus border="2" colordiffuse="$VAR[MainColorOne]">button-focus.png</alttexturefocus>
-						<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
+						<include>AltButton1</include>
 						<altlabel>1024</altlabel>
 						<usealttexture>String.IsEqual(ListItem.DBTYPE,tvshow)</usealttexture>
 					</control>

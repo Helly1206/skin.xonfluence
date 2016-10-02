@@ -50,7 +50,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<onleft>1</onleft>
 				<onright>1</onright>
@@ -104,7 +104,7 @@
 						<top>0</top>
 						<width>260</width>
 						<height>55</height>
-						<texture border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<animation effect="fade" start="100" end="30" time="75" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="label">
@@ -239,8 +239,7 @@
 						<label>20096</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<include>MenuButton</include>
 					</control>
 					<control type="button" id="5">
 						<description>auto login</description>
@@ -251,8 +250,7 @@
 						<label2>$INFO[System.ProfileAutoLogin]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<include>MenuButton</include>
 						<enable>!System.HasLoginScreen</enable>
 					</control>
 				</control>

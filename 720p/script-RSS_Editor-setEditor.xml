@@ -75,7 +75,7 @@
 					<width>520</width>
 					<height>40</height>
 					<visible>Control.hasfocus(14) | Control.HasFocus(10)</visible>
-					<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+					<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>

@@ -225,7 +225,7 @@
 						<top>0</top>
 						<width>400</width>
 						<height>30</height>
-						<texture border="7" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="7" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -366,7 +366,7 @@
 						<top>0</top>
 						<width>400</width>
 						<height>30</height>
-						<texture border="7" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="7" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(100)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>

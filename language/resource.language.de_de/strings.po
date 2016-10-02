@@ -44,6 +44,10 @@ msgctxt "#31006"
 msgid "View options"
 msgstr "Ansichtseinstellungen"
 
+msgctxt "#31007"
+msgid "Video process information"
+msgstr ""
+
 msgctxt "#31008"
 msgid "Full screen"
 msgstr "Vollbild"
@@ -53,24 +57,24 @@ msgid "Total duration"
 msgstr "Gesamtdauer"
 
 msgctxt "#31010"
-msgid "OpenELEC OS"
-msgstr ""
+msgid "Hardware decoding"
+msgstr "Hardwaredekodierung"
 
 msgctxt "#31011"
-msgid "Raspberry OS"
-msgstr ""
+msgid "Inactive"
+msgstr "Inaktiv"
 
 msgctxt "#31012"
-msgid "Enable disk type media cases"
-msgstr "Aktiviere CD-Hüllen"
+msgid "Decoder"
+msgstr "Dekoder"
 
 msgctxt "#31013"
-msgid "Enable single global background"
-msgstr "Aktiviere einzelnen globalen Hintergrund"
+msgid "Audio process information"
+msgstr "Information Audioverarbeitung"
 
 msgctxt "#31014"
-msgid "Default focused menu item"
-msgstr "Als Standard ausgewähltes Menü"
+msgid "Memory used"
+msgstr "Genutzter Arbeitsspeicher"
 
 msgctxt "#31015"
 msgid "Never"
@@ -704,6 +708,10 @@ msgctxt "#31212"
 msgid "Streaming media"
 msgstr "Streaming-Medien"
 
+msgctxt "#31213"
+msgid "Streaming navigator"
+msgstr "Streaming Navigator"
+
 msgctxt "#31214"
 msgid "Show addon names"
 msgstr "Zeige Addon-Namen"
@@ -947,6 +955,22 @@ msgstr "Startmenü"
 msgctxt "#31283"
 msgid "Enable background video in PVR windows"
 msgstr "Aktiviere Hintergrundvideo in PVR-Fenstern"
+
+msgctxt "#31286"
+msgid "Remote"
+msgstr "Fernbedienung"
+
+msgctxt "#31287"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#31288"
+msgid "Select icon"
+msgstr "Symbool auswahl"
+
+msgctxt "#31289"
+msgid "Icon"
+msgstr "Symbool"
 
 msgctxt "#31290"
 msgid "Menu item"
@@ -1233,8 +1257,8 @@ msgid "Enable video OSD plot on pause"
 msgstr "Aktiviere Video-OSD mit Handlung beim Pausieren"
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause and OSD menu"
-msgstr "Zeige info zum Videocodec beim Pausieren und im OSD-Menü"
+msgid "Enable video codec info on pause"
+msgstr ""
 
 msgctxt "#31375"
 msgid "Use graphical textures on keyboards"
@@ -1243,6 +1267,10 @@ msgstr "Benutze grafische Symbole in der Tastatur"
 msgctxt "#31376"
 msgid "Use autocomplete on keyboards"
 msgstr "Benutze Autovervollständigung in Tastaturen"
+
+msgctxt "#31377"
+msgid "Enable video codec info on OSD menu"
+msgstr "Zeige info zum Videocodec im OSD-Menü"
 
 msgctxt "#31380"
 msgid "Enable playlist widget script"
@@ -1303,6 +1331,26 @@ msgstr "Aktiviere TV Show Next Aired"
 msgctxt "#31398"
 msgid "Configure script.tv.show.next.aired"
 msgstr "Konfiguriere script.tv.show.next.aired"
+
+msgctxt "#31400"
+msgid "OpenELEC OS"
+msgstr ""
+
+msgctxt "#31401"
+msgid "Raspberry OS"
+msgstr ""
+
+msgctxt "#31402"
+msgid "Enable disk type media cases"
+msgstr "Aktiviere CD-Hüllen"
+
+msgctxt "#31403"
+msgid "Enable single global background"
+msgstr "Aktiviere einzelnen globalen Hintergrund"
+
+msgctxt "#31404"
+msgid "Default focused menu item"
+msgstr "Als Standard ausgewähltes Menü"
 
 msgctxt "#31411"
 msgid "First run help..."
@@ -1716,6 +1764,14 @@ msgctxt "#31940"
 msgid "Seconds"
 msgstr "Sekunden"
 
+msgctxt "#31941"
+msgid "Enable running artwork downloader automaticaly after updating library"
+msgstr "Aktiviere automatischen Artwork-Download nach Update der Datenbank"
+
+msgctxt "#31942"
+msgid "YouTube"
+msgstr "YouTube"
+
 msgctxt "#31950"
 msgid "WEATHER"
 msgstr "WETTER"
@@ -1836,6 +1892,38 @@ msgctxt "#31982"
 msgid "Custom widgets limit amount"
 msgstr "Begrenzung benutzerdefinierte Widgets"
 
+msgctxt "#31983"
+msgid "Dialog look and feel"
+msgstr "Dialoog Aussehen"
+
+msgctxt "#31984"
+msgid "Classic"
+msgstr "Klassisch"
+
+msgctxt "#31985"
+msgid "Modern"
+msgstr "Modern"
+
+msgctxt "#31986"
+msgid "Max"
+msgstr "Max"
+
+msgctxt "#31987"
+msgid "Menu look and feel"
+msgstr "Menu Aussehen"
+
+msgctxt "#31988"
+msgid "Graphics"
+msgstr "Graphisch"
+
+msgctxt "#31989"
+msgid "Graphics & focused text"
+msgstr "Graphisch & focused text"
+
+msgctxt "#31990"
+msgid "Graphics & text"
+msgstr "Graphisch & text"
+
 msgctxt "#31991"
 msgid "Item border size"
 msgstr "Größe Objektrand"
@@ -1871,3 +1959,4 @@ msgstr "Zuletzt hinzugefügt"
 msgctxt "#31999"
 msgid "Resolution"
 msgstr "Auflösung"
+
