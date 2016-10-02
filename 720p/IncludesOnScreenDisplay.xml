@@ -122,7 +122,7 @@
 				<height>230</height>
 				<texture>$VAR[StreamingVideoIcon]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<visible>Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | IsEmpty(Player.Art(clearart))] + [IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt) + IsEmpty(Player.Art(poster)) + IsEmpty(Player.Art(thumb))]</visible>
+				<visible>Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | IsEmpty(Player.Art(clearart))] + [IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)] + [Skin.HasSetting(EnableDVDCases) + IsEmpty(Player.Art(poster))] + [!Skin.HasSetting(EnableDVDCases) + IsEmpty(Player.Art(thumb))]</visible>
 			</control>
 			<visible>!Skin.HasSetting(HideArtWorkOSD)</visible>
 		</control>
