@@ -16,6 +16,7 @@
 		<include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre1</include>
 		<include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre2</include>
 		<control type="fixedlist" id="9000">
+			<include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeMainMenuSys</include>
 			<include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeGraphMainMenuSys</include>
 			<include>HomeMainMenuContent</include>
 			<visible>!Skin.HasSetting(WrapAroundHomeMenu)</visible>

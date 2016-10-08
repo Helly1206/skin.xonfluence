@@ -1,3 +1,11 @@
+[B]3.3.6[/B]
+- Fixed bug in displaying non wrap-around main menu (results in empty main menu) #1305 + github #13
+- Fixed bug on resume after minimum info pause #1310
+- Fixed bug on displaying clock and date on minimul info pause #1313
+- Cleanup VideoOSD.xml 3.0.36 (sync with latest confluence October 7 2016)
+- Didn't sync smart playlist with latest confluence. That doesn't work, so I left it as is
+- Added more space for displaying system info in DailogPlayerProcessInfo.xml as CPU usage wasn't displayed completely
+
 [B]3.3.5[/B]
 - Synchronized with confluence 3.0.36 September 24 2016 (e.g. PVR_Guide updates, codec info updates, library menu, remove changelog, 0.8-1.5x play speed, etc)
 - Removed old window names

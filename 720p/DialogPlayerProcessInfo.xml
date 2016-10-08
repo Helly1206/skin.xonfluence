@@ -228,7 +228,7 @@
 				<description>CPU value</description>
 				<left>220</left>
 				<top>260</top>
-				<width>345</width>
+				<width>445</width>
 				<height>25</height>
 				<label>$INFO[System.CpuUsage]</label>
 				<align>left</align>
