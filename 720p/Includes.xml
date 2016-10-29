@@ -89,7 +89,7 @@
 		<value>ActivateWindow(musicplaylist)</value>
 	</variable>
 	<include name="LoadTvTunes">
-		<onload condition="System.HasAddon(script.tvtunes) + !String.Contains(Window(10025).Property(CinemaExperienceRunning),True)">RunScript(script.tvtunes,backend=True)</onload>
+		<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	</include>
 	<variable name="SelectBack">
 		<value condition="![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]">DialogBack.png</value>
@@ -101,14 +101,6 @@
 		<value condition="String.Contains(ListItem.FilenameAndPath,dvd)">dvd</value>
 		<value condition="[String.Contains(ListItem.FilenameAndPath,pdtv) | String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,dsr)]">TV</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,vhs)">vhs</value>
-	</variable>
-	<variable name="rating">
-		<value condition="String.Contains(listitem.mpaa,Rated G)">mpaa_general</value>
-		<value condition="String.Contains(listitem.mpaa,Rated PG-13)">mpaa_pg13</value>
-		<value condition="String.Contains(listitem.mpaa,Rated PG)">mpaa_pg</value>
-		<value condition="String.Contains(Listitem.mpaa,Rated R)">mpaa_restricted</value>
-		<value condition="String.Contains(Listitem.mpaa,Rated NC)">mpaa_nc17</value>
-		<value condition="String.Contains(Listitem.mpaa,Not Rated)">mpaa_notrated</value>
 	</variable>
 	<variable name="videocodec">
 		<value condition="[String.StartsWith(ListItem.VideoCodec,div) | String.IsEqual(ListItem.VideoCodec,dx50)]">divx</value>
@@ -2036,7 +2028,7 @@
 	<include name="ExtendedInfoAutoComplete">
 		<control type="group" id="5000">
 			<animation effect="slide" start="0,-240" end="0,0" time="300" tween="quadratic" easing="out">VisibleChange</animation>
-			<visible>!String.IsEmpty(Control.GetLabel(312).index(1)) + !Window.IsVisible(1130) + !Control.IsVisible(313)</visible>
+			<visible>!String.IsEmpty(Control.GetLabel(312).index(1)) + !Control.IsVisible(313)</visible>
 			<top>-120</top>
 			<left>0</left>
 			<control type="image">

@@ -1,3 +1,12 @@
+[B]3.3.7[/B]
+- Synced with confluence github (only DailogPlayerProcessInfo.xml), 3.0.38 October 28 2016
+- Cleanup, removal of obsolete file (IncludesHomeNowPlaying.xml), includes, $VARs etc.
+- Rigorously cleaned up widget code (removed about 4500 lines of code without removing functionality)
+- Added functionality to select poster or thumbnail widget format #1320 + #1322 (+ PMs UraFarquad)
+- Fixed aspect ration for large widgets (even when thumb pictures are viewed in poster format)
+- Automatically set 'default' widget format during this update
+- Added widget format selection in skin settings
+
 [B]3.3.6[/B]
 - Fixed bug in displaying non wrap-around main menu (results in empty main menu) #1305 + github #13
 - Fixed bug on resume after minimum info pause #1310

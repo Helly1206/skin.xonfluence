@@ -6,6 +6,7 @@
 	<include condition="!Skin.HasSetting(Updates_V314)">UpdatesV314</include>
 	<include condition="!Skin.HasSetting(Updates_V320)">UpdatesV320</include>
 	<include condition="!Skin.HasSetting(Updates_V335)">UpdatesV335</include>
+	<include condition="!Skin.HasSetting(Updates_V337)">UpdatesV337</include>
 	<onload condition="!String.IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>

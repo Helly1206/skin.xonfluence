@@ -321,6 +321,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.1.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistOne.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.1.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.1.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.1.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.1.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -342,6 +343,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.2.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwo.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.2.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.2.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.2.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.2.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -363,6 +365,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.3.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistThree.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.3.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.3.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.3.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.3.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -384,6 +387,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.4.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFour.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.4.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.4.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.4.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.4.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -405,6 +409,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.5.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFive.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.5.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.5.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.5.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.5.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -426,6 +431,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.6.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSix.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.6.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.6.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.6.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.6.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -447,6 +453,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.7.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSeven.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.7.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.7.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.7.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.7.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -468,6 +475,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.8.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEight.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.8.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.8.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.8.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.8.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -489,6 +497,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.9.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistNine.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.9.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.9.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.9.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.9.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -510,6 +519,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.10.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTen.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.10.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.10.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.10.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.10.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -531,6 +541,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.11.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEleven.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.11.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.11.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.11.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.11.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -552,6 +563,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.12.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwelve.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.12.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.12.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.12.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.12.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -573,6 +585,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.13.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistThirteen.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.13.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.13.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.13.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.13.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -594,6 +607,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.14.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFourteen.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.14.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.14.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.14.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.14.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -615,6 +629,7 @@
 				<property name="WidgetSet">$INFO[Skin.String(HomeItem.15.Widget)]</property>
 				<property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFifteen.Type)]</property>
 				<property name="Background">$INFO[Skin.String(HomeItem.15.Display)]</property>
+				<property name="WidgetFormat">$INFO[Skin.String(HomeItem.15.WidgetFormat)]</property>
 				<visible>!String.IsEmpty(Skin.String(HomeItem.15.Path))</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.15.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -632,6 +647,7 @@
 		<onload>Skin.SetString(HomeItem.1.Fanart,special://skin/backgrounds/weather.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.1.Icon,Icons/weather2.png)</onload>
 		<onload>Skin.SetString(HomeItem.1.Display,Default)</onload>
+		<onload>Skin.SetString(HomeItem.1.WidgetFormat,-)</onload>
 		<onload>Skin.SetString(HomeItem.2.Label,$LOCALIZE[1213])</onload>
 		<onload>Skin.SetString(HomeItem.2.Path,ActivateWindow(Pictures,Pictures))</onload>
 		<onload>Skin.SetString(HomeItem.2.Sub,Pictures)</onload>
@@ -641,6 +657,7 @@
 		<onload>Skin.SetString(HomeItem.2.Fanart,special://skin/backgrounds/pictures.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.2.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.2.Icon,Icons/pictures.png)</onload>
+		<onload>Skin.SetString(HomeItem.2.WidgetFormat,-)</onload>
 		<onload>Skin.SetString(HomeItem.3.Label,$LOCALIZE[19021])</onload>
 		<onload>Skin.SetString(HomeItem.3.Path,ActivateWindow(RadioChannels))</onload>
 		<onload>Skin.SetString(HomeItem.3.Sub,Radio)</onload>
@@ -650,6 +667,7 @@
 		<onload>Skin.SetString(HomeItem.3.Fanart,special://skin/backgrounds/tv.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.3.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.3.Icon,Icons/radio.png)</onload>
+		<onload>Skin.SetString(HomeItem.3.WidgetFormat,-)</onload>
 		<onload>Skin.SetString(HomeItem.4.Label,$LOCALIZE[19020])</onload>
 		<onload>Skin.SetString(HomeItem.4.Path,ActivateWindow(TVChannels))</onload>
 		<onload>Skin.SetString(HomeItem.4.Sub,LiveTV)</onload>
@@ -659,6 +677,7 @@
 		<onload>Skin.SetString(HomeItem.4.Fanart,special://skin/backgrounds/tv.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.4.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.4.Icon,Icons/tv.png)</onload>
+		<onload>Skin.SetString(HomeItem.4.WidgetFormat,-)</onload>
 		<onload>Skin.SetString(HomeItem.5.Label,$LOCALIZE[3])</onload>
 		<onload>Skin.SetString(HomeItem.5.Path,ActivateWindow(1199))</onload>
 		<onload>Skin.SetString(HomeItem.5.Sub,Videos)</onload>
@@ -668,6 +687,7 @@
 		<onload>Skin.SetString(HomeItem.5.Fanart,special://skin/backgrounds/videos.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.5.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.5.Icon,Icons/video.png)</onload>
+		<onload>Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
 		<onload>Skin.SetString(HomeItem.6.Label,$LOCALIZE[342])</onload>
 		<onload>Skin.SetString(HomeItem.6.Path,ActivateWindow(Videos,MovieTitles,return))</onload>
 		<onload>Skin.SetString(HomeItem.6.Sub,Movies)</onload>
@@ -677,6 +697,7 @@
 		<onload>Skin.SetString(HomeItem.6.Fanart,special://skin/backgrounds/videos.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.6.Display,Database)</onload>
 		<onload>Skin.SetString(HomeItem.6.Icon,Icons/movies.png)</onload>
+		<onload>Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
 		<onload>Skin.SetString(HomeItem.7.Label,$LOCALIZE[31424])</onload>
 		<onload>Skin.SetString(HomeItem.7.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
 		<onload>Skin.SetString(HomeItem.7.Sub,TVShows)</onload>
@@ -686,6 +707,7 @@
 		<onload>Skin.SetString(HomeItem.7.Fanart,special://skin/backgrounds/videos.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.7.Display,Database)</onload>
 		<onload>Skin.SetString(HomeItem.7.Icon,Icons/tvshows.png)</onload>
+		<onload>Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
 		<onload>Skin.SetString(HomeItem.8.Label,$LOCALIZE[2])</onload>
 		<onload>Skin.SetString(HomeItem.8.Path,ActivateWindow(Music))</onload>
 		<onload>Skin.SetString(HomeItem.8.Sub,Music)</onload>
@@ -695,6 +717,7 @@
 		<onload>Skin.SetString(HomeItem.8.Fanart,special://skin/backgrounds/music.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.8.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.8.Icon,Icons/music.png)</onload>
+		<onload>Skin.SetString(HomeItem.8.WidgetFormat,-)</onload>
 		<onload>Skin.SetString(HomeItem.9.Label,$LOCALIZE[350])</onload>
 		<onload condition="!System.Platform.Android">Skin.SetString(HomeItem.9.Path,ActivateWindow(Programs,Addons,return))</onload>
 		<onload condition="System.Platform.Android">Skin.SetString(HomeItem.9.Path,ActivateWindow(Programs))</onload>
@@ -705,6 +728,7 @@
 		<onload>Skin.SetString(HomeItem.9.Fanart,special://skin/backgrounds/programs.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.9.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.9.Icon,Icons/programs.png)</onload>
+		<onload>Skin.SetString(HomeItem.9.WidgetFormat,-)</onload>
 		<onload>Skin.SetString(HomeItem.10.Label,$LOCALIZE[33002])</onload>
 		<onload>Skin.SetString(HomeItem.10.Path,PlayMedia(special://skin/extras/Streaming/Radio105NetworkTV.strm))</onload>
 		<onload>Skin.SetString(HomeItem.10.Sub,None)</onload>
@@ -714,6 +738,7 @@
 		<onload>Skin.SetString(HomeItem.10.Fanart,special://skin/backgrounds/musicvideos.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.10.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.10.Icon,Icons/network.png)</onload>
+		<onload>Skin.SetString(HomeItem.10.WidgetFormat,-)</onload>
 		<onload>Skin.SetString(HomeItem.12.Label,$LOCALIZE[13000])</onload>
 		<onload>Skin.SetString(HomeItem.12.Path,ActivateWindow(Settings))</onload>
 		<onload>Skin.SetString(HomeItem.12.Sub,Settings)</onload>
@@ -723,6 +748,7 @@
 		<onload>Skin.SetString(HomeItem.12.Fanart,special://skin/backgrounds/settings.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.12.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.12.Icon,Icons/settings.png)</onload>
+		<onload>Skin.SetString(HomeItem.12.WidgetFormat,-)</onload>
 		<onload>Skin.SetString(HomeItem.15.Label,$LOCALIZE[31973])</onload>
 		<onload>Skin.SetString(HomeItem.15.Path,PlayDVD())</onload>
 		<onload>Skin.SetString(HomeItem.15.Sub,PlayDisc)</onload>
@@ -732,6 +758,7 @@
 		<onload>Skin.SetString(HomeItem.15.Fanart,special://skin/backgrounds/playdisc.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.15.Display,Default)</onload>
 		<onload>Skin.SetString(HomeItem.15.Icon,Icons/playdvd.png)</onload>
+		<onload>Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
 		<onload>Skin.SetBool(SingleGlobalBackground)</onload>
 		<onload>Skin.SetBool(EnableFanartScript)</onload>
 		<onload>Skin.SetString(FanArtCycleRate,10)</onload>
@@ -823,7 +850,6 @@
 		<onload condition="Skin.String(SubVideos.10.Path,ActivateWindow(VideoLibrary,special://videoplaylists/,return))">Skin.SetString(SubVideos.10.Path,ActivateWindow(Videos,special://videoplaylists/,return))</onload>
 		<onload condition="Skin.String(SubVideos.11.Path,ActivateWindow(VideoLibrary,special://videoplaylists/,return))">Skin.SetString(SubVideos.11.Path,ActivateWindow(Videos,special://videoplaylists/,return))</onload>
 		<onload condition="Skin.String(SubVideos.12.Path,ActivateWindow(VideoLibrary,special://videoplaylists/,return))">Skin.SetString(SubVideos.12.Path,ActivateWindow(Videos,special://videoplaylists/,return))</onload>
-		<onload>Skin.SetBool(Updates_V335)</onload>
 		<onload condition="String.IsEmpty(Skin.String(HomeItem.1.Icon))">Skin.SetString(HomeItem.1.Icon,Icons/programs.png)</onload>
 		<onload condition="Skin.String(HomeItem.1.Type,Weather) + String.IsEmpty(Skin.String(HomeItem.1.Icon))">Skin.SetString(HomeItem.1.Icon,Icons/weather2.png)</onload>
 		<onload condition="Skin.String(HomeItem.1.Type,Pictures) + String.IsEmpty(Skin.String(HomeItem.1.Icon))">Skin.SetString(HomeItem.1.Icon,Icons/pictures.png)</onload>
@@ -1109,5 +1135,339 @@
 		<onload condition="Skin.String(HomeItem.15.Type,UPnP) + String.IsEmpty(Skin.String(HomeItem.15.Icon))">Skin.SetString(HomeItem.15.Icon,Icons/video.png)</onload>
 		<onload condition="Skin.String(HomeItem.15.Type,MusicPlaylist) + String.IsEmpty(Skin.String(HomeItem.15.Icon))">Skin.SetString(HomeItem.15.Icon,Icons/favorites.png)</onload>
 		<onload condition="Skin.String(HomeItem.15.Type,VideoPlaylist) + String.IsEmpty(Skin.String(HomeItem.15.Icon))">Skin.SetString(HomeItem.15.Icon,Icons/favorites.png)</onload>
+		<onload>Skin.SetBool(Updates_V335)</onload>
+	</include>
+	<include name="UpdatesV337">
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.1.Widget))">Skin.SetString(HomeItem.1.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.1.Widget))">Skin.SetString(HomeItem.1.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,VideoPlayList)">Skin.SetString(HomeItem.1.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,VideoNode)">Skin.SetString(HomeItem.1.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,UPnPMovies)">Skin.SetString(HomeItem.1.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,RecentMovies)">Skin.SetString(HomeItem.1.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,RandomMovies)">Skin.SetString(HomeItem.1.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,SuggestedMovies)">Skin.SetString(HomeItem.1.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.1.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,None)">Skin.SetString(HomeItem.1.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,MusicPlayList)">Skin.SetString(HomeItem.1.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,Weather)">Skin.SetString(HomeItem.1.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,RecentEpisodes)">Skin.SetString(HomeItem.1.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,RandomEpisodes)">Skin.SetString(HomeItem.1.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.1.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,NextAired)">Skin.SetString(HomeItem.1.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,RecentAlbums)">Skin.SetString(HomeItem.1.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,RandomAlbums)">Skin.SetString(HomeItem.1.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.1.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,RecentConcerts)">Skin.SetString(HomeItem.1.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,RandomConcerts)">Skin.SetString(HomeItem.1.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.1.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.1.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.2.Widget))">Skin.SetString(HomeItem.2.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.2.Widget))">Skin.SetString(HomeItem.2.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,VideoPlayList)">Skin.SetString(HomeItem.2.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,VideoNode)">Skin.SetString(HomeItem.2.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,UPnPMovies)">Skin.SetString(HomeItem.2.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,RecentMovies)">Skin.SetString(HomeItem.2.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,RandomMovies)">Skin.SetString(HomeItem.2.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,SuggestedMovies)">Skin.SetString(HomeItem.2.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.2.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,None)">Skin.SetString(HomeItem.2.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,MusicPlayList)">Skin.SetString(HomeItem.2.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,Weather)">Skin.SetString(HomeItem.2.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,RecentEpisodes)">Skin.SetString(HomeItem.2.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,RandomEpisodes)">Skin.SetString(HomeItem.2.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.2.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,NextAired)">Skin.SetString(HomeItem.2.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,RecentAlbums)">Skin.SetString(HomeItem.2.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,RandomAlbums)">Skin.SetString(HomeItem.2.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.2.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,RecentConcerts)">Skin.SetString(HomeItem.2.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,RandomConcerts)">Skin.SetString(HomeItem.2.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.2.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.2.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.3.Widget))">Skin.SetString(HomeItem.3.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.3.Widget))">Skin.SetString(HomeItem.3.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,VideoPlayList)">Skin.SetString(HomeItem.3.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,VideoNode)">Skin.SetString(HomeItem.3.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,UPnPMovies)">Skin.SetString(HomeItem.3.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,RecentMovies)">Skin.SetString(HomeItem.3.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,RandomMovies)">Skin.SetString(HomeItem.3.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,SuggestedMovies)">Skin.SetString(HomeItem.3.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.3.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,None)">Skin.SetString(HomeItem.3.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,MusicPlayList)">Skin.SetString(HomeItem.3.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,Weather)">Skin.SetString(HomeItem.3.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,RecentEpisodes)">Skin.SetString(HomeItem.3.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,RandomEpisodes)">Skin.SetString(HomeItem.3.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.3.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,NextAired)">Skin.SetString(HomeItem.3.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,RecentAlbums)">Skin.SetString(HomeItem.3.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,RandomAlbums)">Skin.SetString(HomeItem.3.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.3.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,RecentConcerts)">Skin.SetString(HomeItem.3.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,RandomConcerts)">Skin.SetString(HomeItem.3.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.3.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.3.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.4.Widget))">Skin.SetString(HomeItem.4.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.4.Widget))">Skin.SetString(HomeItem.4.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,VideoPlayList)">Skin.SetString(HomeItem.4.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,VideoNode)">Skin.SetString(HomeItem.4.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,UPnPMovies)">Skin.SetString(HomeItem.4.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,RecentMovies)">Skin.SetString(HomeItem.4.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,RandomMovies)">Skin.SetString(HomeItem.4.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,SuggestedMovies)">Skin.SetString(HomeItem.4.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.4.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,None)">Skin.SetString(HomeItem.4.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,MusicPlayList)">Skin.SetString(HomeItem.4.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,Weather)">Skin.SetString(HomeItem.4.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,RecentEpisodes)">Skin.SetString(HomeItem.4.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,RandomEpisodes)">Skin.SetString(HomeItem.4.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.4.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,NextAired)">Skin.SetString(HomeItem.4.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,RecentAlbums)">Skin.SetString(HomeItem.4.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,RandomAlbums)">Skin.SetString(HomeItem.4.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.4.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,RecentConcerts)">Skin.SetString(HomeItem.4.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,RandomConcerts)">Skin.SetString(HomeItem.4.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.4.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.4.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.5.Widget))">Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.5.Widget))">Skin.SetString(HomeItem.5.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,VideoPlayList)">Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,VideoNode)">Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,UPnPMovies)">Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,RecentMovies)">Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,RandomMovies)">Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,SuggestedMovies)">Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,None)">Skin.SetString(HomeItem.5.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,MusicPlayList)">Skin.SetString(HomeItem.5.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,Weather)">Skin.SetString(HomeItem.5.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,RecentEpisodes)">Skin.SetString(HomeItem.5.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,RandomEpisodes)">Skin.SetString(HomeItem.5.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.5.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,NextAired)">Skin.SetString(HomeItem.5.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,RecentAlbums)">Skin.SetString(HomeItem.5.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,RandomAlbums)">Skin.SetString(HomeItem.5.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.5.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,RecentConcerts)">Skin.SetString(HomeItem.5.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,RandomConcerts)">Skin.SetString(HomeItem.5.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.5.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.5.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.6.Widget))">Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.6.Widget))">Skin.SetString(HomeItem.6.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,VideoPlayList)">Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,VideoNode)">Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,UPnPMovies)">Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,RecentMovies)">Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,RandomMovies)">Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,SuggestedMovies)">Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,None)">Skin.SetString(HomeItem.6.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,MusicPlayList)">Skin.SetString(HomeItem.6.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,Weather)">Skin.SetString(HomeItem.6.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,RecentEpisodes)">Skin.SetString(HomeItem.6.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,RandomEpisodes)">Skin.SetString(HomeItem.6.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.6.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,NextAired)">Skin.SetString(HomeItem.6.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,RecentAlbums)">Skin.SetString(HomeItem.6.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,RandomAlbums)">Skin.SetString(HomeItem.6.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.6.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,RecentConcerts)">Skin.SetString(HomeItem.6.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,RandomConcerts)">Skin.SetString(HomeItem.6.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.6.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.6.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.7.Widget))">Skin.SetString(HomeItem.7.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.7.Widget))">Skin.SetString(HomeItem.7.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,VideoPlayList)">Skin.SetString(HomeItem.7.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,VideoNode)">Skin.SetString(HomeItem.7.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,UPnPMovies)">Skin.SetString(HomeItem.7.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,RecentMovies)">Skin.SetString(HomeItem.7.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,RandomMovies)">Skin.SetString(HomeItem.7.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,SuggestedMovies)">Skin.SetString(HomeItem.7.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.7.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,None)">Skin.SetString(HomeItem.7.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,MusicPlayList)">Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,Weather)">Skin.SetString(HomeItem.7.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,RecentEpisodes)">Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,RandomEpisodes)">Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,NextAired)">Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,RecentAlbums)">Skin.SetString(HomeItem.7.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,RandomAlbums)">Skin.SetString(HomeItem.7.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.7.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,RecentConcerts)">Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,RandomConcerts)">Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.7.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.8.Widget))">Skin.SetString(HomeItem.8.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.8.Widget))">Skin.SetString(HomeItem.8.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,VideoPlayList)">Skin.SetString(HomeItem.8.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,VideoNode)">Skin.SetString(HomeItem.8.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,UPnPMovies)">Skin.SetString(HomeItem.8.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,RecentMovies)">Skin.SetString(HomeItem.8.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,RandomMovies)">Skin.SetString(HomeItem.8.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,SuggestedMovies)">Skin.SetString(HomeItem.8.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.8.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,None)">Skin.SetString(HomeItem.8.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,MusicPlayList)">Skin.SetString(HomeItem.8.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,Weather)">Skin.SetString(HomeItem.8.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,RecentEpisodes)">Skin.SetString(HomeItem.8.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,RandomEpisodes)">Skin.SetString(HomeItem.8.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.8.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,NextAired)">Skin.SetString(HomeItem.8.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,RecentAlbums)">Skin.SetString(HomeItem.8.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,RandomAlbums)">Skin.SetString(HomeItem.8.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.8.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,RecentConcerts)">Skin.SetString(HomeItem.8.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,RandomConcerts)">Skin.SetString(HomeItem.8.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.8.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.8.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.9.Widget))">Skin.SetString(HomeItem.9.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.9.Widget))">Skin.SetString(HomeItem.9.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,VideoPlayList)">Skin.SetString(HomeItem.9.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,VideoNode)">Skin.SetString(HomeItem.9.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,UPnPMovies)">Skin.SetString(HomeItem.9.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,RecentMovies)">Skin.SetString(HomeItem.9.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,RandomMovies)">Skin.SetString(HomeItem.9.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,SuggestedMovies)">Skin.SetString(HomeItem.9.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.9.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,None)">Skin.SetString(HomeItem.9.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,MusicPlayList)">Skin.SetString(HomeItem.9.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,Weather)">Skin.SetString(HomeItem.9.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,RecentEpisodes)">Skin.SetString(HomeItem.9.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,RandomEpisodes)">Skin.SetString(HomeItem.9.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.9.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,NextAired)">Skin.SetString(HomeItem.9.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,RecentAlbums)">Skin.SetString(HomeItem.9.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,RandomAlbums)">Skin.SetString(HomeItem.9.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.9.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,RecentConcerts)">Skin.SetString(HomeItem.9.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,RandomConcerts)">Skin.SetString(HomeItem.9.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.9.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.9.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.10.Widget))">Skin.SetString(HomeItem.10.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.10.Widget))">Skin.SetString(HomeItem.10.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,VideoPlayList)">Skin.SetString(HomeItem.10.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,VideoNode)">Skin.SetString(HomeItem.10.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,UPnPMovies)">Skin.SetString(HomeItem.10.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,RecentMovies)">Skin.SetString(HomeItem.10.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,RandomMovies)">Skin.SetString(HomeItem.10.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,SuggestedMovies)">Skin.SetString(HomeItem.10.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.10.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,None)">Skin.SetString(HomeItem.10.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,MusicPlayList)">Skin.SetString(HomeItem.10.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,Weather)">Skin.SetString(HomeItem.10.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,RecentEpisodes)">Skin.SetString(HomeItem.10.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,RandomEpisodes)">Skin.SetString(HomeItem.10.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.10.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,NextAired)">Skin.SetString(HomeItem.10.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,RecentAlbums)">Skin.SetString(HomeItem.10.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,RandomAlbums)">Skin.SetString(HomeItem.10.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.10.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,RecentConcerts)">Skin.SetString(HomeItem.10.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,RandomConcerts)">Skin.SetString(HomeItem.10.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.10.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.10.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.11.Widget))">Skin.SetString(HomeItem.11.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.11.Widget))">Skin.SetString(HomeItem.11.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,VideoPlayList)">Skin.SetString(HomeItem.11.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,VideoNode)">Skin.SetString(HomeItem.11.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,UPnPMovies)">Skin.SetString(HomeItem.11.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,RecentMovies)">Skin.SetString(HomeItem.11.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,RandomMovies)">Skin.SetString(HomeItem.11.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,SuggestedMovies)">Skin.SetString(HomeItem.11.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.11.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,None)">Skin.SetString(HomeItem.11.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,MusicPlayList)">Skin.SetString(HomeItem.11.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,Weather)">Skin.SetString(HomeItem.11.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,RecentEpisodes)">Skin.SetString(HomeItem.11.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,RandomEpisodes)">Skin.SetString(HomeItem.11.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.11.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,NextAired)">Skin.SetString(HomeItem.11.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,RecentAlbums)">Skin.SetString(HomeItem.11.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,RandomAlbums)">Skin.SetString(HomeItem.11.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.11.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,RecentConcerts)">Skin.SetString(HomeItem.11.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,RandomConcerts)">Skin.SetString(HomeItem.11.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.11.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.11.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.12.Widget))">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.12.Widget))">Skin.SetString(HomeItem.12.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,VideoPlayList)">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,VideoNode)">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,UPnPMovies)">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,RecentMovies)">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,RandomMovies)">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,SuggestedMovies)">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,None)">Skin.SetString(HomeItem.12.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,MusicPlayList)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,Weather)">Skin.SetString(HomeItem.12.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,RecentEpisodes)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,RandomEpisodes)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,NextAired)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,RecentAlbums)">Skin.SetString(HomeItem.12.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,RandomAlbums)">Skin.SetString(HomeItem.12.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.12.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,RecentConcerts)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,RandomConcerts)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.12.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.13.Widget))">Skin.SetString(HomeItem.13.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.13.Widget))">Skin.SetString(HomeItem.13.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,VideoPlayList)">Skin.SetString(HomeItem.13.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,VideoNode)">Skin.SetString(HomeItem.13.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,UPnPMovies)">Skin.SetString(HomeItem.13.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,RecentMovies)">Skin.SetString(HomeItem.13.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,RandomMovies)">Skin.SetString(HomeItem.13.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,SuggestedMovies)">Skin.SetString(HomeItem.13.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.13.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,None)">Skin.SetString(HomeItem.13.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,MusicPlayList)">Skin.SetString(HomeItem.13.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,Weather)">Skin.SetString(HomeItem.13.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,RecentEpisodes)">Skin.SetString(HomeItem.13.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,RandomEpisodes)">Skin.SetString(HomeItem.13.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.13.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,NextAired)">Skin.SetString(HomeItem.13.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,RecentAlbums)">Skin.SetString(HomeItem.13.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,RandomAlbums)">Skin.SetString(HomeItem.13.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.13.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,RecentConcerts)">Skin.SetString(HomeItem.13.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,RandomConcerts)">Skin.SetString(HomeItem.13.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.13.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.13.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.14.Widget))">Skin.SetString(HomeItem.14.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.14.Widget))">Skin.SetString(HomeItem.14.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,VideoPlayList)">Skin.SetString(HomeItem.14.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,VideoNode)">Skin.SetString(HomeItem.14.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,UPnPMovies)">Skin.SetString(HomeItem.14.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,RecentMovies)">Skin.SetString(HomeItem.14.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,RandomMovies)">Skin.SetString(HomeItem.14.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,SuggestedMovies)">Skin.SetString(HomeItem.14.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.14.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,None)">Skin.SetString(HomeItem.14.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,MusicPlayList)">Skin.SetString(HomeItem.14.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,Weather)">Skin.SetString(HomeItem.14.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,RecentEpisodes)">Skin.SetString(HomeItem.14.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,RandomEpisodes)">Skin.SetString(HomeItem.14.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.14.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,NextAired)">Skin.SetString(HomeItem.14.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,RecentAlbums)">Skin.SetString(HomeItem.14.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,RandomAlbums)">Skin.SetString(HomeItem.14.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.14.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,RecentConcerts)">Skin.SetString(HomeItem.14.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,RandomConcerts)">Skin.SetString(HomeItem.14.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.14.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.14.WidgetFormat,Thumb)</onload>
+		<onload condition="!String.IsEmpty(Skin.String(HomeItem.15.Widget))">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.15.Widget))">Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,VideoPlayList)">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,VideoNode)">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,UPnPMovies)">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,RecentMovies)">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,RandomMovies)">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,SuggestedMovies)">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,UnWatchedMovies)">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,None)">Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,MusicPlayList)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,Weather)">Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,RecentEpisodes)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,RandomEpisodes)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,SuggestedEpisodes)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,NextAired)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,RecentAlbums)">Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,RandomAlbums)">Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,SuggestedAlbums)">Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,RecentConcerts)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,RandomConcerts)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onload>
+		<onload condition="Skin.String(HomeItem.15.Widget,SuggestedConcerts)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onload>
+		<onload>Skin.SetBool(Updates_V337)</onload>
 	</include>
 </includes>

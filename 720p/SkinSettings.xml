@@ -1607,6 +1607,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 							</control>
 							<control type="button" id="1205">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemOneWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.1.WidgetFormat),Poster)">Skin.SetString(HomeItem.1.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.1.WidgetFormat),Poster)">Skin.SetString(HomeItem.1.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.1.Widget) + !String.IsEqual(Skin.String(HomeItem.1.Widget),None) + !String.IsEqual(Skin.String(HomeItem.1.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.1.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.1.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.1.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.1.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+							</control>
+							<control type="button" id="1206">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -1620,7 +1634,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 							</control>
-							<control type="button" id="1206">
+							<control type="button" id="1207">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -1731,6 +1745,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
 							</control>
 							<control type="button" id="1215">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemTwoWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.2.WidgetFormat),Poster)">Skin.SetString(HomeItem.2.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.2.WidgetFormat),Poster)">Skin.SetString(HomeItem.2.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.2.Widget) + !String.IsEqual(Skin.String(HomeItem.2.Widget),None) + !String.IsEqual(Skin.String(HomeItem.2.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.2.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.2.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.2.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.2.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+							</control>
+							<control type="button" id="1216">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -1744,7 +1772,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
 							</control>
-							<control type="button" id="1216">
+							<control type="button" id="1217">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -1855,6 +1883,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
 							</control>
 							<control type="button" id="1225">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemThreeWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.3.WidgetFormat),Poster)">Skin.SetString(HomeItem.3.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.3.WidgetFormat),Poster)">Skin.SetString(HomeItem.3.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.3.Widget) + !String.IsEqual(Skin.String(HomeItem.3.Widget),None) + !String.IsEqual(Skin.String(HomeItem.3.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.3.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.3.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.3.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.3.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+							</control>
+							<control type="button" id="1226">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -1868,7 +1910,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
 							</control>
-							<control type="button" id="1226">
+							<control type="button" id="1227">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -1979,6 +2021,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
 							</control>
 							<control type="button" id="1235">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemFourWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.4.WidgetFormat),Poster)">Skin.SetString(HomeItem.4.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.4.WidgetFormat),Poster)">Skin.SetString(HomeItem.4.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.4.Widget) + !String.IsEqual(Skin.String(HomeItem.4.Widget),None) + !String.IsEqual(Skin.String(HomeItem.4.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.4.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.4.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.4.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.4.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+							</control>
+							<control type="button" id="1236">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -1992,7 +2048,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
 							</control>
-							<control type="button" id="1236">
+							<control type="button" id="1237">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -2103,6 +2159,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
 							</control>
 							<control type="button" id="1245">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemFiveWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.5.WidgetFormat),Poster)">Skin.SetString(HomeItem.5.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.5.WidgetFormat),Poster)">Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.5.Widget) + !String.IsEqual(Skin.String(HomeItem.5.Widget),None) + !String.IsEqual(Skin.String(HomeItem.5.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.5.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.5.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.5.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.5.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+							</control>
+							<control type="button" id="1246">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -2116,7 +2186,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
 							</control>
-							<control type="button" id="1246">
+							<control type="button" id="1247">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -2227,6 +2297,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
 							</control>
 							<control type="button" id="1255">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemSixWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.6.WidgetFormat),Poster)">Skin.SetString(HomeItem.6.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.6.WidgetFormat),Poster)">Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.6.Widget) + !String.IsEqual(Skin.String(HomeItem.6.Widget),None) + !String.IsEqual(Skin.String(HomeItem.6.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.6.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.6.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.6.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.6.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
+							</control>
+							<control type="button" id="1256">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -2240,7 +2324,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
 							</control>
-							<control type="button" id="1256">
+							<control type="button" id="1257">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -2351,6 +2435,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
 							</control>
 							<control type="button" id="1265">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemSevenWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.7.WidgetFormat),Poster)">Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.7.WidgetFormat),Poster)">Skin.SetString(HomeItem.7.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.7.Widget) + !String.IsEqual(Skin.String(HomeItem.7.Widget),None) + !String.IsEqual(Skin.String(HomeItem.7.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.7.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.7.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.7.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.7.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+							</control>
+							<control type="button" id="1266">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -2364,7 +2462,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
 							</control>
-							<control type="button" id="1266">
+							<control type="button" id="1267">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -2475,6 +2573,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
 							</control>
 							<control type="button" id="1275">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemEightWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.8.WidgetFormat),Poster)">Skin.SetString(HomeItem.8.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.8.WidgetFormat),Poster)">Skin.SetString(HomeItem.8.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.8.Widget) + !String.IsEqual(Skin.String(HomeItem.8.Widget),None) + !String.IsEqual(Skin.String(HomeItem.8.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.8.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.8.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.8.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.8.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+							</control>
+							<control type="button" id="1276">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -2488,7 +2600,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
 							</control>
-							<control type="button" id="1276">
+							<control type="button" id="1277">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -2599,6 +2711,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
 							</control>
 							<control type="button" id="1285">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemNineWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.9.WidgetFormat),Poster)">Skin.SetString(HomeItem.9.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.9.WidgetFormat),Poster)">Skin.SetString(HomeItem.9.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.9.Widget) + !String.IsEqual(Skin.String(HomeItem.9.Widget),None) + !String.IsEqual(Skin.String(HomeItem.9.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.9.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.9.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.9.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.9.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+							</control>
+							<control type="button" id="1286">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -2612,7 +2738,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
 							</control>
-							<control type="button" id="1286">
+							<control type="button" id="1287">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -2723,6 +2849,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
 							</control>
 							<control type="button" id="1295">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemTenWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.10.WidgetFormat),Poster)">Skin.SetString(HomeItem.10.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.10.WidgetFormat),Poster)">Skin.SetString(HomeItem.10.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.10.Widget) + !String.IsEqual(Skin.String(HomeItem.10.Widget),None) + !String.IsEqual(Skin.String(HomeItem.10.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.10.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.10.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.10.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.10.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+							</control>
+							<control type="button" id="1296">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -2736,7 +2876,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
 							</control>
-							<control type="button" id="1296">
+							<control type="button" id="1297">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -2847,6 +2987,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
 							</control>
 							<control type="button" id="1305">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemElevenWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.11.WidgetFormat),Poster)">Skin.SetString(HomeItem.11.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.11.WidgetFormat),Poster)">Skin.SetString(HomeItem.11.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.11.Widget) + !String.IsEqual(Skin.String(HomeItem.11.Widget),None) + !String.IsEqual(Skin.String(HomeItem.11.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.11.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.11.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.11.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.11.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+							</control>
+							<control type="button" id="1306">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -2860,7 +3014,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
 							</control>
-							<control type="button" id="1306">
+							<control type="button" id="1307">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -2971,6 +3125,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
 							</control>
 							<control type="button" id="1315">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemTwelveWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.12.WidgetFormat),Poster)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.12.WidgetFormat),Poster)">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.12.Widget) + !String.IsEqual(Skin.String(HomeItem.12.Widget),None) + !String.IsEqual(Skin.String(HomeItem.12.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.12.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.12.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.12.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.12.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+							</control>
+							<control type="button" id="1316">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -2984,7 +3152,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
 							</control>
-							<control type="button" id="1316">
+							<control type="button" id="1317">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -3095,6 +3263,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
 							</control>
 							<control type="button" id="1325">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemThirteenWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.13.WidgetFormat),Poster)">Skin.SetString(HomeItem.13.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.13.WidgetFormat),Poster)">Skin.SetString(HomeItem.13.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.13.Widget) + !String.IsEqual(Skin.String(HomeItem.13.Widget),None) + !String.IsEqual(Skin.String(HomeItem.13.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.13.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.13.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.13.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.13.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+							</control>
+							<control type="button" id="1326">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -3108,7 +3290,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
 							</control>
-							<control type="button" id="1326">
+							<control type="button" id="1327">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -3219,6 +3401,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
 							</control>
 							<control type="button" id="1335">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemFourteenWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.14.WidgetFormat),Poster)">Skin.SetString(HomeItem.14.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.14.WidgetFormat),Poster)">Skin.SetString(HomeItem.14.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.14.Widget) + !String.IsEqual(Skin.String(HomeItem.14.Widget),None) + !String.IsEqual(Skin.String(HomeItem.14.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.14.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.14.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.14.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.14.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+							</control>
+							<control type="button" id="1336">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -3232,7 +3428,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
 							</control>
-							<control type="button" id="1336">
+							<control type="button" id="1337">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -3343,6 +3539,20 @@
 								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
 							</control>
 							<control type="button" id="1345">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label> - $LOCALIZE[31968]</label>
+								<label2>[COLOR=grey2]$VAR[UsrDefItemFifteenWidgetType][/COLOR]</label2>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick condition="String.IsEqual(Skin.String(HomeItem.15.WidgetFormat),Poster)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onclick>
+								<onclick condition="!String.IsEqual(Skin.String(HomeItem.15.WidgetFormat),Poster)">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onclick>
+								<enable>Skin.String(HomeItem.15.Widget) + !String.IsEqual(Skin.String(HomeItem.15.Widget),None) + !String.IsEqual(Skin.String(HomeItem.15.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.15.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.15.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.15.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.15.Widget),SuggestedAlbums)</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+							</control>
+							<control type="button" id="1346">
 								<description>Menu BackGround Type</description>
 								<width>750</width>
 								<height>40</height>
@@ -3356,7 +3566,7 @@
 								<enable>!Skin.HasSetting(HolidayEffects) + !Skin.HasSetting(SingleGlobalBackground)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
 							</control>
-							<control type="button" id="1346">
+							<control type="button" id="1347">
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
@@ -8557,7 +8767,7 @@
 						<height>20</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>font11</font>
+						<font>font12</font>
 						<haspath>yes</haspath>
 						<label>$VAR[HomeBackgroundLabel]</label>
 						<textcolor>white</textcolor>

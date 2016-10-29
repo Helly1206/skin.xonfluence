@@ -149,7 +149,7 @@
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-						<label>$VAR[MainItemLabel]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>!Control.HasFocus(110)</visible>
 					</control>
 					<control type="label">
