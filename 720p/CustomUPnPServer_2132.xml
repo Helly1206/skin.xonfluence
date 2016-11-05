@@ -2,28 +2,50 @@
 <window type="dialog" id="2132">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
-		<left>0</left>
-		<top>0</top>
+		<left>235</left>
+		<top>75</top>
 	</coordinates>
+	<include>dialogeffect</include>
+	<depth>DepthDialog+</depth>
 	<onload condition="Skin.HasSetting(EnablePingWOL) + Skin.String(PingMacAddr)">WakeOnLan($INFO[Skin.String(PingMacAddr)])</onload>
 	<controls>
 		<control type="group">
 			<control type="list" id="8050">
 				<content>upnp://</content>
 			</control>
-			<animation effect="slide" start="400,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="400,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
-				<left>400r</left>
+				<description>background image</description>
+				<left>0</left>
 				<top>0</top>
-				<width>400</width>
-				<height>720</height>
-				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+				<width>850</width>
+				<height>550</height>
+				<texture border="40">$VAR[SelectBack]</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Header image</description>
+				<left>40</left>
+				<top>16</top>
+				<width>770</width>
+				<height>40</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>header label</description>
+				<left>40</left>
+				<top>20</top>
+				<width>770</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<label>$LOCALIZE[31150]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>380r</left>
-				<top>0</top>
+				<left>760</left>
+				<top>15</top>
 				<width>64</width>
 				<height>32</height>
 				<label>-</label>
@@ -37,87 +59,89 @@
 				<ondown>450</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-			<control type="label">
-				<left>380r</left>
-				<top>35</top>
-				<width>360</width>
-				<height>40</height>
-				<font>font13_title</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>$VAR[MainColorOne]</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>$LOCALIZE[31150]</label>
-			</control>
-			<control type="image">
-				<left>390r</left>
-				<top>80</top>
-				<width>360</width>
-				<height>200</height>
-				<aspectratio align="center">keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<texture fallback="DefaultNetwork.png">$INFO[Container(450).ListItem.icon]</texture>
-				<bordertexture border="8">ThumbShadow.png</bordertexture>
-				<bordersize>8</bordersize>
-			</control>
 			<control type="list" id="450">
-				<left>390r</left>
-				<top>290</top>
-				<width>355</width>
-				<height>360</height>
+				<left>20</left>
+				<top>67</top>
+				<width>550</width>
+				<height>460</height>
 				<onup>450</onup>
-				<onleft>Dialog.Close(2132)</onleft>
-				<onright>60</onright>
 				<ondown>450</ondown>
-				<pagecontrol>60</pagecontrol>
+				<onleft>7</onleft>
+				<onright>61</onright>
+				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="40">
+				<itemlayout height="92" width="550">
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>360</width>
-						<height>40</height>
+						<width>550</width>
+						<height>86</height>
 						<texture border="5">button-nofocus.png</texture>
 					</control>
+					<control type="image">
+						<left>2</left>
+						<top>3</top>
+						<width>80</width>
+						<height>80</height>
+						<texture fallback="DefaultNetwork.jpg">$INFO[Listitem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<colordiffuse>33FFFFFF</colordiffuse>
+						<bordertexture border="3">black-back2.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>350</width>
+						<left>90</left>
+						<top>22</top>
+						<width>450</width>
 						<height>40</height>
-						<font>font12_title</font>
+						<font>font13</font>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
-						<info>ListItem.Label</info>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40">
+				<focusedlayout height="92" width="550">
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>370</width>
-						<height>40</height>
+						<width>550</width>
+						<height>86</height>
+						<texture border="5">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(450)</visible>
-						<texture border="3">button-nofocus.png</texture>
+						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>370</width>
-						<height>40</height>
+						<width>550</width>
+						<height>86</height>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 						<visible>Control.HasFocus(450)</visible>
-						<texture border="3" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton1]</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<left>2</left>
+						<top>3</top>
+						<width>80</width>
+						<height>80</height>
+						<texture fallback="DefaultNetwork.jpg">$INFO[Listitem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="3">black-back2.png</bordertexture>
+						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>350</width>
+						<left>90</left>
+						<top>22</top>
+						<width>450</width>
 						<height>40</height>
-						<font>font12_title</font>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
-						<info>ListItem.Label</info>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 				</focusedlayout>
 				<content>
@@ -322,33 +346,69 @@
 					</item>
 				</content>
 			</control>
-			<control type="scrollbar" id="60">
-				<left>1250</left>
-				<top>280</top>
+			<control type="scrollbar" id="61">
+				<left>570</left>
+				<top>65</top>
 				<width>25</width>
-				<height>380</height>
+				<height>464</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>450</onleft>
-				<onright>450</onright>
-				<showonepage>true</showonepage>
+				<onright>90</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(450)</visible>
 			</control>
-			<control type="label">
-				<description>Page label</description>
-				<right>30</right>
-				<top>670</top>
-				<width>350</width>
-				<height>30</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>grey</textcolor>
-				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+			<control type="group">
+				<control type="label">
+					<description>number of files/pages in list text label</description>
+					<left>592</left>
+					<top>490</top>
+					<width>240</width>
+					<height>35</height>
+					<font>font12</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+				</control>
+				<control type="grouplist" id="90">
+					<left>612</left>
+					<top>100</top>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<control type="button" id="7">
+						<description>Cancel button</description>
+						<width>200</width>
+						<height>40</height>
+						<label>222</label>
+						<font>font12_title</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<align>center</align>
+						<onclick>PreviousMenu</onclick>
+					</control>
+					<control type="image">
+						<width>1</width>
+						<height>150</height>
+						<texture>-</texture>
+					</control>
+					<control type="image">
+						<width>216</width>
+						<height>200</height>
+						<align>center</align>
+						<aspectratio align="center">stretch</aspectratio>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture fallback="DefaultNetwork.jpg" diffuse="episodematte.png">$INFO[Container(450).ListItem.Icon]</texture>
+						<bordertexture border="8">ThumbShadow.png</bordertexture>
+						<bordersize>8</bordersize>
+					</control>
+				</control>
 			</control>
 		</control>
 	</controls>

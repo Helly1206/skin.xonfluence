@@ -1,3 +1,12 @@
+[B]3.3.8[/B]
+- Changed all custom dialogs to DialogSelect style (no pop-in from right anymore, but normal popup from the middle)
+- Similar for FileBrowser, DialogVideoInfo and DialogMusicInfo
+- Fixed not showing paused label in seekbar
+- Fixed seekbar continuously displaying when playing audio
+- Fixed playing button texture on DialogVideoInfo
+- Fixed labeling in CustomFontColour_2130
+- Fixed labeling in CustonAddonSelection_2119
+
 [B]3.3.7[/B]
 - Synced with confluence github (only DailogPlayerProcessInfo.xml), 3.0.38 October 28 2016
 - Cleanup, removal of obsolete file (IncludesHomeNowPlaying.xml), includes, $VARs etc.
