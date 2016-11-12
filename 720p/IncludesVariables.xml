@@ -692,6 +692,10 @@
 		<value condition="VideoPlayer.Content(Movies) + !String.IsEmpty(VideoPlayer.Year) + !Skin.HasSetting(HideYearTitle)">$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</value>
 		<value>$INFO[Player.Title]</value>
 	</variable>
+	<variable name="GlobalFanartVar">
+		<value condition="Skin.HasSetting(SingleGlobalBackground)">$INFO[Skin.String(GlobalBackGroundPath)]</value>
+		<value>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</value>
+	</variable>
 	<variable name="VideoPlayingDescription" type="text">
 		<value condition="!String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.PlotOutline]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.Plot )">$INFO[VideoPlayer.Plot]</value>

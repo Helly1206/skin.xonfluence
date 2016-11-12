@@ -1,3 +1,7 @@
+[B]3.3.9[/B]
+- Updated textures for rating #1427
+- Added variable GlobalFanartVar, because it is used by some addons (llike libreelec.settings) #1427
+
 [B]3.3.8[/B]
 - Changed all custom dialogs to DialogSelect style (no pop-in from right anymore, but normal popup from the middle)
 - Similar for FileBrowser, DialogVideoInfo and DialogMusicInfo
