@@ -189,11 +189,24 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -201,8 +214,8 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
@@ -212,12 +225,39 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8001)</visible>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(8001)</visible>											
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(8001)</visible>
 						</control>
 					</focusedlayout>
 					<include>RecentVideoContent</include>
@@ -413,11 +453,24 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -425,8 +478,8 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
@@ -436,12 +489,39 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8003)</visible>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(8003)</visible>											
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(8003)</visible>
 						</control>
 					</focusedlayout>
 					<include>RandomVideoContent</include>
@@ -637,11 +717,24 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -649,8 +742,8 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
@@ -660,12 +753,39 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8005)</visible>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(8005)</visible>											
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(8005)</visible>
 						</control>
 					</focusedlayout>
 					<include>SuggestedVideoContent</include>
@@ -861,11 +981,24 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -873,8 +1006,8 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
@@ -884,12 +1017,39 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8007)</visible>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(8007)</visible>											
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(8007)</visible>
 						</control>
 					</focusedlayout>
 					<include>HomeUnWatchedMovies</include>
@@ -6657,11 +6817,24 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="285" width="195">
@@ -6669,8 +6842,8 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
@@ -6680,12 +6853,39 @@
 							<left>9</left>
 							<top>8</top>
 							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
+							<height>248</height>
+							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<include>TextureBorderWidgets</include>
 							<visible>!Control.HasFocus(8040)</visible>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(8040)</visible>											
+						</control>
+						<control type="label">
+							<left>9</left>
+							<top>256</top>
+							<width>176</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorOne]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(8040)</visible>
 						</control>
 					</focusedlayout>
 					<include>CustomWidgetContent</include>
@@ -6804,11 +7004,24 @@
 				<left>9</left>
 				<top>8</top>
 				<width>176</width>
-				<height>268</height>
-				<aspectratio>scale</aspectratio>
+				<height>248</height>
+				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
 				<include>TextureBorderWidgets</include>
+			</control>
+			<control type="label">
+				<left>9</left>
+				<top>256</top>
+				<width>176</width>
+				<height>20</height>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<selectedcolor>selected</selectedcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
 		<focusedlayout height="285" width="195">
@@ -6816,8 +7029,8 @@
 				<left>9</left>
 				<top>8</top>
 				<width>176</width>
-				<height>268</height>
-				<aspectratio>scale</aspectratio>
+				<height>248</height>
+				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 				<include>TextureBorderWidgets</include>
@@ -6827,12 +7040,39 @@
 				<left>9</left>
 				<top>8</top>
 				<width>176</width>
-				<height>268</height>
-				<aspectratio>scale</aspectratio>
+				<height>248</height>
+				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<bordertexture border="5">button-nofocus.png</bordertexture>
 				<include>TextureBorderWidgets</include>
 				<visible>!Control.HasFocus(8027)</visible>
+			</control>
+			<control type="label">
+				<left>9</left>
+				<top>256</top>
+				<width>176</width>
+				<height>20</height>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<selectedcolor>selected</selectedcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>!Control.HasFocus(8027)</visible>											
+			</control>
+			<control type="label">
+				<left>9</left>
+				<top>256</top>
+				<width>176</width>
+				<height>20</height>
+				<font>font12</font>
+				<textcolor>$VAR[MainColorOne]</textcolor>
+				<selectedcolor>selected</selectedcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>Control.HasFocus(8027)</visible>
 			</control>
 		</focusedlayout>
 	</include>
