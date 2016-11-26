@@ -1,3 +1,11 @@
+[B]3.3.10[/B]
+- Fixed label bug in widgetlayout
+- Updated to confluence 3.0.39 (Added 'Privacy Policy' to system info, only if available)
+- Fixed bug in systeminfo button layout
+- Fixed bug in slider colours
+- Added option to switch back to default confluence favourites dialog #1487
+- Added option to add custom video info (more.. button) #1506
+
 [B]3.3.9[/B]
 - Updated textures for rating #1427
 - Added variable GlobalFanartVar, because it is used by some addons (like libreelec.settings) #1427

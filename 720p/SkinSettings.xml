@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+msgctxt "#22082"
+msgid "More..."
+msgstr ""
+
+msgctxt "#31966"
+msgid "Enable custom video info script"
+msgstr ""
+
+msgctxt "#31967"
+msgid "Custom video info script command"
+msgstr ""
+
+-->
+
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
@@ -894,6 +911,18 @@
 								<label>$LOCALIZE[31961]</label>
 								<onclick>Skin.ToggleSetting(DisablePVRinView)</onclick>
 								<selected>Skin.HasSetting(DisablePVRinView)</selected>
+								<include>MenuButton</include>
+							</control>
+							<control type="radiobutton" id="153">
+								<description>Use default confluence favourites window look and feel</description>
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<label>$LOCALIZE[31943]</label>
+								<onclick>Skin.ToggleSetting(DefaultFavView)</onclick>
+								<selected>Skin.HasSetting(DefaultFavView)</selected>
 								<include>MenuButton</include>
 							</control>
 						</control>
@@ -9429,6 +9458,30 @@
 								<onclick>ActivateWindow(1127)</onclick>
 								<enable>!Skin.HasSetting(ScriptDisableScriptPlaylist)</enable>
 								<visible>System.HasAddon(script.randomandlastitems)</visible>
+							</control>
+							<control type="radiobutton" id="649">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label>31966</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(EnableCustomVideoInfoScript)</onclick>
+								<selected>Skin.HasSetting(EnableCustomVideoInfoScript)</selected>
+							</control>
+							<control type="button" id="650">
+								<description>CustomVideoInfoScript</description>
+								<label>$LOCALIZE[31967]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(CustomVideoInfoScript)][/COLOR]</label2>
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.SetString(CustomVideoInfoScript)</onclick>
+								<enable>Skin.HasSetting(EnableCustomVideoInfoScript)</enable>
 							</control>
 						</control>
 						<control type="grouplist" id="9601">

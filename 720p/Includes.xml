@@ -2614,4 +2614,156 @@
 		<include condition="Skin.String(DialogLAF,Modern)">AltButtonModern1</include>
 		<include condition="Skin.String(DialogLAF,Max)">AltButtonMax1</include>
 	</include>
+	<include name="FavListDialog">
+		<control type="list" id="450">
+			<visible>!Skin.HasSetting(DefaultFavView)</visible>
+			<left>20</left>
+			<top>67</top>
+			<width>550</width>
+			<height>460</height>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<onleft>7</onleft>
+			<onright>61</onright>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="92" width="550">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>550</width>
+					<height>86</height>
+					<texture border="5">button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<left>2</left>
+					<top>3</top>
+					<width>80</width>
+					<height>80</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>33FFFFFF</colordiffuse>
+					<bordertexture border="3">black-back2.png</bordertexture>
+					<bordersize>2</bordersize>
+				</control>
+				<control type="label">
+					<left>90</left>
+					<top>22</top>
+					<width>450</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="92" width="550">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>550</width>
+					<height>86</height>
+					<texture border="5">button-nofocus.png</texture>
+					<visible>!Control.HasFocus(450)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>550</width>
+					<height>86</height>
+					<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
+					<visible>Control.HasFocus(450)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<left>2</left>
+					<top>3</top>
+					<width>80</width>
+					<height>80</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="3">black-back2.png</bordertexture>
+					<bordersize>2</bordersize>
+				</control>
+				<control type="label">
+					<left>90</left>
+					<top>22</top>
+					<width>450</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="FavListOrig">
+		<control type="list" id="450">
+			<left>390r</left>
+			<top>250</top>
+			<width>450</width>
+			<height>380</height>
+			<onup>450</onup>
+			<onleft>Dialog.Close(Favourites)</onleft>
+			<onright>450</onright>
+			<ondown>450</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="40">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>370</width>
+					<height>40</height>
+					<texture border="5">button-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<left>10</left>
+					<top>0</top>
+					<width>350</width>
+					<height>40</height>
+					<font>font12_title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<selectedcolor>selected</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>370</width>
+					<height>40</height>
+					<visible>!Control.HasFocus(450)</visible>
+					<texture border="3">button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>370</width>
+					<height>40</height>
+					<visible>Control.HasFocus(450)</visible>
+					<texture border="3" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton1]</texture>
+				</control>
+				<control type="label">
+					<left>10</left>
+					<top>0</top>
+					<width>350</width>
+					<height>40</height>
+					<font>font12_title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<selectedcolor>selected</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
 </includes>

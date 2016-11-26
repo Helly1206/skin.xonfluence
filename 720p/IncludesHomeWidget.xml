@@ -1495,6 +1495,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
 					</control>
 					<control type="label">
 						<left>20</left>
@@ -1648,6 +1649,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -1790,6 +1792,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -1917,6 +1920,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -2078,6 +2082,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
 					</control>
 					<control type="label">
 						<left>15</left>
@@ -2180,6 +2185,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
 					</control>
 					<control type="label">
 						<left>9</left>
@@ -2342,6 +2348,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
 					</control>
 					<control type="label">
 						<left>20</left>
@@ -2488,6 +2495,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
 					</control>
 					<control type="label">
 						<left>10</left>

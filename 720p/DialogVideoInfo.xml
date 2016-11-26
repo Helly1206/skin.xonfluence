@@ -954,22 +954,24 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>206</label>
 					</control>
-                    <control type="button" id="106">
+					<control type="button" id="106">
 						<description>ExtendedInfo</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>31204</label>
+						<onclick>PreviousMenu</onclick>
 						<onclick>RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[ListItem.IMDBNumber])</onclick>
 						<enable>System.HasAddon(script.extendedinfo)</enable>
-						<visible>Container.Content(movies) + System.HasAddon(script.extendedinfo)</visible>
+						<visible>Container.Content(movies) + System.HasAddon(script.extendedinfo) + !Skin.HasSetting(EnableCustomVideoInfoScript)</visible>
 					</control>
-					<!--<control type="button" id="106">
-						<description>ExtendedInfo</description>
+					<control type="button" id="107">
+						<description>MoreInfo</description>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label>31204</label>
-						<onclick>RunScript(script.extendedinfo,info=extendedtvinfo,id=$INFO[ListItem.DBID])</onclick>
-						<enable>System.HasAddon(script.extendedinfo)</enable>
-						<visible>Container.Content(tvshows) + System.HasAddon(script.extendedinfo)</visible>
-					</control>-->
+						<label>22082</label>
+						<onclick>PreviousMenu</onclick>
+						<onclick>RunScript($INFO[Skin.String(CustomVideoInfoScript)])</onclick>
+						<enable>!String.IsEmpty(Skin.String(CustomVideoInfoScript))</enable>
+						<visible>[Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(EnableCustomVideoInfoScript)</visible>
+					</control>
 					<control type="button" id="6">
 						<description>Refresh</description>
 						<include>ButtonInfoDialogsCommonValues</include>
