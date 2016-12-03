@@ -1,3 +1,9 @@
+[B]3.3.11[/B]
+- Updated smart playlists #1545
+- Removed non working privacy availablilty check (empty button appears on < beta6)
+- Updated German language (thanks to Karlheinz Graf)
+- Updated dialog close buttons (thanks to Karlheinz Graf)
+
 [B]3.3.10[/B]
 - Fixed label bug in widgetlayout
 - Updated to confluence 3.0.39 (Added 'Privacy Policy' to system info, only if available)

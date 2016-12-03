@@ -173,7 +173,6 @@
 					<pulseonselect>false</pulseonselect>
 					<label>12389</label>
 					<onright>61</onright>
-					<visible>!String.IsEmpty(12389)</visible>
 				</control>
 			</control>
 			<control type="image">
