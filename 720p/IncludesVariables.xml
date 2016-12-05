@@ -3065,12 +3065,12 @@
 		<value>$LOCALIZE[1223]</value>
 	</variable>
 	<variable name="UsrOSDBtnLabel">
-		<value condition="Skin.String(OSDBtnUsrCmd,AspectRatio)">$LOCALIZE[31500]</value>
+		<!--<value condition="Skin.String(OSDBtnUsrCmd,AspectRatio)">$LOCALIZE[31500]</value>-->
 		<value condition="Skin.String(OSDBtnUsrCmd,UserSelect)">$LOCALIZE[31258]</value>
 		<value>$LOCALIZE[31442]</value>
 	</variable>
 	<variable name="UsrOSDBtnCmd">
-		<value condition="Skin.String(OSDBtnUsrCmd,AspectRatio)">AspectRatio</value>
+		<!--<value condition="Skin.String(OSDBtnUsrCmd,AspectRatio)">AspectRatio</value>-->
 		<value condition="Skin.String(OSDBtnUsrCmd,UserSelect)">$INFO[Skin.String(UsrOSDBtn.Path)]</value>		
 	</variable>
 	<variable name="OSDInfoType">

@@ -1270,7 +1270,8 @@ msgstr ""
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
 								<include>MenuButton</include>
-								<onclick condition="String.IsEmpty(Skin.String(OSDBtnUsrCmd))">Skin.SetString(OSDBtnUsrCmd,AspectRatio)</onclick>
+								<!--<onclick condition="String.IsEmpty(Skin.String(OSDBtnUsrCmd))">Skin.SetString(OSDBtnUsrCmd,AspectRatio)</onclick>-->
+								<onclick condition="String.IsEmpty(Skin.String(OSDBtnUsrCmd))">Skin.SetString(OSDBtnUsrCmd,UserSelect)</onclick>
 							    <onclick condition="Skin.String(OSDBtnUsrCmd,AspectRatio)">Skin.SetString(OSDBtnUsrCmd,UserSelect)</onclick>
 								<onclick condition="Skin.String(OSDBtnUsrCmd,UserSelect)">Skin.Reset(OSDBtnUsrCmd)</onclick>
 							</control>

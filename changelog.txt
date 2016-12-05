@@ -1,3 +1,11 @@
+[B]3.3.12[/B]
+- Removed aspectratio option in user OSD button, as it doesn't work anymore from OSD menu in Krypton #1594
+- Changed seeklabel visibility (revert 3.3.8 change as kodi solved seekbar continuously displaying when playing audio)
+- Updated seekbar for tempo functionality (play speed control) #1594
+- Updated seekbar to display paused instead of seeking at pause
+- Updated seekbar to display play speed instead of fast forward/ reverse at tempo
+- Changed seekbar label when seeking during paused #1593
+
 [B]3.3.11[/B]
 - Updated smart playlists #1545
 - Removed non working privacy availablilty check (empty button appears on < beta6)
