@@ -1091,6 +1091,17 @@ msgstr ""
 								<onclick>Skin.ToggleSetting(HideWideViewLabels)</onclick>
 								<selected>Skin.HasSetting(HideWideViewLabels)</selected>
 							</control>
+							<control type="radiobutton" id="168">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label>31099</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(ShowExtraFanArt)</onclick>
+								<selected>Skin.HasSetting(ShowExtraFanArt)</selected>
+							</control>
 						</control>
 						<control type="grouplist" id="9101">
 							<visible>Container(9001).HasFocus(4)</visible>

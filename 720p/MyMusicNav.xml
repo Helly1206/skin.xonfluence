@@ -6,6 +6,7 @@
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
 		<include>CommonBackground</include>
+		<include condition="Skin.HasSetting(ShowExtraFanArt)">FanArtExtraThumbs</include>
 		<include>ContentPanelBackgrounds</include>
 		<include>VideoExtrasIcon</include>
 		<control type="group">

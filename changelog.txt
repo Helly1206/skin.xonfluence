@@ -1,3 +1,8 @@
+[B]3.3.13[/B]
+- Updated SmartPlayListRule #1608
+- Added option to enable extra fanart slideshow in VideoNav and MusicNav (Skinsettings - General Settings - Media View settings) #1618
+- Added numerical seek display in seekbar #1619
+
 [B]3.3.12[/B]
 - Removed aspectratio option in user OSD button, as it doesn't work anymore from OSD menu in Krypton #1594
 - Changed seeklabel visibility (revert 3.3.8 change as kodi solved seekbar continuously displaying when playing audio)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
-	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo</visible>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo|!IsEmpty(Player.SeekNumeric)</visible>
 	<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
 	<visible>!Skin.HasSetting(HidePopUpSeekBar) | [Skin.HasSetting(HidePopUpSeekBar) + [Window.IsVisible(FullscreenVideo) | Window.IsVisible(visualisation) | Window.IsVisible(Home)]]</visible>
 	<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
@@ -271,6 +271,20 @@
 				<textcolor>$VAR[MainColorOne]</textcolor>
 				<label>$VAR[SeekLabel]</label>
 				<visible>Skin.HasSetting(HidePopUpSeekBar)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Seek Number label</description>
+				<animation effect="slide" start="0,0" end="0,-15" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
+				<left>180</left>
+				<top>23</top>
+				<width>130</width>
+				<height>20</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
 			</control>
 			<control type="label">
 				<description>Elapsed Time Label</description>

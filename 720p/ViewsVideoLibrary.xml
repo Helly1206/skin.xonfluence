@@ -1310,7 +1310,6 @@
 		<control type="group">
 			<visible>Control.IsVisible(504)</visible>
 			<include>VisibleFadeEffect</include>
-			<include>FanArtExtraThumbs</include>
 			<control type="list" id="504">
 				<left>70</left>
 				<top>78</top>
@@ -1740,7 +1739,6 @@
 		<control type="group">
 			<visible>Control.IsVisible(515)</visible>
 			<include>VisibleFadeEffect</include>
-			<include>FanArtExtraThumbs</include>
 			<control type="list" id="515">
 				<left>70</left>
 				<top>78</top>
