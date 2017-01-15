@@ -7503,24 +7503,24 @@
 		<include condition="Skin.String(CustomWidgets,100)">CustomWidgetContent100</include>
 	</include>
 	<include name="CustomWidgetContent10">
-		<content target="video" limit="10">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+		<content target="videos" limit="10">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
 	</include>
 	<include name="CustomWidgetContent20">
-		<content target="video" limit="20">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+		<content target="videos" limit="20">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
 	</include>
 	<include name="CustomWidgetContent30">
-		<content target="video" limit="30">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+		<content target="videos" limit="30">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
 	</include>
 	<include name="CustomWidgetContent40">
-		<content target="video" limit="40">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+		<content target="videos" limit="40">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
 	</include>
 	<include name="CustomWidgetContent50">
-		<content target="video" limit="50">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+		<content target="videos" limit="50">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
 	</include>
 	<include name="CustomWidgetContent75">
-		<content target="video" limit="75">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+		<content target="videos" limit="75">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
 	</include>
 	<include name="CustomWidgetContent100">
-		<content target="video" limit="100">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
+		<content target="videos" limit="100">$INFO[Container(9000).ListItem.Property(WidgetSet)]</content>
 	</include>
 </includes>

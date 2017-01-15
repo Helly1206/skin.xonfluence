@@ -109,7 +109,7 @@
 					<left>0</left>
 					<top>55</top>
 					<width>1100</width>
-					<height>520</height>
+					<height>370</height>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<onleft>104</onleft>
@@ -397,9 +397,9 @@
 				</control>
 				<control type="scrollbar" id="77">
 					<left>1105</left>
-					<top>50</top>
+					<top>55</top>
 					<width>25</width>
-					<height>520</height>
+					<height>370</height>
 					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
