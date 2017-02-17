@@ -1,4 +1,11 @@
-[B]3.3.15[/B] TBD
+[B]3.3.16[/B]
+- Fixed bug on selecting weather settings in MyWeather view
+- Added confluence update slideshow condition
+- Updated language changes to confluence 3.0.46
+- Fixed default focused menu item on graphics home menu
+- Fixed not displaying thumbnail for various custom widgets
+
+[B]3.3.15[/B]
 - Changed windowname video to videos for customwidgets #1710
 - PVR updates wrt. episode info and removing seondary icon from recordingslist (confluence 3.0.44)
 - Language updates (confluence 3.0.44)

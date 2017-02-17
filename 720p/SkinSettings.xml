@@ -691,21 +691,36 @@ msgstr ""
 								<include>MenuButton</include>
 								<onclick>Control.Move(9011,1)</onclick>
 								<onclick>Skin.SetString(InitialMenuPosi,$INFO[Container(9011).Position])</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,0)">Skin.SetString(InitialMenuItem,-1)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,1)">Skin.SetString(InitialMenuItem,0)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,2)">Skin.SetString(InitialMenuItem,1)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,3)">Skin.SetString(InitialMenuItem,2)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,4)">Skin.SetString(InitialMenuItem,3)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,5)">Skin.SetString(InitialMenuItem,4)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,6)">Skin.SetString(InitialMenuItem,5)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,7)">Skin.SetString(InitialMenuItem,6)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,8)">Skin.SetString(InitialMenuItem,7)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,9)">Skin.SetString(InitialMenuItem,8)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,10)">Skin.SetString(InitialMenuItem,9)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,11)">Skin.SetString(InitialMenuItem,10)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,12)">Skin.SetString(InitialMenuItem,11)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,13)">Skin.SetString(InitialMenuItem,12)</onclick>
-								<onclick condition="String.IsEqual(Container(9011).Position,14)">Skin.SetString(InitialMenuItem,-2)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,0)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,-1)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,1)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,0)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,2)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,1)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,3)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,2)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,4)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,3)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,5)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,4)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,6)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,5)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,7)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,6)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,8)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,7)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,9)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,8)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,10)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,9)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,11)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,10)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,12)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,11)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,13)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,12)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,14)+String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,-2)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,0)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,-2)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,1)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,-1)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,2)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,0)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,3)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,1)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,4)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,2)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,5)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,3)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,6)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,4)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,7)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,5)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,8)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,6)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,9)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,7)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,10)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,8)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,11)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,9)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,12)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,10)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,13)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,11)</onclick>
+								<onclick condition="String.IsEqual(Container(9011).Position,14)+!String.IsEmpty(Skin.String(MenuLAF))">Skin.SetString(InitialMenuItem,12)</onclick>
 							</control>
 							<control type="radiobutton" id="137">
 								<description>lower menu bar</description>
