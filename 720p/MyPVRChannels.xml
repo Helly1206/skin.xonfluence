@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>	
-	<views>50,5010,5060</views>
+	<views>50,5010,5060, 5040</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
 		<include>CommonBackground</include>
@@ -26,6 +26,8 @@
 		<include>ChannelList2</include>
 		<!-- view id = 5060 -->
 		<include>AllWidthList</include>
+		<!-- view id = 5040 -->
+		<include>MediaInfoPVR</include>
 		<control type="group">
 			<depth>DepthFooter</depth>
 			<include>CommonNowPlaying</include>

@@ -3,7 +3,7 @@
 	<include name="OSDMediaPlot">
 		<control type="group" id="1">
 			<visible>!Skin.HasSetting(EnablePauseInfo) + [!String.IsEmpty(VideoPlayer.Plot) | !String.IsEmpty(VideoPlayer.PlotOutline)] + Player.Paused + !Player.Caching</visible>
-			<animation effect="slide" end="-140,110" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) | !Skin.HasSetting(HideSeekBarOSD2) + !Player.ShowInfo" reversible="true">Conditional</animation>
+			<animation effect="slide" end="-140,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) | Skin.HasSetting(HideSeekBarOSD2) + !Player.ShowInfo" reversible="true">Conditional</animation>
 			<animation effect="slide" end="-140,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [!Skin.HasSetting(HideSeekBarOSD) + !Skin.HasSetting(HideSeekBarOSD2) | Player.ShowInfo]" reversible="true">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,25" time="0" condition="Player.ShowInfo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
 			<left>320</left>

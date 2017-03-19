@@ -201,9 +201,9 @@
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
-							<width>780</width>
+							<width>800</width>
 							<height>38</height>
-							<texture>$VAR[SelectMenuItem]</texture>
+							<texture colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 							<visible>Control.HasFocus(120)</visible>
 						</control>
 						<control type="image">

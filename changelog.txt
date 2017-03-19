@@ -1,3 +1,12 @@
+[B]3.3.17[/B]
+- Updated language files to confluence 3.0.47
+- Added 'Get more' button on side blade for addons on MyVideoNav and MyPics (was alread available on MyMusicNax) #1796
+- Fixed misplaced plotinfo on pause (with and without artwork and video info on OSD) #1828
+- Fixed subtitle dialog alignment mismatch and fixed focus color
+- Fixed widget not highlighting under TV shows error (GitHub issue and various forum issues). Typo solved thanks to flyingfox66. #1854
+- Fixed displaying thumbnails instead of logo's on video widgets and displaying folders instead of thumbnails issues on custom widgets. a.o. #1806, #1812
+- Added 'Media Info' view for PVR
+
 [B]3.3.16[/B]
 - Fixed bug on selecting weather settings in MyWeather view
 - Added confluence update slideshow condition

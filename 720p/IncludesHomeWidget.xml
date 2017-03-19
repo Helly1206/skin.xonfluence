@@ -24,6 +24,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8000</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RecentVideoContent</param>
 				</include>	
 				<include content="VideoSmallWidgetButtons">
@@ -54,6 +55,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8001</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RecentVideoContent</param>
 				</include>	
 				<include content="VideoLargeWidgetButtons">
@@ -74,6 +76,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8002</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RandomVideoContent</param>
 				</include>	
 				<include content="VideoSmallWidgetButtons">
@@ -104,6 +107,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8003</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RandomVideoContent</param>
 				</include>	
 				<include content="VideoLargeWidgetButtons">
@@ -124,6 +128,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8004</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">SuggestedVideoContent</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -154,6 +159,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8005</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">SuggestedVideoContent</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -174,6 +180,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8006</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">HomeUnWatchedMovies</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -204,6 +211,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8007</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">HomeUnWatchedMovies</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -225,6 +233,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8008</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RecentTVShowContent</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -255,6 +264,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8009</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RecentTVShowContent</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -275,6 +285,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8010</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RandomTVShowContent</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -305,6 +316,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8011</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RandomTVShowContent</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -325,6 +337,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8012</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">SuggestedTVShowContent</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -355,6 +368,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8013</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">SuggestedTVShowContent</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -515,6 +529,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8020</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RecentConcertContent</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -545,6 +560,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8021</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RecentConcertContent</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -565,6 +581,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8022</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RandomConcertContent</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -595,6 +612,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8023</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">RandomConcertContent</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -615,6 +633,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8024</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">SuggestedConcertContent</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -645,6 +664,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8025</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">SuggestedConcertContent</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -667,90 +687,105 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListOneContent</param>
 					<param name="Visible">Container(9000).HasFocus(1)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTwoContent</param>
 					<param name="Visible">Container(9000).HasFocus(2)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListThreeContent</param>
 					<param name="Visible">Container(9000).HasFocus(3)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFourContent</param>
 					<param name="Visible">Container(9000).HasFocus(4)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFiveContent</param>
 					<param name="Visible">Container(9000).HasFocus(5)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListSixContent</param>
 					<param name="Visible">Container(9000).HasFocus(6)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListSevenContent</param>
 					<param name="Visible">Container(9000).HasFocus(7)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListEightContent</param>
 					<param name="Visible">Container(9000).HasFocus(8)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListNineContent</param>
 					<param name="Visible">Container(9000).HasFocus(9)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTenContent</param>
 					<param name="Visible">Container(9000).HasFocus(10)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListElevenContent</param>
 					<param name="Visible">Container(9000).HasFocus(11)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTwelveContent</param>
 					<param name="Visible">Container(9000).HasFocus(12)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListThirteenContent</param>
 					<param name="Visible">Container(9000).HasFocus(13)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFourteenContent</param>
 					<param name="Visible">Container(9000).HasFocus(14)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8026</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFifteenContent</param>
 					<param name="Visible">Container(9000).HasFocus(15)</param>
 				</include>
@@ -783,90 +818,105 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListOneContent</param>
 					<param name="Visible">Container(9000).HasFocus(1)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTwoContent</param>
 					<param name="Visible">Container(9000).HasFocus(2)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListThreeContent</param>
 					<param name="Visible">Container(9000).HasFocus(3)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFourContent</param>
 					<param name="Visible">Container(9000).HasFocus(4)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFiveContent</param>
 					<param name="Visible">Container(9000).HasFocus(5)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListSixContent</param>
 					<param name="Visible">Container(9000).HasFocus(6)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListSevenContent</param>
 					<param name="Visible">Container(9000).HasFocus(7)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListEightContent</param>
 					<param name="Visible">Container(9000).HasFocus(8)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListNineContent</param>
 					<param name="Visible">Container(9000).HasFocus(9)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTenContent</param>
 					<param name="Visible">Container(9000).HasFocus(10)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListElevenContent</param>
 					<param name="Visible">Container(9000).HasFocus(11)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTwelveContent</param>
 					<param name="Visible">Container(9000).HasFocus(12)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListThirteenContent</param>
 					<param name="Visible">Container(9000).HasFocus(13)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFourteenContent</param>
 					<param name="Visible">Container(9000).HasFocus(14)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFifteenContent</param>
 					<param name="Visible">Container(9000).HasFocus(15)</param>
 				</include>
@@ -890,90 +940,105 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListOneEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(1)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTwoEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(2)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListThreeEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(3)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFourEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(4)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFiveEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(5)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListSixEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(6)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListSevenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(7)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListEightEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(8)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListNineEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(9)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(10)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListElevenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(11)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTwelveEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(12)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListThirteenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(13)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFourteenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(14)</param>
 				</include>
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8028</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFifteenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(15)</param>
 				</include>
@@ -1006,90 +1071,105 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListOneEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(1)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTwoEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(2)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListThreeEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(3)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFourEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(4)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFiveEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(5)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListSixEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(6)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListSevenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(7)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListEightEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(8)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListNineEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(9)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(10)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListElevenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(11)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListTwelveEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(12)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListThirteenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(13)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFourteenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(14)</param>
 				</include>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">PlayListFifteenEpisodes</param>
 					<param name="Visible">Container(9000).HasFocus(15)</param>
 				</include>
@@ -1152,6 +1232,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8032</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">NextAiredContent</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -1182,6 +1263,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8033</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">NextAiredContent</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -1203,6 +1285,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8035</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">UPnP_RecentMovies</param>
 					<param name="Visible">Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi)</param>
 				</include>
@@ -1234,6 +1317,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8036</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">UPnP_RecentMovies</param>
 					<param name="Visible">Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi)</param>
 				</include>
@@ -1255,6 +1339,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8037</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">VideoNodeContent</param>
 					<param name="Visible">String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoNode)</param>
 				</include>
@@ -1285,6 +1370,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8038</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">False</param>
 					<param name="Content">VideoNodeContent</param>
 					<param name="Visible">String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoNode)</param>
 				</include>
@@ -1306,6 +1392,7 @@
 				<include content="VideoSmallWidgetLayout">
 					<param name="Control">8039</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">True</param>
 					<param name="Content">CustomWidgetContent</param>
 				</include>
 				<include content="VideoSmallWidgetButtons">
@@ -1335,6 +1422,7 @@
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8040</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+					<param name="Custom">True</param>
 					<param name="Content">CustomWidgetContent</param>
 				</include>
 				<include content="VideoLargeWidgetButtons">
@@ -1943,6 +2031,7 @@
 	<include name="VideoSmallWidgetLayout">
 		<param name="Control" default="8000" />
 		<param name="Format" default="Poster" />
+		<param name="Custom" default="False" />
 		<param name="Content" default="" />
 		<param name="Visible" default="True" />
 		<definition>
@@ -1950,6 +2039,7 @@
 				<include content="MovieSmallWidgetLayout">
 					<param name="Control">$PARAM[Control]</param>
 					<param name="Content">$PARAM[Content]</param>
+					<param name="Custom">$PARAM[Custom]</param>
 				</include>
 				<visible>String.IsEqual($PARAM[Format],Poster) + $PARAM[Visible]</visible>
 			</control>
@@ -1957,6 +2047,7 @@
 				<include content="EpisodeSmallWidgetLayout">
 					<param name="Control">$PARAM[Control]</param>
 					<param name="Content">$PARAM[Content]</param>
+					<param name="Custom">$PARAM[Custom]</param>
 				</include>
 				<visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
 			</control>
@@ -1965,6 +2056,7 @@
 	<include name="VideoLargeWidgetLayout">
 		<param name="Control" default="8000" />
 		<param name="Format" default="Poster" />
+		<param name="Custom" default="False" />
 		<param name="Content" default="" />
 		<param name="Visible" default="True" />
 		<definition>
@@ -1972,6 +2064,7 @@
 				<include content="MovieLargeWidgetLayout">
 					<param name="Control">$PARAM[Control]</param>
 					<param name="Content">$PARAM[Content]</param>
+					<param name="Custom">$PARAM[Custom]</param>
 				</include>
 				<visible>String.IsEqual($PARAM[Format],Poster) + $PARAM[Visible]</visible>
 			</control>
@@ -1979,6 +2072,7 @@
 				<include content="EpisodeLargeWidgetLayout">
 					<param name="Control">$PARAM[Control]</param>
 					<param name="Content">$PARAM[Content]</param>
+					<param name="Custom">$PARAM[Custom]</param>
 				</include>
 				<visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
 			</control>
@@ -1987,6 +2081,7 @@
 	<include name="MovieSmallWidgetLayout">
 		<param name="Control" default="8000" />
 		<param name="Content" default="" />
+		<param name="Custom" default="False" />
 		<definition>
 			<control type="list" id="$PARAM[Control]">
 				<animation effect="slide" start="0,0" end="90,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">conditional</animation>
@@ -2024,6 +2119,18 @@
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
+						<visible>!$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>160</width>
+						<height>170</height>
+						<texture background="true">$VAR[VideoCustomThumbImage]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>$PARAM[Custom]</visible>
 					</control>
 					<control type="label">
 						<left>15</left>
@@ -2058,6 +2165,7 @@
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
 						<visible>Control.HasFocus($PARAM[Control])</visible>
+						<visible>!$PARAM[Custom]</visible>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -2069,6 +2177,31 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
 						<visible>!Control.HasFocus($PARAM[Control])</visible>
+						<visible>!$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>160</width>
+						<height>170</height>
+						<texture background="true">$VAR[VideoCustomThumbImage]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>Control.HasFocus($PARAM[Control])</visible>
+						<visible>$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>160</width>
+						<height>170</height>
+						<texture>$VAR[VideoCustomThumbImage]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
+						<visible>$PARAM[Custom]</visible>
 					</control>
 					<control type="label">
 						<left>15</left>
@@ -2105,6 +2238,7 @@
 	<include name="MovieLargeWidgetLayout">
 		<param name="Control" default="8000" />
 		<param name="Content" default="" />
+		<param name="Custom" default="False" />
 		<definition>
 			<control type="list" id="$PARAM[Control]">
 				<animation effect="slide" start="0,0" end="485,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
@@ -2135,6 +2269,18 @@
 						<texture background="true">$VAR[VideoThumbImage]</texture>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
+						<visible>!$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>9</left>
+						<top>8</top>
+						<width>176</width>
+						<height>248</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$VAR[VideoCustomThumbImage]</texture>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>$PARAM[Custom]</visible>
 					</control>
 					<control type="label">
 						<left>9</left>
@@ -2161,6 +2307,7 @@
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
 						<visible>Control.HasFocus($PARAM[Control])</visible>
+						<visible>!$PARAM[Custom]</visible>
 					</control>
 					<control type="image">
 						<left>9</left>
@@ -2172,6 +2319,31 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
 						<visible>!Control.HasFocus($PARAM[Control])</visible>
+						<visible>!$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>9</left>
+						<top>8</top>
+						<width>176</width>
+						<height>248</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$VAR[VideoCustomThumbImage]</texture>
+						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>Control.HasFocus($PARAM[Control])</visible>
+						<visible>$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>9</left>
+						<top>8</top>
+						<width>176</width>
+						<height>248</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$VAR[VideoCustomThumbImage]</texture>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
+						<visible>$PARAM[Custom]</visible>
 					</control>
 					<control type="label">
 						<left>9</left>
@@ -2208,8 +2380,9 @@
 	<include name="EpisodeSmallWidgetLayout">
 		<param name="Control" default="8000" />
 		<param name="Content" default="" />
+		<param name="Custom" default="False" />
 		<definition>
-			<control type="list" id="PARAM[Control]">
+			<control type="list" id="$PARAM[Control]">
 				<animation effect="slide" start="0,0" end="120,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
@@ -2246,6 +2419,18 @@
 						<texture background="true">$VAR[EpisodeThumbImage]</texture>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
+						<visible>!$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>220</width>
+						<height>155</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>$PARAM[Custom]</visible>
 					</control>
 					<control type="image">
 						<left>15</left>
@@ -2302,6 +2487,7 @@
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
 						<visible>Control.HasFocus($PARAM[Control])</visible>
+						<visible>!$PARAM[Custom]</visible>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -2313,8 +2499,33 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
 						<visible>!Control.HasFocus($PARAM[Control])</visible>
+						<visible>!$PARAM[Custom]</visible>
 					</control>
-						<control type="image">
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>220</width>
+						<height>155</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>Control.HasFocus($PARAM[Control])</visible>
+						<visible>$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>220</width>
+						<height>155</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
+						<visible>$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
 						<left>15</left>
 						<top>15</top>
 						<width>210</width>
@@ -2371,6 +2582,7 @@
 	<include name="EpisodeLargeWidgetLayout">
 		<param name="Control" default="8000" />
 		<param name="Content" default="" />
+		<param name="Custom" default="False" />
 		<definition>
 			<control type="list" id="$PARAM[Control]">
 				<animation effect="slide" start="0,0" end="450,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">onditional</animation>
@@ -2401,6 +2613,18 @@
 						<texture background="true">$VAR[EpisodeThumbImage]</texture>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
+						<visible>!$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>280</width>
+						<height>215</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>$PARAM[Custom]</visible>
 					</control>
 					<control type="image">
 						<left>15</left>
@@ -2449,6 +2673,7 @@
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
 						<visible>Control.HasFocus($PARAM[Control])</visible>
+						<visible>!$PARAM[Custom]</visible>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -2460,6 +2685,31 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderWidgets</include>
 						<visible>!Control.HasFocus($PARAM[Control])</visible>
+						<visible>!$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>280</width>
+						<height>215</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>Control.HasFocus($PARAM[Control])</visible>
+						<visible>$PARAM[Custom]</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>280</width>
+						<height>215</height>
+						<aspectratio>scale</aspectratio>
+						<texture>$VAR[EpisodeCustomThumbImage]</texture>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<include>TextureBorderWidgets</include>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
+						<visible>$PARAM[Custom]</visible>
 					</control>
 					<control type="image">
 						<left>15</left>
