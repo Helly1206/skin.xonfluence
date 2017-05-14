@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!--
-
-msgctxt "#22082"
-msgid "More..."
-msgstr ""
-
-msgctxt "#31966"
-msgid "Enable custom video info script"
-msgstr ""
-
-msgctxt "#31967"
-msgid "Custom video info script command"
-msgstr ""
-
--->
-
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>

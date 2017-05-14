@@ -2105,6 +2105,7 @@
 					<height>35</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$PARAM[Icon].png</texture>
+					<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 				</control>
 				<control type="grouplist">
 					<left>65</left>
@@ -2114,6 +2115,7 @@
 					<orientation>horizontal</orientation>
 					<align>left</align>
 					<itemgap>5</itemgap>
+					<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 					<control type="label">
 						<include>WindowTitleCommons</include>
 						<label>$PARAM[Label]</label>
@@ -2130,6 +2132,7 @@
 					</control>
 				</control>
 				<include>Clock</include>
+				<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 			</control>
 		</definition>
 	</include>

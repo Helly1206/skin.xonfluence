@@ -43,15 +43,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentMovies)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8001).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8001</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -95,15 +86,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RandomMovies)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8003).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8003</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -147,15 +129,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),SuggestedMovies)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8005).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8005</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -199,15 +172,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),UnWatchedMovies)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8007).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8007</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -252,15 +216,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentEpisodes)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8009).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8009</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -304,15 +259,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RandomEpisodes)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8011).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8011</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -356,15 +302,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),SuggestedEpisodes)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8013).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8013</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -406,15 +343,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentAlbums)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8015).NumItems,0)</visible>
-				</control>
 				<include content="MusicLargeWidgetLayout">
 					<param name="Control">8015</param>
 					<param name="Content">RecentAlbumContent</param>
@@ -452,15 +380,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RandomAlbums)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8017).NumItems,0)</visible>
-				</control>
 				<include content="MusicLargeWidgetLayout">
 					<param name="Control">8017</param>
 					<param name="Content">RandomAlbumContent</param>
@@ -498,15 +417,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),SuggestedAlbums)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8019).NumItems,0)</visible>
-				</control>
 				<include content="MusicLargeWidgetLayout">
 					<param name="Control">8019</param>
 					<param name="Content">SuggestedAlbumContent</param>
@@ -548,15 +458,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentConcerts)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8021).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8021</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -600,15 +501,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RandomConcerts)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8023).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8023</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -652,15 +544,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),SuggestedConcerts)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8025).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8025</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -806,15 +689,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(PlayListType),Movie)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8027).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8027</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -1059,15 +933,6 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList) + !Skin.HasSetting(DisableScriptPlayList)</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(PlayListType),Episode)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8029).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8029</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -1204,15 +1069,6 @@
 				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]
 				</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8031).NumItems,0)</visible>
-				</control>
 				<include content="WeatherLargeWidgetLayout">
 					<param name="Control">8031</param>
 					<param name="Content">WeatherForecastContent</param>
@@ -1251,15 +1107,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),NextAired)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8033).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8033</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -1305,15 +1152,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),UPnPMovies)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8036).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8036</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -1358,15 +1196,6 @@
 				</visible>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoNode)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8038).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8038</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -1410,15 +1239,6 @@
 				</visible>
 				<include>CustomWidgetVisibility</include>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<left>-20</left>
-					<top>-5</top>
-					<width>1320</width>
-					<height>295</height>
-					<texture border="5">ContentPanel.png</texture>
-					<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-					<visible>Integer.IsGreater(Container(8040).NumItems,0)</visible>
-				</control>
 				<include content="VideoLargeWidgetLayout">
 					<param name="Control">8040</param>
 					<param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
@@ -1607,6 +1427,15 @@
 		<param name="Control" default="8000" />
 		<param name="Content" default="" />
 		<definition>
+			<control type="image">
+				<left>-20</left>
+				<top>-5</top>
+				<width>1320</width>
+				<height>295</height>
+				<texture border="5">ContentPanel.png</texture>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
+			</control>
 			<control type="list" id="$PARAM[Control]">
 				<animation effect="slide" start="0,0" end="488,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">onditional</animation>
 				<animation effect="slide" start="0,0" end="366,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">onditional</animation>
@@ -1904,6 +1733,15 @@
 		<param name="Control" default="8000" />
 		<param name="Content" default="" />
 		<definition>
+			<control type="image">
+				<left>-20</left>
+				<top>-5</top>
+				<width>1320</width>
+				<height>295</height>
+				<texture border="5">ContentPanel.png</texture>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
+			</control>
 			<control type="list" id="$PARAM[Control]">
 				<animation effect="slide" start="0,0" end="488,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
 				<animation effect="slide" start="0,0" end="366,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
@@ -2036,20 +1874,20 @@
 		<param name="Visible" default="True" />
 		<definition>
 			<control type="group">
+				<visible>String.IsEqual($PARAM[Format],Poster) + $PARAM[Visible]</visible>
 				<include content="MovieSmallWidgetLayout">
 					<param name="Control">$PARAM[Control]</param>
 					<param name="Content">$PARAM[Content]</param>
 					<param name="Custom">$PARAM[Custom]</param>
 				</include>
-				<visible>String.IsEqual($PARAM[Format],Poster) + $PARAM[Visible]</visible>
 			</control>
 			<control type="group">
+				<visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
 				<include content="EpisodeSmallWidgetLayout">
-					<param name="Control">$PARAM[Control]</param>
+					<param name="Control">$PARAM[Control]1</param>
 					<param name="Content">$PARAM[Content]</param>
 					<param name="Custom">$PARAM[Custom]</param>
 				</include>
-				<visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
 			</control>
 		</definition>
 	</include>
@@ -2061,20 +1899,20 @@
 		<param name="Visible" default="True" />
 		<definition>
 			<control type="group">
+				<visible>String.IsEqual($PARAM[Format],Poster) + $PARAM[Visible]</visible>
 				<include content="MovieLargeWidgetLayout">
 					<param name="Control">$PARAM[Control]</param>
 					<param name="Content">$PARAM[Content]</param>
 					<param name="Custom">$PARAM[Custom]</param>
 				</include>
-				<visible>String.IsEqual($PARAM[Format],Poster) + $PARAM[Visible]</visible>
 			</control>
 			<control type="group">
+				<visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
 				<include content="EpisodeLargeWidgetLayout">
-					<param name="Control">$PARAM[Control]</param>
+					<param name="Control">$PARAM[Control]1</param>
 					<param name="Content">$PARAM[Content]</param>
 					<param name="Custom">$PARAM[Custom]</param>
 				</include>
-				<visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
 			</control>
 		</definition>
 	</include>
@@ -2240,6 +2078,15 @@
 		<param name="Content" default="" />
 		<param name="Custom" default="False" />
 		<definition>
+			<control type="image">
+				<left>-20</left>
+				<top>-5</top>
+				<width>1320</width>
+				<height>295</height>
+				<texture border="5">ContentPanel.png</texture>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
+			</control>
 			<control type="list" id="$PARAM[Control]">
 				<animation effect="slide" start="0,0" end="485,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
 				<animation effect="slide" start="0,0" end="387,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
@@ -2399,8 +2246,6 @@
 				<viewtype label="535">list</viewtype>
 				<scrolltime>200</scrolltime>
 				<orientation>Horizontal</orientation>
-				<focusposition>1</focusposition>
-				<movement>2</movement>
 				<itemlayout height="220" width="240">
 					<control type="image">
 						<left>0</left>
@@ -2584,6 +2429,15 @@
 		<param name="Content" default="" />
 		<param name="Custom" default="False" />
 		<definition>
+			<control type="image">
+				<left>-20</left>
+				<top>-5</top>
+				<width>1320</width>
+				<height>295</height>
+				<texture border="5">ContentPanel.png</texture>
+				<include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
+			</control>
 			<control type="list" id="$PARAM[Control]">
 				<animation effect="slide" start="0,0" end="450,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">onditional</animation>
 				<animation effect="slide" start="0,0" end="300,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">onditional</animation>
@@ -2599,10 +2453,8 @@
 				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(loorGlobalSearch)">610</ondown>
 		        <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + [Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(loorGlobalSearch)]">603</ondown>
 				<viewtype label="535">list</viewtype>
-				<scrolltime>200</scrolltime>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>Horizontal</orientation>
-				<focusposition>1</focusposition>
-				<movement>2</movement>
 				<itemlayout height="285" width="300">
 					<control type="image">
 						<left>10</left>
@@ -2770,16 +2622,16 @@
 		<param name="Format" default="Poster" />
 		<definition>
 			<control type="group">
+				<visible>String.IsEqual($PARAM[Format],Poster)</visible>
 				<include content="SmallWidgetMovieButtons">
 					<param name="Control">$PARAM[Control]</param>
 				</include>
-				<visible>String.IsEqual($PARAM[Format],Poster)</visible>
 			</control>
 			<control type="group">
-				<include content="SmallWidgetEpisodeButtons">
-					<param name="Control">$PARAM[Control]</param>
-				</include>
 				<visible>String.IsEqual($PARAM[Format],Thumb)</visible>
+				<include content="SmallWidgetEpisodeButtons">
+					<param name="Control">$PARAM[Control]1</param>
+				</include>
 			</control>
 		</definition>
 	</include>
@@ -2788,16 +2640,16 @@
 		<param name="Format" default="Poster" />
 		<definition>
 			<control type="group">
+				<visible>String.IsEqual($PARAM[Format],Poster)</visible>
 				<include content="LargeWidgetMovieButtons">
 					<param name="Control">$PARAM[Control]</param>
 				</include>
-				<visible>String.IsEqual($PARAM[Format],Poster)</visible>
 			</control>
 			<control type="group">
-				<include content="LargeWidgetEpisodeButtons">
-					<param name="Control">$PARAM[Control]</param>
-				</include>
 				<visible>String.IsEqual($PARAM[Format],Thumb)</visible>
+				<include content="LargeWidgetEpisodeButtons">
+					<param name="Control">$PARAM[Control]1</param>
+				</include>
 			</control>
 		</definition>
 	</include>
@@ -2813,7 +2665,7 @@
 				<texturenofocus>arrow-big-left.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],-1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasPrevious</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="button">
@@ -2825,7 +2677,7 @@
 				<texturenofocus>arrow-big-right.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasNext</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 		</definition>
@@ -2842,7 +2694,7 @@
 				<texturenofocus>arrow-big-left.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],-1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasPrevious</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="button">
@@ -2854,7 +2706,7 @@
 				<texturenofocus>arrow-big-right.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasNext</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 		</definition>
@@ -2871,7 +2723,7 @@
 				<texturenofocus>arrow-big-left.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],-1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasPrevious</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="button">
@@ -2883,7 +2735,7 @@
 				<texturenofocus>arrow-big-right.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasNext</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 		</definition>
@@ -2900,7 +2752,7 @@
 				<texturenofocus>arrow-big-left.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],-1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasPrevious</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="button">
@@ -2912,7 +2764,7 @@
 				<texturenofocus>arrow-big-right.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasNext</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 		</definition>
@@ -2929,7 +2781,7 @@
 				<texturenofocus>arrow-big-left.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],-1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasPrevious</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="button">
@@ -2941,7 +2793,7 @@
 				<texturenofocus>arrow-big-right.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasNext</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 		</definition>
@@ -2958,7 +2810,7 @@
 				<texturenofocus>arrow-big-left.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],-1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasPrevious</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="button">
@@ -2970,7 +2822,7 @@
 				<texturenofocus>arrow-big-right.png</texturenofocus>
 				<include>VisibleFadeEffect</include>
 				<onclick>Control.Move($PARAM[Control],1)</onclick>
-				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasNext</visible>
+				<visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 		</definition>

@@ -970,7 +970,7 @@
 						<onclick>PreviousMenu</onclick>
 						<onclick>RunScript($INFO[Skin.String(CustomVideoInfoScript)])</onclick>
 						<enable>!String.IsEmpty(Skin.String(CustomVideoInfoScript))</enable>
-						<visible>[Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(EnableCustomVideoInfoScript)</visible>
+						<visible>Skin.HasSetting(EnableCustomVideoInfoScript)</visible>
 					</control>
 					<control type="button" id="6">
 						<description>Refresh</description>

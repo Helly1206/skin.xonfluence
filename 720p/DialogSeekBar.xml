@@ -53,7 +53,7 @@
 		</control>
 		<control type="group">
 			<animation effect="slide" start="0,0" end="195,665" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-100" time="0" condition="Skin.HasSetting(HidePopUpSeekBar) + [[Window.IsActive(VideoOSD) + !Skin.HasSetting(HideArtWorkOSD)] | [Window.IsActive(MusicOSD) + !Skin.HasSetting(HideMusicArtWorkOSD)]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-120" time="0" condition="Skin.HasSetting(HidePopUpSeekBar) + [[Window.IsActive(VideoOSD) + !Skin.HasSetting(HideArtWorkOSD)] | [Window.IsActive(MusicOSD) + !Skin.HasSetting(HideMusicArtWorkOSD)]]">Conditional</animation>
             <animation effect="slide" start="0,0" end="-100,0" time="0" condition="!Skin.HasSetting(HidePopUpSeekBar) + system.getbool(input.enablemouse)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="!Skin.HasSetting(HidePopUpSeekBar) + Player.Muted">conditional</animation>
 			<left>560r</left>

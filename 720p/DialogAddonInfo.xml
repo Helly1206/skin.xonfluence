@@ -143,34 +143,67 @@
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
 				</control>
+				<control type="image">
+					<left>0</left>
+					<top>115</top>
+					<width>600</width>
+					<height>4</height>
+					<texture>separator.png</texture>
+				</control>
 				<control type="label">
 					<description>News txt</description>
-					<left>10</left>
+					<left>0</left>
 					<top>120</top>
 					<width>140</width>
 					<height>25</height>
-					<label>$LOCALIZE[24054]:</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13</font>
-					<textcolor>blue</textcolor>
-				</control>
-				<control type="fadelabel">
-					<description>News Value</description>
-					<left>160</left>
-					<top>120</top>
-					<width>440</width>
-					<height>25</height>
-					<label fallback="416">$INFO[ListItem.AddonNews]</label>
+					<label>$LOCALIZE[24054]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<scrollout>false</scrollout>
-					<pauseatend>2000</pauseatend>
+					<textcolor>$VAR[MainColorOne]</textcolor>
+				</control>
+				<control type="label">
+					<description>News Page Count</description>
+					<left>310</left>
+					<top>120</top>
+					<width>300</width>
+					<height>25</height>
+					<label>$INFO[Container(300).CurrentPage, $LOCALIZE[31024] [COLOR=grey3]([/COLOR]]$INFO[Container(300).NumPages,/,[COLOR=grey3])[/COLOR]]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+				</control>
+				<control type="textbox" id="300">
+					<description>News Value</description>
+					<left>10</left>
+					<top>147</top>
+					<width>440</width>
+					<height>98</height>
+					<font>font13</font>
+					<align>justify</align>
+					<textcolor>white</textcolor>
+					<label fallback="416">$INFO[ListItem.AddonNews]</label>
+					<pagecontrol>80</pagecontrol>
+				</control>
+				<control type="scrollbar" id="80">
+					<left>610</left>
+					<top>145</top>
+					<width>25</width>
+					<height>100</height>
+					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>160</top>
+					<top>255</top>
 					<width>600</width>
 					<height>4</height>
 					<texture>separator.png</texture>
@@ -178,7 +211,7 @@
 				<control type="label">
 					<description>Description txt</description>
 					<left>0</left>
-					<top>170</top>
+					<top>260</top>
 					<width>300</width>
 					<height>25</height>
 					<label>$LOCALIZE[21821]</label>
@@ -192,7 +225,7 @@
 					<control type="label">
 						<description>Description Page Count</description>
 						<left>310</left>
-						<top>170</top>
+						<top>260</top>
 						<width>300</width>
 						<height>25</height>
 						<label>$INFO[Container(400).CurrentPage, $LOCALIZE[31024] [COLOR=grey3]([/COLOR]]$INFO[Container(400).NumPages,/,[COLOR=grey3])[/COLOR]]</label>
@@ -204,9 +237,9 @@
 					<control type="textbox" id="400">
 						<description>Description</description>
 						<left>10</left>
-						<top>197</top>
+						<top>287</top>
 						<width>600</width>
-						<height>188</height>
+						<height>98</height>
 						<font>font13</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
@@ -215,15 +248,15 @@
 					</control>
 					<control type="scrollbar" id="60">
 						<left>610</left>
-						<top>195</top>
+						<top>285</top>
 						<width>25</width>
-						<height>190</height>
+						<height>100</height>
 						<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 						<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 						<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
-						<onleft>9000</onleft>
+						<onleft>80</onleft>
 						<onright>61</onright>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
@@ -258,7 +291,7 @@
 					<control type="label">
 						<description>Description Page Count</description>
 						<left>310</left>
-						<top>170</top>
+						<top>260</top>
 						<width>300</width>
 						<height>25</height>
 						<label>$INFO[Container(401).CurrentPage, $LOCALIZE[31024] [COLOR=grey3]([/COLOR]]$INFO[Container(401).NumPages,/,[COLOR=grey3])[/COLOR]]</label>
@@ -270,9 +303,9 @@
 					<control type="textbox" id="401">
 						<description>Description</description>
 						<left>10</left>
-						<top>207</top>
+						<top>287</top>
 						<width>600</width>
-						<height>258</height>
+						<height>158</height>
 						<font>font13</font>
 						<align>left</align>
 						<textcolor>white</textcolor>
@@ -281,9 +314,9 @@
 					</control>
 					<control type="scrollbar" id="61">
 						<left>610</left>
-						<top>205</top>
+						<top>285</top>
 						<width>25</width>
-						<height>260</height>
+						<height>160</height>
 						<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 						<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -301,8 +334,8 @@
 				<top>300</top>
 				<width>220</width>
 				<height>313</height>
-				<onleft>60</onleft>
-				<onright>60</onright>
+				<onleft>80</onleft>
+				<onright>80</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemgap>2</itemgap>

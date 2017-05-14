@@ -123,7 +123,7 @@
 				<top>95r</top>
 				<animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | [Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [Skin.HasSetting(HideSeekBarOSD2) + Window.IsActive(VideoOSD)] + !Player.ShowInfo" reversible="true">Conditional</animation>
 				<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
-				<visible>Player.ShowInfo | Window.IsVisible(VideoOSD) | [!Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [!Skin.HasSetting(HideSeekBarOSD2) + Window.IsActive(VideoOSD)]</visible>
+				<visible>Player.ShowInfo | Window.IsVisible(VideoOSD) | [!Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [!Skin.HasSetting(HideSeekBarOSD2) + Window.IsActive(VideoOSD)] | [!Skin.HasSetting(HideSeekBarOSD) + Skin.HasSetting(HidePopUpSeekBar) + [!Player.Playing | Player.DisplayAfterSeek]]</visible>
 				<control type="label" id="1">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 					<left>0</left>
