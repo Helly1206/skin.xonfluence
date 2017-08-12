@@ -1,7 +1,7 @@
 skin.xonfluence:
 
 See:
-http://forum.kodi.tv/showthread.php?tid=238630
+https://forum.kodi.tv/showthread.php?tid=315391
      
 
 
