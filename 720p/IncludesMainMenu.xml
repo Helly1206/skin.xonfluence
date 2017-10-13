@@ -326,6 +326,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.1.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.1.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.1.Master) | [Skin.HasSetting(HomeItem.1.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="2">
 				<description>Home Menu Item Two</description>
@@ -348,6 +349,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.2.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.2.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.2.Master) | [Skin.HasSetting(HomeItem.2.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="3">
 				<description>Home Menu Item Three</description>
@@ -370,6 +372,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.3.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.3.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.3.Master) | [Skin.HasSetting(HomeItem.3.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="4">
 				<description>Home Menu Item Four</description>
@@ -392,6 +395,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.4.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.4.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.4.Master) | [Skin.HasSetting(HomeItem.4.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="5">
 				<description>Home Menu Item Five</description>
@@ -414,6 +418,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.5.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.5.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.5.Master) | [Skin.HasSetting(HomeItem.5.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="6">
 				<description>Home Menu Item Six</description>
@@ -436,6 +441,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.6.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.6.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.6.Master) | [Skin.HasSetting(HomeItem.6.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="7">
 				<description>Home Menu Item Seven</description>
@@ -458,6 +464,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.7.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.7.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.7.Master) | [Skin.HasSetting(HomeItem.7.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="8">
 				<description>Home Menu Item Eight</description>
@@ -480,6 +487,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.8.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.8.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.8.Master) | [Skin.HasSetting(HomeItem.8.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="9">
 				<description>Home Menu Item Nine</description>
@@ -502,6 +510,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.9.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.9.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.9.Master) | [Skin.HasSetting(HomeItem.9.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="10">
 				<description>Home Menu Item Ten</description>
@@ -524,6 +533,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.10.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.10.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.10.Master) | [Skin.HasSetting(HomeItem.10.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="11">
 				<description>Home Menu Item Eleven</description>
@@ -546,6 +556,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.11.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.11.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.11.Master) | [Skin.HasSetting(HomeItem.11.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="12">
 				<description>Home Menu Item Twelve</description>
@@ -568,6 +579,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.12.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.12.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.12.Master) | [Skin.HasSetting(HomeItem.12.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="13">
 				<description>Home Menu Item Thirteen</description>
@@ -590,6 +602,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.13.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.13.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.13.Master) | [Skin.HasSetting(HomeItem.13.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="14">
 				<description>Home Menu Item Fourteen</description>
@@ -612,6 +625,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.14.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.14.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.14.Master) | [Skin.HasSetting(HomeItem.14.Master) + System.IsMaster]</visible>
 			</item>
 			<item id="15">
 				<description>Home Menu Item Fifteen</description>
@@ -634,6 +648,7 @@
 				<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.15.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
 				<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),PlayDisc) | [String.IsEqual(Skin.String(HomeItem.15.Type),PlayDisc) + System.HasMediaDVD]</visible>
+				<visible>!Skin.HasSetting(HomeItem.15.Master) | [Skin.HasSetting(HomeItem.15.Master) + System.IsMaster]</visible>
 			</item>
 		</content>
 	</include>

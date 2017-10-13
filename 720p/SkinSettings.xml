@@ -1695,6 +1695,19 @@
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 							</control>
+							<control type="radiobutton" id="1208">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.1.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.1.Master)</selected>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+							</control>
 						</control>
 						<control type="image">
 							<left>80r</left>
@@ -1831,6 +1844,19 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.2.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.2.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+							</control>
+							<control type="radiobutton" id="1218">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.2.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.2.Master)</selected>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
 							</control>
 						</control>
@@ -1971,6 +1997,19 @@
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
 							</control>
+							<control type="radiobutton" id="1228">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.3.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.3.Master)</selected>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+							</control>
 						</control>
 						<control type="image">
 							<left>80r</left>
@@ -2107,6 +2146,19 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.4.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.4.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+							</control>
+							<control type="radiobutton" id="1238">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.4.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.4.Master)</selected>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
 							</control>
 						</control>
@@ -2247,6 +2299,19 @@
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
 							</control>
+							<control type="radiobutton" id="1248">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.5.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.5.Master)</selected>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+							</control>
 						</control>
 						<control type="image">
 							<left>80r</left>
@@ -2383,6 +2448,19 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.6.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.6.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
+							</control>
+							<control type="radiobutton" id="1258">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.6.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.6.Master)</selected>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
 							</control>
 						</control>
@@ -2523,6 +2601,19 @@
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
 							</control>
+							<control type="radiobutton" id="1268">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.7.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.7.Master)</selected>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+							</control>
 						</control>
 						<control type="image">
 							<left>80r</left>
@@ -2659,6 +2750,19 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.8.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.8.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+							</control>
+							<control type="radiobutton" id="1278">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.8.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.8.Master)</selected>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
 							</control>
 						</control>
@@ -2799,6 +2903,19 @@
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
 							</control>
+							<control type="radiobutton" id="1288">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.9.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.9.Master)</selected>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+							</control>
 						</control>
 						<control type="image">
 							<left>80r</left>
@@ -2935,6 +3052,19 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.10.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.10.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+							</control>
+							<control type="radiobutton" id="1298">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.10.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.10.Master)</selected>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
 							</control>
 						</control>
@@ -3075,6 +3205,19 @@
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
 							</control>
+							<control type="radiobutton" id="1308">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.11.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.11.Master)</selected>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+							</control>
 						</control>
 						<control type="image">
 							<left>80r</left>
@@ -3211,6 +3354,19 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.12.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.12.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+							</control>
+							<control type="radiobutton" id="1318">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.12.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.12.Master)</selected>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
 							</control>
 						</control>
@@ -3351,6 +3507,19 @@
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
 							</control>
+							<control type="radiobutton" id="1328">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.13.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.13.Master)</selected>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+							</control>
 						</control>
 						<control type="image">
 							<left>80r</left>
@@ -3489,6 +3658,19 @@
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
 							</control>
+							<control type="radiobutton" id="1338">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.14.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.14.Master)</selected>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+							</control>
 						</control>
 						<control type="image">
 							<left>80r</left>
@@ -3625,6 +3807,19 @@
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.15.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.15.Playlist)],Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+							</control>
+							<control type="radiobutton" id="1348">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<align>left</align>
+								<label> - $LOCALIZE[32000]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<include>MenuButton</include>
+								<onclick>Skin.ToggleSetting(HomeItem.15.Master)</onclick>
+								<selected>Skin.HasSetting(HomeItem.15.Master)</selected>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
 							</control>
 						</control>	
