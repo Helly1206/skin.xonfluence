@@ -1,12 +1,15 @@
+[B]3.3.19[/B]
+- Added pull request 'Conditional visibility of menu items on home screen based on master mode settings' from mbroemme
+
 [B]3.3.18[/B]
 - Fixed bug on non working 'Hide top left info on windows' and 'Topleft widget on all screens' setting
 - FileManager always shows floor return buttons. Fixed this.
 - Fixed Mute icon position (it overlapped the clock). #1960
-- Apdated "What's New" list to display multiple lines in a textbox with scrollbar #1960
+- Updated "What's New" list to display multiple lines in a textbox with scrollbar #1960
 - Fixed positioning for non original confluence seekbar when OSD is displayed
 - Show large seekbar during fast forward or skipping for non original confluence seekbar with OSD seekbar enabled #1960
-- Fixed scolling through widgets with mouse/ touchscreen. Buttons now always show with mouse enabled, not only when focused on widgets #1960
-- Fixed background not showing up when loading widdgets #1957
+- Fixed scrolling through widgets with mouse/ touchscreen. Buttons now always show with mouse enabled, not only when focused on widgets #1960
+- Fixed background not showing up when loading widgets #1957
 - Fixed custom video info script button appearing on non movies or tvshows #1960
 
 [B]3.3.17[/B]
