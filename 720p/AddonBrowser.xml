@@ -61,7 +61,7 @@
 					<description>View As button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
@@ -72,7 +72,7 @@
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<include>AltButton3</include>
-					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturenofocus></alttexturenofocus>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
@@ -100,6 +100,11 @@
 					<description>Check for updates</description>
 					<include>ButtonCommonValues</include>
 					<label>24034</label>
+				</control>
+				<control type="button" id="5">
+					<description>Settings shortcut</description>
+					<include>ButtonCommonValues</include>
+					<label>10004</label>
 				</control>
 				<include>CommonNowPlaying_Controls</include>
 			</control>

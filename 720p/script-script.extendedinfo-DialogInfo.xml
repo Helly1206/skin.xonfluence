@@ -82,7 +82,7 @@
 					<onright>5000</onright>
 					<onup>4000</onup>
 					<ondown>4000</ondown>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="34" width="260">
 						<control type="image">
@@ -128,37 +128,30 @@
 					<content>
 						<item id="1">
 							<label>$ADDON[script.extendedinfo 32120]$INFO[Container(150).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
 						</item>
 						<item id="2">
 							<label>$ADDON[script.extendedinfo 32121]$INFO[Container(250).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
 						</item>
 						<item id="3">
 							<label>$ADDON[script.extendedinfo 32122]$INFO[Container(550).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(550).NumItems,0)</visible>
 						</item>
 						<item id="4">
 							<label>$ADDON[script.extendedinfo 32123]$INFO[Container(650).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(650).NumItems,0)</visible>
 						</item>
 						<item id="5">
 							<label>$ADDON[script.extendedinfo 32118]$INFO[Container(350).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
 						</item>
 						<item id="6">
 							<label>$ADDON[script.extendedinfo 32119]$INFO[Container(450).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
 						</item>
 						<item id="7">
 							<label>$LOCALIZE[20445]$INFO[Container(750).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
 						</item>
 					</content>
@@ -926,7 +919,7 @@
 								<onleft>60</onleft>
 								<onright>4000</onright>
     	                        <include>MenuButton</include>
-    	                        <label>-</label>
+    	                        <label></label>
     	                    </control>
     	                    <control type="textbox" id="800">
     	                        <posx>5</posx>

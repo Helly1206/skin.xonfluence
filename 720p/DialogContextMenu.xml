@@ -24,8 +24,8 @@
 			<itemgap>2</itemgap>
 			<control type="button" id="3001">
 				<description>Watch it Later</description>
-				<left>-</left>
-				<top>-</top>
+				<left></left>
+				<top></top>
 				<width>300</width>
 				<height>38</height>
 				<font>fontContextMenu</font>
@@ -39,8 +39,8 @@
 			</control>
 			<control type="button" id="3002">
                 <description>Button Trailer</description>
-                <left>-</left>
-                <top>-</top>
+                <left></left>
+                <top></top>
                 <width>300</width>
                 <height>38</height>
                 <font>fontContextMenu</font>
@@ -60,8 +60,8 @@
 			<top>5</top>
 			<width>64</width>
 			<height>32</height>
-			<label>-</label>
-			<font>-</font>
+			<label></label>
+			<font></font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -73,8 +73,8 @@
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
-			<left>-</left>
-			<top>-</top>
+			<left></left>
+			<top></top>
 			<width>300</width>
 			<height>38</height>
 			<font>fontContextMenu</font>

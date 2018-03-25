@@ -426,7 +426,7 @@
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>
-				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[19138] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
+				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[19138] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
 				<visible>Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)</visible>
 				<include>Window_OpenClose_Animation</include>
 			</control>
@@ -443,7 +443,7 @@
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>
-				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[19040] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
+				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[19040] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
 				<visible>Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)</visible>
 				<include>Window_OpenClose_Animation</include>
 			</control>

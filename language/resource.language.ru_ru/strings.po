@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "Измените"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "ИГРЫ"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ИГРЫ[/B][CR][CR]Настройки перемотки · Настройка конфигурации клавиатуры и числа игроков"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -46,7 +46,7 @@ msgstr "Настройки просмотра"
 
 msgctxt "#31007"
 msgid "Video process information"
-msgstr ""
+msgstr "Сведения о видеопроцесе"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -62,7 +62,7 @@ msgstr "Аппаратное декодирование"
 
 msgctxt "#31011"
 msgid "Inactive"
-msgstr ""
+msgstr "Неактивно"
 
 msgctxt "#31012"
 msgid "Decoder"
@@ -70,19 +70,15 @@ msgstr "Декодер"
 
 msgctxt "#31013"
 msgid "Audio process information"
-msgstr ""
+msgstr "Сведения о аудиопроцесе"
 
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Использовано памяти"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Минута"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"
@@ -1410,31 +1422,31 @@ msgstr ""
 
 msgctxt "#31430"
 msgid "[B]PLAYER SETTINGS[/B][CR][CR]Configure actions that can be used during playback · Configure how media content is played"
-msgstr ""
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ПРОИГРЫВАТЕЛЯ[/B][CR][CR]Выберите доступные действия во время игры · Настройте, как должен проигрываться медиаконтент"
 
 msgctxt "#31431"
 msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content ·  Configure how library lists/views are navigated · Configure the media database options"
-msgstr ""
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ БИБЛИОТЕК[/B][CR][CR]Настройка способа отображения медиафайлов в библиотеке · Настройка навигации по спискам/просмотра библиотек · Настройка параметров базы данных мультимедиа"
 
 msgctxt "#31432"
 msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed  · Configure how Live TV and recordings are managed"
-msgstr ""
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ТВ[/B][CR][CR]Управление ТВ и радио каналами · Настройка управления записями · Настройка отображения EPG"
 
 msgctxt "#31433"
 msgid "[B]ADD-ONS SETTINGS[/B][CR][CR]Configure your installed add-ons · Browse for and install add-ons from kodi.tv"
-msgstr ""
+msgstr "[B]КОНФИГУРАЦИЯ ДОПОЛНЕНИЙ[/B][CR][CR]Настройка установлиных дополнений · Поиск и установка дополнений с kodi.tv"
 
 msgctxt "#31434"
 msgid "[B]SERVICES SETTINGS[/B][CR][CR]Configure & manage media sharing services · Configure web server · Configure & manage the weather service"
-msgstr ""
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СЛУЖБ[/B][CR][CR]Настройка и управление службами обмена мультимедиа · Настройка веб-сервера · Настройка и управление метеорологическим сервисом"
 
 msgctxt "#31435"
 msgid "[B]SYSTEM SETTINGS[/B][CR][CR]Configure display · Configure audio · Configure internet access · Configure power saving· Configure logging"
-msgstr ""
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СИСТЕМЫ[/B][CR][CR]Настройка и калибровка дисплеев · Настройка вывода аудио · Настройка доступа в интернет · Настройка параметров энергосбережения · Настройка ведение журнала"
 
 msgctxt "#31436"
 msgid "[B]INTERFACE SETTINGS[/B][CR][CR]Configure skin · Configure region · Configure control · Configure screensaver · Configure master lock"
-msgstr ""
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ИНТЕРФЕЙСА[/B][CR][CR]Настройки обложки · Региональные настройки · Настройка заставки · Настройка общей блокировки"
 
 msgctxt "#31437"
 msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Xonfluence skin · Add and remove home menu items · Change skin backgrounds"

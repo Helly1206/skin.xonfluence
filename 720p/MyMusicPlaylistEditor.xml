@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">6</defaultcontrol>
 	<menucontrol>9000</menucontrol>
+	<views>50</views>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
@@ -89,7 +90,7 @@
 					<align>center</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[556]:[/COLOR] $INFO[Container(50).ListItem.Title][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[557]:[/COLOR] $INFO[Container(50).ListItem.Artist][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[558]:[/COLOR] $INFO[Container(50).ListItem.Album][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[555]:[/COLOR] $INFO[Container(50).ListItem.Duration][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[554]:[/COLOR] $INFO[Container(50).ListItem.TrackNumber][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[515]:[/COLOR] $INFO[Container(50).ListItem.Genre,][CR]</label>
 				</control>
 			</control>
@@ -113,7 +114,7 @@
 					<align>center</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[556]:[/COLOR] $INFO[Container(100).ListItem.Title][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[557]:[/COLOR] $INFO[Container(100).ListItem.Artist][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[558]:[/COLOR] $INFO[Container(100).ListItem.Album][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[555]:[/COLOR] $INFO[Container(100).ListItem.Duration][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[554]:[/COLOR] $INFO[Container(100).ListItem.TrackNumber][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[515]:[/COLOR] $INFO[Container(100).ListItem.Genre][CR]</label>
 				</control>
 			</control>

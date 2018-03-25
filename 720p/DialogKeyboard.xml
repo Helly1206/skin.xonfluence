@@ -85,8 +85,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
 			</control>
 			<control type="image">
 				<left>130</left>
@@ -214,7 +214,7 @@
 						<description>SHIFT button</description>
 						<width>200</width>
 						<height>50</height>
-						<label>-</label>
+						<label></label>
 						<onup>309</onup>
 						<ondown>303</ondown>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -327,7 +327,7 @@
 						<description>CAPS LOCK button</description>
 						<width>200</width>
 						<height>50</height>
-						<label>-</label>
+						<label></label>
 						<onup>302</onup>
 						<ondown>307</ondown>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -551,7 +551,7 @@
 						<height>50</height>
 						<texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
 						<texturefocus border="25,5,25,5" colordiffuse="$VAR[MainColorOne]">KeyboardCornerBottom.png</texturefocus>
-						<label>-</label>
+						<label></label>
 						<onup>304</onup>
 						<ondown condition="!Control.IsVisible(5000)">309</ondown>
 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
@@ -560,7 +560,7 @@
 						<description>SPACE button</description>
 						<width>200</width>
 						<height>50</height>
-						<label>-</label>
+						<label></label>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">KeyboardKey.png</texturefocus>
 						<onup>161</onup>
@@ -571,7 +571,7 @@
 						<description>BACKSPACE button</description>
 						<width>150</width>
 						<height>50</height>
-						<label>-</label>
+						<label></label>
 						<onup>164</onup>
 						<ondown condition="!Control.IsVisible(5000)">104</ondown>
 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
@@ -657,7 +657,7 @@
 					<control type="label">
 						<width>100</width>
 						<height>50</height>
-						<label>-</label>
+						<label></label>
 						<font>font13</font>
 						<align>center</align>
 						<aligny>center</aligny>

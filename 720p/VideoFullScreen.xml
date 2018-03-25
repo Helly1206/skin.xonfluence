@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol></defaultcontrol>
 	<onunload>Skin.SetString(LastVideoPlayed,PlayMedia("$INFO[Player.Filenameandpath]"))</onunload>
 	<controls>
 		<!-- Intro infos -->
@@ -24,6 +24,54 @@
 				<top>125r</top>
 				<include>OSDMediaHeading</include>
 				<include>OSDMediaFlagging</include>
+			</control>
+		</control>
+		<!-- view mode, sizing, screen resolution -->
+		<control type="group" id="0">
+			<depth>DepthOSD+</depth>
+			<left>0</left>
+			<top>20</top>
+			<animation effect="fade" time="150">VisibleChange</animation>
+			<control type="image">
+				<description>media info background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>160</height>
+				<texture>black-back.png</texture>
+			</control>
+			<control type="label" id="10">
+				<description>row 1 label</description>
+				<left>50</left>
+				<top>10</top>
+				<width>1180</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label></label>
+			</control>
+			<control type="label" id="11">
+				<description>row 2 label</description>
+				<left>50</left>
+				<top>55</top>
+				<width>1180</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label></label>
+			</control>
+			<control type="label" id="12">
+				<description>row 3 label</description>
+				<left>50</left>
+				<top>100</top>
+				<width>1180</width>
+				<height>45</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label></label>
 			</control>
 		</control>
 		<!-- media infos -->
@@ -107,7 +155,7 @@
 					<top>120</top>
 					<width>910</width>
 					<height>25</height>
-					<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]$LOCALIZE[31001] ]</label>
+					<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]$LOCALIZE[31156] ]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12</font>

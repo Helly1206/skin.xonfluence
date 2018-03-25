@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "Altere suas"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "JOGOS"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]AJUSTES DE JOGOS [/ B] [CR] [CR]Configure o suporte a retroceder & demais opções· Configure o uso do teclado bem como o número de teclados disponíveis"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -77,12 +77,8 @@ msgid "Memory used"
 msgstr "Memória usada"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Minuto"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"
@@ -1410,31 +1422,31 @@ msgstr ""
 
 msgctxt "#31430"
 msgid "[B]PLAYER SETTINGS[/B][CR][CR]Configure actions that can be used during playback · Configure how media content is played"
-msgstr "[B]AJUSTES DO REPRODUTOR[B}[CR][CR]Configurar as ações que podem ser usadas durante reprodução - Configurar o modo como o conteúdo de mída é reproduzido."
+msgstr "[B]AJUSTES DO REPRODUTOR[/B][CR][CR]Configurar as ações que podem ser usadas durante reprodução - Configurar o modo como o conteúdo de mídia é reproduzido."
 
 msgctxt "#31431"
 msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content ·  Configure how library lists/views are navigated · Configure the media database options"
-msgstr "[B]AJUSTES DA COLEÇÃO[BR][CR][CR]Configurar o modo como as listas de mídia são exibidas  em modo arquivo ou coleção · Configurar navegabilidade nas coleções - Configurar as opções de banco de dados"
+msgstr "[B]AJUSTES DA COLEÇÃO[/B][CR][CR]Configurar o modo como as listas de mídia são exibidas  em modo arquivo ou coleção · Configurar navegabilidade nas coleções - Configurar as opções de banco de dados"
 
 msgctxt "#31432"
 msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed  · Configure how Live TV and recordings are managed"
-msgstr "[B]AJUSTES DE PVR[B][CR][CR]Configurar como os canais % guia epg são gerenciados - Configurar como TV ao Vivo e gravações são gerenciados."
+msgstr "[B]AJUSTES DE PVR[/B][CR][CR]Configurar como os canais % guia epg são gerenciados - Configurar como TV ao Vivo e gravações são gerenciados."
 
 msgctxt "#31433"
 msgid "[B]ADD-ONS SETTINGS[/B][CR][CR]Configure your installed add-ons · Browse for and install add-ons from kodi.tv"
-msgstr "[B]AJUSTES DE ADDONS[B][CR][CR]Configure seus addons instalados - Navegue por e instale addons via kodi.tv"
+msgstr "[B]AJUSTES DE ADDONS[/B][CR][CR]Configure seus addons instalados - Navegue por e instale addons via kodi.tv"
 
 msgctxt "#31434"
 msgid "[B]SERVICES SETTINGS[/B][CR][CR]Configure & manage media sharing services · Configure web server · Configure & manage the weather service"
-msgstr "[B]AJUSTES DE SERVIÇOS[B][CR][CR]Configure & gerencie serviços de compartilhamento de mídia - Configure servidor web - Configure & gerencie serviços climáticos"
+msgstr "[B]AJUSTES DE SERVIÇOS[/B][CR][CR]Configure & gerencie serviços de compartilhamento de mídia - Configure servidor web - Configure & gerencie serviços climáticos"
 
 msgctxt "#31435"
 msgid "[B]SYSTEM SETTINGS[/B][CR][CR]Configure display · Configure audio · Configure internet access · Configure power saving· Configure logging"
-msgstr "[B]AJUSTES DE SISTEMA[B][CR][CR]Configure display - Configure áudio - Configue acesso internet - Configure economizar energia - Configure depuração"
+msgstr "[B]AJUSTES DE SISTEMA[/B][CR][CR]Configure tela - Configure áudio - Configure acesso internet - Configure gerenciar energia - Configure depuração"
 
 msgctxt "#31436"
 msgid "[B]INTERFACE SETTINGS[/B][CR][CR]Configure skin · Configure region · Configure control · Configure screensaver · Configure master lock"
-msgstr "[B]AJUSTES DE INTERFACE[BR][CR][CR]Configure skin - Configure região - Configure controles - Configure protetor de tela - Configure trava de segurança master."
+msgstr "[B]AJUSTES DE INTERFACE[/B][CR][CR]Configure skin - Configure regional - Configure controles - Configure proteção de tela - Configure bloqueio-mestre."
 
 msgctxt "#31437"
 msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Xonfluence skin · Add and remove home menu items · Change skin backgrounds"
@@ -1810,7 +1822,7 @@ msgstr "FILMES"
 
 msgctxt "#31955"
 msgid "TV SHOWS"
-msgstr "SÉRIES DE TV"
+msgstr "SERIADOS"
 
 msgctxt "#31956"
 msgid "MUSIC"

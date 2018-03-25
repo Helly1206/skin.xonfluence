@@ -18,15 +18,15 @@ msgstr ""
 
 msgctxt "#31000"
 msgid "Change your"
-msgstr "Kodi"
+msgstr "Pakeisk savo"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "ŽAIDIMAI"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]ŽAIDIMŲ NUSTATYMAI[/B][CR][CR]Konfigūruoti atsukimo palaikymą ir parinktis · Konfigūruoti klaviatūros naudojimą ir žaidėjų su klaviatūra skaičių"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -77,12 +77,8 @@ msgid "Memory used"
 msgstr "Naudojama atminties"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Minutė"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -206,7 +202,7 @@ msgstr ""
 
 msgctxt "#31048"
 msgid "Visualisation presets"
-msgstr "Vizualizacijų išankstinės parinktys"
+msgstr "Vizualizacijų parinktys"
 
 msgctxt "#31049"
 msgid "End time"
@@ -422,7 +418,7 @@ msgstr "Rodyti \"Pauzė\" nuotraukų skaidrių peržiūroje"
 
 msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
-msgstr "Atkurti anonsus lange [COLOR=grey3](Tik vaizdo informacijos lange)[/COLOR]"
+msgstr "Atkurti anonsus lange [COLOR=grey3](Vaizdo informacijos dialogas)[/COLOR]"
 
 msgctxt "#31105"
 msgid "Artwork"
@@ -442,7 +438,7 @@ msgstr "Slėpti pagrindinio meniu mygtukus"
 
 msgctxt "#31109"
 msgid "Enable custom background"
-msgstr "Įjungti savą foną"
+msgstr "Įjungti savo foną"
 
 msgctxt "#31110"
 msgid "Background path:"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"

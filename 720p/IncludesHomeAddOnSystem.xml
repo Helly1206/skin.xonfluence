@@ -529,7 +529,7 @@
 		<top>190r</top>
 		<width>1274</width>
 		<height>200</height>
-		<pagecontrol>-</pagecontrol>
+		<pagecontrol></pagecontrol>
 		<scrolltime>300</scrolltime>
 		<orientation>Horizontal</orientation>
 		<itemlayout height="180" width="164">
@@ -638,7 +638,7 @@
 		<top>190r</top>
 		<width>820</width>
 		<height>200</height>
-		<pagecontrol>-</pagecontrol>
+		<pagecontrol></pagecontrol>
 		<scrolltime>300</scrolltime>
 		<orientation>Horizontal</orientation>
 		<itemlayout height="180" width="164">
@@ -1306,7 +1306,7 @@
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.2.Icon)]</icon>
-			<thumb>-</thumb>
+			<thumb></thumb>
 			<visible>!String.IsEmpty(Skin.String(AddonSetTwelve.2.Path))</visible>
 		</item>
 		<item>

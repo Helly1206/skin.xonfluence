@@ -88,7 +88,7 @@
 					<description>View As button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
@@ -99,7 +99,7 @@
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<include>AltButton3</include>
-					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturenofocus></alttexturenofocus>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
@@ -137,7 +137,7 @@
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<include>NormalButton3</include>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick condition="String.IsEmpty(Skin.String(MediaPopupControl))">Skin.SetString(MediaPopupControl,Delayed)</onclick>
 					<onclick condition="Skin.String(MediaPopupControl,Delayed)">Skin.SetString(MediaPopupControl,Hidden)</onclick>
@@ -271,7 +271,7 @@
 					<label>653</label>
 					<altlabel>13353</altlabel>
 					<include>AltButton3</include>
-					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturenofocus></alttexturenofocus>
 					<usealttexture>library.isscanningvideo</usealttexture>
 				</control>
 				<control type="button" id="204">

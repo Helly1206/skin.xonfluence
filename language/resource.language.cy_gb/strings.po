@@ -18,19 +18,19 @@ msgstr ""
 
 msgctxt "#31000"
 msgid "Change your"
-msgstr ""
+msgstr "Newid eich"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "GEMAU"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]GOSODIADAU GEMAU[/B][CR][CR]Ffurfweddu cefnogaeth ailddirwyn a dewisiadau ·  Ffurfweddu'r bysellfwrdd a'r nifer o chwaraewyr bysellfwrdd"
 
 msgctxt "#31003"
 msgid "Power options"
-msgstr ""
+msgstr "Dewisiadau Pŵer"
 
 msgctxt "#31004"
 msgid "Working..."
@@ -38,7 +38,7 @@ msgstr "Gweithio..."
 
 msgctxt "#31005"
 msgid "Hide information"
-msgstr ""
+msgstr "Cuddio'r wybodaeth"
 
 msgctxt "#31006"
 msgid "View options"
@@ -46,7 +46,7 @@ msgstr "Gweld y dewisiadau"
 
 msgctxt "#31007"
 msgid "Video process information"
-msgstr ""
+msgstr "Gwybodaeth y prosesydd fideo"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -54,35 +54,31 @@ msgstr "Sgrin Lawn"
 
 msgctxt "#31009"
 msgid "Total duration"
-msgstr ""
+msgstr "Cyfanswm hyd"
 
 msgctxt "#31010"
 msgid "Hardware decoding"
-msgstr ""
+msgstr "Dadgodio caledwedd"
 
 msgctxt "#31011"
 msgid "Inactive"
-msgstr ""
+msgstr "Anweithredol"
 
 msgctxt "#31012"
 msgid "Decoder"
-msgstr ""
+msgstr "Dadgodydd"
 
 msgctxt "#31013"
 msgid "Audio process information"
-msgstr ""
+msgstr "Gwybodaeth y prosesydd sain"
 
 msgctxt "#31014"
 msgid "Memory used"
-msgstr ""
+msgstr "Cof a ddefnyddir"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Munud"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -122,7 +118,7 @@ msgstr "Eitem"
 
 msgctxt "#31026"
 msgid "Misc options"
-msgstr ""
+msgstr "Dewisiadau eraill"
 
 msgctxt "#31027"
 msgid "Location"
@@ -142,7 +138,7 @@ msgstr ""
 
 msgctxt "#31031"
 msgid "Pic thumbs"
-msgstr ""
+msgstr "Mân-luniau"
 
 msgctxt "#31032"
 msgid "Image wrap"
@@ -174,7 +170,7 @@ msgstr "Gweithredoedd"
 
 msgctxt "#31040"
 msgid "Now playing"
-msgstr ""
+msgstr "Wrthi'n chwarae"
 
 msgctxt "#31041"
 msgid "UPnP error"
@@ -620,6 +616,22 @@ msgctxt "#31155"
 msgid "Show global search button on bottom left"
 msgstr ""
 
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
+msgstr ""
+
 msgctxt "#31188"
 msgid "Random concerts"
 msgstr ""
@@ -1030,7 +1042,7 @@ msgstr ""
 
 msgctxt "#31301"
 msgid "Last updated"
-msgstr ""
+msgstr "Chwaraewyd ddiwethaf"
 
 msgctxt "#31302"
 msgid "Outlook - "

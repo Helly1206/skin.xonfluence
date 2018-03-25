@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "Aldatu zure"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "JOKOAK"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]JOKOAREN EZARPENAK[/B][CR][CR]Konfiguratu birbobinatzeko euskarria eta aukerak - Konfiguratu teklatuaren erabilera eta teklatu erreproduzigailu kopurua"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -38,11 +38,11 @@ msgstr "Lanean..."
 
 msgctxt "#31005"
 msgid "Hide information"
-msgstr "Informazioa ezkutatu"
+msgstr "Ezkutatu informazioa"
 
 msgctxt "#31006"
 msgid "View options"
-msgstr "Ikusteko aukerak"
+msgstr "Bistaratze aukerak"
 
 msgctxt "#31007"
 msgid "Video process information"
@@ -66,7 +66,7 @@ msgstr "Ez dago aktibo"
 
 msgctxt "#31012"
 msgid "Decoder"
-msgstr "Deskodegailua"
+msgstr "Deskodetzailea"
 
 msgctxt "#31013"
 msgid "Audio process information"
@@ -77,12 +77,8 @@ msgid "Memory used"
 msgstr "Erabilitako memoria"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Minutua"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -170,7 +166,7 @@ msgstr ""
 
 msgctxt "#31039"
 msgid "Actions"
-msgstr "Akzioak"
+msgstr "Ekintzak"
 
 msgctxt "#31040"
 msgid "Now playing"
@@ -190,11 +186,11 @@ msgstr "PAUSATUA"
 
 msgctxt "#31044"
 msgid "FAST FORWARD"
-msgstr "AZKAR AURRERA"
+msgstr "BIZKOR AURRERATZEA"
 
 msgctxt "#31045"
 msgid "REWIND"
-msgstr "ATZERA"
+msgstr "BIRBOBINATZEA"
 
 msgctxt "#31046"
 msgid "SEEKING"
@@ -214,11 +210,11 @@ msgstr "Amaiera ordua"
 
 msgctxt "#31050"
 msgid "Sort: Ascending"
-msgstr "Ordenatu:Goraka"
+msgstr "Ordenatu: Gorantz"
 
 msgctxt "#31051"
 msgid "Sort: Descending"
-msgstr "Ordenatu:Beheraka"
+msgstr "Ordenatu: Beherantz"
 
 msgctxt "#31052"
 msgid "New banners"
@@ -410,11 +406,11 @@ msgstr ""
 
 msgctxt "#31101"
 msgid "Home screen options"
-msgstr "Etxe pantaila aukerak"
+msgstr "Hasierako pantaila aukerak"
 
 msgctxt "#31102"
 msgid "Background"
-msgstr "Atzeko irudia"
+msgstr "Atzeko planoa"
 
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slideshow"
@@ -442,11 +438,11 @@ msgstr "Ezkutatu menu nagusiko botoiak"
 
 msgctxt "#31109"
 msgid "Enable custom background"
-msgstr "Gaitu atzeko irudi pertsonalizatua"
+msgstr "Gaitu atzeko plano pertsonalizatua"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr "Atzealdearen bidea:"
+msgstr "Atzeko planoaren bidea:"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -470,19 +466,19 @@ msgstr ""
 
 msgctxt "#31116"
 msgid "Show recently added albums"
-msgstr "Ikusi azkenaldian igotako albumak"
+msgstr "Erakutsi azkenaldian gehitutako albumak"
 
 msgctxt "#31117"
 msgid "Show recently added videos"
-msgstr "Ikusi azkenaldian igotako bideoak"
+msgstr "Ikusi azkenaldian gehitutako bideoak"
 
 msgctxt "#31118"
 msgid "Home page programs submenu"
-msgstr "Pantaila nagusiko \"Programak\" azpimenua"
+msgstr "Hasierako orriko \"Programak\" azpimenua"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
-msgstr "Ezkutatu atzealdeko fanart-a"
+msgstr "Ezkutatu atzeko planoko fanart-a"
 
 msgctxt "#31120"
 msgid "Hide page count info"
@@ -502,11 +498,11 @@ msgstr ""
 
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "Erakutsi atzealdean \"Orain erreproduzitzen\" bideoa "
+msgstr "Erakutsi atzeko planoko \"Orain erreproduzitzen\" bideoa "
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr "Erakutsi atzealdean \"Orain erreproduzitzen\" bistaratzea "
+msgstr "Erakutsi atzeko planoko \"Orain erreproduzitzen\" bistaratzea "
 
 msgctxt "#31127"
 msgid "TvTunes"
@@ -518,7 +514,7 @@ msgstr "Letrak"
 
 msgctxt "#31129"
 msgid "Hide fanart in full screen visualisation"
-msgstr "Ezkutatu fanart-a pantaila osoko bistaraketan"
+msgstr "Ezkutatu fanart-a pantaila osoko bistaratzean"
 
 msgctxt "#31130"
 msgid "Hide favorites button"
@@ -538,15 +534,15 @@ msgstr ""
 
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
-msgstr "Pantaila nagusiko \"Bideoak\" azpimenua"
+msgstr "Hasierako orriko \"Bideoak\" azpimenua"
 
 msgctxt "#31135"
 msgid "Home page \"Music\" submenu"
-msgstr "Pantaila nagusiko \"Musika\" azpimenua"
+msgstr "Hasierako orriko \"Musika\" azpimenua"
 
 msgctxt "#31136"
 msgid "Home page \"Pictures\" submenu"
-msgstr "Pantaila nagusiko \"Irudiak\" azpimenua"
+msgstr "Hasierako orriko \"Irudiak\" azpimenua"
 
 msgctxt "#31137"
 msgid "Enable low main menu bar"
@@ -620,6 +616,22 @@ msgctxt "#31155"
 msgid "Show global search button on bottom left"
 msgstr ""
 
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
+msgstr ""
+
 msgctxt "#31188"
 msgid "Random concerts"
 msgstr ""
@@ -682,7 +694,7 @@ msgstr ""
 
 msgctxt "#31203"
 msgid "Choose your song"
-msgstr "Aukeratu zure kantua"
+msgstr "Aukeratu zure kanta"
 
 msgctxt "#31204"
 msgid "ExtendedInfo"
@@ -690,7 +702,7 @@ msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
-msgstr "Letren iturria"
+msgstr "Letren iturburua"
 
 msgctxt "#31206"
 msgid "Found"
@@ -1090,7 +1102,7 @@ msgstr "Hautatutako profila"
 
 msgctxt "#31320"
 msgid "Last logged in"
-msgstr "Azkenekoz sartuta"
+msgstr "Azken saio hasiera"
 
 msgctxt "#31321"
 msgid "Library mode"
@@ -1126,7 +1138,7 @@ msgstr "Duela gutxi gehituak"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
-msgstr "[B]Denboragailua ezarrita![/B] [COLOR=grey2] - Sistema itzaliko da[/COLOR]"
+msgstr "[B]Tenporizadorea ezarrita![/B] [COLOR=grey2] - Sistema automatikoki itzaliko da[/COLOR]"
 
 msgctxt "#31330"
 msgid "Click button to play[CR][CR]movie trailer"
@@ -1202,11 +1214,11 @@ msgstr "Gelditu"
 
 msgctxt "#31353"
 msgid "Fast forward"
-msgstr "Azkar aurrera"
+msgstr "Bizkor aurreratzea"
 
 msgctxt "#31354"
 msgid "Rewind"
-msgstr "Atzera"
+msgstr "Birbobinatzea"
 
 msgctxt "#31355"
 msgid "Movie menu"
@@ -1322,11 +1334,11 @@ msgstr ""
 
 msgctxt "#31390"
 msgid "Skin default"
-msgstr "Skin lehenetsia"
+msgstr "Azal lehenetsia"
 
 msgctxt "#31391"
 msgid "Skin default with no caps"
-msgstr "Skin lehenetsia maiuskularik gabe"
+msgstr "Azal lehenetsia maiuskularik gabe"
 
 msgctxt "#31392"
 msgid "Arial based"
@@ -1378,7 +1390,7 @@ msgstr "Azpititulu lokala erabilgarri"
 
 msgctxt "#31420"
 msgid "Login"
-msgstr "Sartu"
+msgstr "Hasi saioa"
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"

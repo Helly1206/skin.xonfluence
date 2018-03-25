@@ -185,7 +185,8 @@
 					<top>30</top>
 					<width>640</width>
 					<height>470</height>
-					<texture background="true">$INFO[ListItem.FilenameAndPath]</texture>
+					<!--<texture background="true">$INFO[ListItem.FilenameAndPath]</texture>-->
+					<texture background="true">$VAR[PosterThumb]</texture>
 					<fadetime>600</fadetime>
 					<aspectratio>keep</aspectratio>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
@@ -240,7 +241,7 @@
 				<onup>2</onup>
 				<ondown>2</ondown>
 				<viewtype label="31030">panel</viewtype>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol></pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>200</preloaditems>
 				<itemlayout height="202" width="139">

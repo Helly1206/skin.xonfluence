@@ -21,11 +21,11 @@ msgid "Change your"
 msgstr ""
 
 msgctxt "#31001"
-msgid ":"
+msgid "GAMES"
 msgstr ""
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
 msgstr ""
 
 msgctxt "#31003"
@@ -77,11 +77,7 @@ msgid "Memory used"
 msgstr ""
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
+msgid "Minute"
 msgstr ""
 
 msgctxt "#31017"
@@ -530,7 +526,7 @@ msgstr ""
 
 msgctxt "#31132"
 msgid "Lyrics add-on"
-msgstr ""
+msgstr "Додаток за текстови на песни"
 
 msgctxt "#31133"
 msgid "Minimize on exit button"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"
@@ -1030,7 +1042,7 @@ msgstr ""
 
 msgctxt "#31301"
 msgid "Last updated"
-msgstr ""
+msgstr "Последно ажурирање"
 
 msgctxt "#31302"
 msgid "Outlook - "
@@ -1110,7 +1122,7 @@ msgstr ""
 
 msgctxt "#31325"
 msgid "Playlist options"
-msgstr ""
+msgstr "Опции за списоци"
 
 msgctxt "#31326"
 msgid "Created"
@@ -1122,7 +1134,7 @@ msgstr "Резолуција"
 
 msgctxt "#31328"
 msgid "Recently added"
-msgstr ""
+msgstr "Неодамна додадени"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
@@ -1202,7 +1214,7 @@ msgstr "Сопри"
 
 msgctxt "#31353"
 msgid "Fast forward"
-msgstr ""
+msgstr "Забрзано нанапред"
 
 msgctxt "#31354"
 msgid "Rewind"
@@ -1590,15 +1602,15 @@ msgstr "ТВ"
 
 msgctxt "#31503"
 msgid "Add group"
-msgstr ""
+msgstr "Додај група"
 
 msgctxt "#31504"
 msgid "Rename group"
-msgstr ""
+msgstr "Преименувај група"
 
 msgctxt "#31505"
 msgid "Delete group"
-msgstr ""
+msgstr "Избриши група"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"

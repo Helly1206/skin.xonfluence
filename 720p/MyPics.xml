@@ -11,7 +11,8 @@
 			<top>0</top>
 			<width>1280</width>
 			<height>625</height>
-			<texture background="true">$INFO[ListItem.FilenameAndPath]</texture>
+			<!--<texture background="true">$INFO[ListItem.FilenameAndPath]</texture>-->
+			<texture background="true">$VAR[PosterThumb]</texture>
 			<fadetime>1000</fadetime>
 			<aspectratio>keep</aspectratio>
 			<include>VisibleFadeEffect</include>
@@ -80,7 +81,7 @@
 					<description>View As button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
@@ -91,7 +92,7 @@
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<include>AltButton3</include>
-					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturenofocus></alttexturenofocus>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
@@ -142,7 +143,7 @@
 					<height>35</height>
 					<font>font12</font>
 					<label>31039</label>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[MainColorOne]</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<visible>Container.Content(addons)</visible>

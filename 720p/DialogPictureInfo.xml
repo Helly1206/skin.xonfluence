@@ -53,8 +53,8 @@
 				<top>15</top>
 				<width>64</width>
 				<height>32</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -268,32 +268,27 @@
 					<item id="1">
 						<label>21800</label>
 						<label2>$INFO[Slideshow.Filename]</label2>
-						<onclick>noop</onclick>
-						<icon>-</icon>
+						<icon></icon>
 					</item>
 					<item id="2">
 						<label>21820</label>
 						<label2>$INFO[Slideshow.EXIFTime]</label2>
-						<onclick>noop</onclick>
-						<icon>-</icon>
+						<icon></icon>
 					</item>
 					<item id="3">
 						<label>21803</label>
 						<label2>$INFO[Slideshow.Filedate]</label2>
-						<onclick>noop</onclick>
-						<icon>-</icon>
+						<icon></icon>
 					</item>
 					<item id="4">
 						<label>21824</label>
 						<label2>$INFO[Slideshow.EXIFComment]</label2>
-						<onclick>noop</onclick>
-						<icon>-</icon>
+						<icon></icon>
 					</item>
 					<item id="5">
 						<label>21805</label>
 						<label2>$INFO[Slideshow.Resolution]</label2>
-						<onclick>noop</onclick>
-						<icon>-</icon>
+						<icon></icon>
 					</item>
 				</content>
 			</control>

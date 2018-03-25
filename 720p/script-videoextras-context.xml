@@ -13,11 +13,11 @@
 			<posy>-16</posy>
 			<width>4</width>
 			<height>4</height>
-			<label>-</label>
-			<font>-</font>
+			<label></label>
+			<font></font>
 			<onfocus>down</onfocus>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<onup>9000</onup>
@@ -51,8 +51,8 @@
 					<posy>5</posy>
 					<width>64</width>
 					<height>32</height>
-					<label>-</label>
-					<font>-</font>
+					<label></label>
+					<font></font>
 					<onclick>PreviousMenu</onclick>
 					<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 					<texturenofocus>DialogCloseButton.png</texturenofocus>

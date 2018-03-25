@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<views>10,11,12,13</views>
+	<views>10,12</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
 		<include>CommonBackground</include>
@@ -43,9 +43,7 @@
 		<control type="group" id="50">
 			<include>Window_OpenClose_Animation</include>
 			<include>PVRGuideViewTimeline</include>
-			<include>PVRGuideViewNow</include>
 			<include>PVRGuideViewNext</include>
-			<include>PVRGuideViewChannel</include>
 		</control>
 		<control type="group">
 			<depth>DepthFooter</depth>

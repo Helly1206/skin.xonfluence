@@ -521,7 +521,7 @@
 					<scroll>true</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
+					<label>$VAR[DurationInMinutes]</label>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
 				</control>
@@ -2290,7 +2290,7 @@
 				<onup>732</onup>
 				<ondown>732</ondown>
 				<viewtype label="31030">panel</viewtype>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol></pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>200</preloaditems>
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Sets) | Container.Content(MusicVideos)</visible>

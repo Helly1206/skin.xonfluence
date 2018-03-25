@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "Changez vos"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "JEUX"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]PARAMÈTRES DE JEU[/B][CR][CR]Configurer la prise en charge du rebobinage et les options ·  Configurer l’utilisation du clavier et le nombre de joueurs au clavier"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -77,12 +77,8 @@ msgid "Memory used"
 msgstr "Mémoire utilisée"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Minute"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -130,7 +126,7 @@ msgstr "Emplacement"
 
 msgctxt "#31028"
 msgid "Poster wrap"
-msgstr "Défilement d'affiches"
+msgstr "Défilement d’affiches"
 
 msgctxt "#31029"
 msgid "Fanart"
@@ -146,11 +142,11 @@ msgstr "Imagettes"
 
 msgctxt "#31032"
 msgid "Image wrap"
-msgstr "Défilement d'images"
+msgstr "Défilement d’images"
 
 msgctxt "#31033"
 msgid "Info"
-msgstr "Infos"
+msgstr "Informations"
 
 msgctxt "#31034"
 msgid "Enable media info on fullscreen playback"
@@ -194,7 +190,7 @@ msgstr "AVANCE RAPIDE"
 
 msgctxt "#31045"
 msgid "REWIND"
-msgstr "RETOUR RAPIDE"
+msgstr "REBOBINAGE"
 
 msgctxt "#31046"
 msgid "SEEKING"
@@ -410,7 +406,7 @@ msgstr ""
 
 msgctxt "#31101"
 msgid "Home screen options"
-msgstr "Options de l'écran d'accueil"
+msgstr "Options de l’écran d’accueil"
 
 msgctxt "#31102"
 msgid "Background"
@@ -418,11 +414,11 @@ msgstr "Arrière-plan"
 
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slideshow"
-msgstr "Afficher « En pause » dans le diaporama d'images"
+msgstr "Afficher « En pause » dans le diaporama d’images"
 
 msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
-msgstr "Lire les bandes-annonces dans une fenêtre [COLOR=grey3](fenêtre d'informations sur la vidéo uniquement)[/COLOR]"
+msgstr "Lire les bandes-annonces dans une fenêtre [COLOR=grey3](fenêtre d’informations sur la vidéo uniquement)[/COLOR]"
 
 msgctxt "#31105"
 msgid "Artwork"
@@ -434,7 +430,7 @@ msgstr "Options diverses"
 
 msgctxt "#31107"
 msgid "Hide flagging read from video filenames [COLOR=grey3](e.g. Blu-ray, HD-DVD)[/COLOR]"
-msgstr "Masquer l'indicateur déjà vu des noms de fichiers des vidéos [COLOR=grey3](p.ex. Blu-ray, HD-DVD)[/COLOR]"
+msgstr "Masquer l’indicateur déjà vu des noms de fichiers des vidéos [COLOR=grey3](p.ex. Blu-ray, HD-DVD)[/COLOR]"
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
@@ -442,11 +438,11 @@ msgstr "Masquer les boutons du menu principal"
 
 msgctxt "#31109"
 msgid "Enable custom background"
-msgstr "Activer l'arrière-plan personnalisé"
+msgstr "Activer l’arrière-plan personnalisé"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr "Chemin de l'arrière-plan :"
+msgstr "Chemin de l’arrière-plan :"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -478,7 +474,7 @@ msgstr "Afficher les vidéos ajoutées récemment"
 
 msgctxt "#31118"
 msgid "Home page programs submenu"
-msgstr "Sous-menu des « Programmes » de la page d'accueil"
+msgstr "Sous-menu des « Programmes » de la page d’accueil"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
@@ -502,11 +498,11 @@ msgstr ""
 
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "Afficher la vidéo d'arrière-plan « Lecture en cours »"
+msgstr "Afficher la vidéo d’arrière-plan « Lecture en cours »"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr "Afficher la visualisation d'arrière-plan « Lecture en cours »"
+msgstr "Afficher la visualisation d’arrière-plan « Lecture en cours »"
 
 msgctxt "#31127"
 msgid "TvTunes"
@@ -538,15 +534,15 @@ msgstr ""
 
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
-msgstr "Sous-menu « Vidéos » de la page d'accueil"
+msgstr "Sous-menu « Vidéos » de la page d’accueil"
 
 msgctxt "#31135"
 msgid "Home page \"Music\" submenu"
-msgstr "Sous-menu « Musique » de la page d'accueil"
+msgstr "Sous-menu « Musique » de la page d’accueil"
 
 msgctxt "#31136"
 msgid "Home page \"Pictures\" submenu"
-msgstr "Sous-menu « Images » de la page d'accueil"
+msgstr "Sous-menu « Images » de la page d’accueil"
 
 msgctxt "#31137"
 msgid "Enable low main menu bar"
@@ -562,7 +558,7 @@ msgstr ""
 
 msgctxt "#31140"
 msgid "Music OSD"
-msgstr "Affichage à l'écran Musique"
+msgstr "Affichage à l’écran Musique"
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"
@@ -698,7 +710,7 @@ msgstr "Trouvé"
 
 msgctxt "#31207"
 msgid "Find more items"
-msgstr "Trouver plus d'éléments"
+msgstr "Trouver plus d’éléments"
 
 msgctxt "#31208"
 msgid "Upcoming episodes"
@@ -1122,7 +1134,7 @@ msgstr "Résolution"
 
 msgctxt "#31328"
 msgid "Recently added"
-msgstr "Ajouté récemment"
+msgstr "Ajoutés récemment"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
@@ -1134,7 +1146,7 @@ msgstr "Cliquer sur le bouton pour lire[CR][CR]la bande-annonce du film"
 
 msgctxt "#31331"
 msgid "Album details"
-msgstr "Détails de l'album"
+msgstr "Détails de l’album"
 
 msgctxt "#31332"
 msgid "Alternate fanArt"
@@ -1206,7 +1218,7 @@ msgstr "Avance rapide"
 
 msgctxt "#31354"
 msgid "Rewind"
-msgstr "Retour rapide"
+msgstr "Rebobinage"
 
 msgctxt "#31355"
 msgid "Movie menu"
@@ -1322,11 +1334,11 @@ msgstr ""
 
 msgctxt "#31390"
 msgid "Skin default"
-msgstr "Valeur par défaut de l'habillage"
+msgstr "Valeur par défaut de l’habillage"
 
 msgctxt "#31391"
 msgid "Skin default with no caps"
-msgstr "Valeur par défaut de l'habillage sans majuscule"
+msgstr "Valeur par défaut de l’habillage sans majuscule"
 
 msgctxt "#31392"
 msgid "Arial based"
@@ -1370,7 +1382,7 @@ msgstr "Aide au premier démarrage..."
 
 msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
-msgstr "Cet onglet signale qu'il y a un menu sur le côté de cette fenêtre contenant des options supplémentaires pour cette section.  Pour accéder au menu, naviguez vers la gauche avec votre télécommande ou votre clavier ou placez le pointeur de votre souris sur l'onglet. [CR][CR]Cliquez sur « OK » pour fermer cette boîte de dialogue. Elle n’apparaîtra plus."
+msgstr "Cet onglet signale qu’il y a un menu sur le côté de cette fenêtre contenant des options supplémentaires pour cette section.  Pour accéder au menu, naviguez vers la gauche avec votre télécommande ou votre clavier ou placez le pointeur de votre souris sur l’onglet. [CR][CR]Cliquez sur « OK » pour fermer cette boîte de dialogue. Elle n’apparaîtra plus."
 
 msgctxt "#31413"
 msgid "Local subtitle available"
@@ -1382,15 +1394,15 @@ msgstr "Connexion"
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Choisissez votre profil d'utilisateur Kodi[CR]pour vous connecter et poursuivre"
+msgstr "Choisissez votre profil d’utilisateur Kodi[CR]pour vous connecter et poursuivre"
 
 msgctxt "#31422"
 msgid "Show or hide the login screen at startup."
-msgstr "Afficher ou masquer l'écran de connexion au démarrage"
+msgstr "Afficher ou masquer l’écran de connexion au démarrage"
 
 msgctxt "#31423"
 msgid "Select the profile that will be used at startup when the login screen is disabled."
-msgstr "Choisir le profil qui sera utilisé lors du démarrage quand l'écran de connexion est désactivé"
+msgstr "Sélectionner le profil qui sera utilisé lors du démarrage quand l’écran de connexion est désactivé"
 
 msgctxt "#31424"
 msgid "TV Shows"
@@ -1414,7 +1426,7 @@ msgstr "[B]PARAMÈTRES DES LECTEURS[/B][CR][CR]Configurer les actions pouvant ê
 
 msgctxt "#31431"
 msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content ·  Configure how library lists/views are navigated · Configure the media database options"
-msgstr "[B]PARAMÈTRES DE LA MÉDIATHÈQUE[/B][CR][CR]Configurer l'affichage du contenu multimédia par les vues de la médiathèque/des fichiers · Configurer le parcours des listes/vues de la médiathèque · Configurer les options de base de données"
+msgstr "[B]PARAMÈTRES DE LA MÉDIATHÈQUE[/B][CR][CR]Configurer l’affichage du contenu multimédia par les vues de la médiathèque/des fichiers · Configurer le parcours des listes/vues de la médiathèque · Configurer les options de base de données"
 
 msgctxt "#31432"
 msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed  · Configure how Live TV and recordings are managed"
@@ -1430,11 +1442,11 @@ msgstr "[B]PARAMÈTRES DES SERVICES[/B][CR][CR]Configurer et gérer les services
 
 msgctxt "#31435"
 msgid "[B]SYSTEM SETTINGS[/B][CR][CR]Configure display · Configure audio · Configure internet access · Configure power saving· Configure logging"
-msgstr "[B]PARAMÈTRES SYSTÈMES[/B][CR][CR]Configurer l'affichage · Configurer l'audio · Configurer l'accès à Internet · Configurer les économies d'énergie · Configurer la journalisation"
+msgstr "[B]PARAMÈTRES SYSTÈMES[/B][CR][CR]Configurer l’affichage · Configurer l’audio · Configurer l’accès à Internet · Configurer les économies d’énergie · Configurer la journalisation"
 
 msgctxt "#31436"
 msgid "[B]INTERFACE SETTINGS[/B][CR][CR]Configure skin · Configure region · Configure control · Configure screensaver · Configure master lock"
-msgstr "[B]PARAMÈTRES DE L'INTERFACE[/B][CR][CR]Configurer l'habillage · Configurer la région · Configurer les contrôles · Configurer l'économiseur d'écran · Configurer le verrou maître"
+msgstr "[B]PARAMÈTRES DE L’INTERFACE[/B][CR][CR]Configurer l’habillage · Configurer la région · Configurer les contrôles · Configurer l’économiseur d’écran · Configurer le verrou maître"
 
 msgctxt "#31437"
 msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Xonfluence skin · Add and remove home menu items · Change skin backgrounds"
@@ -1698,7 +1710,7 @@ msgstr "Prévisions"
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."
-msgstr "Récupération des infos de prévision…"
+msgstr "Récupération des informations de prévision…"
 
 msgctxt "#31910"
 msgid "Maps"

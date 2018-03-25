@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "Ändern von"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "SPIELE"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr "Manuelles Öffnen des Medien-Slide-Menüs aktivieren"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]GAMING EINSTELLUNGEN[/B][CR][CR]Zurückspulen-Unterstützung ·  Tastaturbenutzung und Anzahl der Nutzer"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -70,19 +70,15 @@ msgstr "Dekoder"
 
 msgctxt "#31013"
 msgid "Audio process information"
-msgstr "Information zur Audioverarbeitung"
+msgstr "Information Audioverarbeitung"
 
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Genutzter Arbeitsspeicher"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr "Niemals"
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr "Dauerhaft"
+msgid "Minute"
+msgstr "Minute"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -494,7 +490,7 @@ msgstr "Zeige Handlung im Info-Bildschirm"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr "Verstecke EPG wenn RDS im Kanalfenster verfügbar ist"
+msgstr "Im Kanal-Fenster keine EPG-Informationen anzeigen, wenn RDS-Informationen verfügbar sind"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -619,6 +615,22 @@ msgstr "Benachrichtigungen oben links"
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
 msgstr "Zeige globalen Such-Button unten links"
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr "Manuelles Öffnen des Medien-Slide-Menüs aktivieren"
+
+msgctxt "#31158"
+msgid "Never"
+msgstr "Niemals"
+
+msgctxt "#31159"
+msgid "Permanently"
+msgstr "Dauerhaft"
 
 msgctxt "#31188"
 msgid "Random concerts"
@@ -1382,7 +1394,7 @@ msgstr "Anmeldung"
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Bitte Benutzerprofil auswählen[CR]um fortzufahren"
+msgstr "Bitte Kodi-Benutzerprofil auswählen[CR]um fortzufahren"
 
 msgctxt "#31422"
 msgid "Show or hide the login screen at startup."

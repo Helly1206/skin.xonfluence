@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "Määritä"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "PELIT"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]PELIASETUKSET[/B][CR][CR]Muokkaa kelausasetuksia · Muokkaa näppäimistöasetuksia ja näppäimistöpelaajien määrää"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -42,11 +42,11 @@ msgstr "Piilota tiedot"
 
 msgctxt "#31006"
 msgid "View options"
-msgstr "Näkymän asetukset"
+msgstr "Näkymäasetukset"
 
 msgctxt "#31007"
 msgid "Video process information"
-msgstr "Videon käsittelyn tiedot"
+msgstr "Videon tekniset tiedot"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -70,19 +70,15 @@ msgstr "Purkutapa"
 
 msgctxt "#31013"
 msgid "Audio process information"
-msgstr "Äänen käsittelyn tiedot"
+msgstr "Äänen tekniset tiedot"
 
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Käytetty muisti"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Minuutti"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -422,7 +418,7 @@ msgstr "Näytä \"Tauko\" kuvaesityksessä"
 
 msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
-msgstr "Toista trailerit ikkunassa [COLOR=grey3](Vain videon informaatiodialogi)[/COLOR]"
+msgstr "Toista trailerit ikkunassa [COLOR=grey3](Vain videotietoikkuna)[/COLOR]"
 
 msgctxt "#31105"
 msgid "Artwork"
@@ -438,15 +434,15 @@ msgstr "Piilota tiedostojen nimistä luetut merkinnät [COLOR=grey3](Blu-ray, HD
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
-msgstr "Piilota päävalikon painikkeet"
+msgstr "Piilota päävalikon osia"
 
 msgctxt "#31109"
 msgid "Enable custom background"
-msgstr "Valinnainen taustakuva käytössä"
+msgstr "Käytä omaa taustakuvaa"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr "Taustakuvan polku:"
+msgstr "Taustakuvan sijainti:"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -482,7 +478,7 @@ msgstr "Päävalikon ohjelmaosion alavalikko"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
-msgstr "Piilota taustan fanitaide"
+msgstr "Piilota fanitaide"
 
 msgctxt "#31120"
 msgid "Hide page count info"
@@ -494,7 +490,7 @@ msgstr ""
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr "Piilota EPG, jos RDS on nähtävillä kanavaikkunassa"
+msgstr "Piilota ohjelmatiedot kanavaikkunassa, jos RDS-tietoja on tarjolla"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -502,11 +498,11 @@ msgstr ""
 
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "Näytä taustalla \"Nyt katsellaan\"-video"
+msgstr "Näytä toistettava video valikoiden taustalla"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr "Näytä taustalla \"Nyt soi\"-visualisaatio"
+msgstr "Näytä musiikkivisualisointi valikoiden taustalla"
 
 msgctxt "#31127"
 msgid "TvTunes"
@@ -562,7 +558,7 @@ msgstr ""
 
 msgctxt "#31140"
 msgid "Music OSD"
-msgstr "Musiikki-OSD"
+msgstr "Musiikin kuvaruutuvalikko"
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"

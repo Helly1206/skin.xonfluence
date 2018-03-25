@@ -41,7 +41,7 @@
 			<top>15</top>
 			<width>64</width>
 			<height>32</height>
-			<label>-</label>
+			<label></label>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>

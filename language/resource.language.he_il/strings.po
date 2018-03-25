@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "שינוי"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "משחקים"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]הגדרות משחק[/B][CR][CR]הגדר חזרה לאחור תמיכה ואפשרויות · קביעת תצורה של לוח המקשים ומספר נגני המקלדת"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -77,12 +77,8 @@ msgid "Memory used"
 msgstr "זיכרון בשימוש"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "דקה"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"

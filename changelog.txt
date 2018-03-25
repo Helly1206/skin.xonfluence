@@ -1,3 +1,13 @@
+[B]3.4.0[/B]
+- Updated 720p for Leia
+- Updated Xonfluence to latest confluence version (4.4.1)
+- Updated and cleanup of Textures for Leia
+- Updated and cleanup of Language files for Leia
+- Implemented skinning API changes for Leia
+- Fixed some color bugs
+- Fixed bug with displaying pictures as $INFO[ListItem.FilenameAndPath] doesn't work anymore
+- Added game icon to icons and game window option to main menu
+
 [B]3.3.19[/B]
 - Added pull request 'Conditional visibility of menu items on home screen based on master mode settings' from mbroemme
 

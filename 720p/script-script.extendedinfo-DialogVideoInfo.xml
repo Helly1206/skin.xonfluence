@@ -84,7 +84,7 @@
 					<onright>5000</onright>
 					<onup>4000</onup>
 					<ondown>4000</ondown>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="34" width="260">
 						<control type="image">
@@ -130,82 +130,66 @@
 					<content>
 						<item id="1">
 							<label>$LOCALIZE[206]$INFO[Container(1000).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(1000).NumItems,0)</visible>
 						</item>
 						<item id="2">
 							<label>$ADDON[script.extendedinfo 32115]$INFO[Container(750).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
 						</item>
 						<item id="3">
 							<label>$ADDON[script.extendedinfo 32116]$INFO[Container(150).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
 						</item>
 						<item id="4">
 							<label>$LOCALIZE[33054]$INFO[Container(250).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
 						</item>
 						<item id="5">
 							<label>$ADDON[script.extendedinfo 32117]$INFO[Container(1150).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(1150).NumItems,0)</visible>
 						</item>
 						<item id="6">
 							<label>$ADDON[script.extendedinfo 32118]$INFO[Container(350).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
 						</item>
 						<item id="7">
 							<label>$LOCALIZE[20388]$INFO[Container(550).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(550).NumItems,0)</visible>
 						</item>
 						<item id="8">
 							<label>$ADDON[script.extendedinfo 32152]$INFO[Container(1450).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(1450).NumItems,0)</visible>
 						</item>
 						<item id="9">
 							<label>$ADDON[script.extendedinfo 32168]$INFO[Container(650).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(650).NumItems,0)</visible>
 						</item>
 						<item id="10">
 							<label>$LOCALIZE[135]$INFO[Container(850).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(850).NumItems,0)</visible>
 						</item>
 						<item id="11">
 							<label>$ADDON[script.extendedinfo 32167]$INFO[Container(1050).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(1050).NumItems,0)</visible>
 						</item>
 						<item id="12">
 							<label>$LOCALIZE[21861]$INFO[Container(950).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(950).NumItems,0)</visible>
 						</item>
 						<item id="13">
 							<label>$ADDON[script.extendedinfo 32119]$INFO[Container(1250).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(1250).NumItems,0)</visible>
 						</item>
 						<item id="14">
 							<label>$LOCALIZE[20445]$INFO[Container(1350).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(1350).NumItems,0)</visible>
 						</item>
 						<item id="15">
 							<label>$ADDON[script.extendedinfo 32026]$INFO[Container(450).NumItems, (,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
 						</item>
 						<item id="16">
 							<label>$ADDON[script.extendedinfo 32025] $INFO[Container(2000).NumItems,(,)]</label>
-							<onclick>noop</onclick>
 							<visible>Integer.IsGreater(Container(2000).NumItems,0)</visible>
 						</item>
 					</content>
@@ -1528,7 +1512,7 @@
 								<onleft>60</onleft>
 								<onright>4000</onright>
     	                        <include>MenuButton</include>
-    	                        <label>-</label>
+    	                        <label></label>
     	                    </control>
     	                    <control type="textbox" id="800">
     	                        <posx>5</posx>

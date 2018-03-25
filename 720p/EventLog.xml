@@ -212,7 +212,7 @@
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<include>AltButton3</include>
-					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturenofocus></alttexturenofocus>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
@@ -230,12 +230,12 @@
 					<description>Level button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="radiobutton" id="22">
 					<description>Only show current level</description>
 					<include>ButtonCommonValues</include>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="button" id="20">
 					<description>Clear button</description>

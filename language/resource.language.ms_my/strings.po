@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "Ubah"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "GAMES"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]TETAPAN GAME[/B][CR][CR]Konfigurasi sokongon & pilihan gulung semula · Konfigurasi kegunaan papan kekunci dan nombor pemain"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -62,7 +62,7 @@ msgstr "Penyahkodan perkakasan"
 
 msgctxt "#31011"
 msgid "Inactive"
-msgstr "Tak Aktif"
+msgstr "Tidak Aktif"
 
 msgctxt "#31012"
 msgid "Decoder"
@@ -74,15 +74,11 @@ msgstr "Maklumat proses audio"
 
 msgctxt "#31014"
 msgid "Memory used"
-msgstr "Ingatan digunakan"
+msgstr "Memori diguna"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Minit"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -114,7 +110,7 @@ msgstr "Bermain"
 
 msgctxt "#31024"
 msgid "Page"
-msgstr "Muka surat"
+msgstr "Mukasurat"
 
 msgctxt "#31025"
 msgid "Items"
@@ -450,7 +446,7 @@ msgstr "Laluan latar belakang:"
 
 msgctxt "#31111"
 msgid "Hide"
-msgstr "Sembunyi"
+msgstr "Sembunyikan"
 
 msgctxt "#31112"
 msgid "Options"
@@ -482,7 +478,7 @@ msgstr "Submenu program laman rumah"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
-msgstr "Sembunyi seni peminat latar belakang"
+msgstr "Sembunyikan latar belakang seni peminat"
 
 msgctxt "#31120"
 msgid "Hide page count info"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"

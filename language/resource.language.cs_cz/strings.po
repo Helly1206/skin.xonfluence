@@ -18,15 +18,15 @@ msgstr ""
 
 msgctxt "#31000"
 msgid "Change your"
-msgstr "Změňte vaše"
+msgstr "Změňte své"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "HRY"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]NASTAVENÍ HER[/B][CR][CR]Konfigurujte podporu a možnosti přetáčení · Konfigurujte použití klávesnice a počet hráčů na klávesnici"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -34,7 +34,7 @@ msgstr "Možnosti napájení"
 
 msgctxt "#31004"
 msgid "Working..."
-msgstr "Zpracovávání..."
+msgstr "Zpracovávání…"
 
 msgctxt "#31005"
 msgid "Hide information"
@@ -70,19 +70,15 @@ msgstr "Dekodér"
 
 msgctxt "#31013"
 msgid "Audio process information"
-msgstr "Informace o zpracování audia"
+msgstr "Informace o zpracování zvuku"
 
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Využití paměti"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "minuta"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -134,7 +130,7 @@ msgstr "Plakát"
 
 msgctxt "#31029"
 msgid "Fanart"
-msgstr "Fanart"
+msgstr "Fanouškovské umění"
 
 msgctxt "#31030"
 msgid "Full wall"
@@ -446,7 +442,7 @@ msgstr "Povolit vlastní pozadí"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr "Cesta k pozadí:"
+msgstr "Popis umístění pozadí:"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"
@@ -1330,7 +1342,7 @@ msgstr "Výchozí vzhled bez velkých písmen"
 
 msgctxt "#31392"
 msgid "Arial based"
-msgstr "Založené na Arial"
+msgstr "Založeno na Arial"
 
 msgctxt "#31393"
 msgid "Massive"
@@ -1366,7 +1378,7 @@ msgstr ""
 
 msgctxt "#31411"
 msgid "First run help..."
-msgstr "Nejprve spusťte nápovědu..."
+msgstr "Nápověda při prvním spuštění…"
 
 msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
@@ -1698,7 +1710,7 @@ msgstr "Předpověď"
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."
-msgstr "Načítání předpovědi..."
+msgstr "Načítání předpovědi…"
 
 msgctxt "#31910"
 msgid "Maps"

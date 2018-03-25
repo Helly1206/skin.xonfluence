@@ -57,8 +57,8 @@
 				<top>11</top>
 				<width>64</width>
 				<height>32</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -94,7 +94,7 @@
 				<onright>9010</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol></pagecontrol>
 				<scrolltime>300</scrolltime>
 				<itemlayout height="70" width="260">
 					<control type="image">
@@ -163,37 +163,30 @@
 					<item id="1">
 						<label>128</label>
 						<label2>5</label2>
-						<onclick>noop</onclick>
 					</item>
 					<item id="2">
 						<label>31282</label>
 						<label2>31025</label2>
-						<onclick>noop</onclick>
 					</item>
 					<item id="3">
 						<label>1034</label>
 						<label2>31113</label2>
-						<onclick>noop</onclick>
 					</item>
 					<item id="4">
 						<label>24000</label>
 						<label2>31996</label2>
-						<onclick>noop</onclick>
 					</item>
 					<item id="5">
-						<label>19190</label>
+						<label>33068</label>
 						<label2>31105</label2>
-						<onclick>noop</onclick>
 					</item>
 					<item id="6">
 						<label>247</label>
 						<label2>31112</label2>
-						<onclick>noop</onclick>
 					</item>
 					<item id="7">
 						<label>$LOCALIZE[166] $LOCALIZE[31306]</label>
 						<label2>$LOCALIZE[31979]/ $LOCALIZE[31305]</label2>
-						<onclick>noop</onclick>
 					</item>
 				</content>
 			</control>
@@ -236,32 +229,26 @@
 						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9001</param>
 							<param name="Right">9101</param>
-							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
+							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31156]</param>
 						</include>
 						<content>
 							<item id="1">
 								<label>$LOCALIZE[31337]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[31101]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[31388]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[31386]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[31387]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[31080]</label>
-								<onclick>noop</onclick>
 							</item>
 						</content>
 					</control>
@@ -1496,68 +1483,53 @@
 						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9002</param>
 							<param name="Right">9201</param>
-							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
+							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31156]</param>
 						</include>
 						<content>
 							<item id="1">
 								<label>$LOCALIZE[31290] - 1</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[31290] - 2</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[31290] - 3</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[31290] - 4</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[31290] - 5</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[31290] - 6</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="7">
 								<label>$LOCALIZE[31290] - 7</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="8">
 								<label>$LOCALIZE[31290] - 8</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[31290] - 9</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="10">
 								<label>$LOCALIZE[31290] - 10</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="11">
 								<label>$LOCALIZE[31290] - 11</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="12">
 								<label>$LOCALIZE[31290] - 12</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="13">
 								<label>$LOCALIZE[31290] - 13</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="14">
 								<label>$LOCALIZE[31290] - 14</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="15">
 								<label>$LOCALIZE[31290] - 15</label>
-								<onclick>noop</onclick>
 							</item>
 						</content>
 					</control>
@@ -3862,68 +3834,53 @@
 						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9003</param>
 							<param name="Right">9301</param>
-							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
+							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31156]</param>
 						</include>
 						<content>
 							<item id="1">
 								<label>$VAR[UsersSubVideosName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="2">
 								<label>$VAR[UsersSubMoviesName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="3">
 								<label>$VAR[UsersSubTVShowsName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="4">
 								<label>$VAR[UsersSubConcertsName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="5">
 								<label>$VAR[UsersSubMusicName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="6">
 								<label>$VAR[UsersSubProgsName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="7">
 								<label>$VAR[UsersSubPicturesName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="8">
 								<label>$VAR[UsersSubLiveTVName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="9">
 								<label>$VAR[UsersSubRadioName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="10">
 								<label>$VAR[UsersSubSettingsName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="11">
 								<label>$VAR[UsersSubSelectOneName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="12">
 								<label>$VAR[UsersSubSelectTwoName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="13">
 								<label>$VAR[UsersSubSelectThreeName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="14">
 								<label>$VAR[UsersSubSelectFourName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="15">
 								<label>$VAR[UsersSubSelectFiveName] $LOCALIZE[31291]</label>
-								<onclick>noop</onclick>
 							</item>
 						</content>
 					</control>
@@ -6093,56 +6050,44 @@
 						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9004</param>
 							<param name="Right">9401</param>
-							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
+							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31156]</param>
 						</include>
 						<content>
 							<item id="1">
 								<label>$LOCALIZE[31230] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[31231] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[31232] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[31233] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[31234] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[31235] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="7">
 								<label>$LOCALIZE[31236] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="8">
 								<label>$LOCALIZE[31237] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[31238] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="10">
 								<label>$LOCALIZE[31239] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="11">
 								<label>$LOCALIZE[31241] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="12">
 								<label>$LOCALIZE[31242] $LOCALIZE[31292]</label>
-								<onclick>noop</onclick>
 							</item>
 						</content>
 					</control>
@@ -7458,7 +7403,6 @@
 							<item id="1">
 								<description>Home Menu Item One</description>
 								<label>$INFO[Skin.String(HomeItem.1.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.1.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.1.Type)]</property>
@@ -7467,7 +7411,6 @@
 							<item id="2">
 								<description>Home Menu Item Two</description>
 								<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.2.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.2.Type)]</property>
@@ -7476,7 +7419,6 @@
 							<item id="3">
 								<description>Home Menu Item Three</description>
 								<label>$INFO[Skin.String(HomeItem.3.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.3.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.3.Type)]</property>
@@ -7485,7 +7427,6 @@
 							<item id="4">
 								<description>Home Menu Item Four</description>
 								<label>$INFO[Skin.String(HomeItem.4.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.4.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.4.Type)]</property>
@@ -7494,7 +7435,6 @@
 							<item id="5">
 								<description>Home Menu Item Five</description>
 								<label>$INFO[Skin.String(HomeItem.5.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.5.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.5.Type)]</property>
@@ -7503,7 +7443,6 @@
 							<item id="6">
 								<description>Home Menu Item Six</description>
 								<label>$INFO[Skin.String(HomeItem.6.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.6.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.6.Type)]</property>
@@ -7512,7 +7451,6 @@
 							<item id="7">
 								<description>Home Menu Item Seven</description>
 								<label>$INFO[Skin.String(HomeItem.7.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.7.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.7.Type)]</property>
@@ -7521,7 +7459,6 @@
 							<item id="8">
 								<description>Home Menu Item Eight</description>
 								<label>$INFO[Skin.String(HomeItem.8.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.8.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.8.Type)]</property>
@@ -7530,7 +7467,6 @@
 							<item id="9">
 								<description>Home Menu Item Nine</description>
 								<label>$INFO[Skin.String(HomeItem.9.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.9.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.9.Type)]</property>
@@ -7539,7 +7475,6 @@
 							<item id="10">
 								<description>Home Menu Item Ten</description>
 								<label>$INFO[Skin.String(HomeItem.10.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.10.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.10.Type)]</property>
@@ -7548,7 +7483,6 @@
 							<item id="11">
 								<description>Home Menu Item Eleven</description>
 								<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.11.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.11.Type)]</property>
@@ -7557,7 +7491,6 @@
 							<item id="12">
 								<description>Home Menu Item Twelve</description>
 								<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.12.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.12.Type)]</property>
@@ -7566,7 +7499,6 @@
 							<item id="13">
 								<description>Home Menu Item Thirteen</description>
 								<label>$INFO[Skin.String(HomeItem.13.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.13.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.13.Type)]</property>
@@ -7575,7 +7507,6 @@
 							<item id="14">
 								<description>Home Menu Item Fourteen</description>
 								<label>$INFO[Skin.String(HomeItem.14.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.14.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.14.Type)]</property>
@@ -7584,7 +7515,6 @@
 							<item id="15">
 								<description>Home Menu Item Fifteen</description>
 								<label>$INFO[Skin.String(HomeItem.15.Label)]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(HomeItem.15.Fanart)]</thumb>
 								<property name="HiLiteItem">$INFO[Skin.String(HomeItem.15.Type)]</property>
@@ -7593,7 +7523,6 @@
 							<item id="16">
 								<description>Global Background</description>
 								<label>$LOCALIZE[31363]</label>
-								<onclick>noop</onclick>
 								<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 								<thumb>$INFO[Skin.String(GlobalBackGroundPath)]</thumb>
 								<property name="HiLiteItem">Global</property>
@@ -7602,7 +7531,6 @@
 							<item id="17">
 								<description>Holiday Theme</description>
 								<label>$LOCALIZE[31364]</label>
-								<onclick>noop</onclick>
 								<icon>special://skin/extras/Holiday/xmastree.jpg</icon>
 								<thumb>$INFO[Skin.String(HolidayThemePath)]</thumb>
 								<property name="HiLiteItem">Holiday</property>
@@ -7611,7 +7539,6 @@
 							<item id="18">
 								<description>Startup Window</description>
 								<label>$LOCALIZE[31495]</label>
-								<onclick>noop</onclick>
 								<icon>special://skin/backgrounds/startup.jpg</icon>
 								<thumb>$INFO[Skin.String(StartUpBackgroundPath)]</thumb>
 								<property name="HiLiteItem">StartUp</property>
@@ -9053,44 +8980,35 @@
 						<include content="SkinSettingsSubMenuList">
     						<param name="Control">9006</param>
 							<param name="Right">9601</param>
-							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31001]</param>
+							<param name="Label">$LOCALIZE[31336]$LOCALIZE[31156]</param>
 						</include>
 						<content>
 							<item id="1">
 								<label>$LOCALIZE[31091]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[31147]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[31920]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[31921]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[31276]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[512]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="7">
 								<label>$LOCALIZE[31304]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="8">
 								<label>$LOCALIZE[31935]</label>
-								<onclick>noop</onclick>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[31455]</label>
-								<onclick>noop</onclick>
 							</item>
 						</content>
 					</control>
@@ -9938,7 +9856,7 @@
 					<control type="image" id="802">
 						<width>750</width>
 						<height>140</height>
-						<texture>-</texture>
+						<texture></texture>
 					</control>
 					<control type="image" id="803">
 						<width>750</width>
@@ -9970,9 +9888,8 @@
 				<content>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.1.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.1.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.1.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -9980,9 +9897,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.2.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.2.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -9990,9 +9906,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.3.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.3.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.3.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10000,9 +9915,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.4.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.4.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.4.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10010,9 +9924,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.5.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.5.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.5.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10020,9 +9933,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.6.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.6.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.6.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10030,9 +9942,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.7.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.7.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.7.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10040,9 +9951,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.8.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.8.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.8.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10050,9 +9960,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.9.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.9.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.9.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10060,9 +9969,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.10.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.10.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.10.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10070,9 +9978,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.11.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.11.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.11.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10080,9 +9987,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.12.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.12.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.12.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10090,9 +9996,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.13.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.13.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.13.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10100,9 +10005,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.14.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.14.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.14.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -10110,9 +10014,8 @@
 					</item>
 					<item>
 						<label>$INFO[Skin.String(HomeItem.15.Label)]</label>
-						<onclick>noop</onclick>
-						<icon>-</icon>
-						<thumb>-</thumb>
+						<icon></icon>
+						<thumb></thumb>
 						<visible>!String.IsEmpty(Skin.String(HomeItem.15.Path))</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.15.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
 						<visible>!String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>

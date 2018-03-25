@@ -221,7 +221,7 @@
 					<top>530</top>
 					<width>290</width>
 					<height>25</height>
-					<label>$INFO[ListItem.Rating,[COLOR=blue]$LOCALIZE[563]: [/COLOR]]</label>
+					<label>$INFO[ListItem.Rating,[COLOR=$VAR[MainColorOne]]$LOCALIZE[563]: [/COLOR]]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -234,7 +234,7 @@
 					<top>530</top>
 					<width>290</width>
 					<height>25</height>
-					<label>$INFO[ListItem.UserRating,[COLOR=blue]$LOCALIZE[38018]: [/COLOR]]</label>
+					<label>$INFO[ListItem.UserRating,[COLOR=$VAR[MainColorOne]]$LOCALIZE[38018]: [/COLOR]]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -492,7 +492,7 @@
 					<height>144</height>
 					<font>font13</font>
 					<align>justify</align>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Property(Album_Description)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -1086,7 +1086,7 @@
 					<height>298</height>
 					<font>font13</font>
 					<align>justify</align>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Property(Album_Description)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>

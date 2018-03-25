@@ -21,11 +21,11 @@ msgid "Change your"
 msgstr ""
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "MÄNGUD"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
 msgstr ""
 
 msgctxt "#31003"
@@ -38,7 +38,7 @@ msgstr "Toimetamine..."
 
 msgctxt "#31005"
 msgid "Hide information"
-msgstr ""
+msgstr "Peida informatsioon"
 
 msgctxt "#31006"
 msgid "View options"
@@ -54,7 +54,7 @@ msgstr "Täisekraan"
 
 msgctxt "#31009"
 msgid "Total duration"
-msgstr ""
+msgstr "Kogukestvus"
 
 msgctxt "#31010"
 msgid "Hardware decoding"
@@ -77,12 +77,8 @@ msgid "Memory used"
 msgstr ""
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Minut"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -174,7 +170,7 @@ msgstr "Tegevused"
 
 msgctxt "#31040"
 msgid "Now playing"
-msgstr ""
+msgstr "Hetkel mängib"
 
 msgctxt "#31041"
 msgid "UPnP error"
@@ -250,7 +246,7 @@ msgstr "Valitud esitusloend"
 
 msgctxt "#31061"
 msgid "Current selected"
-msgstr ""
+msgstr "Hetkel valitud"
 
 msgctxt "#31062"
 msgid "Episode backdrop"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"
@@ -1030,7 +1042,7 @@ msgstr ""
 
 msgctxt "#31301"
 msgid "Last updated"
-msgstr ""
+msgstr "Viimati uuendatud"
 
 msgctxt "#31302"
 msgid "Outlook - "
@@ -1122,7 +1134,7 @@ msgstr "Resolutsioon"
 
 msgctxt "#31328"
 msgid "Recently added"
-msgstr ""
+msgstr "Viimati lisatud"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"

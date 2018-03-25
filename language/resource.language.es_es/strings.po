@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "Cambiar sus"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "JUEGOS"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]AJUSTES DE JUEGOS[/B][CR][CR]Configura el soporte para rebobinar y opciones ·  Configura el teclado y el número de jugadores por teclado"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -77,12 +77,8 @@ msgid "Memory used"
 msgstr "Memoria usada"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Minuto"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -482,7 +478,7 @@ msgstr "Submenú de programas de la pantalla principal"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
-msgstr "Ocultar el Fanart del fondo"
+msgstr "Ocultar fanart del fondo"
 
 msgctxt "#31120"
 msgid "Hide page count info"
@@ -518,7 +514,7 @@ msgstr "Letra"
 
 msgctxt "#31129"
 msgid "Hide fanart in full screen visualisation"
-msgstr "Ocultar Fanart en visualizaciones a pantalla completa"
+msgstr "Ocultar fanart en visualizaciones a pantalla completa"
 
 msgctxt "#31130"
 msgid "Hide favorites button"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"

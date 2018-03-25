@@ -21,12 +21,12 @@ msgid "Change your"
 msgstr "Zmień"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "GRY"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]USTAWIENIA GIER[/B][CR][CR]Konfiguracja obsługi przewijania wstecz i opcje · Konfiguracja klawiatury i liczby graczy"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -77,12 +77,8 @@ msgid "Memory used"
 msgstr "Użycie pamięci"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr ""
-
-msgctxt "#31016"
-msgid "Permanently"
-msgstr ""
+msgid "Minute"
+msgstr "Chwila"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -206,7 +202,7 @@ msgstr ""
 
 msgctxt "#31048"
 msgid "Visualisation presets"
-msgstr "Wzorce wizualizacji"
+msgstr "Szablony wizualizacji"
 
 msgctxt "#31049"
 msgid "End time"
@@ -230,15 +226,15 @@ msgstr ""
 
 msgctxt "#31055"
 msgid "Open playlist"
-msgstr "Otwórz listę odtwarzania"
+msgstr "Otwórz listę"
 
 msgctxt "#31056"
 msgid "Save playlist"
-msgstr "Zapisz listę odtwarzania"
+msgstr "Zapisz listę"
 
 msgctxt "#31057"
 msgid "Close playlist"
-msgstr "Zamknij listę odtwarzania"
+msgstr "Zamknij listę"
 
 msgctxt "#31058"
 msgid "System music files"
@@ -246,7 +242,7 @@ msgstr "Systemowe pliki muzyczne"
 
 msgctxt "#31059"
 msgid "Current playlist"
-msgstr "Aktualna lista odtwarzania"
+msgstr "Aktualna lista"
 
 msgctxt "#31061"
 msgid "Current selected"
@@ -618,6 +614,22 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
 msgstr ""
 
 msgctxt "#31188"
@@ -1110,7 +1122,7 @@ msgstr ""
 
 msgctxt "#31325"
 msgid "Playlist options"
-msgstr "Opcje listy odtwarzania"
+msgstr "Opcje listy"
 
 msgctxt "#31326"
 msgid "Created"
@@ -1610,7 +1622,7 @@ msgstr "Grupa kanałów"
 
 msgctxt "#31510"
 msgid "Timer set"
-msgstr "Zaplanowane zamknięcie"
+msgstr "Zaplanuj zamknięcie"
 
 msgctxt "#31511"
 msgid "Channel options"
