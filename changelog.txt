@@ -1,5 +1,16 @@
 [B]4.0.0[/B]
-- Changed skin resolution from 720 to 1080
+- Changed skin for use with screen resolution from 702p to 1080p
+- Major code cleanup
+- Major cleanup of textures
+- Making use of resources for backgrounds and fanarts as new addon to make the skin lighter in disk space.
+- Also make use of resources for weather, flags and studios
+- Added updated hebrew language (A. Dambledore)
+- Updated language files
+- Added look and feel mod to select buttons to classic, modern or max
+- Added look and feel mod to select button layout to classic or modern
+- Added look and feel mod to select dialog layout to classic or modern
+- Added look and feel mod to select osd to classic, modern or max
+- And lots more ...
 
 [B]3.4.0[/B]
 - Updated 720p for Leia
