@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">100</defaultcontrol>
+    <onload condition="!MusicPlayer.Content(LiveTV)">SetFocus(602)</onload>
+    <include>dialogeffect</include>
+    <depth>DepthOSD</depth>
+    <coordinates>
+        <left>0</left>
+        <top>0</top>
+    </coordinates>
+    <controls>
+        <control type="button" id="10">
+            <description>Close Window button</description>
+            <left>126r</left>
+            <top>0</top>
+            <onup>100</onup>
+            <ondown>87</ondown>
+            <onclick>Dialog.Close(MusicOSD,true)</onclick>
+            <onclick>FullScreen</onclick>
+            <include>DialogCloseButton</include>
+            <animation effect="fade" time="150">VisibleChange</animation>
+            <animation effect="slide" start="0,0" end="-45,0" time="0" condition="Player.Muted">conditional</animation>
+            <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
+        </control>
+        <control type="slider" id="87">
+            <depth>DepthOSD+</depth>
+            <description>Seek Slider</description>
+            <left>645</left>
+            <top>123r</top>
+            <width>1080</width>
+            <height>24</height>
+            <onup>10</onup>
+            <ondown>100</ondown>
+            <action>seek</action>
+            <texturesliderbar>seekslider2.png</texturesliderbar>
+            <textureslidernib colordiffuse="$VAR[MainColorTwo]">OSD_slider_nibNF.png</textureslidernib>
+            <textureslidernibfocus colordiffuse="$VAR[MainColorTwo]">OSD_slider_nib.png</textureslidernibfocus>
+            <animation effect="fade" time="150">VisibleChange</animation>
+            <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
+            <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideMusicArtWorkOSD) | [Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)]" reversible="true">Conditional</animation>
+        </control>
+        <control type="grouplist" id="100">
+            <left>488</left>
+            <top>90r</top>
+            <orientation>horizontal</orientation>
+            <itemgap>0</itemgap>
+            <onup>87</onup>
+            <ondown>10</ondown>
+            <animation effect="fade" time="150">VisibleChange</animation>
+            <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideMusicArtWorkOSD) | [Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)]" reversible="true">Conditional</animation>
+            <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
+            <control type="radiobutton" id="300">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDChannelUp" />
+                </include>
+                <onclick>PlayerControl(Previous)</onclick>
+                <visible>MusicPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="301">
+                <label>209</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDChannelDown" />
+                </include>
+                <onclick>PlayerControl(Next)</onclick>
+                <visible>MusicPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="302">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDVolUp" />
+                </include>
+                <onclick>$VAR[VolumeStepUp]</onclick>
+                <onclick>VolumeUp</onclick>
+                <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+            </control>
+            <control type="radiobutton" id="303">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDVolDown" />
+                </include>
+                <onclick>$VAR[VolumeStepDown]</onclick>
+                <onclick>VolumeDown</onclick>
+                <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+            </control>
+            <control type="radiobutton" id="600">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPrevTrack" />
+                </include>
+                <onclick>PlayerControl(Previous)</onclick>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="601">
+                <label>31354</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRewind" />
+                </include>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
+                <onclick>PlayerControl(Rewind)</onclick>
+                <enable>Player.SeekEnabled</enable>
+            </control>
+            <control type="radiobutton" id="602">
+                <label>31351</label>
+                <altlabel>208</altlabel>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPause" />
+                    <param name="AltTexture" value="OSDPlay" />
+                    <param name="Selected" value="Player.Paused | Player.Forwarding | Player.Rewinding" />
+                </include>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Player.PauseEnabled">Conditional</animation>
+                <onclick>PlayerControl(Play)</onclick>
+                <enable>Player.PauseEnabled</enable>
+            </control>
+            <control type="radiobutton" id="603">
+                <label>31352</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDStop" />
+                </include>
+                <onclick>PlayerControl(Stop)</onclick>
+            </control>
+            <control type="radiobutton" id="604">
+                <label>31353</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDForward" />
+                </include>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
+                <onclick>PlayerControl(Forward)</onclick>
+                <enable>Player.SeekEnabled</enable>
+            </control>
+            <control type="radiobutton" id="605">
+                <label>209</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDNextTrack" />
+                </include>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+                <onclick>PlayerControl(Next)</onclick>
+            </control>
+            <control type="radiobutton" id="306">
+                <label>19019</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDChannelList" />
+                </include>
+                <onclick>ActivateWindow(PVROSDChannels)</onclick>
+                <visible>MusicPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="307">
+                <label>$LOCALIZE[19029]$INFO[MusicPlayer.ChannelName, - ]</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDepg" />
+                </include>
+                <onclick>ActivateWindow(PVRChannelGuide)</onclick>
+                <visible>MusicPlayer.Content(LiveTV) + !RDS.HasRadiotextPlus</visible>
+            </control>
+            <control type="radiobutton" id="308">
+                <visible>RDS.HasRadiotextPlus</visible>
+                <label>209</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRadioRDS" />
+                </include>
+                <onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
+                <visible>MusicPlayer.Content(LiveTV) + RDS.HasRadiotextPlus</visible>
+            </control>
+            <control type="radiobutton" id="606">
+                <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRepeat" />
+                </include>
+                <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+                <onclick>PlayerControl(Repeat)</onclick>
+            </control>            
+            <control type="radiobutton" id="608">
+                <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRepeatOne" />
+                </include>
+                <visible>Playlist.IsRepeatOne</visible>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+                <onclick>PlayerControl(Repeat)</onclick>
+            </control>
+            <control type="radiobutton" id="609">
+                <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRepeatAll" />
+                </include>
+                <visible>Playlist.IsRepeat</visible>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+                <onclick>PlayerControl(Repeat)</onclick>
+            </control>
+            <control type="radiobutton" id="607">
+                <label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRandomOff" />
+                    <param name="AltTexture" value="OSDRandomOn" />
+                    <param name="Selected" value="Playlist.IsRandom" />
+                </include>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+                <onclick>PlayerControl(Random)</onclick>
+            </control>
+            <control type="image" id="2200">
+                <width>165</width>
+                <height>82</height>
+                <texture></texture>
+                <visible>!Skin.HasSetting(EnableVolumeButtons)</visible>
+            </control>
+            <control type="image" id="2300">
+                <width>82</width>
+                <texture></texture>
+                <visible>!MusicPlayer.Content(LiveTV) + !System.HasAddon(plugin.program.dreamcatcher)</visible>
+            </control>
+            <control type="image" id="2400">
+                <width>82</width>
+                <texture></texture>
+                <visible>!system.getbool(audiooutput.dspaddonsenabled)</visible>
+            </control>
+            <control type="image" id="2450">
+                <width>82</width>
+                <texture></texture>
+                <visible>MusicPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="image" id="2500">
+                <width>82</width>
+                <texture></texture>
+                <visible>MusicPlayer.Content(LiveTV) + !PVR.CanRecordPlayingChannel</visible>
+            </control>
+            <control type="radiobutton" id="256">
+                <visible>Skin.HasSetting(ShowUsrVideoOSDButton) + Skin.String(OSDBtnUsrCmd)</visible>
+                <label>31359</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDUser" />
+                </include>
+                <onclick condition="Skin.String(OSDBtnUsrCmd)">Dialog.Close(MusicOSD,true)</onclick>
+                <onclick condition="Skin.String(OSDBtnUsrCmd)">$VAR[UsrOSDBtnCmd]</onclick>
+            </control>
+            <control type="radiobutton" id="705">
+                <label>15047</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRate" />
+                </include>
+                <onclick>setrating</onclick>
+                <visible>!Skin.HasSetting(ShowUsrVideoOSDButton) | [Skin.HasSetting(ShowUsrVideoOSDButton) + !Skin.String(OSDBtnUsrCmd)]</visible>
+            </control>
+            <control type="radiobutton" id="700">
+                <label>15047</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDDSPAudio" />
+                </include>
+                <onclick>ActivateWindow(OSDAudioDSPSettings)</onclick>
+                <visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
+            </control>
+            <control type="radiobutton" id="701">
+                <label>31128</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDLyrics" />
+                </include>
+                <onclick>Close</onclick>
+                <onclick>RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
+                <visible>!String.IsEmpty(Skin.String(LyricScript_Path))</visible>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="706">
+                <label>31128</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDLyrics" />
+                </include>
+                <onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+                <onclick>Close</onclick>
+                <onclick>RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
+                <visible>String.IsEmpty(Skin.String(LyricScript_Path))</visible>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="500">
+                <label>12006</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDViz" />
+                </include>
+            </control>
+            <control type="radiobutton" id="702">
+                <label>$LOCALIZE[250] $LOCALIZE[21417]</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPresetSettings" />
+                </include>
+                <onclick>ActivateWindow(1105)</onclick>
+            </control>
+            <control type="radiobutton" id="703">
+                <label>31048</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPre" />
+                </include>
+                <onclick>ActivateWindow(visualisationpresetlist)</onclick>
+                <enable>Visualisation.HasPresets</enable>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Visualisation.HasPresets">Conditional</animation>
+            </control>
+            <control type="radiobutton" id="704">
+                <label>264</label>
+                <altlabel>265</altlabel>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRecordOff" />
+                    <param name="AltTexture" value="OSDRecordOn" />
+                    <param name="Selected" value="PVR.IsRecordingPlayingChannel" />
+                </include>
+                <onclick>PVR.ToggleRecordPlayingChannel</onclick>
+                <enable>PVR.CanRecordPlayingChannel</enable>
+                <animation effect="fade" start="100" end="50" time="75" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
+                <visible>MusicPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="206">
+                <label>264</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRecordOff" />
+                </include>
+                <onclick>RunPlugin(plugin://plugin.program.dreamcatcher/?mode=Record)</onclick>
+                <visible>!VideoPlayer.Content(LiveTV) + System.HasAddon(plugin.program.dreamcatcher)</visible>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">50</defaultcontrol>
+    <menucontrol>9000</menucontrol>
+    <views>50,51,500,732,724,550,551,560,501,508,504,503,515,505,511</views>
+    <include condition="!Skin.HasSetting(DisableTVTunes)">LoadTvTunes</include>
+    <onload condition="!Skin.HasSetting(DisableTVNextAired)">RunScript(script.tv.show.next.aired,backend=True,silent=True)</onload>
+    <onunload>ClearProperty(SideBladeOpen)</onunload>
+    <controls>
+        <include>CommonBackground</include>
+        <include condition="Skin.HasSetting(ShowExtraFanArt)">FanArtExtraThumbs</include>
+        <include>ContentPanelBackgrounds</include>
+        <include>VideoExtrasIcon</include>
+        <control type="group">
+            <include>Window_OpenClose_Animation</include>
+            <!-- view id = 50 -->
+            <include>CommonRootView</include>
+            <!-- view id = 51 -->
+            <include>FullWidthList</include>
+            <!-- view id = 500 -->
+            <include>ThumbnailView</include>
+            <!-- view id = 732 -->
+            <include>FullWallView</include>
+            <!-- view id = 724 -->
+            <include>Lowlist</include>
+            <!-- view id = 501 -->
+            <include>PosterWrapView</include>
+            <!-- view id = 508 -->
+            <include condition="Skin.HasSetting(WrapMediaViews)">PosterWrapViewFanart</include>
+            <include condition="!Skin.HasSetting(WrapMediaViews)">PosterListViewFanart</include>
+            <!-- view id = 503 -->
+            <include>MediaListView3</include>
+            <!-- view id = 504 -->
+            <include>MediaListView2</include>
+            <!-- view id = 515 -->
+            <include>MediaListView4</include>
+            <!-- view id = 505 -->
+            <include>WideIconView</include>
+            <!-- view id = 511 -->
+            <include>MusicVideoInfoListView</include>
+            <!-- view id = 550 -->
+            <include>AddonInfoListView1</include>
+            <!-- view id = 551 -->
+            <include>AddonInfoThumbView1</include>
+            <!-- view id = 560 -->
+            <include>LiveTVView1</include>
+        </control>
+        <control type="group">
+            <depth>DepthFooter</depth>
+            <include>CommonPageCount</include>
+            <include>CommonNowPlaying</include>
+        </control>
+        <include>FloorReturnButtons</include>
+        <include>BehindDialogFadeOut</include>
+        <include>ScrollOffsetLabel</include>
+        <include condition="!Skin.HasSetting(DisableTVNextAired)">NextAired</include>
+        <include content="CommonWindowHeader">
+            <param name="Icon" value="icon_video" />
+            <param name="Label" value="$LOCALIZE[3]" />
+        </include>
+        <control type="group">
+            <visible>!Skin.HasSetting(KioskMode)</visible>
+            <left>-375</left>
+            <include>SideBladeLeft</include>
+            <control type="grouplist" id="9000">
+                <left>0</left>
+                <top>90</top>
+                <width>375</width>
+                <height>975</height>
+                <onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+                <onleft>50</onleft>
+                <onright>ClearProperty(SideBladeOpen)</onright>
+                <onright>50</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <onback>ClearProperty(SideBladeOpen)</onback>
+                <itemgap>0</itemgap>
+                <control type="label" id="200">
+                    <width>375</width>
+                    <height>52</height>
+                    <font>font12</font>
+                    <label>31006</label>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="button" id="2">
+                    <description>View As button</description>
+                    <textwidth>352</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label></label>
+                </control>
+                <control type="button" id="3">
+                    <description>Sort by button</description>
+                    <include>ButtonCommonValues</include>
+                    <label>103</label>
+                </control>
+                <control type="togglebutton" id="4">
+                    <description>Sort asc</description>
+                    <include>ButtonCommonValues</include>
+                    <include>NormalButton</include>
+                    <include>AltButton</include>
+                    <alttexturenofocus></alttexturenofocus>
+                    <label>31051</label>
+                    <altlabel>31050</altlabel>
+                    <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+                </control>
+                <control type="radiobutton" id="99">
+                    <description>Library button</description>
+                    <include>ButtonCommonValues</include>
+                    <label>$LOCALIZE[31321]</label>
+                    <onclick>Skin.ToggleSetting(Videos_Librarymode)</onclick>
+                    <onclick>ReplaceWindow(1199)</onclick>
+                    <selected>Skin.HasSetting(Videos_Librarymode)</selected>
+                    <visible>!Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(Movies) + !Container.Content(tvshows) + !Container.Content(musicvideos) + !Container.Content(genres) + !Container.Content(years) + !Container.Content(actors) + !Container.Content(playlists) + !Container.Content(studios) + !Container.Content(directors) + !Container.Content(sets) + !Container.Content(tags) + !Container.Content(addons)</visible>
+                </control>
+                <control type="edit" id="19">
+                    <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+                    <description>Filter</description>
+                    <textwidth>345</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>587</label>
+                </control>
+                <control type="radiobutton" id="98">
+                    <visible>Container.CanFilterAdvanced</visible>
+                    <description>Filter</description>
+                    <include>ButtonCommonValues</include>
+                    <label>587</label>
+                    <selected>Container.Filtered</selected>
+                    <onclick>right</onclick>
+                    <onclick>Filter</onclick>
+                </control>
+                <control type="button" id="100">
+                    <width>375</width>
+                    <height>60</height>
+                    <font>font13</font>
+                    <label>$LOCALIZE[31123] $VAR[PopupInfoType]</label>
+                    <textcolor>white</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <texturenofocus></texturenofocus>
+                    <pulseonselect>false</pulseonselect>
+                    <onclick condition="String.IsEmpty(Skin.String(MediaPopupControl))">Skin.SetString(MediaPopupControl,Delayed)</onclick>
+                    <onclick condition="Skin.String(MediaPopupControl,Delayed)">Skin.SetString(MediaPopupControl,Hidden)</onclick>
+                    <onclick condition="Skin.String(MediaPopupControl,Hidden)">Skin.SetString(MediaPopupControl,Instant)</onclick>
+                    <onclick condition="Skin.String(MediaPopupControl,Instant)">Skin.Reset(MediaPopupControl)</onclick>
+                    <visible>Control.IsVisible(508)</visible>
+                </control>
+                <control type="radiobutton" id="101">
+                    <description>Show Logo Toggle</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>31324</label>
+                    <onclick>Skin.ToggleSetting(View515Hidelogo)</onclick>
+                    <selected>Skin.HasSetting(View515Hidelogo)</selected>
+                    <visible>!Skin.HasSetting(DisableLogoArt)</visible>
+                    <visible>[Control.IsVisible(515)| Control.IsVisible(501)] + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
+                </control>
+                <control type="radiobutton" id="102">
+                    <description>TVShow Banners Banners</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>31090</label>
+                    <onclick>Skin.ToggleSetting(Enable515WideBanners)</onclick>
+                    <selected>Skin.HasSetting(Enable515WideBanners)</selected>
+                    <visible>Control.IsVisible(515) + !Container.Content(Episodes)</visible>
+                </control>
+                <control type="radiobutton" id="103">
+                    <description>Show Watched Banners</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>31323</label>
+                    <onclick>Skin.ToggleSetting(EnableStatusBanner)</onclick>
+                    <selected>Skin.HasSetting(EnableStatusBanner)</selected>
+                    <visible>Control.IsVisible(732)</visible>
+                </control>
+                <control type="radiobutton" id="104">
+                    <description>Show Watched Banners</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>31053</label>
+                    <onclick>Skin.ToggleSetting(HideWatchedMediaStat)</onclick>
+                    <selected>!Skin.HasSetting(HideWatchedMediaStat)</selected>
+                    <visible>Skin.HasSetting(EnableStatusBanner)</visible>
+                    <visible>Control.IsVisible(732)</visible>
+                </control>
+                <control type="radiobutton" id="105">
+                    <description>Show Watched Banners</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>31052</label>
+                    <onclick>Skin.ToggleSetting(HideNewMediaStat)</onclick>
+                    <selected>!Skin.HasSetting(HideNewMediaStat)</selected>
+                    <visible>Skin.HasSetting(EnableStatusBanner)</visible>
+                    <visible>Control.IsVisible(732)</visible>
+                </control>
+                <control type="radiobutton" id="106">
+                    <description>Episode Backgrounds</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>31062</label>
+                    <onclick>Skin.ToggleSetting(EpisodeBackground)</onclick>
+                    <selected>Skin.HasSetting(EpisodeBackground)</selected>
+                    <visible>Container.Content(Episodes)</visible>
+                </control>
+                <control type="radiobutton" id="107">
+                    <description>Additional Artwork</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>31332</label>
+                    <onclick>Skin.ToggleSetting(EnableAdditionalArtWork)</onclick>
+                    <selected>Skin.HasSetting(EnableAdditionalArtWork)</selected>
+                    <visible>Control.IsVisible(724) | Control.IsVisible(508) | Control.IsVisible(51)</visible>
+                </control>
+                <control type="radiobutton" id="108">
+                    <description>Extra Thumbs</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>31035</label>
+                    <onclick>Skin.ToggleSetting(Disable504FanArt)</onclick>
+                    <selected>!Skin.HasSetting(Disable504FanArt)</selected>
+                    <visible>[Control.IsVisible(504) | Control.IsVisible(515)] + Container.Content(Movies)</visible>
+                </control>
+                <control type="label" id="201">
+                    <width>375</width>
+                    <height>52</height>
+                    <font>font12</font>
+                    <label>31026</label>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="radiobutton" id="14">
+                    <description>Watched Toggle</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>20367</label>
+                </control>
+                <control type="button" id="8">
+                    <description>Search</description>
+                    <include>ButtonCommonValues</include>
+                    <label>137</label>
+                </control>
+                <control type="radiobutton" id="16">
+                    <description>PartyMode</description>
+                    <label>589</label>
+                    <include>ButtonCommonValues</include>
+                    <visible>Container.Content(MusicVideos)</visible>
+                </control>
+                <control type="radiobutton" id="11">
+                    <description>Unlock Shares</description>
+                    <textwidth>255</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>20336</label>
+                    <onclick>mastermode</onclick>
+                    <selected>system.ismaster</selected>
+                    <visible>system.haslocks</visible>
+                </control>
+                <control type="label" id="203">
+                    <width>375</width>
+                    <height>52</height>
+                    <font>font12</font>
+                    <label>31039</label>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="togglebutton" id="20">
+                    <description>Update library</description>
+                    <textwidth>352</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>653</label>
+                    <altlabel>13353</altlabel>
+                    <include>NormalButton</include>
+                    <include>AltButton</include>
+                    <alttexturenofocus></alttexturenofocus>
+                    <usealttexture>library.isscanningvideo</usealttexture>
+                </control>
+                <control type="button" id="204">
+                    <description>Get more</description>
+                    <textwidth>352</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>21452</label>
+                    <onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
+                    <visible>Container.Content(addons)</visible>
+                </control>
+                <include>CommonNowPlaying_Controls</include>
+            </control>
+        </control>
+    </controls>
+</window>

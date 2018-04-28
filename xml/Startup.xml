@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">10</defaultcontrol>
+    <include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+    <include>UnloadsScripts</include>
+    <onload condition="!Skin.HasSetting(DisableFanartScript) + Integer.IsGreater(Skin.String(FanArtCycleRate),0)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onload>
+    <onload condition="!Skin.String(KodiIntroVideo)">Skin.SetString(KodiIntroVideo,special://skin/extras/Intro/KODI-Intro-Video.mp4)</onload>
+    <controls>
+        <control type="image">
+            <description>Startup Background Image</description>
+            <include>Dimensions_Fullscreen</include>
+            <aspectratio>scale</aspectratio>
+            <include>VisibleFadeEffect</include>
+            <texture fallback="$VAR[SkinBackgroundPath]startup.jpg">$INFO[Skin.String(StartUpBackgroundPath)]</texture>
+            <visible>!Skin.HasSetting(HideStartUpBackground)</visible>
+        </control>
+        <control type="button" id="10">
+            <description>trigger</description>
+            <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+            <texturenofocus></texturenofocus>
+            <texturefocus></texturefocus>
+            <visible>!Skin.HasSetting(UseStartUpPlaylistPath) + Skin.HasSetting(HideKodiIntro)</visible>
+        </control>
+        <control type="button" id="10">
+            <description>trigger with XBMC Intro Movie</description>
+            <onfocus>PlayMedia($INFO[Skin.String(KodiIntroVideo)])</onfocus>
+            <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+            <texturenofocus></texturenofocus>
+            <texturefocus></texturefocus>
+            <visible>!Skin.HasSetting(HideKodiIntro)</visible>
+        </control>
+        <control type="button" id="10">
+            <description>trigger with startup Playlist</description>
+            <onfocus>PlayMedia($INFO[Skin.String(StartUpPlaylistPath)])</onfocus>
+            <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+            <texturenofocus></texturenofocus>
+            <texturefocus></texturefocus>
+            <visible>Skin.HasSetting(UseStartUpPlaylistPath)</visible>
+        </control>
+        <include>CommonBackground</include>
+    </controls>
+</window>

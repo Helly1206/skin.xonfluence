@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">50</defaultcontrol>
+    <menucontrol>9000</menucontrol>
+    <views>50,5010,5060, 5040</views>
+    <onunload>ClearProperty(SideBladeOpen)</onunload>
+    <controls>
+        <include>CommonBackground</include>
+        <control type="image">
+            <left>0</left>
+            <top>150r</top>
+            <width>1920</width>
+            <height>150</height>
+            <texture>floor.png</texture>
+            <animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
+            <animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
+            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+            <animation effect="fade" start="100" end="65" time="0" condition="String.IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
+            <visible>!String.IsEmpty(Skin.String(HomeFloor))</visible>
+        </control>
+        <include>FloorReturnButtons</include>
+        <include>PVRHeader</include>
+        <!-- view id = 50 -->
+        <include>ChannelList</include>
+        <!-- view id = 5010 -->
+        <include>ChannelList2</include>
+        <!-- view id = 5060 -->
+        <include>AllWidthList</include>
+        <!-- view id = 5040 -->
+        <include>MediaInfoPVR</include>
+        <control type="group">
+            <depth>DepthFooter</depth>
+            <include>CommonNowPlaying</include>
+        </control>
+        <include>BehindDialogFadeOut</include>
+        <include>ScrollOffsetLabel</include>
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>black-back.png</texture>
+            <animation effect="fade" time="300">Visible</animation>
+            <animation effect="fade" time="150">Hidden</animation>
+            <visible>Window.IsActive(FileBrowser) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGroupManager) | Window.IsActive(PVRGuideSearch)</visible>
+        </control>
+        <include>PVRSideBlade</include>
+    </controls>
+</window>

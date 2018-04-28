@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="buttonMenu">
+    <defaultcontrol>9001</defaultcontrol>
+    <include>dialogeffect</include>
+    <coordinates>
+        <left>0</left>
+        <top>0</top>
+    </coordinates>
+    <include>dialogeffect</include>
+    <depth>DepthDialog+</depth>
+    <controls>
+        <control type="button" id="9001">
+            <description>Make sure we hit the first button in the group list and not the close window button</description>
+            <left>-24</left>
+            <top>-24</top>
+            <width>6</width>
+            <height>6</height>
+            <label></label>
+            <font></font>
+            <onfocus>down</onfocus>
+            <texturefocus></texturefocus>
+            <texturenofocus></texturenofocus>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <onup>9000</onup>
+            <ondown>2</ondown>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>black-back.png</texture>
+        </control>
+        <control type="grouplist" id="9000">
+            <left>705</left>
+            <top>0</top>
+            <width>510</width>
+            <height>1080</height>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <onup>9000</onup>
+            <ondown>9000</ondown>
+            <itemgap>0</itemgap>
+            <align>center</align>
+            <control type="group" id="1">
+                <width>510</width>
+                <height>45</height>
+                <control type="image">
+                    <description>background top image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>45</height>
+                    <texture border="20,19,20,0">$VAR[DialogPath]DialogContextTop.png</texture>
+                </control>
+                <control type="button" id="100">
+                    <description>Close Window button</description>
+                    <left>390</left>
+                    <top>8</top>
+                    <onclick>PreviousMenu</onclick>
+                    <include>DialogCloseButton</include>
+                    <onleft>2</onleft>
+                    <onright>14</onright>
+                    <onup>14</onup>
+                    <ondown>2</ondown>
+                </control>
+            </control>
+            <control type="group" id="2">
+                <width>510</width>
+                <height>60</height>
+                <visible>System.ShowExitButton</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="200">
+                    <description>Exit button</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>3</onleft>
+                    <onright>1</onright>
+                    <onup>1</onup>
+                    <ondown>3</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick condition="!Skin.HasSetting(MinimizeOnExit)">Quit()</onclick>
+                    <onclick condition="Skin.HasSetting(MinimizeOnExit)">Minimize</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>13012</label>
+                </control>
+            </control>
+            <control type="group" id="3">
+                <width>510</width>
+                <height>60</height>
+                <visible>System.CanPowerDown</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="300">
+                    <description>Shutdown button</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>4</onleft>
+                    <onright>2</onright>
+                    <onup>2</onup>
+                    <ondown>4</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick condition="!Skin.HasSetting(Enable_CustomShutDown)">Powerdown()</onclick>
+                    <onclick condition="Skin.HasSetting(Enable_CustomShutDown)">RunScript($VAR[CustomShutdown],$VAR[CustomShutdownArg])</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>13016</label>
+                </control>
+            </control>
+            <control type="group" id="4">
+                <width>510</width>
+                <height>60</height>
+                <visible>!System.HasAlarm(shutdowntimer)</visible>
+                <visible>Skin.HasSetting(Show_Timer) + [System.CanPowerDown | System.CanSuspend | System.CanHibernate]</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="400">
+                    <description>Custom Shutdown Timer</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>5</onleft>
+                    <onright>3</onright>
+                    <onup>3</onup>
+                    <ondown>5</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick condition="!Skin.HasSetting(Enable_CustomTimer)">AlarmClock(shutdowntimer,Shutdown())</onclick>
+                    <onclick condition="Skin.HasSetting(Enable_CustomTimer)">AlarmClock(shutdowntimer,RunScript($VAR[CustomTimer],$VAR[CustomTimerArg]))</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>20150</label>
+                </control>
+            </control>
+            <control type="group" id="5">
+                <width>510</width>
+                <height>60</height>
+                <visible>System.HasAlarm(shutdowntimer)</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="500">
+                    <description>Cancel Shutdown Timer</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>6</onleft>
+                    <onright>4</onright>
+                    <onup>4</onup>
+                    <ondown>6</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick>CancelAlarm(shutdowntimer)</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>20151</label>
+                </control>
+            </control>
+            <control type="group" id="6">
+                <width>510</width>
+                <height>60</height>
+                <visible>Skin.HasSetting(Show_Suspend) + System.CanSuspend</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="600">
+                    <description>Suspend button</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>7</onleft>
+                    <onright>5</onright>
+                    <onup>5</onup>
+                    <ondown>7</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick condition="!Skin.HasSetting(Enable_CustomSuspend)">Suspend()</onclick>
+                    <onclick condition="Skin.HasSetting(Enable_CustomSuspend)">RunScript($VAR[CustomSuspend],$VAR[CustomSuspendArg])</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>13011</label>
+                </control>
+            </control>
+            <control type="group" id="7">
+                <width>510</width>
+                <height>60</height>
+                <visible>Skin.HasSetting(Show_Hibernate) + System.CanHibernate</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="700">
+                    <description>Hibernate button</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>8</onleft>
+                    <onright>6</onright>
+                    <onup>6</onup>
+                    <ondown>8</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick condition="!Skin.HasSetting(Enable_CustomHibernate)">Hibernate()</onclick>
+                    <onclick condition="Skin.HasSetting(Enable_CustomHibernate)">RunScript($VAR[CustomHibernate],$VAR[CustomHibernateArg])</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>13010</label>
+                </control>
+            </control>
+            <control type="group" id="8">
+                <width>510</width>
+                <height>60</height>
+                <visible>System.CanReboot</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="800">
+                    <description>Reboot button</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>9</onleft>
+                    <onright>7</onright>
+                    <onup>7</onup>
+                    <ondown>9</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick condition="!Skin.HasSetting(RestartNotReboot)">Reset()</onclick>
+                    <onclick condition="Skin.HasSetting(RestartNotReboot)">RestartApp()</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>13013</label>
+                </control>
+            </control>
+            <control type="group" id="9">
+                <width>510</width>
+                <height>60</height>
+                <visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
+                <visible>Skin.HasSetting(Show_Logoff) + System.Loggedon</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="900">
+                    <description>Logoff button</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>10</onleft>
+                    <onright>8</onright>
+                    <onup>8</onup>
+                    <ondown>10</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick>dialog.close(all,true)</onclick>
+                    <onclick>System.LogOff</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+                </control>
+            </control>
+            <control type="group" id="10">
+                <width>510</width>
+                <height>60</height>
+                <visible>Skin.HasSetting(Show_Mastermode) + System.HasLocks</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="togglebutton" id="1000">
+                    <description>Master mode button</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>12</onleft>
+                    <onright>9</onright>
+                    <onup>9</onup>
+                    <ondown>12</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <usealttexture>!System.IsMaster</usealttexture>
+                    <include>NormalButton</include>
+                    <include>AltButton</include>
+                    <onclick>mastermode</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>20046</label>
+                    <altlabel>20045</altlabel>
+                </control>
+            </control>
+            <control type="group" id="11">
+                <width>510</width>
+                <height>105</height>
+                <visible>System.HasAlarm(shutdowntimer)</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>105</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="textbox">
+                    <left>38</left>
+                    <top>33</top>
+                    <width>435</width>
+                    <height>72</height>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <align>center</align>
+                    <label>$LOCALIZE[31329] [B]$INFO[System.Alarmpos][/B]</label>
+                </control>
+            </control>
+            <control type="group" id="12">
+                <width>510</width>
+                <height>60</height>
+                <visible>System.HasShutdown + !System.IsInhibit</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="1200">
+                    <description>Inhibit idle shutdown</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>13</onleft>
+                    <onright>10</onright>
+                    <onup>10</onup>
+                    <ondown>13</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick>InhibitIdleShutdown(true)</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>13017</label>
+                </control>
+            </control>
+            <control type="group" id="13">
+                <width>510</width>
+                <height>60</height>
+                <visible>System.HasShutdown + System.IsInhibit</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="1300">
+                    <description>Allow idle shutdown</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>14</onleft>
+                    <onright>12</onright>
+                    <onup>12</onup>
+                    <ondown>14</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick>InhibitIdleShutdown(false)</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>13018</label>
+                </control>
+            </control>
+            <control type="group" id="14">
+                <width>510</width>
+                <height>60</height>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="1400">
+                    <description>Skin Settings button</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>1</onleft>
+                    <onright>13</onright>
+                    <onup>13</onup>
+                    <ondown>1</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick>dialog.close(shutdownmenu)</onclick>
+                    <onclick>ActivateWindow(SkinSettings),return</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>$LOCALIZE[166] $LOCALIZE[5]</label>
+                </control>
+            </control>
+            <control type="image" id="15">
+                <description>background bottom image</description>
+                <left>0</left>
+                <width>510</width>
+                <height>38</height>
+                <texture border="20,0,19,20">$VAR[DialogPath]DialogContextBottom.png</texture>
+            </control>
+        </control>
+    </controls>
+</window>

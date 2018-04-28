@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="2118">
+    <defaultcontrol always="true">450</defaultcontrol>
+    <coordinates>
+        <left>352</left>
+        <top>112</top>
+    </coordinates>
+    <include>dialogeffect</include>
+    <depth>DepthDialog+</depth>
+    <onunload condition="!String.IsEmpty(Skin.String(WidgetFav.List))">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,$INFO[Skin.String(WidgetFav.List)])</onunload>
+    <onunload>ClearProperty(UsrSelectBtn,Home)</onunload>
+    <onunload>Skin.Reset(WidgetFav.List)</onunload>
+    <controls>
+        <control type="group">
+            <animation effect="slide" start="0,0" end="0,69" time="0" condition="!Integer.IsGreater(Container(450).NumItems,4)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,69" time="0" condition="!Integer.IsGreater(Container(450).NumItems,6)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,69" time="0" condition="!Integer.IsGreater(Container(450).NumItems,8)">Conditional</animation>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1275</width>
+                <height>825</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>Integer.IsGreater(Container(450).NumItems,8)</visible>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1275</width>
+                <height>687</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>Integer.IsGreater(Container(450).NumItems,6) + !Integer.IsGreater(Container(450).NumItems,8)</visible>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1275</width>
+                <height>549</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>Integer.IsGreater(Container(450).NumItems,4) + !Integer.IsGreater(Container(450).NumItems,6)</visible>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1275</width>
+                <height>411</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>!Integer.IsGreater(Container(450).NumItems,4)</visible>
+            </control>
+            <control type="image">
+                <description>Dialog Header image</description>
+                <left>60</left>
+                <top>24</top>
+                <width>1155</width>
+                <height>60</height>
+                <texture>$VAR[DialogPath]dialogheader.png</texture>
+            </control>
+            <control type="label" id="1">
+                <description>header label</description>
+                <left>60</left>
+                <top>30</top>
+                <width>1155</width>
+                <height>45</height>
+                <font>font13_title</font>
+                <label>$LOCALIZE[31440]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>selected</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="button">
+                <description>Close Window button</description>
+                <left>1100</left>
+                <top>24</top>
+                <onclick>PreviousMenu</onclick>
+                <include>DialogCloseButton</include>
+                <onleft>450</onleft>
+                <onright>450</onright>
+                <onup>450</onup>
+                <ondown>450</ondown>
+            </control>
+            <control type="list" id="450">
+                <left>30</left>
+                <top>100</top>
+                <width>825</width>
+                <height>690</height>
+                <onup>450</onup>
+                <ondown>450</ondown>
+                <onleft>7</onleft>
+                <onright>61</onright>
+                <pagecontrol>61</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <itemlayout height="69" width="825">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>825</width>
+                        <height>60</height>
+                        <texture border="5">button-nofocus.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <top>0</top>
+                        <width>765</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <textcolor>grey2</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="69" width="825">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>825</width>
+                        <height>60</height>
+                        <texture border="5">button-nofocus.png</texture>
+                        <visible>!Control.HasFocus(450)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>825</width>
+                        <height>60</height>
+                        <texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
+                        <visible>Control.HasFocus(450)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <top>0</top>
+                        <width>765</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <textcolor>white</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <description>Clear Setting</description>
+                        <label>$LOCALIZE[31499]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,-)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                    </item>
+                    <item>
+                        <description>Playlist Movies</description>
+                        <label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[559]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <include>MenuMoviePlayListCheck</include>
+                    </item>
+                    <item>
+                        <description>Video Node</description>
+                        <label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[31211]</label>
+                        <onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Widget,VideoNode)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <include>MenuVideoNodeListCheck</include>
+                    </item>
+                    <item>
+                        <description>UPnP Movies</description>
+                        <label>$LOCALIZE[31115] $LOCALIZE[342]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,UPnPMovies)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi)</visible>
+                    </item>
+                    <item>
+                        <description>Playlist Music</description>
+                        <label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[559]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,MusicPlayList)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <include>MenuMusicPlayListCheck</include>
+                    </item>
+                    <item>
+                        <description>Weather</description>
+                        <label>$LOCALIZE[8]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,Weather)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>!String.IsEmpty(Weather.Plugin)</visible>
+                    </item>
+                    <item>
+                        <description>Recent Movies</description>
+                        <label>$LOCALIZE[31198]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentMovies)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(Movies)</visible>
+                    </item>
+                    <item>
+                        <description>Random Movies</description>
+                        <label>$LOCALIZE[31196]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomMovies)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(Movies)</visible>
+                    </item>
+                    <item>
+                        <description>Suggested Movies</description>
+                        <label>$LOCALIZE[31197]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedMovies)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(Movies)</visible>
+                    </item>
+                    <item>
+                        <description>UnWatched Movies</description>
+                        <label>$LOCALIZE[31228]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,UnWatchedMovies)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>!Skin.HasSetting(DisableScriptPlaylist)</visible>
+                        <visible>Library.HasContent(Movies)</visible>
+                    </item>
+                    <item>
+                        <description>Recent Episodes</description>
+                        <label>$LOCALIZE[31195]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentEpisodes)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(TVShows)</visible>
+                    </item>
+                    <item>
+                        <description>Random Episodes</description>
+                        <label>$LOCALIZE[31193]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomEpisodes)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(TVShows)</visible>
+                    </item>
+                    <item>
+                        <description>Suggested Episodes</description>
+                        <label>$LOCALIZE[31194]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedEpisodes)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(TVShows)</visible>
+                    </item>
+                    <item>
+                        <description>Next Aired Episodes</description>
+                        <label>$LOCALIZE[31245]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,NextAired)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(TVShows)</visible>
+                        <visible>!Skin.HasSetting(DisableTVNextAired)</visible>
+                    </item>
+                    <item>
+                        <description>Recent Albums</description>
+                        <label>$LOCALIZE[31192]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentAlbums)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                    </item>
+                    <item>
+                        <description>Random Albums</description>
+                        <label>$LOCALIZE[31190]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomAlbums)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                    </item>
+                    <item>
+                        <description>Suggested Albums</description>
+                        <label>$LOCALIZE[31191]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedAlbums)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                    </item>
+                    <item>
+                        <description>Recent Concerts</description>
+                        <label>$LOCALIZE[31189]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentConcerts)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(MusicVideos)</visible>
+                    </item>
+                    <item>
+                        <description>Random Concerts</description>
+                        <label>$LOCALIZE[31188]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomConcerts)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(MusicVideos)</visible>
+                    </item>
+                    <item>
+                        <description>Suggested Concerts</description>
+                        <label>$LOCALIZE[31199]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedConcerts)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(MusicVideos)</visible>
+                    </item>
+                    <item>
+                        <description>Custom</description>
+                        <label>$LOCALIZE[31201]</label>
+                        <onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Widget)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                    </item>
+                    <item>
+                        <description>Custom: Favourites</description>
+                        <label>$LOCALIZE[31201] - $LOCALIZE[1036]</label>
+                        <onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Widget)</onclick>
+                        <onclick>RunScript(script.favourites,property=WidgetFav)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <visible>System.HasAddon(script.favourites)</visible>
+                    </item>
+                </content>
+            </control>
+            <control type="scrollbar" id="61">
+                <left>855</left>
+                <top>98</top>
+                <width>38</width>
+                <height>696</height>
+                <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                <onleft>450</onleft>
+                <onright>90</onright>
+                <ondown>61</ondown>
+                <onup>61</onup>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+                <visible>Control.IsVisible(450)</visible>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <description>number of files/pages in list text label</description>
+                    <left>888</left>
+                    <top>735</top>
+                    <width>360</width>
+                    <height>52</height>
+                    <font>font12</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>grey</textcolor>
+                    <label>([COLOR=$VAR[MainColorOne]]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+                    <animation effect="slide" start="0,0" end="0,-138" time="0" condition="!Integer.IsGreater(Container(450).NumItems,4)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="0,-138" time="0" condition="!Integer.IsGreater(Container(450).NumItems,6)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="0,-138" time="0" condition="!Integer.IsGreater(Container(450).NumItems,8)">Conditional</animation>
+                </control>
+                <control type="grouplist" id="90">
+                    <left>918</left>
+                    <top>150</top>
+                    <onleft>450</onleft>
+                    <onright>450</onright>
+                    <control type="button" id="7">
+                        <description>Cancel button</description>
+                        <width>300</width>
+                        <height>60</height>
+                        <label>222</label>
+                        <font>font12_title</font>
+                        <textcolor>white</textcolor>
+                        <focusedcolor>white</focusedcolor>
+                        <align>center</align>
+                        <onclick>PreviousMenu</onclick>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

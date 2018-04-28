@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="false">101</defaultcontrol>
+    <coordinates>
+        <posx>1020</posx>
+        <posy>0</posy>
+    </coordinates>
+    <controls>
+        <control type="group">
+            <animation effect="slide" start="900,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="900,0" time="150" tween="quadratic" easing="out">WindowClose</animation>
+            <control type="image">
+                <description>media info background image</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>900</width>
+                <height>1080</height>
+                <colordiffuse>BBFFFFFF</colordiffuse>
+                <texture border="20,0,0,0" flipx="true">MediaBladeSub.png</texture>
+            </control>
+            <control type="button">
+                <description>Close Window button</description>
+                <posx>30</posx>
+                <posy>0</posy>
+                <onclick>PreviousMenu</onclick>
+                <include>DialogCloseButton</include>
+                <onleft>101</onleft>
+                <onright>101</onright>
+                <onup>101</onup>
+                <ondown>101</ondown>
+            </control>
+            <control type="label">
+                <description>header label</description>
+                <posx>870</posx>
+                <posy>45</posy>
+                <width>825</width>
+                <height>45</height>
+                <font>font30_title</font>
+                <label>$LOCALIZE[SCRIPT0]</label>
+                <align>right</align>
+                <aligny>center</aligny>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <description>Artist label</description>
+                <posx>870</posx>
+                <posy>90</posy>
+                <width>825</width>
+                <height>45</height>
+                <font>font13_title</font>
+                <label>$INFO[MusicPlayer.Artist]</label>
+                <align>right</align>
+                <aligny>center</aligny>
+                <textcolor>grey</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <description>Song label</description>
+                <posx>870</posx>
+                <posy>128</posy>
+                <width>825</width>
+                <height>45</height>
+                <font>font13_title</font>
+                <label>$INFO[MusicPlayer.Title]</label>
+                <align>right</align>
+                <aligny>center</aligny>
+                <textcolor>grey</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="image">
+                <posx>45</posx>
+                <posy>180</posy>
+                <width>825</width>
+                <height>6</height>
+                <texture>separator.png</texture>
+            </control>
+            <control type="textbox" id="100">
+                <description>textarea</description>
+                <posx>45</posx>
+                <posy>195</posy>
+                <width>825</width>
+                <height>750</height>
+                <align>center</align>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <pagecontrol>101</pagecontrol>
+            </control>
+            <control type="spincontrol" id="101">
+                <description>Next page button</description>
+                <posx>780</posx>
+                <posy>975</posy>
+                <subtype>page</subtype>
+                <font>font12</font>
+                <onleft>101</onleft>
+                <onright>101</onright>
+                <ondown>101</ondown>
+                <onup>101</onup>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <showonepage>true</showonepage>
+                <visible>Control.IsVisible(100)</visible>
+            </control>
+            <control type="list" id="110">
+                <posx>45</posx>
+                <posy>195</posy>
+                <width>825</width>
+                <height>750</height>
+                <onleft>111</onleft>
+                <onright>111</onright>
+                <onup>110</onup>
+                <ondown>110</ondown>
+                <pagecontrol>111</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <itemlayout height="38">
+                    <control type="label">
+                        <posx>412</posx>
+                        <posy>0</posy>
+                        <width>825</width>
+                        <height>38</height>
+                        <font>font13</font>
+                        <aligny>center</aligny>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="38">
+                    <control type="label">
+                        <posx>412</posx>
+                        <posy>0</posy>
+                        <width>825</width>
+                        <height>38</height>
+                        <font>font13</font>
+                        <aligny>center</aligny>
+                        <shadowcolor>black</shadowcolor>
+                        <textcolor>white</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>!Control.HasFocus(110)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>412</posx>
+                        <posy>0</posy>
+                        <width>825</width>
+                        <height>38</height>
+                        <font>font13</font>
+                        <aligny>center</aligny>
+                        <shadowcolor>black</shadowcolor>
+                        <textcolor>selected</textcolor>
+                        <align>left</align>
+                        <label fallback="--">$INFO[ListItem.Label]</label>
+                        <visible>Control.HasFocus(110)</visible>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="spincontrol" id="111">
+                <description>Next page button</description>
+                <posx>780</posx>
+                <posy>975</posy>
+                <subtype>page</subtype>
+                <font>font12</font>
+                <onleft>110</onleft>
+                <onright>110</onright>
+                <ondown>110</ondown>
+                <onup>110</onup>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <showonepage>true</showonepage>
+                <visible>Control.IsVisible(110)</visible>
+            </control>
+            <control type="label" id="2">
+                <description>Pick label</description>
+                <posx>45</posx>
+                <posy>195</posy>
+                <width>825</width>
+                <height>45</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13_title</font>
+                <label>31203</label>
+                <textcolor>white</textcolor>
+                <visible>Control.IsVisible(120) + ![Control.IsVisible(100) | Control.IsVisible(110)]</visible>
+            </control>
+            <control type="list" id="120">
+                <posx>45</posx>
+                <posy>255</posy>
+                <width>825</width>
+                <height>660</height>
+                <onleft>121</onleft>
+                <onright>121</onright>
+                <onup>120</onup>
+                <ondown>120</ondown>
+                <pagecontrol>121</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <animation effect="slide" start="0,0" end="30,0" time="0" condition="!Control.IsVisible(121)">Conditional</animation>
+                <itemlayout height="60">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>825</width>
+                        <height>62</height>
+                        <texture border="5">MenuItemNF.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>15</posx>
+                        <posy>0</posy>
+                        <width>795</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <selectedcolor>selected</selectedcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="60">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>825</width>
+                        <height>62</height>
+                        <visible>!Control.HasFocus(120)</visible>
+                        <texture border="5">MenuItemNF.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>825</width>
+                        <height>62</height>
+                        <visible>Control.HasFocus(120)</visible>
+                        <texture border="5">$VAR[SelectMenuItem]</texture>
+                    </control>
+                    <control type="label">
+                        <posx>15</posx>
+                        <posy>0</posy>
+                        <width>795</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <selectedcolor>selected</selectedcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="spincontrol" id="121">
+                <description>Next page button</description>
+                <posx>780</posx>
+                <posy>975</posy>
+                <subtype>page</subtype>
+                <font>font12</font>
+                <onleft>120</onleft>
+                <onright>120</onright>
+                <ondown>120</ondown>
+                <onup>120</onup>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <showonepage>true</showonepage>
+                <visible>Control.IsVisible(120)</visible>
+            </control>
+            <control type="image">
+                <posx>45</posx>
+                <posy>960</posy>
+                <width>825</width>
+                <height>6</height>
+                <texture>separator.png</texture>
+            </control>
+            <control type="label">
+                <description>Scraper label</description>
+                <posx>870</posx>
+                <posy>1020</posy>
+                <width>825</width>
+                <height>45</height>
+                <label>$LOCALIZE[31205] - $INFO[Control.GetLabel(200)]</label>
+                <font>font12_title</font>
+                <align>right</align>
+                <aligny>center</aligny>
+                <textcolor>grey2</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label" id="200">
+                <description>Scraper label</description>
+                <visible>false</visible>
+            </control>
+        </control>
+    </controls>
+</window>

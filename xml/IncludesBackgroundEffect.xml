@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="AnimatedBackgroundEffect">
+        <control type="group">
+            <visible>!Skin.HasSetting(HolidayEffects) + Skin.HasSetting(EnableRainDropEffect) + !Player.HasVideo</visible>
+            <include>VisibleFadeEffect</include>
+            <control type="image">
+                <description>Raindrop 5 animation</description>
+                <left>300</left>
+                <top>225</top>
+                <width>192</width>
+                <height>192</height>
+                <texture background="true">BackgroundEffect/rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>BBFFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="2000" start="0" end="100" time="150" />
+                    <effect type="fade" delay="2500" start="100" end="0" time="375" />
+                    <effect type="zoom" delay="2000" start="30" end="500" time="750" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 1 animation</description>
+                <left>825</left>
+                <top>300</top>
+                <width>192</width>
+                <height>192</height>
+                <texture background="true">BackgroundEffect/rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>55FFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" start="0" end="100" time="150" />
+                    <effect type="fade" start="100" end="0" delay="1875" time="1000" />
+                    <effect type="zoom" center="auto" start="30" end="1175" delay="0" time="3500" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 2 animation</description>
+                <left>1350</left>
+                <top>195</top>
+                <width>192</width>
+                <height>192</height>
+                <texture background="true">BackgroundEffect/rain-drop.png</texture>
+                <visible>true</visible>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="400" start="0" end="100" time="150" />
+                    <effect type="fade" delay="1000" start="100" end="0" time="1200" />
+                    <effect type="zoom" delay="400" start="30" end="700" time="2250" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 3 animation</description>
+                <left>1200</left>
+                <top>750</top>
+                <width>192</width>
+                <height>192</height>
+                <texture background="true">BackgroundEffect/rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>88FFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="800" start="0" end="100" time="150" />
+                    <effect type="fade" delay="2400" start="100" end="0" time="1500" />
+                    <effect type="zoom" delay="800" start="30" end="1000" time="1875" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 4 animation</description>
+                <left>300</left>
+                <top>675</top>
+                <width>192</width>
+                <height>192</height>
+                <texture background="true">BackgroundEffect/rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>66FFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="1500" start="0" end="100" time="200" />
+                    <effect type="fade" delay="2100" start="100" end="0" time="400" />
+                    <effect type="zoom" delay="1500" start="30" end="1200" time="2000" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+        </control>
+        <control type="group">
+            <visible>Skin.HasSetting(HolidayEffects) + !Player.HasMedia</visible>
+            <control type="group">
+                <left>-150</left>
+                <animation effect="rotate" end="20" time="9000" delay="300" pulse="true" condition="true">Conditional</animation>
+                <control type="image">
+                    <left>60</left>
+                    <top>-270</top>
+                    <width>14</width>
+                    <height>14</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1230" time="8000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-60,0" time="4000" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                    <colordiffuse>C2FFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <left>150</left>
+                    <top>-150</top>
+                    <width>27</width>
+                    <height>27</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1380" time="5000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-30,0" time="2400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>300</left>
+                    <top>-60</top>
+                    <width>18</width>
+                    <height>18</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1530" time="10000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="75,0" end="-15,0" time="3200" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>390</left>
+                    <top>-120</top>
+                    <width>22</width>
+                    <height>22</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1380" time="12000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-45,0" time="3000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>585</left>
+                    <top>-315</top>
+                    <width>14</width>
+                    <height>14</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1530" time="10000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="30,0" end="-90,0" time="3750" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                    <colordiffuse>C2FFFFFF</colordiffuse>
+                </control>
+            </control>
+            <control type="group">
+                <left>150</left>
+                <animation effect="rotate" start="20" end="40" time="7000" delay="800" pulse="true" condition="true">Conditional</animation>
+                <control type="image">
+                    <left>120</left>
+                    <top>-150</top>
+                    <width>30</width>
+                    <height>30</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1230" time="5500" delay="1000" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-30,0" time="2400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>360</left>
+                    <top>-60</top>
+                    <width>22</width>
+                    <height>22</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1380" time="6000" delay="1800" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-45,0" time="3000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>585</left>
+                    <top>-315</top>
+                    <width>15</width>
+                    <height>15</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1680" time="9500" delay="1500" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="30,0" end="-90,0" time="4000" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                    <colordiffuse>C2FFFFFF</colordiffuse>
+                </control>
+            </control>
+            <control type="group">
+                <left>900</left>
+                <top>-300</top>
+                <animation effect="rotate" end="15" time="7000" delay="375" pulse="true" condition="true">Conditional</animation>
+                <control type="image">
+                    <left>30</left>
+                    <top>-90</top>
+                    <width>18</width>
+                    <height>18</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1530" time="10000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="75,0" end="-15,0" time="3000" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>150</left>
+                    <top>-285</top>
+                    <width>27</width>
+                    <height>27</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1380" time="6500" delay="2000" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-75,0" time="2400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>390</left>
+                    <top>-120</top>
+                    <width>22</width>
+                    <height>22</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1680" time="6000" delay="2300" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-45,0" time="3000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>495</left>
+                    <top>-165</top>
+                    <width>14</width>
+                    <height>14</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1380" time="8000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-60,0" time="400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                    <colordiffuse>C2FFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <left>585</left>
+                    <top>-165</top>
+                    <width>15</width>
+                    <height>15</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1230" time="9000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="-30,0" end="75,0" time="2450" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                    <colordiffuse>C2FFFFFF</colordiffuse>
+                </control>
+            </control>
+            <control type="group">
+                <left>1350</left>
+                <animation effect="rotate" start="15" end="30" time="9000" delay="300" pulse="true" condition="true">Conditional</animation>
+                <control type="image">
+                    <left>150</left>
+                    <top>-300</top>
+                    <width>30</width>
+                    <height>30</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1380" time="5500" delay="3000" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-30,0" time="2400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>300</left>
+                    <top>-60</top>
+                    <width>18</width>
+                    <height>18</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1530" time="10000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="75,0" end="-15,0" time="3000" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>390</left>
+                    <top>-120</top>
+                    <width>22</width>
+                    <height>22</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1230" time="6000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="60,0" end="-45,0" time="3000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <left>585</left>
+                    <top>-165</top>
+                    <width>15</width>
+                    <height>15</height>
+                    <texture>BackgroundEffect/snow.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <animation effect="slide" start="0,0" end="0,1380" time="10000" delay="3500" reversible="false" loop="true" condition="true">Conditional</animation>
+                    <animation effect="slide" start="30,0" end="-90,0" time="4000" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+                    <colordiffuse>C2FFFFFF</colordiffuse>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

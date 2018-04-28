@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">21</defaultcontrol>
+    <coordinates>
+        <posx>360</posx>
+        <posy>150</posy>
+    </coordinates>
+    <include>dialogeffect</include>
+    <controls>
+        <control type="image">
+            <description>background image</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1200</width>
+            <height>750</height>
+            <texture border="40">$VAR[DialogPath]DialogBack.png</texture>
+        </control>
+        <control type="image">
+            <description>Dialog Header image</description>
+            <posx>60</posx>
+            <posy>24</posy>
+            <width>1080</width>
+            <height>60</height>
+            <texture>$VAR[DialogPath]dialogheader.png</texture>
+        </control>
+        <control type="label">
+            <description>header label</description>
+            <posx>60</posx>
+            <posy>30</posy>
+            <width>1080</width>
+            <height>45</height>
+            <font>font13_title</font>
+            <label>$ADDON[pvr.nextpvr 30100]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <textcolor>selected</textcolor>
+            <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="button" id="22">
+            <description>Close Window button</description>
+            <posx>1025</posx>
+            <posy>24</posy>
+            <include>DialogCloseButton</include>
+            <onleft>10</onleft>
+            <onright>10</onright>
+            <onup>10</onup>
+            <ondown>10</ondown>
+        </control>
+        <control type="label" id="20">
+            <description>program title</description>
+            <posx>60</posx>
+            <posy>90</posy>
+            <width>1080</width>
+            <height>45</height>
+            <font>font13_title</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>white</textcolor>
+        </control>
+        <control type="label" id="24">
+            <description>program description</description>
+            <posx>60</posx>
+            <posy>150</posy>
+            <width>1080</width>
+            <height>150</height>
+            <font>font13_title</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>grey2</textcolor>
+            <wrapmultiline>true</wrapmultiline>
+        </control>
+        <control type="spincontrolex" id="21">
+            <description>recording type</description>
+            <posx>60</posx>
+            <posy>300</posy>
+            <width>1080</width>
+            <height>60</height>
+            <font>font13</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$ADDON[pvr.nextpvr 30120]</label>
+            <onright>21</onright>
+            <onleft>21</onleft>
+            <onup>1</onup>
+            <ondown>25</ondown>
+        </control>
+        <control type="spincontrolex" id="25">
+            <description>pre padding</description>
+            <posx>60</posx>
+            <posy>368</posy>
+            <width>1080</width>
+            <height>60</height>
+            <font>font13</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$ADDON[pvr.nextpvr 30132]</label>
+            <onright>23</onright>
+            <onleft>23</onleft>
+            <onup>21</onup>
+            <ondown>26</ondown>
+        </control>
+        <control type="spincontrolex" id="26">
+            <description>post padding</description>
+            <posx>60</posx>
+            <posy>435</posy>
+            <width>1080</width>
+            <height>60</height>
+            <font>font13</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$ADDON[pvr.nextpvr 30133]</label>
+            <onright>23</onright>
+            <onleft>23</onleft>
+            <onup>25</onup>
+            <ondown>23</ondown>
+        </control>
+        <control type="spincontrolex" id="23">
+            <description>keep count</description>
+            <posx>60</posx>
+            <posy>502</posy>
+            <width>1080</width>
+            <height>60</height>
+            <font>font13</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$ADDON[pvr.nextpvr 30130]</label>
+            <onright>23</onright>
+            <onleft>23</onleft>
+            <onup>26</onup>
+            <ondown>27</ondown>
+        </control>
+        <control type="spincontrolex" id="27">
+            <description>recording directory</description>
+            <posx>60</posx>
+            <posy>570</posy>
+            <width>1080</width>
+            <height>60</height>
+            <font>font13</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$ADDON[pvr.nextpvr 30134]</label>
+            <onright>23</onright>
+            <onleft>23</onleft>
+            <onup>23</onup>
+            <ondown>1</ondown>
+        </control>
+        <control type="group" id="9001">
+            <posx>285</posx>
+            <posy>652</posy>
+            <control type="button" id="1">
+                <description>Ok Button</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>300</width>
+                <height>60</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>186</label>
+                <font>font12_title</font>
+                <onup>27</onup>
+                <onleft>2</onleft>
+                <onright>2</onright>
+                <ondown>21</ondown>
+            </control>
+            <control type="button" id="2">
+                <description>Cancel Button</description>
+                <posx>315</posx>
+                <posy>0</posy>
+                <width>300</width>
+                <height>60</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>222</label>
+                <font>font12_title</font>
+                <onup>27</onup>
+                <onleft>1</onleft>
+                <onright>1</onright>
+                <ondown>21</ondown>
+            </control>
+        </control>
+    </controls>
+</window>

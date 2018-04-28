@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<window id="1199">
-	<description>Wrapper window to select video files or library</description>
-	<visible>False</visible>
-	<onload condition="!Skin.HasSetting(Videos_Librarymode)">ReplaceWindow(Videos,Files,return)</onload>
-	<onload condition="Skin.HasSetting(Videos_Librarymode)">ReplaceWindow(Videos,Root)</onload>
-	<controls></controls>
-</window>

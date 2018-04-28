@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">100</defaultcontrol>
+    <onload condition="!VideoPlayer.Content(LiveTV)">SetFocus(202)</onload>
+    <include>dialogeffect</include>
+    <depth>DepthOSD</depth>
+    <coordinates>
+        <left>0</left>
+        <top>0</top>
+    </coordinates>
+    <controls>
+        <control type="button" id="10">
+            <description>Close Window button</description>
+            <left>126r</left>
+            <top>0</top>
+            <onup>100</onup>
+            <ondown>87</ondown>
+            <onclick>Dialog.Close(VideoOSD,true)</onclick>
+            <onclick>FullScreen</onclick>
+            <include>DialogCloseButton</include>
+            <animation effect="fade" time="150">VisibleChange</animation>
+            <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+            <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
+        </control>
+        <control type="slider" id="87">
+            <depth>DepthOSD+</depth>
+            <description>Seek Slider</description>
+            <left>645</left>
+            <top>123r</top>
+            <width>1080</width>
+            <height>24</height>
+            <onup>10</onup>
+            <ondown>100</ondown>
+            <action>seek</action>
+            <texturesliderbar>seekslider2.png</texturesliderbar>
+            <textureslidernib colordiffuse="$VAR[MainColorTwo]">OSD_slider_nibNF.png</textureslidernib>
+            <textureslidernibfocus colordiffuse="$VAR[MainColorTwo]">OSD_slider_nib.png</textureslidernibfocus>
+            <animation effect="fade" time="150">VisibleChange</animation>
+            <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | [Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [Skin.HasSetting(HideSeekBarOSD2) + Window.IsActive(VideoOSD)] + !Player.ShowInfo" reversible="true">Conditional</animation>
+            <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
+            <visible>![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
+        </control>
+        <control type="grouplist" id="100">
+            <left>488</left>
+            <top>90r</top>
+            <orientation>horizontal</orientation>
+            <itemgap>0</itemgap>
+            <onup>87</onup>
+            <ondown>10</ondown>
+            <animation effect="fade" time="150">VisibleChange</animation>
+            <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | [Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [Skin.HasSetting(HideSeekBarOSD2) + Window.IsActive(VideoOSD)] + !Player.ShowInfo" reversible="true">Conditional</animation>
+            <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
+            <visible>![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
+            <control type="radiobutton" id="300">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDChannelUp" />
+                </include>
+                <onclick>PlayerControl(Previous)</onclick>
+                <visible>VideoPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="301">
+                <label>209</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDChannelDown" />
+                </include>
+                <onclick>PlayerControl(Next)</onclick>
+                <visible>VideoPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="302">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDVolUp" />
+                </include>
+                <onclick>$VAR[VolumeStepUp]</onclick>
+                <onclick>VolumeUp</onclick>
+                <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+            </control>
+            <control type="radiobutton" id="303">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDVolDown" />
+                </include>
+                <onclick>$VAR[VolumeStepDown]</onclick>
+                <onclick>VolumeDown</onclick>
+                <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+            </control>
+            <control type="radiobutton" id="200">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPrevTrack" />
+                </include>
+                <onclick>PlayerControl(Previous)</onclick>
+                <visible>!VideoPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="201">
+                <label>31354</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRewind" />
+                </include>
+                <enable>Player.SeekEnabled</enable>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
+                <onclick condition="!Player.Paused + !Player.IsTempo">PlayerControl(Rewind)</onclick>
+                <onclick condition="Player.Paused + Player.TempoEnabled">PlayerControl(Play)</onclick>
+                <onclick condition="Player.Paused + Player.TempoEnabled">PlayerControl(TempoDown)</onclick>
+                <onclick condition="Player.IsTempo + Player.TempoEnabled">PlayerControl(TempoDown)</onclick>
+            </control>
+            <control type="radiobutton" id="202">
+                <width>82</width>
+                <height>82</height>
+                <label>31351</label>
+                <label2>208</label2>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPause" />
+                    <param name="AltTexture" value="OSDPlay" />
+                    <param name="Selected" value="Player.Paused | Player.Forwarding | Player.Rewinding" />
+                </include>
+                <onclick>PlayerControl(Play)</onclick>
+                <enable>Player.PauseEnabled</enable>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Player.PauseEnabled">Conditional</animation>
+            </control>
+            <control type="radiobutton" id="203">
+                <label>31352</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDStop" />
+                </include>
+                <onclick>PlayerControl(Stop)</onclick>
+            </control>
+            <control type="radiobutton" id="204">
+                <label>31353</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDForward" />
+                </include>
+                <enable>Player.SeekEnabled</enable>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
+                <onclick condition="!Player.Paused + !Player.IsTempo">PlayerControl(Forward)</onclick>
+                <onclick condition="Player.Paused + Player.TempoEnabled">PlayerControl(Play)</onclick>
+                <onclick condition="Player.Paused + Player.TempoEnabled">PlayerControl(TempoUp)</onclick>
+                <onclick condition="Player.IsTempo + Player.TempoEnabled">PlayerControl(TempoUp)</onclick>
+            </control>
+            <control type="radiobutton" id="205">
+                <label>209</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDNextTrack" />
+                </include>
+                <onclick>PlayerControl(Next)</onclick>
+                <visible>!VideoPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="306">
+                <label>19019</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDChannelList" />
+                </include>
+                <onclick>ActivateWindow(PVROSDChannels)</onclick>
+                <visible>VideoPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="307">
+                <label>$LOCALIZE[19029]$INFO[VideoPlayer.ChannelName, - ]</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDepg" />
+                </include>
+                <onclick>ActivateWindow(PVRChannelGuide)</onclick>
+                <visible>VideoPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="350">
+                <label>31356</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDTeleText" />
+                </include>
+                <onclick>ActivateWindow(Teletext)</onclick>
+                <visible>VideoPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="image" id="2100">
+                <width>165</width>
+                <height>82</height>
+                <texture></texture>
+                <visible>!Skin.HasSetting(EnableVolumeButtons)</visible>
+            </control>
+            <control type="image" id="2200">
+                <width>165</width>
+                <texture></texture>
+                <visible>!VideoPlayer.Content(LiveTV)</visible>
+                <visible>VideoPlayer.HasMenu</visible>
+            </control>
+            <control type="image" id="2250">
+                <width>82</width>
+                <texture></texture>
+                <visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu + !System.HasAddon(plugin.program.dreamcatcher)</visible>
+            </control>
+            <control type="image" id="2260">
+                <width>82</width>
+                <texture></texture>
+                <visible>!Skin.String(OSDBtnUsrCmd)</visible>
+            </control>
+            <control type="image" id="2600">
+                <width>165</width>
+                <texture></texture>
+                <visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu</visible>
+            </control>
+            <control type="radiobutton" id="255">
+                <enable>VideoPlayer.IsStereoscopic</enable>
+                <animation effect="fade" start="100" end="0" time="75" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
+                <label>36501</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDStereoscopic" />
+                </include>
+                <onup>501</onup>
+            </control>
+            <control type="radiobutton" id="256">
+                <visible>Skin.String(OSDBtnUsrCmd)</visible>
+                <label>31359</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDUser" />
+                </include>
+                <onclick condition="Skin.String(OSDBtnUsrCmd)">Dialog.Close(VideoOSD,true)</onclick>
+                <onclick condition="Skin.String(OSDBtnUsrCmd)">$VAR[UsrOSDBtnCmd]</onclick>
+            </control>
+            <control type="radiobutton" id="250">
+                <label>31356</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDSubtitles" />
+                </include>
+                <onclick>ActivateWindow(OSDSubtitleSettings)</onclick>
+            </control>
+            <control type="radiobutton" id="251">
+                <label>13395</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDVideo" />
+                </include>
+                <onclick>ActivateWindow(OSDVideoSettings)</onclick>
+            </control>
+            <control type="radiobutton" id="252">
+                <label>13396</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDAudio" />
+                    <param name="AltTexture" value="OSDDSPAudio" />
+                    <param name="Selected" value="system.getbool(audiooutput.dspaddonsenabled)" />
+                </include>
+                <onclick>ActivateWindow(OSDAudioSettings)</onclick>
+            </control>
+            <control type="radiobutton" id="253">
+                <label>298</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDBookmarks" />
+                </include>
+                <onclick>ActivateWindow(VideoBookmarks)</onclick>
+                <visible>!VideoPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="254">
+                <label>31355</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDDvd" />
+                </include>
+                <onclick>PlayerControl(ShowVideoMenu)</onclick>
+                <enable>VideoPlayer.HasMenu</enable>
+                <animation effect="fade" start="100" end="50" time="75" condition="!VideoPlayer.HasMenu">Conditional</animation>
+                <visible>!VideoPlayer.Content(LiveTV)</visible>
+                <visible>VideoPlayer.HasMenu</visible>
+            </control>
+            <control type="radiobutton" id="353">
+                <label>264</label>
+                <label2>265</label2>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRecordOff" />
+                    <param name="AltTexture" value="OSDRecordOn" />
+                    <param name="Selected" value="PVR.IsRecordingPlayingChannel" />
+                </include>
+                <onclick>PVR.ToggleRecordPlayingChannel</onclick>
+                <enable>PVR.CanRecordPlayingChannel</enable>
+                <animation effect="fade" start="100" end="50" time="75" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
+                <visible>VideoPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="206">
+                <label>264</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRecordOff" />
+                </include>
+                <onclick>RunPlugin(plugin://plugin.program.dreamcatcher/?mode=Record)</onclick>
+                <visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu + System.HasAddon(plugin.program.dreamcatcher)</visible>
+            </control>
+        </control>
+        <control type="button" id="410">
+            <description>Fake button for mouse control</description>
+            <right>300</right>
+            <bottom>90</bottom>
+            <width>384</width>
+            <height>375</height>
+            <label></label>
+            <font></font>
+            <texturenofocus></texturenofocus>
+            <texturefocus></texturefocus>
+            <animation effect="slide" start="0,0" end="0,120" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,60" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
+            <animation effect="slide" start="0,0" end="82,0" time="0" condition="!VideoPlayer.HasMenu">Conditional</animation>
+            <animation effect="slide" start="0,0" end="82,0" time="0" condition="VideoPlayer.Content(LiveTV) | [!System.HasAddon(plugin.program.dreamcatcher) + !VideoPlayer.HasMenu]">Conditional</animation>
+            <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | Skin.HasSetting(HideSeekBarOSD) | Skin.HasSetting(HideSeekBarOSD2)+ !Player.ShowInfo" reversible="true">Conditional</animation>
+            <visible>Control.HasFocus(410) | Control.HasFocus(250) | ControlGroup(400).HasFocus</visible>
+        </control>
+        <control type="button" id="520">
+            <description>Fake button for mouse control</description>
+            <right>300</right>
+            <bottom>90</bottom>
+            <width>384</width>
+            <height>315</height>
+            <label></label>
+            <font></font>
+            <texturenofocus></texturenofocus>
+            <texturefocus></texturefocus>
+            <animation effect="slide" start="0,0" end="82,0" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
+            <visible>Control.HasFocus(520) | Control.HasFocus(255) | ControlGroup(500).HasFocus</visible>
+        </control>
+        <control type="grouplist" id="500">
+            <depth>DepthOSD+</depth>
+            <visible>videoplayer.isstereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)] + [Control.HasFocus(255) | ControlGroup(500).HasFocus | Control.HasFocus(520)]</visible>
+            <animation effect="fade" time="150">VisibleChange</animation>
+            <animation effect="slide" start="0,0" end="82,0" time="0" condition="![VideoPlayer.HasMenu | VideoPlayer.Content(LiveTV)]">Conditional</animation>
+            <animation effect="slide" start="0,0" end="82,0" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
+            <right>300</right>
+            <bottom>68</bottom>
+            <width>384</width>
+            <height>330</height>
+            <itemgap>0</itemgap>
+            <onleft>500</onleft>
+            <onright>500</onright>
+            <onup>255</onup>
+            <ondown>255</ondown>
+            <orientation>vertical</orientation>
+            <visible>Control.HasFocus(255) | ControlGroup(500).HasFocus | Control.HasFocus(520)</visible>
+            <include>VisibleFadeEffect</include>
+            <control type="group">
+                <description>Header</description>
+                <width>384</width>
+                <height>60</height>
+                <control type="image">
+                    <description>Header</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>384</width>
+                    <height>60</height>
+                    <texture border="20,18,20,0">$VAR[DialogPath]DialogContextTop.png</texture>
+                </control>
+                <control type="label">
+                    <left>0</left>
+                    <top>30</top>
+                    <width>384</width>
+                    <height>22</height>
+                    <font>font12</font>
+                    <label>36501</label>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+            </control>
+            <control type="group" id="503">
+                <width>384</width>
+                <height>60</height>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>384</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="radiobutton" id="513">
+                    <description>---</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>330</width>
+                    <height>60</height>
+                    <onleft>500</onleft>
+                    <onright>500</onright>
+                    <onup>255</onup>
+                    <ondown>502</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <textoffsetx>15</textoffsetx>
+                    <aligny>center</aligny>
+                    <textwidth>306</textwidth>
+                    <onclick>ToggleStereoMode</onclick>
+                    <selected>Integer.IsGreater(System.StereoscopicMode,0)</selected>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>31362</label>
+                </control>
+            </control>
+            <control type="group" id="502">
+                <width>384</width>
+                <height>60</height>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>384</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="512">
+                    <description>---</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>330</width>
+                    <height>60</height>
+                    <onleft>500</onleft>
+                    <onright>500</onright>
+                    <onup>503</onup>
+                    <ondown>501</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <textoffsetx>15</textoffsetx>
+                    <aligny>center</aligny>
+                    <textwidth>306</textwidth>
+                    <onclick>StereoMode</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>31361</label>
+                </control>
+            </control>
+            <control type="group" id="501">
+                <width>384</width>
+                <height>60</height>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>384</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="radiobutton" id="511">
+                    <description>---</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>330</width>
+                    <height>60</height>
+                    <onleft>500</onleft>
+                    <onright>500</onright>
+                    <onup>502</onup>
+                    <ondown>255</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <textoffsetx>15</textoffsetx>
+                    <aligny>center</aligny>
+                    <textwidth>306</textwidth>
+                    <onclick>StereoModeToMono</onclick>
+                    <selected>String.IsEqual(System.StereoscopicMode,9)</selected>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>31360</label>
+                </control>
+            </control>
+            <control type="image" id="549">
+                <description>Footer</description>
+                <width>384</width>
+                <height>78</height>
+                <texture border="20,0,20,50">$VAR[DialogPath]DialogContextSubBottom.png</texture>
+            </control>
+        </control>
+    </controls>
+</window>

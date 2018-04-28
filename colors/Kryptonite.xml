@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <colors>
 	<color name="white">FFFFFFFF</color>
 	<color name="grey">FFb4b4b4</color>
@@ -6,5 +7,6 @@
 	<color name="black">FF000000</color>
 	<color name="blue">FF6DF300</color>
 	<color name="selected">FFEB9E17</color>
+	<color name="invalid">FFFF0000</color>
 	<color name="lightskyblue">FF6DF300</color>
 </colors>

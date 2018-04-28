@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="OSDMediaPlot">
+        <control type="group" id="1">
+            <visible>!Skin.HasSetting(EnablePauseInfo) + [!String.IsEmpty(VideoPlayer.Plot) | !String.IsEmpty(VideoPlayer.PlotOutline)] + Player.Paused + !Player.Caching</visible>
+            <animation effect="slide" end="-210,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) | Skin.HasSetting(HideSeekBarOSD2) + !Player.ShowInfo" reversible="true">Conditional</animation>
+            <animation effect="slide" end="-210,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [!Skin.HasSetting(HideSeekBarOSD) + !Skin.HasSetting(HideSeekBarOSD2) | Player.ShowInfo]" reversible="true">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,38" time="0" condition="Player.ShowInfo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
+            <left>480</left>
+            <top>592r</top>
+            <control type="image" id="1">
+                <left>0</left>
+                <top>0</top>
+                <width>1380</width>
+                <height>300</height>
+                <texture border="20">$VAR[DialogPath]ContentPanel.png</texture>
+                <colordiffuse>AAFFFFFF</colordiffuse>
+            </control>
+            <control type="textbox" id="1">
+                <description>Description Value The Movie</description>
+                <left>30</left>
+                <top>30</top>
+                <width>1320</width>
+                <height>218</height>
+                <align>justify</align>
+                <textcolor>white</textcolor>
+                <font>font13</font>
+                <label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[207]$LOCALIZE[31156] [/COLOR][/B]$VAR[VideoPlayingDescription]</label>
+                <autoscroll delay="3000" time="1800" repeat="10000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
+            </control>
+        </control>
+        <control type="group" id="1">
+            <visible>Player.ShowInfo + [!String.IsEmpty(VideoPlayer.Plot) | !String.IsEmpty(VideoPlayer.PlotOutline)] + Skin.HasSetting(EnablePlotInfo) + !Player.Caching</visible>
+            <animation effect="slide" end="-210,165" time="0" tween="back" easing="out" condition="[Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [Skin.HasSetting(HideSeekBarOSD2) + Window.IsActive(VideoOSD)] + !Player.ShowInfo" reversible="true">Conditional</animation>
+            <animation effect="slide" end="-210,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [[!Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [!Skin.HasSetting(HideSeekBarOSD2) + Window.IsActive(VideoOSD)] | Player.ShowInfo]" reversible="true">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,38" time="0" condition="Player.ShowInfo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
+            <left>480</left>
+            <top>592r</top>
+            <control type="image" id="1">
+                <left>0</left>
+                <top>0</top>
+                <width>1380</width>
+                <height>300</height>
+                <texture border="20">$VAR[DialogPath]ContentPanel.png</texture>
+                <colordiffuse>AAFFFFFF</colordiffuse>
+            </control>
+            <control type="textbox" id="1">
+                <description>Description Value The Movie</description>
+                <left>30</left>
+                <top>30</top>
+                <width>1320</width>
+                <height>218</height>
+                <align>justify</align>
+                <textcolor>white</textcolor>
+                <font>font13</font>
+                <label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[207]$LOCALIZE[31156] [/COLOR][/B]$VAR[VideoPlayingDescription]</label>
+                <autoscroll delay="3000" time="1800" repeat="10000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
+            </control>
+        </control>
+    </include>
+    <include name="OSDMovieCover">
+        <control type="group" id="1">
+            <control type="image" id="1">
+                <description>clearart image</description>
+                <left>15</left>
+                <top>352r</top>
+                <width>450</width>
+                <height>345</height>
+                <texture>$INFO[Player.Art(clearart)]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <visible>!Skin.HasSetting(DisableClearArt) + !String.IsEmpty(Player.Art(clearart))</visible>
+            </control>
+            <control type="image" id="1">
+                <description>logo image</description>
+                <left>15</left>
+                <top>352r</top>
+                <width>450</width>
+                <height>345</height>
+                <texture>$INFO[Player.Art(clearlogo)]</texture>
+                <aspectratio aligny="bottom" align="center">keep</aspectratio>
+                <visible>!Skin.HasSetting(DisableLogoArt) + !String.IsEmpty(Player.Art(clearlogo)) + [String.IsEmpty(Player.Art(clearart)) | Skin.HasSetting(DisableClearArt)]</visible>
+            </control>
+            <control type="image" id="1">
+                <description>Cover image</description>
+                <left>94</left>
+                <top>508r</top>
+                <width>315</width>
+                <height>480</height>
+                <aspectratio scalediffuse="false">stretch</aspectratio>
+                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideo.png">$INFO[Player.Art(poster)]</texture>
+                <visible>Skin.HasSetting(EnableDVDCases)</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
+            </control>
+            <control type="image" id="1">
+                <description>Movie cover image</description>
+                <left>30</left>
+                <top>525r</top>
+                <width>450</width>
+                <height>495</height>
+                <texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <bordertexture border="8">ThumbShadow.png</bordertexture>
+                <bordersize>8</bordersize>
+                <visible>!Skin.HasSetting(EnableDVDCases)</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
+            </control>
+            <control type="image" id="1">
+                <left>45</left>
+                <top>525r</top>
+                <width>382</width>
+                <height>518</height>
+                <aspectratio>stretch</aspectratio>
+                <texture>$VAR[VideoPlayerCase,ClearCase/,.png]</texture>
+                <visible>!Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)] + String.IsEmpty(Player.Art(poster))</visible>
+                <visible>Skin.HasSetting(EnableDVDCases)</visible>
+            </control>
+            <control type="image" id="1">
+                <description>clearart image</description>
+                <left>15</left>
+                <top>352r</top>
+                <width>450</width>
+                <height>345</height>
+                <texture>$VAR[StreamingVideoIcon]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <visible>Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)] + [Skin.HasSetting(EnableDVDCases) + String.IsEmpty(Player.Art(poster))] + [!Skin.HasSetting(EnableDVDCases) + String.IsEmpty(Player.Art(thumb))]</visible>
+            </control>
+            <visible>!Skin.HasSetting(HideArtWorkOSD)</visible>
+        </control>
+    </include>
+    <include name="OSDTVShowCover">
+        <control type="group" id="1">
+            <control type="image" id="1">
+                <description>clearart image</description>
+                <left>15</left>
+                <top>352r</top>
+                <width>450</width>
+                <height>345</height>
+                <texture>$INFO[Player.Art(tvshow.clearart)]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <visible>!Skin.HasSetting(DisableClearArt) + !String.IsEmpty(Player.Art(tvshow.clearart))</visible>
+            </control>
+            <control type="image" id="1">
+                <description>logo image</description>
+                <left>15</left>
+                <top>352r</top>
+                <width>450</width>
+                <height>345</height>
+                <texture>$INFO[Player.Art(tvshow.clearlogo)]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <visible>!Skin.HasSetting(DisableLogoArt) + !String.IsEmpty(Player.Art(tvshow.clearlogo)) + [Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(tvshow.clearart))]</visible>
+            </control>
+            <control type="image" id="1">
+                <description>Cover image</description>
+                <left>94</left>
+                <top>508r</top>
+                <width>315</width>
+                <height>480</height>
+                <aspectratio scalediffuse="false">stretch</aspectratio>
+                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(tvshow.thumb)]</texture>
+                <visible>Skin.HasSetting(EnableDVDCases)</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(tvshow.clearart))] + [String.IsEmpty(Player.Art(tvshow.clearlogo)) | Skin.HasSetting(DisableLogoArt)] + !String.IsEmpty(Player.Art(tvshow.thumb))</visible>
+            </control>
+            <control type="image" id="1">
+                <left>45</left>
+                <top>525r</top>
+                <width>382</width>
+                <height>518</height>
+                <aspectratio>stretch</aspectratio>
+                <texture>$VAR[VideoPlayerCase,ClearCase/,.png]</texture>
+                <visible>Skin.HasSetting(EnableDVDCases)</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(tvshow.clearart))] + [String.IsEmpty(Player.Art(tvshow.clearlogo)) | Skin.HasSetting(DisableLogoArt)] + !String.IsEmpty(Player.Art(tvshow.thumb))</visible>
+            </control>
+            <control type="image" id="1">
+                <description>cover image</description>
+                <left>30</left>
+                <top>352r</top>
+                <width>450</width>
+                <height>345</height>
+                <texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <bordertexture border="8">ThumbShadow.png</bordertexture>
+                <bordersize>8</bordersize>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(tvshow.clearart))] + [String.IsEmpty(Player.Art(tvshow.clearlogo)) | Skin.HasSetting(DisableLogoArt)] + [String.IsEmpty(Player.Art(tvshow.thumb)) | !Skin.HasSetting(EnableDVDCases)]</visible>
+            </control>
+            <visible>!Skin.HasSetting(HideArtWorkOSD)</visible>
+        </control>
+    </include>
+    <include name="OSDMediaFlagging">
+        <control type="grouplist" id="1">
+            <left>0</left>
+            <top>90</top>
+            <width>1365</width>
+            <height>52</height>
+            <itemgap>8</itemgap>
+            <orientation>horizontal</orientation>
+            <control type="label" id="1">
+                <width min="15" max="780">auto</width>
+                <height>45</height>
+                <font>font30</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$VAR[VideoNowPlaying]</label>
+                <textcolor>orange</textcolor>
+                <scroll>true</scroll>
+            </control>
+            <control type="image" id="1">
+                <description>Video Resolution Image</description>
+                <width>75</width>
+                <height>52</height>
+                <aspectratio align="center">keep</aspectratio>
+                <texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
+            </control>
+            <control type="image" id="1">
+                <description>Audio Codec Image</description>
+                <width>128</width>
+                <height>52</height>
+                <aspectratio align="center">keep</aspectratio>
+                <texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
+            </control>
+            <control type="image" id="1">
+                <description>Audio Channels Image</description>
+                <width>75</width>
+                <height>52</height>
+                <aspectratio align="center">keep</aspectratio>
+                <texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
+            </control>
+            <control type="group" id="1">
+                <width>128</width>
+                <height>52</height>
+                <visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+                <control type="image" id="1">
+                    <left>8</left>
+                    <top>0</top>
+                    <description>Audio Language Image</description>
+                    <width>120</width>
+                    <height>52</height>
+                    <texture>flagging/AudioLang.png</texture>
+                </control>
+                <control type="label" id="1">
+                    <left>57</left>
+                    <top>3</top>
+                    <width>70</width>
+                    <height>52</height>
+                    <font>font13</font>
+                    <align>left</align>
+                    <label>$INFO[VideoPlayer.AudioLanguage]</label>
+                    <textcolor>grey</textcolor>
+                </control>
+            </control>
+            <control type="group" id="1">
+                <width>128</width>
+                <height>52</height>
+                <visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+                <control type="image" id="1">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>120</width>
+                    <height>52</height>
+                    <texture>flagging/SubLang.png</texture>
+                </control>
+                <control type="label" id="1">
+                    <left>57</left>
+                    <top>3</top>
+                    <width>70</width>
+                    <height>52</height>
+                    <font>font13</font>
+                    <align>left</align>
+                    <label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
+                    <textcolor>grey</textcolor>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="OSDMediaHeading">
+        <control type="label" id="1">
+            <description>Now Playing Heading label</description>
+            <left>0</left>
+            <top>0</top>
+            <width>1365</width>
+            <height>38</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <label>$LOCALIZE[31040] - $LOCALIZE[21396]$LOCALIZE[31156] $INFO[player.chapter]$INFO[player.chaptercount, $LOCALIZE[31088] ]</label>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
+            <animation effect="slide" start="0,0" end="0,38" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
+        </control>
+        <control type="label" id="1">
+            <description>Now Playing LiveTV Heading label</description>
+            <left>0</left>
+            <top>0</top>
+            <width>1365</width>
+            <height>38</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <label>$LOCALIZE[31040] - $INFO[VideoPlayer.ChannelGroup,$LOCALIZE[31509]$LOCALIZE[31156] ]</label>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <visible>VideoPlayer.Content(LiveTV) + VideoPlayer.ChannelGroup + !PVR.IsRecordingPlayingChannel</visible>
+        </control>
+        <control type="image" id="1">
+            <top>0</top>
+            <width>75</width>
+            <height>38</height>
+            <aspectratio align="center" aligny="center">keep</aspectratio>
+            <texture>PVR-IsRecording.png</texture>
+            <visible>VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel</visible>
+        </control>
+        <control type="label" id="1">
+            <description>Heading label</description>
+            <left>75</left>
+            <top>0</top>
+            <width>1290</width>
+            <height>38</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <label>$LOCALIZE[19158]</label>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <visible>VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel</visible>
+        </control>
+        <control type="label" id="1">
+            <description>Studio label</description>
+            <left>0</left>
+            <top>45</top>
+            <width>1395</width>
+            <height>38</height>
+            <align>left</align>
+            <font>font12</font>
+            <label>$INFO[VideoPlayer.Studio]</label>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <visible>VideoPlayer.Content(Movies)</visible>
+        </control>
+        <control type="label" id="1">
+            <description>TV Show label</description>
+            <left>0</left>
+            <top>45</top>
+            <width>1395</width>
+            <height>38</height>
+            <align>left</align>
+            <font>font12</font>
+            <label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode])</label>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <visible>VideoPlayer.Content(Episodes)</visible>
+        </control>
+        <control type="label" id="1">
+            <description>Music Info label</description>
+            <left>0</left>
+            <top>45</top>
+            <width>1395</width>
+            <height>38</height>
+            <align>left</align>
+            <font>font12</font>
+            <label>$INFO[VideoPlayer.Artist] $INFO[VideoPlayer.Album, - ]</label>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <visible>VideoPlayer.Content(MusicVideos)</visible>
+        </control>
+        <control type="label" id="1">
+            <description>LiveTV Info label</description>
+            <left>0</left>
+            <top>45</top>
+            <width>1395</width>
+            <height>38</height>
+            <align>left</align>
+            <font>font12</font>
+            <label>[COLOR=$VAR[MainColorOne]]($INFO[VideoPlayer.ChannelNumberLabel])[/COLOR] $INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.EpisodeName, (,)]</label>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+        </control>
+    </include>
+    <include name="MusicArtUnderVisualisation">
+        <control type="group">
+            <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEqual(Visualisation.Name,Waveform) | String.IsEqual(Visualisation.Name,DirectX Spectrum) | String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+            <visible>!Skin.HasSetting(HideHomeNowPlaying)</visible>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <include>BackgroundTimePerImage</include>
+                <randomize>true</randomize>
+                <fadetime>600</fadetime>
+                <aspectratio>keep</aspectratio>
+                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+                <imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
+                <visible>Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Control.GetLabel(5043))</visible>
+            </control>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <include>BackgroundTimePerImage</include>
+                <randomize>true</randomize>
+                <fadetime>600</fadetime>
+                <aspectratio>keep</aspectratio>
+                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+                <imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
+                <visible>Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Control.GetLabel(5043))</visible>
+            </control>
+            <control type="image">
+                <description>Fanart Image for Artist</description>
+                <include>Dimensions_Fullscreen</include>
+                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+                <texture background="true">$INFO[Player.Art(fanart)]</texture>
+                <visible>[!String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))] | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <fadetime>600</fadetime>
+            </control>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <include>BackgroundTimePerImage</include>
+                <randomize>true</randomize>
+                <fadetime>600</fadetime>
+                <aspectratio>keep</aspectratio>
+                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+                <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+                <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+            </control>
+        </control>
+    </include>
+    <include name="MusicArtOverVisualisation">
+        <control type="group">
+            <visible>!Skin.HasSetting(HideHomeNowPlaying) + !Skin.HasSetting(NoDiffuseVizFanart)</visible>
+            <visible>!String.IsEqual(Visualisation.Name,Waveform) + !String.IsEqual(Visualisation.Name,DirectX Spectrum) + !String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <include>BackgroundTimePerImage</include>
+                <randomize>true</randomize>
+                <fadetime>600</fadetime>
+                <aspectratio>keep</aspectratio>
+                <colordiffuse>AAFFFFFF</colordiffuse>
+                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+                <imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
+                <visible>!String.IsEmpty(Control.GetLabel(5043))</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowTransparent)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+            </control>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <include>BackgroundTimePerImage</include>
+                <randomize>true</randomize>
+                <fadetime>600</fadetime>
+                <aspectratio>keep</aspectratio>
+                <colordiffuse>AAFFFFFF</colordiffuse>
+                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+                <imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
+                <visible>String.IsEmpty(Control.GetLabel(5043))</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowTransparent)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+            </control>
+            <control type="image">
+                <description>Fanart Image for Artist</description>
+                <include>Dimensions_Fullscreen</include>
+                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+                <texture background="true">$INFO[Player.Art(fanart)]</texture>
+                <colordiffuse>AAFFFFFF</colordiffuse>
+                <fadetime>600</fadetime>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowTransparent)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>!String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))</visible>
+            </control>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <include>BackgroundTimePerImage</include>
+                <randomize>true</randomize>
+                <fadetime>600</fadetime>
+                <aspectratio>keep</aspectratio>
+                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+                <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+                <colordiffuse>AAFFFFFF</colordiffuse>
+                <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+            </control>
+        </control>
+    </include>
+        <include name="OSDButton">
+        <param name="Size" default="82" />
+        <param name="Texture" default="" />
+        <param name="AltTexture" default="" />
+        <param name="Selected" default="false" />
+        <definition>
+            <width>$PARAM[Size]</width>
+            <height>$PARAM[Size]</height>
+            <include content="OSDButtonClassic" condition="String.IsEmpty(Skin.String(OSDLAF))">
+                <param name="Size" value="$PARAM[Size]" />
+                <param name="Texture" value="$PARAM[Texture]" />
+                <param name="AltTexture" value="$PARAM[AltTexture]" />
+            </include>
+            <include content="OSDButtonModern" condition="Skin.String(OSDLAF,Modern)">
+                <param name="Size" value="$PARAM[Size]" />
+                <param name="Texture" value="$PARAM[Texture]" />
+                <param name="AltTexture" value="$PARAM[AltTexture]" />
+            </include>
+            <include content="OSDButtonMax" condition="Skin.String(OSDLAF,Max)">
+                <param name="Size" value="$PARAM[Size]" />
+                <param name="Texture" value="$PARAM[Texture]" />
+                <param name="AltTexture" value="$PARAM[AltTexture]" />
+            </include>
+            <selected>$PARAM[Selected]</selected>
+        </definition>
+    </include>
+    <include name="OSDButtonClassic">
+        <textureradioonfocus colordiffuse="$VAR[MainColorTwo]">osd_classic/$PARAM[AltTexture]FO.png</textureradioonfocus>
+        <textureradioonnofocus>osd_classic/$PARAM[AltTexture]NF.png</textureradioonnofocus>
+        <textureradioofffocus colordiffuse="$VAR[MainColorTwo]">osd_classic/$PARAM[Texture]FO.png</textureradioofffocus>
+        <textureradiooffnofocus>osd_classic/$PARAM[Texture]NF.png</textureradiooffnofocus>
+        <textureradioondisabled colordiffuse="grey3">osd_classic/$PARAM[Texture]FO.png</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="grey3">osd_classic/$PARAM[Texture]NF.png</textureradiooffdisabled>
+        <texturefocus></texturefocus>
+        <texturenofocus></texturenofocus>
+        <radiowidth>$PARAM[Size]</radiowidth>
+        <radioheight>$PARAM[Size]</radioheight>
+        <radioposx>1</radioposx>
+        <radioposy>1</radioposy>
+    </include>
+    <include name="OSDButtonModern">
+        <textureradioonfocus>osd_modern/$PARAM[AltTexture].png</textureradioonfocus>
+        <textureradioonnofocus>osd_modern/$PARAM[AltTexture].png</textureradioonnofocus>
+        <textureradioofffocus>osd_modern/$PARAM[Texture].png</textureradioofffocus>
+        <textureradiooffnofocus>osd_modern/$PARAM[Texture].png</textureradiooffnofocus>
+        <textureradioondisabled colordiffuse="grey3">osd_modern/$PARAM[AltTexture].png</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="grey3">osd_modern/$PARAM[Texture].png</textureradiooffdisabled>
+        <texturefocus border="5" colordiffuse="$VAR[MainColorTwo]">round_buttonFO.png</texturefocus>
+        <texturenofocus border="5">round_button.png</texturenofocus>
+        <radiowidth>$PARAM[Size]</radiowidth>
+        <radioheight>$PARAM[Size]</radioheight>
+        <radioposx>1</radioposx>
+        <radioposy>1</radioposy>
+    </include>
+    <include name="OSDButtonMax">
+        <textureradioonfocus>osd_modern/$PARAM[AltTexture].png</textureradioonfocus>
+        <textureradioonnofocus>osd_modern/$PARAM[AltTexture].png</textureradioonnofocus>
+        <textureradioofffocus>osd_modern/$PARAM[Texture].png</textureradioofffocus>
+        <textureradiooffnofocus>osd_modern/$PARAM[Texture].png</textureradiooffnofocus>
+        <textureradioondisabled colordiffuse="grey3">osd_modern/$PARAM[AltTexture].png</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="grey3">osd_modern/$PARAM[Texture].png</textureradiooffdisabled>
+        <texturefocus border="5" colordiffuse="$VAR[MainColorTwo]">floor_buttonFO.png</texturefocus>
+        <texturenofocus border="5">floor_button.png</texturenofocus>
+        <radiowidth>$PARAM[Size]</radiowidth>
+        <radioheight>$PARAM[Size]</radioheight>
+        <radioposx>1</radioposx>
+        <radioposy>1</radioposy>
+    </include>
+    <variable name="OSDPath">
+        <value condition="!String.IsEmpty(Skin.String(OSDLAF))">osd_modern/</value>
+        <value>osd_classic/</value>
+    </variable>
+</includes>

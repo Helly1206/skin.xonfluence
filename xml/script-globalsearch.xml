@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">50</defaultcontrol>
+    <menucontrol>9999</menucontrol>
+    <onunload>ClearProperty(SideBladeOpen)</onunload>
+    <views>50,51,500,550,551,560,501,508,504,503,515,505,511</views>
+    <controls>
+        <control type="label" id="991">
+            <!-- Hide this Control off the screen because we don't use the label -->
+            <left>3000</left>
+            <top>3000</top>
+            <width>150</width>
+            <height>0</height>
+            <label></label>
+            <font></font>
+        </control>
+        <control type="label" id="999">
+            <!-- Hide this Control off the screen because we don't use the label -->
+            <left>3000</left>
+            <top>3000</top>
+            <width>150</width>
+            <height>0</height>
+            <label></label>
+            <font></font>
+        </control>
+        <include>CommonBackground</include>
+        <include>ContentPanelBackgrounds</include>
+        <control type="group">
+            <visible>!Control.IsVisible(999)</visible>
+            <include>Window_OpenClose_Animation</include>
+            <!-- view id = 50 -->
+            <include>CommonRootView</include>
+            <!-- view id = 51 -->
+            <include>FullWidthList</include>
+            <!-- view id = 500 -->
+            <include>ThumbnailView</include>
+            <!-- view id = 501 -->
+            <include>PosterWrapView</include>
+            <!-- view id = 508 -->
+            <include>PosterWrapView2_Fanart</include>
+            <!-- view id = 503 -->
+            <include>MediaListView3</include>
+            <!-- view id = 504 -->
+            <include>MediaListView2</include>
+            <!-- view id = 515 -->
+            <include>MediaListView4</include>
+            <!-- view id = 505 -->
+            <include>WideIconView</include>
+            <!-- view id = 511 -->
+            <include>MusicVideoInfoListView</include>
+            <!-- view id = 550 -->
+            <include>AddonInfoListView1</include>
+            <!-- view id = 551 -->
+            <include>AddonInfoThumbView1</include>
+            <!-- view id = 560 -->
+            <include>LiveTVView1</include>
+        </control>
+        <control type="group">
+            <depth>DepthFooter</depth>
+            <include>CommonPageCount</include>
+            <include>CommonNowPlaying</include>
+        </control>
+        <!-- <include>MainWindowMouseButtons</include> -->
+        <include>BehindDialogFadeOut</include>
+        <include>ScrollOffsetLabel</include>
+        <control type="group">
+            <depth>DepthHeader</depth>
+            <control type="image">
+                <description>Section header image</description>
+                <left>30</left>
+                <top>4</top>
+                <width>52</width>
+                <height>52</height>
+                <aspectratio>keep</aspectratio>
+                <texture>icon_search.png</texture>
+            </control>
+            <control type="grouplist">
+                <left>98</left>
+                <top>8</top>
+                <width>1500</width>
+                <height>45</height>
+                <orientation>horizontal</orientation>
+                <align>left</align>
+                <itemgap>8</itemgap>
+                <control type="label">
+                    <include>WindowTitleCommons</include>
+                    <label>$LOCALIZE[283]</label>
+                </control>
+                <control type="label">
+                    <include>WindowTitleCommons</include>
+                    <label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$INFO[Window.Property(GlobalSearch.SearchString)]</label>
+                </control>
+            </control>
+            <include>Clock</include>
+        </control>
+        <control type="group">
+            <visible>!Skin.HasSetting(KioskMode)</visible>
+            <visible>!Control.IsVisible(999)</visible>
+            <left>-375</left>
+            <include>SideBladeLeft</include>
+            <control type="grouplist" id="9999">
+                <left>0</left>
+                <top>90</top>
+                <width>375</width>
+                <height>975</height>
+                <onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+                <onleft>9999</onleft>
+                <onright>ClearProperty(SideBladeOpen)</onright>
+                <onright>50</onright>
+                <onup>9999</onup>
+                <ondown>9999</ondown>
+                <onback>ClearProperty(SideBladeOpen)</onback>
+                <itemgap>0</itemgap>
+                <control type="label" id="200">
+                    <width>375</width>
+                    <height>52</height>
+                    <font>font12</font>
+                    <label>31006</label>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="button" id="2">
+                    <description>View As button</description>
+                    <textwidth>352</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <onclick>Container.NextViewMode</onclick>
+                    <label />
+                </control>
+                <control type="radiobutton" id="990">
+                    <description>Search button</description>
+                    <include>ButtonCommonValues</include>
+                    <textureradioonfocus colordiffuse="$VAR[MainColorOne]">icon_search_home.png</textureradioonfocus>
+                    <textureradioonnofocus>icon_search_home.png</textureradioonnofocus>
+                    <textureradioofffocus colordiffuse="$VAR[MainColorOne]">icon_search_home.png</textureradioofffocus>
+                    <textureradiooffnofocus>icon_search_home.png</textureradiooffnofocus>
+                    <label>137</label>
+                </control>
+                <control type="label" id="201">
+                    <width>375</width>
+                    <height>52</height>
+                    <font>font12</font>
+                    <label>20094</label>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="list" id="9000">
+                    <width>375</width>
+                    <height>540</height>
+                    <onup>990</onup>
+                    <ondown>2</ondown>
+                    <onleft>50</onleft>
+                    <onright>50</onright>
+                    <itemlayout height="60" width="375">
+                        <control type="label">
+                            <left>15</left>
+                            <top>0</top>
+                            <height>60</height>
+                            <width>300</width>
+                            <aligny>center</aligny>
+                            <font>font13</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="60" width="375">
+                        <control type="image">
+                            <height>60</height>
+                            <width>375</width>
+                            <texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton1]</texture>
+                            <visible>Control.HasFocus(9000)</visible>
+                        </control>
+                        <control type="label">
+                            <left>15</left>
+                            <top>0</top>
+                            <height>60</height>
+                            <width>300</width>
+                            <aligny>center</aligny>
+                            <font>font13</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <include>CommonNowPlaying_Controls</include>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <default type="image">
+        <left>0</left>
+        <top>0</top>
+        <texture></texture>
+    </default>
+    <default type="label">
+        <label></label>
+        <font>font13</font>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+    </default>
+    <default type="fadelabel">
+        <left>120</left>
+        <top>90</top>
+        <font>font13</font>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+    </default>
+    <default type="button">
+        <width>450</width>
+        <height>63</height>
+        <include>NormalButton</include>
+        <font>font13</font>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+        <textoffsetx>10</textoffsetx>
+        <aligny>center</aligny>
+        <pulseonselect>no</pulseonselect>
+    </default>
+    <default type="togglebutton">
+        <left>210</left>
+        <top>250</top>
+        <width>30</width>
+        <height>30</height>
+        <texturefocus colordiffuse="$VAR[MainColorOne]">scroll-up-focus.png</texturefocus>
+        <texturenofocus>scroll-up.png</texturenofocus>
+        <alttexturefocus colordiffuse="$VAR[MainColorOne]">scroll-down-focus.png</alttexturefocus>
+        <alttexturenofocus>scroll-down.png</alttexturenofocus>
+        <textcolor>white</textcolor>
+        <label></label>
+        <font>font13</font>
+        <disabledcolor>grey3</disabledcolor>
+        <pulseonselect>no</pulseonselect>
+    </default>
+    <default type="textbox">
+        <left>330</left>
+        <top>333</top>
+        <width>615</width>
+        <height>320</height>
+        <align>left</align>
+        <textcolor>white</textcolor>
+        <font>font13</font>
+    </default>
+    <default type="progress">
+        <left>150</left>
+        <top>488</top>
+        <texturebg border="6,0,6,0" colordiffuse="$VAR[MainColorTwo]">OSDProgressBack.png</texturebg>
+        <lefttexture></lefttexture>
+        <midtexture border="6,0,6,0" colordiffuse="$VAR[MainColorTwo]">OSDProgressMid.png</midtexture>
+        <righttexture></righttexture>
+        <overlaytexture></overlaytexture>
+    </default>
+    <default type="spincontrol">
+        <left>495</left>
+        <top>189</top>
+        <align>right</align>
+        <width>50</width>
+        <height>33</height>
+        <font>font13</font>
+        <include condition="String.IsEmpty(Skin.String(LayoutLAF))">SpinControlClassic</include>
+        <include condition="!String.IsEmpty(Skin.String(LayoutLAF))">SpinControlModern</include>
+        <reverse>yes</reverse>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+        <subtype>text</subtype>
+        <textoffsetx>-8</textoffsetx>
+        <textoffsety>0</textoffsety>
+        <pulseonselect>no</pulseonselect>
+    </default>
+    <default type="spincontrolex">
+        <left>795</left>
+        <top>240</top>
+        <width>450</width>
+        <height>63</height>
+        <spinwidth>50</spinwidth>
+        <spinheight>33</spinheight>
+        <include>NormalButton</include>
+        <texturenofocus></texturenofocus>
+        <include condition="String.IsEmpty(Skin.String(LayoutLAF))">SpinControlClassic</include>
+        <include condition="!String.IsEmpty(Skin.String(LayoutLAF))">SpinControlModern</include>
+        <font>font13</font>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+        <textoffsetx>10</textoffsetx>
+        <aligny>center</aligny>
+        <reverse>yes</reverse>
+        <pulseonselect>no</pulseonselect>
+    </default>
+    <default type="radiobutton">
+        <left>450</left>
+        <top>300</top>
+        <width>450</width>
+        <height>63</height>
+        <include condition="String.IsEmpty(Skin.String(LayoutLAF))">RadioButtonClassic</include>
+        <include condition="!String.IsEmpty(Skin.String(LayoutLAF))">RadioButtonModern</include>
+        <include>NormalButton</include>
+        <label>215</label>
+        <font>font13</font>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+        <textoffsetx>10</textoffsetx>
+        <aligny>center</aligny>
+        <pulseonselect>no</pulseonselect>
+    </default>
+    <default type="selectbutton">
+        <left>735</left>
+        <top>502</top>
+        <width>450</width>
+        <height>75</height>
+        <label></label>
+        <font>font12</font>
+        <texturefocus></texturefocus>
+        <texturenofocus></texturenofocus>
+        <texturebg colordiffuse="$VAR[MainColorOne]">button-focus.png</texturebg>
+        <textureleft>scroll-left.png</textureleft>
+        <textureleftfocus colordiffuse="$VAR[MainColorOne]">scroll-left-focus.png</textureleftfocus>
+        <textureright>scroll-right.png</textureright>
+        <texturerightfocus colordiffuse="$VAR[MainColorOne]">scroll-right-focus.png</texturerightfocus>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+        <aligny>center</aligny>
+    </default>
+    <default type="slider">
+        <controloffsetx>75</controloffsetx>
+        <controloffsety>0</controloffsety>
+        <orientation>horizontal</orientation>
+    </default>
+    <default type="sliderex">
+        <height>52</height>
+        <textoffsetx>10</textoffsetx>
+        <aligny>center</aligny>
+        <include>NormalButton</include>
+        <sliderwidth>150</sliderwidth>
+        <sliderheight>20</sliderheight>
+        <texturesliderbar>OSD_slider_bg.png</texturesliderbar>
+        <textureslidernib colordiffuse="$VAR[MainColorTwo]">OSD_slider_nibNF.png</textureslidernib>
+        <textureslidernibfocus colordiffuse="$VAR[MainColorTwo]">OSD_slider_nib.png</textureslidernibfocus>
+        <font>font12</font>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+    </default>
+    <default type="mover">
+        <left>90</left>
+        <top>288</top>
+        <include>NormalButton</include>
+    </default>
+    <default type="resize">
+        <left>90</left>
+        <top>288</top>
+        <include>NormalButton</include>
+    </default>
+    <default type="edit">
+        <left>450</left>
+        <top>300</top>
+        <width>450</width>
+        <height>63</height>
+        <include>NormalButton</include>
+        <font>font13</font>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+        <invalidcolor>invalid</invalidcolor>
+        <textoffsetx>10</textoffsetx>
+        <aligny>center</aligny>
+        <pulseonselect>no</pulseonselect>
+    </default>
+</includes>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<window id="1197">
-	<description>Wrapper window to select music files or library</description>
-	<visible>False</visible>
-	<onload condition="!Skin.HasSetting(Music_Librarymode)">ReplaceWindow(Music,Files,return)</onload>
-	<onload condition="Skin.HasSetting(Music_Librarymode)">ReplaceWindow(Music,Root)</onload>
-	<controls></controls>
-</window>

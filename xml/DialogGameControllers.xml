@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol>3</defaultcontrol>
+    <coordinates>
+        <left>120</left>
+        <top>90</top>
+    </coordinates>
+    <include>dialogeffect</include>
+    <controls>
+        <include content="DialogBackgroundCommons">
+            <param name="DialogBackgroundWidth" value="1680" />
+            <param name="DialogBackgroundHeight" value="885" />
+            <param name="DialogHeaderWidth" value="1530" />
+            <param name="DialogHeaderLabel" value="35058" />
+            <param name="DialogHeaderId" value="2" />
+            <param name="CloseButtonLeft" value="1475" />
+            <param name="CloseButtonNav" value="3" />
+        </include>
+        <control type="group" id="9000">
+            <left>30</left>
+            <top>90</top>
+            <control type="label">
+                <description>Controller types heading</description>
+                <top>8</top>
+                <left>45</left>
+                <width>330</width>
+                <height>38</height>
+                <font>font12</font>
+                <label>35050</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="scrollbar" id="30">
+                <left>0</left>
+                <top>60</top>
+                <width>38</width>
+                <height>608</height>
+                <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                <texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
+                <texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <textureslidernib></textureslidernib>
+                <textureslidernibfocus></textureslidernibfocus>
+                <onleft>50</onleft>
+                <onright>3</onright>
+                <ondown>3</ondown>
+                <onup>3</onup>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+            </control>
+            <control type="grouplist" id="3">
+                <description>Controller types grouplist</description>
+                <left>45</left>
+                <top>60</top>
+                <width>330</width>
+                <height>608</height>
+                <onleft>30</onleft>
+                <onright>5</onright>
+                <onup>9001</onup>
+                <ondown>9001</ondown>
+                <pagecontrol>30</pagecontrol>
+            </control>
+            <control type="button" id="10">
+                <description>Default controller types button</description>
+                <height>60</height>
+                <width>330</width>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font12_title</font>
+                <textcolor>white</textcolor>
+                <pulseonselect>false</pulseonselect>
+            </control>
+            <control type="gamecontroller" id="31">
+                <left>450</left>
+                <top>135</top>
+                <width>720</width>
+                <height>429</height>
+                <include>VisibleFadeEffect</include>
+            </control>
+            <control type="label">
+                <description>Feature types heading</description>
+                <top>8</top>
+                <left>1242</left>
+                <width>330</width>
+                <height>38</height>
+                <font>font12</font>
+                <label>35059</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="scrollbar" id="50">
+                <left>1580</left>
+                <top>60</top>
+                <width>38</width>
+                <height>608</height>
+                <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                <texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
+                <texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <textureslidernib></textureslidernib>
+                <textureslidernibfocus></textureslidernibfocus>
+                <onleft>5</onleft>
+                <onright>30</onright>
+                <ondown>5</ondown>
+                <onup>5</onup>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+            </control>
+            <control type="grouplist" id="5">
+                <description>Feature types grouplist</description>
+                <left>1242</left>
+                <top>60</top>
+                <width>330</width>
+                <height>608</height>
+                <onleft>3</onleft>
+                <onright>50</onright>
+                <onup>9001</onup>
+                <ondown>9001</ondown>
+                <pagecontrol>50</pagecontrol>
+            </control>
+            <control type="button" id="7">
+                <description>Default feature types button</description>
+                <height>60</height>
+                <width>330</width>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font12_title</font>
+                <textcolor>white</textcolor>
+                <pulseonselect>false</pulseonselect>
+            </control>
+            <control type="label" id="8">
+                <description>Default feature types label</description>
+                <height>60</height>
+                <width>330</width>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font12_title</font>
+                <textcolor>grey</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+        </control>
+        <control type="group" id="9001">
+            <left>218</left>
+            <top>788</top>
+            <control type="button" id="18">
+                <description>Ok Button</description>
+                <left>0</left>
+                <top>0</top>
+                <width>300</width>
+                <height>60</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>186</label>
+                <font>font12_title</font>
+                <onleft>17</onleft>
+                <onright>19</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+            </control>
+            <control type="button" id="19">
+                <description>Reset Button</description>
+                <left>315</left>
+                <top>0</top>
+                <width>300</width>
+                <height>60</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>10035</label>
+                <font>font12_title</font>
+                <onleft>18</onleft>
+                <onright>20</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+            </control>
+            <control type="button" id="20">
+                <description>Link to install more controllers</description>
+                <left>630</left>
+                <top>0</top>
+                <height>60</height>
+                <width>300</width>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font12_title</font>
+                <textcolor>white</textcolor>
+                <pulseonselect>false</pulseonselect>
+                <label>$LOCALIZE[21452]</label>
+                <onleft>19</onleft>
+                <onright>17</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+            </control>
+            <control type="button" id="17">
+                <description>Help button</description>
+                <left>945</left>
+                <top>0</top>
+                <height>60</height>
+                <width>300</width>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font12_title</font>
+                <textcolor>white</textcolor>
+                <pulseonselect>false</pulseonselect>
+                <label>$LOCALIZE[10043]</label>
+                <onleft>20</onleft>
+                <onright>18</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+            </control>
+        </control>
+    </controls>
+</window>
