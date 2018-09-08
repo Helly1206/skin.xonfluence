@@ -3,6 +3,7 @@
     <defaultcontrol>1</defaultcontrol>
     <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo|!String.IsEmpty(Player.SeekNumeric)</visible>
     <visible>!Player.HasGame</visible>
+    <visible>!Player.FrameAdvance</visible>
     <visible>!Skin.HasSetting(HidePopUpSeekBar) | [Skin.HasSetting(HidePopUpSeekBar) + [Window.IsVisible(FullscreenVideo) | Window.IsVisible(visualisation) | Window.IsVisible(Home)]]</visible>
     <animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
     <animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
