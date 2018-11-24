@@ -431,23 +431,6 @@
             <visible>Container.Content(Movies) | Container.Content(MusicVideos)</visible>
         </control>
     </include>
-    <include name="VideoExtrasIcon">
-        <control type="image" id="5048">
-            <include>InvisibleButton</include>
-            <texture>$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/movies/,.png]</texture>
-            <visible>System.HasAddon(script.videoextras) + Container.Content(Movies)</visible>
-        </control>
-        <control type="image" id="5049">
-            <include>InvisibleButton</include>
-            <texture>$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/tvshows/,.png]</texture>
-            <visible>System.HasAddon(script.videoextras) + Container.Content(TVShows)</visible>
-        </control>
-        <control type="image" id="5050">
-            <include>InvisibleButton</include>
-            <texture>$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/musicvideos/,.png]</texture>
-            <visible>System.HasAddon(script.videoextras) + Container.Content(MusicVideos)</visible>
-        </control>
-    </include>
     <include name="ContentPanelBackgrounds">
         <control type="image">
             <depth>DepthFloor</depth>

@@ -3217,12 +3217,6 @@
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries</value>
         <value>dv</value>
     </variable>
-    <variable name="ExtraInfoFlag">
-        <value condition="ListItem.IsStereoscopic">flagging/lists/3D.png</value>
-        <value condition="System.HasAddon(script.videoextras) + Container.Content(Movies) + !String.IsEmpty(Control.GetLabel(5048))">extras.png</value>
-        <value condition="System.HasAddon(script.videoextras) + Container.Content(TVShows) + !String.IsEmpty(Control.GetLabel(5049))">extras.png</value>
-        <value condition="System.HasAddon(script.videoextras) + Container.Content(MusicVideos) + !String.IsEmpty(Control.GetLabel(5050))">extras.png</value>
-    </variable>
     <variable name="VideoNodeStats" type="text">
         <value condition="!Window.IsVisible(1195) + Container(9000).HasFocus(1)">plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Skin.String(HomeItem.1.Path)]</value>
         <value condition="!Window.IsVisible(1195) + Container(9000).HasFocus(2)">plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Skin.String(HomeItem.2.Path)]</value>

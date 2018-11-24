@@ -16,16 +16,6 @@
             <texture>$VAR[videocodec,flagging/video/,.png]</texture>
         </control>
     </include>
-    <include name="VideoExtrasFlaggingConditions">
-        <control type="image">
-            <description>Extra Info Flag</description>
-            <width>82</width>
-            <height>52</height>
-            <aspectratio align="left">keep</aspectratio>
-            <texture>$VAR[ExtraInfoFlag]</texture>
-            <visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-        </control>
-    </include>
     <include name="VideoTypeHackFlaggingConditions">
         <control type="image">
             <description>Video Type Image</description>

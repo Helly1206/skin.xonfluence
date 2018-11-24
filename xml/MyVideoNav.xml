@@ -10,7 +10,6 @@
         <include>CommonBackground</include>
         <include condition="Skin.HasSetting(ShowExtraFanArt)">FanArtExtraThumbs</include>
         <include>ContentPanelBackgrounds</include>
-        <include>VideoExtrasIcon</include>
         <control type="group">
             <include>Window_OpenClose_Animation</include>
             <!-- view id = 50 -->

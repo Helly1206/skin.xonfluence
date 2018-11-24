@@ -2,7 +2,6 @@
 <window>
     <defaultcontrol always="true">8</defaultcontrol>
     <include condition="!Skin.HasSetting(DisableTVTunes)">LoadTvTunes</include>
-    <onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
     <coordinates>
         <left>195</left>
         <top>0</top>
@@ -69,7 +68,6 @@
                     <include>AudioCodecFlaggingConditions</include>
                     <include>AudioChannelsFlaggingConditions</include>
                     <include>AspectCodecFlaggingConditions</include>
-                    <include>VideoExtrasFlaggingConditions</include>
                     <include>VideoTypeHackFlaggingConditions</include>
                 </control>
                 <control type="group">
@@ -997,13 +995,6 @@
                         <label>31127</label>
                         <onclick>RunScript(script.tvtunes,mode=solo)</onclick>
                         <visible>!Skin.HasSetting(DisableTVTunes) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)] + String.IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>
-                    </control>
-                    <control type="button" id="105">
-                        <description>Extras</description>
-                        <include>ButtonInfoDialogsCommonValues</include>
-                        <label>31699</label>
-                        <onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
-                        <visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + String.IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
                     </control>
                 </control>
                 <control type="button">

@@ -1615,13 +1615,6 @@
                     <visible>String.IsEmpty(Window.Property(tmdb_logged_in))</visible>
                     <visible>!String.IsEqual(Window.Property(type),season) + !String.IsEqual(Window.Property(type),TVShow)</visible>
                 </control>
-                <control type="button" id="100">
-                    <include>ButtonCommonValues</include>
-                    <label>$ADDON[script.extendedinfo 32132]</label>
-                    <onclick>RunScript(script.videoextras,display,"$INFO[Window.Property(FilenameAndPath)]")</onclick>
-                    <visible>System.HasAddon(script.videoextras) + String.IsEmpty(Window(movieinformation).Property(HideVideoExtrasButton))</visible>
-                    <visible>!String.IsEmpty(Window.Property(FilenameAndPath))</visible>
-                </control>
                 <control type="button" id="445">
                     <include>ButtonCommonValues</include>
                     <label>$ADDON[script.extendedinfo 32133]</label>
