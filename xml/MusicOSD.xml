@@ -20,7 +20,7 @@
             <include>DialogCloseButton</include>
             <animation effect="fade" time="150">VisibleChange</animation>
             <animation effect="slide" start="0,0" end="-45,0" time="0" condition="Player.Muted">conditional</animation>
-            <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
+            <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
         </control>
         <control type="slider" id="87">
             <depth>DepthOSD+</depth>
@@ -36,7 +36,7 @@
             <textureslidernib colordiffuse="$VAR[MainColorTwo]">OSD_slider_nibNF.png</textureslidernib>
             <textureslidernibfocus colordiffuse="$VAR[MainColorTwo]">OSD_slider_nib.png</textureslidernibfocus>
             <animation effect="fade" time="150">VisibleChange</animation>
-            <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
+            <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
             <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideMusicArtWorkOSD) | [Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)]" reversible="true">Conditional</animation>
         </control>
         <control type="grouplist" id="100">
@@ -48,7 +48,7 @@
             <ondown>10</ondown>
             <animation effect="fade" time="150">VisibleChange</animation>
             <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideMusicArtWorkOSD) | [Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)]" reversible="true">Conditional</animation>
-            <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
+            <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
             <control type="radiobutton" id="300">
                 <label>210</label>
                 <font></font>
@@ -116,7 +116,7 @@
                 <label>31351</label>
                 <altlabel>208</altlabel>
                 <font></font>
-                <include content="OSDButton">
+                <include content="OSDButtonAlt">
                     <param name="Size" value="82" />
                     <param name="Texture" value="OSDPause" />
                     <param name="AltTexture" value="OSDPlay" />
@@ -223,7 +223,7 @@
             <control type="radiobutton" id="607">
                 <label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
                 <font></font>
-                <include content="OSDButton">
+                <include content="OSDButtonAlt">
                     <param name="Size" value="82" />
                     <param name="Texture" value="OSDRandomOff" />
                     <param name="AltTexture" value="OSDRandomOn" />
@@ -246,7 +246,6 @@
             <control type="image" id="2400">
                 <width>82</width>
                 <texture></texture>
-                <visible>!system.getbool(audiooutput.dspaddonsenabled)</visible>
             </control>
             <control type="image" id="2450">
                 <width>82</width>
@@ -278,16 +277,6 @@
                 </include>
                 <onclick>setrating</onclick>
                 <visible>!Skin.HasSetting(ShowUsrVideoOSDButton) | [Skin.HasSetting(ShowUsrVideoOSDButton) + !Skin.String(OSDBtnUsrCmd)]</visible>
-            </control>
-            <control type="radiobutton" id="700">
-                <label>15047</label>
-                <font></font>
-                <include content="OSDButton">
-                    <param name="Size" value="82" />
-                    <param name="Texture" value="OSDDSPAudio" />
-                </include>
-                <onclick>ActivateWindow(OSDAudioDSPSettings)</onclick>
-                <visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
             </control>
             <control type="radiobutton" id="701">
                 <label>31128</label>
@@ -346,7 +335,7 @@
                 <label>264</label>
                 <altlabel>265</altlabel>
                 <font></font>
-                <include content="OSDButton">
+                <include content="OSDButtonAlt">
                     <param name="Size" value="82" />
                     <param name="Texture" value="OSDRecordOff" />
                     <param name="AltTexture" value="OSDRecordOn" />

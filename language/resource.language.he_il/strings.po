@@ -80,6 +80,10 @@ msgctxt "#31015"
 msgid "Minute"
 msgstr "דקה"
 
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr ""
+
 msgctxt "#31017"
 msgid "Info button"
 msgstr "לחצן מידע"
@@ -160,6 +164,10 @@ msgctxt "#31036"
 msgid "Please set path to UPnP server"
 msgstr "נא הגדר נתיב לשרת UPnP"
 
+msgctxt "#31037"
+msgid "Image only minimum popup seekbar"
+msgstr "תמונות קונפלואנס"
+
 msgctxt "#31038"
 msgid "Select item to swap"
 msgstr "בחר פריט החלפה"
@@ -223,6 +231,10 @@ msgstr "כרזות חדשות"
 msgctxt "#31053"
 msgid "Watched banners"
 msgstr "כרזות שנצפו"
+
+msgctxt "#31054"
+msgid "Special features"
+msgstr ""
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -329,8 +341,8 @@ msgid "Enable clock and date display"
 msgstr "אפשר תצוגת שעון ותאריך"
 
 msgctxt "#31082"
-msgid "Profile (if not master)"
-msgstr "פרופיל (אם לא משתמש ראשי)"
+msgid " (if not master)"
+msgstr " (אם לא משתמש ראשי)"
 
 msgctxt "#31083"
 msgid "Kodi icon"
@@ -473,16 +485,16 @@ msgid "Show recently added videos"
 msgstr "הצג וידאו שנוסף לאחרונה"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "תת תפריט תוכנות במסך הבית"
+msgid "Home page \"Add-ons\" submenu"
+msgstr ""
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "נטרל הצגת פאנארט כרקע"
 
 msgctxt "#31120"
-msgid "Hide page count info"
-msgstr "הסתר נתוני ספירת עמוד"
+msgid "Home page \"Games\" submenu"
+msgstr ""
 
 msgctxt "#31121"
 msgid "Show plot info on info screen"
@@ -559,6 +571,10 @@ msgstr "אפשר השמעת מוסיקה אוטומטי במסך מלא"
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "מסך תצוגת מוזיקה"
+
+msgctxt "#31141"
+msgid "Hide page count info"
+msgstr "הסתר נתוני ספירת עמוד"
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -1784,6 +1800,10 @@ msgctxt "#31922"
 msgid "Enable fanart script"
 msgstr "אפשר סקריפט פאנארט"
 
+msgctxt "#31923"
+msgid "Disable PVR in view"
+msgstr "השבת PVR בזמן צפייה"
+
 msgctxt "#31924"
 msgid "Album thumbnails"
 msgstr "תמונות ממוזערות לאלבום"
@@ -1828,6 +1848,10 @@ msgctxt "#31936"
 msgid "Configure service.skin.widgets"
 msgstr "הגדרת שירות skin.widgets"
 
+msgctxt "#31937"
+msgid "Use alternative background folder"
+msgstr "שימוש בתיקיית רקע חלופית"
+
 msgctxt "#31938"
 msgid "Movie details"
 msgstr "פרטי סרט"
@@ -1855,6 +1879,14 @@ msgstr "תשתמש בברירת מחדל של קונפלואנס למראה וה
 msgctxt "#31944"
 msgid "Visible in Master mode only"
 msgstr ""
+
+msgctxt "#31945"
+msgid "Reset paths to skin default"
+msgstr "איפוס נתיבים לערכי ברירת מחדל של המעטפת"
+
+msgctxt "#31946"
+msgid "Reset fanart to skin default"
+msgstr "איפוס פאנארט לערכי ברירת מחדל של המעטפת"
 
 msgctxt "#31947"
 msgid "Button look and feel"
@@ -1897,8 +1929,8 @@ msgid "MUSIC"
 msgstr "מוזיקה"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "תוכנות"
+msgid "ADD-ONS"
+msgstr "הגדרת"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -1913,20 +1945,20 @@ msgid "RADIO"
 msgstr "רדיו"
 
 msgctxt "#31961"
-msgid "Disable PVR in view"
-msgstr "השבת PVR בזמן צפייה"
+msgid "Timeshift"
+msgstr "הסט זמן"
 
 msgctxt "#31962"
-msgid "Reset paths to skin default"
-msgstr "איפוס נתיבים לערכי ברירת מחדל של המעטפת"
+msgid "Choose kind of profile identification"
+msgstr ""
 
 msgctxt "#31963"
-msgid "Reset fanart to skin default"
-msgstr "איפוס פאנארט לערכי ברירת מחדל של המעטפת"
+msgid "Profile name"
+msgstr "שם משתמש"
 
 msgctxt "#31964"
-msgid "Use alternative background folder"
-msgstr "שימוש בתיקיית רקע חלופית"
+msgid "Profile avatar"
+msgstr ""
 
 msgctxt "#31965"
 msgid "Multi-image background time per image"
@@ -2067,6 +2099,7 @@ msgstr "נוסף לאחרונה"
 msgctxt "#31999"
 msgid "Resolution"
 msgstr "אבחנה"
+
 
 
 

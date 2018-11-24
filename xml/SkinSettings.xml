@@ -448,6 +448,18 @@
                                 <selected>!Skin.HasSetting(HidePopUpSeekBar)</selected>
                             </control>
                             <control type="radiobutton" id="115">
+                                <description>Minimum Popup Seekbar Window</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>$LOCALIZE[31037]</label>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(MinimumPopUpSeekBar)</onclick>
+                                <selected>Skin.HasSetting(MinimumPopUpSeekBar)</selected>
+                            </control>
+                            <control type="radiobutton" id="116">
                                 <description>Enable DVD Cases</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -459,7 +471,7 @@
                                 <onclick>Skin.ToggleSetting(EnableDVDCases)</onclick>
                                 <selected>Skin.HasSetting(EnableDVDCases)</selected>
                             </control>
-                            <control type="radiobutton" id="116">
+                            <control type="radiobutton" id="117">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -525,7 +537,7 @@
                                 <font>font13</font>
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
-                                <label>$LOCALIZE[31120]</label>
+                                <label>$LOCALIZE[31141]</label>
                                 <onclick>Skin.ToggleSetting(HidePageCountInfo)</onclick>
                                 <selected>Skin.HasSetting(HidePageCountInfo)</selected>
                                 <include>MenuButton</include>
@@ -853,8 +865,9 @@
                                 <label>$LOCALIZE[31072]</label>
                                 <label2>[COLOR=selected]$VAR[TopLeftInfoType][/COLOR]</label2>
                                 <onclick condition="String.IsEmpty(Skin.String(TopLeftHomeInfo))">Skin.SetString(TopLeftHomeInfo,Weather)</onclick>
-                                <onclick condition="Skin.String(TopLeftHomeInfo,Weather)">Skin.SetString(TopLeftHomeInfo,Profile)</onclick>
-                                <onclick condition="Skin.String(TopLeftHomeInfo,Profile)">Skin.SetString(TopLeftHomeInfo,Blank)</onclick>
+                                <onclick condition="Skin.String(TopLeftHomeInfo,Weather)">Skin.SetString(TopLeftHomeInfo,ProfileName)</onclick>
+                                <onclick condition="Skin.String(TopLeftHomeInfo,ProfileName)">Skin.SetString(TopLeftHomeInfo,ProfileAvatar)</onclick>
+                                <onclick condition="Skin.String(TopLeftHomeInfo,ProfileAvatar)">Skin.SetString(TopLeftHomeInfo,Blank)</onclick>
                                 <onclick condition="Skin.String(TopLeftHomeInfo,Blank)">Skin.SetString(TopLeftHomeInfo,Logo)</onclick>
                                 <onclick condition="Skin.String(TopLeftHomeInfo,Logo)">Skin.SetString(TopLeftHomeInfo,Weather)</onclick>
                                 <include>MenuButton</include>
@@ -923,7 +936,7 @@
                                 <font>font13</font>
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
-                                <label>$LOCALIZE[31961]</label>
+                                <label>$LOCALIZE[31923]</label>
                                 <onclick>Skin.ToggleSetting(DisablePVRinView)</onclick>
                                 <selected>Skin.HasSetting(DisablePVRinView)</selected>
                                 <include>MenuButton</include>
@@ -8939,7 +8952,7 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
-                        <label>$LOCALIZE[31964]</label>
+                        <label>$LOCALIZE[31937]</label>
                         <include>MenuButton</include>
                         <onclick>Skin.ToggleSetting(AlternativeBackgroundPath)</onclick>
                         <selected>Skin.HasSetting(AlternativeBackgroundPath)</selected>
@@ -9268,7 +9281,7 @@
                                 <font>font13</font>
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
-                                <label>$LOCALIZE[31964]</label>
+                                <label>$LOCALIZE[31937]</label>
                                 <label2>[COLOR=selected]$VAR[AlternativeBackgroundPathLabel][/COLOR]</label2>
                                 <onclick>Skin.SetPath(AlternativeBackgroundPath,"special://")</onclick>
                                 <include>MenuButton</include>
@@ -9280,7 +9293,7 @@
                                 <font>font13</font>
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
-                                <label>31962</label>
+                                <label>31945</label>
                                 <onclick>Skin.Reset(UsrAlbumThumbsDir)</onclick>
                                 <onclick>Skin.Reset(UsrMovieFanArtDir)</onclick>
                                 <onclick>Skin.Reset(UsrTVShowFanArtDir)</onclick>

@@ -48,6 +48,18 @@
     <constant name="DepthFloor">-0.20</constant>
     <constant name="DepthSideBlade">0.15</constant>
     <!-- VARIABLES -->
+    <variable name="AddonInfoHeading">
+        <value condition="!String.IsEmpty(Window(home).Property(WhatsNew))">$LOCALIZE[24054]</value>
+        <value>$LOCALIZE[21821]</value>
+    </variable>
+    <variable name="AddonInfoDescription">
+        <value condition="!String.IsEmpty(Window(home).Property(WhatsNew))">$INFO[ListItem.AddonNews]</value>
+        <value>$INFO[ListItem.AddonDescription]</value>
+    </variable>
+    <variable name="AddonInfoButtonLabel">
+        <value condition="!String.IsEmpty(Window(home).Property(WhatsNew))">$LOCALIZE[21821]</value>
+        <value>$LOCALIZE[24054]</value>
+    </variable>
     <variable name="GameSelectHeader">
         <value condition="Window.IsActive(gamevideofilter)">$LOCALIZE[230]</value>
         <value condition="Window.IsActive(gameviewmode)">$LOCALIZE[35233]</value>
@@ -448,6 +460,11 @@
         <value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
+    <variable name="NowPlayingThumb">
+        <value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
+        <value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
+        <value>$INFO[Player.Icon]</value>
+    </variable>
     <variable name="MusicInfoPanelLabel">
         <value condition="Container.Content(Artists)">$INFO[ListItem.Label]</value>
         <value condition="Container.Content(Songs)">$INFO[ListItem.Label,[COLOR=selected][B],[/B][/COLOR] - ]$INFO[ListItem.Label2]</value>
@@ -471,8 +488,13 @@
         <value condition="[String.Contains(ListItem.FilenameAndPath,pdtv) | String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,dsr)]">TV</value>
         <value condition="String.Contains(ListItem.FilenameAndPath,vhs)">vhs</value>
     </variable>
+    <variable name="audiocodec">
+        <value condition="String.StartsWith(ListItem.AudioCodec,mp3)">mp3</value>
+        <value>$INFO[ListItem.AudioCodec]</value>
+    </variable>
     <variable name="videocodec">
         <value condition="[String.StartsWith(ListItem.VideoCodec,div) | String.IsEqual(ListItem.VideoCodec,dx50)]">divx</value>
+        <value condition="String.Contains(ListItem.VideoCodec,mpeg4)">mpeg4</value>
         <value>$INFO[ListItem.VideoCodec]</value>
     </variable>
     <variable name="SeekLabel">
@@ -511,6 +533,11 @@
         <value condition="ListItem.IsRecording">$LOCALIZE[19043]</value>
         <value condition="ListItem.HasTimer + !ListItem.TimerIsActive">$LOCALIZE[19057]</value>
         <value condition="ListItem.HasTimer">$LOCALIZE[31510]</value>
+    </variable>
+    <variable name="ProfileIdentificationLabel2Var">
+        <value condition="Skin.HasSetting(show_profilename)">$LOCALIZE[31963]</value>
+        <value condition="Skin.HasSetting(show_profileavatar)">$LOCALIZE[31964]</value>
+        <value>$LOCALIZE[16018]</value>
     </variable>
     <!-- INCLUDES -->
     <include name="MusicInfoPanel">
@@ -917,7 +944,7 @@
     </include>
     <include name="CommonNowPlaying">
         <control type="group">
-            <visible>Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(HideNowPlayingInfo)</visible>
+            <visible>Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(HideNowPlayingInfo) + !Control.IsVisible(507)</visible>
             <include>VisibleFadeEffect</include>
             <animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
             <animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
@@ -1405,7 +1432,7 @@
                 </control>
                 <control type="radiobutton" id="604">
                     <label />
-                    <include content="OSDButton">
+                    <include content="OSDButtonAlt">
                         <param name="Size" value="58" />
                         <param name="Texture" value="OSDPause" />
                         <param name="AltTexture" value="OSDPlay" />
@@ -1479,7 +1506,7 @@
                 </control>
                 <control type="radiobutton" id="703">
                     <label />
-                    <include content="OSDButton">
+                    <include content="OSDButtonAlt">
                         <param name="Size" value="58" />
                         <param name="Texture" value="OSDPause" />
                         <param name="AltTexture" value="OSDPlay" />
@@ -1545,7 +1572,7 @@
                 </control>
                 <control type="radiobutton" id="709">
                     <label />
-                    <include content="OSDButton">
+                    <include content="OSDButtonAlt">
                         <param name="Size" value="58" />
                         <param name="Texture" value="OSDRandomOff" />
                         <param name="AltTexture" value="OSDRandomOn" />
@@ -1638,7 +1665,7 @@
             <description>Date label</description>
             <right>30</right>
             <top>52</top>
-            <width>300</width>
+            <width>450</width>
             <height>22</height>
             <align>right</align>
             <aligny>center</aligny>
@@ -2337,22 +2364,35 @@
             <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
             <visible>String.IsEmpty(Skin.String(TopLeftHomeInfo)) | String.IsEqual(Skin.String(TopLeftHomeInfo),Logo)</visible>
         </control>
-        <control type="label" id="1">
-            <description>Logged User</description>
-            <left>30</left>
-            <top>8</top>
-            <height>68</height>
-            <width>525</width>
-            <align>left</align>
-            <aligny>center</aligny>
-            <font>font28_title</font>
-            <textcolor>C0FFFFFF</textcolor>
-            <shadowcolor>black</shadowcolor>
-            <info>System.ProfileName</info>
-            <include>VisibleFadeEffect</include>
-            <include>Window_OpenClose_Animation</include>
-            <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
-            <visible>!String.IsEqual(System.ProfileName,Master user) + String.IsEqual(Skin.String(TopLeftHomeInfo),Profile)</visible>
+        <control type="group">
+            <visible>!String.IsEqual(System.ProfileName,Master user)</visible>
+            <control type="image">
+                <visible>String.IsEqual(Skin.String(TopLeftHomeInfo),ProfileAvatar)</visible>
+                <top>8</top>
+                <left>30</left>
+                <width>90</width>
+                <height>90</height>
+                <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
+                <texture>$INFO[System.ProfileThumb]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="label" id="1">
+                <description>Logged User</description>
+                <left>30</left>
+                <top>8</top>
+                <height>68</height>
+                <width>525</width>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font28_title</font>
+                <textcolor>C0FFFFFF</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <info>System.ProfileName</info>
+                <include>VisibleFadeEffect</include>
+                <include>Window_OpenClose_Animation</include>
+                <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
+                <visible>String.IsEqual(Skin.String(TopLeftHomeInfo),ProfileName)</visible>
+            </control>
         </control>
         <control type="group" id="1">
             <left>30</left>

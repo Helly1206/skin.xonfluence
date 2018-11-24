@@ -54,7 +54,7 @@
                 <left>120</left>
                 <top>0</top>
                 <label></label>
-                <include content="OSDButton">
+                <include content="OSDButtonAlt">
                     <param name="Size" value="60" />
                     <param name="Texture" value="OSDPause" />
                     <param name="AltTexture" value="OSDPlay" />
@@ -184,7 +184,7 @@
                     <left>548</left>
                     <top>0</top>
                     <label></label>
-                    <include content="OSDButton">
+                    <include content="OSDButtonAlt">
                         <param name="Size" value="60" />
                         <param name="Texture" value="OSDRandomOff" />
                         <param name="AltTexture" value="OSDRandomOn" />
@@ -279,7 +279,7 @@
                 <left>120</left>
                 <top>0</top>
                 <label></label>
-                <include content="OSDButton">
+                <include content="OSDButtonAlt">
                     <param name="Size" value="60" />
                     <param name="Texture" value="OSDPause" />
                     <param name="AltTexture" value="OSDPlay" />

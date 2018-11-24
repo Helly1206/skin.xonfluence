@@ -7536,13 +7536,13 @@
         <visible>!Skin.String(Container(9000).ListItem.Property(WidgetSet))</visible>
     </include>
     <include name="UPnP_RecentMovies">
-        <include condition="String.IsEmpty(Skin.String(CustomWidgets))">UPnP_RecentMovies10</include>
-        <include condition="Skin.String(CustomWidgets,20)">UPnP_RecentMovies20</include>
-        <include condition="Skin.String(CustomWidgets,30)">UPnP_RecentMovies30</include>
-        <include condition="Skin.String(CustomWidgets,40)">UPnP_RecentMovies40</include>
-        <include condition="Skin.String(CustomWidgets,50)">UPnP_RecentMovies50</include>
-        <include condition="Skin.String(CustomWidgets,75)">UPnP_RecentMovies75</include>
-        <include condition="Skin.String(CustomWidgets,100)">UPnP_RecentMovies100</include>
+        <include condition="Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi) + String.IsEmpty(Skin.String(CustomWidgets))">UPnP_RecentMovies10</include>
+        <include condition="Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi) + Skin.String(CustomWidgets,20)">UPnP_RecentMovies20</include>
+        <include condition="Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi) + Skin.String(CustomWidgets,30)">UPnP_RecentMovies30</include>
+        <include condition="Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi) + Skin.String(CustomWidgets,40)">UPnP_RecentMovies40</include>
+        <include condition="Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi) + Skin.String(CustomWidgets,50)">UPnP_RecentMovies50</include>
+        <include condition="Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi) + Skin.String(CustomWidgets,75)">UPnP_RecentMovies75</include>
+        <include condition="Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi) + Skin.String(CustomWidgets,100)">UPnP_RecentMovies100</include>
     </include>
     <include name="UPnP_RecentMovies10">
         <content target="video" limit="10">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>

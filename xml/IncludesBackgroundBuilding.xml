@@ -521,7 +521,7 @@
             </control>
             <control type="group">
                 <include>VisibleFadeEffect</include>
-                <visible>Control.IsVisible(551) | Control.IsVisible(560) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(513)</visible>
+                <visible>Control.IsVisible(551) | Control.IsVisible(560) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(507) | Control.IsVisible(513)</visible>
                 <control type="image">
                     <left>75</left>
                     <top>90</top>

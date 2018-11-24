@@ -281,7 +281,7 @@
             <align>left</align>
             <aligny>center</aligny>
             <font>font13</font>
-            <label>$LOCALIZE[31040] - $LOCALIZE[21396]$LOCALIZE[31156] $INFO[player.chapter]$INFO[player.chaptercount, $LOCALIZE[31088] ]</label>
+            <label>$LOCALIZE[21396]$LOCALIZE[31156] $INFO[player.chapter]$INFO[player.chaptercount, $LOCALIZE[31088] ]$INFO[Player.ChapterName, - (,)]</label>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>
             <visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
@@ -471,7 +471,29 @@
             </control>
         </control>
     </include>
-        <include name="OSDButton">
+    <include name="OSDButton">
+        <param name="Size" default="82" />
+        <param name="Texture" default="" />
+        <param name="Selected" default="false" />
+        <definition>
+            <width>$PARAM[Size]</width>
+            <height>$PARAM[Size]</height>
+            <include content="OSDButtonClassicNoAlt" condition="String.IsEmpty(Skin.String(OSDLAF))">
+                <param name="Size" value="$PARAM[Size]" />
+                <param name="Texture" value="$PARAM[Texture]" />
+            </include>
+            <include content="OSDButtonModernNoAlt" condition="Skin.String(OSDLAF,Modern)">
+                <param name="Size" value="$PARAM[Size]" />
+                <param name="Texture" value="$PARAM[Texture]" />
+            </include>
+            <include content="OSDButtonMaxNoAlt" condition="Skin.String(OSDLAF,Max)">
+                <param name="Size" value="$PARAM[Size]" />
+                <param name="Texture" value="$PARAM[Texture]" />
+            </include>
+            <selected>$PARAM[Selected]</selected>
+        </definition>
+    </include>
+    <include name="OSDButtonAlt">
         <param name="Size" default="82" />
         <param name="Texture" default="" />
         <param name="AltTexture" default="" />
@@ -502,6 +524,20 @@
         <textureradioonnofocus>osd_classic/$PARAM[AltTexture]NF.png</textureradioonnofocus>
         <textureradioofffocus colordiffuse="$VAR[MainColorTwo]">osd_classic/$PARAM[Texture]FO.png</textureradioofffocus>
         <textureradiooffnofocus>osd_classic/$PARAM[Texture]NF.png</textureradiooffnofocus>
+        <textureradioondisabled colordiffuse="grey3">osd_classic/$PARAM[AltTexture]FO.png</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="grey3">osd_classic/$PARAM[Texture]NF.png</textureradiooffdisabled>
+        <texturefocus></texturefocus>
+        <texturenofocus></texturenofocus>
+        <radiowidth>$PARAM[Size]</radiowidth>
+        <radioheight>$PARAM[Size]</radioheight>
+        <radioposx>1</radioposx>
+        <radioposy>1</radioposy>
+    </include>
+    <include name="OSDButtonClassicNoAlt">
+        <textureradioonfocus colordiffuse="$VAR[MainColorTwo]">osd_classic/$PARAM[Texture]FO.png</textureradioonfocus>
+        <textureradioonnofocus>osd_classic/$PARAM[Texture]NF.png</textureradioonnofocus>
+        <textureradioofffocus colordiffuse="$VAR[MainColorTwo]">osd_classic/$PARAM[Texture]FO.png</textureradioofffocus>
+        <textureradiooffnofocus>osd_classic/$PARAM[Texture]NF.png</textureradiooffnofocus>
         <textureradioondisabled colordiffuse="grey3">osd_classic/$PARAM[Texture]FO.png</textureradioondisabled>
         <textureradiooffdisabled colordiffuse="grey3">osd_classic/$PARAM[Texture]NF.png</textureradiooffdisabled>
         <texturefocus></texturefocus>
@@ -525,12 +561,40 @@
         <radioposx>1</radioposx>
         <radioposy>1</radioposy>
     </include>
+    <include name="OSDButtonModernNoAlt">
+        <textureradioonfocus>osd_modern/$PARAM[Texture].png</textureradioonfocus>
+        <textureradioonnofocus>osd_modern/$PARAM[Texture].png</textureradioonnofocus>
+        <textureradioofffocus>osd_modern/$PARAM[Texture].png</textureradioofffocus>
+        <textureradiooffnofocus>osd_modern/$PARAM[Texture].png</textureradiooffnofocus>
+        <textureradioondisabled colordiffuse="grey3">osd_modern/$PARAM[Texture].png</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="grey3">osd_modern/$PARAM[Texture].png</textureradiooffdisabled>
+        <texturefocus border="5" colordiffuse="$VAR[MainColorTwo]">round_buttonFO.png</texturefocus>
+        <texturenofocus border="5">round_button.png</texturenofocus>
+        <radiowidth>$PARAM[Size]</radiowidth>
+        <radioheight>$PARAM[Size]</radioheight>
+        <radioposx>1</radioposx>
+        <radioposy>1</radioposy>
+    </include>
     <include name="OSDButtonMax">
         <textureradioonfocus>osd_modern/$PARAM[AltTexture].png</textureradioonfocus>
         <textureradioonnofocus>osd_modern/$PARAM[AltTexture].png</textureradioonnofocus>
         <textureradioofffocus>osd_modern/$PARAM[Texture].png</textureradioofffocus>
         <textureradiooffnofocus>osd_modern/$PARAM[Texture].png</textureradiooffnofocus>
         <textureradioondisabled colordiffuse="grey3">osd_modern/$PARAM[AltTexture].png</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="grey3">osd_modern/$PARAM[Texture].png</textureradiooffdisabled>
+        <texturefocus border="5" colordiffuse="$VAR[MainColorTwo]">floor_buttonFO.png</texturefocus>
+        <texturenofocus border="5">floor_button.png</texturenofocus>
+        <radiowidth>$PARAM[Size]</radiowidth>
+        <radioheight>$PARAM[Size]</radioheight>
+        <radioposx>1</radioposx>
+        <radioposy>1</radioposy>
+    </include>
+    <include name="OSDButtonMaxNoAlt">
+        <textureradioonfocus>osd_modern/$PARAM[Texture].png</textureradioonfocus>
+        <textureradioonnofocus>osd_modern/$PARAM[Texture].png</textureradioonnofocus>
+        <textureradioofffocus>osd_modern/$PARAM[Texture].png</textureradioofffocus>
+        <textureradiooffnofocus>osd_modern/$PARAM[Texture].png</textureradiooffnofocus>
+        <textureradioondisabled colordiffuse="grey3">osd_modern/$PARAM[Texture].png</textureradioondisabled>
         <textureradiooffdisabled colordiffuse="grey3">osd_modern/$PARAM[Texture].png</textureradiooffdisabled>
         <texturefocus border="5" colordiffuse="$VAR[MainColorTwo]">floor_buttonFO.png</texturefocus>
         <texturenofocus border="5">floor_button.png</texturenofocus>

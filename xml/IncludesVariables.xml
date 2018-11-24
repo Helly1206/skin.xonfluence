@@ -683,6 +683,7 @@
         <value condition="String.IsEqual(VideoPlayer.Title,player.swf playpath=105Test1 live=true)">[B]$LOCALIZE[31490][/B]  ([COLOR=$VAR[MainColorOne]]$LOCALIZE[31212][/COLOR])</value>
         <value condition="String.IsEqual(VideoPlayer.Title,player.swf playpath=rmc1 live=true)">[B]$LOCALIZE[31221][/B]  ([COLOR=$VAR[MainColorOne]]$LOCALIZE[31212][/COLOR])</value>
         <value condition="Player.IsInternetStream + String.Contains(VideoPlayer.Title,Virgin 1,Left)">[B]$LOCALIZE[31222][/B]  ([COLOR=$VAR[MainColorOne]]$LOCALIZE[31212][/COLOR])</value>
+        <value condition="VideoPlayer.HasEpg + VideoPlayer.Content(LiveTV)">[B]$INFO[Player.Title][/B]  ([COLOR=$VAR[MainColorOne]]$INFO[PVR.EpgEventElapsedTime] / $INFO[PVR.EpgEventDuration,][/COLOR])</value>
         <value>[B]$INFO[Player.Title][/B]  ([COLOR=$VAR[MainColorOne]]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</value>
     </variable>
     <variable name="VideoNowPlaying">
@@ -708,6 +709,7 @@
         <value condition="String.IsEqual(VideoPlayer.Title,player.swf playpath=rmc1 live=true)">special://skin/extras/Streaming/RadioMontecarloTV.png</value>
         <value condition="String.Contains(VideoPlayer.Title,Virgin 1,Left)">special://skin/extras/Streaming/Virgin.png</value>
         <value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
+        <value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
         <value>$INFO[Player.Art(thumb)]</value>
     </variable>
     <variable name="HomePowerBtnCommand">
@@ -778,7 +780,8 @@
         <value condition="String.IsEmpty(Skin.String(TopLeftHomeInfo))">$LOCALIZE[31083]</value>
         <value condition="String.IsEqual(Skin.String(TopLeftHomeInfo),Logo)">$LOCALIZE[31083]</value>
         <value condition="String.IsEqual(Skin.String(TopLeftHomeInfo),Blank)">$LOCALIZE[19022]</value>
-        <value condition="String.IsEqual(Skin.String(TopLeftHomeInfo),Profile)">$LOCALIZE[31082]</value>
+        <value condition="String.IsEqual(Skin.String(TopLeftHomeInfo),ProfileName)">$LOCALIZE[31963]$LOCALIZE[31082]</value>
+        <value condition="String.IsEqual(Skin.String(TopLeftHomeInfo),ProfileAvatar)">$LOCALIZE[31964]$LOCALIZE[31082]</value>
         <value condition="String.IsEqual(Skin.String(TopLeftHomeInfo),Weather) + !String.IsEmpty(Weather.Plugin)">$LOCALIZE[24027]</value>
         <value condition="String.IsEqual(Skin.String(TopLeftHomeInfo),Weather) + String.IsEmpty(Weather.Plugin)">[COLOR=grey3]$LOCALIZE[24027][/COLOR]</value>
     </variable>

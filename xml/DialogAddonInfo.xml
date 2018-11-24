@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
+    <onload>ClearProperty(WhatsNew,home)</onload>
     <coordinates>
         <left>278</left>
         <top>60</top>
@@ -145,65 +146,7 @@
                 </control>
                 <control type="image">
                     <left>0</left>
-                    <top>172</top>
-                    <width>900</width>
-                    <height>6</height>
-                    <texture>separator.png</texture>
-                </control>
-                <control type="label">
-                    <description>News txt</description>
-                    <left>0</left>
-                    <top>180</top>
-                    <width>210</width>
-                    <height>38</height>
-                    <label>$LOCALIZE[24054]</label>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <font>font13</font>
-                    <textcolor>$VAR[MainColorOne]</textcolor>
-                </control>
-                <control type="label">
-                    <description>News Page Count</description>
-                    <left>465</left>
-                    <top>180</top>
-                    <width>450</width>
-                    <height>38</height>
-                    <label>$INFO[Container(300).CurrentPage, $LOCALIZE[31024] [COLOR=grey3]([/COLOR]]$INFO[Container(300).NumPages,/,[COLOR=grey3])[/COLOR]]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12</font>
-                    <textcolor>grey</textcolor>
-                </control>
-                <control type="textbox" id="300">
-                    <description>News Value</description>
-                    <left>15</left>
-                    <top>220</top>
-                    <width>660</width>
-                    <height>147</height>
-                    <font>font13</font>
-                    <align>justify</align>
-                    <textcolor>white</textcolor>
-                    <label fallback="416">$INFO[ListItem.AddonNews]</label>
-                    <pagecontrol>80</pagecontrol>
-                </control>
-                <control type="scrollbar" id="80">
-                    <left>915</left>
-                    <top>218</top>
-                    <width>38</width>
-                    <height>150</height>
-                    <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                    <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                    <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                    <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
-                    <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
-                    <onleft>9000</onleft>
-                    <onright>60</onright>
-                    <showonepage>false</showonepage>
-                    <orientation>vertical</orientation>
-                </control>
-                <control type="image">
-                    <left>0</left>
-                    <top>382</top>
+                    <top>195</top>
                     <width>900</width>
                     <height>6</height>
                     <texture>separator.png</texture>
@@ -211,10 +154,10 @@
                 <control type="label">
                     <description>Description txt</description>
                     <left>0</left>
-                    <top>390</top>
+                    <top>210</top>
                     <width>450</width>
                     <height>38</height>
-                    <label>$LOCALIZE[21821]</label>
+                    <label>$VAR[AddonInfoHeading]</label>
                     <align>left</align>
                     <aligny>center</aligny>
                     <font>font13</font>
@@ -225,7 +168,7 @@
                     <control type="label">
                         <description>Description Page Count</description>
                         <left>465</left>
-                        <top>390</top>
+                        <top>210</top>
                         <width>450</width>
                         <height>38</height>
                         <label>$INFO[Container(400).CurrentPage, $LOCALIZE[31024] [COLOR=grey3]([/COLOR]]$INFO[Container(400).NumPages,/,[COLOR=grey3])[/COLOR]]</label>
@@ -237,9 +180,9 @@
                     <control type="textbox" id="400">
                         <description>Description</description>
                         <left>15</left>
-                        <top>430</top>
+                        <top>251</top>
                         <width>900</width>
-                        <height>147</height>
+                        <height>327</height>
                         <font>font13</font>
                         <align>justify</align>
                         <textcolor>white</textcolor>
@@ -248,15 +191,15 @@
                     </control>
                     <control type="scrollbar" id="60">
                         <left>915</left>
-                        <top>428</top>
+                        <top>248</top>
                         <width>38</width>
-                        <height>150</height>
+                        <height>285</height>
                         <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
                         <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
                         <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
                         <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
                         <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
-                        <onleft>80</onleft>
+                        <onleft>9000</onleft>
                         <onright>61</onright>
                         <showonepage>false</showonepage>
                         <orientation>vertical</orientation>
@@ -291,7 +234,7 @@
                     <control type="label">
                         <description>Description Page Count</description>
                         <left>465</left>
-                        <top>390</top>
+                        <top>210</top>
                         <width>450</width>
                         <height>38</height>
                         <label>$INFO[Container(401).CurrentPage, $LOCALIZE[31024] [COLOR=grey3]([/COLOR]]$INFO[Container(401).NumPages,/,[COLOR=grey3])[/COLOR]]</label>
@@ -303,20 +246,20 @@
                     <control type="textbox" id="401">
                         <description>Description</description>
                         <left>15</left>
-                        <top>430</top>
+                        <top>266</top>
                         <width>900</width>
-                        <height>237</height>
+                        <height>327</height>
                         <font>font13</font>
                         <align>left</align>
                         <textcolor>white</textcolor>
-                        <label>$INFO[ListItem.AddonDescription]</label>
+                        <label>$VAR[AddonInfoDescription]</label>
                         <pagecontrol>61</pagecontrol>
                     </control>
                     <control type="scrollbar" id="61">
                         <left>915</left>
-                        <top>428</top>
+                        <top>263</top>
                         <width>38</width>
-                        <height>240</height>
+                        <height>285</height>
                         <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
                         <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
                         <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -334,15 +277,26 @@
                 <top>450</top>
                 <width>330</width>
                 <height>470</height>
-                <onleft>80</onleft>
-                <onright>80</onright>
+                <onleft>61</onleft>
+                <onright>60</onright>
                 <onup>9000</onup>
                 <ondown>9000</ondown>
                 <itemgap>3</itemgap>
+                <control type="button" id="11">
+                    <description>What's New button</description>
+                    <width>330</width>
+                    <height>56</height>
+                    <label>$VAR[AddonInfoButtonLabel]</label>
+                    <align>center</align>
+                    <font>font12_title</font>
+                    <onclick condition="!String.IsEmpty(Window(home).Property(WhatsNew))">ClearProperty(WhatsNew,home)</onclick>
+                    <onclick condition="String.IsEmpty(Window(home).Property(WhatsNew))">SetProperty(WhatsNew,True,home)</onclick>
+                    <visible>!String.IsEmpty(ListItem.AddonNews)</visible>
+                </control>
                 <control type="button" id="9">
                     <description>Configure Addon</description>
                     <width>330</width>
-                    <height>64</height>
+                    <height>56</height>
                     <label>24020</label>
                     <align>center</align>
                     <font>font12_title</font>
@@ -350,7 +304,7 @@
                 <control type="button" id="8">
                     <description>Update Addon button</description>
                     <width>330</width>
-                    <height>64</height>
+                    <height>56</height>
                     <label>24069</label>
                     <align>center</align>
                     <font>font12_title</font>
@@ -358,7 +312,7 @@
                 <control type="radiobutton" id="13">
                     <description>Auto-update button</description>
                     <width>330</width>
-                    <height>64</height>
+                    <height>56</height>
                     <label>21340</label>
                     <align>center</align>
                     <font>font12_title</font>
@@ -366,7 +320,7 @@
                 <control type="button" id="12">
                     <description>Launch Addon button</description>
                     <width>330</width>
-                    <height>64</height>
+                    <height>56</height>
                     <label>518</label>
                     <align>center</align>
                     <font>font12_title</font>
@@ -374,7 +328,7 @@
                 <control type="button" id="6">
                     <description>Install/UnInstall Addon button</description>
                     <width>330</width>
-                    <height>64</height>
+                    <height>56</height>
                     <label>24022</label>
                     <align>center</align>
                     <font>font12_title</font>
@@ -382,8 +336,16 @@
                 <control type="button" id="7">
                     <description>Enable/Disable Addon button</description>
                     <width>330</width>
-                    <height>64</height>
+                    <height>56</height>
                     <label>24021</label>
+                    <align>center</align>
+                    <font>font12_title</font>
+                </control>
+                <control type="button" id="10">
+                    <description>Dependencies button</description>
+                    <width>330</width>
+                    <height>56</height>
+                    <label>39024</label>
                     <align>center</align>
                     <font>font12_title</font>
                 </control>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.xonfluence"
-  version="4.0.2"
+  version="4.0.3"
   name="Xonfluence"
   provider-name="Helly">
   <requires>
@@ -33,6 +33,7 @@
 	<website></website>
 	<email></email>
 	<source>https://github.com/Helly1206/skin.xonfluence</source>
+  <news>See changelog for latest changes</news>
     <assets>
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
@@ -46,6 +47,5 @@
 	    <screenshot>resources/screenshot-08.jpg</screenshot>
 	    <screenshot>resources/screenshot-09.jpg</screenshot>
     </assets>
-    <news>See changelog for latest changes</news>
   </extension>
 </addon>

@@ -1,3 +1,29 @@
+[B]4.0.3[/B]
+- Added 8K video flagging icon
+- Updated language files synchonized with confluence v4.5.5 and updates xonfluence related codes
+- Added Hebrew and Armenian font to roboto fonts (from confluence v4.5.5)
+- Synchonized with confluence v4.5.5
+  - Update 'News' handling in addon info
+  - Fix LiveTV with EPG elapsed time and duration
+  - Add 'Play Programme' button to the PVR Info dialog
+  - Fix missing cover image when playing from EPG
+  - Add Timeshift information label
+  - New "Now playing" view aligned to "Media Info"
+  - Audio DSP support removed
+  - Add setting for profile identification
+  - Added mpeg4 flagging
+- Added games to homemenu and up to 7 submenus
+- Added default games menuitem (like confluence), on empty position, if not already added and gamesgeneral is enabled. Otherwise you have to do it manually.
+- Change 'Programs' label in main menu to 'Add-ons'
+- Reserved some more space on the date label, so it doesn't clip anymore (#2245)
+- Added chaptername to video OSD and pause seekbar (#2246)
+- Added option to only display graphics on the popup seekbar to have a minimal seekbar (#2247, not exactly your question, but the easiest fix)
+- Added Add special features support (#2267)
+- Added script database to the context menu (#2291, #2108, #2110)
+- Changed label positions in music visualization
+- Removed audio DSP references as it became obsolete 
+- Some changes to solve error messages and some warnings in the logfile
+
 [B]4.0.2[/B]
 - Updated language files from confluence v4.4.8
 - Synchronized with confluence 4.4.8

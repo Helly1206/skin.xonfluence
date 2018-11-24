@@ -30,7 +30,7 @@
         <include>ScrollOffsetLabel</include>
         <include content="CommonWindowHeader">
             <param name="Icon" value="icon_addons" />
-            <param name="Label" value="$LOCALIZE[0]" />
+            <param name="Label" value="$LOCALIZE[24001]" />
         </include>
         <control type="group">
             <visible>!Skin.HasSetting(KioskMode)</visible>

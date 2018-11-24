@@ -28,22 +28,6 @@
                 	<orientation>vertical</orientation>
 					<onup>5029</onup>
 					<ondown>5029</ondown>
-					<control type="button" id="5002">
-						<width>1080</width>
-						<height>60</height>
-                		<font>font13</font>
-						<label>$LOCALIZE[15047]</label>
-						<onclick>ActivateWindow(OSDAudioDSPSettings)</onclick>
-						<visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
-					</control>
-					<control type="button" id="5003">
-						<width>1080</width>
-						<height>60</height>
-                		<font>font13</font>
-						<label>$LOCALIZE[15020]</label>
-						<onclick>ActivateWindow(AudioDSPManager)</onclick>
-						<visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
-					</control>
 					<control type="button" id="5004">
 						<width>1080</width>
 						<height>60</height>

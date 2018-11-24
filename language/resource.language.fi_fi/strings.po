@@ -80,6 +80,10 @@ msgctxt "#31015"
 msgid "Minute"
 msgstr "Minuutti"
 
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Kulunut aika"
+
 msgctxt "#31017"
 msgid "Info button"
 msgstr ""
@@ -160,6 +164,10 @@ msgctxt "#31036"
 msgid "Please set path to UPnP server"
 msgstr ""
 
+msgctxt "#31037"
+msgid "Image only minimum popup seekbar"
+msgstr ""
+
 msgctxt "#31038"
 msgid "Select item to swap"
 msgstr ""
@@ -222,6 +230,10 @@ msgstr ""
 
 msgctxt "#31053"
 msgid "Watched banners"
+msgstr ""
+
+msgctxt "#31054"
+msgid "Special features"
 msgstr ""
 
 msgctxt "#31055"
@@ -329,7 +341,7 @@ msgid "Enable clock and date display"
 msgstr ""
 
 msgctxt "#31082"
-msgid "Profile (if not master)"
+msgid " (if not master)"
 msgstr ""
 
 msgctxt "#31083"
@@ -473,16 +485,16 @@ msgid "Show recently added videos"
 msgstr "Näytä viimeksi lisätyt videot"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Päävalikon ohjelmaosion alavalikko"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Päävalikon lisäosien alavalikko"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Piilota fanitaide"
 
 msgctxt "#31120"
-msgid "Hide page count info"
-msgstr ""
+msgid "Home page \"Games\" submenu"
+msgstr "Päävalikon peliosion alavalikko"
 
 msgctxt "#31121"
 msgid "Show plot info on info screen"
@@ -559,6 +571,10 @@ msgstr ""
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "Musiikin kuvaruutuvalikko"
+
+msgctxt "#31141"
+msgid "Hide page count info"
+msgstr ""
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -1764,6 +1780,10 @@ msgctxt "#31922"
 msgid "Enable fanart script"
 msgstr ""
 
+msgctxt "#31923"
+msgid "Disable PVR in view"
+msgstr ""
+
 msgctxt "#31924"
 msgid "Album thumbnails"
 msgstr ""
@@ -1808,6 +1828,10 @@ msgctxt "#31936"
 msgid "Configure service.skin.widgets"
 msgstr ""
 
+msgctxt "#31937"
+msgid "Use alternative background folder"
+msgstr ""
+
 msgctxt "#31938"
 msgid "Movie details"
 msgstr ""
@@ -1834,6 +1858,14 @@ msgstr ""
 
 msgctxt "#31944"
 msgid "Visible in Master mode only"
+msgstr ""
+
+msgctxt "#31945"
+msgid "Reset paths to skin default"
+msgstr ""
+
+msgctxt "#31946"
+msgid "Reset fanart to skin default"
 msgstr ""
 
 msgctxt "#31947"
@@ -1877,8 +1909,8 @@ msgid "MUSIC"
 msgstr "MUSIIKKI"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "OHJELMAT"
+msgid "ADD-ONS"
+msgstr "LISÄOSAT"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -1893,20 +1925,20 @@ msgid "RADIO"
 msgstr "RADIO"
 
 msgctxt "#31961"
-msgid "Disable PVR in view"
-msgstr ""
+msgid "Timeshift"
+msgstr "Ajansiirto"
 
 msgctxt "#31962"
-msgid "Reset paths to skin default"
-msgstr ""
+msgid "Choose kind of profile identification"
+msgstr "Valitse näytetäänkö profiilin nimi vai kuva"
 
 msgctxt "#31963"
-msgid "Reset fanart to skin default"
-msgstr ""
+msgid "Profile name"
+msgstr "Profiilin nimi"
 
 msgctxt "#31964"
-msgid "Use alternative background folder"
-msgstr ""
+msgid "Profile avatar"
+msgstr "Profiilin kuva"
 
 msgctxt "#31965"
 msgid "Multi-image background time per image"

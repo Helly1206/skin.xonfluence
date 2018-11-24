@@ -190,7 +190,7 @@
             <control type="radiobutton" id="102">
                 <label></label>
                 <font></font>
-                <include content="OSDButton">
+                <include content="OSDButtonAlt">
                     <param name="Size" value="82" />
                     <param name="Texture" value="OSDPlay" />
                     <param name="AltTexture" value="OSDPause" />
@@ -309,7 +309,7 @@
                 <label>31351</label>
                 <altlabel>208</altlabel>
                 <font></font>
-                <include content="OSDButton">
+                <include content="OSDButtonAlt">
                     <param name="Size" value="82" />
                     <param name="Texture" value="OSDPause" />
                     <param name="AltTexture" value="OSDPlay" />

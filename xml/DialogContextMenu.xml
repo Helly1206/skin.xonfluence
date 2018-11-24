@@ -51,6 +51,21 @@
                 <onclick condition="String.IsEmpty(ListItem.Trailer)">ActivateWindow(videos,$ESCINFO[ListItem.Label,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=, Trailer],return)</onclick>
                 <visible>!Skin.HasSetting(HideTrailerBtn) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
             </control>
+            <control type="button" id="3003">
+                <description>Library Editor</description>
+                <left></left>
+                <top></top>
+                <width>450</width>
+                <height>57</height>
+                <font>fontContextMenu</font>
+                <align>center</align>
+                <textcolor>grey2</textcolor>
+                <focusedcolor>white</focusedcolor>
+                <include>NormalButton1</include>
+                <label>$LOCALIZE[21450] [LOWERCASE]$LOCALIZE[15101][/LOWERCASE]</label>
+                <onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
+                <visible>System.HasAddon(script.libraryeditor) + !String.IsEmpty(ListItem.DBID) + !Container.Content(Seasons)</visible>
+            </control>
         </control>
         <control type="button">
             <description>Close Window button</description>

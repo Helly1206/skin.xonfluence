@@ -82,7 +82,9 @@ msgctxt "#31015"
 msgid "Minute"
 msgstr ""
 
-#empty string with id 31016
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr ""
 
 msgctxt "#31017"
 msgid "Info button"
@@ -166,7 +168,9 @@ msgctxt "#31036"
 msgid "Please set path to UPnP server"
 msgstr ""
 
-#empty string with id 31037
+msgctxt "#31037"
+msgid "Image only minimum popup seekbar"
+msgstr ""
 
 msgctxt "#31038"
 msgid "Select item to swap"
@@ -234,7 +238,10 @@ msgctxt "#31053"
 msgid "Watched banners"
 msgstr ""
 
-#empty string id 31054
+msgctxt "#31054"
+msgid "Special features"
+msgstr ""
+
 #Playlist Editor labels
 
 msgctxt "#31055"
@@ -344,7 +351,7 @@ msgid "Enable clock and date display"
 msgstr ""
 
 msgctxt "#31082"
-msgid "Profile (if not master)"
+msgid " (if not master)"
 msgstr ""
 
 msgctxt "#31083"
@@ -490,7 +497,7 @@ msgid "Show recently added videos"
 msgstr ""
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
+msgid "Home page \"Add-ons\" submenu"
 msgstr ""
 
 msgctxt "#31119"
@@ -498,7 +505,7 @@ msgid "Hide background fanart"
 msgstr ""
 
 msgctxt "#31120"
-msgid "Hide page count info"
+msgid "Home page \"Games\" submenu"
 msgstr ""
 
 msgctxt "#31121"
@@ -579,7 +586,9 @@ msgctxt "#31140"
 msgid "Music OSD"
 msgstr ""
 
-#empty string with id 31141
+msgctxt "#31141"
+msgid "Hide page count info"
+msgstr ""
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -1848,7 +1857,9 @@ msgctxt "#31922"
 msgid "Enable fanart script"
 msgstr ""
 
-#empty string with id 31923
+msgctxt "#31923"
+msgid "Disable PVR in view"
+msgstr ""
 
 msgctxt "#31924"
 msgid "Album thumbnails"
@@ -1896,7 +1907,9 @@ msgctxt "#31936"
 msgid "Configure service.skin.widgets"
 msgstr ""
 
-#empty string with id 31937
+msgctxt "#31937"
+msgid "Use alternative background folder"
+msgstr ""
 
 msgctxt "#31938"
 msgid "Movie details"
@@ -1926,7 +1939,13 @@ msgctxt "#31944"
 msgid "Visible in Master mode only"
 msgstr ""
 
-#empty strings from id 31945 to 31946
+msgctxt "#31945"
+msgid "Reset paths to skin default"
+msgstr ""
+
+msgctxt "#31946"
+msgid "Reset fanart to skin default"
+msgstr ""
 
 msgctxt "#31947"
 msgid "Button look and feel"
@@ -1969,7 +1988,7 @@ msgid "MUSIC"
 msgstr ""
 
 msgctxt "#31957"
-msgid "PROGRAMS"
+msgid "ADD-ONS"
 msgstr ""
 
 msgctxt "#31958"
@@ -1985,19 +2004,19 @@ msgid "RADIO"
 msgstr ""
 
 msgctxt "#31961"
-msgid "Disable PVR in view"
+msgid "Timeshift"
 msgstr ""
 
 msgctxt "#31962"
-msgid "Reset paths to skin default"
+msgid "Choose kind of profile identification"
 msgstr ""
 
 msgctxt "#31963"
-msgid "Reset fanart to skin default"
+msgid "Profile name"
 msgstr ""
 
 msgctxt "#31964"
-msgid "Use alternative background folder"
+msgid "Profile avatar"
 msgstr ""
 
 msgctxt "#31965"

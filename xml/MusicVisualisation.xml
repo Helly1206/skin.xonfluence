@@ -29,7 +29,7 @@
         <!-- media infos -->
         <control type="group">
             <animation effect="fade" time="150">VisibleChange</animation>
-            <visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
+            <visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon) | Window.IsVisible(1105)]</visible>
             <control type="image">
                 <left>-30</left>
                 <top>-225</top>
@@ -147,59 +147,11 @@
                 </control>
                 <control type="grouplist">
                     <left>0</left>
-                    <top>195</top>
+                    <top>200</top>
                     <width>1365</width>
                     <height>52</height>
                     <itemgap>8</itemgap>
                     <orientation>horizontal</orientation>
-                    <visible>!system.getbool(audiooutput.dspaddonsenabled)</visible>
-                    <control type="label">
-                        <width min="15" max="957">auto</width>
-                        <height>30</height>
-                        <font>font30</font>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[Player.Title]</label>
-                        <textcolor>orange</textcolor>
-                        <scroll>true</scroll>
-                    </control>
-                    <control type="image">
-                        <description>Audio Codec Image</description>
-                        <width>122</width>
-                        <height>44</height>
-                        <texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
-                        <visible>!Player.ChannelPreviewActive</visible>
-                    </control>
-                    <control type="group">
-                        <description>Rating</description>
-                        <width>258</width>
-                        <height>44</height>
-                        <control type="image">
-                            <description>rating back</description>
-                            <left>0</left>
-                            <top>0</top>
-                            <width>258</width>
-                            <height>44</height>
-                            <texture border="5">flagging/blank.png</texture>
-                        </control>
-                        <control type="image">
-                            <description>User Rating</description>
-                            <left>3</left>
-                            <top>8</top>
-                            <width>252</width>
-                            <height>32</height>
-                            <texture fallback="ratings/0.png">$INFO[MusicPlayer.UserRating,ratings/,.png]</texture>
-                        </control>
-                    </control>
-                </control>
-                <control type="grouplist">
-                    <left>30</left>
-                    <top>90</top>
-                    <width>1365</width>
-                    <height>52</height>
-                    <itemgap>8</itemgap>
-                    <orientation>horizontal</orientation>
-                    <visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
                     <control type="label">
                         <width min="15" max="836">auto</width>
                         <height>30</height>
@@ -211,25 +163,11 @@
                         <scroll>true</scroll>
                     </control>
                     <control type="image">
-                        <description>ADSP Master Mode Image</description>
-                        <width>122</width>
-                        <height>44</height>
-                        <visible>![String.IsEmpty(ADSP.MasterOwnIcon) | Player.ChannelPreviewActive]</visible>
-                        <texture>$INFO[ADSP.MasterOwnIcon]</texture>
-                    </control>
-                    <control type="image">
                         <description>Audio Codec Image</description>
                         <width>122</width>
                         <height>44</height>
-                        <visible>String.IsEmpty(ADSP.MasterOverrideIcon) + !Player.ChannelPreviewActive</visible>
+                        <visible>!Player.ChannelPreviewActive</visible>
                         <texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
-                    </control>
-                    <control type="image">
-                        <description>ADSP Audio Codec Override Image</description>
-                        <width>122</width>
-                        <height>44</height>
-                        <visible>![String.IsEmpty(ADSP.MasterOwnIcon) | Player.ChannelPreviewActive]</visible>
-                        <texture>$INFO[ADSP.MasterOverrideIcon]</texture>
                     </control>
                     <control type="group">
                         <description>Rating</description>

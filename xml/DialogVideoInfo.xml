@@ -903,6 +903,24 @@
                         <altlabel>1024</altlabel>
                         <usealttexture>String.IsEqual(ListItem.DBTYPE,tvshow)</usealttexture>
                     </control>
+                    <control type="button" id="1227">
+                        <description>Special Features button</description>
+                        <label>$LOCALIZE[31054]</label>
+                        <include>ButtonInfoDialogsCommonValues</include>
+                        <include>NormalButton</include>
+                        <include>AltButton</include>
+                        <onclick>RunScript(plugin.video.specialfeatures,ListItem)</onclick>
+                        <visible>String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true)</visible>
+                    </control>
+                    <control type="button" id="1228">
+                        <description>Library Editor</description>
+                        <include>ButtonInfoDialogsCommonValues</include>
+                        <include>NormalButton</include>
+                        <include>AltButton</include>
+                        <label>$LOCALIZE[21450] [LOWERCASE]$LOCALIZE[15101][/LOWERCASE]</label>
+                        <onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
+                        <visible>System.HasAddon(script.libraryeditor) + !String.IsEmpty(ListItem.DBID) + !Container.Content(Seasons)</visible>
+            </control>
                     <control type="button" id="5">
                         <description>Cast/Review</description>
                         <include>ButtonInfoDialogsCommonValues</include>

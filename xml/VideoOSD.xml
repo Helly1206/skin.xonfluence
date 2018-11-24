@@ -19,7 +19,7 @@
             <onclick>FullScreen</onclick>
             <include>DialogCloseButton</include>
             <animation effect="fade" time="150">VisibleChange</animation>
-            <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+            <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
         </control>
         <control type="slider" id="87">
@@ -123,7 +123,7 @@
                 <label>31351</label>
                 <label2>208</label2>
                 <font></font>
-                <include content="OSDButton">
+                <include content="OSDButtonAlt">
                     <param name="Size" value="82" />
                     <param name="Texture" value="OSDPause" />
                     <param name="AltTexture" value="OSDPlay" />
@@ -269,8 +269,6 @@
                 <include content="OSDButton">
                     <param name="Size" value="82" />
                     <param name="Texture" value="OSDAudio" />
-                    <param name="AltTexture" value="OSDDSPAudio" />
-                    <param name="Selected" value="system.getbool(audiooutput.dspaddonsenabled)" />
                 </include>
                 <onclick>ActivateWindow(OSDAudioSettings)</onclick>
             </control>
@@ -301,7 +299,7 @@
                 <label>264</label>
                 <label2>265</label2>
                 <font></font>
-                <include content="OSDButton">
+                <include content="OSDButtonAlt">
                     <param name="Size" value="82" />
                     <param name="Texture" value="OSDRecordOff" />
                     <param name="AltTexture" value="OSDRecordOn" />

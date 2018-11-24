@@ -10,17 +10,17 @@
     <depth>DepthOSD</depth>
     <controls>
         <control type="group">
-            <visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
+            <visible>!Skin.HasSetting(HidePopUpSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
             <visible>player.chaptercount + Window.IsVisible(FullScreenVideo)</visible>
             <animation effect="slide" start="0,0" end="-150,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
             <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
-            <left>1058r</left>
+            <left>1258r</left>
             <top>-9</top>
             <include>VisibleFadeEffect</include>
             <control type="image">
                 <left>0</left>
                 <top>0</top>
-                <width>225</width>
+                <width>425</width>
                 <height>105</height>
                 <colordiffuse>EEFFFFFF</colordiffuse>
                 <texture border="12">OverlayDialogBackground.png</texture>
@@ -29,26 +29,26 @@
                 <description>Chapter Pos No</description>
                 <left>30</left>
                 <top>15</top>
-                <width>165</width>
+                <width>365</width>
                 <height>30</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font12_title</font>
-                <textcolor>$VAR[MainColorOne]</textcolor>
-                <label>$LOCALIZE[21396]</label>
+                <textcolor>grey2</textcolor>
+                <label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[21396][/COLOR] $INFO[player.chapter]$INFO[player.chaptercount, $LOCALIZE[31088] ]</label>
                 <visible>player.chaptercount</visible>
             </control>
             <control type="label" id="1">
-                <description>Chapter Pos No</description>
+                <description>Chapter Name</description>
                 <left>30</left>
                 <top>45</top>
-                <width>165</width>
+                <width>365</width>
                 <height>30</height>
                 <align>center</align>
                 <aligny>center</aligny>
-                <font>font13_title</font>
+                <font>font10_title</font>
                 <textcolor>grey2</textcolor>
-                <label>$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
+                <label>$INFO[Player.ChapterName]</label>
                 <visible>player.chaptercount</visible>
             </control>
         </control>
@@ -66,7 +66,7 @@
                 <height>105</height>
                 <colordiffuse>EEFFFFFF</colordiffuse>
                 <texture border="12">OverlayDialogBackground.png</texture>
-                <visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
+                <visible>!Skin.HasSetting(HidePopUpSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
             </control>
             <control type="group">
                 <left>390</left>
@@ -258,7 +258,7 @@
                 <font>font10_title</font>
                 <textcolor>$VAR[MainColorOne]</textcolor>
                 <label>$VAR[SeekLabel]</label>
-                <visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
+                <visible>!Skin.HasSetting(HidePopUpSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
             </control>
             <control type="label">
                 <description>Seekbar Label</description>
@@ -271,7 +271,7 @@
                 <font>font10_title</font>
                 <textcolor>$VAR[MainColorOne]</textcolor>
                 <label>$VAR[SeekLabel]</label>
-                <visible>Skin.HasSetting(HidePopUpSeekBar)</visible>
+                <visible>Skin.HasSetting(HidePopUpSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
             </control>
             <control type="label" id="1">
                 <description>Seek Number label</description>
@@ -286,65 +286,125 @@
                 <textcolor>white</textcolor>
                 <shadowcolor>black</shadowcolor>
                 <label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
+                <visible>!Skin.HasSetting(MinimumPopUpSeekBar)</visible>
             </control>
-            <control type="label">
-                <description>Elapsed Time Label</description>
-                <left>30</left>
-                <top>34</top>
-                <width>360</width>
-                <height>30</height>
-                <font>font13_title</font>
-                <textcolor>white</textcolor>
-                <align>left</align>
-                <aligny>center</aligny>
-                <label>$INFO[Player.Time] - $INFO[Player.Duration]</label>
-                <visible>!Player.Seeking</visible>
-                <visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
+            <control type="group">
+                <visible>[VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg] + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
+                <control type="label">
+                    <description>Elapsed Time Label</description>
+                    <left>30</left>
+                    <top>34</top>
+                    <width>360</width>
+                    <height>30</height>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[PVR.EpgEventElapsedTime] - $INFO[PVR.EpgEventDuration]</label>
+                    <visible>!Player.Seeking</visible>
+                </control>
+                <control type="label">
+                    <description>Seek Time Label</description>
+                    <left>30</left>
+                    <top>34</top>
+                    <width>360</width>
+                    <height>30</height>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[PVR.EpgEventSeekTime] - $INFO[PVR.EpgEventDuration]</label>
+                    <visible>Player.Seeking</visible>
+                </control>
+                <control type="progress">
+                    <description>ProgressbarTimeshift</description>
+                    <left>30</left>
+                    <top>68</top>
+                    <width>360</width>
+                    <height>22</height>
+                    <info>PVR.TimeshiftProgressBufferEnd </info>
+                    <midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+                    <visible>PVR.IsTimeShift</visible>
+                </control>
+                <control type="progress" id="23">
+                    <description>Progressbar</description>
+                    <left>30</left>
+                    <top>68</top>
+                    <width>360</width>
+                    <height>22</height>
+                    <info>PVR.EpgEventProgress</info>
+                    <visible>true</visible>
+                </control>
+                <control type="slider" id="403">
+                    <description>Seek Slider</description>
+                    <left>30</left>
+                    <top>63</top>
+                    <width>360</width>
+                    <height>18</height>
+                    <texturesliderbar>seekslider.png</texturesliderbar>
+                    <textureslidernib>osd_slider_nib.png</textureslidernib>
+                    <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+                    <visible>Player.Seeking</visible>
+                </control>
             </control>
-            <control type="label">
-                <description>Seek Time Label</description>
-                <left>30</left>
-                <top>34</top>
-                <width>360</width>
-                <height>30</height>
-                <font>font13_title</font>
-                <textcolor>white</textcolor>
-                <align>left</align>
-                <aligny>center</aligny>
-                <label>$INFO[Player.SeekTime] - $INFO[Player.Duration]</label>
-                <visible>Player.Seeking</visible>
-                <visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-            </control>
-            <control type="progress">
-                <description>ProgressbarCache</description>
-                <left>30</left>
-                <top>68</top>
-                <width>360</width>
-                <height>22</height>
-                <info>Player.ProgressCache</info>
-                <midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
-                <visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-            </control>
-            <control type="progress" id="23">
-                <description>Progressbar</description>
-                <left>30</left>
-                <top>68</top>
-                <width>360</width>
-                <height>22</height>
-                <info>Player.Progress</info>
-                <visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
-            </control>
-            <control type="slider" id="401">
-                <description>Seek Slider</description>
-                <left>30</left>
-                <top>63</top>
-                <width>360</width>
-                <height>18</height>
-                <texturesliderbar>seekslider.png</texturesliderbar>
-                <textureslidernib colordiffuse="$VAR[MainColorTwo]">OSD_slider_nib.png</textureslidernib>
-                <textureslidernibfocus colordiffuse="$VAR[MainColorTwo]">OSD_slider_nib.png</textureslidernibfocus>
-                <visible>Player.Seeking</visible>
-                <visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
+            <control type="group">
+                <visible>![VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg] + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
+                <control type="label">
+                    <description>Elapsed Time Label</description>
+                    <left>30</left>
+                    <top>34</top>
+                    <width>360</width>
+                    <height>30</height>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[Player.Time] - $INFO[Player.Duration]</label>
+                    <visible>!Player.Seeking</visible>
+                </control>
+                <control type="label">
+                    <description>Seek Time Label</description>
+                    <left>30</left>
+                    <top>34</top>
+                    <width>360</width>
+                    <height>30</height>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[Player.SeekTime] - $INFO[Player.Duration]</label>
+                    <visible>Player.Seeking</visible>
+                </control>
+                <control type="progress">
+                    <description>ProgressbarCache</description>
+                    <left>30</left>
+                    <top>68</top>
+                    <width>360</width>
+                    <height>22</height>
+                    <info>Player.ProgressCache</info>
+                    <midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+                    <visible>true</visible>
+                </control>
+                <control type="progress" id="23">
+                    <description>Progressbar</description>
+                    <left>30</left>
+                    <top>68</top>
+                    <width>360</width>
+                    <height>22</height>
+                    <info>Player.Progress</info>
+                    <visible>true</visible>
+                </control>
+                <control type="slider" id="401">
+                    <description>Seek Slider</description>
+                    <left>30</left>
+                    <top>63</top>
+                    <width>360</width>
+                    <height>18</height>
+                    <texturesliderbar>seekslider.png</texturesliderbar>
+                    <textureslidernib>osd_slider_nib.png</textureslidernib>
+                    <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+                    <visible>Player.Seeking</visible>
+                </control>
             </control>
         </control>
     </controls>

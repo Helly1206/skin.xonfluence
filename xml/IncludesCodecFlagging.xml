@@ -52,7 +52,7 @@
             <width>120</width>
             <height>52</height>
             <aspectratio align="right">keep</aspectratio>
-            <texture>$INFO[ListItem.AudioCodec,flagging/audio/,.png]</texture>
+            <texture>$VAR[audiocodec,flagging/audio/,.png]</texture>
         </control>
     </include>
     <include name="AudioChannelsFlaggingConditions">

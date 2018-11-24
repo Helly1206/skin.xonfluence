@@ -594,7 +594,7 @@
                 <control type="button" id="252">
                     <include>ButtonCommonValues</include>
                     <description>Reset Paths</description>
-                    <label>31963</label>
+                    <label>31946</label>
                     <onclick>Skin.Reset(WeatherFanartDir)</onclick>
                     <enable>Skin.HasSetting(ShowWeatherFanart)</enable>
                 </control>-->

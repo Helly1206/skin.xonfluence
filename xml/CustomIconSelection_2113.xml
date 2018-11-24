@@ -249,7 +249,7 @@
                     </item>
                     <item>
                         <description>Programs</description>
-                        <label>$LOCALIZE[0]</label>
+                        <label>$LOCALIZE[24001]</label>
                         <icon>Icons/programs.png</icon>
                         <onclick>Dialog.Close(2113)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/programs.png)</onclick>
