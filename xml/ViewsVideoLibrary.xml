@@ -192,6 +192,7 @@
                 <include>AudioCodecFlaggingConditions</include>
                 <include>AudioChannelsFlaggingConditions</include>
                 <include>AspectCodecFlaggingConditions</include>
+                <include>SpecialFeaturesFlaggingConditions</include>
                 <include>VideoTypeHackFlaggingConditions</include>
             </control>
         </control>
@@ -758,6 +759,7 @@
                 <include>AudioCodecFlaggingConditions</include>
                 <include>AudioChannelsFlaggingConditions</include>
                 <include>AspectCodecFlaggingConditions</include>
+                <include>SpecialFeaturesFlaggingConditions</include>
                 <include>VideoTypeHackFlaggingConditions</include>
             </control>
             <control type="grouplist">
@@ -1171,6 +1173,7 @@
                     <include>AudioCodecFlaggingConditions</include>
                     <include>AudioChannelsFlaggingConditions</include>
                     <include>AspectCodecFlaggingConditions</include>
+                    <include>SpecialFeaturesFlaggingConditions</include>
                     <include>VideoTypeHackFlaggingConditions</include>
                 </control>
                 <control type="label">
@@ -1277,6 +1280,7 @@
                     <include>AudioCodecFlaggingConditions</include>
                     <include>AudioChannelsFlaggingConditions</include>
                     <include>AspectCodecFlaggingConditions</include>
+                    <include>SpecialFeaturesFlaggingConditions</include>
                     <include>VideoTypeHackFlaggingConditions</include>
                 </control>
                 <control type="textbox">
@@ -1514,6 +1518,7 @@
                     <include>AudioCodecFlaggingConditions</include>
                     <include>AudioChannelsFlaggingConditions</include>
                     <include>AspectCodecFlaggingConditions</include>
+                    <include>SpecialFeaturesFlaggingConditions</include>
                     <include>VideoTypeHackFlaggingConditions</include>
                 </control>
                 <control type="image">
@@ -1633,6 +1638,7 @@
                     <include>AudioCodecFlaggingConditions</include>
                     <include>AudioChannelsFlaggingConditions</include>
                     <include>AspectCodecFlaggingConditions</include>
+                    <include>SpecialFeaturesFlaggingConditions</include>
                     <include>VideoTypeHackFlaggingConditions</include>
                 </control>
                 <control type="image">
@@ -2020,6 +2026,7 @@
                     <include>AudioCodecFlaggingConditions</include>
                     <include>AudioChannelsFlaggingConditions</include>
                     <include>AspectCodecFlaggingConditions</include>
+                    <include>SpecialFeaturesFlaggingConditions</include>
                     <include>VideoTypeHackFlaggingConditions</include>
                 </control>
                 <control type="image">
@@ -2217,6 +2224,7 @@
                     <include>AudioCodecFlaggingConditions</include>
                     <include>AudioChannelsFlaggingConditions</include>
                     <include>AspectCodecFlaggingConditions</include>
+                    <include>SpecialFeaturesFlaggingConditions</include>
                     <include>VideoTypeHackFlaggingConditions</include>
                 </control>
                 <control type="image">

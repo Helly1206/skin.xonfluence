@@ -16,10 +16,8 @@
             <include>FullWidthList</include>
             <!-- view id = 500 -->
             <include>ThumbnailView</include>
-            <!-- view id = 506 -->
+            <!-- view id = 506/ 507 -->
             <include>MusicInfoListView</include>
-            <!-- view id = 507 -->
-            <include>NowPlaying</include>
             <!-- view id = 509 -->
             <include>AlbumWrapView2_Fanart</include>
             <!-- view id = 511 -->

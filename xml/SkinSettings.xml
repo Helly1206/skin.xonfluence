@@ -180,9 +180,9 @@
                 <texture border="5">black-back2.png</texture>
             </control>
             <control type="image">
-                <left>402</left>
+                <left>404</left>
                 <top>15</top>
-                <width>1185</width>
+                <width>1181</width>
                 <height>78</height>
                 <texture>$VAR[DialogPath]dialogheader.png</texture>
             </control>

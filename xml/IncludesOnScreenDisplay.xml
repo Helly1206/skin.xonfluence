@@ -281,6 +281,7 @@
             <align>left</align>
             <aligny>center</aligny>
             <font>font13</font>
+            <scroll>true</scroll>
             <label>$LOCALIZE[21396]$LOCALIZE[31156] $INFO[player.chapter]$INFO[player.chaptercount, $LOCALIZE[31088] ]$INFO[Player.ChapterName, - (,)]</label>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>

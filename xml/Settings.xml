@@ -214,10 +214,10 @@
                 <texture border="5">black-back2.png</texture>
             </control>
             <control type="image">
-                <left>402</left>
+                <left>405</left>
                 <top>15</top>
-                <width>1206</width>
-                <height>81</height>
+                <width>1200</width>
+                <height>78</height>
                 <texture>$VAR[DialogPath]dialogheader.png</texture>
             </control>
             <control type="label">
@@ -246,14 +246,14 @@
             </control>
             <control type="image">
                 <left>405</left>
-                <top>90</top>
+                <top>93</top>
                 <width>1200</width>
                 <height>675</height>
                 <texture border="5">button-nofocus.png</texture>
             </control>
             <control type="image">
                 <left>408</left>
-                <top>93</top>
+                <top>96</top>
                 <width>1194</width>
                 <height>669</height>
                 <aspectratio>stretch</aspectratio>
@@ -262,7 +262,7 @@
             </control>
             <control type="image">
                 <left>408</left>
-                <top>93</top>
+                <top>96</top>
                 <width>900</width>
                 <height>510</height>
                 <aspectratio>stretch</aspectratio>
@@ -270,9 +270,9 @@
                 <colordiffuse>AAFFFFFF</colordiffuse>
             </control>
             <control type="image">
-                <left>402</left>
+                <left>405</left>
                 <top>765</top>
-                <width>1206</width>
+                <width>1200</width>
                 <height>177</height>
                 <texture border="5">black-back2.png</texture>
             </control>

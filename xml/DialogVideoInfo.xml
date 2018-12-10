@@ -68,6 +68,7 @@
                     <include>AudioCodecFlaggingConditions</include>
                     <include>AudioChannelsFlaggingConditions</include>
                     <include>AspectCodecFlaggingConditions</include>
+                    <include>SpecialFeaturesFlaggingConditions</include>
                     <include>VideoTypeHackFlaggingConditions</include>
                 </control>
                 <control type="group">
