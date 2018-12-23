@@ -58,7 +58,7 @@
         </control>
         <control type="group">
             <depth>DepthBackground</depth>
-            <visible>Skin.HasSetting(HideHomeNowPlaying) | !Player.HasAudio | Player.Paused | String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) | [Player.HasAudio + !Skin.HasSetting(VizOnlyOnHome) + Skin.HasSetting(HideBackgroundCDWall)]</visible>
+            <visible>Skin.HasSetting(HideHomeNowPlaying) | !Player.HasAudio | String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) | [Player.HasAudio + !Skin.HasSetting(VizOnlyOnHome) + Skin.HasSetting(HideBackgroundCDWall) + Skin.HasSetting(DisableSlideShowArt)]</visible>
             <visible>!Skin.HasSetting(SingleGlobalBackground) + !String.IsEqual(Window(Home).Property(MenuBackground),Theme) + !String.IsEqual(Container(9000).ListItem.Property(Background),Theme) + !Skin.HasSetting(HolidayEffects)</visible>
             <control type="group">
                 <include>BackgroundFade</include>
@@ -334,77 +334,34 @@
                 </control>
             </control>
         </control>
-        <control type="visualisation">
-            <include>Dimensions_Fullscreen</include>
-            <visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome) + Player.HasAudio + !String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
-            <visible>!String.IsEqual(Visualisation.Name,Waveform) + !String.IsEqual(Visualisation.Name,DirectX Spectrum) + !String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
-        </control>
         <control type="group">
             <depth>DepthBackground</depth>
-            <visible>Window.IsVisible(Home) + !Skin.HasSetting(HideHomeNowPlaying) + Player.HasAudio + !String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+            <visible>Window.IsVisible(Home) + !Skin.HasSetting(HideHomeNowPlaying) + Player.HasAudio + !String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
             <control type="image">
                 <include>Dimensions_Fullscreen</include>
-                <texture>$VAR[SkinBackgroundPath]media-overlay.jpg</texture>
-                <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEqual(Visualisation.Name,Waveform) | String.IsEqual(Visualisation.Name,DirectX Spectrum) | String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+                <texture fallback="black-back.png">$VAR[SkinBackgroundPath]media-overlay.jpg</texture>
+                <visible>Skin.HasSetting(NoDiffuseVizFanart)</visible>
                 <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
             </control>
-            <include>AlbumArtMusicVizWall</include>
-            <control type="multiimage">
-                <include>Dimensions_Fullscreen</include>
-                <include>BackgroundTimePerImage</include>
-                <randomize>true</randomize>
-                <fadetime>1000</fadetime>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>AAFFFFFF</colordiffuse>
-                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
-                <imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
-                <visible>Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Control.GetLabel(5043))</visible>
-            </control>
-            <control type="multiimage">
-                <include>Dimensions_Fullscreen</include>
-                <include>BackgroundTimePerImage</include>
-                <randomize>true</randomize>
-                <fadetime>1000</fadetime>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>AAFFFFFF</colordiffuse>
-                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
-                <imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
-                <visible>Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Control.GetLabel(5043))</visible>
-            </control>
-            <control type="image">
-                <description>Fanart Image for Artist</description>
-                <include>Dimensions_Fullscreen</include>
-                <colordiffuse>AAFFFFFF</colordiffuse>
-                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
-                <texture background="true">$INFO[Player.Art(fanart)]</texture>
-                <fadetime>600</fadetime>
-                <visible>!String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))</visible>
-                <visible>Skin.HasSetting(DisableSlideShowArt) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
-            </control>
-            <control type="multiimage">
-                <include>Dimensions_Fullscreen</include>
-                <include>BackgroundTimePerImage</include>
-                <randomize>true</randomize>
-                <fadetime>1000</fadetime>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>AAFFFFFF</colordiffuse>
-                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
-                <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-                <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
-            </control>
-        </control>
-        <control type="visualisation">
-            <include>Dimensions_Fullscreen</include>
-            <visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome) + Player.HasAudio + !String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) + !Player.Paused + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
-            <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEqual(Visualisation.Name,Waveform) | String.IsEqual(Visualisation.Name,DirectX Spectrum) | String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
-        </control>
-        <control type="image">
-            <depth>DepthBackground</depth>
-            <include>Dimensions_Fullscreen</include>
-            <texture>$VAR[SkinBackgroundPath]media-overlay.jpg</texture>
-            <visible>Player.HasVideo + !Skin.HasSetting(HideHomeNowPlaying) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVChannels) | [Player.HasVideo + Window.IsVisible(TVChannels) + !Skin.HasSetting(HidePVRNowPlaying)]</visible>
-            <include>VisibleFadeEffect</include>
-        </control>
+            <control type="group">
+            	<visible>!Skin.HasSetting(HideHomeNowPlaying) + Skin.HasSetting(DisableSlideShowArt) + Skin.HasSetting(ScriptEnableExtraFanart)</visible>
+            	<include>ArtistExtraFanArt</include>
+        	</control>
+            <control type="group">
+            	<visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEmpty(Visualisation.Name)</visible>
+            	<include>AlbumArtMusicVizWall</include>
+        	</control>
+        	<include>MusicArtUnderVisualisation</include>
+        	<control type="visualisation">
+            	<include>Dimensions_Fullscreen</include>
+            	<visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome)</visible>
+        	</control>
+        	<control type="group">
+            	<visible>!Skin.HasSetting(NoDiffuseVizFanart) + !String.IsEmpty(Visualisation.Name)</visible>
+            	<include>AlbumArtMusicVizWall</include>
+        	</control>
+        	<include>MusicArtOverVisualisation</include>
+    	</control>
         <control type="videowindow">
             <depth>DepthBackground</depth>
             <include>Dimensions_Fullscreen</include>

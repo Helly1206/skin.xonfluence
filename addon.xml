@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.xonfluence"
-  version="4.0.5"
+  version="4.0.6"
   name="Xonfluence"
   provider-name="Helly">
   <requires>
@@ -28,12 +28,11 @@
     <disclaimer lang="en_US">You break it - You get to keep the pieces</disclaimer>
     <disclaimer lang="nl">Wie zijn billen brandt - moet op de blaren zitten</disclaimer>
     <platform>all</platform>
-	<license>GNU General Public License version 2</license>
-	<forum>https://forum.kodi.tv/showthread.php?tid=315391</forum>
-	<website></website>
-	<email></email>
-	<source>https://github.com/Helly1206/skin.xonfluence</source>
-  <news>See changelog for latest changes</news>
+	  <license>GNU General Public License version 2</license>
+	  <forum>https://forum.kodi.tv/showthread.php?tid=315391</forum>
+	  <website></website>
+	  <email></email>
+	  <source>https://github.com/Helly1206/skin.xonfluence</source>
     <assets>
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
@@ -47,5 +46,6 @@
 	    <screenshot>resources/screenshot-08.jpg</screenshot>
 	    <screenshot>resources/screenshot-09.jpg</screenshot>
     </assets>
+    <news>See changelog for latest changes</news>
   </extension>
 </addon>

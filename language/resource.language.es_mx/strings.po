@@ -22,11 +22,11 @@ msgstr "Cambiar al tuyo"
 
 msgctxt "#31001"
 msgid "GAMES"
-msgstr ""
+msgstr "JUEGOS"
 
 msgctxt "#31002"
 msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
-msgstr ""
+msgstr "[B]CONFIGURACION DE JUEGOS[/B][CR][CR]Configurar soporte de rebobinado & opciones ·  Configurar el uso del teclado y número de jugadores por teclado"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -78,11 +78,11 @@ msgstr "Memoria usada"
 
 msgctxt "#31015"
 msgid "Minute"
-msgstr ""
+msgstr "Minuto"
 
 msgctxt "#31016"
 msgid "Elapsed time"
-msgstr ""
+msgstr "Lapso de tiempo"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -486,7 +486,7 @@ msgstr "Mostrar videos recientemente adicionados"
 
 msgctxt "#31118"
 msgid "Home page \"Add-ons\" submenu"
-msgstr ""
+msgstr "Página principal submenu de \"Complementos\""
 
 msgctxt "#31119"
 msgid "Hide background fanart"
@@ -494,7 +494,7 @@ msgstr "Esconder fanart de fondo"
 
 msgctxt "#31120"
 msgid "Home page \"Games\" submenu"
-msgstr ""
+msgstr "Página principal submenu de \"Juegos\""
 
 msgctxt "#31121"
 msgid "Show plot info on info screen"
@@ -1329,7 +1329,7 @@ msgid "Enable video OSD plot on pause"
 msgstr ""
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause"
+msgid "Enable video info and seekbar on pause"
 msgstr ""
 
 msgctxt "#31375"
@@ -1341,7 +1341,7 @@ msgid "Use autocomplete on keyboards"
 msgstr ""
 
 msgctxt "#31377"
-msgid "Enable video codec info on OSD menu"
+msgid "Enable video info on OSD menu"
 msgstr ""
 
 msgctxt "#31380"
@@ -1796,6 +1796,10 @@ msgctxt "#31926"
 msgid "Configure script.tvtunes"
 msgstr ""
 
+msgctxt "#31928"
+msgid "Enable extra fanart"
+msgstr ""
+
 msgctxt "#31929"
 msgid "Enable artist slideshow"
 msgstr ""
@@ -1910,7 +1914,7 @@ msgstr "MUSICA"
 
 msgctxt "#31957"
 msgid "ADD-ONS"
-msgstr ""
+msgstr "COMPLEMENTOS"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -1930,7 +1934,7 @@ msgstr "Cambio de hora"
 
 msgctxt "#31962"
 msgid "Choose kind of profile identification"
-msgstr ""
+msgstr "Escoja el tipo de identificación de perfil"
 
 msgctxt "#31963"
 msgid "Profile name"
@@ -1938,7 +1942,7 @@ msgstr "Nombre de perfil"
 
 msgctxt "#31964"
 msgid "Profile avatar"
-msgstr ""
+msgstr "Avatar del perfil"
 
 msgctxt "#31965"
 msgid "Multi-image background time per image"

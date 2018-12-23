@@ -2,14 +2,14 @@
 <includes>
     <include name="AlbumArtMusicVizWall">
         <control type="group">
-            <visible>!Skin.HasSetting(HideHomeNowPlaying)</visible>
+            <visible>!Skin.HasSetting(HideHomeNowPlaying) + Skin.HasSetting(DisableSlideShowArt) + Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             <include>ArtistExtraFanArt</include>
         </control>
         <control type="group">
             <visible>!Skin.HasSetting(HideBackgroundCDWall)</visible>
             <visible>!String.IsEmpty(Skin.String(UsrAlbumThumbsDir)) + !Window.IsVisible(Home)</visible>
             <visible>Skin.HasSetting(HideHomeNowPlaying) | [String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))]</visible>
-            <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEmpty(Visualisation.Name) | String.IsEqual(Visualisation.Name,Waveform) | String.IsEqual(Visualisation.Name,DirectX Spectrum) | String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+            <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEmpty(Visualisation.Name)</visible>
             <left>-52</left>
             <top>-22</top>
             <control type="multiimage">
@@ -512,7 +512,7 @@
             <visible>!Skin.HasSetting(HideBackgroundCDWall)</visible>
             <visible>!String.IsEmpty(Skin.String(UsrAlbumThumbsDir)) + !Window.IsVisible(Home)</visible>
             <visible>Skin.HasSetting(HideHomeNowPlaying) | [String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))]</visible>
-            <visible>!String.IsEmpty(Visualisation.Name) + !String.IsEqual(Visualisation.Name,Waveform) + !String.IsEqual(Visualisation.Name,DirectX Spectrum) + !String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+            <visible>!String.IsEmpty(Visualisation.Name)</visible>
             <left>-52</left>
             <top>-22</top>
             <control type="image">
@@ -1420,7 +1420,7 @@
             <visible>!Skin.HasSetting(HideBackgroundCDWall)</visible>
             <visible>String.IsEmpty(Skin.String(UsrAlbumThumbsDir)) | Window.IsVisible(Home)</visible>
             <visible>Skin.HasSetting(HideHomeNowPlaying) | [String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))]</visible>
-            <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEmpty(Visualisation.Name) | String.IsEqual(Visualisation.Name,Waveform) | String.IsEqual(Visualisation.Name,DirectX Spectrum) | String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+            <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEmpty(Visualisation.Name)</visible>
             <left>-52</left>
             <top>-22</top>
             <control type="image">
@@ -2238,7 +2238,7 @@
             <visible>!Skin.HasSetting(HideBackgroundCDWall)</visible>
             <visible>String.IsEmpty(Skin.String(UsrAlbumThumbsDir)) | Window.IsVisible(Home)</visible>
             <visible>Skin.HasSetting(HideHomeNowPlaying) | [String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))]</visible>
-            <visible>!String.IsEmpty(Visualisation.Name) + !String.IsEqual(Visualisation.Name,Waveform) + !String.IsEqual(Visualisation.Name,DirectX Spectrum) + !String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+            <visible>!String.IsEmpty(Visualisation.Name)</visible>
             <left>-52</left>
             <top>-22</top>
             <control type="image">

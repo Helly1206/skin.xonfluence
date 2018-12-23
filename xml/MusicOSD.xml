@@ -53,7 +53,7 @@
                 <label>210</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDChannelUp" />
                 </include>
                 <onclick>PlayerControl(Previous)</onclick>
@@ -63,7 +63,7 @@
                 <label>209</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDChannelDown" />
                 </include>
                 <onclick>PlayerControl(Next)</onclick>
@@ -73,7 +73,7 @@
                 <label>210</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDVolUp" />
                 </include>
                 <onclick>$VAR[VolumeStepUp]</onclick>
@@ -84,7 +84,7 @@
                 <label>210</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDVolDown" />
                 </include>
                 <onclick>$VAR[VolumeStepDown]</onclick>
@@ -95,7 +95,7 @@
                 <label>210</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDPrevTrack" />
                 </include>
                 <onclick>PlayerControl(Previous)</onclick>
@@ -105,7 +105,7 @@
                 <label>31354</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDRewind" />
                 </include>
                 <animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
@@ -117,7 +117,7 @@
                 <altlabel>208</altlabel>
                 <font></font>
                 <include content="OSDButtonAlt">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDPause" />
                     <param name="AltTexture" value="OSDPlay" />
                     <param name="Selected" value="Player.Paused | Player.Forwarding | Player.Rewinding" />
@@ -130,7 +130,7 @@
                 <label>31352</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDStop" />
                 </include>
                 <onclick>PlayerControl(Stop)</onclick>
@@ -139,7 +139,7 @@
                 <label>31353</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDForward" />
                 </include>
                 <animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
@@ -150,7 +150,7 @@
                 <label>209</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDNextTrack" />
                 </include>
                 <visible>!MusicPlayer.Content(LiveTV)</visible>
@@ -160,7 +160,7 @@
                 <label>19019</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDChannelList" />
                 </include>
                 <onclick>ActivateWindow(PVROSDChannels)</onclick>
@@ -170,7 +170,7 @@
                 <label>$LOCALIZE[19029]$INFO[MusicPlayer.ChannelName, - ]</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDepg" />
                 </include>
                 <onclick>ActivateWindow(PVRChannelGuide)</onclick>
@@ -181,7 +181,7 @@
                 <label>209</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDRadioRDS" />
                 </include>
                 <onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
@@ -191,7 +191,7 @@
                 <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDRepeat" />
                 </include>
                 <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
@@ -202,7 +202,7 @@
                 <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDRepeatOne" />
                 </include>
                 <visible>Playlist.IsRepeatOne</visible>
@@ -213,7 +213,7 @@
                 <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDRepeatAll" />
                 </include>
                 <visible>Playlist.IsRepeat</visible>
@@ -224,7 +224,7 @@
                 <label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
                 <font></font>
                 <include content="OSDButtonAlt">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDRandomOff" />
                     <param name="AltTexture" value="OSDRandomOn" />
                     <param name="Selected" value="Playlist.IsRandom" />
@@ -233,36 +233,30 @@
                 <onclick>PlayerControl(Random)</onclick>
             </control>
             <control type="image" id="2200">
-                <width>165</width>
-                <height>82</height>
+                <width>146</width>
                 <texture></texture>
                 <visible>!Skin.HasSetting(EnableVolumeButtons)</visible>
             </control>
             <control type="image" id="2300">
-                <width>82</width>
+                <width>73</width>
                 <texture></texture>
                 <visible>!MusicPlayer.Content(LiveTV) + !System.HasAddon(plugin.program.dreamcatcher)</visible>
             </control>
             <control type="image" id="2400">
-                <width>82</width>
+                <width>73</width>
                 <texture></texture>
             </control>
             <control type="image" id="2450">
-                <width>82</width>
+                <width>73</width>
                 <texture></texture>
                 <visible>MusicPlayer.Content(LiveTV)</visible>
-            </control>
-            <control type="image" id="2500">
-                <width>82</width>
-                <texture></texture>
-                <visible>MusicPlayer.Content(LiveTV) + !PVR.CanRecordPlayingChannel</visible>
             </control>
             <control type="radiobutton" id="256">
                 <visible>Skin.HasSetting(ShowUsrVideoOSDButton) + Skin.String(OSDBtnUsrCmd)</visible>
                 <label>31359</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDUser" />
                 </include>
                 <onclick condition="Skin.String(OSDBtnUsrCmd)">Dialog.Close(MusicOSD,true)</onclick>
@@ -272,7 +266,7 @@
                 <label>15047</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDRate" />
                 </include>
                 <onclick>setrating</onclick>
@@ -282,7 +276,7 @@
                 <label>31128</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDLyrics" />
                 </include>
                 <onclick>Close</onclick>
@@ -294,7 +288,7 @@
                 <label>31128</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDLyrics" />
                 </include>
                 <onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
@@ -307,7 +301,7 @@
                 <label>12006</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDViz" />
                 </include>
             </control>
@@ -315,7 +309,7 @@
                 <label>$LOCALIZE[250] $LOCALIZE[21417]</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDPresetSettings" />
                 </include>
                 <onclick>ActivateWindow(1105)</onclick>
@@ -324,7 +318,7 @@
                 <label>31048</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDPre" />
                 </include>
                 <onclick>ActivateWindow(visualisationpresetlist)</onclick>
@@ -336,7 +330,7 @@
                 <altlabel>265</altlabel>
                 <font></font>
                 <include content="OSDButtonAlt">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDRecordOff" />
                     <param name="AltTexture" value="OSDRecordOn" />
                     <param name="Selected" value="PVR.IsRecordingPlayingChannel" />
@@ -350,7 +344,7 @@
                 <label>264</label>
                 <font></font>
                 <include content="OSDButton">
-                    <param name="Size" value="82" />
+                    <param name="Size" value="73" />
                     <param name="Texture" value="OSDRecordOff" />
                 </include>
                 <onclick>RunPlugin(plugin://plugin.program.dreamcatcher/?mode=Record)</onclick>

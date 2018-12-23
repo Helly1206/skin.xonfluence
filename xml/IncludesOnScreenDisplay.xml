@@ -2,37 +2,9 @@
 <includes>
     <include name="OSDMediaPlot">
         <control type="group" id="1">
-            <visible>!Skin.HasSetting(EnablePauseInfo) + [!String.IsEmpty(VideoPlayer.Plot) | !String.IsEmpty(VideoPlayer.PlotOutline)] + Player.Paused + !Player.Caching</visible>
-            <animation effect="slide" end="-210,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideSeekBarOSD) | Skin.HasSetting(HideSeekBarOSD2) + !Player.ShowInfo" reversible="true">Conditional</animation>
-            <animation effect="slide" end="-210,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [!Skin.HasSetting(HideSeekBarOSD) + !Skin.HasSetting(HideSeekBarOSD2) | Player.ShowInfo]" reversible="true">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,38" time="0" condition="Player.ShowInfo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
-            <left>480</left>
-            <top>592r</top>
-            <control type="image" id="1">
-                <left>0</left>
-                <top>0</top>
-                <width>1380</width>
-                <height>300</height>
-                <texture border="20">$VAR[DialogPath]ContentPanel.png</texture>
-                <colordiffuse>AAFFFFFF</colordiffuse>
-            </control>
-            <control type="textbox" id="1">
-                <description>Description Value The Movie</description>
-                <left>30</left>
-                <top>30</top>
-                <width>1320</width>
-                <height>218</height>
-                <align>justify</align>
-                <textcolor>white</textcolor>
-                <font>font13</font>
-                <label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[207]$LOCALIZE[31156] [/COLOR][/B]$VAR[VideoPlayingDescription]</label>
-                <autoscroll delay="3000" time="1800" repeat="10000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
-            </control>
-        </control>
-        <control type="group" id="1">
-            <visible>Player.ShowInfo + [!String.IsEmpty(VideoPlayer.Plot) | !String.IsEmpty(VideoPlayer.PlotOutline)] + Skin.HasSetting(EnablePlotInfo) + !Player.Caching</visible>
-            <animation effect="slide" end="-210,165" time="0" tween="back" easing="out" condition="[Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [Skin.HasSetting(HideSeekBarOSD2) + Window.IsActive(VideoOSD)] + !Player.ShowInfo" reversible="true">Conditional</animation>
-            <animation effect="slide" end="-210,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) + [[!Skin.HasSetting(HideSeekBarOSD) + Player.Paused] | [!Skin.HasSetting(HideSeekBarOSD2) + Window.IsActive(VideoOSD)] | Player.ShowInfo]" reversible="true">Conditional</animation>
+            <visible>[!String.IsEmpty(VideoPlayer.Plot) | !String.IsEmpty(VideoPlayer.PlotOutline)] + !Player.Caching</visible>
+            <visible>[Skin.HasSetting(EnablePauseInfo) + Player.Paused] | [Player.ShowInfo + Skin.HasSetting(EnablePlotInfo)]</visible>
+            <animation effect="slide" end="-210,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | [Skin.HasSetting(HideSeekBarPaused) + Player.Paused + Skin.HasSetting(EnablePauseInfo) + !Window.IsActive(VideoOSD) + !Player.ShowInfo] | [Skin.HasSetting(HideVideoInfoOSD) + Window.IsActive(VideoOSD) + Skin.HasSetting(HideSeekBarPaused) + Player.Paused + !Player.ShowInfo]" reversible="true">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,38" time="0" condition="Player.ShowInfo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
             <left>480</left>
             <top>592r</top>
@@ -379,8 +351,7 @@
     </include>
     <include name="MusicArtUnderVisualisation">
         <control type="group">
-            <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEqual(Visualisation.Name,Waveform) | String.IsEqual(Visualisation.Name,DirectX Spectrum) | String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
-            <visible>!Skin.HasSetting(HideHomeNowPlaying)</visible>
+            <visible>[!Skin.HasSetting(HideHomeNowPlaying) + Skin.HasSetting(NoDiffuseVizFanart)] | [Window.IsVisible(Home) + !Skin.HasSetting(VizOnlyOnHome)]</visible>
             <control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
                 <include>BackgroundTimePerImage</include>
@@ -389,7 +360,9 @@
                 <aspectratio>keep</aspectratio>
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
-                <visible>Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Control.GetLabel(5043))</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(5043))</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             </control>
             <control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
@@ -399,14 +372,17 @@
                 <aspectratio>keep</aspectratio>
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
-                <visible>Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Control.GetLabel(5043))</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(5044))</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             </control>
             <control type="image">
                 <description>Fanart Image for Artist</description>
                 <include>Dimensions_Fullscreen</include>
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <texture background="true">$INFO[Player.Art(fanart)]</texture>
-                <visible>[!String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))] | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>!String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
                 <fadetime>600</fadetime>
             </control>
             <control type="multiimage">
@@ -423,8 +399,7 @@
     </include>
     <include name="MusicArtOverVisualisation">
         <control type="group">
-            <visible>!Skin.HasSetting(HideHomeNowPlaying) + !Skin.HasSetting(NoDiffuseVizFanart)</visible>
-            <visible>!String.IsEqual(Visualisation.Name,Waveform) + !String.IsEqual(Visualisation.Name,DirectX Spectrum) + !String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+            <visible>!Skin.HasSetting(HideHomeNowPlaying) + !Skin.HasSetting(NoDiffuseVizFanart) + [!Window.IsVisible(Home) | [Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome)]]</visible>
             <control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
                 <include>BackgroundTimePerImage</include>
@@ -436,6 +411,7 @@
                 <imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
                 <visible>!String.IsEmpty(Control.GetLabel(5043))</visible>
                 <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowTransparent)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             </control>
             <control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
@@ -446,8 +422,9 @@
                 <colordiffuse>AAFFFFFF</colordiffuse>
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
-                <visible>String.IsEmpty(Control.GetLabel(5043))</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(5044))</visible>
                 <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowTransparent)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             </control>
             <control type="image">
                 <description>Fanart Image for Artist</description>
@@ -456,8 +433,8 @@
                 <texture background="true">$INFO[Player.Art(fanart)]</texture>
                 <colordiffuse>AAFFFFFF</colordiffuse>
                 <fadetime>600</fadetime>
-                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowTransparent)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
                 <visible>!String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
             </control>
             <control type="multiimage">
                 <include>Dimensions_Fullscreen</include>

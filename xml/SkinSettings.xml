@@ -215,7 +215,7 @@
                 <control type="group">
                     <visible>Container(9000).Hasfocus(1)</visible>
                     <left>435</left>
-                    <top>90</top>
+                    <top>95</top>
                     <width>1125</width>
                     <height>795</height>
                     <control type="list" id="9001">
@@ -257,13 +257,13 @@
                         <control type="grouplist" id="9101">
                             <visible>Container(9001).HasFocus(1)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2061</onright>
                             <onup>9199</onup>
                             <ondown>9199</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2061</pagecontrol>
                             <control type="radiobutton" id="100">
                                 <description>Global Background</description>
                                 <width>1125</width>
@@ -682,16 +682,32 @@
                                 <onclick condition="Skin.String(MenuLAF,GraphText)">Skin.Reset(MenuLAF)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2061">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9101</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9001).HasFocus(1)</visible>
+                        </control>
                         <control type="grouplist" id="9101">
                             <visible>Container(9001).HasFocus(2)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2062</onright>
                             <onup>9199</onup>
                             <ondown>9199</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2062</pagecontrol>
                             <control type="button" id="136">
                                 <width>1125</width>
                                 <height>60</height>
@@ -954,16 +970,32 @@
                                 <include>MenuButton</include>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2062">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9101</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9001).HasFocus(2)</visible>
+                        </control>
                         <control type="grouplist" id="9101">
                             <visible>Container(9001).HasFocus(3)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2063</onright>
                             <onup>9199</onup>
                             <ondown>9199</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2063</pagecontrol>
                             <control type="radiobutton" id="155">
                                 <width>1125</width>
                                 <height>60</height>
@@ -1131,16 +1163,32 @@
                                 <selected>Skin.HasSetting(ShowExtraFanArt)</selected>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2063">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9101</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9001).HasFocus(3)</visible>
+                        </control>
                         <control type="grouplist" id="9101">
                             <visible>Container(9001).HasFocus(4)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2064</onright>
                             <onup>9199</onup>
                             <ondown>9199</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2064</pagecontrol>
                             <control type="radiobutton" id="171">
                                 <description>Auto Music Viz</description>
                                 <width>1125</width>
@@ -1217,16 +1265,32 @@
                                 <enable>!String.IsEmpty(Skin.String(OSDBtnUsrCmd))</enable>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2064">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9101</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9001).HasFocus(4)</visible>
+                        </control>
                         <control type="grouplist" id="9101">
                             <visible>Container(9001).HasFocus(5)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2065</onright>
                             <onup>9199</onup>
                             <ondown>9199</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2065</pagecontrol>
                             <control type="radiobutton" id="178">
                                 <description>OSD Start Media Intro</description>
                                 <width>1125</width>
@@ -1249,7 +1313,7 @@
                                 <label>$LOCALIZE[31373]</label>
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(EnablePauseInfo)</onclick>
-                                <selected>!Skin.HasSetting(EnablePauseInfo)</selected>
+                                <selected>Skin.HasSetting(EnablePauseInfo)</selected>
                             </control>
                             <control type="radiobutton" id="180">
                                 <description>OSD Plot on info</description>
@@ -1264,7 +1328,7 @@
                                 <selected>Skin.HasSetting(EnablePlotInfo)</selected>
                             </control>
                             <control type="radiobutton" id="181">
-                                <description>OSD Info on Seek bar Paused</description>
+                                <description>Video Info and Seek bar Paused</description>
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -1272,11 +1336,11 @@
                                 <focusedcolor>white</focusedcolor>
                                 <label>$LOCALIZE[31374]</label>
                                 <include>MenuButton</include>
-                                <onclick>Skin.ToggleSetting(HideSeekBarOSD)</onclick>
-                                <selected>!Skin.HasSetting(HideSeekBarOSD)</selected>
+                                <onclick>Skin.ToggleSetting(HideSeekBarPaused)</onclick>
+                                <selected>!Skin.HasSetting(HideSeekBarPaused)</selected>
                             </control>
                             <control type="radiobutton" id="182">
-                                <description>OSD Info on Seek bar OSD</description>
+                                <description>Video Info OSD</description>
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -1284,8 +1348,8 @@
                                 <focusedcolor>white</focusedcolor>
                                 <label>$LOCALIZE[31377]</label>
                                 <include>MenuButton</include>
-                                <onclick>Skin.ToggleSetting(HideSeekBarOSD2)</onclick>
-                                <selected>!Skin.HasSetting(HideSeekBarOSD2)</selected>
+                                <onclick>Skin.ToggleSetting(HideVideoInfoOSD)</onclick>
+                                <selected>!Skin.HasSetting(HideVideoInfoOSD)</selected>
                             </control>
                             <control type="radiobutton" id="183">
                                 <description>Hide OSD Thumbnail</description>
@@ -1341,16 +1405,32 @@
                                 <selected>Skin.HasSetting(ShowFullScreenClock)</selected>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2065">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9101</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9001).HasFocus(5)</visible>
+                        </control>
                         <control type="grouplist" id="9101">
                             <visible>Container(9001).HasFocus(6)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2066</onright>
                             <onup>9199</onup>
                             <ondown>9199</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2066</pagecontrol>
                             <control type="radiobutton" id="188">
                                 <description>enable floor return buttons</description>
                                 <width>1125</width>
@@ -1499,27 +1579,28 @@
                                 <visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
                             </control>
                         </control>
-                    </control>
-                    <control type="scrollbar" id="60">
-                        <left>1155</left>
-                        <top>75</top>
-                        <width>38</width>
-                        <height>720</height>
-                        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                        <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                        <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                        <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
-                        <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
-                        <onleft>9101</onleft>
-                        <onright>800</onright>
-                        <showonepage>false</showonepage>
-                        <orientation>vertical</orientation>
+                        <control type="scrollbar" id="2066">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9101</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9001).HasFocus(6)</visible>
+                        </control>
                     </control>
                 </control>
                 <control type="group">
                     <visible>Container(9000).Hasfocus(2)</visible>
                     <left>435</left>
-                    <top>90</top>
+                    <top>95</top>
                     <width>1125</width>
                     <height>795</height>
                     <control type="list" id="9002">
@@ -1588,13 +1669,13 @@
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(1)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2161</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2161</pagecontrol>
                             <control type="button" id="1200">
                                 <width>1125</width>
                                 <height>60</height>
@@ -1736,16 +1817,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.1.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2161">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(1)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(2)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2162</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2162</pagecontrol>
                             <control type="button" id="1210">
                                 <width>1125</width>
                                 <height>60</height>
@@ -1887,16 +1984,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.2.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2162">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(2)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(3)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2163</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2163</pagecontrol>
                             <control type="button" id="1220">
                                 <width>1125</width>
                                 <height>60</height>
@@ -2038,16 +2151,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.3.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2163">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(3)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(4)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2164</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2164</pagecontrol>
                             <control type="button" id="1230">
                                 <width>1125</width>
                                 <height>60</height>
@@ -2189,16 +2318,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.4.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2164">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(4)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(5)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2165</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2165</pagecontrol>
                             <control type="button" id="1240">
                                 <width>1125</width>
                                 <height>60</height>
@@ -2340,16 +2485,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.5.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2165">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(5)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(6)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2166</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2166</pagecontrol>
                             <control type="button" id="1250">
                                 <width>1125</width>
                                 <height>60</height>
@@ -2491,16 +2652,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.6.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2166">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(6)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(7)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2167</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2167</pagecontrol>
                             <control type="button" id="1260">
                                 <width>1125</width>
                                 <height>60</height>
@@ -2642,16 +2819,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.7.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2167">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(7)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(8)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2168</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2168</pagecontrol>
                             <control type="button" id="1270">
                                 <width>1125</width>
                                 <height>60</height>
@@ -2793,16 +2986,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.8.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2168">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(8)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(9)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2169</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2169</pagecontrol>
                             <control type="button" id="1280">
                                 <width>1125</width>
                                 <height>60</height>
@@ -2944,16 +3153,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.9.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2169">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(9)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(10)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2170</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2170</pagecontrol>
                             <control type="button" id="1290">
                                 <width>1125</width>
                                 <height>60</height>
@@ -3095,16 +3320,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.10.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2170">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(10)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(11)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2171</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2171</pagecontrol>
                             <control type="button" id="1300">
                                 <width>1125</width>
                                 <height>60</height>
@@ -3246,16 +3487,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.11.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2171">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(11)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(12)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2172</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2172</pagecontrol>
                             <control type="button" id="1310">
                                 <width>1125</width>
                                 <height>60</height>
@@ -3397,16 +3654,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.12.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2172">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(12)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(13)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2173</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2173</pagecontrol>
                             <control type="button" id="1320">
                                 <width>1125</width>
                                 <height>60</height>
@@ -3548,16 +3821,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.13.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2173">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(13)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(14)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2174</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2174</pagecontrol>
                             <control type="button" id="1330">
                                 <width>1125</width>
                                 <height>60</height>
@@ -3699,16 +3988,32 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.14.Icon)]</texture>
                         </control>
+                        <control type="scrollbar" id="2174">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(14)</visible>
+                        </control>
                         <control type="grouplist" id="9201">
                             <visible>Container(9002).HasFocus(15)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2175</onright>
                             <onup>9299</onup>
                             <ondown>9299</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2175</pagecontrol>
                             <control type="button" id="1340">
                                 <width>1125</width>
                                 <height>60</height>
@@ -3850,27 +4155,28 @@
                             <colordiffuse>33FFFFFF</colordiffuse>
                             <texture>$INFO[Skin.String(HomeItem.15.Icon)]</texture>
                         </control>
-                    </control>
-                    <control type="scrollbar" id="60">
-                        <left>11550</left>
-                        <top>90</top>
-                        <width>38</width>
-                        <height>720</height>
-                        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                        <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                        <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                        <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
-                        <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
-                        <onleft>9201</onleft>
-                        <onright>800</onright>
-                        <showonepage>false</showonepage>
-                        <orientation>vertical</orientation>
+                        <control type="scrollbar" id="2175">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9201</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9002).HasFocus(15)</visible>
+                        </control>
                     </control>
                 </control>
                 <control type="group">
                     <visible>Container(9000).Hasfocus(3)</visible>
                     <left>435</left>
-                    <top>90</top>
+                    <top>95</top>
                     <width>1125</width>
                     <height>795</height>
                     <control type="list" id="9003">
@@ -3939,13 +4245,13 @@
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(1)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2261</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2261</pagecontrol>
                             <control type="button" id="301">
                                 <width>1125</width>
                                 <height>60</height>
@@ -4078,16 +4384,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2261">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(1)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(2)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2262</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2262</pagecontrol>
                             <control type="button" id="313">
                                 <width>1125</width>
                                 <height>60</height>
@@ -4220,16 +4542,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2262">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(2)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(3)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2263</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2263</pagecontrol>
                             <control type="button" id="325">
                                 <width>1125</width>
                                 <height>60</height>
@@ -4362,16 +4700,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2263">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(3)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(4)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2264</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2264</pagecontrol>
                             <control type="button" id="337">
                                 <width>1125</width>
                                 <height>60</height>
@@ -4504,16 +4858,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2264">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(4)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(5)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2265</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2265</pagecontrol>
                             <control type="button" id="349">
                                 <width>1125</width>
                                 <height>60</height>
@@ -4646,16 +5016,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2265">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(5)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(6)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2266</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2266</pagecontrol>
                             <control type="button" id="361">
                                 <width>1125</width>
                                 <height>60</height>
@@ -4788,16 +5174,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2266">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(6)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(7)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2267</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2267</pagecontrol>
                             <control type="button" id="373">
                                 <width>1125</width>
                                 <height>60</height>
@@ -4930,16 +5332,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2267">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(7)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(8)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2268</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2268</pagecontrol>
                             <control type="button" id="385">
                                 <width>1125</width>
                                 <height>60</height>
@@ -5072,16 +5490,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2268">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(8)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(9)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2269</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2269</pagecontrol>
                             <control type="button" id="397">
                                 <width>1125</width>
                                 <height>60</height>
@@ -5214,16 +5648,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2269">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(9)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(10)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2270</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2270</pagecontrol>
                             <control type="button" id="409">
                                 <width>1125</width>
                                 <height>60</height>
@@ -5356,16 +5806,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2270">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(10)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(11)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2271</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2271</pagecontrol>
                             <control type="button" id="421">
                                 <width>1125</width>
                                 <height>60</height>
@@ -5498,16 +5964,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2271">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(11)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(12)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2272</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2272</pagecontrol>
                             <control type="button" id="433">
                                 <width>1125</width>
                                 <height>60</height>
@@ -5640,16 +6122,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2272">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(12)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(13)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2273</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2273</pagecontrol>
                             <control type="button" id="444">
                                 <width>1125</width>
                                 <height>60</height>
@@ -5782,16 +6280,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2273">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(13)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(14)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2274</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2274</pagecontrol>
                             <control type="button" id="455">
                                 <width>1125</width>
                                 <height>60</height>
@@ -5924,16 +6438,32 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2274">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(14)</visible>
+                        </control>
                         <control type="grouplist" id="9301">
                             <visible>Container(9003).HasFocus(15)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2275</onright>
                             <onup>9399</onup>
                             <ondown>9399</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2275</pagecontrol>
                             <control type="button" id="466">
                                 <width>1125</width>
                                 <height>60</height>
@@ -6066,27 +6596,28 @@
                                 <onclick>ActivateWindow(2115)</onclick>
                             </control>
                         </control>
-                    </control>
-                    <control type="scrollbar" id="60">
-                        <left>1155</left>
-                        <top>90</top>
-                        <width>38</width>
-                        <height>720</height>
-                        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                        <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                        <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                        <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
-                        <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
-                        <onleft>9301</onleft>
-                        <onright>800</onright>
-                        <showonepage>false</showonepage>
-                        <orientation>vertical</orientation>
+                        <control type="scrollbar" id="2275">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9301</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9003).HasFocus(15)</visible>
+                        </control>
                     </control>
                 </control>
                 <control type="group">
                     <visible>Container(9000).Hasfocus(4)</visible>
                     <left>435</left>
-                    <top>90</top>
+                    <top>95</top>
                     <width>1125</width>
                     <height>795</height>
                     <control type="list" id="9004">
@@ -6146,13 +6677,13 @@
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(1)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2361</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2361</pagecontrol>
                             <control type="button" id="701">
                                 <width>1125</width>
                                 <height>60</height>
@@ -6249,16 +6780,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2361">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(1)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(2)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2362</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2362</pagecontrol>
                             <control type="button" id="710">
                                 <width>1125</width>
                                 <height>60</height>
@@ -6355,16 +6902,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2362">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(2)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(3)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2363</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2363</pagecontrol>
                             <control type="button" id="719">
                                 <width>1125</width>
                                 <height>60</height>
@@ -6461,16 +7024,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2363">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(3)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(4)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2364</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2364</pagecontrol>
                             <control type="button" id="728">
                                 <width>1125</width>
                                 <height>60</height>
@@ -6567,16 +7146,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2364">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(4)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(5)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2365</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2365</pagecontrol>
                             <control type="button" id="737">
                                 <width>1125</width>
                                 <height>60</height>
@@ -6673,16 +7268,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2365">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(5)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(6)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2366</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2366</pagecontrol>
                             <control type="button" id="746">
                                 <width>1125</width>
                                 <height>60</height>
@@ -6779,16 +7390,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2366">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(6)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(7)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2367</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2367</pagecontrol>
                             <control type="button" id="755">
                                 <width>1125</width>
                                 <height>60</height>
@@ -6885,16 +7512,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2367">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(7)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(8)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2368</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2368</pagecontrol>
                             <control type="button" id="764">
                                 <width>1125</width>
                                 <height>60</height>
@@ -6991,16 +7634,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2368">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(8)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(9)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2369</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2369</pagecontrol>
                             <control type="button" id="773">
                                 <width>1125</width>
                                 <height>60</height>
@@ -7097,16 +7756,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2369">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(9)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(10)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2370</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2370</pagecontrol>
                             <control type="button" id="782">
                                 <width>1125</width>
                                 <height>60</height>
@@ -7203,16 +7878,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2370">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(10)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(11)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2371</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2371</pagecontrol>
                             <control type="button" id="791">
                                 <width>1125</width>
                                 <height>60</height>
@@ -7309,16 +8000,32 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2371">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(11)</visible>
+                        </control>
                         <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(12)</visible>
                             <onleft>9000</onleft>
-                            <onright>61</onright>
+                            <onright>2372</onright>
                             <onup>9499</onup>
                             <ondown>9499</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>61</pagecontrol>
+                            <pagecontrol>2372</pagecontrol>
                             <control type="button" id="850">
                                 <width>1125</width>
                                 <height>60</height>
@@ -7415,26 +8122,27 @@
                                 <onclick>ActivateWindow(2119)</onclick>
                             </control>
                         </control>
-                    </control>
-                    <control type="scrollbar" id="61">
-                        <left>1155</left>
-                        <top>90</top>
-                        <width>38</width>
-                        <height>720</height>
-                        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                        <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                        <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                        <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
-                        <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
-                        <onleft>9401</onleft>
-                        <onright>800</onright>
-                        <showonepage>false</showonepage>
-                        <orientation>vertical</orientation>
+                        <control type="scrollbar" id="2372">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(12)</visible>
+                        </control>
                     </control>
                 </control>
                 <control type="group">
                     <left>435</left>
-                    <top>90</top>
+                    <top>95</top>
                     <visible>Container(9000).Hasfocus(5)</visible>
                     <control type="list" id="9005">
                         <include content="SkinSettingsSubMenuList">
@@ -8943,24 +9651,6 @@
                         <label>$VAR[HomeBackgroundLabel]</label>
                         <textcolor>white</textcolor>
                     </control>
-                    <!--<control type="radiobutton" id="506">
-                        <description>Alternative Path</description>
-                        <left>0</left>
-                        <top>712</top>
-                        <width>1125</width>
-                        <height>60</height>
-                        <font>font13</font>
-                        <textcolor>grey2</textcolor>
-                        <focusedcolor>white</focusedcolor>
-                        <label>$LOCALIZE[31937]</label>
-                        <include>MenuButton</include>
-                        <onclick>Skin.ToggleSetting(AlternativeBackgroundPath)</onclick>
-                        <selected>Skin.HasSetting(AlternativeBackgroundPath)</selected>
-                        <onleft>9000</onleft>
-                        <onright>800</onright>
-                        <onup>500</onup>
-                        <ondown>507</ondown>
-                    </control>-->
                     <control type="button" id="507">
                         <description>Image Timer</description>
                         <left>0</left>
@@ -8983,7 +9673,7 @@
                 <control type="group">
                     <visible>Container(9000).Hasfocus(6)</visible>
                     <left>435</left>
-                    <top>90</top>
+                    <top>95</top>
                     <width>1125</width>
                     <height>795</height>
                     <control type="list" id="9006">
@@ -9037,13 +9727,13 @@
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(1)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2561</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2561</pagecontrol>
                             <control type="radiobutton" id="601">
                                 <description>Enable WOL Ping</description>
                                 <width>1125</width>
@@ -9087,16 +9777,32 @@
                                 <enable>Skin.HasSetting(EnablePingWOL)</enable>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2561">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(1)</visible>
+                        </control>
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(2)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2562</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2562</pagecontrol>
                             <control type="radiobutton" id="606">
                                 <description>Set UPnP Library Mode</description>
                                 <width>1125</width>
@@ -9140,16 +9846,32 @@
                                 <enable>Skin.HasSetting(UPnP_Mode)</enable>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2562">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(2)</visible>
+                        </control>
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(3)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2563</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2563</pagecontrol>
                             <control type="button" id="611">
                                 <description>Physical Music Folder</description>
                                 <width>1125</width>
@@ -9164,16 +9886,32 @@
                                 <include>MenuButton</include>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2563">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(3)</visible>
+                        </control>
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(4)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2564</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2564</pagecontrol>
                             <control type="radiobutton" id="613">
                                 <width>1125</width>
                                 <height>60</height>
@@ -9304,16 +10042,32 @@
                                 <include>MenuButton</include>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2564">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(4)</visible>
+                        </control>
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(5)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2565</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2565</pagecontrol>
                             <control type="radiobutton" id="623">
                                 <width>1125</width>
                                 <height>60</height>
@@ -9372,16 +10126,32 @@
                                 <selected>!Skin.HasSetting(DisableClearArt)</selected>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2565">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(5)</visible>
+                        </control>
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(6)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2566</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2566</pagecontrol>
                             <control type="radiobutton" id="631">
                                 <width>1125</width>
                                 <height>60</height>
@@ -9394,7 +10164,7 @@
                                 <onclick condition="Skin.HasSetting(HideKodiIntro)">Skin.SetString(KodiIntroVideo,special://skin/extras/Intro/KODI-Intro-Video.mp4)</onclick>
                                 <selected>!Skin.HasSetting(HideKodiIntro)</selected>
                             </control>
-                            <control type="button" id="634">
+                            <control type="button" id="632">
                                 <description>Kodi Intro Movie path</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -9432,16 +10202,32 @@
                                 <enable>Skin.HasSetting(UseStartUpPlaylistPath)</enable>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2566">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(6)</visible>
+                        </control>
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(7)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2567</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2567</pagecontrol>
                             <control type="button" id="635">
                                 <width>1125</width>
                                 <height>60</height>
@@ -9516,6 +10302,18 @@
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
+                                <label>31928</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(ScriptEnableExtraFanart)</onclick>
+                                <selected>Skin.HasSetting(ScriptEnableExtraFanart)</selected>
+                                <enable>Skin.HasSetting(ScriptDisableSlideShowArt) | !System.HasAddon(script.artistslideshow)</enable>
+                            </control>
+                            <control type="radiobutton" id="642">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
                                 <label>31931</label>
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
@@ -9524,7 +10322,7 @@
                                 <selected>!Skin.HasSetting(ScriptDisableGlobalSearch)</selected>
                                 <enable>System.HasAddon(script.globalsearch)</enable>
                             </control>
-                            <control type="button" id="642">
+                            <control type="button" id="643">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -9536,7 +10334,7 @@
                                 <enable>!Skin.HasSetting(ScriptDisableGlobalSearch)</enable>
                                 <visible>System.HasAddon(script.globalsearch)</visible>
                             </control>
-                            <control type="radiobutton" id="643">
+                            <control type="radiobutton" id="644">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -9548,7 +10346,7 @@
                                 <selected>!Skin.HasSetting(ScriptDisableTVNextAired)</selected>
                                 <enable>System.HasAddon(script.tv.show.next.aired)</enable>
                             </control>
-                            <control type="button" id="644">
+                            <control type="button" id="645">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -9560,7 +10358,7 @@
                                 <enable>!Skin.HasSetting(ScriptDisableTVNextAired)</enable>
                                 <visible>System.HasAddon(script.tv.show.next.aired)</visible>
                             </control>
-                            <control type="radiobutton" id="645">
+                            <control type="radiobutton" id="646">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -9572,7 +10370,7 @@
                                 <selected>!Skin.HasSetting(ScriptDisableWatchitLater)</selected>
                                 <enable>System.HasAddon(script.simpleplaylists)</enable>
                             </control>
-                            <control type="button" id="646">
+                            <control type="button" id="647">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -9584,7 +10382,7 @@
                                 <enable>!Skin.HasSetting(ScriptDisableWatchitLater)</enable>
                                 <visible>System.HasAddon(script.simpleplaylists)</visible>
                             </control>
-                            <control type="radiobutton" id="647">
+                            <control type="radiobutton" id="648">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -9596,7 +10394,7 @@
                                 <selected>!Skin.HasSetting(ScriptDisableScriptPlaylist)</selected>
                                 <enable>System.HasAddon(script.randomandlastitems)</enable>
                             </control>
-                            <control type="button" id="648">
+                            <control type="button" id="649">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -9608,7 +10406,7 @@
                                 <enable>!Skin.HasSetting(ScriptDisableScriptPlaylist)</enable>
                                 <visible>System.HasAddon(script.randomandlastitems)</visible>
                             </control>
-                            <control type="radiobutton" id="649">
+                            <control type="radiobutton" id="650">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -9619,7 +10417,7 @@
                                 <onclick>Skin.ToggleSetting(EnableCustomVideoInfoScript)</onclick>
                                 <selected>Skin.HasSetting(EnableCustomVideoInfoScript)</selected>
                             </control>
-                            <control type="button" id="650">
+                            <control type="button" id="651">
                                 <description>CustomVideoInfoScript</description>
                                 <label>$LOCALIZE[31967]</label>
                                 <label2>[COLOR=selected]$INFO[Skin.String(CustomVideoInfoScript)][/COLOR]</label2>
@@ -9633,16 +10431,32 @@
                                 <enable>Skin.HasSetting(EnableCustomVideoInfoScript)</enable>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2567">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(7)</visible>
+                        </control>
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(8)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2568</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2568</pagecontrol>
                             <control type="button" id="660">
                                 <width>1125</width>
                                 <height>60</height>
@@ -9655,16 +10469,32 @@
                                 <enable>System.HasAddon(service.skin.widgets)</enable>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2568">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(8)</visible>
+                        </control>
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(9)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2569</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2569</pagecontrol>
                             <control type="radiobutton" id="671">
                                 <width>1125</width>
                                 <height>60</height>
@@ -9836,16 +10666,32 @@
                                 <selected>Skin.HasSetting(MinimizeOnExit)</selected>
                             </control>
                         </control>
+                        <control type="scrollbar" id="2569">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(9)</visible>
+                        </control>
                         <control type="grouplist" id="9601">
                             <visible>Container(9006).HasFocus(10)</visible>
                             <onleft>9000</onleft>
-                            <onright>60</onright>
+                            <onright>2570</onright>
                             <onup>9699</onup>
                             <ondown>9699</ondown>
                             <width>1125</width>
                             <height>720</height>
                             <itemgap>-1</itemgap>
-                            <pagecontrol>60</pagecontrol>
+                            <pagecontrol>2570</pagecontrol>
                             <control type="button" id="686">
                                 <description>Choose skin fanart pack (Skin Backgrounds)</description>
                                 <width>1125</width>
@@ -9966,21 +10812,22 @@
                                 <include>MenuButton</include>
                             </control>
                         </control>
-                    </control>
-                    <control type="scrollbar" id="60">
-                        <left>1155</left>
-                        <top>90</top>
-                        <width>38</width>
-                        <height>720</height>
-                        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                        <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                        <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                        <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
-                        <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
-                        <onleft>9601</onleft>
-                        <onright>800</onright>
-                        <showonepage>false</showonepage>
-                        <orientation>vertical</orientation>
+                        <control type="scrollbar" id="2570">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9601</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9006).HasFocus(10)</visible>
+                        </control>
                     </control>
                 </control>
                 <control type="grouplist" id="9007">

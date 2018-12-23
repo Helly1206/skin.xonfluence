@@ -54,11 +54,11 @@
         </control>
         <control type="group">
             <animation effect="slide" start="0,0" end="292,998" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-180" time="0" condition="Skin.HasSetting(HidePopUpSeekBar) + [[Window.IsActive(VideoOSD) + !Skin.HasSetting(HideArtWorkOSD)] | [Window.IsActive(MusicOSD) + !Skin.HasSetting(HideMusicArtWorkOSD)]]">Conditional</animation>
             <animation effect="slide" start="0,0" end="-150,0" time="0" condition="!Skin.HasSetting(HidePopUpSeekBar) + system.getbool(input.enablemouse)">Conditional</animation>
             <animation effect="slide" start="0,0" end="-60,0" time="75" condition="!Skin.HasSetting(HidePopUpSeekBar) + Player.Muted">conditional</animation>
             <left>840r</left>
             <top>-9</top>
+            <visible>!Window.IsVisible(busydialog)</visible>
             <control type="image">
                 <left>0</left>
                 <top>0</top>
@@ -262,11 +262,11 @@
             </control>
             <control type="label">
                 <description>Seekbar Label</description>
-                <left>188</left>
-                <top>39</top>
+                <left>365</left>
+                <top>-10</top>
                 <width>195</width>
                 <height>30</height>
-                <align>right</align>
+                <align>center</align>
                 <aligny>center</aligny>
                 <font>font10_title</font>
                 <textcolor>$VAR[MainColorOne]</textcolor>
@@ -275,7 +275,6 @@
             </control>
             <control type="label" id="1">
                 <description>Seek Number label</description>
-                <animation effect="slide" start="0,0" end="0,-22" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
                 <left>270</left>
                 <top>34</top>
                 <width>195</width>
@@ -286,10 +285,12 @@
                 <textcolor>white</textcolor>
                 <shadowcolor>black</shadowcolor>
                 <label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
-                <visible>!Skin.HasSetting(MinimumPopUpSeekBar)</visible>
+                <visible>!Skin.HasSetting(HidePopUpSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
             </control>
             <control type="group">
                 <visible>[VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg] + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
+                <visible>!Window.IsVisible(VideoOSD) + !Window.IsVisible(MusicOSD) + !Player.ShowInfo</visible>
+                <visible>[Skin.HasSetting(HideSeekBarPaused) + Player.Paused] | !Player.Paused</visible>
                 <control type="label">
                     <description>Elapsed Time Label</description>
                     <left>30</left>
@@ -349,6 +350,8 @@
             </control>
             <control type="group">
                 <visible>![VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg] + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
+                <visible>!Window.IsVisible(VideoOSD) + !Window.IsVisible(MusicOSD) + !Player.ShowInfo</visible>
+                <visible>[Skin.HasSetting(HideSeekBarPaused) + Player.Paused] | !Player.Paused</visible>
                 <control type="label">
                     <description>Elapsed Time Label</description>
                     <left>30</left>

@@ -1329,7 +1329,7 @@ msgid "Enable video OSD plot on pause"
 msgstr "אפשר למסך וידאו OSD להציג עלילה בהשהיה"
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause"
+msgid "Enable video info and seekbar on pause"
 msgstr "אפשר למסך וידאו OSD להציג מידע מקודד בהשהיה"
 
 msgctxt "#31375"
@@ -1341,7 +1341,7 @@ msgid "Use autocomplete on keyboards"
 msgstr "תשתמש בהשלמה אוטומטית במקלדות"
 
 msgctxt "#31377"
-msgid "Enable video codec info on OSD menu"
+msgid "Enable video info on OSD menu"
 msgstr "אפשר להציג מידע מקודד בהשהיה על תפריט OSD"
 
 msgctxt "#31380"
@@ -1815,6 +1815,10 @@ msgstr "אפשר TvTunes"
 msgctxt "#31926"
 msgid "Configure script.tvtunes"
 msgstr "הגדרת script.tvtunes"
+
+msgctxt "#31928"
+msgid "Enable extra fanart"
+msgstr "אפשר בתמונות מחזור"
 
 msgctxt "#31929"
 msgid "Enable artist slideshow"

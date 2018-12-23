@@ -3218,10 +3218,10 @@
         <value>dv</value>
     </variable>
     <variable name="SpecialFeaturesInfoFlag">
+        <value condition="String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true) + Container.Content(Movies)">special_features.png</value>
+        <value condition="String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true) + Container.Content(TVShows)">special_features.png</value>
+        <value condition="String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true) + Container.Content(MusicVideos)">special_features.png</value>
         <value condition="ListItem.IsStereoscopic">flagging/lists/3D.png</value>
-        <value condition="String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true) + Container.Content(Movies) + !String.IsEmpty(Control.GetLabel(5048))">special_features.png</value>
-        <value condition="String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true) + Container.Content(TVShows) + !String.IsEmpty(Control.GetLabel(5049))">special_features.png</value>
-        <value condition="String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true) + Container.Content(MusicVideos) + !String.IsEmpty(Control.GetLabel(5050))">special_features.png</value>
     </variable>
     <variable name="VideoNodeStats" type="text">
         <value condition="!Window.IsVisible(1195) + Container(9000).HasFocus(1)">plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Skin.String(HomeItem.1.Path)]</value>

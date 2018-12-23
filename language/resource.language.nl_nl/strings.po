@@ -1329,8 +1329,8 @@ msgid "Enable video OSD plot on pause"
 msgstr "Activeer Video OSD plot bij pauze"
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause"
-msgstr "Video codec info bij pauze weegeven"
+msgid "Enable video info and seekbar on pause"
+msgstr "Video codec info en zoekbalk bij pauze weegeven"
 
 msgctxt "#31375"
 msgid "Use graphical textures on keyboards"
@@ -1341,8 +1341,8 @@ msgid "Use autocomplete on keyboards"
 msgstr "Gebruik woordenzoeker op toetsenborden"
 
 msgctxt "#31377"
-msgid "Enable video codec info on OSD menu"
-msgstr "Activeer Video codec informatie bij OSD Menu"
+msgid "Enable video info on OSD menu"
+msgstr "Activeer Video informatie bij OSD Menu"
 
 msgctxt "#31380"
 msgid "Enable playlist widget script"
@@ -1795,6 +1795,10 @@ msgstr "Schakel tvtunes in"
 msgctxt "#31926"
 msgid "Configure script.tvtunes"
 msgstr "Configureer script.tvtunes"
+
+msgctxt "#31928"
+msgid "Enable extra fanart"
+msgstr "Aktiveer extra fanart"
 
 msgctxt "#31929"
 msgid "Enable artist slideshow"

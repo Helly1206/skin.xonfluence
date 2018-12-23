@@ -1371,7 +1371,7 @@ msgid "Enable video OSD plot on pause"
 msgstr ""
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause"
+msgid "Enable video info and seekbar on pause"
 msgstr ""
 
 msgctxt "#31375"
@@ -1383,7 +1383,7 @@ msgid "Use autocomplete on keyboards"
 msgstr ""
 
 msgctxt "#31377"
-msgid "Enable video codec info on OSD menu"
+msgid "Enable video info on OSD menu"
 msgstr ""
 
 #empty strings from id 31378 to 31379
@@ -1873,7 +1873,11 @@ msgctxt "#31926"
 msgid "Configure script.tvtunes"
 msgstr ""
 
-#empty strings from id 31927 to 31928
+#empty strings with id 31927
+
+msgctxt "#31928"
+msgid "Enable extra fanart"
+msgstr ""
 
 msgctxt "#31929"
 msgid "Enable artist slideshow"

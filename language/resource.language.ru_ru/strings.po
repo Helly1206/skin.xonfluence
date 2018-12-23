@@ -82,7 +82,7 @@ msgstr "Минута"
 
 msgctxt "#31016"
 msgid "Elapsed time"
-msgstr ""
+msgstr "Прошедшее время"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -486,7 +486,7 @@ msgstr "Показывать последнее добавленное виде�
 
 msgctxt "#31118"
 msgid "Home page \"Add-ons\" submenu"
-msgstr ""
+msgstr "Страница \"Дополнений\" подменю"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
@@ -494,7 +494,7 @@ msgstr "Скрыть фоновый фанарт"
 
 msgctxt "#31120"
 msgid "Home page \"Games\" submenu"
-msgstr ""
+msgstr "Страница \"Игры\" подменю"
 
 msgctxt "#31121"
 msgid "Show plot info on info screen"
@@ -1329,7 +1329,7 @@ msgid "Enable video OSD plot on pause"
 msgstr ""
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause"
+msgid "Enable video info and seekbar on pause"
 msgstr ""
 
 msgctxt "#31375"
@@ -1341,7 +1341,7 @@ msgid "Use autocomplete on keyboards"
 msgstr ""
 
 msgctxt "#31377"
-msgid "Enable video codec info on OSD menu"
+msgid "Enable video info on OSD menu"
 msgstr ""
 
 msgctxt "#31380"
@@ -1796,6 +1796,10 @@ msgctxt "#31926"
 msgid "Configure script.tvtunes"
 msgstr ""
 
+msgctxt "#31928"
+msgid "Enable extra fanart"
+msgstr ""
+
 msgctxt "#31929"
 msgid "Enable artist slideshow"
 msgstr ""
@@ -1910,7 +1914,7 @@ msgstr "МУЗЫКА"
 
 msgctxt "#31957"
 msgid "ADD-ONS"
-msgstr ""
+msgstr "Дополнения"
 
 msgctxt "#31958"
 msgid "PLAY DISC"

@@ -1329,8 +1329,8 @@ msgid "Enable video OSD plot on pause"
 msgstr "Aktiviere Video-OSD mit Handlung beim Pausieren"
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause"
-msgstr "Aktiviere Video-Codec-Info während Pause"
+msgid "Enable video info and seekbar on pause"
+msgstr "Aktiviere Video-Info und Suchleiste während Pause"
 
 msgctxt "#31375"
 msgid "Use graphical textures on keyboards"
@@ -1341,8 +1341,8 @@ msgid "Use autocomplete on keyboards"
 msgstr "Benutze Autovervollständigung auf Tastaturen"
 
 msgctxt "#31377"
-msgid "Enable video codec info on OSD menu"
-msgstr "Zeige info zum Video-Codec im OSD-Menü"
+msgid "Enable video info on OSD menu"
+msgstr "Zeige info zum Video im OSD-Menü"
 
 msgctxt "#31380"
 msgid "Enable playlist widget script"
@@ -1795,6 +1795,10 @@ msgstr "Aktiviere TvTunes"
 msgctxt "#31926"
 msgid "Configure script.tvtunes"
 msgstr "Konfiguriere script.tvtunes"
+
+msgctxt "#31928"
+msgid "Enable extra fanart"
+msgstr "Aktiviere Extra Fanart"
 
 msgctxt "#31929"
 msgid "Enable artist slideshow"

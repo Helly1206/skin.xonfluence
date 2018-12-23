@@ -4,25 +4,21 @@
     <defaultcontrol></defaultcontrol>
     <controls>
         <control type="group">
-            <visible>!Skin.HasSetting(HideHomeNowPlaying)</visible>
+            <visible>!Skin.HasSetting(HideHomeNowPlaying) + Skin.HasSetting(DisableSlideShowArt) + Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             <include>ArtistExtraFanArt</include>
         </control>
         <control type="group">
-            <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEmpty(Visualisation.Name) | String.IsEqual(Visualisation.Name,Waveform) | String.IsEqual(Visualisation.Name,DirectX Spectrum) | String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+            <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEmpty(Visualisation.Name)</visible>
             <include>AlbumArtMusicVizWall</include>
         </control>
         <include>MusicArtUnderVisualisation</include>
         <control type="visualisation" id="2">
             <!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
             <description>visualisation</description>
-            <left>0</left>
-            <top>0</top>
-            <width>1920</width>
-            <height>1080</height>
             <include>Dimensions_Fullscreen</include>
         </control>
         <control type="group">
-            <visible>!Skin.HasSetting(NoDiffuseVizFanart) + !String.IsEmpty(Visualisation.Name) + !String.IsEqual(Visualisation.Name,Waveform) + !String.IsEqual(Visualisation.Name,DirectX Spectrum) + !String.IsEqual(Visualisation.Name,OpenGL Spectrum)</visible>
+            <visible>!Skin.HasSetting(NoDiffuseVizFanart) + !String.IsEmpty(Visualisation.Name)</visible>
             <include>AlbumArtMusicVizWall</include>
         </control>
         <include>MusicArtOverVisualisation</include>
