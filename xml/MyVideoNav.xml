@@ -28,11 +28,11 @@
             <include condition="Skin.HasSetting(WrapMediaViews)">PosterWrapViewFanart</include>
             <include condition="!Skin.HasSetting(WrapMediaViews)">PosterListViewFanart</include>
             <!-- view id = 503 -->
-            <include>MediaListView3</include>
+            <include>MediaInfo2</include>
             <!-- view id = 504 -->
-            <include>MediaListView2</include>
+            <include>MediaInfo</include>
             <!-- view id = 515 -->
-            <include>MediaListView4</include>
+            <include>MediaInfo3</include>
             <!-- view id = 505 -->
             <include>WideIconView</include>
             <!-- view id = 511 -->

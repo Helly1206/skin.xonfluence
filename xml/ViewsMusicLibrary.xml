@@ -22,7 +22,7 @@
     </include>
     <include name="CommonInfoListView">
         <definition>
-            <control type="list" id="$PARAM[control_id]">
+            <control type="fixedlist" id="$PARAM[control_id]">
                 <left>105</left>
                 <top>112</top>
                 <width>1170</width>
@@ -34,6 +34,8 @@
                 <viewtype label="$PARAM[view_label]">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
+                <focusposition>6</focusposition>
+                <movement>7</movement>
                 <visible>$PARAM[visible]</visible>
                 <itemlayout height="60" width="1170">
                     <control type="image">
@@ -118,9 +120,9 @@
                 <top>117</top>
                 <width>37</width>
                 <height>840</height>
-                <texturesliderbackground border="14,0,14,0">ScrollBarV.png</texturesliderbackground>
-                <texturesliderbar border="14,0,14,0">ScrollBarV_bar.png</texturesliderbar>
-                <texturesliderbarfocus border="14,0,14,0" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
                 <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
                 <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
                 <onleft>506</onleft>

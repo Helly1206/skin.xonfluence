@@ -1,3 +1,15 @@
+[B]4.0.7[/B] 
+- Tested on Kodi 18 RC5.2 Linux
+- Update xbmc.gui version to 5.14.0
+- Change lists in file mode and addon views to fixedlist for nicer scrolling
+- Change lists in media info views and lowlist to fixedlist for nicer scrolling
+- Fixed scrollbar bug in music media view
+- Fixed bug in addon and video thumbnail view
+- Fixed incorrect Dutch translation for 'Enable raindrop effect'
+- Updated language files with confluence
+- Synchronized with the latest confleunce version 4.5.10
+- Added Material media file (thanks to Trill)
+
 [B]4.0.6[/B]
 - Fixed Special Features flagging (#2333)
 - Fixed OSD alignment issues at specific settings (#2334)
