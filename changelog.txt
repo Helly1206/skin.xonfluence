@@ -1,3 +1,13 @@
+[B]4.0.8[/B] 
+- Tested on Kodi 18 RC5.2 Linux
+- Revert fixedlist changes on video mode and media info views as of a lot of comments on this change
+- Remove Material media file becuase of compatibility issues
+- Fixed mouse control of video OSD buttons (#2399)
+- Fixed bug in stereoscopic submenu alignment
+- Changed fanart view instant popup delay time to 0 (#2398)
+- Busy animation overlap with floor return buttons issue solved, removed buttons in case of busy, as no control is possible during busy (github #33)
+- Synchronized with confluence v4.5.11 (add 'rip CD' button and language update)
+
 [B]4.0.7[/B] 
 - Tested on Kodi 18 RC5.2 Linux
 - Update xbmc.gui version to 5.14.0

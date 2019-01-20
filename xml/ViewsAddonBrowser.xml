@@ -4,7 +4,7 @@
         <control type="group">
             <visible>Control.IsVisible(550)</visible>
             <include>VisibleFadeEffect</include>
-            <control type="fixedlist" id="550">
+            <control type="list" id="550">
                 <left>105</left>
                 <top>117</top>
                 <width>870</width>
@@ -17,8 +17,6 @@
                 <visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons)</visible>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <focusposition>6</focusposition>
-                <movement>7</movement>
                 <itemlayout height="60" width="870">
                     <control type="image">
                         <left>0</left>

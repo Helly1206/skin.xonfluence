@@ -863,7 +863,7 @@
         <control type="group">
             <visible>Control.IsVisible(503)</visible>
             <include>VisibleFadeEffect</include>
-            <control type="fixedlist" id="503">
+            <control type="list" id="503">
                 <left>105</left>
                 <top>368</top>
                 <width>870</width>
@@ -875,8 +875,6 @@
                 <viewtype label="$LOCALIZE[544] 2">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <focusposition>4</focusposition>
-                <movement>5</movement>
                 <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)</visible>
                 <itemlayout height="60" width="870">
                     <control type="image">
@@ -1304,7 +1302,7 @@
         <control type="group">
             <visible>Control.IsVisible(504)</visible>
             <include>VisibleFadeEffect</include>
-            <control type="fixedlist" id="504">
+            <control type="list" id="504">
                 <left>105</left>
                 <top>117</top>
                 <width>870</width>
@@ -1316,8 +1314,6 @@
                 <viewtype label="$LOCALIZE[544]">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <focusposition>6</focusposition>
-                <movement>7</movement>
                 <visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Videos)</visible>
                 <itemlayout height="60" width="870">
                     <control type="image">
@@ -1727,7 +1723,7 @@
         <control type="group">
             <visible>Control.IsVisible(515)</visible>
             <include>VisibleFadeEffect</include>
-            <control type="fixedlist" id="515">
+            <control type="list" id="515">
                 <left>105</left>
                 <top>117</top>
                 <width>510</width>
@@ -1739,8 +1735,6 @@
                 <viewtype label="$LOCALIZE[544] 3">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <focusposition>6</focusposition>
-                <movement>7</movement>
                 <visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
                 <itemlayout condition="Container.Content(Episodes) | !Skin.HasSetting(Enable515WideBanners)" height="60" width="518">
                     <control type="image">

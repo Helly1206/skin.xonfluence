@@ -4,7 +4,7 @@
         <control type="group">
             <visible>Control.IsVisible(50)</visible>
             <include>VisibleFadeEffect</include>
-            <control type="fixedlist" id="50">
+            <control type="list" id="50">
                 <left>105</left>
                 <top>117</top>
                 <width>1035</width>
@@ -16,8 +16,6 @@
                 <viewtype label="535">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <focusposition>6</focusposition>
-                <movement>7</movement>
                 <itemlayout height="60" width="870">
                     <control type="image">
                         <left>0</left>
@@ -785,7 +783,7 @@
         <control type="group">
             <visible>Control.IsVisible(51)</visible>
             <include>VisibleFadeEffect</include>
-            <control type="fixedlist" id="51">
+            <control type="list" id="51">
                 <left>142</left>
                 <top>117</top>
                 <width>1620</width>
@@ -797,8 +795,6 @@
                 <viewtype label="537">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <focusposition>6</focusposition>
-                <movement>7</movement>
                 <itemlayout height="60" width="1620">
                     <control type="image">
                         <left>0</left>

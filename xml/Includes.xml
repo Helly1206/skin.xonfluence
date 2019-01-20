@@ -858,6 +858,7 @@
             <orientation>horizontal</orientation>
             <animation effect="fade" time="200" condition="Window.Previous(home)">WindowOpen</animation>
             <animation effect="fade" time="200" condition="Window.Next(home)">WindowClose</animation>
+            <visible>!Window.IsVisible(BusyDialog)</visible>
             <control type="radiobutton" id="801">
                 <description>Trailer Button</description>
                 <width>68</width>
@@ -1716,7 +1717,7 @@
     </include>
     <include name="MediaInfoPopup">
         <animation effect="fade" start="0" end="100" time="1600" delay="2000" condition="String.IsEmpty(Skin.String(MediaPopupControl))">Visible</animation>
-        <animation effect="fade" start="0" end="100" time="300" delay="300" condition="Skin.String(MediaPopupControl,Instant)">Visible</animation>
+        <animation effect="fade" start="0" end="100" time="300" delay="0" condition="Skin.String(MediaPopupControl,Instant)">Visible</animation>
         <animation effect="fade" start="0" end="100" time="1600" delay="3000" condition="Skin.String(MediaPopupControl,Delayed)">Visible</animation>
         <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
     </include>

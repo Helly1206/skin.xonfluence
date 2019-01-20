@@ -22,7 +22,7 @@
     </include>
     <include name="CommonInfoListView">
         <definition>
-            <control type="fixedlist" id="$PARAM[control_id]">
+            <control type="list" id="$PARAM[control_id]">
                 <left>105</left>
                 <top>112</top>
                 <width>1170</width>
@@ -34,8 +34,6 @@
                 <viewtype label="$PARAM[view_label]">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <focusposition>6</focusposition>
-                <movement>7</movement>
                 <visible>$PARAM[visible]</visible>
                 <itemlayout height="60" width="1170">
                     <control type="image">

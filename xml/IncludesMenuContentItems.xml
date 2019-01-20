@@ -336,6 +336,22 @@
                 <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
             </item>
             <item>
+                <description>Rip CD</description>
+                <label>$LOCALIZE[600]</label>
+                <include>ClearButtonChoice</include>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RipCD)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[600])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]$INFO[Skin.CurrentTheme,,.jpg])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,PlayDisc)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,PlayDisc)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/playdvd.png)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+                <include>CloseMenuChoice</include>
+                <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
+            </item>
+            <item>
                 <description>XBMC Command</description>
                 <label>$LOCALIZE[31243]</label>
                 <include>ClearButtonChoice</include>

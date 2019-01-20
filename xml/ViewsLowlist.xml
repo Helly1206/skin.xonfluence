@@ -4,7 +4,7 @@
         <control type="group">
             <visible>Control.IsVisible(724)</visible>
             <include>VisibleFadeEffect</include>
-            <control type="FIXEDlist" id="724">
+            <control type="list" id="724">
                 <left>510</left>
                 <top>660</top>
                 <width>870</width>
@@ -16,8 +16,6 @@
                 <viewtype label="$LOCALIZE[31648]">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <focusposition>1</focusposition>
-                <movement>2</movement>
                 <visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(MusicVideos)</visible>
                 <visible>!Container.Content(LiveTV)</visible>
                 <itemlayout height="60" width="720">
