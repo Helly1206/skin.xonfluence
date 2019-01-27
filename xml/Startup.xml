@@ -3,7 +3,7 @@
     <defaultcontrol always="true">10</defaultcontrol>
     <include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
     <include>UnloadsScripts</include>
-    <onload condition="!Skin.HasSetting(DisableFanartScript) + Integer.IsGreater(Skin.String(FanArtCycleRate),0)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onload>
+    <onload condition="Skin.HasSetting(EnableFanartScript) + Integer.IsGreater(Skin.String(FanArtCycleRate),0)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onload>
     <onload condition="!Skin.String(KodiIntroVideo)">Skin.SetString(KodiIntroVideo,special://skin/extras/Intro/KODI-Intro-Video.mp4)</onload>
     <controls>
         <control type="image">

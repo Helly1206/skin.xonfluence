@@ -5,7 +5,7 @@
     <onload condition="Skin.HasSetting(HideSkinSettings)">PreviousMenu</onload>
     <onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
     <onload condition="String.IsEqual(Container(9011).Position,0) + !String.IsEqual(Skin.String(InitialMenuPosi),0)">Control.Move(9011,$INFO[Skin.String(InitialMenuPosi)])</onload>
-    <onunload condition="!Skin.HasSetting(DisableFanartScript)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onunload>
+    <onunload condition="Skin.HasSetting(EnableFanartScript)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onunload>
     <include>UnloadsScripts</include>
     <controls>
         <include>CommonBackground</include>
