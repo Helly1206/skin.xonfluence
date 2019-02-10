@@ -682,7 +682,7 @@
             <visible>String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
             <control type="image">
                 <description>Background End image</description>
-                <left>0</left>
+                <left>1</left>
                 <top>0</top>
                 <width>52</width>
                 <height>52</height>
@@ -694,7 +694,7 @@
             <control type="radiobutton" id="610">
                 <colordiffuse>CCFFFFFF</colordiffuse>
                 <description>Global Search</description>
-                <left>52</left>
+                <left>53</left>
                 <top>0</top>
                 <height>52</height>
                 <width>172</width>

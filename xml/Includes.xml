@@ -753,7 +753,7 @@
         <pulseonselect>false</pulseonselect>
     </include>
     <include name="SideBladeLeft">
-        <animation effect="slide" start="0,0" end="375,0" time="300" tween="quadratic" easing="out" condition="[!String.IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
+        <animation effect="slide" start="0,0" end="375,0" time="300" tween="quadratic" easing="out" condition="[!String.IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus | ControlGroup(8999).HasFocus] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
         <animation effect="slide" start="0,0" end="-450,0" time="300" tween="quadratic" easing="out" condition="!String.IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus">WindowClose</animation>
         <animation effect="slide" start="0,0" end="-75,0" time="225" tween="quadratic" easing="out" condition="String.IsEmpty(Window.Property(SideBladeOpen)) | !ControlGroup(9000).HasFocus">WindowClose</animation>
         <animation effect="slide" start="-75,0" end="0,0" time="225" tween="quadratic" easing="out">WindowOpen</animation>
@@ -761,19 +761,19 @@
             <description>Fake button for mouse control</description>
             <left>0</left>
             <top>0</top>
-            <width>1920</width>
+            <width>375</width>
             <height>1080</height>
             <label />
             <font />
             <texturenofocus />
             <texturefocus />
             <onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+            <onunfocus condition="!String.IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onunfocus>
             <onup>9000</onup>
             <ondown>9000</ondown>
             <onleft>50</onleft>
             <onright>ClearProperty(SideBladeOpen)</onright>
             <onback>ClearProperty(SideBladeOpen)</onback>
-            <visible>!String.IsEmpty(Window.Property(SideBladeOpen))</visible>
         </control>
         <control type="button" id="9001">
             <left>375</left>
