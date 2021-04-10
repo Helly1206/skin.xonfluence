@@ -232,7 +232,7 @@
                     <height>810</height>
                     <aspectratio aligny="bottom">keep</aspectratio>
                     <fadetime>IconCrossfadeTime</fadetime>
-                    <texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
+                    <texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
                     <bordertexture border="8">ThumbShadow.png</bordertexture>
                     <bordersize>8</bordersize>
                     <visible>String.IsEqual(ListItem.Label,..) | !Container.Content(Episodes)</visible>
@@ -357,7 +357,7 @@
                         <height>240</height>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <include>TextureBorderViews</include>
-                        <texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
+                        <texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
                         <aspectratio>keep</aspectratio>
                         <visible>!Container.Content(Episodes) + !Container.Content(genres) + !Container.Content(studios)</visible>
                     </control>
@@ -369,7 +369,7 @@
                         <aspectratio>scale</aspectratio>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <include>TextureBorderViews</include>
-                        <texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
+                        <texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
                         <visible>Container.Content(Episodes)</visible>
                         <visible>String.IsEqual(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
                     </control>
@@ -444,7 +444,7 @@
                         <height>240</height>
                         <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
                         <include>TextureBorderViews</include>
-                        <texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
+                        <texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
                         <aspectratio>keep</aspectratio>
                         <visible>!Container.Content(Episodes) + !Container.Content(genres) + !Container.Content(studios)</visible>
                     </control>
@@ -456,7 +456,7 @@
                         <aspectratio>scale</aspectratio>
                         <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
                         <include>TextureBorderViews</include>
-                        <texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
+                        <texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
                         <visible>Container.Content(Episodes)</visible>
                         <visible>String.IsEqual(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
                     </control>
@@ -826,7 +826,7 @@
                         <top>6</top>
                         <width>60</width>
                         <height>48</height>
-                        <texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
                         <aspectratio>keep</aspectratio>
                         <visible>String.IsEqual(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
                         <visible>!Container.Content(genres) + !Container.Content(studios)</visible>
@@ -962,7 +962,7 @@
                         <top>6</top>
                         <width>60</width>
                         <height>48</height>
-                        <texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
                         <aspectratio>keep</aspectratio>
                         <visible>String.IsEqual(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
                         <visible>!Container.Content(genres) + !Container.Content(studios)</visible>
