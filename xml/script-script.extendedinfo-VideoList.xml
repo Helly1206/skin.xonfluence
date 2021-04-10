@@ -288,7 +288,7 @@
                             <width>435</width>
                             <height>338</height>
                             <align>justify</align>
-                            <label fallback="416">$INFO[Container(500).ListItem.Plot,,[CR][CR]  ]</label>
+                            <label fallback="10005">$INFO[Container(500).ListItem.Plot,,[CR][CR]  ]</label>
                             <autoscroll delay="3000" time="1600" repeat="10000">true</autoscroll>
                             <font>font12</font>
                             <textcolor>white</textcolor>

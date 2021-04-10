@@ -1572,7 +1572,7 @@
                     <top>540</top>
                     <width>510</width>
                     <height>38</height>
-                    <label fallback="416">$INFO[listitem.Genre]</label>
+                    <label fallback="10005">$INFO[listitem.Genre]</label>
                     <align>left</align>
                     <aligny>center</aligny>
                     <font>font13</font>

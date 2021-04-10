@@ -160,7 +160,7 @@
                         <top>0</top>
                         <width>525</width>
                         <height>38</height>
-                        <label fallback="416">$INFO[ListItem.AddonCreator]</label>
+                        <label fallback="10005">$INFO[ListItem.AddonCreator]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
@@ -185,7 +185,7 @@
                         <top>45</top>
                         <width>525</width>
                         <height>38</height>
-                        <label fallback="416">$INFO[ListItem.AddonVersion]</label>
+                        <label fallback="10005">$INFO[ListItem.AddonVersion]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
@@ -392,7 +392,7 @@
                         <top>0</top>
                         <width>232</width>
                         <height>38</height>
-                        <label fallback="416">$INFO[ListItem.AddonCreator]</label>
+                        <label fallback="10005">$INFO[ListItem.AddonCreator]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
@@ -417,7 +417,7 @@
                         <top>45</top>
                         <width>232</width>
                         <height>38</height>
-                        <label fallback="416">$INFO[ListItem.AddonVersion]</label>
+                        <label fallback="10005">$INFO[ListItem.AddonVersion]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>

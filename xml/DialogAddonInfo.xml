@@ -65,7 +65,7 @@
                     <top>0</top>
                     <width>660</width>
                     <height>38</height>
-                    <label fallback="416">$INFO[ListItem.AddonType]</label>
+                    <label fallback="10005">$INFO[ListItem.AddonType]</label>
                     <align>left</align>
                     <aligny>center</aligny>
                     <font>font13</font>
@@ -89,7 +89,7 @@
                     <top>45</top>
                     <width>660</width>
                     <height>38</height>
-                    <label fallback="416">$INFO[ListItem.AddonCreator]</label>
+                    <label fallback="10005">$INFO[ListItem.AddonCreator]</label>
                     <align>left</align>
                     <aligny>center</aligny>
                     <font>font13</font>
@@ -113,7 +113,7 @@
                     <top>90</top>
                     <width>660</width>
                     <height>38</height>
-                    <label fallback="416">$INFO[ListItem.AddonVersion]</label>
+                    <label fallback="10005">$INFO[ListItem.AddonVersion]</label>
                     <align>left</align>
                     <aligny>center</aligny>
                     <font>font13</font>
@@ -137,7 +137,7 @@
                     <top>135</top>
                     <width>660</width>
                     <height>38</height>
-                    <label fallback="416">$INFO[ListItem.AddonSummary]</label>
+                    <label fallback="10005">$INFO[ListItem.AddonSummary]</label>
                     <align>left</align>
                     <aligny>center</aligny>
                     <font>font13</font>
@@ -305,7 +305,7 @@
                     <description>Update Addon button</description>
                     <width>330</width>
                     <height>56</height>
-                    <label>24069</label>
+                    <label>24138</label>
                     <align>center</align>
                     <font>font12_title</font>
                 </control>
@@ -317,6 +317,14 @@
                     <align>center</align>
                     <font>font12_title</font>
                 </control>
+				<control type="button" id="14">
+					<description>Versions button</description>
+					<width>330</width>
+					<height>56</height>
+					<label>24069</label>
+					<align>center</align>
+					<font>font12_title</font>
+				</control>
                 <control type="button" id="12">
                     <description>Launch Addon button</description>
                     <width>330</width>
