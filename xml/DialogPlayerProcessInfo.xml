@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<onload condition="System.HasAddon(script.amlogic.displayinfo)">RunScript(script.amlogic.displayinfo)</onload>
     <defaultcontrol always="true">100</defaultcontrol>
     <include>dialogeffect</include>
     <depth>DepthOSD</depth>
@@ -15,7 +16,7 @@
                 <left>0</left>
                 <top>0</top>
                 <width>1920</width>
-                <height>488</height>
+                <height>506</height>
                 <texture>black-back.png</texture>
             </control>
             <control type="label">
@@ -40,7 +41,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Hardware decoding value</description>
@@ -78,7 +79,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Decoder value</description>
@@ -87,7 +88,7 @@
                 <width>675</width>
                 <height>38</height>
                 <scroll>true</scroll>
-                <label fallback="1446">$INFO[Player.Process(videodecoder)]$INFO[Player.Process(pixformat),$COMMA ]</label>
+                <label fallback="1446">$INFO[Player.Process(videodecoder)]$INFO[Player.Process(amlogic.pixformat),$COMMA ]</label>
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
@@ -103,7 +104,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Deinterlace value</description>
@@ -128,7 +129,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Resolution value</description>
@@ -137,12 +138,217 @@
                 <width>675</width>
                 <height>38</height>
                 <scroll>true</scroll>
-                <label fallback="1446">$INFO[Player.Process(videowidth),,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
+                <label fallback="1446">$INFO[Player.Process(videowidth),,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]$INFO[VideoPlayer.VideoBitrate,$COMMA , kb/s]</label>
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
                 <textcolor>white</textcolor>
             </control>
+			
+			<!-- AMLogic Additional info -->
+			<control type="group">
+			    <visible>System.HasAddon(script.amlogic.displayinfo)</visible>
+			    <control type="label">
+                    <description>Header</description>
+                    <left>900</left>
+                    <top>15</top>
+                    <width>848</width>
+                    <height>38</height>
+                    <label>AMLogic Hardware Info</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font13_title</font>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                </control>
+			    <control type="label">
+				    <description>CPU speed</description>
+				    <left>900</left>
+				    <top>60</top>
+				    <width>165</width>
+				    <height>25</height>
+				    <label>CPU speed:</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>$VAR[MainColorOne]</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>CPU speed value</description>
+				    <left>1065</left>
+				    <top>60</top>
+				    <width>450</width>
+				    <height>25</height>
+				    <scroll>true</scroll>
+				    <label fallback="1446">$INFO[System.CpuFrequency]</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>white</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>SoC Temp</description>
+				    <left>900</left>
+				    <top>98</top>
+				    <width>165</width>
+				    <height>25</height>
+				    <label>SoC Temp:</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>$VAR[MainColorOne]</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>SoC Temp value</description>
+				    <left>1065</left>
+				    <top>98</top>
+				    <width>450</width>
+				    <height>25</height>
+				    <scroll>true</scroll>
+				    <label fallback="1446">$INFO[System.CPUTemperature]</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>white</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>System FPS</description>
+				    <left>900</left>
+				    <top>135</top>
+				    <width>165</width>
+				    <height>25</height>
+				    <label>System FPS:</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>$VAR[MainColorOne]</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>System FPS value</description>
+				    <left>1065</left>
+				    <top>135</top>
+				    <width>450</width>
+				    <height>25</height>
+				    <scroll>true</scroll>
+				    <label fallback="1446">$INFO[System.FPS] FPS</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>white</textcolor>
+			    </control>
+				<control type="label">
+				    <description>Ram</description>
+				    <left>900</left>
+				    <top>172</top>
+				    <width>165</width>
+				    <height>25</height>
+				    <label>RAM Used:</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>$VAR[MainColorOne]</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>RAM value</description>
+				    <left>1065</left>
+				    <top>172</top>
+				    <width>450</width>
+				    <height>25</height>
+				    <scroll>true</scroll>
+				    <label fallback="1446">$INFO[System.Memory(used)] out of $INFO[System.Memory(total)]</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>white</textcolor>
+			    </control>
+			    <control type="label">
+                    <description>Header</description>
+                    <left>1400</left>
+                    <top>15</top>
+                    <width>848</width>
+                    <height>38</height>
+                    <label>AMLogic Video Info</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font13_title</font>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                </control>
+			    <control type="label">
+				    <description>Display mode</description>
+				    <left>1400</left>
+				    <top>60</top>
+				    <width>165</width>
+				    <height>25</height>
+				    <label>Display mode:</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>$VAR[MainColorOne]</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>Display mode value</description>
+				    <left>1580</left>
+				    <top>60</top>
+				    <width>450</width>
+				    <height>25</height>
+				    <scroll>true</scroll>
+				    <label fallback="1446">$INFO[Player.Process(amlogic.displaymode)]</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>white</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>Color depth label</description>
+				    <left>1400</left>
+				    <top>98</top>
+				    <width>165</width>
+				    <height>25</height>
+				    <label>Color depth:</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>$VAR[MainColorOne]</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>Color depth value</description>
+				    <left>1580</left>
+				    <top>98</top>
+				    <width>450</width>
+				    <height>25</height>
+				    <scroll>true</scroll>
+				    <label fallback="1446">$INFO[Player.Process(amlogic.pixformat)]</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>white</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>EOTF</description>
+				    <left>1400</left>
+				    <top>135</top>
+				    <width>165</width>
+				    <height>25</height>
+				    <label>EOTF:</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>$VAR[MainColorOne]</textcolor>
+			    </control>
+			    <control type="label">
+				    <description>EOTF value</description>
+				    <left>1580</left>
+				    <top>135</top>
+				    <width>450</width>
+				    <height>25</height>
+				    <scroll>true</scroll>
+				    <label fallback="1446">$INFO[Player.Process(amlogic.eoft_gamut)]</label>
+				    <align>left</align>
+				    <aligny>center</aligny>
+				    <font>font12</font>
+				    <textcolor>white</textcolor>
+			    </control>
+			</control>
+			
             <control type="label">
                 <description>Header</description>
                 <left>75</left>
@@ -165,7 +371,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Decoder value</description>
@@ -174,7 +380,7 @@
                 <width>675</width>
                 <height>38</height>
                 <scroll>true</scroll>
-                <label fallback="1446">$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bit]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
+                <label fallback="1446">$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bit]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]$INFO[VideoPlayer.AudioBitrate,$COMMA , kb/s]</label>
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
@@ -190,7 +396,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Channels value</description>
@@ -227,7 +433,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>CPU value</description>
@@ -252,7 +458,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Memory value</description>
@@ -267,8 +473,35 @@
                 <font>font12</font>
                 <textcolor>white</textcolor>
             </control>
+            <control type="label">
+                <description>File name</description>
+                <left>75</left>
+                <top>466</top>
+                <width>248</width>
+                <height>38</height>
+                <label>File name:</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>$VAR[MainColorOne]</textcolor>			
+            </control>
+			<control type="label">
+                <description>File name value</description>
+                <left>330</left>
+                <top>466</top>
+                <width>1675</width>
+                <height>38</height>
+                <scroll>true</scroll>
+                <label>$INFO[Player.Filename]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>white</textcolor>
+            </control>
         </control>
-        <control type="group">
+        
+		<!-- PVR Info -->
+		<control type="group">
             <depth>DepthOSD+</depth>
             <visible>VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
             <left>960</left>
@@ -294,7 +527,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Backend value</description>
@@ -319,7 +552,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Device value</description>
@@ -344,7 +577,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Status value</description>
@@ -369,7 +602,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="progress">
                 <description>Progressbar</description>
@@ -401,7 +634,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="progress">
                 <description>Progressbar</description>
@@ -434,7 +667,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>BER value</description>
@@ -459,7 +692,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>UNC value</description>
@@ -484,7 +717,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Service value</description>
@@ -509,7 +742,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Encryption value</description>
@@ -534,7 +767,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Provider value</description>
@@ -559,7 +792,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <textcolor>grey2</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
             </control>
             <control type="label">
                 <description>Mux value</description>
