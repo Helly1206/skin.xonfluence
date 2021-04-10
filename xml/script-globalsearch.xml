@@ -94,7 +94,7 @@
             <include>Clock</include>
         </control>
         <control type="group">
-            <visible>!Skin.HasSetting(KioskMode)</visible>
+<!--            <visible>!Skin.HasSetting(KioskMode)</visible> -->
             <visible>!Control.IsVisible(999)</visible>
             <left>-375</left>
             <include>SideBladeLeft</include>
