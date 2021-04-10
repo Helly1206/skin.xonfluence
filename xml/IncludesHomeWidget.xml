@@ -2828,13 +2828,13 @@
         </definition>
     </include>
     <include name="RecentVideoContent">
-        <content>
+		<content>
             <item>
                 <label2></label2>
                 <label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.1.File)])</onclick>
-                <icon>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</icon>
+				<icon>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</icon>
                 <thumb>$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(RecentMovie.1.Title)) + String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -2924,7 +2924,7 @@
                 <label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.1.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.1.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.1.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.1.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -2933,7 +2933,7 @@
                 <label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.2.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.2.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.2.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.2.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -2942,7 +2942,7 @@
                 <label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.3.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.3.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.3.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.3.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -2951,7 +2951,7 @@
                 <label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.4.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.4.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.4.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.4.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -2960,7 +2960,7 @@
                 <label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.5.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.5.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.5.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.5.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -2969,7 +2969,7 @@
                 <label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.6.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.6.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.6.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.6.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -2978,7 +2978,7 @@
                 <label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.7.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.7.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.7.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.7.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -2987,7 +2987,7 @@
                 <label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.8.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.8.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.8.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.8.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -2996,7 +2996,7 @@
                 <label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.9.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.9.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.9.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.9.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.9.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -3005,7 +3005,7 @@
                 <label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.10.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.10.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.10.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.10.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.10.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
@@ -3353,7 +3353,7 @@
                 <onclick>PlayList.Clear</onclick>
                 <onclick>Dialog.Close(2125)</onclick>
                 <onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.1.Path)])</onclick>
-                <icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
+                <icon>$INFO[Window.Property(LatestMovie.1.Poster)]</icon>
                 <thumb>$INFO[Window.Property(LatestMovie.1.Fanart)]</thumb>
                 <visible>String.IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + !String.IsEmpty(Window(Home).Property(LatestMovie.1.Title)) + Window.IsVisible(2125)</visible>
             </item>
