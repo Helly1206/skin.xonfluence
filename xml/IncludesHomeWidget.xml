@@ -2828,7 +2828,8 @@
         </definition>
     </include>
     <include name="RecentVideoContent">
-		<content>
+		<content target="video"  sortorder="descending" sortby="dateadded" limit="10">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
+<!--		<content>
             <item>
                 <label2></label2>
                 <label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
@@ -3009,7 +3010,7 @@
                 <thumb>$INFO[Window.Property(LatestMovie.10.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMovie.10.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="RandomVideoContent">
         <content>
