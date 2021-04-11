@@ -3013,7 +3013,8 @@
         </content> -->
     </include>
     <include name="RandomVideoContent">
-        <content>
+        <content sortby="random" sortorder="" limit="10" target="videos">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
+<!--		<content>
             <item id="1">
                 <label2></label2>
                 <label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
@@ -3104,7 +3105,7 @@
                 <thumb>$INFO[Window(Home).Property(RandomMovie.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(RandomMovie.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="SuggestedVideoContent">
         <content>
@@ -3445,7 +3446,8 @@
         </content>
     </include>
     <include name="RecentTVShowContent">
-        <content>
+        <content target="video" sortorder="descending" sortby="dateadded" limit="10">videodb://tvshows/titles/-1/-1/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</content>
+<!--		<content>
             <item>
                 <label>$INFO[Window(Home).Property(RecentEpisode.1.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RecentEpisode.1.TVshowTitle)] - $INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</label2>
@@ -3636,10 +3638,11 @@
                 <thumb>$INFO[Window.Property(LatestEpisode.10.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestEpisode.10.EpisodeTitle)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="RandomTVShowContent">
-        <content>
+        <content sortby="random" sortorder="" limit="10" target="videos">videodb://tvshows/titles/-1/-1/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(RandomEpisode.1.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomEpisode.1.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.1.EpisodeNo)]</label2>
@@ -3740,7 +3743,7 @@
                 <property name="Logo">$INFO[Window(Home).Property(RandomEpisode.10.Art(tvshow.clearlogo))]</property>
                 <visible>!String.IsEmpty(Window(Home).Property(RandomEpisode.10.TVshowTitle))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="SuggestedTVShowContent">
         <content>
@@ -3998,7 +4001,8 @@
         </content>
     </include>
     <include name="RecentAlbumContent">
-        <content>
+        <content target="music" sortby="dateadded" sortorder="descending" limit="10">musicdb://recentlyaddedalbums</content>
+<!--		<content>
             <item>
                 <label>$INFO[Window(Home).Property(RecentAlbum.1.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RecentAlbum.1.Artist)]</label2>
@@ -4179,10 +4183,11 @@
                 <thumb>$INFO[Window.Property(LatestAlbum.10.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestAlbum.10.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="RandomAlbumContent">
-        <content>
+        <content sortby="random" sortorder="" limit="10" target="music">library://music/albums.xml/</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(RandomAlbum.1.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomAlbum.1.Artist)]</label2>
@@ -4273,7 +4278,7 @@
                 <thumb>$INFO[Window(Home).Property(RandomAlbum.10.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(RandomAlbum.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="SuggestedAlbumContent">
         <content>
