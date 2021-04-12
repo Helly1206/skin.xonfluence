@@ -1750,7 +1750,7 @@
                         <width>270</width>
                         <height>232</height>
                         <aspectratio>keep</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <include>TextureBorderWidgets</include>
                     </control>
@@ -1765,7 +1765,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label2]</label>
+                        <label>$INFO[ListItem.Artist]</label>
                     </control>
                     <control type="label">
                         <left>15</left>
@@ -1796,7 +1796,7 @@
                         <width>270</width>
                         <height>232</height>
                         <aspectratio>keep</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
                         <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
                         <include>TextureBorderWidgets</include>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
@@ -1807,7 +1807,7 @@
                         <width>270</width>
                         <height>232</height>
                         <aspectratio>keep</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <bordersize>5</bordersize>
                         <visible>!Control.HasFocus($PARAM[Control])</visible>
@@ -1823,7 +1823,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label2]</label>
+                        <label>$INFO[ListItem.Artist]</label>
                     </control>
                     <control type="label">
                         <left>15</left>
@@ -1895,7 +1895,7 @@
                         <width>338</width>
                         <height>338</height>
                         <aspectratio>scale</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <bordersize>5</bordersize>
                     </control>
@@ -1910,7 +1910,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label2]</label>
+                        <label>$INFO[ListItem.Artist]</label>
                     </control>
                     <control type="label">
                         <left>11</left>
@@ -1933,7 +1933,7 @@
                         <width>338</width>
                         <height>338</height>
                         <aspectratio>scale</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
                         <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
                         <bordersize>5</bordersize>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
@@ -1944,7 +1944,7 @@
                         <width>338</width>
                         <height>338</height>
                         <aspectratio>scale</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <bordersize>5</bordersize>
                         <visible>!Control.HasFocus($PARAM[Control])</visible>
@@ -1960,7 +1960,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label2]</label>
+                        <label>$INFO[ListItem.Artist]</label>
                     </control>
                     <control type="label">
                         <left>11</left>
