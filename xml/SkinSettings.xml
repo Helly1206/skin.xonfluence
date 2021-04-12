@@ -10344,7 +10344,7 @@
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(ScriptDisableTVNextAired)</onclick>
                                 <selected>!Skin.HasSetting(ScriptDisableTVNextAired)</selected>
-                                <enable>System.HasAddon(script.tv.show.next.aired)</enable>
+                                <enable>[System.HasAddon(script.tv.show.next.aired) | System.HasAddon(script.embuary.info)]</enable>
                             </control>
                             <control type="button" id="645">
                                 <width>1125</width>

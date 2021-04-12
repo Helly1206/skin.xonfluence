@@ -3559,4 +3559,49 @@
         <value condition="!String.IsEmpty(Skin.String(DialogLAF))">lf_modern/</value>
         <value>lf_classic/</value>
     </variable>
+	
+	<variable name="SeasonEpisodeLabel">
+        <value condition="String.IsEmpty(ListItem.Season)">$INFO[ListItem.Title] - $INFO[ListItem.Episode]</value>
+        <value condition="Integer.IsLess(ListItem.Episode,10) + Integer.IsLess(ListItem.Season,10)">$INFO[ListItem.Title] - $INFO[ListItem.Season,s0,]$INFO[ListItem.Episode,e0,]</value>
+        <value condition="Integer.IsLess(ListItem.Episode,10) + !Integer.IsLess(ListItem.Season,10)">$INFO[ListItem.Title] - $INFO[ListItem.Season,s,]$INFO[ListItem.Episode,e0,]</value>
+        <value condition="!Integer.IsLess(ListItem.Episode,10) + Integer.IsLess(ListItem.Season,10)">$INFO[ListItem.Title] - $INFO[ListItem.Season,s0,]$INFO[ListItem.Episode,e,]</value>
+        <value condition="!Integer.IsLess(ListItem.Episode,10) + !Integer.IsLess(ListItem.Season,10)">$INFO[ListItem.Title] - $INFO[ListItem.Season,s,]$INFO[ListItem.Episode,e,]</value>
+    </variable>
+	
+	<variable name="SeasonEpisodeLabel2">
+        <value condition="!String.IsEmpty(ListItem.Property(AirDay))">$INFO[ListItem.Premiered] @ $INFO[ListItem.Property(AirTime)]</value>
+    </variable>
+	
+	<expression name="IsMoviePlaylist">[Container(9000).HasFocus(1) + Skin.String(HomeItem.1.PlaylistType,movies)] | 
+	                                   [Container(9000).HasFocus(2) + Skin.String(HomeItem.2.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(3) + Skin.String(HomeItem.3.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(4) + Skin.String(HomeItem.4.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(5) + Skin.String(HomeItem.5.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(6) + Skin.String(HomeItem.6.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(7) + Skin.String(HomeItem.7.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(8) + Skin.String(HomeItem.8.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(9) + Skin.String(HomeItem.9.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(10) + Skin.String(HomeItem.10.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(11) + Skin.String(HomeItem.11.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(12) + Skin.String(HomeItem.12.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(13) + Skin.String(HomeItem.13.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(14) + Skin.String(HomeItem.14.PlaylistType,movies)] | 
+									   [Container(9000).HasFocus(15) + Skin.String(HomeItem.15.PlaylistType,movies)]</expression>
+	
+	<expression name="IsEpisodePlaylist">[Container(9000).HasFocus(1) + Skin.String(HomeItem.1.PlaylistType,episodes)] | 
+	                                     [Container(9000).HasFocus(2) + Skin.String(HomeItem.2.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(3) + Skin.String(HomeItem.3.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(4) + Skin.String(HomeItem.4.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(5) + Skin.String(HomeItem.5.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(6) + Skin.String(HomeItem.6.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(7) + Skin.String(HomeItem.7.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(8) + Skin.String(HomeItem.8.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(9) + Skin.String(HomeItem.9.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(10) + Skin.String(HomeItem.10.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(11) + Skin.String(HomeItem.11.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(12) + Skin.String(HomeItem.12.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(13) + Skin.String(HomeItem.13.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(14) + Skin.String(HomeItem.14.PlaylistType,episodes)] | 
+									     [Container(9000).HasFocus(15) + Skin.String(HomeItem.15.PlaylistType,episodes)]</expression>
+	
 </includes>

@@ -2949,8 +2949,8 @@
         <include condition="[Skin.HasSetting(DisableGlobalSearch) | !Skin.HasSetting(FloorGlobalSearch)] + Skin.HasSetting(HideHomePowerBtn) + Skin.HasSetting(HideFavorites)">Button0</include>
     </include>
     <include name="UnloadsScripts">
-        <onunload condition="Skin.HasSetting(ScriptDisableTVNextAired) | [!Skin.HasSetting(ScriptDisableTVNextAired) + !System.HasAddon(script.tv.show.next.aired)]">Skin.Setbool(DisableTVNextAired)</onunload>
-        <onunload condition="!Skin.HasSetting(ScriptDisableTVNextAired) + System.HasAddon(script.tv.show.next.aired)">Skin.Reset(DisableTVNextAired)</onunload>
+        <onunload condition="Skin.HasSetting(ScriptDisableTVNextAired) | [!Skin.HasSetting(ScriptDisableTVNextAired) + !System.HasAddon(script.tv.show.next.aired) + !System.HasAddon(script.embuary.info)]">Skin.Setbool(DisableTVNextAired)</onunload>
+        <onunload condition="!Skin.HasSetting(ScriptDisableTVNextAired) + [System.HasAddon(script.tv.show.next.aired) | System.HasAddon(script.embuary.info)]">Skin.Reset(DisableTVNextAired)</onunload>
         <onunload condition="Skin.HasSetting(ScriptDisableScriptPlaylist) | [!Skin.HasSetting(ScriptDisableScriptPlaylist) + !System.HasAddon(script.randomandlastitems)]">Skin.Setbool(DisableScriptPlaylist)</onunload>
         <onunload condition="!Skin.HasSetting(ScriptDisableScriptPlaylist) + System.HasAddon(script.randomandlastitems)">Skin.Reset(DisableScriptPlaylist)</onunload>
         <onunload condition="!Skin.HasSetting(ScriptEnableFanartScript) | [Skin.HasSetting(ScriptEnableFanartScript) + !System.HasAddon(script.grab.fanart)]">Skin.Reset(EnableFanartScript)</onunload>

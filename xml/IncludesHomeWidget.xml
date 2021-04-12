@@ -198,6 +198,9 @@
                     <param name="Control">8008</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                     <param name="Content">RecentTVShowContent</param>
                 </include>
                 <include content="VideoSmallWidgetButtons">
@@ -221,6 +224,9 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
                     <param name="Content">RecentTVShowContent</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetButtons">
                     <param name="Control">8009</param>
@@ -241,6 +247,9 @@
                     <param name="Control">8010</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                     <param name="Content">RandomTVShowContent</param>
                 </include>
                 <include content="VideoSmallWidgetButtons">
@@ -264,6 +273,9 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
                     <param name="Content">RandomTVShowContent</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetButtons">
                     <param name="Control">8011</param>
@@ -285,6 +297,7 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
                     <param name="Content">SuggestedTVShowContent</param>
+					<param name="episodeswidget">true</param>
                 </include>
                 <include content="VideoSmallWidgetButtons">
                     <param name="Control">8012</param>
@@ -307,6 +320,7 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
                     <param name="Content">SuggestedTVShowContent</param>
+					<param name="episodeswidget">true</param>
                 </include>
                 <include content="VideoLargeWidgetButtons">
                     <param name="Control">8013</param>
@@ -560,12 +574,13 @@
                 <left>285</left>
                 <top>90</top>
                 <!-- Movies Playlist-->
-                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList) + !Skin.HasSetting(DisableScriptPlayList)</visible>
+<!--                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList) + !Skin.HasSetting(DisableScriptPlayList)</visible> -->
+				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList)</visible>
                 <visible>
 					!Skin.HasSetting(EnableLargeWidgets) | 
 					[Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]
 				</visible>
-                <visible>String.IsEqual(Container(9000).ListItem.Property(PlayListType),Movie)</visible>
+                <visible>$EXP[IsMoviePlaylist]</visible>
                 <include>VisibleFadeEffect</include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8026</param>
@@ -681,13 +696,15 @@
                 <left>0</left>
                 <top>81</top>
                 <!-- Movies Playlist-->
-                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList) + !Skin.HasSetting(DisableScriptPlayList)</visible>
+<!--                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList) + !Skin.HasSetting(DisableScriptPlayList)</visible> -->
+				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList)</visible>
                 <visible>
 				[Skin.HasSetting(EnableLargeWidgets) + !Player.HasMedia] | 
 				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | 
 				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]
 				</visible>
-                <visible>String.IsEqual(Container(9000).ListItem.Property(PlayListType),Movie)</visible>
+                <visible>$EXP[IsMoviePlaylist]</visible>
+<!--				<visible>String.IsEqual(Container(9000).ListItem.Property(PlayListType),Movie)</visible> -->
                 <include>VisibleFadeEffect</include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8027</param>
@@ -808,113 +825,159 @@
 					!Skin.HasSetting(EnableLargeWidgets) | 
 					[Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]
 				</visible>
-                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList) + !Skin.HasSetting(DisableScriptPlayList)</visible>
-                <visible>String.IsEqual(Container(9000).ListItem.Property(PlayListType),Episode)</visible>
+<!--                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList) + !Skin.HasSetting(DisableScriptPlayList)</visible> -->
+				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList)</visible>
+                <visible>$EXP[IsEpisodePlaylist]</visible>
                 <include>VisibleFadeEffect</include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListOneEpisodes</param>
+                    <param name="Content">PlayListOneContent</param>
                     <param name="Visible">Container(9000).HasFocus(1)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListTwoEpisodes</param>
+                    <param name="Content">PlayListTwoContent</param>
                     <param name="Visible">Container(9000).HasFocus(2)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListThreeEpisodes</param>
+                    <param name="Content">PlayListThreeContent</param>
                     <param name="Visible">Container(9000).HasFocus(3)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListFourEpisodes</param>
+                    <param name="Content">PlayListFourContent</param>
                     <param name="Visible">Container(9000).HasFocus(4)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListFiveEpisodes</param>
+                    <param name="Content">PlayListFiveContent</param>
                     <param name="Visible">Container(9000).HasFocus(5)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListSixEpisodes</param>
+                    <param name="Content">PlayListSixContent</param>
                     <param name="Visible">Container(9000).HasFocus(6)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListSevenEpisodes</param>
+                    <param name="Content">PlayListSevenContent</param>
                     <param name="Visible">Container(9000).HasFocus(7)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListEightEpisodes</param>
+                    <param name="Content">PlayListEightContent</param>
                     <param name="Visible">Container(9000).HasFocus(8)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListNineEpisodes</param>
+                    <param name="Content">PlayListNineContent</param>
                     <param name="Visible">Container(9000).HasFocus(9)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListTenEpisodes</param>
+                    <param name="Content">PlayListTenContent</param>
                     <param name="Visible">Container(9000).HasFocus(10)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListElevenEpisodes</param>
+                    <param name="Content">PlayListElevenContent</param>
                     <param name="Visible">Container(9000).HasFocus(11)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListTwelveEpisodes</param>
+                    <param name="Content">PlayListTwelveContent</param>
                     <param name="Visible">Container(9000).HasFocus(12)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListThirteenEpisodes</param>
+                    <param name="Content">PlayListThirteenContent</param>
                     <param name="Visible">Container(9000).HasFocus(13)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListFourteenEpisodes</param>
+                    <param name="Content">PlayListFourteenContent</param>
                     <param name="Visible">Container(9000).HasFocus(14)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetLayout">
                     <param name="Control">8028</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListFifteenEpisodes</param>
+                    <param name="Content">PlayListFifteenContent</param>
                     <param name="Visible">Container(9000).HasFocus(15)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoSmallWidgetButtons">
                     <param name="Control">8028</param>
@@ -930,113 +993,160 @@
 				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | 
 				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]
 				</visible>
-                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList) + !Skin.HasSetting(DisableScriptPlayList)</visible>
-                <visible>String.IsEqual(Container(9000).ListItem.Property(PlayListType),Episode)</visible>
-                <include>VisibleFadeEffect</include>
+<!--                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList) + !Skin.HasSetting(DisableScriptPlayList)</visible> -->
+<!--                <visible>String.IsEqual(Container(9000).ListItem.Property(PlayListType),Episode)</visible> -->
+				<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList)</visible>
+                <visible>$EXP[IsEpisodePlaylist]</visible>
+				<include>VisibleFadeEffect</include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListOneEpisodes</param>
+                    <param name="Content">PlayListOneContent</param>
                     <param name="Visible">Container(9000).HasFocus(1)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListTwoEpisodes</param>
+                    <param name="Content">PlayListTwoContent</param>
                     <param name="Visible">Container(9000).HasFocus(2)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListThreeEpisodes</param>
+                    <param name="Content">PlayListThreeContent</param>
                     <param name="Visible">Container(9000).HasFocus(3)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListFourEpisodes</param>
+                    <param name="Content">PlayListFourContent</param>
                     <param name="Visible">Container(9000).HasFocus(4)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListFiveEpisodes</param>
+                    <param name="Content">PlayListFiveContent</param>
                     <param name="Visible">Container(9000).HasFocus(5)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListSixEpisodes</param>
+                    <param name="Content">PlayListSixContent</param>
                     <param name="Visible">Container(9000).HasFocus(6)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListSevenEpisodes</param>
+                    <param name="Content">PlayListSevenContent</param>
                     <param name="Visible">Container(9000).HasFocus(7)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListEightEpisodes</param>
+                    <param name="Content">PlayListEightContent</param>
                     <param name="Visible">Container(9000).HasFocus(8)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListNineEpisodes</param>
+                    <param name="Content">PlayListNineContent</param>
                     <param name="Visible">Container(9000).HasFocus(9)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListTenEpisodes</param>
+                    <param name="Content">PlayListTenContent</param>
                     <param name="Visible">Container(9000).HasFocus(10)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListElevenEpisodes</param>
+                    <param name="Content">PlayListElevenContent</param>
                     <param name="Visible">Container(9000).HasFocus(11)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListTwelveEpisodes</param>
+                    <param name="Content">PlayListTwelveContent</param>
                     <param name="Visible">Container(9000).HasFocus(12)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListThirteenEpisodes</param>
+                    <param name="Content">PlayListThirteenContent</param>
                     <param name="Visible">Container(9000).HasFocus(13)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListFourteenEpisodes</param>
+                    <param name="Content">PlayListFourteenContent</param>
                     <param name="Visible">Container(9000).HasFocus(14)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetLayout">
                     <param name="Control">8029</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-                    <param name="Content">PlayListFifteenEpisodes</param>
+                    <param name="Content">PlayListFifteenContent</param>
                     <param name="Visible">Container(9000).HasFocus(15)</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
                 <include content="VideoLargeWidgetButtons">
                     <param name="Control">8029</param>
@@ -1085,11 +1195,20 @@
 				</visible>
                 <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),NextAired)</visible>
                 <include>VisibleFadeEffect</include>
-                <include content="VideoSmallWidgetLayout">
+                <include content="VideoSmallWidgetLayout" condition="!String.IsEmpty(Window(home).Property(NextAired.1.NextDay))">
                     <param name="Control">8032</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
                     <param name="Content">NextAiredContent</param>
+                </include>
+				<include content="VideoSmallWidgetLayout" condition="String.IsEmpty(Window(home).Property(NextAired.1.NextDay)) + System.HasAddon(script.embuary.info)">
+                    <param name="Control">8032</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                    <param name="Custom">False</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$VAR[SeasonEpisodeLabel]</param>
+					<param name="label2">$VAR[SeasonEpisodeLabel2]</param>
+                    <param name="Content">EmbuaryInfoNextAiredContent</param>
                 </include>
                 <include content="VideoSmallWidgetButtons">
                     <param name="Control">8032</param>
@@ -1107,11 +1226,20 @@
 				</visible>
                 <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),NextAired)</visible>
                 <include>VisibleFadeEffect</include>
-                <include content="VideoLargeWidgetLayout">
+                <include content="VideoLargeWidgetLayout" condition="!String.IsEmpty(Window(home).Property(NextAired.1.NextDay))">
                     <param name="Control">8033</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
                     <param name="Content">NextAiredContent</param>
+                </include>
+				<include content="VideoLargeWidgetLayout" condition="String.IsEmpty(Window(home).Property(NextAired.1.NextDay)) + System.HasAddon(script.embuary.info)">
+                    <param name="Control">8033</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                    <param name="Custom">False</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$VAR[SeasonEpisodeLabel]</param>
+					<param name="label2">$VAR[SeasonEpisodeLabel2]</param>
+                    <param name="Content">EmbuaryInfoNextAiredContent</param>
                 </include>
                 <include content="VideoLargeWidgetButtons">
                     <param name="Control">8033</param>
@@ -1871,7 +1999,10 @@
         <param name="Format" default="Poster" />
         <param name="Custom" default="False" />
         <param name="Content" default="" />
-        <param name="Visible" default="True" />
+        <param name="episodeswidget">false</param>
+		<param name="Visible" default="True" />
+		<param name="label">$INFO[ListItem.Label]</param>
+		<param name="label2">$INFO[ListItem.Label2]</param>
         <definition>
             <control type="group">
                 <visible>String.IsEqual($PARAM[Format],Poster) + $PARAM[Visible]</visible>
@@ -1882,11 +2013,23 @@
                 </include>
             </control>
             <control type="group">
-                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
+                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible] + $PARAM[episodeswidget]</visible>
                 <include content="EpisodeSmallWidgetLayout">
                     <param name="Control">$PARAM[Control]1</param>
                     <param name="Content">$PARAM[Content]</param>
                     <param name="Custom">$PARAM[Custom]</param>
+					<param name="label">$PARAM[label]</param>
+					<param name="label2">$PARAM[label2]</param>
+                </include>
+            </control>
+			<control type="group">
+                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible] + !$PARAM[episodeswidget]</visible>
+                <include content="EpisodeSmallWidgetLayout">
+                    <param name="Control">$PARAM[Control]1</param>
+                    <param name="Content">$PARAM[Content]</param>
+                    <param name="Custom">$PARAM[Custom]</param>
+					<param name="label">$PARAM[label]</param>
+					<param name="label2">$PARAM[label2]</param>
                 </include>
             </control>
         </definition>
@@ -1897,6 +2040,9 @@
         <param name="Custom" default="False" />
         <param name="Content" default="" />
         <param name="Visible" default="True" />
+		<param name="episodeswidget">false</param>
+		<param name="label">$INFO[ListItem.Label]</param>
+		<param name="label2">$INFO[ListItem.Label2]</param>
         <definition>
             <control type="group">
                 <visible>String.IsEqual($PARAM[Format],Poster) + $PARAM[Visible]</visible>
@@ -1907,11 +2053,23 @@
                 </include>
             </control>
             <control type="group">
-                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
+                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible] + $PARAM[episodeswidget]</visible>
                 <include content="EpisodeLargeWidgetLayout">
                     <param name="Control">$PARAM[Control]1</param>
                     <param name="Content">$PARAM[Content]</param>
                     <param name="Custom">$PARAM[Custom]</param>
+					<param name="label">$PARAM[label]</param>
+					<param name="label2">$PARAM[label2]</param>
+                </include>
+            </control>
+			<control type="group">
+                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible] + !$PARAM[episodeswidget]</visible>
+                <include content="EpisodeLargeWidgetLayout">
+                    <param name="Control">$PARAM[Control]1</param>
+                    <param name="Content">$PARAM[Content]</param>
+                    <param name="Custom">$PARAM[Custom]</param>
+					<param name="label">$PARAM[label]</param>
+					<param name="label2">$PARAM[label2]</param>
                 </include>
             </control>
         </definition>
@@ -2228,6 +2386,8 @@
         <param name="Control" default="8000" />
         <param name="Content" default="" />
         <param name="Custom" default="False" />
+		<param name="label">$INFO[ListItem.Label]</param>
+		<param name="label2">$INFO[ListItem.Label2]</param>
         <definition>
             <control type="list" id="$PARAM[Control]">
                 <animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
@@ -2283,7 +2443,7 @@
                         <width>315</width>
                         <height>218</height>
                         <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                        <texture>$INFO[ListItem.Property(Logo)]</texture>
+                        <texture>$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
                         <visible>!Skin.HasSetting(DisableLogoArt)</visible>
                     </control>
                     <control type="label">
@@ -2297,7 +2457,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label2]</label>
+                        <label>$PARAM[label2]</label>
                     </control>
                     <control type="label">
                         <left>30</left>
@@ -2310,7 +2470,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$PARAM[label]</label>
                     </control>
                 </itemlayout>
                 <focusedlayout height="330" width="360">
@@ -2376,7 +2536,7 @@
                         <width>315</width>
                         <height>218</height>
                         <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                        <texture>$INFO[ListItem.Property(Logo)]</texture>
+                        <texture>$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
                         <visible>!Skin.HasSetting(DisableLogoArt)</visible>
                     </control>
                     <control type="label">
@@ -2390,7 +2550,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label2]</label>
+                        <label>$PARAM[label2]</label>
                     </control>
                     <control type="label">
                         <left>30</left>
@@ -2403,7 +2563,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$PARAM[label]</label>
                         <visible>!Control.HasFocus($PARAM[Control])</visible>
                     </control>
                     <control type="label">
@@ -2416,7 +2576,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$PARAM[label]</label>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
                     </control>
                 </focusedlayout>
@@ -2428,6 +2588,8 @@
         <param name="Control" default="8000" />
         <param name="Content" default="" />
         <param name="Custom" default="False" />
+		<param name="label">$INFO[ListItem.Label]</param>
+		<param name="label2">$INFO[ListItem.Label2]</param>
         <definition>
             <control type="image">
                 <left>-30</left>
@@ -2498,7 +2660,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label2]</label>
+                        <label>$PARAM[label2]</label>
                     </control>
                     <control type="label">
                         <left>15</left>
@@ -2511,7 +2673,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$PARAM[label]</label>
                     </control>
                 </itemlayout>
                 <focusedlayout height="428" width="450">
@@ -2583,7 +2745,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label2]</label>
+                        <label>$PARAM[label2]</label>
                     </control>
                     <control type="label">
                         <left>15</left>
@@ -2596,7 +2758,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$PARAM[label]</label>
                         <visible>!Control.HasFocus($PARAM[Control])</visible>
                     </control>
                     <control type="label">
@@ -2609,7 +2771,7 @@
                         <selectedcolor>selected</selectedcolor>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$PARAM[label]</label>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
                     </control>
                 </focusedlayout>
@@ -2617,6 +2779,7 @@
             </control>
         </definition>
     </include>
+	
     <include name="VideoSmallWidgetButtons">
         <param name="Control" default="8000" />
         <param name="Format" default="Poster" />
@@ -3108,7 +3271,9 @@
         </content> -->
     </include>
     <include name="SuggestedVideoContent">
-        <content>
+        <!-- Suggested movies is just in-progress movies -->
+		<content>videodb://movies/titles/?xsp=%7b%22limit%22%3a20%2c%22order%22%3a%7b%22direction%22%3a%22descending%22%2c%22ignorefolders%22%3a0%2c%22method%22%3a%22lastplayed%22%7d%2c%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22inprogress%22%2c%22operator%22%3a%22true%22%2c%22value%22%3a%5b%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
+<!--		<content>
             <item id="1">
                 <label2></label2>
                 <label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
@@ -3359,10 +3524,12 @@
                 <thumb>$INFO[Window.Property(LatestMovie.1.Fanart)]</thumb>
                 <visible>String.IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + !String.IsEmpty(Window(Home).Property(LatestMovie.1.Title)) + Window.IsVisible(2125)</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="HomeUnWatchedMovies">
-        <content>
+        <!-- This is just 10 unwatched movies, random -->
+		<content sortby="random" sortorder="" limit="10" target="videos">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(PlaylistRandomMovieUnWatched.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -3443,10 +3610,11 @@
                 <thumb>$INFO[Window(Home).Property(PlaylistRandomMovieUnWatched.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(PlaylistRandomMovieUnWatched.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="RecentTVShowContent">
-        <content target="video" sortorder="descending" sortby="dateadded" limit="10">videodb://tvshows/titles/-1/-1/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</content>
+        <!-- 10 episodes, unwatched, newest first -->
+		<content target="video" sortorder="descending" sortby="dateadded" limit="10">videodb://tvshows/titles/-1/-1/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</content>
 <!--		<content>
             <item>
                 <label>$INFO[Window(Home).Property(RecentEpisode.1.Title)]</label>
@@ -4281,7 +4449,9 @@
         </content> -->
     </include>
     <include name="SuggestedAlbumContent">
-        <content>
+        <!-- Suggested albums is the 10 most played albums -->
+		<content target="music">musicdb://albums/?xsp=%7b%22limit%22%3a20%2c%22order%22%3a%7b%22direction%22%3a%22descending%22%2c%22ignorefolders%22%3a0%2c%22method%22%3a%22playcount%22%7d%2c%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22playcount%22%2c%22operator%22%3a%22greaterthan%22%2c%22value%22%3a%5b%220%22%5d%7d%5d%7d%2c%22type%22%3a%22albums%22%7d</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(RecommendedAlbum.1.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RecommendedAlbum.1.Artist)]</label2>
@@ -4492,10 +4662,11 @@
                 <thumb>$INFO[Window(Home).Property(RecentAlbum.1.Fanart)]</thumb>
                 <visible>String.IsEmpty(Window(Home).Property(RecommendedAlbum.1.Title)) + !String.IsEmpty(Window(Home).Property(RecentAlbum.1.Title)) + Window.IsVisible(2123)</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="RecentConcertContent">
-        <content>
+        <content target="video"  sortorder="descending" sortby="dateadded" limit="10">videodb://musicvideos/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22musicvideos%22%7D</content>
+<!--		<content>
             <item>
                 <label>$INFO[Window.Property(RecentMusicVideo.1.Title)]</label>
                 <label2>$INFO[Window.Property(RecentMusicVideo.1.Artist)]</label2>
@@ -4676,10 +4847,11 @@
                 <thumb>$INFO[Window.Property(LatestMusicVideo.10.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window.Property(LatestMusicVideo.10.Title)) + !String.Contains(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="RandomConcertContent">
-        <content>
+        <content target="video">videodb://musicvideos/titles/?xsp=%7b%22limit%22%3a10%2c%22order%22%3a%7b%22direction%22%3a%22ascending%22%2c%22ignorefolders%22%3a0%2c%22method%22%3a%22random%22%7d%2c%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22playcount%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%220%22%5d%7d%5d%7d%2c%22type%22%3a%22musicvideos%22%7d</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(RandomMusicVideo.1.Title)]</label>
                 <label2>$INFO[Window.Property(RandomMusicVideo.1.Artist)]</label2>
@@ -4770,10 +4942,12 @@
                 <thumb>$INFO[Window(Home).Property(RandomMusicVideo.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(RandomMusicVideo.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="SuggestedConcertContent">
-        <content>
+        <!-- Suggested music videos is just 10 most played music videos -->
+		<content target="video">videodb://musicvideos/titles/?xsp=%7b%22limit%22%3a10%2c%22order%22%3a%7b%22direction%22%3a%22descending%22%2c%22ignorefolders%22%3a0%2c%22method%22%3a%22playcount%22%7d%2c%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22playcount%22%2c%22operator%22%3a%22greaterthan%22%2c%22value%22%3a%5b%220%22%5d%7d%5d%7d%2c%22type%22%3a%22musicvideos%22%7d</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(RecommendedMusicVideo.1.Title)]</label>
                 <label2>$INFO[Window.Property(RecommendedMusicVideo.1.Artist)]</label2>
@@ -4864,10 +5038,11 @@
                 <thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.10.Fanart)]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(RecommendedMusicVideo.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListOneContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.1.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListOne.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -4948,10 +5123,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListOne.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListOne.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListTwoContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.2.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListTwo.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5032,10 +5208,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListTwo.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListTwo.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListThreeContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.3.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListThree.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5116,10 +5293,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListThree.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListThree.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListFourContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.4.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListFour.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5200,10 +5378,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListFour.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListFour.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListFiveContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.5.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListFive.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5284,10 +5463,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListFive.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListFive.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListSixContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.6.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListSix.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5368,10 +5548,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListSix.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListSix.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListSevenContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.7.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListSeven.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5452,10 +5633,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListSeven.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListSeven.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListEightContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.8.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListEight.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5536,10 +5718,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListEight.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListEight.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListNineContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.9.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListNine.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5620,10 +5803,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListNine.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListNine.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListTenContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.10.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListTen.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5704,10 +5888,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListTen.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListTen.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListElevenContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.11.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListEleven.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5788,10 +5973,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListEleven.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListEleven.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListTwelveContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.12.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListTwelve.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5872,10 +6058,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListTwelve.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListTwelve.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListThirteenContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.13.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListThirteen.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -5956,10 +6143,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListThirteen.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListThirteen.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListFourteenContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.14.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListFourteen.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -6040,10 +6228,11 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListFourteen.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListFourteen.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListFifteenContent">
-        <content>
+        <content target="video" limit="10" sortby="random" sortorder="">$INFO[Skin.String(HomeItem.15.Playlist)]</content>
+<!--		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListFifteen.1.Title)]</label>
                 <onclick>PlayList.Clear</onclick>
@@ -6124,7 +6313,7 @@
                 <thumb>$INFO[Window(Home).Property(HomePlayListFifteen.10.Art(fanart))]</thumb>
                 <visible>!String.IsEmpty(Window(Home).Property(HomePlayListFifteen.10.Title))</visible>
             </item>
-        </content>
+        </content> -->
     </include>
     <include name="PlayListOneEpisodes">
         <content>
@@ -7303,7 +7492,7 @@
         </content>
     </include>
     <include name="PlayListFifteenEpisodes">
-        <content>
+		<content>
             <item id="1">
                 <label>$INFO[Window(Home).Property(HomePlayListFifteen.1.Title)]</label>
                 <label2>$INFO[Window(Home).Property(HomePlayListFifteen.1.EpisodeNo)] - $INFO[Window(Home).Property(HomePlayListFifteen.1.TVshowTitle)]</label2>
@@ -7432,6 +7621,12 @@
             </item>
         </content>
     </include>
+	
+	<include name="EmbuaryInfoNextAiredContent">
+	    <content sortby="" sortorder="" limit="" target="videos">plugin://script.embuary.info/nextaired/week?reload=$INFO[Window(Home).Property(widgetreload)]</content>
+	</include>
+	
+	
     <include name="NextAiredContent">
         <content>
             <item>
