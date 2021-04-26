@@ -453,12 +453,14 @@
         <param name="Size" default="82" />
         <param name="Texture" default="" />
         <param name="Selected" default="false" />
+		<param name="flipx" default="false" />
         <definition>
             <width>$PARAM[Size]</width>
             <height>$PARAM[Size]</height>
             <include content="OSDButtonClassicNoAlt" condition="String.IsEmpty(Skin.String(OSDLAF))">
                 <param name="Size" value="$PARAM[Size]" />
                 <param name="Texture" value="$PARAM[Texture]" />
+				<param name="flipx" value="$PARAM[flipx]" />
             </include>
             <include content="OSDButtonModernNoAlt" condition="Skin.String(OSDLAF,Modern)">
                 <param name="Size" value="$PARAM[Size]" />
@@ -512,12 +514,12 @@
         <radioposy>1</radioposy>
     </include>
     <include name="OSDButtonClassicNoAlt">
-        <textureradioonfocus colordiffuse="$VAR[MainColorTwo]">osd_classic/$PARAM[Texture]FO.png</textureradioonfocus>
-        <textureradioonnofocus>osd_classic/$PARAM[Texture]NF.png</textureradioonnofocus>
-        <textureradioofffocus colordiffuse="$VAR[MainColorTwo]">osd_classic/$PARAM[Texture]FO.png</textureradioofffocus>
-        <textureradiooffnofocus>osd_classic/$PARAM[Texture]NF.png</textureradiooffnofocus>
-        <textureradioondisabled colordiffuse="grey3">osd_classic/$PARAM[Texture]FO.png</textureradioondisabled>
-        <textureradiooffdisabled colordiffuse="grey3">osd_classic/$PARAM[Texture]NF.png</textureradiooffdisabled>
+        <textureradioonfocus colordiffuse="$VAR[MainColorTwo]" flipx="$PARAM[flipx]">osd_classic/$PARAM[Texture]FO.png</textureradioonfocus>
+        <textureradioonnofocus flipx="$PARAM[flipx]">osd_classic/$PARAM[Texture]NF.png</textureradioonnofocus>
+        <textureradioofffocus colordiffuse="$VAR[MainColorTwo]" flipx="$PARAM[flipx]">osd_classic/$PARAM[Texture]FO.png</textureradioofffocus>
+        <textureradiooffnofocus flipx="$PARAM[flipx]">osd_classic/$PARAM[Texture]NF.png</textureradiooffnofocus>
+        <textureradioondisabled colordiffuse="grey3" flipx="$PARAM[flipx]">osd_classic/$PARAM[Texture]FO.png</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="grey3" flipx="$PARAM[flipx]">osd_classic/$PARAM[Texture]NF.png</textureradiooffdisabled>
         <texturefocus></texturefocus>
         <texturenofocus></texturenofocus>
         <radiowidth>$PARAM[Size]</radiowidth>
