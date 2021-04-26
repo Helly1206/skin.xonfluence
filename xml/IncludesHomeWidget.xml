@@ -11,7 +11,7 @@
             <animation effect="fade" time="225" delay="1000">WindowOpen</animation>
             <animation effect="fade" time="150">WindowClose</animation>
             <control type="group">
-                <!-- Movies -->
+                <!-- Recent Movies -->
                 <left>285</left>
                 <top>90</top>
                 <visible>Library.HasContent(Movies)</visible>
@@ -54,7 +54,52 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                 </include>
             </control>
+			<control type="group">
+                <!-- Recent Movies (includes watched) -->
+                <left>285</left>
+                <top>90</top>
+                <visible>Library.HasContent(Movies)</visible>
+                <visible>
+					!Skin.HasSetting(EnableLargeWidgets) | 
+					[Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]
+				</visible>
+                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentMoviesWatched)</visible>
+                <include>VisibleFadeEffect</include>
+                <include content="VideoSmallWidgetLayout">
+                    <param name="Control">8041</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                    <param name="Custom">False</param>
+                    <param name="Content">RecentWithWatchedVideoContent</param>
+                </include>
+                <include content="VideoSmallWidgetButtons">
+                    <param name="Control">8041</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                </include>
+            </control>
             <control type="group">
+                <left>0</left>
+                <top>81</top>
+                <visible>Library.HasContent(Movies)</visible>
+                <visible>
+				[Skin.HasSetting(EnableLargeWidgets) + !Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]
+				</visible>
+                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentMoviesWatched)</visible>
+                <include>VisibleFadeEffect</include>
+                <include content="VideoLargeWidgetLayout">
+                    <param name="Control">8042</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                    <param name="Custom">False</param>
+                    <param name="Content">RecentWithWatchedVideoContent</param>
+                </include>
+                <include content="VideoLargeWidgetButtons">
+                    <param name="Control">8042</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                </include>
+            </control>
+            <!-- Random Movies -->
+			<control type="group">
                 <left>285</left>
                 <top>90</top>
                 <visible>Library.HasContent(Movies)</visible>
@@ -97,7 +142,8 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                 </include>
             </control>
-            <control type="group">
+            <!-- Suggested Movies -->
+			<control type="group">
                 <left>285</left>
                 <top>90</top>
                 <visible>Library.HasContent(Movies)</visible>
@@ -140,7 +186,8 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                 </include>
             </control>
-            <control type="group">
+            <!-- Unwatched Movies -->
+			<control type="group">
                 <left>285</left>
                 <top>90</top>
                 <visible>Library.HasContent(Movies)</visible>
@@ -183,7 +230,8 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                 </include>
             </control>
-            <control type="group">
+            <!-- Recent Episodes -->
+			<control type="group">
                 <!-- TVShows -->
                 <left>240</left>
                 <top>90</top>
@@ -233,6 +281,58 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                 </include>
             </control>
+			<!-- Recent Episodes (including watched) -->
+			<control type="group">
+                <!-- TVShows -->
+                <left>240</left>
+                <top>90</top>
+                <visible>Library.HasContent(TVShows)</visible>
+                <visible>
+					!Skin.HasSetting(EnableLargeWidgets) | 
+					[Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]
+				</visible>
+                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentEpisodesWatched)</visible>
+                <include>VisibleFadeEffect</include>
+                <include content="VideoSmallWidgetLayout">
+                    <param name="Control">8043</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                    <param name="Custom">False</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
+                    <param name="Content">RecentWithWatchedTVShowContent</param>
+                </include>
+                <include content="VideoSmallWidgetButtons">
+                    <param name="Control">8043</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                </include>
+            </control>
+            <control type="group">
+                <left>0</left>
+                <top>81</top>
+                <visible>Library.HasContent(TVShows)</visible>
+                <visible>
+				[Skin.HasSetting(EnableLargeWidgets) + !Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]
+				</visible>
+                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentEpisodesWatched)</visible>
+                <include>VisibleFadeEffect</include>
+                <include content="VideoLargeWidgetLayout">
+                    <param name="Control">8044</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                    <param name="Custom">False</param>
+                    <param name="Content">RecentWithWatchedTVShowContent</param>
+					<param name="episodeswidget">true</param>
+					<param name="label">$INFO[ListItem.Title]</param>
+                    <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
+                </include>
+                <include content="VideoLargeWidgetButtons">
+                    <param name="Control">8044</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                </include>
+            </control>
+			<!-- Random Episodes -->
             <control type="group">
                 <left>240</left>
                 <top>90</top>
@@ -282,6 +382,7 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                 </include>
             </control>
+			<!-- Suggested Episodes -->
             <control type="group">
                 <left>240</left>
                 <top>90</top>
@@ -327,6 +428,7 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                 </include>
             </control>
+			<!-- Recent Albums -->
             <control type="group">
                 <!-- Music -->
                 <left>360</left>
@@ -365,7 +467,8 @@
                     <param name="Control">8015</param>
                 </include>
             </control>
-            <control type="group">
+            <!-- Random Albums -->
+			<control type="group">
                 <left>360</left>
                 <top>90</top>
                 <visible>Library.HasContent(Music)</visible>
@@ -402,6 +505,7 @@
                     <param name="Control">8017</param>
                 </include>
             </control>
+			<!-- Suggested Albums -->
             <control type="group">
                 <left>360</left>
                 <top>90</top>
@@ -439,6 +543,7 @@
                     <param name="Control">8019</param>
                 </include>
             </control>
+			<!-- Recent Music Videos -->
             <control type="group">
                 <!-- Concerts -->
                 <left>240</left>
@@ -483,6 +588,52 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                 </include>
             </control>
+			<!-- Recent Music Videos (including watched) -->
+            <control type="group">
+                <!-- Concerts -->
+                <left>240</left>
+                <top>90</top>
+                <visible>Library.HasContent(MusicVideos)</visible>
+                <visible>
+					!Skin.HasSetting(EnableLargeWidgets) | 
+					[Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]
+				</visible>
+                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentConcertsWatched)</visible>
+                <include>VisibleFadeEffect</include>
+                <include content="VideoSmallWidgetLayout">
+                    <param name="Control">8045</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                    <param name="Custom">False</param>
+                    <param name="Content">RecentWithWatchedConcertContent</param>
+                </include>
+                <include content="VideoSmallWidgetButtons">
+                    <param name="Control">8045</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                </include>
+            </control>
+            <control type="group">
+                <left>0</left>
+                <top>81</top>
+                <visible>Library.HasContent(MusicVideos)</visible>
+                <visible>
+				[Skin.HasSetting(EnableLargeWidgets) + !Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | 
+				[Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]
+				</visible>
+                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentConcertsWatched)</visible>
+                <include>VisibleFadeEffect</include>
+                <include content="VideoLargeWidgetLayout">
+                    <param name="Control">8046</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                    <param name="Custom">False</param>
+                    <param name="Content">RecentWithWatchedConcertContent</param>
+                </include>
+                <include content="VideoLargeWidgetButtons">
+                    <param name="Control">8046</param>
+                    <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
+                </include>
+            </control>
+			<!-- Random Music Videos -->
             <control type="group">
                 <left>240</left>
                 <top>90</top>
@@ -526,6 +677,7 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                 </include>
             </control>
+			<!-- Suggested Music Videos -->
             <control type="group">
                 <left>240</left>
                 <top>90</top>
@@ -3175,6 +3327,9 @@
             </item>
         </content> -->
     </include>
+	<include name="RecentWithWatchedVideoContent">
+		<content target="video"  sortorder="descending" sortby="dateadded" limit="10">videodb://movies/titles/</content>
+	</include>	
     <include name="RandomVideoContent">
         <content sortby="random" sortorder="" limit="10" target="videos">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
 <!--		<content>
@@ -3808,6 +3963,10 @@
             </item>
         </content> -->
     </include>
+	<include name="RecentWithWatchedTVShowContent">
+        <!-- 10 episodes, unwatched, newest first -->
+		<content target="video" sortorder="descending" sortby="dateadded" limit="10">videodb://tvshows/titles/-1/-1/</content>
+	</include>	
     <include name="RandomTVShowContent">
         <content sortby="random" sortorder="" limit="10" target="videos">videodb://tvshows/titles/-1/-1/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</content>
 <!--		<content>
@@ -4849,6 +5008,9 @@
             </item>
         </content> -->
     </include>
+	<include name="RecentWithWatchedConcertContent">
+        <content target="video"  sortorder="descending" sortby="dateadded" limit="10">videodb://musicvideos/titles/</content>
+	</include>	
     <include name="RandomConcertContent">
         <content target="video">videodb://musicvideos/titles/?xsp=%7b%22limit%22%3a10%2c%22order%22%3a%7b%22direction%22%3a%22ascending%22%2c%22ignorefolders%22%3a0%2c%22method%22%3a%22random%22%7d%2c%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22playcount%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%220%22%5d%7d%5d%7d%2c%22type%22%3a%22musicvideos%22%7d</content>
 <!--		<content>
@@ -7713,11 +7875,13 @@
     </include>
     <include name="CustomWidgetVisibility">
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentMovies)</visible>
+		<visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentMoviesWatched)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RandomMovies)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),SuggestedMovies)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoNode)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),UPnPMovies)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentEpisodes)</visible>
+		<visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentEpisodesWatched)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RandomEpisodes)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),SuggestedEpisodes)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RandomArtists)</visible>
@@ -7725,6 +7889,7 @@
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RandomAlbums)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),SuggestedAlbums)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentConcerts)</visible>
+		<visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RecentConcertsWatched)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),RandomConcerts)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),SuggestedConcerts)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),UnWatchedMovies)</visible>

@@ -211,6 +211,15 @@
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(Movies)</visible>
                     </item>
+					<item>
+                        <description>Recent Movies (with watched)</description>
+                        <label>$LOCALIZE[32000]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentMoviesWatched)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(Movies)</visible>
+                    </item>
                     <item>
                         <description>Random Movies</description>
                         <label>$LOCALIZE[31196]</label>
@@ -243,6 +252,15 @@
                         <description>Recent Episodes</description>
                         <label>$LOCALIZE[31195]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentEpisodes)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(TVShows)</visible>
+                    </item>
+					<item>
+                        <description>Recent Episodes</description>
+                        <label>$LOCALIZE[32001]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentEpisodesWatched)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
@@ -304,6 +322,15 @@
                         <description>Recent Concerts</description>
                         <label>$LOCALIZE[31189]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentConcerts)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>Library.HasContent(MusicVideos)</visible>
+                    </item>
+					<item>
+                        <description>Recent Concerts</description>
+                        <label>$LOCALIZE[32002]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentConcertsWatched)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
