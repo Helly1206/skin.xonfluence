@@ -78,6 +78,12 @@
             <filename>Roboto-Bold.ttf</filename>
             <size>60</size>
         </font>
+		<font>
+            <name>font_MainMenuUpper</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>60</size>
+			<style>uppercase</style>
+        </font>
         <font>
             <name>WeatherTemp</name>
             <filename>Roboto-Bold.ttf</filename>
@@ -162,6 +168,12 @@
             <filename>Roboto-Bold.ttf</filename>
             <size>60</size>
         </font>
+		<font>
+            <name>font_MainMenuUpper</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>60</size>
+			<style>uppercase</style>
+        </font>
         <font>
             <name>WeatherTemp</name>
             <filename>Roboto-Bold.ttf</filename>
@@ -245,6 +257,12 @@
             <name>font_MainMenu</name>
             <filename>Roboto-Bold.ttf</filename>
             <size>60</size>
+        </font>
+		<font>
+            <name>font_MainMenuUpper</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>60</size>
+			<style>uppercase</style>
         </font>
         <font>
             <name>WeatherTemp</name>
@@ -338,6 +356,12 @@
             <size>52</size>
             <style>bold</style>
         </font>
+		<font>
+            <name>font_MainMenuUpper</name>
+            <filename>arial.ttf</filename>
+            <size>52</size>
+            <style>bold uppercase</style>
+        </font>
         <font>
             <name>WeatherTemp</name>
             <filename>arial.ttf</filename>
@@ -423,6 +447,12 @@
             <filename>Massive.ttf</filename>
             <size>66</size>
         </font>
+		<font>
+            <name>font_MainMenuUpper</name>
+            <filename>Massive.ttf</filename>
+            <size>66</size>
+			<style>uppercase</style>
+        </font>
         <font>
             <name>WeatherTemp</name>
             <filename>Massive.ttf</filename>
@@ -507,6 +537,12 @@
             <filename>Ubuntu-M.ttf</filename>
             <size>66</size>
         </font>
+		<font>
+            <name>font_MainMenuUpper</name>
+            <filename>Ubuntu-M.ttf</filename>
+            <size>66</size>
+			<style>uppercase</style>
+        </font>
         <font>
             <name>WeatherTemp</name>
             <filename>Ubuntu-M.ttf</filename>
@@ -590,6 +626,12 @@
             <name>font_MainMenu</name>
             <filename>Ubuntu-B.ttf</filename>
             <size>66</size>
+        </font>
+		<font>
+            <name>font_MainMenuUpper</name>
+            <filename>Ubuntu-B.ttf</filename>
+            <size>66</size>
+			<style>uppercase</style>
         </font>
         <font>
             <name>WeatherTemp</name>

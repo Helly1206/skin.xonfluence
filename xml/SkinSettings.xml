@@ -800,6 +800,18 @@
                                 <selected>!Skin.HasSetting(AutoVisableSubMenu)</selected>
                                 <include>MenuButton</include>
                             </control>
+							<control type="radiobutton" id="154">
+                                <description>Main menu in all caps</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>$LOCALIZE[32003]</label>
+                                <onclick>Skin.ToggleSetting(MainMenuAllCaps)</onclick>
+                                <selected>Skin.HasSetting(MainMenuAllCaps)</selected>
+                                <include>MenuButton</include>
+                            </control>
                             <control type="radiobutton" id="141">
                                 <description>large widget layout</description>
                                 <width>1125</width>

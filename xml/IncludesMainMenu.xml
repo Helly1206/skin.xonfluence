@@ -136,6 +136,20 @@
                 <aligny>center</aligny>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
+				<visible>!Skin.HasSetting(MainMenuAllCaps)</visible>
+            </control>
+			<control type="label">
+                <left>8</left>
+                <top>7</top>
+                <width>435</width>
+                <height>90</height>
+                <font>font_MainMenuUpper</font>
+                <textcolor>grey3</textcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <scroll>true</scroll>
+                <label>$INFO[ListItem.Label]</label>
+				<visible>Skin.HasSetting(MainMenuAllCaps)</visible>
             </control>
         </itemlayout>
         <focusedlayout height="90" width="450">
@@ -165,6 +179,7 @@
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <visible>!Control.HasFocus(9000)</visible>
+				<visible>!Skin.HasSetting(MainMenuAllCaps)</visible>
             </control>
             <control type="label">
                 <left>8</left>
@@ -178,6 +193,35 @@
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <visible>Control.HasFocus(9000)</visible>
+				<visible>!Skin.HasSetting(MainMenuAllCaps)</visible>
+            </control>
+			<control type="label">
+                <left>8</left>
+                <top>7</top>
+                <width>435</width>
+                <height>90</height>
+                <font>font_MainMenuUpper</font>
+                <textcolor>grey3</textcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <scroll>true</scroll>
+                <label>$INFO[ListItem.Label]</label>
+                <visible>!Control.HasFocus(9000)</visible>
+				<visible>Skin.HasSetting(MainMenuAllCaps)</visible>
+            </control>
+            <control type="label">
+                <left>8</left>
+                <top>7</top>
+                <width>435</width>
+                <height>90</height>
+                <font>font_MainMenuUpper</font>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <scroll>true</scroll>
+                <label>$INFO[ListItem.Label]</label>
+                <visible>Control.HasFocus(9000)</visible>
+				<visible>Skin.HasSetting(MainMenuAllCaps)</visible>
             </control>
         </focusedlayout>
     </include>
