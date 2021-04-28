@@ -282,6 +282,15 @@
                     <onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
                     <visible>Container.Content(addons)</visible>
                 </control>
+				<control type="button" id="205">
+                    <description>Play Random</description>
+                    <textwidth>352</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>$ADDON[script.playrandomvideos 32100]</label>
+                    <onclick>RunScript(script.playrandomvideos, "$INFO[ListItem.FolderPath]", "label=$INFO[ListItem.Label]", singlevideo)</onclick>
+					<visible>System.HasAddon(script.playrandomvideos)</visible>
+					<visible>ListItem.IsFolder + !ListItem.IsParentFolder + !String.Contains(ListItem.FolderPath,plugin) + !String.Contains(ListItem.FolderPath,addons) + !String.Contains(ListItem.FolderPath,sources)</visible>
+                </control>
                 <include>CommonNowPlaying_Controls</include>
             </control>
         </control>
