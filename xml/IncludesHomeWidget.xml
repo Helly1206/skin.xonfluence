@@ -2293,6 +2293,23 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
+					<control type="image">
+                        <left>208</left>
+                        <top>238</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <texture>OverlayWatching.png</texture>
+                        <visible>ListItem.IsResumable</visible>
+                    </control>
+                    <control type="image">
+                        <left>205</left>
+                        <top>235</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Overlay]</texture>
+                        <visible>!ListItem.IsResumable</visible>
+                    </control>
                 </itemlayout>
                 <focusedlayout height="330" width="270">
                     <control type="image">
@@ -2378,6 +2395,23 @@
                         <label>$INFO[ListItem.Label]</label>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
                     </control>
+					<control type="image">
+                        <left>208</left>
+                        <top>238</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <texture>OverlayWatching.png</texture>
+                        <visible>ListItem.IsResumable</visible>
+                    </control>
+                    <control type="image">
+                        <left>205</left>
+                        <top>235</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Overlay]</texture>
+                        <visible>!ListItem.IsResumable</visible>
+                    </control>
                 </focusedlayout>
                 <include>$PARAM[Content]</include>
             </control>
@@ -2451,6 +2485,23 @@
                         <align>center</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
+                    </control>
+					<control type="image">
+                        <left>257</left>
+                        <top>352</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <texture>OverlayWatching.png</texture>
+                        <visible>ListItem.IsResumable</visible>
+                    </control>
+                    <control type="image">
+                        <left>250</left>
+                        <top>350</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Overlay]</texture>
+                        <visible>!ListItem.IsResumable</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout height="428" width="292">
@@ -2528,6 +2579,23 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+					<control type="image">
+                        <left>257</left>
+                        <top>352</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <texture>OverlayWatching.png</texture>
+                        <visible>ListItem.IsResumable</visible>
+                    </control>
+                    <control type="image">
+                        <left>250</left>
+                        <top>350</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Overlay]</texture>
+                        <visible>!ListItem.IsResumable</visible>
                     </control>
                 </focusedlayout>
                 <include>$PARAM[Content]</include>
@@ -2623,6 +2691,23 @@
                         <align>center</align>
                         <aligny>center</aligny>
                         <label>$PARAM[label]</label>
+                    </control>
+					<control type="image">
+                        <left>318</left>
+                        <top>214</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <texture>OverlayWatching.png</texture>
+                        <visible>ListItem.IsResumable</visible>
+                    </control>
+                    <control type="image">
+                        <left>315</left>
+                        <top>212</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Overlay]</texture>
+                        <visible>!ListItem.IsResumable</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout height="330" width="360">
@@ -2731,6 +2816,23 @@
                         <label>$PARAM[label]</label>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
                     </control>
+					<control type="image">
+                        <left>318</left>
+                        <top>214</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <texture>OverlayWatching.png</texture>
+                        <visible>ListItem.IsResumable</visible>
+                    </control>
+                    <control type="image">
+                        <left>315</left>
+                        <top>212</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Overlay]</texture>
+                        <visible>!ListItem.IsResumable</visible>
+                    </control>
                 </focusedlayout>
                 <include>$PARAM[Content]</include>
             </control>
@@ -2826,6 +2928,23 @@
                         <align>center</align>
                         <aligny>center</aligny>
                         <label>$PARAM[label]</label>
+                    </control>
+					<control type="image">
+                        <left>424</left>
+                        <top>307</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <texture>OverlayWatching.png</texture>
+                        <visible>ListItem.IsResumable</visible>
+                    </control>
+                    <control type="image">
+                        <left>420</left>
+                        <top>302</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Overlay]</texture>
+                        <visible>!ListItem.IsResumable</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout height="428" width="450">
@@ -2925,6 +3044,23 @@
                         <aligny>center</aligny>
                         <label>$PARAM[label]</label>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+					<control type="image">
+                        <left>424</left>
+                        <top>307</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <texture>OverlayWatching.png</texture>
+                        <visible>ListItem.IsResumable</visible>
+                    </control>
+                    <control type="image">
+                        <left>420</left>
+                        <top>302</top>
+                        <width>35</width>
+                        <height>35</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Overlay]</texture>
+                        <visible>!ListItem.IsResumable</visible>
                     </control>
                 </focusedlayout>
                 <include>$PARAM[Content]</include>
