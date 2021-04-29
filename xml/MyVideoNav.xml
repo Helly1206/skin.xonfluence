@@ -287,9 +287,9 @@
                     <textwidth>352</textwidth>
                     <include>ButtonCommonValues</include>
                     <label>$ADDON[script.playrandomvideos 32100]</label>
-                    <onclick>RunScript(script.playrandomvideos, "$INFO[ListItem.FolderPath]", "label=$INFO[ListItem.Label]", singlevideo)</onclick>
+					<onclick>RunScript(script.playrandomvideos, "$INFO[Container.FolderPath]", "label=$INFO[Container.FolderName]", singlevideo)</onclick>
 					<visible>System.HasAddon(script.playrandomvideos)</visible>
-					<visible>ListItem.IsFolder + !ListItem.IsParentFolder + !String.Contains(ListItem.FolderPath,plugin) + !String.Contains(ListItem.FolderPath,addons) + !String.Contains(ListItem.FolderPath,sources)</visible>
+					<visible>!ListItem.IsParentFolder + !String.Contains(Container.FolderPath,plugin) + !String.Contains(Container.FolderPath,addons) + !String.Contains(Container.FolderPath,sources)</visible>
                 </control>
                 <include>CommonNowPlaying_Controls</include>
             </control>
