@@ -289,7 +289,7 @@
                     <label>$ADDON[script.playrandomvideos 32100]</label>
 					<onclick>RunScript(script.playrandomvideos, "$INFO[Container.FolderPath]", "label=$INFO[Container.FolderName]", singlevideo)</onclick>
 					<visible>System.HasAddon(script.playrandomvideos)</visible>
-					<visible>!ListItem.IsParentFolder + !String.Contains(Container.FolderPath,plugin) + !String.Contains(Container.FolderPath,addons) + !String.Contains(Container.FolderPath,sources)</visible>
+					<visible>!String.Contains(Container.FolderPath,plugin) + !String.Contains(Container.FolderPath,addons) + !String.Contains(Container.FolderPath,sources)</visible>
                 </control>
                 <include>CommonNowPlaying_Controls</include>
             </control>
