@@ -341,7 +341,7 @@
                 <include>Dimensions_Fullscreen</include>
                 <texture fallback="black-back.png">$VAR[SkinBackgroundPath]media-overlay.jpg</texture>
                 <visible>Skin.HasSetting(NoDiffuseVizFanart)</visible>
-                <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+                <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
             </control>
             <control type="group">
             	<visible>!Skin.HasSetting(HideHomeNowPlaying) + Skin.HasSetting(DisableSlideShowArt) + Skin.HasSetting(ScriptEnableExtraFanart)</visible>

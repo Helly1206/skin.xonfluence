@@ -361,7 +361,7 @@
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
                 <visible>!String.IsEmpty(Control.GetLabel(5043))</visible>
-                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))]</visible>
                 <visible>Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             </control>
             <control type="multiimage">
@@ -373,7 +373,7 @@
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
                 <visible>!String.IsEmpty(Control.GetLabel(5044))</visible>
-                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))]</visible>
                 <visible>Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             </control>
             <control type="image">
@@ -382,10 +382,19 @@
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <texture background="true">$INFO[Player.Art(fanart)]</texture>
                 <visible>!String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))</visible>
-                <visible>Skin.HasSetting(DisableSlideShowArt) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
                 <fadetime>600</fadetime>
             </control>
-            <control type="multiimage">
+			<!-- Artist Slideshow addon images - Support for versions 3.x and above of addon -->
+			<control type="image">
+                <include>Dimensions_Fullscreen</include>
+                <fadetime>600</fadetime>
+                <aspectratio>keep</aspectratio>
+                <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+                <texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
+                <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
+            </control>
+<!--            <control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
                 <include>BackgroundTimePerImage</include>
                 <randomize>true</randomize>
@@ -394,7 +403,7 @@
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
                 <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
-            </control>
+            </control> -->
         </control>
     </include>
     <include name="MusicArtOverVisualisation">
@@ -410,7 +419,7 @@
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
                 <visible>!String.IsEmpty(Control.GetLabel(5043))</visible>
-                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowTransparent)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))]</visible>
                 <visible>Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             </control>
             <control type="multiimage">
@@ -423,7 +432,7 @@
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
                 <imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
                 <visible>!String.IsEmpty(Control.GetLabel(5044))</visible>
-                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowTransparent)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))]</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | [!Skin.HasSetting(DisableSlideShowArt) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))]</visible>
                 <visible>Skin.HasSetting(ScriptEnableExtraFanart)</visible>
             </control>
             <control type="image">
@@ -434,18 +443,16 @@
                 <colordiffuse>AAFFFFFF</colordiffuse>
                 <fadetime>600</fadetime>
                 <visible>!String.IsEmpty(Player.Art(fanart)) + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044))</visible>
-                <visible>Skin.HasSetting(DisableSlideShowArt) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+                <visible>Skin.HasSetting(DisableSlideShowArt) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
             </control>
-            <control type="multiimage">
+            <control type="image">
                 <include>Dimensions_Fullscreen</include>
-                <include>BackgroundTimePerImage</include>
-                <randomize>true</randomize>
                 <fadetime>600</fadetime>
                 <aspectratio>keep</aspectratio>
                 <include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
-                <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+                <texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
                 <colordiffuse>AAFFFFFF</colordiffuse>
-                <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+                <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
             </control>
         </control>
     </include>
