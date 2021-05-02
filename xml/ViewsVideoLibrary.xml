@@ -1057,7 +1057,7 @@
                     <top>180</top>
                     <width>540</width>
                     <height>38</height>
-                    <label fallback="10005">$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
+                    <label fallback="10005">$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),,] $LOCALIZE[16102] - $INFO[ListItem.Property(UnWatchedEpisodes),,] $LOCALIZE[16101])[/COLOR]</label>
                     <align>left</align>
                     <aligny>center</aligny>
                     <font>font12</font>
@@ -1182,7 +1182,7 @@
                     <top>368</top>
                     <width>765</width>
                     <height>45</height>
-                    <label>$INFO[ListItem.Season, $LOCALIZE[20373] : ] $INFO[ListItem.episode, $LOCALIZE[20359] : ] $INFO[ListItem.premiered, $LOCALIZE[31322] : ]</label>
+                    <label>$LOCALIZE[20373] : $INFO[ListItem.Season] $LOCALIZE[20359] : $INFO[ListItem.episode] $LOCALIZE[31322] : $INFO[ListItem.premiered]</label>
                     <align>center</align>
                     <aligny>center</aligny>
                     <font>font12</font>
@@ -1244,7 +1244,7 @@
                     <top>555</top>
                     <width>765</width>
                     <height>38</height>
-                    <label>[COLOR=white]$LOCALIZE[20360]:[/COLOR] $INFO[ListItem.Property(WatchedEpisodes),([COLOR=$VAR[MainColorOne]],[/COLOR]) $LOCALIZE[16102]] $INFO[ListItem.Property(UnWatchedEpisodes),([COLOR=$VAR[MainColorOne]],[/COLOR]) $LOCALIZE[16101]]</label>
+                    <label>[COLOR=white]$LOCALIZE[20360]:[/COLOR] ([COLOR=$VAR[MainColorOne]]$INFO[ListItem.Property(WatchedEpisodes)][/COLOR]) $LOCALIZE[16102] ([COLOR=$VAR[MainColorOne]]$INFO[ListItem.Property(UnWatchedEpisodes)][/COLOR]) $LOCALIZE[16101]</label>
                     <align>center</align>
                     <aligny>center</aligny>
                     <font>font12</font>
