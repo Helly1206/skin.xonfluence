@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol></defaultcontrol>
-    <onunload>Skin.SetString(LastVideoPlayed,PlayMedia("$INFO[Player.Filenameandpath]"))</onunload>
+    
+	<onload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
+	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv)] + 
+					  Skin.HasSetting(AutoDisableHWAccel)">ClearProperty(videoplayer.usedxva2,Home)</onload>
+	<onload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
+	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv) | String.EndsWith(Player.FileName,mkv)] + 
+					  Skin.HasSetting(AutoDisableHWAccel)">RunScript(script.embuary.helper,action=getkodisetting,setting=videoplayer.usedxva2)</onload>
+	<onload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
+	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv) | String.EndsWith(Player.FileName,mkv)] + 
+					  Skin.HasSetting(AutoDisableHWAccel)">RunScript(script.embuary.helper,action=setkodisetting,setting=videoplayer.usedxva2,value=false)</onload>
+	<onunload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
+	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv) | String.EndsWith(Player.FileName,mkv)] + 
+					  Skin.HasSetting(AutoDisableHWAccel)">RunScript(script.embuary.helper,action=setkodisetting,setting=videoplayer.usedxva2,value=$INFO[Window(Home).Property(videoplayer.usedxva2)])</onunload>
+    <onunload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
+	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv) | String.EndsWith(Player.FileName,mkv)] + 
+					  Skin.HasSetting(AutoDisableHWAccel)">ClearProperty(videoplayer.usedxva2,Home)</onunload>				  
+	
+	<onunload>Skin.SetString(LastVideoPlayed,PlayMedia("$INFO[Player.Filenameandpath]"))</onunload>
     <controls>
         <!-- Intro infos -->
         <control type="group" id="1">

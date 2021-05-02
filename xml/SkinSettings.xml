@@ -681,6 +681,19 @@
                                 <onclick condition="Skin.String(MenuLAF,GraphFocused)">Skin.SetString(MenuLAF,GraphText)</onclick>
                                 <onclick condition="Skin.String(MenuLAF,GraphText)">Skin.Reset(MenuLAF)</onclick>
                             </control>
+							<control type="radiobutton" id="135">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[32006]</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(AutoDisableHWAccel)</onclick>
+                                <selected>Skin.HasSetting(AutoDisableHWAccel)</selected>
+								<visible>System.Platform.Android</visible>
+								<visible>System.HasAddon(script.embuary.helper)</visible>
+                            </control>
                         </control>
                         <control type="scrollbar" id="2061">
                             <left>1155</left>
