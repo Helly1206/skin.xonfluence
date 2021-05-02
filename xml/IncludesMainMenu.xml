@@ -883,10 +883,6 @@
         <onload condition="Skin.String(HomeItem.12.Path,ActivateWindow(Pictures))">Skin.SetString(HomeItem.12.Path,ActivateWindow(Pictures,Pictures))</onload>
         <onload>Skin.SetBool(Updates_V312)</onload>
     </include>
-    <include name="UpdatesV314">
-        <onload>RunScript(special://skin/scripts/CopyKeymap.py)</onload>
-        <onload>Skin.SetBool(Updates_V314)</onload>
-    </include>
     <include name="UpdatesV320">
         <onload condition="Skin.String(HomeItem.1.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.1.Path,ActivateWindow(1197))</onload>
         <onload condition="Skin.String(HomeItem.2.Path,ActivateWindow(Music))">Skin.SetString(HomeItem.2.Path,ActivateWindow(1197))</onload>

@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">10</defaultcontrol>
+<!--    <defaultcontrol always="true">10</defaultcontrol> -->
     <include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
     <include>UnloadsScripts</include>
     <onload condition="Skin.HasSetting(EnableFanartScript) + Integer.IsGreater(Skin.String(FanArtCycleRate),0)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onload>
     <onload condition="!Skin.String(KodiIntroVideo)">Skin.SetString(KodiIntroVideo,special://skin/extras/Intro/KODI-Intro-Video.mp4)</onload>
-    <controls>
+    
+    <!-- No startup playlist or intro video, or they have played already -->
+    <onload condition="[!Skin.HasSetting(UseStartUpPlaylistPath) + Skin.HasSetting(HideKodiIntro)] | !String.IsEmpty(Window(Home).Property(StartupMediaStarted))">ReplaceWindow($INFO[System.StartupWindow])</onload>
+    <!-- Startup playlist -->
+	<onload condition="!String.IsEmpty(Skin.String(StartUpPlaylistPath)) + Skin.HasSetting(UseStartUpPlaylistPath) + String.IsEmpty(Window(Home).Property(StartupPlaylistStarted))">AlarmClock(playit,PlayMedia($ESCINFO[Skin.String(StartUpPlaylistPath)]),00:01,silent)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(StartUpPlaylistPath)) + Skin.HasSetting(UseStartUpPlaylistPath) + String.IsEmpty(Window(Home).Property(StartupPlaylistStarted))">SetProperty(StartupMediaStarted,1,home)</onload>
+	<!-- Into video -->
+	<onload condition="!String.IsEmpty(Skin.String(KodiIntroVideo)) + !Skin.HasSetting(HideKodiIntro) + String.IsEmpty(Window(Home).Property(StartupPlaylistStarted))">AlarmClock(playit,PlayMedia($ESCINFO[Skin.String(KodiIntroVideo)]),00:01,silent)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(KodiIntroVideo)) + !Skin.HasSetting(HideKodiIntro) + String.IsEmpty(Window(Home).Property(StartupPlaylistStarted))">SetProperty(StartupMediaStarted,1,home)</onload>
+	
+	<controls>
         <control type="image">
             <description>Startup Background Image</description>
             <include>Dimensions_Fullscreen</include>
@@ -14,7 +24,7 @@
             <texture fallback="$VAR[SkinBackgroundPath]startup.jpg">$INFO[Skin.String(StartUpBackgroundPath)]</texture>
             <visible>!Skin.HasSetting(HideStartUpBackground)</visible>
         </control>
-        <control type="button" id="10">
+<!--        <control type="button" id="10">
             <description>trigger</description>
             <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
             <texturenofocus></texturenofocus>
@@ -36,7 +46,7 @@
             <texturenofocus></texturenofocus>
             <texturefocus></texturefocus>
             <visible>Skin.HasSetting(UseStartUpPlaylistPath)</visible>
-        </control>
+        </control> -->
         <include>CommonBackground</include>
     </controls>
 </window>

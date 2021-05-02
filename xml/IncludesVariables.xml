@@ -745,13 +745,13 @@
         <value>$LOCALIZE[1036]</value>
     </variable>
     <variable name="FavBtnCommand">
-        <value condition="String.IsEmpty(Skin.String(UsrFavBtnCmd.Path))">ActivateWindow(Favourites),return</value>
+        <value condition="String.IsEmpty(Skin.String(UsrFavBtnCmd.Path)) + System.HasAddon(script.favourites)">ActivateWindow(Favourites,return)</value>
         <value condition="Skin.String(UsrFavBtnCmd.Path,LastVideo) + Skin.String(LastVideoPlayed)">$INFO[Skin.String(LastVideoPlayed)]</value>
         <value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Movies)">ActivateWindow(2125)</value>
-        <value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),TVShows)">ActivateWindow(2124)</value>
+        <value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + System.HasAddon(service.skin.widgets) + String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),TVShows)">ActivateWindow(2124)</value>
         <value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Music)">ActivateWindow(2123)</value>
         <value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Concerts)">ActivateWindow(2126)</value>
-        <value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest)">ActivateWindow(Favourites),return</value>
+        <value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + System.HasAddon(script.favourites)">ActivateWindow(Favourites,return)</value>
         <value>$INFO[Skin.String(UsrFavBtnCmd.Path)]</value>
     </variable>
     <variable name="EpisodeThumbImage">

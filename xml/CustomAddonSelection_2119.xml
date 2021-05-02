@@ -162,7 +162,7 @@
                         <onclick>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(Favourites),return)</onclick>
                         <onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31338])</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,home)</onclick>
-                        <visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+                        <visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd) + System.HasAddon(script.favourites)</visible>
                     </item>
                     <item>
                         <description>Favourites</description>
@@ -199,7 +199,7 @@
                         <onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31194])</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,home)</onclick>
                         <visible>String.IsEqual(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
-                        <visible>Library.HasContent(TVShows)</visible>
+                        <visible>Library.HasContent(TVShows) + System.HasAddon(service.skin.widgets)</visible>
                     </item>
                     <item>
                         <description>Suggested Music</description>

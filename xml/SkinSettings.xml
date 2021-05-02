@@ -10262,6 +10262,30 @@
                                 <enable>!String.IsEmpty(Skin.String(LyricScript_Path))</enable>
                                 <onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
                             </control>
+							<control type="radiobutton" id="652">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[32004]</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(DisableScriptFavourites)</onclick>
+                                <selected>!Skin.HasSetting(DisableScriptFavourites)</selected>
+                                <enable>System.HasAddon(script.favourites)</enable>
+                            </control>
+							<control type="radiobutton" id="653">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[32005]</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(DisableScriptStats)</onclick>
+                                <selected>!Skin.HasSetting(DisableScriptStats)</selected>
+                                <enable>System.HasAddon(service.library.data.provider)</enable>
+                            </control>
                             <control type="radiobutton" id="637">
                                 <width>1125</width>
                                 <height>60</height>
