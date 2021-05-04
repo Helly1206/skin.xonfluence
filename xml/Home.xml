@@ -14,7 +14,7 @@
     <onload condition="Skin.HasSetting(HolidayEffects) + System.Date(1-6,11-23)">Skin.Reset(HolidayEffects)</onload>
     <onload condition="String.IsEmpty(Window.Property(PingAlarmSet)) + Skin.HasSetting(EnablePingWOL) + Skin.String(WOLPingTimer) + Skin.String(PingMacAddr)">AlarmClock(WOLPingAlarm,WakeOnLan($INFO[Skin.String(PingMacAddr)]),$INFO[Skin.String(WOLPingTimer)]:00,silent,loop)</onload>
     <onload condition="Skin.HasSetting(EnablePingWOL) + Skin.String(WOLPingTimer) + Skin.String(PingMacAddr)">SetProperty(PingAlarmSet,1)</onload>
-    <onload condition="System.HasAddon(script.favourites) + !Skin.HasSetting(DisableScriptFavourites)">RunScript(script.favourites)</onload>
+    <onload condition="System.HasAddon(script.favourites) + Skin.HasSetting(EnableScriptFavourites)">RunScript(script.favourites)</onload>
     <onload condition="!Skin.HasSetting(DisableSlideShowArt)">RunScript(script.artistslideshow, daemon=True)</onload>
 <!--    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + Library.HasContent(Movies)">RunScript(script.randomandlastitems,type=Movie,limit=12,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
     <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.1.Type,VideoPlayList) | Skin.String(HomeItem.1.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.1.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistOne)</onload>
@@ -41,7 +41,7 @@
     <onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
     <onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(3)">ClearProperty(MusicDirectLink)</onunload>
     <controls>
-        <include condition="Skin.HasSetting(EnableHomeStats) + !Skin.HasSetting(DisableScriptStats) + System.HasAddon(service.library.data.provider)">VideoNodeStatsList</include>
+        <include condition="Skin.HasSetting(EnableHomeStats) + Skin.HasSetting(EnableScriptStats) + System.HasAddon(service.library.data.provider)">VideoNodeStatsList</include>
         <include>CommonBackground</include>
         <include condition="Skin.HasSetting(EnableRainDropEffect) | Skin.HasSetting(HolidayEffects)">AnimatedBackgroundEffect</include>
         <control type="image">

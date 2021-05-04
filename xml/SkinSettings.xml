@@ -10283,9 +10283,9 @@
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
                                 <include>MenuButton</include>
-                                <onclick>Skin.ToggleSetting(DisableScriptFavourites)</onclick>
-                                <selected>!Skin.HasSetting(DisableScriptFavourites)</selected>
-                                <enable>System.HasAddon(script.favourites)</enable>
+								<onclick condition="!System.HasAddon(script.favourites) + !Skin.HasSetting(EnableScriptFavourites)">InstallAddon(script.favourites)</onclick>
+                                <onclick>Skin.ToggleSetting(EnableScriptFavourites)</onclick>
+                                <selected>Skin.HasSetting(EnableScriptFavourites)</selected>
                             </control>
 							<control type="radiobutton" id="653">
                                 <width>1125</width>
@@ -10295,9 +10295,21 @@
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
                                 <include>MenuButton</include>
-                                <onclick>Skin.ToggleSetting(DisableScriptStats)</onclick>
-                                <selected>!Skin.HasSetting(DisableScriptStats)</selected>
-                                <enable>System.HasAddon(service.library.data.provider)</enable>
+                                <onclick condition="!System.HasAddon(service.library.data.provider) + !Skin.HasSetting(EnableScriptStats)">InstallAddon(service.library.data.provider)</onclick>
+								<onclick>Skin.ToggleSetting(EnableScriptStats)</onclick>
+                                <selected>Skin.HasSetting(EnableScriptStats)</selected>
+                            </control>
+							<control type="button" id="654">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32007]</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Addon.OpenSettings(service.library.data.provider)</onclick>
+                                <enable>Skin.HasSetting(EnableScriptStats)</enable>
+                                <visible>System.HasAddon(service.library.data.provider)</visible>
                             </control>
                             <control type="radiobutton" id="637">
                                 <width>1125</width>
