@@ -19,11 +19,13 @@
 					  Skin.HasSetting(AutoDisableHWAccel)">ClearProperty(videoplayer.usemediacodecsurface,Home)</onunload>				  
 	
 	<onunload>Skin.SetString(LastVideoPlayed,PlayMedia("$INFO[Player.Filenameandpath]"))</onunload>
+	<onunload condition="!Skin.HasSetting(HideInfoStartOSD)">ClearProperty(ShowInfoStartDone,Home)</onunload>
     <controls>
         <!-- Intro infos -->
         <control type="group" id="1">
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
-            <visible>Integer.IsGreater(Player.time,3) + !Integer.IsGreater(Player.time,8) + !Skin.HasSetting(HideInfoStartOSD)</visible>
+			<visible>!String.IsEmpty(Window(Home).Property(ShowInfoStart))</visible>
+<!--            <visible>Integer.IsGreater(Player.Time,3) + !Integer.IsGreater(Player.Time,8) + !Skin.HasSetting(HideInfoStartOSD)</visible> -->
             <visible>![Window.IsActive(VideoOSD) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <visible>!Player.Paused  + !Player.ShowInfo</visible>
             <animation effect="fade" time="150">VisibleChange</animation>

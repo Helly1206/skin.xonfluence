@@ -1,0 +1,9 @@
+<window type="dialog" id="2134">
+    <visible>Player.HasVideo + !Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStart)) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone))</visible>
+    
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD)">SetProperty(ShowInfoStart,true,home)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:03,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone))">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:03,silent)</onload>
+
+    <controls />
+</window>
