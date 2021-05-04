@@ -4,19 +4,19 @@
     
 	<onload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
 	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv)] + 
-					  Skin.HasSetting(AutoDisableHWAccel)">ClearProperty(videoplayer.usedxva2,Home)</onload>
+					  Skin.HasSetting(AutoDisableHWAccel)">ClearProperty(videoplayer.usemediacodecsurface,Home)</onload>
 	<onload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
 	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv) | String.EndsWith(Player.FileName,mkv)] + 
-					  Skin.HasSetting(AutoDisableHWAccel)">RunScript(script.embuary.helper,action=getkodisetting,setting=videoplayer.usedxva2)</onload>
+					  Skin.HasSetting(AutoDisableHWAccel)">RunScript(script.embuary.helper,action=getkodisetting,setting=videoplayer.usemediacodecsurface)</onload>
 	<onload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
 	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv) | String.EndsWith(Player.FileName,mkv)] + 
-					  Skin.HasSetting(AutoDisableHWAccel)">RunScript(script.embuary.helper,action=setkodisetting,setting=videoplayer.usedxva2,value=false)</onload>
+					  Skin.HasSetting(AutoDisableHWAccel)">RunScript(script.embuary.helper,action=setkodisetting,setting=videoplayer.usemediacodecsurface,value=false)</onload>
 	<onunload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
 	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv) | String.EndsWith(Player.FileName,mkv)] + 
-					  Skin.HasSetting(AutoDisableHWAccel)">RunScript(script.embuary.helper,action=setkodisetting,setting=videoplayer.usedxva2,value=$INFO[Window(Home).Property(videoplayer.usedxva2)])</onunload>
+					  Skin.HasSetting(AutoDisableHWAccel)">RunScript(script.embuary.helper,action=setkodisetting,setting=videoplayer.usemediacodecsurface,value=$INFO[Window(Home).Property(videoplayer.usemediacodecsurface)])</onunload>
     <onunload condition="System.Platform.Android + System.HasAddon(script.embuary.helper) + 
 	                  [String.EndsWith(Player.FileName,avi) | String.EndsWith(Player.FileName,wmv) | String.EndsWith(Player.FileName,mkv)] + 
-					  Skin.HasSetting(AutoDisableHWAccel)">ClearProperty(videoplayer.usedxva2,Home)</onunload>				  
+					  Skin.HasSetting(AutoDisableHWAccel)">ClearProperty(videoplayer.usemediacodecsurface,Home)</onunload>				  
 	
 	<onunload>Skin.SetString(LastVideoPlayed,PlayMedia("$INFO[Player.Filenameandpath]"))</onunload>
     <controls>
