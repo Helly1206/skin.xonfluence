@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="2129">
+    <defaultcontrol always="true">10</defaultcontrol>
+    <coordinates>
+        <left>502</left>
+        <top>345</top>
+    </coordinates>
+    <include>dialogeffect</include>
+    <controls>
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>915</width>
+            <height>360</height>
+            <texture border="40">$VAR[DialogPath]DialogBack.png</texture>
+        </control>
+        <control type="image">
+            <description>Dialog Header image</description>
+            <left>60</left>
+            <top>24</top>
+            <width>795</width>
+            <height>60</height>
+            <texture>$VAR[DialogPath]dialogheader.png</texture>
+        </control>
+        <control type="label" id="1">
+            <description>header label</description>
+            <left>60</left>
+            <top>30</top>
+            <width>795</width>
+            <height>45</height>
+            <font>font13_title</font>
+            <label>$LOCALIZE[31041]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <textcolor>selected</textcolor>
+            <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="button">
+            <description>Close Window button</description>
+            <left>740</left>
+            <top>24</top>
+            <onclick>PreviousMenu</onclick>
+            <include>DialogCloseButton</include>
+            <onleft>10</onleft>
+            <onright>10</onright>
+            <onup>10</onup>
+            <ondown>10</ondown>
+        </control>
+        <control type="label" id="2">
+            <description>dialog line 1</description>
+            <left>45</left>
+            <top>128</top>
+            <width>825</width>
+            <height>45</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[31036]</label>
+            <font>font13</font>
+        </control>
+        <control type="button" id="10">
+            <description>OK button</description>
+            <left>308</left>
+            <top>262</top>
+            <width>300</width>
+            <height>60</height>
+            <label>186</label>
+            <font>font12_title</font>
+            <textcolor>white</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <align>center</align>
+            <onclick>Dialog.Close(2129)</onclick>
+            <onclick condition="Window.IsVisible(2114)">Dialog.Close(2114)</onclick>
+            <onclick condition="Window.IsVisible(2115)">Dialog.Close(2115)</onclick>
+            <onclick>Skin.Reset(UsrSelectAddon)</onclick>
+            <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+            <onclick>ActivateWindow(SkinSettings)</onclick>
+            <onleft>10</onleft>
+            <onright>10</onright>
+            <onup>10</onup>
+            <ondown>10</ondown>
+        </control>
+    </controls>
+</window>

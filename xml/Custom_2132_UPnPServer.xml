@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="2132">
+    <defaultcontrol always="true">450</defaultcontrol>
+    <coordinates>
+        <left>352</left>
+        <top>112</top>
+    </coordinates>
+    <include>dialogeffect</include>
+    <depth>DepthDialog+</depth>
+    <onload condition="Skin.HasSetting(EnablePingWOL) + Skin.String(PingMacAddr)">WakeOnLan($INFO[Skin.String(PingMacAddr)])</onload>
+    <controls>
+        <control type="group">
+            <control type="list" id="8050">
+                <content>upnp://</content>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1275</width>
+                <height>825</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+            </control>
+            <control type="image">
+                <description>Dialog Header image</description>
+                <left>60</left>
+                <top>24</top>
+                <width>1155</width>
+                <height>60</height>
+                <texture>$VAR[DialogPath]dialogheader.png</texture>
+            </control>
+            <control type="label" id="1">
+                <description>header label</description>
+                <left>60</left>
+                <top>30</top>
+                <width>1155</width>
+                <height>45</height>
+                <font>font13_title</font>
+                <label>$LOCALIZE[31150]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>selected</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="button">
+                <description>Close Window button</description>
+                <left>1100</left>
+                <top>24</top>
+                <onclick>PreviousMenu</onclick>
+                <include>DialogCloseButton</include>
+                <onleft>450</onleft>
+                <onright>450</onright>
+                <onup>450</onup>
+                <ondown>450</ondown>
+            </control>
+            <control type="list" id="450">
+                <left>30</left>
+                <top>100</top>
+                <width>825</width>
+                <height>690</height>
+                <onup>450</onup>
+                <ondown>450</ondown>
+                <onleft>7</onleft>
+                <onright>61</onright>
+                <pagecontrol>61</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <itemlayout height="138" width="825">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>825</width>
+                        <height>129</height>
+                        <texture border="5">button-nofocus.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>3</left>
+                        <top>4</top>
+                        <width>120</width>
+                        <height>120</height>
+                        <texture fallback="DefaultNetwork.jpg">$INFO[Listitem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                        <colordiffuse>33FFFFFF</colordiffuse>
+                        <bordertexture border="3">black-back2.png</bordertexture>
+                        <bordersize>2</bordersize>
+                    </control>
+                    <control type="label">
+                        <left>135</left>
+                        <top>33</top>
+                        <width>675</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <textcolor>grey</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="138" width="825">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>825</width>
+                        <height>129</height>
+                        <texture border="5">button-nofocus.png</texture>
+                        <visible>!Control.HasFocus(450)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>825</width>
+                        <height>129</height>
+                        <texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
+                        <visible>Control.HasFocus(450)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="image">
+                        <left>3</left>
+                        <top>4</top>
+                        <width>120</width>
+                        <height>120</height>
+                        <texture fallback="DefaultNetwork.jpg">$INFO[Listitem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                        <bordertexture border="3">black-back2.png</bordertexture>
+                        <bordersize>2</bordersize>
+                    </control>
+                    <control type="label">
+                        <left>135</left>
+                        <top>33</top>
+                        <width>675</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <textcolor>white</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <description>Clear Setting</description>
+                        <label>$LOCALIZE[31499]</label>
+                        <icon>DefaultIconWarning.png</icon>
+                        <thumb>DefaultIconWarning.png</thumb>
+                        <onclick>Skin.Reset(UPnP_Path)</onclick>
+                        <onclick>Skin.Reset(UPnP_Name)</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(0).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(0).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(0).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(0).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(0).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,0)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(1).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(1).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(1).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(1).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(1).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,1)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(2).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(2).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(2).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(2).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(2).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,2)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(3).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(3).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(3).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(3).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(3).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,3)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(4).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(4).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(4).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(4).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(4).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,4)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(5).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(5).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(5).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(5).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(5).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,5)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(6).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(6).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(6).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(6).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(6).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,6)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(7).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(7).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(7).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(7).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(7).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,7)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(8).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(8).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(8).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(8).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(8).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,8)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(9).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(9).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(9).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(9).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(9).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,9)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(10).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(10).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(10).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(10).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(10).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,10)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(11).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(11).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(11).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(11).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(11).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,11)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(12).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(12).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(12).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(12).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(12).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,12)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(13).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(13).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(13).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(13).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(13).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,13)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(14).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(14).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(14).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(14).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(14).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,14)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(15).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(15).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(15).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(15).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(15).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,15)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(16).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(16).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(16).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(16).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(16).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,16)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(17).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(17).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(17).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(17).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(17).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,17)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(18).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(18).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(18).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(18).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(18).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,18)</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Container(8050).ListItem(19).label]</label>
+                        <icon>$INFO[Container(8050).ListItem(19).icon]</icon>
+                        <thumb>$INFO[Container(8050).ListItem(19).thumb]</thumb>
+                        <onclick>Skin.SetString(UPnP_Path,$INFO[Container(8050).ListItem(19).FileNameAndPath])</onclick>
+                        <onclick>Skin.SetString(UPnP_Name,$INFO[Container(8050).ListItem(19).label])</onclick>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <visible>Integer.IsGreater(Container(8050).NumItems,19)</visible>
+                    </item>
+                    <item>
+                        <description>Manual Browse</description>
+                        <label>$LOCALIZE[1015]</label>
+                        <icon>DefaultNetwork.png</icon>
+                        <thumb>DefaultNetwork.png</thumb>
+                        <onclick>Dialog.Close(2132)</onclick>
+                        <onclick>Skin.Reset(UPnP_Path)</onclick>
+                        <onclick>Skin.Reset(UPnP_Name)</onclick>
+                        <onclick>Skin.SetPath(UPnP_Path)</onclick>
+                    </item>
+                </content>
+            </control>
+            <control type="scrollbar" id="61">
+                <left>855</left>
+                <top>98</top>
+                <width>38</width>
+                <height>696</height>
+                <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                <onleft>450</onleft>
+                <onright>90</onright>
+                <ondown>61</ondown>
+                <onup>61</onup>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+                <visible>Control.IsVisible(450)</visible>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <description>number of files/pages in list text label</description>
+                    <left>888</left>
+                    <top>735</top>
+                    <width>360</width>
+                    <height>52</height>
+                    <font>font12</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>grey</textcolor>
+                    <label>([COLOR=$VAR[MainColorOne]]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+                </control>
+                <control type="grouplist" id="90">
+                    <left>918</left>
+                    <top>150</top>
+                    <onleft>450</onleft>
+                    <onright>450</onright>
+                    <control type="button" id="7">
+                        <description>Cancel button</description>
+                        <width>300</width>
+                        <height>60</height>
+                        <label>222</label>
+                        <font>font12_title</font>
+                        <textcolor>white</textcolor>
+                        <focusedcolor>white</focusedcolor>
+                        <align>center</align>
+                        <onclick>PreviousMenu</onclick>
+                    </control>
+                    <control type="image">
+                        <width>1</width>
+                        <height>225</height>
+                        <texture></texture>
+                    </control>
+                    <control type="image">
+                        <width>324</width>
+                        <height>300</height>
+                        <align>center</align>
+                        <aspectratio align="center">stretch</aspectratio>
+                        <fadetime>IconCrossfadeTime</fadetime>
+                        <texture fallback="DefaultNetwork.jpg" diffuse="episodematte.png">$INFO[Container(450).ListItem.Icon]</texture>
+                        <bordertexture border="8">ThumbShadow.png</bordertexture>
+                        <bordersize>8</bordersize>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="2130">
+    <defaultcontrol always="true">450</defaultcontrol>
+    <coordinates>
+        <left>352</left>
+        <top>112</top>
+    </coordinates>
+    <include>dialogeffect</include>
+    <depth>DepthDialog+</depth>
+    <controls>
+        <control type="group">
+            <animation effect="slide" start="0,0" end="0,69" time="0" condition="!Integer.IsGreater(Container(450).NumItems,4)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,69" time="0" condition="!Integer.IsGreater(Container(450).NumItems,6)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,69" time="0" condition="!Integer.IsGreater(Container(450).NumItems,8)">Conditional</animation>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1275</width>
+                <height>825</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>Integer.IsGreater(Container(450).NumItems,8)</visible>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1275</width>
+                <height>687</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>Integer.IsGreater(Container(450).NumItems,6) + !Integer.IsGreater(Container(450).NumItems,8)</visible>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1275</width>
+                <height>549</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>Integer.IsGreater(Container(450).NumItems,4) + !Integer.IsGreater(Container(450).NumItems,6)</visible>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1275</width>
+                <height>411</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>!Integer.IsGreater(Container(450).NumItems,4)</visible>
+            </control>
+            <control type="image">
+                <description>Dialog Header image</description>
+                <left>60</left>
+                <top>24</top>
+                <width>1155</width>
+                <height>60</height>
+                <texture>$VAR[DialogPath]dialogheader.png</texture>
+            </control>
+            <control type="label" id="1">
+                <description>header label</description>
+                <left>60</left>
+                <top>30</top>
+                <width>1155</width>
+                <height>45</height>
+                <font>font13_title</font>
+                <label>$LOCALIZE[31365]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>selected</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <visible>String.IsEmpty(Window.Property(OSDColor))</visible>
+            </control>
+            <control type="label" id="1">
+                <description>header label</description>
+                <left>60</left>
+                <top>30</top>
+                <width>1155</width>
+                <height>45</height>
+                <font>font13_title</font>
+                <label>$LOCALIZE[31369]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>selected</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <visible>!String.IsEmpty(Window.Property(OSDColor))</visible>
+            </control>
+            <control type="button">
+                <description>Close Window button</description>
+                <left>1100</left>
+                <top>24</top>
+                <onclick>PreviousMenu</onclick>
+                <include>DialogCloseButton</include>
+                <onleft>450</onleft>
+                <onright>450</onright>
+                <onup>450</onup>
+                <ondown>450</ondown>
+            </control>
+            <control type="list" id="450">
+                <left>30</left>
+                <top>100</top>
+                <width>825</width>
+                <height>690</height>
+                <onup>450</onup>
+                <ondown>450</ondown>
+                <onleft>7</onleft>
+                <onright>61</onright>
+                <pagecontrol>61</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <itemlayout height="69" width="825">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>825</width>
+                        <height>60</height>
+                        <texture border="5">button-nofocus.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <top>0</top>
+                        <width>765</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="69" width="825">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>825</width>
+                        <height>60</height>
+                        <texture border="5">button-nofocus.png</texture>
+                        <visible>!Control.HasFocus(450)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>825</width>
+                        <height>60</height>
+                        <texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
+                        <visible>Control.HasFocus(450)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <top>0</top>
+                        <width>765</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <description>Clear Setting</description>
+                        <label>[COLOR=blue]$LOCALIZE[31390][/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.Reset(UsrColorOne)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.Reset(UsrColorTwo)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                        <visible>String.IsEmpty(Window.Property(OSDColor))</visible>
+                    </item>
+                    <item>
+                        <description>Clear Setting</description>
+                        <label>[COLOR=lightskyblue]$LOCALIZE[31390][/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.Reset(UsrColorOne)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.Reset(UsrColorTwo)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                        <visible>!String.IsEmpty(Window.Property(OSDColor))</visible>
+                    </item>
+                    <item>
+                        <label>[COLOR=aliceblue]aliceblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,aliceblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,aliceblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=antiquewhite]antiquewhite[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,antiquewhite)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,antiquewhite)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=aqua]aqua[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,aqua)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,aqua)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=aquamarine]aquamarine[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,aquamarine)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,aquamarine)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=azure]azure[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,azure)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,azure)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=beige]beige[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,beige)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,beige)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=bisque]bisque[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,bisque)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,bisque)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=blanchedalmond]blanchedalmond[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,blanchedalmond)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,blanchedalmond)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=blue]blue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,blue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,blue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=blueviolet]blueviolet[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,blueviolet)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,blueviolet)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=brown]brown[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,brown)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,brown)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=burlywood]burlywood[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,burlywood)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,burlywood)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=cadetblue]cadetblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,cadetblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,cadetblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=chartreuse]chartreuse[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,chartreuse)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,chartreuse)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=chocolate]chocolate[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,chocolate)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,chocolate)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=coral]coral[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,coral)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,coral)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=cornflowerblue]cornflowerblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,cornflowerblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,cornflowerblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=cornsilk]cornsilk[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,cornsilk)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,cornsilk)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=crimson]crimson[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,crimson)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,crimson)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=cyan]cyan[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,cyan)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,cyan)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkblue]darkblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkcyan]darkcyan[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkcyan)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkcyan)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkgoldenrod]darkgoldenrod[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkgoldenrod)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkgoldenrod)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkgreen]darkgreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkgreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkgreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkgrey]darkgrey[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkgrey)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkgrey)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkkhaki]darkkhaki[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkkhaki)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkkhaki)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkmagenta]darkmagenta[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkmagenta)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkmagenta)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkolivegreen]darkolivegreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkolivegreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkolivegreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkorange]darkorange[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkorange)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkorange)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkorchid]darkorchid[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkorchid)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkorchid)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkred]darkred[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkred)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkred)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darksalmon]darksalmon[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darksalmon)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darksalmon)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkseagreen]darkseagreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkseagreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkseagreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkslateblue]darkslateblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkslateblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkslateblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkslategrey]darkslategrey[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkslategrey)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkslategrey)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkturquoise]darkturquoise[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkturquoise)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkturquoise)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=darkviolet]darkviolet[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,darkviolet)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,darkviolet)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=deeppink]deeppink[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,deeppink)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,deeppink)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=deepskyblue]deepskyblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,deepskyblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,deepskyblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=dimgrey]dimgrey[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,dimgrey)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,dimgrey)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=dodgerblue]dodgerblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,dodgerblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,dodgerblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=firebrick]firebrick[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,firebrick)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,firebrick)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=floralwhite]floralwhite[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,floralwhite)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,floralwhite)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=forestgreen]forestgreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,forestgreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,forestgreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=fuchsia]fuchsia[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,fuchsia)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,fuchsia)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=gainsboro]gainsboro[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,gainsboro)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,gainsboro)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=ghostwhite]ghostwhite[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,ghostwhite)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,ghostwhite)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=gold]gold[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,gold)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,gold)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=goldenrod]goldenrod[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,goldenrod)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,goldenrod)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=green]green[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,green)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,green)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=greenyellow]greenyellow[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,greenyellow)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,greenyellow)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=grey]grey[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,grey)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,grey)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=honeydew]honeydew[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,honeydew)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,honeydew)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=hotpink]hotpink[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,hotpink)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,hotpink)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=indianred]indianred[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,indianred)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,indianred)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=indigo]indigo[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,indigo)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,indigo)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=ivory]ivory[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,ivory)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,ivory)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=khaki]khaki[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,khaki)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,khaki)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lavender]lavender[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lavender)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lavender)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lavenderblush]lavenderblush[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lavenderblush)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lavenderblush)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lawngreen]lawngreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lawngreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lawngreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lemonchiffon]lemonchiffon[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lemonchiffon)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lemonchiffon)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightblue]lightblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightcoral]lightcoral[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightcoral)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightcoral)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightcyan]lightcyan[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightcyan)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightcyan)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightgoldenrodyellow]lightgoldenrodyellow[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightgoldenrodyellow)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightgoldenrodyellow)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightgreen]lightgreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightgreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightgreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightgrey]lightgrey[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightgrey)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightgrey)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightpink]lightpink[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightpink)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightpink)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightsalmon]lightsalmon[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightsalmon)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightsalmon)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightseagreen]lightseagreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightseagreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightseagreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightskyblue]lightskyblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightskyblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightskyblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightslategray]lightslategray[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightslategray)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightslategray)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightsteelblue]lightsteelblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightsteelblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightsteelblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lightyellow]lightyellow[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lightyellow)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lightyellow)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=lime]lime[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,lime)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,lime)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=limegreen]limegreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,limegreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,limegreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=linen]linen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,linen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,linen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=magenta]magenta[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,magenta)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,magenta)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=maroon]maroon[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,maroon)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,maroon)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mediumaquamarine]mediumaquamarine[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mediumaquamarine)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mediumaquamarine)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mediumblue]mediumblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mediumblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mediumblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mediumorchid]mediumorchid[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mediumorchid)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mediumorchid)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mediumpurple]mediumpurple[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mediumpurple)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mediumpurple)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mediumseagreen]mediumseagreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mediumseagreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mediumseagreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mediumslateblue]mediumslateblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mediumslateblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mediumslateblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mediumspringgreen]mediumspringgreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mediumspringgreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mediumspringgreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mediumturquoise]mediumturquoise[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mediumturquoise)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mediumturquoise)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mediumvioletred]mediumvioletred[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mediumvioletred)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mediumvioletred)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=midnightblue]midnightblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,midnightblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,midnightblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mintcream]mintcream[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mintcream)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mintcream)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=mistyrose]mistyrose[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,mistyrose)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,mistyrose)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=moccasin]moccasin[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,moccasin)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,moccasin)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=navajowhite]navajowhite[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,navajowhite)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,navajowhite)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=navy]navy[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,navy)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,navy)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=oldlace]oldlace[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,oldlace)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,oldlace)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=olive]olive[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,olive)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,olive)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=olivedrab]olivedrab[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,olivedrab)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,olivedrab)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=orange]orange[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,orange)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,orange)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=orangered]orangered[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,orangered)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,orangered)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=orchid]orchid[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,orchid)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,orchid)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=palegoldenrod]palegoldenrod[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,palegoldenrod)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,palegoldenrod)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=palegreen]palegreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,palegreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,palegreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=paleturquoise]paleturquoise[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,paleturquoise)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,paleturquoise)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=palevioletred]palevioletred[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,palevioletred)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,palevioletred)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=papayawhip]papayawhip[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,papayawhip)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,papayawhip)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=peachpuff]peachpuff[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,peachpuff)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,peachpuff)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=peru]peru[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,peru)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,peru)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=pink]pink[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,pink)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,pink)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=plum]plum[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,plum)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,plum)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=powderblue]powderblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,powderblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,powderblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=purple]purple[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,purple)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,purple)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=red]red[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,red)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,red)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=rosybrown]rosybrown[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,rosybrown)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,rosybrown)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=royalblue]royalblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,royalblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,royalblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=saddlebrown]saddlebrown[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,saddlebrown)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,saddlebrown)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=salmon]salmon[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,salmon)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,salmon)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=sandybrown]sandybrown[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,sandybrown)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,sandybrown)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=seagreen]seagreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,seagreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,seagreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=seashell]seashell[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,seashell)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,seashell)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=sienna]sienna[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,sienna)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,sienna)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=silver]silver[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,silver)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,silver)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=skyblue]skyblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,skyblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,skyblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=slateblue]slateblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,slateblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,slateblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=slategrey]slategrey[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,slategrey)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,slategrey)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=snow]snow[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,snow)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,snow)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=springgreen]springgreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,springgreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,springgreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=steelblue]steelblue[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,steelblue)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,steelblue)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=tan]tan[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,tan)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,tan)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=teal]teal[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,teal)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,teal)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=thistle]thistle[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,thistle)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,thistle)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=tomato]tomato[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,tomato)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,tomato)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=turquoise]turquoise[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,turquoise)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,turquoise)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=violet]violet[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,violet)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,violet)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=wheat]wheat[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,wheat)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,wheat)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=white]white[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,white)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,white)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=whitesmoke]whitesmoke[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,whitesmoke)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,whitesmoke)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=yellow]yellow[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,yellow)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,yellow)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                    <item>
+                        <label>[COLOR=yellowgreen]yellowgreen[/COLOR]</label>
+                        <onclick condition="String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorOne,yellowgreen)</onclick>
+                        <onclick condition="!String.IsEmpty(Window.Property(OSDColor))">Skin.SetString(UsrColorTwo,yellowgreen)</onclick>
+                        <onclick>Dialog.Close(2130)</onclick>
+                    </item>
+                </content>
+            </control>
+            <control type="scrollbar" id="61">
+                <left>855</left>
+                <top>98</top>
+                <width>38</width>
+                <height>696</height>
+                <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                <onleft>450</onleft>
+                <onright>90</onright>
+                <ondown>61</ondown>
+                <onup>61</onup>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+                <visible>Control.IsVisible(450)</visible>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <description>number of files/pages in list text label</description>
+                    <left>888</left>
+                    <top>735</top>
+                    <width>360</width>
+                    <height>52</height>
+                    <font>font12</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>grey</textcolor>
+                    <label>([COLOR=$VAR[MainColorOne]]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+                    <animation effect="slide" start="0,0" end="0,-138" time="0" condition="!Integer.IsGreater(Container(450).NumItems,4)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="0,-138" time="0" condition="!Integer.IsGreater(Container(450).NumItems,6)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="0,-138" time="0" condition="!Integer.IsGreater(Container(450).NumItems,8)">Conditional</animation>
+                </control>
+                <control type="grouplist" id="90">
+                    <left>918</left>
+                    <top>150</top>
+                    <onleft>450</onleft>
+                    <onright>450</onright>
+                    <control type="button" id="7">
+                        <description>Cancel button</description>
+                        <width>300</width>
+                        <height>60</height>
+                        <label>222</label>
+                        <font>font12_title</font>
+                        <textcolor>white</textcolor>
+                        <focusedcolor>white</focusedcolor>
+                        <align>center</align>
+                        <onclick>PreviousMenu</onclick>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol>1</defaultcontrol>
-    <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo|!String.IsEmpty(Player.SeekNumeric)</visible>
+    <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)</visible>
     <visible>!Player.HasGame</visible>
     <visible>!Player.FrameAdvance</visible>
     <visible>!Skin.HasSetting(HidePopUpSeekBar) | [Skin.HasSetting(HidePopUpSeekBar) + [Window.IsVisible(FullscreenVideo) | Window.IsVisible(visualisation) | Window.IsVisible(Home)]]</visible>
@@ -289,7 +289,7 @@
             </control>
             <control type="group">
                 <visible>[VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg] + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
-                <visible>!Window.IsVisible(VideoOSD) + !Window.IsVisible(MusicOSD) + !Player.ShowInfo</visible>
+                <visible>!Window.IsVisible(VideoOSD) + !Window.IsVisible(MusicOSD) + [!Player.ShowInfo + !Skin.HasSetting(StandardSeekBar)]</visible>
                 <visible>[Skin.HasSetting(HideSeekBarPaused) + Player.Paused] | !Player.Paused</visible>
                 <control type="label">
                     <description>Elapsed Time Label</description>
@@ -350,7 +350,7 @@
             </control>
             <control type="group">
                 <visible>![VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg] + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
-                <visible>!Window.IsVisible(VideoOSD) + !Window.IsVisible(MusicOSD) + !Player.ShowInfo</visible>
+                <visible>!Window.IsVisible(VideoOSD) + !Window.IsVisible(MusicOSD) + [!Player.ShowInfo + !Skin.HasSetting(StandardSeekBar)]</visible>
                 <visible>[Skin.HasSetting(HideSeekBarPaused) + Player.Paused] | !Player.Paused</visible>
                 <control type="label">
                     <description>Elapsed Time Label</description>

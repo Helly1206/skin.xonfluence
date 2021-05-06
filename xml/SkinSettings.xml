@@ -447,6 +447,18 @@
                                 <onclick>Skin.ToggleSetting(HidePopUpSeekBar)</onclick>
                                 <selected>!Skin.HasSetting(HidePopUpSeekBar)</selected>
                             </control>
+							<control type="radiobutton" id="11401">
+                                <description>Standard Seekbar</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>$LOCALIZE[32008]</label>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(StandardSeekBar)</onclick>
+                                <selected>Skin.HasSetting(StandardSeekBar)</selected>
+                            </control>
                             <control type="radiobutton" id="115">
                                 <description>Minimum Popup Seekbar Window</description>
                                 <width>1125</width>
@@ -813,7 +825,7 @@
                                 <selected>!Skin.HasSetting(AutoVisableSubMenu)</selected>
                                 <include>MenuButton</include>
                             </control>
-							<control type="radiobutton" id="154">
+							<control type="radiobutton" id="14001">
                                 <description>Main menu in all caps</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1327,6 +1339,18 @@
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(HideInfoStartOSD)</onclick>
                                 <selected>!Skin.HasSetting(HideInfoStartOSD)</selected>
+                            </control>
+							<control type="radiobutton" id="17801">
+                                <description>OSD Seekbar wiht Start Media Intro</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>  - $LOCALIZE[32009]</label>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(ShowSeekBarIntro)</onclick>
+                                <selected>Skin.HasSetting(ShowSeekBarIntro)</selected>
                             </control>
                             <control type="radiobutton" id="179">
                                 <description>OSD Plot on Media Pause</description>

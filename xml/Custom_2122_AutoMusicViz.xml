@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="2122">
+    <onload condition="!Window.IsActive(visualisation)">FullScreen</onload>
+    <visible>Player.HasAudio + !String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE)</visible>
+    <visible>!Skin.HasSetting(HideAutoMusicViz)</visible>
+    <controls></controls>
+</window>

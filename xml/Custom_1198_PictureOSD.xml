@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1198">
+    <defaultcontrol always="false">100</defaultcontrol>
+    <coordinates>
+        <left>0</left>
+        <top>0</top>
+    </coordinates>
+    <include>dialogeffect</include>
+    <controls>
+        <control type="image" id="1">
+            <left>-150</left>
+            <top>-90</top>
+            <width>2220</width>
+            <height>240</height>
+            <include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+            <texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
+            <visible>!Skin.HasSetting(HideSystemTime)</visible>
+        </control>
+        <include condition="!Skin.HasSetting(HideSystemTime)">TopLeftInfo</include>
+        <include condition="!Skin.HasSetting(HideSystemTime)">Clock</include>
+        <include condition="!Skin.HasSetting(HideSystemTime)">Date</include>
+        <control type="image" id="1">
+            <left>0</left>
+            <top>345r</top>
+            <width>1920</width>
+            <height>345</height>
+            <texture border="1">HomeNowPlayingBack.png</texture>
+            <animation effect="slide" end="0,68" time="0" tween="back" easing="out" condition="!Player.ShowInfo" reversible="true">Conditional</animation>
+        </control>
+        <control type="group">
+            <left>30</left>
+            <top>345r</top>
+            <visible>!Player.ShowInfo + Player.HasMedia</visible>
+            <include>VisibleFadeEffect</include>
+            <include>SmallMusicInfo</include>
+        </control>
+        <control type="button" id="1000">
+            <description>Close Window button</description>
+            <left>126r</left>
+            <top>0</top>
+            <onclick>PreviousMenu</onclick>
+            <include>DialogCloseButton</include>
+            <onleft>1000</onleft>
+            <onright>1000</onright>
+            <onup>100</onup>
+            <ondown>100</ondown>
+            <animation effect="fade" time="150">VisibleChange</animation>
+        </control>
+        <control type="label" id="1001">
+            <left>938</left>
+            <top>202r</top>
+            <width min="15" max="780">auto</width>
+            <height>45</height>
+            <font>font30</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[Slideshow.FileName]</label>
+            <textcolor>orange</textcolor>
+            <scroll>true</scroll>
+        </control>
+        <control type="label" id="1001">
+            <left>938</left>
+            <top>150r</top>
+            <width min="15" max="780">auto</width>
+            <height>22</height>
+            <font>font13</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[21804]$LOCALIZE[31156] $INFO[Slideshow.SlideIndex]</label>
+            <textcolor>grey</textcolor>
+            <scroll>true</scroll>
+        </control>
+        <control type="label" id="1001">
+            <left>938</left>
+            <top>120r</top>
+            <width min="15" max="780">auto</width>
+            <height>22</height>
+            <font>font13</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[577]$LOCALIZE[31156] $INFO[Slideshow.EXIFDate]</label>
+            <textcolor>grey</textcolor>
+            <scroll>true</scroll>
+        </control>
+        <control type="group">
+            <visible>!Skin.HasSetting(HidePopUpSeekBar)+ !Skin.HasSetting(Show_SlideShow_Paused)</visible>
+            <visible>SlideShow.IsPaused</visible>
+            <animation effect="slide" start="0,0" end="-150,0" time="0" condition="system.getbool(input.enablemouse)">conditional</animation>
+            <left>758r</left>
+            <top>-9</top>
+            <include>VisibleFadeEffect</include>
+            <control type="image">
+                <left>0</left>
+                <top>0</top>
+                <width>225</width>
+                <height>105</height>
+                <colordiffuse>EEFFFFFF</colordiffuse>
+                <texture border="12">OverlayDialogBackground.png</texture>
+            </control>
+            <control type="label" id="1">
+                <description>Chapter Pos No</description>
+                <left>30</left>
+                <top>15</top>
+                <width>165</width>
+                <height>30</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font12_title</font>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <label>$LOCALIZE[21804]</label>
+                <!-- <visible>player.chaptercount</visible> -->
+            </control>
+            <control type="label" id="1">
+                <description>Chapter Pos No</description>
+                <left>30</left>
+                <top>45</top>
+                <width>165</width>
+                <height>30</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13_title</font>
+                <textcolor>grey2</textcolor>
+                <label>$INFO[Slideshow.SlideIndex]</label>
+                <!-- <visible>player.chaptercount</visible> -->
+            </control>
+        </control>
+        <control type="group">
+            <visible>!Skin.HasSetting(Show_SlideShow_Paused)</visible>
+            <visible>SlideShow.IsPaused</visible>
+            <animation effect="slide" start="0,0" end="278,998" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-150,0" time="0" condition="!Skin.HasSetting(HidePopUpSeekBar) + system.getbool(input.enablemouse)">conditional</animation>
+            <left>540r</left>
+            <top>-9</top>
+            <control type="image">
+                <left>0</left>
+                <top>0</top>
+                <width>270</width>
+                <height>105</height>
+                <colordiffuse>EEFFFFFF</colordiffuse>
+                <texture border="12">OverlayDialogBackground.png</texture>
+                <visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
+            </control>
+            <control type="image">
+                <left>120</left>
+                <top>15</top>
+                <width>120</width>
+                <height>75</height>
+                <texture>$VAR[OSDPath]OSDSeekFrame.png</texture>
+            </control>
+            <control type="image">
+                <left>152</left>
+                <top>21</top>
+                <width>60</width>
+                <height>60</height>
+                <texture>$VAR[OSDPath]OSDPause.png</texture>
+            </control>
+            <control type="label">
+                <description>Paused Label</description>
+                <animation effect="slide" start="0,0" end="0,28" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
+                <left>30</left>
+                <top>10</top>
+                <width>360</width>
+                <height>30</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font10_title</font>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <label>31043</label>
+            </control>
+        </control>
+        <control type="grouplist" id="100">
+            <left>938</left>
+            <top>90r</top>
+            <onup>1000</onup>
+            <ondown>1000</ondown>
+            <onleft>200</onleft>
+            <onright>200</onright>
+            <orientation>horizontal</orientation>
+            <itemgap>0</itemgap>
+            <animation effect="fade" time="150">VisibleChange</animation>
+            <control type="radiobutton" id="101">
+                <label></label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPrevTrack" />
+                </include>
+                <onclick>Action(PreviousPicture,SlideShow)</onclick>
+            </control>
+            <control type="radiobutton" id="102">
+                <label></label>
+                <font></font>
+                <include content="OSDButtonAlt">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPlay" />
+                    <param name="AltTexture" value="OSDPause" />
+                    <param name="Selected" value="!SlideShow.IsPaused + SlideShow.IsActive" />
+                </include>
+                <onclick>Action(Pause,SlideShow)</onclick>
+            </control>
+            <control type="radiobutton" id="103">
+                <label></label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDNextTrack" />
+                </include>
+                <onclick>Action(NextPicture,SlideShow)</onclick>
+            </control>
+            <control type="radiobutton" id="104">
+                <label></label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRepeat" />
+                </include>
+                <onclick>Action(Rotate,SlideShow)</onclick>
+            </control>
+            <control type="radiobutton" id="105">
+                <label></label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDZoomIn" />
+                </include>
+                <onclick>Action(ZoomIn,SlideShow)</onclick>
+            </control>
+            <control type="radiobutton" id="106">
+                <label></label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDZoomOut" />
+                </include>
+                <onclick>Action(ZoomOut,SlideShow)</onclick>
+            </control>
+            <control type="radiobutton" id="107">
+                <label></label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDInfo" />
+                </include>
+                <onclick>Action(Info,SlideShow)</onclick>
+            </control>
+        </control>
+        <control type="group">
+            <left>30</left>
+            <top>345r</top>
+            <visible>Player.HasMedia</visible>
+            <include>VisibleFadeEffect</include>
+            <include>SmallMusicInfo</include>
+        </control>
+        <control type="grouplist" id="200">
+            <left>30</left>
+            <top>90r</top>
+            <onup>1000</onup>
+            <ondown>1000</ondown>
+            <onleft>100</onleft>
+            <onright>100</onright>
+            <orientation>horizontal</orientation>
+            <itemgap>0</itemgap>
+            <animation effect="fade" time="150">VisibleChange</animation>
+            <visible>Player.HasMedia</visible>
+            <control type="radiobutton" id="201">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDVolUp" />
+                </include>
+                <onclick>$VAR[VolumeStepUp]</onclick>
+                <onclick>VolumeUp</onclick>
+                <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+            </control>
+            <control type="radiobutton" id="202">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDVolDown" />
+                </include>
+                <onclick>$VAR[VolumeStepDown]</onclick>
+                <onclick>VolumeDown</onclick>
+                <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+            </control>
+            <control type="radiobutton" id="203">
+                <label>210</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPrevTrack" />
+                </include>
+                <onclick>PlayerControl(Previous)</onclick>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+            </control>
+            <control type="radiobutton" id="204">
+                <label>31354</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDRewind" />
+                </include>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
+                <onclick>PlayerControl(Rewind)</onclick>
+                <enable>Player.SeekEnabled</enable>
+            </control>
+            <control type="radiobutton" id="205">
+                <label>31351</label>
+                <altlabel>208</altlabel>
+                <font></font>
+                <include content="OSDButtonAlt">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDPause" />
+                    <param name="AltTexture" value="OSDPlay" />
+                    <param name="Selected" value="Player.Paused | Player.Forwarding | Player.Rewinding" />
+                </include>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Player.PauseEnabled">Conditional</animation>
+                <onclick>PlayerControl(Play)</onclick>
+                <enable>Player.PauseEnabled</enable>
+            </control>
+            <control type="radiobutton" id="206">
+                <label>31352</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDStop" />
+                </include>
+                <onclick>PlayerControl(Stop)</onclick>
+            </control>
+            <control type="radiobutton" id="207">
+                <label>31353</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDForward" />
+                </include>
+                <animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
+                <onclick>PlayerControl(Forward)</onclick>
+                <enable>Player.SeekEnabled</enable>
+            </control>
+            <control type="radiobutton" id="208">
+                <label>209</label>
+                <font></font>
+                <include content="OSDButton">
+                    <param name="Size" value="82" />
+                    <param name="Texture" value="OSDNextTrack" />
+                </include>
+                <visible>!MusicPlayer.Content(LiveTV)</visible>
+                <onclick>PlayerControl(Next)</onclick>
+            </control>
+        </control>
+    </controls>
+</window>
