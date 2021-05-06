@@ -3617,6 +3617,18 @@
         <value condition="!String.IsEmpty(ListItem.Property(AirDay))">$INFO[ListItem.Premiered] @ $INFO[ListItem.Property(AirTime)]</value>
     </variable>
 	
+	<variable name="WeatherIconExt">
+        <value condition="String.Contains(Skin.String(WeatherIcons.path),animated)" />
+        <value condition="!String.IsEmpty(Skin.String(WeatherIcons.ext))">$INFO[Skin.String(WeatherIcons.ext)]</value>
+        <value>.png</value>
+    </variable>
+
+    <variable name="WeatherBackgroundExt">
+        <value condition="Skin.HasSetting(WeatherFanart.multi)">/</value>
+        <value condition="!String.IsEmpty(Skin.String(WeatherFanart.ext))">$INFO[Skin.String(WeatherFanart.ext)]</value>
+        <value>.jpg</value>
+    </variable>
+	
 	<expression name="IsMoviePlaylist">[Container(9000).HasFocus(1) + Skin.String(HomeItem.1.PlaylistType,movies)] | 
 	                                   [Container(9000).HasFocus(2) + Skin.String(HomeItem.2.PlaylistType,movies)] | 
 									   [Container(9000).HasFocus(3) + Skin.String(HomeItem.3.PlaylistType,movies)] | 

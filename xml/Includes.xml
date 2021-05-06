@@ -2417,14 +2417,17 @@
             <top>0</top>
             <visible>!String.IsEmpty(Weather.Plugin) + String.IsEqual(Skin.String(TopLeftHomeInfo),Weather)</visible>
             <include>Window_OpenClose_Animation</include>
-            <control type="image" id="1">
+     		<control type="multiimage" id="1">
                 <description>Weather image</description>
                 <left>0</left>
                 <top>0</top>
                 <width>90</width>
                 <height>90</height>
-                <aspectratio>keep</aspectratio>
-                <texture>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Current.OutlookIcon)]</texture>
+				<aspectratio aligny="center">keep</aspectratio>
+                <timeperimage>70</timeperimage>
+                <fadetime>1</fadetime>
+                <randomize>false</randomize>
+                <imagepath>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherIconExt]</imagepath>
             </control>
             <control type="label" id="1">
                 <description>Location label</description>

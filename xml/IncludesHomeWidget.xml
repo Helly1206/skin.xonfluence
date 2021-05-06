@@ -1558,13 +1558,16 @@
                         <texture border="15">RecentAddedBack.png</texture>
                         <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
                     </control>
-                    <control type="image">
+                    <control type="multiimage">
                         <left>15</left>
                         <top>15</top>
                         <width>330</width>
                         <height>232</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <imagepath>$INFO[ListItem.ActualIcon]</imagepath>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <include>TextureBorderWidgets</include>
                     </control>
@@ -1618,24 +1621,30 @@
                         <texture border="15">RecentAddedBack.png</texture>
                         <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>15</left>
                         <top>15</top>
                         <width>330</width>
                         <height>232</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <imagepath>$INFO[ListItem.ActualIcon]</imagepath>
                         <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
                         <include>TextureBorderWidgets</include>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>15</left>
                         <top>15</top>
                         <width>330</width>
                         <height>232</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <imagepath>$INFO[ListItem.ActualIcon]</imagepath>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <include>TextureBorderWidgets</include>
                         <visible>!Control.HasFocus($PARAM[Control])</visible>
@@ -1730,13 +1739,16 @@
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>Horizontal</orientation>
                 <itemlayout height="428" width="368">
-                    <control type="image">
+                    <control type="multiimage">
                         <left>15</left>
                         <top>15</top>
                         <width>338</width>
                         <height>338</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>scale</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <imagepath background="true">$INFO[ListItem.ActualIcon]</imagepath>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <include>TextureBorderWidgets</include>
                     </control>
@@ -1781,24 +1793,30 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="428" width="368">
-                    <control type="image">
+                    <control type="multiimage">
                         <left>15</left>
                         <top>15</top>
                         <width>338</width>
                         <height>338</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>scale</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
-                        <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+                        <imagepath background="true">$INFO[ListItem.ActualIcon]</imagepath>
+						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
                         <include>TextureBorderWidgets</include>
                         <visible>Control.HasFocus($PARAM[Control])</visible>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>15</left>
                         <top>15</top>
                         <width>338</width>
                         <height>338</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>scale</aspectratio>
-                        <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                        <imagepath background="true">$INFO[ListItem.ActualIcon]</imagepath>
                         <bordertexture border="5">button-nofocus.png</bordertexture>
                         <include>TextureBorderWidgets</include>
                         <visible>!Control.HasFocus($PARAM[Control])</visible>
@@ -3630,7 +3648,7 @@
                 <label>$LOCALIZE[143]</label>
                 <label2>$INFO[Window(Weather).Property(Current.Condition)]</label2>
                 <onclick>Weather.Refresh</onclick>
-                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Current.FanartCode),,.png]</icon>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherIconExt]</icon>
                 <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
                 <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</property>
                 <visible>!String.IsEqual(Skin.String(TopLeftHomeInfo),Weather)</visible>
@@ -3639,7 +3657,7 @@
                 <label>$INFO[Window(Weather).Property(Day1.Title)]</label>
                 <label2>$INFO[Window(Weather).Property(Day1.Outlook)]</label2>
                 <onclick>Weather.Refresh</onclick>
-                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day1.FanartCode),,.png]</icon>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day1.FanartCode)]$VAR[WeatherIconExt]</icon>
                 <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day1.FanartCode)]</thumb>
                 <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</property>
             </item>
@@ -3647,7 +3665,7 @@
                 <label>$INFO[Window(Weather).Property(Day2.Title)]</label>
                 <label2>$INFO[Window(Weather).Property(Day2.Outlook)]</label2>
                 <onclick>Weather.Refresh</onclick>
-                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day2.FanartCode),,.png]</icon>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day2.FanartCode)]$VAR[WeatherIconExt]</icon>
                 <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day2.FanartCode)]</thumb>
                 <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</property>
             </item>
@@ -3655,7 +3673,7 @@
                 <label>$INFO[Window(Weather).Property(Day3.Title)]</label>
                 <label2>$INFO[Window(Weather).Property(Day3.Outlook)]</label2>
                 <onclick>Weather.Refresh</onclick>
-                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day3.FanartCode),,.png]</icon>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day3.FanartCode)]$VAR[WeatherIconExt]</icon>
                 <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day3.FanartCode)]</thumb>
                 <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</property>
             </item>
@@ -3663,7 +3681,7 @@
                 <label>$INFO[Window(Weather).Property(Day4.Title)]</label>
                 <label2>$INFO[Window(Weather).Property(Day4.Outlook)]</label2>
                 <onclick>Weather.Refresh</onclick>
-                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day4.FanartCode),,.png]</icon>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day4.FanartCode)]</icon>
                 <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day4.FanartCode)]</thumb>
                 <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</property>
                 <visible>String.IsEqual(Skin.String(TopLeftHomeInfo),Weather)</visible>

@@ -59,13 +59,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>690</left>
                         <top>0</top>
                         <width>202</width>
                         <height>202</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.ActualIcon]</texture>
+                        <imagepath>$INFO[ListItem.ActualIcon]</imagepath>
                     </control>
                     <control type="label">
                         <left>45</left>
@@ -135,13 +138,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>690</left>
                         <top>0</top>
                         <width>202</width>
                         <height>202</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.ActualIcon]</texture>
+                        <imagepath>$INFO[ListItem.ActualIcon]</imagepath>
                     </control>
                     <control type="label">
                         <left>45</left>
@@ -190,13 +196,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>165</left>
                         <top>8</top>
                         <width>120</width>
                         <height>120</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <imagepath>$INFO[ListItem.Thumb]</imagepath>
                     </control>
                     <control type="label">
                         <left>300</left>
@@ -253,13 +262,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>165</left>
                         <top>8</top>
                         <width>120</width>
                         <height>120</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <imagepath>$INFO[ListItem.Thumb]</imagepath>
                     </control>
                     <control type="label">
                         <left>300</left>
@@ -392,7 +404,7 @@
     <include name="WeatherDefaultItem">
         <item>
             <label>$INFO[Window.Property(Day$PARAM[item_id].Title)]</label>
-            <icon>$VAR[WeatherIconPath]$INFO[Window.Property(Day.$PARAM[item_id].FanartCode),,.png]</icon>
+            <icon>$VAR[WeatherIconPath]$INFO[Window.Property(Day.$PARAM[item_id].FanartCode)]$VAR[WeatherIconExt]</icon>
             <property name="HighTemp">$INFO[Window.Property(Day$PARAM[item_id].HighTemp)]</property>
             <property name="LowTemp">$INFO[Window.Property(Day$PARAM[item_id].LowTemp)]</property>
             <property name="Outlook">$INFO[Window.Property(Day$PARAM[item_id].Outlook)]</property>
@@ -404,7 +416,7 @@
         <item>
             <label>[B]$INFO[Window.Property(Daily.$PARAM[item_id].ShortDay)][/B][CR][COLOR=grey2]$INFO[Window.Property(Daily.$PARAM[item_id].ShortDate)][/COLOR]</label>
             <label2>$INFO[Window.Property(Daily.$PARAM[item_id].HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR][B] ,[/B]]  $INFO[Window.Property(Daily.$PARAM[item_id].LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR][B] ,[/B]][CR]$INFO[Window.Property(Daily.$PARAM[item_id].Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR][B] ,[/B]][CR]$INFO[Window.Property(Daily.$PARAM[item_id].Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR][B] ,[/B]]</label2>
-            <thumb>$VAR[WeatherIconPath]$INFO[Window.Property(Daily.$PARAM[item_id].OutlookIcon)]</thumb>
+            <thumb>$VAR[WeatherIconPath]$INFO[Window.Property(Daily.$PARAM[item_id].FanartCode)]$VAR[WeatherIconExt]</thumb>
             <icon>$INFO[Window.Property(Daily.$PARAM[item_id].Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.$PARAM[item_id].WindSpeed)] $INFO[Window.Property(Daily.$PARAM[item_id].WindDirection)]</icon>
             <visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.$PARAM[item_id].Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
         </item>
@@ -413,7 +425,7 @@
         <item>
             <label>[B]$INFO[Window.Property(Hourly.$PARAM[item_id].Time)][/B][CR][COLOR=grey2]$INFO[Window.Property(Hourly.$PARAM[item_id].ShortDate)][/COLOR]</label>
             <label2>$INFO[Window.Property(Hourly.$PARAM[item_id].Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR][B] ,[/B]]  $INFO[Window.Property(Hourly.$PARAM[item_id].FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR][B] ,[/B]][CR]$INFO[Window.Property(Hourly.$PARAM[item_id].Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR][B] ,[/B]][CR]$INFO[Window.Property(Hourly.$PARAM[item_id].Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR][B] ,[/B]]</label2>
-            <thumb>$VAR[WeatherIconPath]$INFO[Window.Property(Hourly.$PARAM[item_id].OutlookIcon)]</thumb>
+            <thumb>$VAR[WeatherIconPath]$INFO[Window.Property(Hourly.$PARAM[item_id].FanartCode)]$VAR[WeatherIconExt]</thumb>
             <icon>$INFO[Window.Property(Hourly.$PARAM[item_id].Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.$PARAM[item_id].WindSpeed)] $INFO[Window.Property(Hourly.$PARAM[item_id].WindDirection)]</icon>
             <visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.$PARAM[item_id].Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
         </item>
@@ -472,13 +484,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[Window.Property(36Hour.1.Heading)]</label>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>0</left>
                         <top>15</top>
                         <width>180</width>
                         <height>165</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$VAR[WeatherIconPath]$INFO[Window.Property(36Hour.1.OutlookIcon)]</texture>
+                        <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(36Hour.1.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
                     <control type="label">
                         <left>180</left>
@@ -537,13 +552,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[Window.Property(36Hour.2.Heading)]</label>
                     </control>
-                    <control type="image">
+                    <control type="multiimage">
                         <left>0</left>
                         <top>15</top>
                         <width>180</width>
                         <height>165</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$VAR[WeatherIconPath]$INFO[Window.Property(36Hour.2.OutlookIcon)]</texture>
+                        <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(36Hour.2.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
                     <control type="label">
                         <left>180</left>
@@ -602,13 +620,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[Window.Property(36Hour.3.Heading)]</label>
                     </control>
-                    <control type="image">
+                    <control type="multiimage">
                         <left>0</left>
                         <top>15</top>
                         <width>180</width>
                         <height>165</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$VAR[WeatherIconPath]$INFO[Window.Property(36Hour.3.OutlookIcon)]</texture>
+                        <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(36Hour.3.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
                     <control type="label">
                         <left>180</left>
@@ -694,13 +715,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[Window.Property(Weekend.1.LongDay)] - $INFO[Window.Property(Weekend.1.ShortDate)]</label>
                     </control>
-                    <control type="image">
+                    <control type="multiimage">
                         <left>15</left>
                         <top>30</top>
                         <width>195</width>
                         <height>240</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$VAR[WeatherIconPath]$INFO[Window.Property(Weekend.1.OutlookIcon)]</texture>
+                        <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(Weekend.1.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
                     <control type="label">
                         <left>210</left>
@@ -781,13 +805,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[Window.Property(Weekend.2.LongDay)] - $INFO[Window.Property(Weekend.2.ShortDate)]</label>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>15</left>
                         <top>30</top>
                         <width>195</width>
                         <height>240</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$VAR[WeatherIconPath]$INFO[Window.Property(Weekend.2.OutlookIcon)]</texture>
+                        <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(Weekend.2.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
                     <control type="label">
                         <left>210</left>
@@ -901,13 +928,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>165</left>
                         <top>8</top>
                         <width>120</width>
                         <height>120</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <imagepath>$INFO[ListItem.Thumb]</imagepath>
                     </control>
                     <control type="label">
                         <left>300</left>
@@ -964,13 +994,16 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-                    <control type="image">
+					<control type="multiimage">
                         <left>165</left>
                         <top>8</top>
                         <width>120</width>
                         <height>120</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <imagepath>$INFO[ListItem.Thumb]</imagepath>
                     </control>
                     <control type="label">
                         <left>300</left>
