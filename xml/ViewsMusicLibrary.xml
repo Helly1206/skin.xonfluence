@@ -585,6 +585,7 @@
                     <orientation>horizontal</orientation>
                     <include>VideoCodecFlaggingConditions</include>
                     <include>AudioCodecFlaggingConditions</include>
+                    <include>AudioChannelsFlaggingConditions</include>
                 </control>
                 <control type="label">
                     <left>15</left>
