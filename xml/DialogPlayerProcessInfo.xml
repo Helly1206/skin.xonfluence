@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload condition="System.HasAddon(script.amlogic.displayinfo)">RunScript(script.amlogic.displayinfo)</onload>
     <defaultcontrol always="true">100</defaultcontrol>
     <include>dialogeffect</include>
     <depth>DepthOSD</depth>
@@ -88,7 +87,7 @@
                 <width>675</width>
                 <height>38</height>
                 <scroll>true</scroll>
-                <label fallback="1446">$INFO[Player.Process(videodecoder)]$INFO[Player.Process(amlogic.pixformat),$COMMA ]</label>
+                <label fallback="1446">$INFO[Player.Process(videodecoder)]</label>
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font12</font>
@@ -147,8 +146,8 @@
 			
 			<!-- AMLogic Additional info -->
 			<control type="group">
-			    <visible>System.HasAddon(script.amlogic.displayinfo)</visible>
-			    <control type="label">
+    		    <visible>Player.HasVideo + !String.IsEmpty(Player.Process(amlogic.displaymode))</visible>
+				<control type="label">
                     <description>Header</description>
                     <left>900</left>
                     <top>15</top>
