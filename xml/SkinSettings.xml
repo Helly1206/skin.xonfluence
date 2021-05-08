@@ -444,7 +444,8 @@
                                 <focusedcolor>white</focusedcolor>
                                 <label>$LOCALIZE[31066]</label>
                                 <include>MenuButton</include>
-                                <onclick>Skin.ToggleSetting(HidePopUpSeekBar)</onclick>
+                                <onclick condition="Skin.HasSetting(HidePopupSeekBar) + Skin.HasSetting(StandardSeekBar)">Skin.Reset(StandardSeekBar)</onclick>
+								<onclick>Skin.ToggleSetting(HidePopUpSeekBar)</onclick>
                                 <selected>!Skin.HasSetting(HidePopUpSeekBar)</selected>
                             </control>
 							<control type="radiobutton" id="11401">
@@ -456,7 +457,8 @@
                                 <focusedcolor>white</focusedcolor>
                                 <label>$LOCALIZE[32008]</label>
                                 <include>MenuButton</include>
-                                <onclick>Skin.ToggleSetting(StandardSeekBar)</onclick>
+                                <onclick condition="!Skin.HasSetting(StandardSeekBar) + !Skin.HasSetting(HidePopupSeekBar)">Skin.SetBool(HidePopupSeekBar)</onclick>
+								<onclick>Skin.ToggleSetting(StandardSeekBar)</onclick>
                                 <selected>Skin.HasSetting(StandardSeekBar)</selected>
                             </control>
                             <control type="radiobutton" id="115">
@@ -1385,8 +1387,8 @@
                                 <focusedcolor>white</focusedcolor>
                                 <label>$LOCALIZE[31374]</label>
                                 <include>MenuButton</include>
-                                <onclick>Skin.ToggleSetting(HideSeekBarPaused)</onclick>
-                                <selected>!Skin.HasSetting(HideSeekBarPaused)</selected>
+                                <onclick>Skin.ToggleSetting(ShowSeekBarPaused)</onclick>
+                                <selected>Skin.HasSetting(ShowSeekBarPaused)</selected>
                             </control>
                             <control type="radiobutton" id="182">
                                 <description>Video Info OSD</description>

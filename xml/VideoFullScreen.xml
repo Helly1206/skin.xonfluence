@@ -106,6 +106,8 @@
             <visible>Skin.HasSetting(ShowFullScreenClock) + !String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo)) + ![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
         </control>
 		<include>OSDStandardSeekBarInfo</include>
+		<include condition="Skin.HasSetting(MinimumPopUpSeekBar)">OSDMinimumSeekBar</include>
+		<include condition="!Skin.HasSetting(StandardSeekBar) + Skin.HasSetting(HidePopUpSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)">OSDNoSeekBar</include>
         
     </controls>
 </window>
