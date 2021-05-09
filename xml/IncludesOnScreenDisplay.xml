@@ -646,14 +646,17 @@
             </control>
             <control type="group" id="1">
                 <left>495</left>
-                <top>278r</top>
+                <top>298r</top>
                 <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
                 <include>OSDMediaHeading</include>
                 <include>OSDMediaFlagging</include>
                 <control type="label" id="1">
-                    <left>0</left>
+<!--                    <left>0</left>
                     <top>180</top>
-                    <width>1365</width>
+                    <width>1365</width> -->
+					<left>1018</left>
+                    <top>112</top>
+                    <width>220</width>
                     <height>38</height>
                     <label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
                     <align>center</align>
@@ -695,7 +698,7 @@
             </control>
             <control type="group" id="1">
                 <left>495</left>
-                <top>142r</top>
+                <top>162r</top>
                 <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
                 <visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
                 <control type="label" id="1">
@@ -810,7 +813,7 @@
 			    <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
 				<visible>Skin.HasSetting(HidePopupSeekBar)</visible>
 				<left>574r</left>
-                <top>86r</top>
+                <top>96r</top>
                 <control type="group" id="1">
                     <left>390</left>
                     <top>15</top>
