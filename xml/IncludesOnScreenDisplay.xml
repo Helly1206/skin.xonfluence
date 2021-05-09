@@ -625,6 +625,7 @@
                 <include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
                 <texture border="1">HomeNowPlayingBack.png</texture>
                 <animation effect="slide" end="0,68" time="0" tween="back" easing="out" condition="!Player.ShowInfo + Window.IsActive(VideoOSD) + [[Skin.HasSetting(ShowSeekBarPaused) + Player.Paused] | [Skin.HasSetting(HideVideoInfoOSD) + !Player.Paused]]" reversible="true">Conditional</animation>
+				<visible>!Skin.HasSetting(HideShadowSeekBar)</visible>
             </control>
             <control type="group" id="1">
                 <depth>DepthOSDPopout</depth>

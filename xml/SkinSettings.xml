@@ -1390,6 +1390,19 @@
                                 <onclick>Skin.ToggleSetting(ShowSeekBarPaused)</onclick>
                                 <selected>Skin.HasSetting(ShowSeekBarPaused)</selected>
                             </control>
+							<control type="radiobutton" id="1811">
+                                <description>Hide shadow behind seekbar</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label> - $LOCALIZE[32010]</label>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(HideShadowSeekBar)</onclick>
+                                <selected>Skin.HasSetting(HideShadowSeekBar)</selected>
+								<visible>Skin.HasSetting(ShowSeekBarPaused)</visible>
+                            </control>
                             <control type="radiobutton" id="182">
                                 <description>Video Info OSD</description>
                                 <width>1125</width>
