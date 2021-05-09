@@ -25,7 +25,7 @@
             <depth>DepthOSD+</depth>
             <description>Seek Slider</description>
             <left>645</left>
-            <top>123r</top>
+            <top>143r</top>
             <width>1080</width>
             <height>24</height>
             <onup>10</onup>
@@ -35,7 +35,7 @@
             <textureslidernib colordiffuse="$VAR[MainColorTwo]">OSD_slider_nibNF.png</textureslidernib>
             <textureslidernibfocus colordiffuse="$VAR[MainColorTwo]">OSD_slider_nib.png</textureslidernibfocus>
             <animation effect="fade" time="150">VisibleChange</animation>
-            <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | [Skin.HasSetting(HideVideoInfoOSD) + Window.IsActive(VideoOSD) + !Player.Paused + !Player.ShowInfo] | [Skin.HasSetting(HideVideoInfoOSD) + Window.IsActive(VideoOSD) + Skin.HasSetting(ShowSeekBarPaused) + Player.Paused + !Player.ShowInfo]" reversible="true">Conditional</animation>
+            <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
             <visible>![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
         </control>

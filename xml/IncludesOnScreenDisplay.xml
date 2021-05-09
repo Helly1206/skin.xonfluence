@@ -664,13 +664,13 @@
                     <font>font12</font>
                     <textcolor>grey</textcolor>
                     <scroll>true</scroll>
-                    <visible>!Window.IsVisible(VideoOSD) + !VideoPlayer.Content(LiveTV)</visible>
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <animation effect="fade" time="150">VisibleChange</animation>
                 </control>
                 <control type="label" id="1">
-                    <left>0</left>
+                    <left>150</left>
                     <top>180</top>
-                    <width>1365</width>
+                    <width>1080</width>
                     <height>38</height>
                     <label>$INFO[VideoPlayer.NextTitle,[B]$LOCALIZE[209]$LOCALIZE[31156] [/B]]</label>
                     <align>center</align>
@@ -682,9 +682,9 @@
                     <animation effect="fade" time="150">VisibleChange</animation>
                 </control>
                 <control type="label" id="1">
-                    <left>0</left>
+                    <left>150</left>
                     <top>225</top>
-                    <width>1365</width>
+                    <width>1080</width>
                     <height>38</height>
                     <label>[B]$LOCALIZE[31961][/B] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
                     <align>center</align>
@@ -1048,7 +1048,6 @@
                 <height>345</height>
                 <include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
                 <texture border="1">HomeNowPlayingBack.png</texture>
-                <animation effect="slide" end="0,68" time="0" tween="back" easing="out" condition="!Player.ShowInfo + Window.IsActive(VideoOSD) + [[Skin.HasSetting(ShowSeekBarPaused) + Player.Paused] | [Skin.HasSetting(HideVideoInfoOSD) + !Player.Paused]]" reversible="true">Conditional</animation>
             </control>
 			<control type="group" id="1">
                 <depth>DepthOSDPopout</depth>
@@ -1069,14 +1068,14 @@
             </control>
             <control type="group" id="1">
                 <left>495</left>
-                <top>278r</top>
+                <top>298r</top>
                 <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
                 <include>OSDMediaHeading</include>
                 <include>OSDMediaFlagging</include>
 				<control type="label" id="1">
-                    <left>0</left>
-                    <top>180</top>
-                    <width>1365</width>
+                    <left>1018</left>
+                    <top>112</top>
+                    <width>220</width>
                     <height>38</height>
                     <label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
                     <align>center</align>
@@ -1088,9 +1087,9 @@
                     <animation effect="fade" time="150">VisibleChange</animation>
                 </control>
                 <control type="label" id="1">
-                    <left>0</left>
+                    <left>150</left>
                     <top>180</top>
-                    <width>1365</width>
+                    <width>1080</width>
                     <height>38</height>
                     <label>$INFO[VideoPlayer.NextTitle,[B]$LOCALIZE[209]$LOCALIZE[31156] [/B]]</label>
                     <align>center</align>
@@ -1098,13 +1097,13 @@
                     <font>font12</font>
                     <textcolor>grey</textcolor>
                     <scroll>true</scroll>
-                    <visible>VideoPlayer.Content(LiveTV)</visible>
+                    <visible>!Window.IsVisible(VideoOSD) + VideoPlayer.Content(LiveTV)</visible>
                     <animation effect="fade" time="150">VisibleChange</animation>
                 </control>
                 <control type="label" id="1">
-                    <left>0</left>
+                    <left>150</left>
                     <top>225</top>
-                    <width>1365</width>
+                    <width>1080</width>
                     <height>38</height>
                     <label>[B]$LOCALIZE[31961][/B] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
                     <align>center</align>
@@ -1112,14 +1111,14 @@
                     <font>font12</font>
                     <textcolor>grey</textcolor>
                     <scroll>true</scroll>
-                    <visible>VideoPlayer.Content(LiveTV) + PVR.IsTimeShift</visible>
+                    <visible>!Window.IsVisible(VideoOSD) + VideoPlayer.Content(LiveTV) + PVR.IsTimeShift</visible>
                     <animation effect="fade" time="150">VisibleChange</animation>
                 </control>
             </control>
             <control type="group" id="1">
                 <left>495</left>
-                <top>142r</top>
-                <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD) | [Skin.HasSetting(HideVideoInfoOSD) + Window.IsActive(VideoOSD) + !Player.Paused + !Player.ShowInfo] | [Skin.HasSetting(HideVideoInfoOSD) + Window.IsActive(VideoOSD) + Skin.HasSetting(ShowSeekBarPaused) + Player.Paused + !Player.ShowInfo]" reversible="true">Conditional</animation>
+                <top>162r</top>
+                <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
                 <visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
                 <control type="label" id="1">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -1232,7 +1231,7 @@
             </control>
 			<control type="group" id="2">
 				<left>574r</left>
-                <top>86r</top>
+                <top>96r</top>
                 <control type="group" id="1">
                     <left>390</left>
                     <top>15</top>
@@ -1423,7 +1422,6 @@
                     <font>font10_title</font>
                     <textcolor>$VAR[MainColorOne]</textcolor>
                     <label>$VAR[SeekLabel]</label>
-					<visible>!Skin.HasSetting(MinimumPopUpSeekBar)</visible>
                 </control>
                 <control type="label" id="1">
                     <description>Seek Number label</description>
