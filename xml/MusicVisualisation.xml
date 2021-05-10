@@ -37,6 +37,7 @@
             <include condition="!Skin.String(MusicOSDInfo,never)">TopLeftInfo</include>
             <include condition="!Skin.String(MusicOSDInfo,never)">Clock</include>
             <include condition="!Skin.String(MusicOSDInfo,never)">Date</include>
+			<include condition="!Skin.String(MusicOSDInfo,never)">CPUTemp</include>
             <control type="image">
                 <left>-30</left>
                 <top>345r</top>

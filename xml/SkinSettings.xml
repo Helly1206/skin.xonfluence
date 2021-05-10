@@ -314,6 +314,18 @@
                                 <selected>Skin.HasSetting(ClockShowSeconds)</selected>
                                 <enable>!Skin.HasSetting(HideSystemTime)</enable>
                             </control>
+							<control type="radiobutton" id="1021">
+                                <description>CPU Temp</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>$LOCALIZE[32011]</label>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(HideCPUTemp)</onclick>
+                                <selected>!Skin.HasSetting(HideCPUTemp)</selected>
+                            </control>
                             <control type="button" id="104">
                                 <description>Main Colour One</description>
                                 <width>1125</width>

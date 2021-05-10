@@ -1189,6 +1189,7 @@
             <depth>DepthHeader</depth>
             <include>Clock</include>
             <include>Date</include>
+			<include>CPUTemp</include>
         </control>
     </controls>
 </window>

@@ -1695,10 +1695,54 @@
             <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
             <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(1105)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
             <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse)+Window.IsVisible(1198)">conditional</animation>
+            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
             <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
             <visible>!Skin.HasSetting(HideSystemTime)</visible>
+        </control>
+    </include>
+	<include name="CPUTemp">
+        <control type="label" id="1">
+            <description>CPU Temp label</description>
+            <right>30</right>
+            <top>75</top>
+            <width>450</width>
+            <height>22</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font10</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$LOCALIZE[22011] $INFO[System.CPUTemperature]</label>
+            <include>Window_OpenClose_Animation</include>
+            <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
+            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(1105)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
+            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
+            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
+            <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
+            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+			<visible>!Skin.HasSetting(HideSystemTime) + !Skin.HasSetting(HideCPUTemp) + !String.IsEqual($INFO[System.CPUTemperature],$LOCALIZE[10005]) + [!Window.IsActive(Home) | [Window.IsActive(Home) + String.IsEqual(Container(9000).ListItem.Property(WidgetSet),None)]]</visible>
+        </control>
+		<control type="label" id="1">
+            <description>CPU Temp label</description>
+            <right>30</right>
+            <top>8</top>
+            <width>450</width>
+            <height>22</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font10</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$LOCALIZE[22011] $INFO[System.CPUTemperature]</label>
+            <include>Window_OpenClose_Animation</include>
+            <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
+            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(1105)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
+            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
+            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
+            <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
+            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+			<visible>Skin.HasSetting(HideSystemTime) + !Skin.HasSetting(HideCPUTemp) + !String.IsEqual($INFO[System.CPUTemperature],$LOCALIZE[10005]) + [!Window.IsActive(Home) | [Window.IsActive(Home) + String.IsEqual(Container(9000).ListItem.Property(WidgetSet),None)]]</visible>
         </control>
     </include>
     <include name="CDArtSpinner">
