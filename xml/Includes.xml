@@ -1742,7 +1742,7 @@
             <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
             <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-			<visible>Skin.HasSetting(HideSystemTime) + !Skin.HasSetting(HideCPUTemp) + !String.IsEqual($INFO[System.CPUTemperature],$LOCALIZE[10005]) + [!Window.IsActive(Home) | [Window.IsActive(Home) + String.IsEqual(Container(9000).ListItem.Property(WidgetSet),None)]]</visible>
+			<visible>Skin.HasSetting(HideSystemTime) + !Skin.HasSetting(HideCPUTemp) + !String.IsEqual($INFO[System.CPUTemperature],$LOCALIZE[10005])</visible>
         </control>
     </include>
     <include name="CDArtSpinner">
