@@ -617,7 +617,6 @@
                 <include>TopLeftInfo</include>
                 <include>Clock</include>
                 <include>Date</include>
-				<include>CPUTemp</include>
             </control>
 			<!-- Plot -->
             <include>OSDMediaPlot</include>
@@ -1069,7 +1068,6 @@
                 <include>TopLeftInfo</include>
                 <include>Clock</include>
                 <include>Date</include>
-				<include>CPUTemp</include>
             </control>
             <control type="image" id="1">
                 <left>-30</left>
