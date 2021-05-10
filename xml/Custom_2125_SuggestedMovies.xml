@@ -73,7 +73,7 @@
                         <top>4</top>
                         <width>120</width>
                         <height>120</height>
-                        <texture fallback="Fanart_Fallback_Small.jpg">$INFO[Listitem.Icon]</texture>
+                        <texture fallback="Fanart_Fallback_Small.jpg">$INFO[Listitem.Art(fanart)]</texture>
                         <aspectratio>keep</aspectratio>
                         <colordiffuse>33FFFFFF</colordiffuse>
                         <bordertexture border="3">black-back2.png</bordertexture>
@@ -116,7 +116,7 @@
                         <top>4</top>
                         <width>120</width>
                         <height>120</height>
-                        <texture fallback="Fanart_Fallback_Small.jpg">$INFO[Listitem.Icon]</texture>
+                        <texture fallback="Fanart_Fallback_Small.jpg">$INFO[Listitem.Art(fanart)]</texture>
                         <aspectratio>keep</aspectratio>
                         <bordertexture border="3">black-back2.png</bordertexture>
                         <bordersize>2</bordersize>
@@ -185,16 +185,16 @@
                     </control>
                     <control type="image">
                         <width>1</width>
-                        <height>225</height>
+                        <height>40</height>
                         <texture></texture>
                     </control>
                     <control type="image">
                         <width>324</width>
-                        <height>300</height>
+                        <height>486</height>
                         <align>center</align>
-                        <aspectratio align="center">stretch</aspectratio>
+                        <aspectratio align="center">scale</aspectratio>
                         <fadetime>IconCrossfadeTime</fadetime>
-                        <texture fallback="Fanart_Fallback_Small.jpg" diffuse="episodematte.png">$INFO[Container(450).ListItem.Icon]</texture>
+                        <texture fallback="Fanart_Fallback_Small.jpg" diffuse="episodematte.png">$INFO[Container(450).ListItem.Art(poster)]</texture>
                         <bordertexture border="8">ThumbShadow.png</bordertexture>
                         <bordersize>8</bordersize>
                     </control>
