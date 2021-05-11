@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="NowPlayingMusic">
+	    <control type="group">
+            <depth>DepthMenu</depth>
+            <left>0</left>
+            <top>90</top>
+            <visible>Player.HasAudio + !Skin.HasSetting(HideNowPlayingInfo)</visible>
+            <include>VisibleFadeEffect</include>
+            <include>Window_OpenClose_Animation</include>
+            <animation effect="slide" start="0,0" end="0,-45" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,240" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
+            <control type="image">
+                <description>Cover image</description>
+                <left>30</left>
+                <top>68</top>
+                <width>195</width>
+                <height>442</height>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+                <bordertexture border="8">ThumbBorder.png</bordertexture>
+                <bordersize>5</bordersize>
+            </control>
+            <control type="label">
+                <description>Album Label</description>
+                <left>255</left>
+                <top>398</top>
+                <height>38</height>
+                <width>1500</width>
+                <label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <description>Title label</description>
+                <left>255</left>
+                <top>428</top>
+                <height>45</height>
+                <width>1500</width>
+                <label>$INFO[Player.Title]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font13_title</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <description>Time Label</description>
+                <left>255</left>
+                <top>465</top>
+                <height>45</height>
+                <width>450</width>
+                <label>$INFO[Player.Time][COLOR=$VAR[MainColorOne]] / [/COLOR]$INFO[Player.Duration]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+        </control>
+	</include>
+	
+	<include name="NowPlayingPVR">
+	    <control type="group">
+            <depth>DepthMenu</depth>
+            <left>735r</left>
+            <top>105</top>
+            <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),None)</visible>
+            <visible>!Skin.HasSetting(HideTVRecordingInfo)</visible>
+            <include>VisibleFadeEffect</include>
+            <include>Window_OpenClose_Animation</include>
+            <animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(Favourites)">conditional</animation>
+            <control type="group">
+                <animation effect="slide" start="0,0" end="0,150" time="0" condition="PVR.IsRecording">conditional</animation>
+                <visible>PVR.HasNonRecordingTimer</visible>
+                <control type="image">
+                    <left>0</left>
+                    <top>-8</top>
+                    <width>735</width>
+                    <height>135</height>
+                    <texture>gradient.png</texture>
+                </control>
+                <control type="image">
+                    <left>600</left>
+                    <top>0</top>
+                    <width>120</width>
+                    <height>120</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
+                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordersize>4</bordersize>
+                </control>
+                <control type="image">
+                    <left>548</left>
+                    <top>8</top>
+                    <width>38</width>
+                    <height>38</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>PVR-HasTimer.png</texture>
+                </control>
+                <control type="label">
+                    <description>Next Timer Header label</description>
+                    <left>-68</left>
+                    <top>8</top>
+                    <height>38</height>
+                    <width>600</width>
+                    <label>$LOCALIZE[19157]</label>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>font12_title</font>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>NextRecordingDateTime</description>
+                    <left>-15</left>
+                    <top>45</top>
+                    <height>38</height>
+                    <width>600</width>
+                    <label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <scroll>true</scroll>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>NextRecordingTitle Channel</description>
+                    <left>-615</left>
+                    <top>75</top>
+                    <height>38</height>
+                    <width>1200</width>
+                    <label>$INFO[PVR.NextRecordingTitle][COLOR=grey]$INFO[PVR.NextRecordingChannel, - [COLOR=grey3]([/COLOR],[COLOR=grey3])[/COLOR]][/COLOR]</label>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>font12_title</font>
+                    <shadowcolor>black</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+            </control>
+            <control type="group">
+                <visible>PVR.IsRecording</visible>
+                <control type="image">
+                    <left>0</left>
+                    <top>-8</top>
+                    <width>735</width>
+                    <height>135</height>
+                    <texture>gradient.png</texture>
+                </control>
+                <control type="image">
+                    <left>600</left>
+                    <top>0</top>
+                    <width>120</width>
+                    <height>120</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
+                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordersize>4</bordersize>
+                </control>
+                <control type="image">
+                    <left>548</left>
+                    <top>8</top>
+                    <width>38</width>
+                    <height>38</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>PVR-IsRecording.png</texture>
+                </control>
+                <control type="label">
+                    <description>Is Recording Header label</description>
+                    <left>-68</left>
+                    <top>8</top>
+                    <height>38</height>
+                    <width>600</width>
+                    <label>$LOCALIZE[19158]</label>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>font12_title</font>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>NextRecordingDateTime</description>
+                    <left>-15</left>
+                    <top>45</top>
+                    <height>38</height>
+                    <width>600</width>
+                    <label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <scroll>true</scroll>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>NextRecordingTitle Channel</description>
+                    <left>-615</left>
+                    <top>75</top>
+                    <height>45</height>
+                    <width>1200</width>
+                    <label>$INFO[PVR.NowRecordingTitle][COLOR=grey]$INFO[PVR.NowRecordingChannel, - [COLOR=grey3]([/COLOR],[COLOR=grey3])[/COLOR]][/COLOR]</label>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>font12_title</font>
+                    <shadowcolor>black</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+            </control>
+        </control>
+	</include>
+	
+	<include name="NowPlayingVideo">
+	    <control type="group">
+            <depth>DepthMenu</depth>
+            <left>0</left>
+            <top>75</top>
+            <visible>Player.HasVideo + !Skin.HasSetting(HideNowPlayingInfo)</visible>
+            <include>VisibleFadeEffect</include>
+            <include>Window_OpenClose_Animation</include>
+            <animation effect="slide" start="0,0" end="0,-45" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,240" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
+            <!-- Concert or other streaming video -->
+			<control type="group">
+                <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
+                <control type="image">
+                    <description>Cover image</description>
+                    <left>30</left>
+                    <top>68</top>
+                    <width>225</width>
+                    <height>450</height>
+                    <aspectratio aligny="bottom">keep</aspectratio>
+                    <texture fallback="DefaultVideoCover.png">$VAR[StreamingVideoIcon]</texture>
+                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordersize>5</bordersize>
+                </control>
+                <control type="label">
+                    <description>Title label</description>
+                    <left>285</left>
+                    <top>428</top>
+                    <height>45</height>
+                    <width>1500</width>
+                    <label>$VAR[VideoNowPlaying]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>Time Label</description>
+                    <left>285</left>
+                    <top>465</top>
+                    <height>45</height>
+                    <width>450</width>
+                    <label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <visible>!VideoPlayer.HasEpg</visible>
+                </control>
+                <control type="label">
+                    <description>Time Label</description>
+                    <left>285</left>
+                    <top>465</top>
+                    <height>45</height>
+                    <width>450</width>
+                    <label>$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration,[COLOR=blue] / [/COLOR]]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <visible>VideoPlayer.HasEpg</visible>
+                </control>
+            </control>
+			<!-- PVR -->
+            <control type="group">
+                <visible>VideoPlayer.Content(LiveTV)</visible>
+                <control type="image">
+                    <description>Cover image</description>
+                    <left>30</left>
+                    <top>68</top>
+                    <width>180</width>
+                    <height>450</height>
+                    <aspectratio aligny="bottom">keep</aspectratio>
+                    <texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordersize>5</bordersize>
+                </control>
+                <control type="label">
+                    <description>Channel label</description>
+                    <left>240</left>
+                    <top>398</top>
+                    <height>38</height>
+                    <width>990</width>
+                    <label>$INFO[VideoPlayer.ChannelName]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>Title label</description>
+                    <left>240</left>
+                    <top>428</top>
+                    <height>45</height>
+                    <width>1500</width>
+                    <label>$INFO[Player.Title]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>Time Label</description>
+                    <left>240</left>
+                    <top>465</top>
+                    <height>45</height>
+                    <width>450</width>
+                    <label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+            </control>
+			<!-- Movies -->
+            <control type="group">
+                <visible>VideoPlayer.Content(Movies)</visible>
+                <control type="image">
+                    <description>Cover image</description>
+                    <left>30</left>
+                    <top>68</top>
+                    <width>180</width>
+                    <height>450</height>
+                    <aspectratio aligny="bottom">keep</aspectratio>
+                    <texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordersize>5</bordersize>
+                </control>
+                <control type="label">
+                    <description>Studio label</description>
+                    <left>240</left>
+                    <top>398</top>
+                    <height>38</height>
+                    <width>1500</width>
+                    <label>$INFO[VideoPlayer.Studio]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>Title label</description>
+                    <left>240</left>
+                    <top>428</top>
+                    <height>45</height>
+                    <width>1500</width>
+                    <label>$INFO[Player.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>Time Label</description>
+                    <left>240</left>
+                    <top>465</top>
+                    <height>45</height>
+                    <width>450</width>
+                    <label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+            </control>
+			<!-- Episodes -->
+            <control type="group">
+                <visible>VideoPlayer.Content(Episodes)</visible>
+                <control type="image">
+                    <description>Cover image</description>
+                    <left>30</left>
+                    <top>338</top>
+                    <width>270</width>
+                    <height>180</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordersize>5</bordersize>
+                </control>
+                <control type="label">
+                    <description>TV Show Season Ep Label</description>
+                    <left>315</left>
+                    <top>398</top>
+                    <height>38</height>
+                    <width>1500</width>
+                    <label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season,$LOCALIZE[20373] , - ]$INFO[VideoPlayer.episode,$LOCALIZE[20359] ,])</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>Title label</description>
+                    <left>315</left>
+                    <top>428</top>
+                    <height>45</height>
+                    <width>1500</width>
+                    <label>$INFO[Player.Title]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+                <control type="label">
+                    <description>Time Label</description>
+                    <left>315</left>
+                    <top>465</top>
+                    <height>45</height>
+                    <width>450</width>
+                    <label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                </control>
+            </control>
+        </control>
+	</include>
+	
+	<include name="NowPlayingMediaControls">
+	    <control type="group">
+            <depth>DepthMenu-</depth>
+            <description>Controls for currently playing media</description>
+            <left>818r</left>
+            <top>555</top>
+            <animation effect="slide" start="0,0" end="0,-45" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,240" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-150,0" time="225" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
+            <animation effect="fade" start="100" end="65" time="150" condition="Window.IsVisible(2123) | Window.IsVisible(2124) | Window.IsVisible(2125) | Window.IsVisible(Favourites)">conditional</animation>
+            <animation effect="slide" start="0,0" end="600,0" time="225" condition="!Player.HasMedia + !Skin.HasSetting(EnableHomeStats)">conditional</animation>
+            <animation type="WindowOpen" reversible="false">
+                <effect type="zoom" start="80" end="100" center="960,540" easing="out" tween="back" time="225" />
+                <effect type="fade" start="0" end="100" time="225" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="225" />
+                <effect type="fade" start="100" end="0" time="225" />
+            </animation>
+            <visible>String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+            <control type="image">
+                <description>Background End image</description>
+                <left>1</left>
+                <top>0</top>
+                <width>52</width>
+                <height>52</height>
+                <colordiffuse>CCFFFFFF</colordiffuse>
+                <texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <animation effect="slide" start="0,0" end="172,0" time="0" condition="Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)">Conditional</animation>
+            </control>
+            <control type="radiobutton" id="610">
+                <colordiffuse>CCFFFFFF</colordiffuse>
+                <description>Global Search</description>
+                <left>53</left>
+                <top>0</top>
+                <height>52</height>
+                <width>172</width>
+                <textwidth>225</textwidth>
+                <textoffsetx>15</textoffsetx>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>grey2</textcolor>
+                <focusedcolor>white</focusedcolor>
+                <texturefocus flipy="true" border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texturefocus>
+                <texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <pulseonselect>false</pulseonselect>
+                <label>137</label>
+                <onclick>RunScript(script.globalsearch)</onclick>
+                <textureradioonfocus>icon_search.png</textureradioonfocus>
+                <textureradioonnofocus>icon_search.png</textureradioonnofocus>
+                <textureradioofffocus>icon_search.png</textureradioofffocus>
+                <textureradiooffnofocus>icon_search.png</textureradiooffnofocus>
+                <onleft>609</onleft>
+                <onright>601</onright>
+                <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                <ondown>9000</ondown>
+                <visible>!Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)</visible>
+            </control>
+            <control type="group" id="600">
+                <left>225</left>
+                <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                <ondown>9000</ondown>
+                <defaultcontrol></defaultcontrol>
+                <enable>Player.HasMedia</enable>
+                <control type="image">
+                    <description>Background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>382</width>
+                    <height>52</height>
+                    <texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
+                    <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                    <colordiffuse>CCFFFFFF</colordiffuse>
+                    <animation effect="zoom" start="0,0,308,53" end="0,0,750,53" delay="0" time="300" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
+                    <visible>Player.HasMedia | Skin.HasSetting(EnableHomeStats)</visible>
+                </control>
+                <control type="group">
+                    <visible>!VideoPlayer.Content(LiveTV)+Player.HasMedia</visible>
+                    <control type="radiobutton" id="601">
+                        <left>15</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDPrevTrack" />
+                        </include>
+                        <onleft>610</onleft>
+                        <onright>602</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>PlayerControl(Previous)</onclick>
+                    </control>
+                    <control type="radiobutton" id="602">
+                        <left>60</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDRewind" />
+                        </include>
+                        <onleft>601</onleft>
+                        <onright>603</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>PlayerControl(Rewind)</onclick>
+                    </control>
+                    <control type="radiobutton" id="603">
+                        <left>105</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButtonAlt">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDPause" />
+                            <param name="AltTexture" value="OSDPlay" />
+                            <param name="Selected" value="Player.Paused | Player.Forwarding | Player.Rewinding" />
+                        </include>
+                        <onleft>602</onleft>
+                        <onright>604</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>PlayerControl(Play)</onclick>
+                    </control>
+                    <control type="radiobutton" id="604">
+                        <left>150</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDStop" />
+                        </include>
+                        <onleft>603</onleft>
+                        <onright>605</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>down</onclick>
+                        <onclick>PlayerControl(Stop)</onclick>
+                    </control>
+                    <control type="radiobutton" id="605">
+                        <left>195</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDForward" />
+                        </include>
+                        <onleft>604</onleft>
+                        <onright>606</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>PlayerControl(Forward)</onclick>
+                    </control>
+                    <control type="radiobutton" id="606">
+                        <left>240</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDNextTrack" />
+                        </include>
+                        <onleft>605</onleft>
+                        <onright>607</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>PlayerControl(Next)</onclick>
+                    </control>
+                    <control type="radiobutton" id="607">
+                        <posx>285</posx>
+                        <posy>3</posy>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDVolUp" />
+                        </include>
+                        <onleft>606</onleft>
+                        <onright>608</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>$VAR[VolumeStepUp]</onclick>
+                        <onclick>VolumeUp</onclick>
+                        <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+                    </control>
+                    <control type="radiobutton" id="608">
+                        <posx>330</posx>
+                        <posy>3</posy>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDVolDown" />
+                        </include>
+                        <onleft>607</onleft>
+                        <onright>609</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>$VAR[VolumeStepDown]</onclick>
+                        <onclick>VolumeDown</onclick>
+                        <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+                    </control>
+                </control>
+                <control type="group" id="600">
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
+                    <control type="radiobutton" id="601">
+                        <left>15</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDChannelUp" />
+                        </include>
+                        <onleft>608</onleft>
+                        <onright>602</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>ChannelDown</onclick>
+                    </control>
+                    <control type="radiobutton" id="602">
+                        <left>60</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDChannelDown" />
+                        </include>
+                        <onleft>601</onleft>
+                        <onright>603</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>ChannelUp</onclick>
+                    </control>
+                    <control type="radiobutton" id="603">
+                        <left>105</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDStop" />
+                        </include>
+                        <onleft>602</onleft>
+                        <onright>604</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>down</onclick>
+                        <onclick>PlayerControl(Stop)</onclick>
+                    </control>
+                    <control type="radiobutton" id="604">
+                        <left>150</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButtonAlt">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDPause" />
+                            <param name="AltTexture" value="OSDPlay" />
+                            <param name="Selected" value="Player.Paused | Player.Forwarding | Player.Rewinding" />
+                        </include>
+                        <onleft>603</onleft>
+                        <onright>605</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>PlayerControl(Play)</onclick>
+                        <enable>Player.PauseEnabled</enable>
+                        <animation effect="fade" start="100" end="30" time="75" condition="!Player.PauseEnabled">Conditional</animation>
+                    </control>
+                    <control type="radiobutton" id="605">
+                        <left>195</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDRadioRDS" />
+                        </include>
+                        <onleft>604</onleft>
+                        <onright>606</onright>
+                        <onup>9003</onup>
+                        <ondown>9000</ondown>
+                        <onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
+                        <enable>RDS.HasRadiotextPlus</enable>
+                        <animation effect="fade" start="100" end="30" time="75" condition="!RDS.HasRadiotextPlus">Conditional</animation>
+                    </control>
+                    <control type="radiobutton" id="606">
+                        <left>240</left>
+                        <top>3</top>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDRecordOff" />
+                        </include>
+                        <onleft>605</onleft>
+                        <onright>607</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>PVR.ToggleRecordPlayingChannel</onclick>
+                    </control>
+                    <control type="radiobutton" id="607">
+                        <posx>285</posx>
+                        <posy>3</posy>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDVolUp" />
+                        </include>
+                        <onleft>606</onleft>
+                        <onright>608</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>$VAR[VolumeStepUp]</onclick>
+                        <onclick>VolumeUp</onclick>
+                        <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+                    </control>
+                    <control type="radiobutton" id="608">
+                        <posx>330</posx>
+                        <posy>3</posy>
+                        <label></label>
+                        <include content="OSDButton">
+                            <param name="Size" value="45" />
+                            <param name="Texture" value="OSDVolDown" />
+                        </include>
+                        <onleft>607</onleft>
+                        <onright>609</onright>
+                        <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                        <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                        <ondown>9000</ondown>
+                        <onclick>$VAR[VolumeStepDown]</onclick>
+                        <onclick>VolumeDown</onclick>
+                        <visible>Skin.HasSetting(EnableVolumeButtons)</visible>
+                    </control>
+                </control>
+            </control>
+            <control type="radiobutton" id="609">
+                <animation effect="slide" end="0,52" time="300" condition="!Player.HasMedia">conditional</animation>
+                <colordiffuse>CCFFFFFF</colordiffuse>
+                <description>Go to fullscreen Playback</description>
+                <left>608</left>
+                <top>0</top>
+                <height>52</height>
+                <width>210</width>
+                <textwidth>225</textwidth>
+                <textoffsetx>15</textoffsetx>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>grey2</textcolor>
+                <focusedcolor>white</focusedcolor>
+                <texturefocus flipy="true" border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texturefocus>
+                <texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <pulseonselect>false</pulseonselect>
+                <label>31008</label>
+                <onclick>fullscreen</onclick>
+                <textureradioonfocus>GoFullscreen.png</textureradioonfocus>
+                <textureradioonnofocus>GoFullscreen.png</textureradioonnofocus>
+                <textureradioofffocus>GoFullscreen.png</textureradioofffocus>
+                <textureradiooffnofocus>GoFullscreen.png</textureradiooffnofocus>
+                <onleft>608</onleft>
+                <onright>610</onright>
+                <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+                <onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+                <ondown>9000</ondown>
+                <enable>Player.HasMedia</enable>
+                <visible>Player.HasMedia</visible>
+            </control>
+            <control type="label">
+                <left>285</left>
+                <top>10</top>
+                <height>30</height>
+                <width>675</width>
+                <label>$VAR[InfoBarStats]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font12_title</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <visible>!Player.HasMedia + Skin.HasSetting(EnableHomeStats)</visible>
+            </control>
+        </control>
+	</include>
+</includes>

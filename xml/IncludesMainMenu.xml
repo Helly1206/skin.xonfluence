@@ -1711,4 +1711,280 @@
         <onload condition="Skin.String(HomeItem.15.Label,$LOCALIZE[0])">Skin.SetString(HomeItem.15.Label,$LOCALIZE[24001])</onload>
         <onload>Skin.SetBool(Updates_V403)</onload>
     </include>
+	
+	<include name="HomeSuggestedMedia">
+	    <!-- Suggested Movie Info -->
+		<control type="group">
+            <left>0</left>
+            <top>90</top>
+            <visible>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</visible>
+            <visible>!Player.HasMedia + !String.IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
+            <visible>!Integer.IsGreater(Window(Home).Property(RecommendedMovie.1.PercentPlayed),95)</visible>
+            <visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Movies)</visible>
+            <include>VisibleFadeEffect</include>
+            <include>Window_OpenClose_Animation</include>
+            <animation effect="slide" start="0,0" end="0,-45" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,240" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
+            <control type="image">
+                <description>Cover image</description>
+                <left>30</left>
+                <top>68</top>
+                <width>180</width>
+                <height>450</height>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <texture fallback="DefaultVideoCover.png">$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</texture>
+                <bordertexture border="8">ThumbBorder.png</bordertexture>
+                <bordersize>5</bordersize>
+            </control>
+            <control type="label">
+                <description>NowPlaying label</description>
+                <left>240</left>
+                <top>352</top>
+                <height>38</height>
+                <width>1500</width>
+                <label>$LOCALIZE[31269] $LOCALIZE[20338]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12_title</font>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <description>Title label</description>
+                <left>240</left>
+                <top>382</top>
+                <height>45</height>
+                <width>1500</width>
+                <label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]$INFO[Window(Home).Property(RecommendedMovie.1.Year),[COLOR=grey] (,)[/COLOR]]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font13_title</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <description>Studio label</description>
+                <left>240</left>
+                <top>428</top>
+                <height>38</height>
+                <width>1500</width>
+                <label>$INFO[Window(Home).Property(RecommendedMovie.1.Studio)]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <description>Time Label</description>
+                <left>240</left>
+                <top>465</top>
+                <height>45</height>
+                <width>450</width>
+                <label>$INFO[Window(Home).Property(RecommendedMovie.1.PercentPlayed),$LOCALIZE[31268] ]$INFO[Window(Home).Property(RecommendedMovie.1.Runtime), $LOCALIZE[1443] , $LOCALIZE[12391]]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+        </control>
+        <!-- Suggested Episode Info -->
+        <control type="group">
+            <left>0</left>
+            <top>90</top>
+            <visible>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</visible>
+            <visible>!Player.HasMedia + !String.IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
+            <visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),TVShows)</visible>
+            <include>VisibleFadeEffect</include>
+            <include>Window_OpenClose_Animation</include>
+            <animation effect="slide" start="0,0" end="0,-45" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,240" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
+            <control type="image">
+                <description>Cover image</description>
+                <left>30</left>
+                <top>68</top>
+                <width>180</width>
+                <height>450</height>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <texture fallback="DefaultVideoCover.png">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.poster))]</texture>
+                <bordertexture border="8">ThumbBorder.png</bordertexture>
+                <bordersize>5</bordersize>
+            </control>
+            <control type="label">
+                <left>240</left>
+                <top>352</top>
+                <height>38</height>
+                <width>1500</width>
+                <label>$LOCALIZE[31251] $LOCALIZE[20359]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12_title</font>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <description>TV Show Season Ep Label</description>
+                <left>240</left>
+                <top>390</top>
+                <height>38</height>
+                <width>1500</width>
+                <label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <description>Title label</description>
+                <left>240</left>
+                <top>420</top>
+                <height>45</height>
+                <width>1500</width>
+                <label>$INFO[Window(Home).Property(RecommendedEpisode.1.TVshowTitle)]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font13_title</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="label">
+                <left>240</left>
+                <top>465</top>
+                <height>45</height>
+                <width>450</width>
+                <label>$INFO[Window(Home).Property(RecommendedEpisode.1.Episode),$LOCALIZE[20359] ]$INFO[Window(Home).Property(RecommendedEpisode.1.Season), $LOCALIZE[1443] $LOCALIZE[20373] ]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font12</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+        </control>
+	</include>
+	
+	<include name="HomeRSS">
+	    <control type="group">
+            <depth>DepthMenu-</depth>
+            <left>0</left>
+            <top>50r</top>
+            <visible>system.getbool(lookandfeel.enablerssfeeds) | [Player.HasAudio + !String.IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)]</visible>
+            <animation effect="slide" start="0,0" end="0,52" time="150" condition="Skin.HasSetting(HidePopUpSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+            <include>Window_OpenClose_Animation</include>
+            <control type="rss">
+                <description>RSS feed</description>
+                <include>RSSPosition</include>
+                <top>0</top>
+                <height>45</height>
+                <font>font12</font>
+                <urlset>1</urlset>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <titlecolor>$VAR[MainColorOne]</titlecolor>
+                <headlinecolor>white</headlinecolor>
+                <visible>[!Player.HasAudio | String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
+            </control>
+            <control type="fadelabel" id="1">
+                <description>Next Five Songs</description>
+                <include>RSSPosition</include>
+                <top>0</top>
+                <height>45</height>
+                <scroll>true</scroll>
+                <scrollout>true</scrollout>
+                <pauseatend>200</pauseatend>
+                <label>$VAR[NextFiveSongScroller]</label>
+                <font>font12</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <textoffsetx>30</textoffsetx>
+                <visible>Player.HasAudio + !String.IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
+            </control>
+            <control type="image">
+                <description>RSS background</description>
+                <left>1875</left>
+                <top>3</top>
+                <width>36</width>
+                <height>36</height>
+                <texture>icon-rss.png</texture>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+            </control>
+        </control>
+	</include>
+	
+	<include name="HomeBottomButtons">
+	    <control type="grouplist" id="21">
+            <depth>DepthFooter</depth>
+            <include>Window_OpenClose_Animation</include>
+            <left>30</left>
+            <top>82r</top>
+            <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+            <onup condition="Skin.HasSetting(LowerMainMenuBar)">9001</onup>
+            <ondown>9003</ondown>
+            <align>left</align>
+            <orientation>horizontal</orientation>
+            <itemgap>15</itemgap>
+            <control type="radiobutton" id="22">
+                <description>Favourites push button</description>
+                <textureradioonfocus>icon_favourites.png</textureradioonfocus>
+                <textureradioonnofocus>icon_favourites.png</textureradioonnofocus>
+                <textureradioofffocus>icon_favourites.png</textureradioofffocus>
+                <textureradiooffnofocus>icon_favourites.png</textureradiooffnofocus>
+                <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+                <texturenofocus border="5">floor_button.png</texturenofocus>
+                <width>68</width>
+                <height>68</height>
+                <radiowidth>52</radiowidth>
+                <radioheight>52</radioheight>
+                <radioposx>8</radioposx>
+                <radioposy>8</radioposy>
+                <label>1036</label>
+                <font></font>
+                <onclick>$VAR[FavBtnCommand]</onclick>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <visible>!Skin.HasSetting(HideFavorites)</visible>
+            </control>
+            <control type="radiobutton" id="25">
+                <description>GlobSearch push button</description>
+                <textureradioonfocus>icon_search.png</textureradioonfocus>
+                <textureradioonnofocus>icon_search.png</textureradioonnofocus>
+                <textureradioofffocus>icon_search.png</textureradioofffocus>
+                <textureradiooffnofocus>icon_search.png</textureradiooffnofocus>
+                <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+                <texturenofocus border="5">floor_button.png</texturenofocus>
+                <width>68</width>
+                <height>68</height>
+                <radiowidth>52</radiowidth>
+                <radioheight>52</radioheight>
+                <radioposx>8</radioposx>
+                <radioposy>8</radioposy>
+                <label></label>
+                <font></font>
+                <onclick>RunScript(script.globalsearch)</onclick>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <visible>!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)</visible>
+            </control>
+            <control type="radiobutton" id="23">
+                <description>Power push button</description>
+                <textureradioonfocus>icon_power.png</textureradioonfocus>
+                <textureradioonnofocus>icon_power.png</textureradioonnofocus>
+                <textureradioofffocus>icon_power.png</textureradioofffocus>
+                <textureradiooffnofocus>icon_power.png</textureradiooffnofocus>
+                <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+                <texturenofocus border="5">floor_button.png</texturenofocus>
+                <width>68</width>
+                <height>68</height>
+                <radiowidth>52</radiowidth>
+                <radioheight>52</radioheight>
+                <radioposx>8</radioposx>
+                <radioposy>8</radioposy>
+                <label>31003</label>
+                <font></font>
+                <onclick>$VAR[HomePowerBtnCommand]</onclick>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
+            </control>
+        </control>
+	</include>
+	
+	
 </includes>
