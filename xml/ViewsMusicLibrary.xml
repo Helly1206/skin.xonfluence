@@ -645,7 +645,7 @@
                 <control type="label">
                     <description>Year txt</description>
                     <left>15</left>
-                    <top>795</top>
+                    <top>785</top>
                     <width>435</width>
                     <height>38</height>
                     <label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[345]: [/COLOR]$INFO[listitem.Year]</label>
@@ -653,6 +653,19 @@
                     <aligny>center</aligny>
                     <font>font13_title</font>
                     <textcolor>white</textcolor>
+					<visible>!String.IsEmpty(ListItem.Year)</visible>
+                </control>
+				<control type="label">
+                    <description>Runtime</description>
+                    <left>15</left>
+                    <top>823</top>
+                    <width>435</width>
+                    <height>38</height>
+                    <label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[2050]: [/COLOR]$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>font13_title</font>
+					<visible>!String.IsEmpty(ListItem.Duration)</visible>
                 </control>
             </control>
         </control>
