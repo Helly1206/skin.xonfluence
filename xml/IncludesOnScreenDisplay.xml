@@ -599,7 +599,8 @@
 	    <control type="group" id="1">
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
-            <visible>Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | [Skin.HasSetting(StandardSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]]</visible>
+            <visible>Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | [Skin.HasSetting(StandardSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]] | 
+			         [Player.Paused + Skin.HasSetting(ShowSeekBarPaused)]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <!-- Top background for clock, date, etc. -->
@@ -822,7 +823,7 @@
 			<!-- Seek frame -->
 			<control type="group" id="2">
 			    <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
-				<visible>Skin.HasSetting(HidePopupSeekBar)</visible>
+				<visible>Skin.HasSetting(HidePopupSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
 				<left>564r</left>
                 <top>86r</top>
                 <control type="group" id="1">
@@ -1004,21 +1005,6 @@
                         <visible>String.IsEqual(Player.PlaySpeed,1.50)</visible>
                     </control>
                 </control>
-				<!-- Seek label -->
-<!--                <control type="label" id="1">
-                    <description>Seekbar Label</description>
-                    <left>365</left>
-                    <top>-10</top>
-                    <width>195</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <font>font10_title</font>
-                    <textcolor>$VAR[MainColorOne]</textcolor>
-                    <label>$VAR[SeekLabel]</label>
-					<visible>!Skin.HasSetting(MinimumPopUpSeekBar)</visible>
-                </control> -->
-                <!-- Seek numeric label -->
 				<control type="label" id="1">
                     <description>Seek Number label</description>
                     <left>270</left>
@@ -1440,18 +1426,6 @@
                         <visible>String.IsEqual(Player.PlaySpeed,1.50)</visible>
                     </control>
                 </control>
-<!--                <control type="label" id="1">
-                    <description>Seekbar Label</description>
-                    <left>365</left>
-                    <top>-10</top>
-                    <width>195</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <font>font10_title</font>
-                    <textcolor>$VAR[MainColorOne]</textcolor>
-                    <label>$VAR[SeekLabel]</label>
-                </control> -->
                 <control type="label" id="1">
                     <description>Seek Number label</description>
                     <left>270</left>
@@ -1499,7 +1473,7 @@
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
             <visible>Skin.HasSetting(MinimumPopUpSeekBar)</visible> 
-			 <visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
+			<visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <control type="image" id="1">
@@ -1523,7 +1497,7 @@
 			<control type="group" id="2">
 				<include condition="!Skin.HasSetting(HidePopUpSeekBar)">OSDPosMinimumWithPopUp</include>
 				<include condition="Skin.HasSetting(HidePopUpSeekBar)">OSDPosMinimumNoPopUp</include>
-                <control type="group" id="1">
+				<control type="group" id="1">
                     <left>390</left>
                     <top>15</top>
                     <control type="image" id="1">
@@ -1724,7 +1698,7 @@
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
             <visible>[!Skin.HasSetting(MinimumPopUpSeekBar) + Skin.HasSetting(HidePopupSeekBar) + !Skin.HasSetting(StandardSeekBar)]</visible> 
-			 <visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
+			 <visible>[[Player.Paused + !Skin.HasSetting(ShowSeekBarPaused)] | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <control type="image" id="1">
