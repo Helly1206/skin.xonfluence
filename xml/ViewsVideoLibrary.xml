@@ -1117,32 +1117,6 @@
                         <pauseatend>1000</pauseatend>
                     </control>
 				</control>	
-				<control type="group">
-				    <top>293</top>
-					<visible>!String.IsEmpty(ListItem.Duration)</visible>
-				    <visible>!ListItem.IsParentFolder</visible>
-					<control type="label">
-                        <description>Duration txt</description>
-                        <left>15</left>
-                        <width>210</width>
-                        <height>38</height>
-                        <label>$LOCALIZE[32012]:</label>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <font>font12</font>
-                        <textcolor>$VAR[MainColorOne]</textcolor>
-                    </control>
-                    <control type="label">
-                        <description>Duration Value</description>
-                        <left>240</left>
-                        <width>320</width>
-                        <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Duration]</label>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <font>font12</font>
-                    </control>
-				</control>	
                 <control type="image">
                     <left>0</left>
                     <top>340</top>
@@ -1636,7 +1610,6 @@
                         <scroll>true</scroll>
                     </control>
 					<control type="label">
-                        <visible>!String.IsEqual(ListItem.DBType,tvshow)</visible>
 						<description>Runtime txt</description>
                         <left>290</left>
                         <top>502</top>
@@ -1647,19 +1620,7 @@
                         <aligny>center</aligny>
                         <font>font13_title</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
-                    </control>
-					<control type="label">
-                        <visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
-						<description>Runtime txt</description>
-                        <left>295</left>
-                        <top>502</top>
-                        <width>210</width>
-                        <height>38</height>
-                        <label>$LOCALIZE[32012]:</label>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <font>font13_title</font>
-                        <textcolor>$VAR[MainColorOne]</textcolor>
+						<visible>!String.IsEqual(ListItem.DBType,tvshow)</visible>
                     </control>
                     <control type="label">
                         <description>Runtime Value</description>
@@ -1671,7 +1632,7 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <scroll>true</scroll>
+                        <visible>!String.IsEqual(ListItem.DBType,tvshow)</visible>						
                     </control>
                     <control type="label">
                         <description>Genre txt</description>
@@ -2268,31 +2229,6 @@
                     <label>$VAR[VideoDescription]</label>
                     <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
-				<control type="group">
-				    <top>827</top>
-					<visible>!String.IsEmpty(ListItem.Duration)</visible>
-				    <control type="label">
-                        <description>Duration txt</description>
-                        <left>15</left>
-                        <width>180</width>
-                        <height>38</height>
-                        <label>$LOCALIZE[32012]:</label>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <font>font12</font>
-                        <textcolor>$VAR[MainColorOne]</textcolor>
-                    </control>
-                    <control type="label">
-                        <description>Duration Value</description>
-                        <left>205</left>
-                        <width>220</width>
-                        <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Duration]</label>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <font>font12</font>
-                    </control>
-				</control>
                 <control type="image">
                     <depth>DepthContent+</depth>
                     <left>840</left>
