@@ -128,9 +128,9 @@
                 <width>315</width>
                 <height>480</height>
                 <aspectratio scalediffuse="false">stretch</aspectratio>
-                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(tvshow.poster)]</texture>
                 <visible>Skin.HasSetting(EnableDVDCases)</visible>
-                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(tvshow.clearart))] + [String.IsEmpty(Player.Art(tvshow.clearlogo)) | Skin.HasSetting(DisableLogoArt)] + !String.IsEmpty(Player.Art(tvshow.thumb))</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(tvshow.clearart))] + [String.IsEmpty(Player.Art(tvshow.clearlogo)) | Skin.HasSetting(DisableLogoArt)] + !String.IsEmpty(Player.Art(tvshow.poster))</visible>
             </control>
             <control type="image" id="1">
                 <left>45</left>
