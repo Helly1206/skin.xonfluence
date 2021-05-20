@@ -1415,6 +1415,18 @@
                                 <selected>Skin.HasSetting(HideShadowSeekBar)</selected>
 								<visible>Skin.HasSetting(ShowSeekBarPaused)</visible>
                             </control>
+							<control type="radiobutton" id="1812">
+                                <description>Show Chapters/Cutlist on Seekbar</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>$LOCALIZE[32012]</label>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(ShowCutlist)</onclick>
+                                <selected>Skin.HasSetting(ShowCutlist)</selected>
+                            </control>
                             <control type="radiobutton" id="182">
                                 <description>Video Info OSD</description>
                                 <width>1125</width>

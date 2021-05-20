@@ -394,6 +394,7 @@
                 </control>
 			    <!-- Cutlist and Chapters -->
 			    <control type="group">
+				    <visible>Skin.HasSetting(ShowCutlist)</visible>
 				    <control type="ranges">
 			            <left>30</left>
 			            <top>78</top>

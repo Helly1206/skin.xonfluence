@@ -776,26 +776,29 @@
                     </control>
                 </control>
 				<!-- Cutlist and Chapters -->
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>14</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <lefttexture>white.png</lefttexture>
-			        <midtexture colordiffuse="FFFF0000">white.png</midtexture>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Cutlist</info>
-			    </control>
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>7</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Chapters</info>
-			    </control>
+			    <control type="group" id="1">
+				    <visible>Skin.HasSetting(ShowCutlist)</visible>
+				    <control type="ranges" id="1">
+			            <left>150</left>
+			            <top>34</top>
+			            <width>1080</width>
+			            <height>14</height>
+			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+			            <lefttexture>white.png</lefttexture>
+			            <midtexture colordiffuse="FFFF0000">white.png</midtexture>
+			            <righttexture>white.png</righttexture>
+			            <info>Player.Cutlist</info>
+			        </control>
+			        <control type="ranges" id="1">
+			            <left>150</left>
+			            <top>34</top>
+			            <width>1080</width>
+			            <height>7</height>
+			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+			            <righttexture>white.png</righttexture>
+			            <info>Player.Chapters</info>
+			        </control>
+				</control>	
 				<!-- Right label: duration/end time -->
                 <control type="label" id="1">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -1200,26 +1203,29 @@
                     </control>
                 </control>
 				<!-- Cutlist and Chapters -->
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>14</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <lefttexture>white.png</lefttexture>
-			        <midtexture colordiffuse="FFFF0000">white.png</midtexture>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Cutlist</info>
-			    </control>
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>7</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Chapters</info>
-			    </control>
+			    <control type="group" id="1">
+				    <visible>Skin.HasSetting(ShowCutlist)</visible>
+				    <control type="ranges" id="1">
+			            <left>150</left>
+			            <top>34</top>
+			            <width>1080</width>
+			            <height>14</height>
+			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+			            <lefttexture>white.png</lefttexture>
+			            <midtexture colordiffuse="FFFF0000">white.png</midtexture>
+			            <righttexture>white.png</righttexture>
+			            <info>Player.Cutlist</info>
+			        </control>
+			        <control type="ranges" id="1">
+			            <left>150</left>
+			            <top>34</top>
+			            <width>1080</width>
+			            <height>7</height>
+			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+			            <righttexture>white.png</righttexture>
+			            <info>Player.Chapters</info>
+			        </control>
+				</control>	
 				
                 <control type="label" id="1">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -2043,7 +2049,8 @@
                 </control>
 			    <!-- Cutlist and Chapters -->
 			    <control type="group" id="1">
-				    <control type="ranges" id="1">
+				    <visible>Skin.HasSetting(ShowCutlist)</visible>
+					<control type="ranges" id="1">
 			            <left>30</left>
 			            <top>78</top>
 			            <width>360</width>
