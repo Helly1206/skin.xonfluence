@@ -84,7 +84,7 @@
         <include>HomeWidgetDisplay</include>
         
 		<control type="button" id="9003">
-            <description>Hidden Button to pass through navigation when recently added is disabled</description>
+            <description>Hidden Button to pass through navigation when widgets are disabled</description>
             <left>-30</left>
             <top>-30</top>
             <width>1</width>
