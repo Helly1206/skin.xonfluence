@@ -1427,6 +1427,18 @@
                                 <onclick>Skin.ToggleSetting(ShowCutlist)</onclick>
                                 <selected>Skin.HasSetting(ShowCutlist)</selected>
                             </control>
+							<control type="radiobutton" id="1813">
+                                <description>Show End time on OSD</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>$LOCALIZE[32013]</label>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(ShowEndTimeOSD)</onclick>
+                                <selected>Skin.HasSetting(ShowEndTimeOSD)</selected>
+                            </control>
                             <control type="radiobutton" id="182">
                                 <description>Video Info OSD</description>
                                 <width>1125</width>

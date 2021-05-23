@@ -599,7 +599,7 @@
 	    <control type="group" id="1">
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
-            <visible>Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | [Skin.HasSetting(StandardSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]] | 
+            <visible>Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | [Skin.HasSetting(StandardSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]] | 
 			         [Player.Paused + Skin.HasSetting(ShowSeekBarPaused)]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
@@ -673,6 +673,7 @@
                     <scroll>true</scroll>
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <animation effect="fade" time="150">VisibleChange</animation>
+					<visible>Skin.HasSetting(ShowEndTimeOSD)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>150</left>
@@ -828,7 +829,7 @@
 			    <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
 				<visible>Skin.HasSetting(HidePopupSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
 				<left>564r</left>
-                <top>86r</top>
+                <top>94r</top>
                 <control type="group" id="1">
                     <left>390</left>
                     <top>15</top>
@@ -1103,6 +1104,7 @@
                     <scroll>true</scroll>
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <animation effect="fade" time="150">VisibleChange</animation>
+					<visible>Skin.HasSetting(ShowEndTimeOSD)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>150</left>
@@ -1252,8 +1254,9 @@
             </control>
 			<control type="group" id="2">
 				<left>564r</left>
-                <top>86r</top>
-                <control type="group" id="1">
+                <top>94r</top>
+                <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
+				<control type="group" id="1">
                     <left>390</left>
                     <top>15</top>
                     <control type="image" id="1">
