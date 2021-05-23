@@ -246,7 +246,6 @@
                     <param name="Control">8008</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-					<param name="episodeswidget">true</param>
 					<param name="label">$INFO[ListItem.Title]</param>
                     <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                     <param name="Content">RecentTVShowContent</param>
@@ -272,7 +271,6 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
                     <param name="Content">RecentTVShowContent</param>
-					<param name="episodeswidget">true</param>
 					<param name="label">$INFO[ListItem.Title]</param>
                     <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
@@ -297,7 +295,6 @@
                     <param name="Control">8043</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-					<param name="episodeswidget">true</param>
 					<param name="label">$INFO[ListItem.Title]</param>
                     <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                     <param name="Content">RecentWithWatchedTVShowContent</param>
@@ -323,7 +320,6 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
                     <param name="Content">RecentWithWatchedTVShowContent</param>
-					<param name="episodeswidget">true</param>
 					<param name="label">$INFO[ListItem.Title]</param>
                     <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
@@ -347,7 +343,6 @@
                     <param name="Control">8010</param>
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
-					<param name="episodeswidget">true</param>
 					<param name="label">$INFO[ListItem.Title]</param>
                     <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                     <param name="Content">RandomTVShowContent</param>
@@ -373,7 +368,6 @@
                     <param name="Format">Container(9000).ListItem.Property(WidgetFormat)</param>
                     <param name="Custom">False</param>
                     <param name="Content">RandomTVShowContent</param>
-					<param name="episodeswidget">true</param>
 					<param name="label">$INFO[ListItem.Title]</param>
                     <param name="label2">$INFO[ListItem.TVShowTitle] - s$INFO[ListItem.Season]e$INFO[ListItem.Episode]</param>
                 </include>
@@ -2177,18 +2171,8 @@
                     <param name="Custom">$PARAM[Custom]</param>
                 </include>
             </control>
-            <control type="group">
-                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible] + $PARAM[episodeswidget]</visible>
-                <include content="EpisodeSmallWidgetLayout">
-                    <param name="Control">$PARAM[Control]1</param>
-                    <param name="Content">$PARAM[Content]</param>
-                    <param name="Custom">$PARAM[Custom]</param>
-					<param name="label">$PARAM[label]</param>
-					<param name="label2">$PARAM[label2]</param>
-                </include>
-            </control>
 			<control type="group">
-                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible] + !$PARAM[episodeswidget]</visible>
+                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
                 <include content="EpisodeSmallWidgetLayout">
                     <param name="Control">$PARAM[Control]1</param>
                     <param name="Content">$PARAM[Content]</param>
@@ -2217,18 +2201,8 @@
                     <param name="Custom">$PARAM[Custom]</param>
                 </include>
             </control>
-            <control type="group">
-                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible] + $PARAM[episodeswidget]</visible>
-                <include content="EpisodeLargeWidgetLayout">
-                    <param name="Control">$PARAM[Control]1</param>
-                    <param name="Content">$PARAM[Content]</param>
-                    <param name="Custom">$PARAM[Custom]</param>
-					<param name="label">$PARAM[label]</param>
-					<param name="label2">$PARAM[label2]</param>
-                </include>
-            </control>
 			<control type="group">
-                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible] + !$PARAM[episodeswidget]</visible>
+                <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
                 <include content="EpisodeLargeWidgetLayout">
                     <param name="Control">$PARAM[Control]1</param>
                     <param name="Content">$PARAM[Content]</param>
