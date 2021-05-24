@@ -326,6 +326,18 @@
                                 <onclick>Skin.ToggleSetting(HideCPUTemp)</onclick>
                                 <selected>!Skin.HasSetting(HideCPUTemp)</selected>
                             </control>
+							<control type="radiobutton" id="1022">
+                                <description>Hide widgets until focused</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>$LOCALIZE[32015]</label>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(ShowWidgetsOnFocus)</onclick>
+                                <selected>Skin.HasSetting(ShowWidgetsOnFocus)</selected>
+                            </control>
                             <control type="button" id="104">
                                 <description>Main Colour One</description>
                                 <width>1125</width>

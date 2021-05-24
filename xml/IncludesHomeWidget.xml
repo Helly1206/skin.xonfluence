@@ -10,7 +10,8 @@
             <include>VisibleFadeEffect</include>
             <animation effect="fade" time="225" delay="1000">WindowOpen</animation>
             <animation effect="fade" time="150">WindowClose</animation>
-            <control type="group">
+            <animation effect="fade" start="100" end="0" time="480" condition="[Skin.HasSetting(ShowWidgetsOnFocus) + !ControlGroup(9003).HasFocus]">Conditional</animation>
+			<control type="group">
                 <!-- Recent Movies -->
                 <left>285</left>
                 <top>90</top>
