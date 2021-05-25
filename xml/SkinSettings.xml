@@ -6775,6 +6775,15 @@
                             <item id="12">
                                 <label>$LOCALIZE[31242] $LOCALIZE[31292]</label>
                             </item>
+							<item id="13">
+                                <label>$LOCALIZE[32017] $LOCALIZE[31292]</label>
+                            </item>
+							<item id="14">
+                                <label>$LOCALIZE[32018] $LOCALIZE[31292]</label>
+                            </item>
+							<item id="15">
+                                <label>$LOCALIZE[32019] $LOCALIZE[31292]</label>
+                            </item>
                         </content>
                     </control>
                     <include content="SkinSettingsSubMenuButtons">
@@ -8249,6 +8258,372 @@
                             <showonepage>false</showonepage>
                             <orientation>vertical</orientation>
                             <visible>Container(9004).HasFocus(12)</visible>
+                        </control>
+						<control type="grouplist" id="9401">
+                            <visible>Container(9004).HasFocus(13)</visible>
+                            <onleft>9000</onleft>
+                            <onright>2372</onright>
+                            <onup>9499</onup>
+                            <ondown>9499</ondown>
+                            <width>1125</width>
+                            <height>720</height>
+                            <itemgap>-1</itemgap>
+                            <pagecontrol>2372</pagecontrol>
+                            <control type="button" id="850">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[31240]</label>
+                                <label2>[COLOR=white]$INFO[Skin.String(UserSelectAddon.13.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.SetString(UserSelectAddon.13.Label)</onclick>
+                            </control>
+                            <control type="button" id="851">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]1[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetThirteen.1.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetThirteen.1,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="852">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]2[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetThirteen.2.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetThirteen.2,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="853">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]3[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetThirteen.3.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetThirteen.3,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="854">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]4[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetThirteen.4.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetThirteen.4,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="855">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]5[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetThirteen.5.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetThirteen.5,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="856">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]6[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetThirteen.6.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetThirteen.6,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="857">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]7[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetThirteen.7.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetThirteen.7,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                        </control>
+                        <control type="scrollbar" id="2372">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(13)</visible>
+                        </control>
+						<control type="grouplist" id="9401">
+                            <visible>Container(9004).HasFocus(14)</visible>
+                            <onleft>9000</onleft>
+                            <onright>2372</onright>
+                            <onup>9499</onup>
+                            <ondown>9499</ondown>
+                            <width>1125</width>
+                            <height>720</height>
+                            <itemgap>-1</itemgap>
+                            <pagecontrol>2372</pagecontrol>
+                            <control type="button" id="850">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[31240]</label>
+                                <label2>[COLOR=white]$INFO[Skin.String(UserSelectAddon.14.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.SetString(UserSelectAddon.14.Label)</onclick>
+                            </control>
+                            <control type="button" id="851">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]1[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFourteen.1.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFourteen.1,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="852">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]2[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFourteen.2.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFourteen.2,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="853">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]3[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFourteen.3.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFourteen.3,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="854">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]4[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFourteen.4.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFourteen.4,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="855">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]5[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFourteen.5.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFourteen.5,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="856">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]6[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFourteen.6.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFourteen.6,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="857">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]7[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFourteen.7.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFourteen.7,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                        </control>
+                        <control type="scrollbar" id="2372">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(14)</visible>
+                        </control>
+						<control type="grouplist" id="9401">
+                            <visible>Container(9004).HasFocus(15)</visible>
+                            <onleft>9000</onleft>
+                            <onright>2372</onright>
+                            <onup>9499</onup>
+                            <ondown>9499</ondown>
+                            <width>1125</width>
+                            <height>720</height>
+                            <itemgap>-1</itemgap>
+                            <pagecontrol>2372</pagecontrol>
+                            <control type="button" id="850">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[31240]</label>
+                                <label2>[COLOR=white]$INFO[Skin.String(UserSelectAddon.15.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.SetString(UserSelectAddon.15.Label)</onclick>
+                            </control>
+                            <control type="button" id="851">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]1[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFifteen.1.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFifteen.1,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="852">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]2[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFifteen.2.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFifteen.2,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="853">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]3[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFifteen.3.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFifteen.3,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="854">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]4[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFifteen.4.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFifteen.4,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="855">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]5[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFifteen.5.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFifteen.5,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="856">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]6[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFifteen.6.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFifteen.6,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                            <control type="button" id="857">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[24000] [B]7[/B]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(AddonSetFifteen.7.Label)][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,AddonSetFifteen.7,Home)</onclick>
+                                <onclick>ActivateWindow(2119)</onclick>
+                            </control>
+                        </control>
+                        <control type="scrollbar" id="2372">
+                            <left>1155</left>
+                            <top>0</top>
+                            <width>38</width>
+                            <height>720</height>
+                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                            <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                            <onleft>9401</onleft>
+                            <onright>800</onright>
+                            <showonepage>false</showonepage>
+                            <orientation>vertical</orientation>
+                            <visible>Container(9004).HasFocus(15)</visible>
                         </control>
                     </control>
                 </control>
