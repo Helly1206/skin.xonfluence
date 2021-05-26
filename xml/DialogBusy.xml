@@ -11,7 +11,8 @@
             <depth>DepthDialog+</depth>
             <left>1605</left>
             <top>980</top>
-            <control type="image">
+            <animation effect="slide" start="0,0" end="-1603,-978" time="0" condition="Skin.HasSetting(NotificationsTopLeft)">Conditional</animation>
+			<control type="image">
                 <description>background image</description>
                 <left>0</left>
                 <top>0</top>

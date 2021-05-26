@@ -1657,7 +1657,8 @@
     </include>
     <include name="Clock">
         <control type="label" id="1">
-            <description>time label</description>
+            <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(DialogVolumeBar.xml)">Conditional</animation>
+			<description>time label</description>
             <right>30</right>
             <top>8</top>
             <width>300</width>
@@ -1680,69 +1681,72 @@
         </control>
     </include>
     <include name="Date">
-        <control type="label" id="1">
-            <description>Date label</description>
-            <right>30</right>
-            <top>52</top>
-            <width>450</width>
-            <height>22</height>
-            <align>right</align>
-            <aligny>center</aligny>
-            <font>font10</font>
-            <textcolor>white</textcolor>
-            <shadowcolor>black</shadowcolor>
-            <label>$INFO[System.Date]</label>
-            <include>Window_OpenClose_Animation</include>
-            <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(1105)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
-            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-            <visible>!Skin.HasSetting(HideSystemTime) + Skin.HasSetting(HideCPUTemp)</visible>
-        </control>
-		<control type="label" id="1">
-            <description>Date label</description>
-            <right>30</right>
-            <top>52</top>
-            <width>450</width>
-            <height>22</height>
-            <align>right</align>
-            <aligny>center</aligny>
-            <font>font10</font>
-            <textcolor>white</textcolor>
-            <shadowcolor>black</shadowcolor>
-            <label>$INFO[System.Date] • [COLOR=yellow]$INFO[System.CPUTemperature][/COLOR]</label>
-            <include>Window_OpenClose_Animation</include>
-            <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(1105)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
-            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-            <visible>!Skin.HasSetting(HideSystemTime) + !Skin.HasSetting(HideCPUTemp) + !String.IsEqual(System.CPUTemperature,Not Available)</visible>
-        </control>
-		<control type="label" id="1">
-            <description>Date label</description>
-            <right>30</right>
-            <top>52</top>
-            <width>450</width>
-            <height>22</height>
-            <align>right</align>
-            <aligny>center</aligny>
-            <font>font10</font>
-            <textcolor>white</textcolor>
-            <shadowcolor>black</shadowcolor>
-            <label>$INFO[System.Date] • [COLOR=yellow]$LOCALIZE[32016][/COLOR]</label>
-            <include>Window_OpenClose_Animation</include>
-            <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(1105)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
-            <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
-            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-            <visible>!Skin.HasSetting(HideSystemTime) + !Skin.HasSetting(HideCPUTemp) + String.IsEqual(System.CPUTemperature,Not Available)</visible>
-        </control>
+        <control type="group" id="1">
+		    <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(DialogVolumeBar.xml)">Conditional</animation>
+		    <control type="label" id="1">
+                <description>Date label</description>
+                <right>30</right>
+                <top>52</top>
+                <width>450</width>
+                <height>22</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>font10</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <label>$INFO[System.Date]</label>
+                <include>Window_OpenClose_Animation</include>
+                <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
+                <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(1105)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
+                <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <visible>!Skin.HasSetting(HideSystemTime) + Skin.HasSetting(HideCPUTemp)</visible>
+            </control>
+		    <control type="label" id="1">
+                <description>Date label</description>
+                <right>30</right>
+                <top>52</top>
+                <width>450</width>
+                <height>22</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>font10</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <label>$INFO[System.Date] • [COLOR=yellow]$INFO[System.CPUTemperature][/COLOR]</label>
+                <include>Window_OpenClose_Animation</include>
+                <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
+                <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(1105)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
+                <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <visible>!Skin.HasSetting(HideSystemTime) + !Skin.HasSetting(HideCPUTemp) + !String.IsEqual(System.CPUTemperature,Not Available)</visible>
+            </control>
+		    <control type="label" id="1">
+                <description>Date label</description>
+                <right>30</right>
+                <top>52</top>
+                <width>450</width>
+                <height>22</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>font10</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <label>$INFO[System.Date] • [COLOR=yellow]$LOCALIZE[32016][/COLOR]</label>
+                <include>Window_OpenClose_Animation</include>
+                <animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
+                <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(1105)]+system.getbool(input.enablemouse)+Window.IsVisible(MusicOSD)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-120,0" time="0" condition="![Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]+system.getbool(input.enablemouse)+Window.IsVisible(VideoOSD)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-120,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(1198)">conditional</animation>
+                <animation effect="slide" start="0,0" end="0,-82" time="150" condition="Window.IsVisible(busydialog)">conditional</animation>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <visible>!Skin.HasSetting(HideSystemTime) + !Skin.HasSetting(HideCPUTemp) + String.IsEqual(System.CPUTemperature,Not Available)</visible>
+            </control>
+		</control>	
     </include>
 	
     <include name="CDArtSpinner">
@@ -2413,121 +2417,121 @@
 		</visible>
     </include>
     <include name="TopLeftInfo">
-        <control type="image" id="1">
-            <description>LOGO</description>
-            <left>15</left>
-            <top>8</top>
-            <width>180</width>
-            <height>74</height>
-            <aspectratio aligny="top" align="left">keep</aspectratio>
-            <texture>kodi-logo.png</texture>
-            <include>VisibleFadeEffect</include>
-            <include>Window_OpenClose_Animation</include>
-            <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
-            <visible>String.IsEmpty(Skin.String(TopLeftHomeInfo)) | String.IsEqual(Skin.String(TopLeftHomeInfo),Logo)</visible>
-        </control>
-        <control type="group">
-            <visible>!String.IsEqual(System.ProfileName,Master user)</visible>
-            <control type="image">
-                <visible>String.IsEqual(Skin.String(TopLeftHomeInfo),ProfileAvatar)</visible>
+        <control type="group" id="1">
+		    <animation effect="fade" start="100" end="0" time="200" condition="SkinHasSetting(NotificationsTopLeft) + [Window.IsVisible(notification) | Window.IsVisible(DialogBusy.xml) | Window.IsVisible(DialogExtendedProgressBar.xml)]">Conditional</animation>
+		    <control type="image" id="1">
+                <description>LOGO</description>
+                <left>15</left>
                 <top>8</top>
-                <left>30</left>
-                <width>90</width>
-                <height>90</height>
-                <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
-                <texture>$INFO[System.ProfileThumb]</texture>
-                <aspectratio>scale</aspectratio>
-            </control>
-            <control type="label" id="1">
-                <description>Logged User</description>
-                <left>30</left>
-                <top>8</top>
-                <height>68</height>
-                <width>525</width>
-                <align>left</align>
-                <aligny>center</aligny>
-                <font>font28_title</font>
-                <textcolor>C0FFFFFF</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <info>System.ProfileName</info>
+                <width>180</width>
+                <height>74</height>
+                <aspectratio aligny="top" align="left">keep</aspectratio>
+                <texture>kodi-logo.png</texture>
                 <include>VisibleFadeEffect</include>
                 <include>Window_OpenClose_Animation</include>
-                <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
-                <visible>String.IsEqual(Skin.String(TopLeftHomeInfo),ProfileName)</visible>
+                <visible>String.IsEmpty(Skin.String(TopLeftHomeInfo)) | String.IsEqual(Skin.String(TopLeftHomeInfo),Logo)</visible>
             </control>
-        </control>
-        <control type="group" id="1">
-            <left>30</left>
-            <top>0</top>
-            <visible>!String.IsEmpty(Weather.Plugin) + String.IsEqual(Skin.String(TopLeftHomeInfo),Weather)</visible>
-            <include>Window_OpenClose_Animation</include>
-     		<control type="multiimage" id="1">
-                <description>Weather image</description>
-                <left>0</left>
-                <top>0</top>
-                <width>90</width>
-                <height>90</height>
-				<aspectratio aligny="center">keep</aspectratio>
-                <timeperimage>70</timeperimage>
-                <fadetime>1</fadetime>
-                <randomize>false</randomize>
-                <imagepath>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherIconExt]</imagepath>
-            </control>
-            <control type="label" id="1">
-                <description>Location label</description>
-                <left>98</left>
-                <top>8</top>
-                <width>750</width>
-                <height>22</height>
-                <align>left</align>
-                <aligny>center</aligny>
-                <font>font10</font>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <label>$INFO[Window(Weather).Property(Location)]</label>
-            </control>
-            <control type="grouplist" id="1">
-                <left>98</left>
-                <top>30</top>
-                <width>1500</width>
-                <height>45</height>
-                <orientation>horizontal</orientation>
-                <align>left</align>
-                <itemgap>0</itemgap>
+            <control type="group" id="1">
+                <visible>!String.IsEqual(System.ProfileName,Master user)</visible>
+                <control type="image" id="1">
+                    <visible>String.IsEqual(Skin.String(TopLeftHomeInfo),ProfileAvatar)</visible>
+                    <top>8</top>
+                    <left>30</left>
+                    <width>90</width>
+                    <height>90</height>
+                    <texture>$INFO[System.ProfileThumb]</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
                 <control type="label" id="1">
-                    <description>Temp label</description>
-                    <width min="0" max="450">auto</width>
-                    <height>45</height>
+                    <description>Logged User</description>
+                    <left>30</left>
+                    <top>8</top>
+                    <height>68</height>
+                    <width>525</width>
                     <align>left</align>
                     <aligny>center</aligny>
                     <font>font28_title</font>
-                    <textcolor>white</textcolor>
+                    <textcolor>C0FFFFFF</textcolor>
                     <shadowcolor>black</shadowcolor>
-                    <label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
-                </control>
-                <control type="label" id="1">
-                    <description>Temp Units</description>
-                    <width min="0" max="150">auto</width>
-                    <height>33</height>
-                    <font>font10</font>
-                    <aligny>center</aligny>
-                    <label>$INFO[System.TemperatureUnits]</label>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                    <visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
-                </control>
-                <control type="label" id="1">
-                    <description>Conditions Label</description>
-                    <width>750</width>
-                    <height>33</height>
-                    <font>font10</font>
-                    <aligny>center</aligny>
-                    <label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
-                    <textcolor>grey2</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <info>System.ProfileName</info>
+                    <include>VisibleFadeEffect</include>
+                    <include>Window_OpenClose_Animation</include>
+                    <visible>String.IsEqual(Skin.String(TopLeftHomeInfo),ProfileName)</visible>
                 </control>
             </control>
-        </control>
+            <control type="group" id="1">
+                <left>30</left>
+                <top>0</top>
+                <visible>!String.IsEmpty(Weather.Plugin) + String.IsEqual(Skin.String(TopLeftHomeInfo),Weather)</visible>
+                <include>Window_OpenClose_Animation</include>
+     		    <control type="multiimage" id="1">
+                    <description>Weather image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>90</width>
+                    <height>90</height>
+				    <aspectratio aligny="center">keep</aspectratio>
+                    <timeperimage>70</timeperimage>
+                    <fadetime>1</fadetime>
+                    <randomize>false</randomize>
+                    <imagepath>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherIconExt]</imagepath>
+                </control>
+                <control type="label" id="1">
+                    <description>Location label</description>
+                    <left>98</left>
+                    <top>8</top>
+                    <width>750</width>
+                    <height>22</height>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font10</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <label>$INFO[Window(Weather).Property(Location)]</label>
+                </control>
+                <control type="grouplist" id="1">
+                    <left>98</left>
+                    <top>30</top>
+                    <width>1500</width>
+                    <height>45</height>
+                    <orientation>horizontal</orientation>
+                    <align>left</align>
+                    <itemgap>0</itemgap>
+                    <control type="label" id="1">
+                        <description>Temp label</description>
+                        <width min="0" max="450">auto</width>
+                        <height>45</height>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font28_title</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+                    </control>
+                    <control type="label" id="1">
+                        <description>Temp Units</description>
+                        <width min="0" max="150">auto</width>
+                        <height>33</height>
+                        <font>font10</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[System.TemperatureUnits]</label>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+                    </control>
+                    <control type="label" id="1">
+                        <description>Conditions Label</description>
+                        <width>750</width>
+                        <height>33</height>
+                        <font>font10</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+                        <textcolor>grey2</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                    </control>
+                </control>
+            </control>
+		</control>	
     </include>
     <include name="ExtendedInfoAutoComplete">
         <control type="group" id="5000">
@@ -2599,7 +2603,9 @@
         <definition>
             <control type="group">
                 <depth>DepthHeader</depth>
-                <control type="image">
+                <animation effect="fade" start="100" end="0" time="0" condition="Skin.HasSetting(NotificationsTopLeft) + [Window.IsVisible(notification) | Window.IsVisible(DialogBusy.xml) | Window.IsVisible(DialogExtendedProgressBar.xml)]">Conditional</animation>
+				<visible>!Skin.HasSetting(NotificationsTopLeft) | [Skin.HasSetting(NotificationsTopLeft) + !Window.IsVisible(BusyDialog)]</visible>
+				<control type="image">
                     <description>Section header image</description>
                     <left>30</left>
                     <top>4</top>
