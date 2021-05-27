@@ -1683,6 +1683,7 @@
     <include name="Date">
         <control type="group" id="1">
 		    <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(DialogVolumeBar.xml)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="[Control.IsVisible(508) | Control.IsVisible(509)]">Conditional</animation>
 		    <control type="label" id="1">
                 <description>Date label</description>
                 <right>30</right>
@@ -2640,6 +2641,7 @@
                     </control>
                 </control>
                 <include>Clock</include>
+				<include>Date</include>
                 <include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
             </control>
         </definition>
