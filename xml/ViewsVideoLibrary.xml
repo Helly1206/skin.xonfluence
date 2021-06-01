@@ -739,7 +739,7 @@
                     <left>0</left>
                     <top>48</top>
                     <width>1275</width>
-                    <height>147</height>
+                    <height>142</height>
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -1132,47 +1132,111 @@
                     <left>15</left>
                     <top>352</top>
                     <width>765</width>
-                    <height>242</height>
+                    <height>216</height>
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
                     <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!String.IsEqual(Skin.Font,Massive)</visible>
+                </control>
+				<control type="textbox">
+                    <visible>!ListItem.IsParentFolder</visible>
+					<description>Description Value for TVShows</description>
+                    <left>15</left>
+                    <top>352</top>
+                    <width>765</width>
+                    <height>235</height>
+                    <font>font13</font>
+                    <align>justify</align>
+                    <textcolor>white</textcolor>
+                    <label>$VAR[VideoDescription]</label>
+                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
             </control>
             <control type="group">
                 <left>1065</left>
                 <top>368</top>
                 <visible>Container.Content(Episodes)</visible>
-                <control type="image">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>795</width>
-                    <height>315</height>
-                    <aspectratio>keep</aspectratio>
-                    <fadetime>IconCrossfadeTime</fadetime>
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                    <bordertexture border="8">ThumbShadow.png</bordertexture>
-                    <bordersize>8</bordersize>
-                    <visible>String.IsEqual(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
-                </control>
-                <control type="image">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>795</width>
-                    <height>315</height>
-                    <aspectratio>keep</aspectratio>
-                    <fadetime>IconCrossfadeTime</fadetime>
-                    <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-                    <bordertexture border="8">ThumbShadow.png</bordertexture>
-                    <bordersize>8</bordersize>
-                    <visible>Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
-                </control>
+                <control type="group">
+				    <visible>!String.IsEqual(skin.Font,Massive)</visible>
+				    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>795</width>
+                        <height>315</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>IconCrossfadeTime</fadetime>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <bordertexture border="8">ThumbShadow.png</bordertexture>
+                        <bordersize>8</bordersize>
+                        <visible>String.IsEqual(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>795</width>
+                        <height>315</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>IconCrossfadeTime</fadetime>
+                        <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+                        <bordertexture border="8">ThumbShadow.png</bordertexture>
+                        <bordersize>8</bordersize>
+                        <visible>Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
+                    </control>
+				</control>
+                <control type="group">
+				    <visible>String.IsEqual(skin.Font,Massive)</visible>
+				    <control type="image">
+                        <left>55</left>
+                        <top>0</top>
+                        <width>689</width>
+                        <height>275</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>IconCrossfadeTime</fadetime>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <bordertexture border="8">ThumbShadow.png</bordertexture>
+                        <bordersize>8</bordersize>
+                        <visible>String.IsEqual(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
+                    </control>
+                    <control type="image">
+                        <left>55</left>
+                        <top>0</top>
+                        <width>689</width>
+                        <height>275</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>IconCrossfadeTime</fadetime>
+                        <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+                        <bordertexture border="8">ThumbShadow.png</bordertexture>
+                        <bordersize>8</bordersize>
+                        <visible>Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
+                    </control>
+				</control>				
                 <control type="grouplist">
                     <description>Media Codec Flagging Images</description>
                     <visible>!ListItem.IsParentFolder</visible>
+					<visible>!String.IsEqual(skin.Font,Massive)</visible>
 					<left>0</left>
                     <top>315</top>
+                    <width>795</width>
+                    <align>center</align>
+                    <itemgap>3</itemgap>
+                    <orientation>horizontal</orientation>
+                    <include>VideoMPAAFlaggingConditions</include>
+                    <include>VideoCodecFlaggingConditions</include>
+                    <include>AudioCodecFlaggingConditions</include>
+                    <include>AudioChannelsFlaggingConditions</include>
+                    <include>AspectCodecFlaggingConditions</include>
+                    <include>SpecialFeaturesFlaggingConditions</include>
+                    <include>VideoTypeHackFlaggingConditions</include>
+                </control>
+				<control type="grouplist">
+                    <description>Media Codec Flagging Images</description>
+                    <visible>!ListItem.IsParentFolder</visible>
+					<visible>String.IsEqual(skin.Font,Massive)</visible>
+					<left>85</left>
+                    <top>275</top>
                     <width>795</width>
                     <align>center</align>
                     <itemgap>3</itemgap>
@@ -1199,6 +1263,23 @@
                     <textcolor>white</textcolor>
                     <shadowcolor>black</shadowcolor>
                     <wrapmultiline>true</wrapmultiline>
+					<visible>!String.IsEqual(Skin.Font,Massive)</visible>
+                </control>
+				<control type="label">
+                    <visible>!ListItem.IsParentFolder</visible>
+					<description>INFO txt</description>
+                    <left>10</left>
+                    <top>348</top>
+                    <width>765</width>
+                    <height>45</height>
+                    <label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[20373]:[/COLOR] $INFO[ListItem.Season] [COLOR=$VAR[MainColorOne]]$LOCALIZE[20359]:[/COLOR] $INFO[ListItem.episode] [COLOR=$VAR[MainColorOne]]$LOCALIZE[31322]:[/COLOR] $INFO[ListItem.premiered][CR][COLOR=$VAR[MainColorOne]]$LOCALIZE[2050]:[/COLOR] $INFO[ListItem.Duration]</label>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <wrapmultiline>true</wrapmultiline>
+					<visible>String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
                 <control type="image">
                     <left>0</left>
@@ -1243,7 +1324,7 @@
                         <left>405</left>
                         <top>3</top>
                         <width>375</width>
-                        <height>530</height>
+                        <height>540</height>
                         <font>font13</font>
                         <align>justify</align>
                         <textcolor>white</textcolor>
@@ -1303,7 +1384,7 @@
                         <left>405</left>
                         <top>3</top>
                         <width>375</width>
-                        <height>460</height>
+                        <height>455</height>
                         <font>font13</font>
                         <align>justify</align>
                         <textcolor>white</textcolor>
@@ -1316,7 +1397,7 @@
 				        <control type="label">
                             <description>Duration txt</description>
                             <left>405</left>
-                            <width>130</width>
+                            <width>150</width>
                             <height>38</height>
                             <label>$LOCALIZE[2050]:</label>
                             <align>left</align>
@@ -1326,6 +1407,17 @@
                         </control>
                         <control type="label">
                             <description>Duration Value</description>
+                            <left>555</left>
+                            <width>220</width>
+                            <height>38</height>
+                            <label fallback="10005">$INFO[listitem.Duration]</label>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>font12</font>
+							<visible>String.IsEqual(Skin.Font,Massive)</visible>
+                        </control>
+						<control type="label">
+                            <description>Duration Value</description>
                             <left>520</left>
                             <width>220</width>
                             <height>38</height>
@@ -1333,6 +1425,7 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <font>font12</font>
+							<visible>!String.IsEqual(Skin.Font,Massive)</visible>
                         </control>
 					</control>	
 				</control>
@@ -1675,12 +1768,26 @@
                         <left>15</left>
                         <top>596</top>
                         <width>735</width>
-                        <height>252</height>
+                        <height>255</height>
                         <font>font13</font>
                         <align>justify</align>
                         <textcolor>white</textcolor>
                         <label>$VAR[VideoDescription]</label>
                         <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>!String.IsEqual(Skin.Font,Massive)</visible>
+                    </control>
+					<control type="textbox">
+                        <description>Description Value for Video</description>
+                        <left>15</left>
+                        <top>596</top>
+                        <width>735</width>
+                        <height>232</height>
+                        <font>font13</font>
+                        <align>justify</align>
+                        <textcolor>white</textcolor>
+                        <label>$VAR[VideoDescription]</label>
+                        <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>String.IsEqual(Skin.Font,Massive)</visible>
                     </control>
 				</control>
             </control>
@@ -1754,7 +1861,7 @@
                         <description>Aired Value</description>
                         <left>240</left>
                         <top>502</top>
-                        <width>180</width>
+                        <width>210</width>
                         <height>38</height>
                         <label fallback="10005">$INFO[listitem.Premiered]</label>
                         <align>left</align>
@@ -1764,9 +1871,9 @@
                     </control>
 				    <control type="label">
                         <description>Runtime txt</description>
-                        <left>330</left>
+                        <left>450</left>
                         <top>502</top>
-                        <width>210</width>
+                        <width>130</width>
                         <height>38</height>
                         <label>$LOCALIZE[2050]:</label>
                         <align>right</align>
@@ -1776,7 +1883,7 @@
                     </control>
                     <control type="label">
                         <description>Runtime Value</description>
-                        <left>550</left>
+                        <left>600</left>
                         <top>502</top>
                         <width>280</width>
                         <height>38</height>
@@ -1825,12 +1932,27 @@
                     <left>15</left>
                     <top>596</top>
                     <width>735</width>
-                    <height>252</height>
+                    <height>232</height>
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
                     <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>String.IsEqual(Skin.Font,Massive)</visible>
+                </control>
+				<control type="textbox">
+                    <visible>!ListItem.IsParentFolder</visible>
+					<description>Description Value for Video</description>
+                    <left>15</left>
+                    <top>596</top>
+                    <width>735</width>
+                    <height>255</height>
+                    <font>font13</font>
+                    <align>justify</align>
+                    <textcolor>white</textcolor>
+                    <label>$VAR[VideoDescription]</label>
+                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
             </control>
         </control>
@@ -2124,7 +2246,7 @@
                     <left>15</left>
                     <top>608</top>
                     <width>810</width>
-                    <height>147</height>
+                    <height>142</height>
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -2134,7 +2256,8 @@
 				<control type="group">
 				    <top>760</top>
 					<visible>!String.IsEmpty(ListItem.Duration)</visible>
-				    <control type="label">
+				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
                         <description>Duration txt</description>
                         <left>15</left>
                         <width>130</width>
@@ -2148,6 +2271,32 @@
                     <control type="label">
                         <description>Duration Value</description>
                         <left>130</left>
+                        <width>220</width>
+                        <height>38</height>
+                        <label fallback="10005">$INFO[listitem.Duration]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
+				<control type="group">
+				    <top>760</top>
+					<visible>!String.IsEmpty(ListItem.Duration)</visible>
+				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Duration txt</description>
+                        <left>15</left>
+                        <width>150</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[2050]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Duration Value</description>
+                        <left>165</left>
                         <width>220</width>
                         <height>38</height>
                         <label fallback="10005">$INFO[listitem.Duration]</label>
@@ -2226,12 +2375,26 @@
                     <left>15</left>
                     <top>608</top>
                     <width>810</width>
-                    <height>214</height>
+                    <height>230</height>
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
                     <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>String.IsEqual(Skin.Font,Massive)</visible>
+                </control>
+				<control type="textbox">
+                    <description>Description Value for Video</description>
+                    <left>15</left>
+                    <top>608</top>
+                    <width>810</width>
+                    <height>250</height>
+                    <font>font13</font>
+                    <align>justify</align>
+                    <textcolor>white</textcolor>
+                    <label>$VAR[VideoDescription]</label>
+                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
                 <control type="image">
                     <depth>DepthContent+</depth>
@@ -2277,7 +2440,7 @@
                     <left>15</left>
                     <top>638</top>
                     <width>810</width>
-                    <height>174</height>
+                    <height>182</height>
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -2362,7 +2525,7 @@
                     <left>15</left>
                     <top>608</top>
                     <width>600</width>
-                    <height>147</height>
+                    <height>142</height>
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -2376,7 +2539,7 @@
 				    <control type="label">
                         <description>Duration txt</description>
                         <left>15</left>
-                        <width>130</width>
+                        <width>150</width>
                         <height>38</height>
                         <label>$LOCALIZE[2050]:</label>
                         <align>left</align>
@@ -2386,6 +2549,17 @@
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
+                        <left>165</left>
+                        <width>220</width>
+                        <height>38</height>
+                        <label fallback="10005">$INFO[listitem.Duration]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+						<visible>String.IsEqual(Skin.Font,Massive)</visible>
+                    </control>
+					<control type="label">
+                        <description>Duration Value</description>
                         <left>130</left>
                         <width>220</width>
                         <height>38</height>
@@ -2393,14 +2567,16 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
+						<visible>!String.IsEqual(Skin.Font,Massive)</visible>
                     </control>
 				</control>
 				<control type="group">
 				    <top>760</top>
 					<visible>!String.IsEmpty(ListItem.Premiered) + !ListItem.IsParentFolder</visible>
-				    <control type="label">
+				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
                         <description>Duration txt</description>
-                        <left>340</left>
+                        <left>300</left>
                         <width>130</width>
                         <height>38</height>
                         <label>$LOCALIZE[31322]:</label>
@@ -2411,7 +2587,33 @@
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
-                        <left>480</left>
+                        <left>440</left>
+                        <width>220</width>
+                        <height>38</height>
+                        <label fallback="10005">$INFO[listitem.Premiered]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
+				<control type="group">
+				    <top>760</top>
+					<visible>!String.IsEmpty(ListItem.Premiered) + !ListItem.IsParentFolder</visible>
+				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Duration txt</description>
+                        <left>338</left>
+                        <width>130</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[31322]:</label>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Duration Value</description>
+                        <left>478</left>
                         <width>220</width>
                         <height>38</height>
                         <label fallback="10005">$INFO[listitem.Premiered]</label>
