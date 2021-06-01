@@ -165,6 +165,7 @@
                 <aligny>center</aligny>
                 <label>$INFO[ListItem.Year]</label>
                 <visible>Skin.HasSetting(DisableLogoArt) | String.IsEmpty(ListItem.Art(clearlogo)) | Skin.HasSetting(View515Hidelogo)</visible>
+				<visible>!String.IsEmpty(ListItem.Year)</visible>
             </control>
             <control type="label">
                 <left>0</left>
@@ -178,6 +179,7 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>$INFO[ListItem.Duration,$LOCALIZE[2050] ,]</label>
+				<visible>!String.IsEmpty(ListItem.Duration)</visible>
             </control>
             <control type="grouplist">
                 <description>Media Codec Flagging Images</description>
@@ -311,7 +313,9 @@
             </control>
         </control>
     </include>
-    <include name="FanartViewPopUp">
+    
+	<!-- View ID 508: Fanart includes -->
+	<include name="FanartViewPopUp">
         <control type="group">
             <left>0</left>
             <top>525</top>
@@ -1063,7 +1067,7 @@
                         <top>180</top>
                         <width>540</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),,] $LOCALIZE[16102] - $INFO[ListItem.Property(UnWatchedEpisodes),,] $LOCALIZE[16101])[/COLOR]</label>
+                        <label fallback="32016">$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),,] $LOCALIZE[16102] - $INFO[ListItem.Property(UnWatchedEpisodes),,] $LOCALIZE[16101])[/COLOR]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
@@ -1087,7 +1091,7 @@
                         <top>218</top>
                         <width>540</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.premiered]</label>
+                        <label fallback="32016">$INFO[listitem.premiered]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
@@ -1111,7 +1115,7 @@
                         <top>255</top>
                         <width>540</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Genre]</label>
+                        <label fallback="32016">$INFO[listitem.Genre]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
@@ -1410,7 +1414,7 @@
                             <left>555</left>
                             <width>220</width>
                             <height>38</height>
-                            <label fallback="10005">$INFO[listitem.Duration]</label>
+                            <label fallback="32016">$INFO[listitem.Duration]</label>
                             <align>left</align>
                             <aligny>center</aligny>
                             <font>font12</font>
@@ -1421,7 +1425,7 @@
                             <left>520</left>
                             <width>220</width>
                             <height>38</height>
-                            <label fallback="10005">$INFO[listitem.Duration]</label>
+                            <label fallback="32016">$INFO[listitem.Duration]</label>
                             <align>left</align>
                             <aligny>center</aligny>
                             <font>font12</font>
@@ -1700,7 +1704,7 @@
                         <top>502</top>
                         <width>100</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Year]</label>
+                        <label fallback="32016">$INFO[listitem.Year]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
@@ -1725,7 +1729,7 @@
                         <top>502</top>
                         <width>250</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Duration]</label>
+                        <label fallback="32016">$INFO[listitem.Duration]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
@@ -1749,7 +1753,7 @@
                         <top>540</top>
                         <width>510</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Genre]</label>
+                        <label fallback="32016">$INFO[listitem.Genre]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
@@ -1845,54 +1849,60 @@
                 </control>
                 <control type="group">
 				    <visible>!ListItem.IsParentFolder</visible>
-				    <control type="label">
-                        <description>Aired txt</description>
-                        <left>15</left>
-                        <top>502</top>
-                        <width>210</width>
-                        <height>38</height>
-                        <label>$LOCALIZE[31322]:</label>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <font>font13_title</font>
-                        <textcolor>$VAR[MainColorOne]</textcolor>
-                    </control>
-                    <control type="label">
-                        <description>Aired Value</description>
-                        <left>240</left>
-                        <top>502</top>
-                        <width>210</width>
-                        <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Premiered]</label>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <font>font13</font>
-                        <scroll>true</scroll>
-                    </control>
-				    <control type="label">
-                        <description>Runtime txt</description>
-                        <left>450</left>
-                        <top>502</top>
-                        <width>130</width>
-                        <height>38</height>
-                        <label>$LOCALIZE[2050]:</label>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <font>font13_title</font>
-                        <textcolor>$VAR[MainColorOne]</textcolor>
-                    </control>
-                    <control type="label">
-                        <description>Runtime Value</description>
-                        <left>600</left>
-                        <top>502</top>
-                        <width>280</width>
-                        <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Duration]</label>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <font>font13</font>
-                        <scroll>true</scroll>
-                    </control>
+				    <control type="group">
+					    <visible>!String.IsEmpty(ListItem.Premiered)</visible>
+					    <control type="label">
+                            <description>Aired txt</description>
+                            <left>15</left>
+                            <top>502</top>
+                            <width>210</width>
+                            <height>38</height>
+                            <label>$LOCALIZE[31322]:</label>
+                            <align>right</align>
+                            <aligny>center</aligny>
+                            <font>font13_title</font>
+                            <textcolor>$VAR[MainColorOne]</textcolor>
+                        </control>
+                        <control type="label">
+                            <description>Aired Value</description>
+                            <left>240</left>
+                            <top>502</top>
+                            <width>210</width>
+                            <height>38</height>
+                            <label fallback="32016">$INFO[listitem.Premiered]</label>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>font13</font>
+                            <scroll>true</scroll>
+                        </control>
+					</control>	
+					<control type="group">
+					    <visible>!String.IsEmpty(ListItem.Duration)</visible>
+				        <control type="label">
+                            <description>Runtime txt</description>
+                            <left>450</left>
+                            <top>502</top>
+                            <width>130</width>
+                            <height>38</height>
+                            <label>$LOCALIZE[2050]:</label>
+                            <align>right</align>
+                            <aligny>center</aligny>
+                            <font>font13_title</font>
+                            <textcolor>$VAR[MainColorOne]</textcolor>
+                        </control>
+                        <control type="label">
+                            <description>Runtime Value</description>
+                            <left>600</left>
+                            <top>502</top>
+                            <width>280</width>
+                            <height>38</height>
+                            <label fallback="32016">$INFO[listitem.Duration]</label>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>font13</font>
+                            <scroll>true</scroll>
+                        </control>
+					</control>	
                     <control type="label">
                         <description>Episode txt</description>
                         <left>15</left>
@@ -1911,7 +1921,7 @@
                         <top>540</top>
                         <width>510</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Season,,x]$INFO[listitem.Episode]</label>
+                        <label fallback="32016">$INFO[listitem.Season,,x]$INFO[listitem.Episode]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
@@ -2273,7 +2283,7 @@
                         <left>130</left>
                         <width>220</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Duration]</label>
+                        <label fallback="32016">$INFO[listitem.Duration]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
@@ -2299,7 +2309,7 @@
                         <left>165</left>
                         <width>220</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Duration]</label>
+                        <label fallback="32016">$INFO[listitem.Duration]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
@@ -2552,7 +2562,7 @@
                         <left>165</left>
                         <width>220</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Duration]</label>
+                        <label fallback="32016">$INFO[listitem.Duration]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
@@ -2563,7 +2573,7 @@
                         <left>130</left>
                         <width>220</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Duration]</label>
+                        <label fallback="32016">$INFO[listitem.Duration]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
@@ -2590,7 +2600,7 @@
                         <left>440</left>
                         <width>220</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Premiered]</label>
+                        <label fallback="32016">$INFO[listitem.Premiered]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
@@ -2616,7 +2626,7 @@
                         <left>478</left>
                         <width>220</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[listitem.Premiered]</label>
+                        <label fallback="32016">$INFO[listitem.Premiered]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
