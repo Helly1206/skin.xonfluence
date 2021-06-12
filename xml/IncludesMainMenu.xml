@@ -1938,7 +1938,27 @@
             <align>left</align>
             <orientation>horizontal</orientation>
             <itemgap>15</itemgap>
-            <control type="radiobutton" id="22">
+            <control type="radiobutton" id="23">
+                <description>Power push button</description>
+                <textureradioonfocus>icon_power.png</textureradioonfocus>
+                <textureradioonnofocus>icon_power.png</textureradioonnofocus>
+                <textureradioofffocus>icon_power.png</textureradioofffocus>
+                <textureradiooffnofocus>icon_power.png</textureradiooffnofocus>
+                <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+                <texturenofocus border="5">floor_button.png</texturenofocus>
+                <width>68</width>
+                <height>68</height>
+                <radiowidth>52</radiowidth>
+                <radioheight>52</radioheight>
+                <radioposx>8</radioposx>
+                <radioposy>8</radioposy>
+                <label>31003</label>
+                <font></font>
+                <onclick>$VAR[HomePowerBtnCommand]</onclick>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
+            </control>
+			<control type="radiobutton" id="22">
                 <description>Favourites push button</description>
                 <textureradioonfocus>icon_favourites.png</textureradioonfocus>
                 <textureradioonnofocus>icon_favourites.png</textureradioonnofocus>
@@ -1977,26 +1997,6 @@
                 <onclick>RunScript(script.globalsearch)</onclick>
                 <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
                 <visible>!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)</visible>
-            </control>
-            <control type="radiobutton" id="23">
-                <description>Power push button</description>
-                <textureradioonfocus>icon_power.png</textureradioonfocus>
-                <textureradioonnofocus>icon_power.png</textureradioonnofocus>
-                <textureradioofffocus>icon_power.png</textureradioofffocus>
-                <textureradiooffnofocus>icon_power.png</textureradiooffnofocus>
-                <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
-                <texturenofocus border="5">floor_button.png</texturenofocus>
-                <width>68</width>
-                <height>68</height>
-                <radiowidth>52</radiowidth>
-                <radioheight>52</radioheight>
-                <radioposx>8</radioposx>
-                <radioposy>8</radioposy>
-                <label>31003</label>
-                <font></font>
-                <onclick>$VAR[HomePowerBtnCommand]</onclick>
-                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-                <visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
             </control>
         </control>
 	</include>
