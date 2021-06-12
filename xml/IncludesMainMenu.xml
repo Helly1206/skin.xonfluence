@@ -851,8 +851,8 @@
         <onload>Skin.SetString(HomeItem.15.Icon,Icons/playdvd.png)</onload>
         <onload>Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
         <onload>Skin.SetBool(SingleGlobalBackground)</onload>
-        <onload>Skin.SetBool(EnableFanartScript)</onload>
-        <onload>Skin.SetString(FanArtCycleRate,10)</onload>
+<!--        <onload>Skin.SetBool(EnableFanartScript)</onload>
+        <onload>Skin.SetString(FanArtCycleRate,10)</onload> -->
         <onload condition="System.Date(11-24,1-6)">Skin.Setbool(HolidayEffects)</onload>
         <onload>Skin.SetString(HolidayThemePath,special://skin/extras/Holiday/xmastree.jpg)</onload>
         <onload condition="!System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlaylist)</onload>
