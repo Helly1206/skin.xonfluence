@@ -9,11 +9,11 @@
     <!-- No startup playlist or intro video, or they have played already -->
     <onload condition="[!Skin.HasSetting(UseStartUpPlaylistPath) + Skin.HasSetting(HideKodiIntro)] | !String.IsEmpty(Window(Home).Property(StartupMediaStarted))">ReplaceWindow($INFO[System.StartupWindow])</onload>
     <!-- Startup playlist -->
-	<onload condition="!String.IsEmpty(Skin.String(StartUpPlaylistPath)) + Skin.HasSetting(UseStartUpPlaylistPath) + String.IsEmpty(Window(Home).Property(StartupPlaylistStarted))">AlarmClock(playit,PlayMedia($ESCINFO[Skin.String(StartUpPlaylistPath)]),00:01,silent)</onload>
-	<onload condition="!String.IsEmpty(Skin.String(StartUpPlaylistPath)) + Skin.HasSetting(UseStartUpPlaylistPath) + String.IsEmpty(Window(Home).Property(StartupPlaylistStarted))">SetProperty(StartupMediaStarted,1,home)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(StartUpPlaylistPath)) + Skin.HasSetting(UseStartUpPlaylistPath) + String.IsEmpty(Window(Home).Property(StartupMediaStarted))">AlarmClock(playit,PlayMedia($ESCINFO[Skin.String(StartUpPlaylistPath)]),00:01,silent)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(StartUpPlaylistPath)) + Skin.HasSetting(UseStartUpPlaylistPath) + String.IsEmpty(Window(Home).Property(StartupMediaStarted))">SetProperty(StartupMediaStarted,1,home)</onload>
 	<!-- Into video -->
-	<onload condition="!String.IsEmpty(Skin.String(KodiIntroVideo)) + !Skin.HasSetting(HideKodiIntro) + String.IsEmpty(Window(Home).Property(StartupPlaylistStarted))">AlarmClock(playit,PlayMedia($ESCINFO[Skin.String(KodiIntroVideo)]),00:01,silent)</onload>
-    <onload condition="!String.IsEmpty(Skin.String(KodiIntroVideo)) + !Skin.HasSetting(HideKodiIntro) + String.IsEmpty(Window(Home).Property(StartupPlaylistStarted))">SetProperty(StartupMediaStarted,1,home)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(KodiIntroVideo)) + !Skin.HasSetting(HideKodiIntro) + String.IsEmpty(Window(Home).Property(StartupMediaStarted))">AlarmClock(playit,PlayMedia($ESCINFO[Skin.String(KodiIntroVideo)]),00:01,silent)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(KodiIntroVideo)) + !Skin.HasSetting(HideKodiIntro) + String.IsEmpty(Window(Home).Property(StartupMediaStarted))">SetProperty(StartupMediaStarted,1,home)</onload>
 	
 	<controls>
         <control type="image">
