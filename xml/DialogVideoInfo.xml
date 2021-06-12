@@ -919,7 +919,7 @@
                         <label>$LOCALIZE[21450] [LOWERCASE]$LOCALIZE[15101][/LOWERCASE]</label>
                         <onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
                         <visible>System.HasAddon(script.libraryeditor) + !String.IsEmpty(ListItem.DBID) + !Container.Content(Seasons)</visible>
-            </control>
+                    </control>
                     <control type="button" id="5">
                         <description>Cast/Review</description>
                         <include>ButtonInfoDialogsCommonValues</include>
@@ -965,6 +965,12 @@
                         <label>20410</label>
                         <onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
                         <visible>!String.IsEmpty(ListItem.Trailer) + Skin.HasSetting(WindowedTrailer)</visible>
+                    </control>
+					<control type="button" id="13">
+                        <description>Same Director</description>
+                        <include>ButtonInfoDialogsCommonValues</include>
+                        <label>$LOCALIZE[32020]</label>
+                        <visible>!String.IsEmpty(ListItem.Director)</visible>
                     </control>
                     <control type="button" id="7">
                         <description>Set my rating</description>
