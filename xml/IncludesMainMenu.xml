@@ -858,7 +858,7 @@
         <onload condition="!System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlaylist)</onload>
         <onload>Skin.SetBool(InitialSetUpRun)</onload>
         <onload>Skin.Reset(DontAskBackgroundFanart)</onload>
-		<onload>ReloadSkin()</onload>
+		<onload>ActivateWindow(2135)</onload>
     </include>
     <include name="UpdatesV312">
         <onload condition="Skin.String(HomeItem.1.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.1.Path,ActivateWindow(1199))</onload>
