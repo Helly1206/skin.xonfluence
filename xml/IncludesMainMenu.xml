@@ -851,13 +851,14 @@
         <onload>Skin.SetString(HomeItem.15.Icon,Icons/playdvd.png)</onload>
         <onload>Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
         <onload>Skin.SetBool(SingleGlobalBackground)</onload>
-<!--        <onload>Skin.SetBool(EnableFanartScript)</onload>
-        <onload>Skin.SetString(FanArtCycleRate,10)</onload> -->
+        <onload condition="System.HasAddon(script.grab.fanart)">Skin.SetBool(EnableFanartScript)</onload>
+        <onload condition="System.HasAddon(script.grab.fanart)">Skin.SetString(FanArtCycleRate,10)</onload>
         <onload condition="System.Date(11-24,1-6)">Skin.Setbool(HolidayEffects)</onload>
         <onload>Skin.SetString(HolidayThemePath,special://skin/extras/Holiday/xmastree.jpg)</onload>
         <onload condition="!System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlaylist)</onload>
         <onload>Skin.SetBool(InitialSetUpRun)</onload>
         <onload>Skin.Reset(DontAskBackgroundFanart)</onload>
+		<onload>ReloadSkin()</onload>
     </include>
     <include name="UpdatesV312">
         <onload condition="Skin.String(HomeItem.1.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.1.Path,ActivateWindow(1199))</onload>
