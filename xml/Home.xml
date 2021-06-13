@@ -2,11 +2,11 @@
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
-<!--    <include condition="!Skin.HasSetting(Updates_V312)">UpdatesV312</include>
+    <include condition="!Skin.HasSetting(Updates_V312)">UpdatesV312</include>
     <include condition="!Skin.HasSetting(Updates_V320)">UpdatesV320</include>
     <include condition="!Skin.HasSetting(Updates_V335)">UpdatesV335</include>
     <include condition="!Skin.HasSetting(Updates_V337)">UpdatesV337</include>
-    <include condition="!Skin.HasSetting(Updates_V403)">UpdatesV403</include> -->
+    <include condition="!Skin.HasSetting(Updates_V403)">UpdatesV403</include>
     <onload condition="!String.IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
     <onload condition="!String.IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
     <onload condition="!String.IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
@@ -16,22 +16,6 @@
     <onload condition="Skin.HasSetting(EnablePingWOL) + Skin.String(WOLPingTimer) + Skin.String(PingMacAddr)">SetProperty(PingAlarmSet,1)</onload>
     <onload condition="System.HasAddon(script.favourites) + Skin.HasSetting(EnableScriptFavourites)">RunScript(script.favourites)</onload>
     <onload condition="!Skin.HasSetting(DisableSlideShowArt)">RunScript(script.artistslideshow, daemon=True)</onload>
-<!--    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + Library.HasContent(Movies)">RunScript(script.randomandlastitems,type=Movie,limit=12,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.1.Type,VideoPlayList) | Skin.String(HomeItem.1.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.1.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistOne)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.2.Type,VideoPlayList) | Skin.String(HomeItem.2.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.2.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwo)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.3.Type,VideoPlayList) | Skin.String(HomeItem.3.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.3.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistThree)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.4.Type,VideoPlayList) | Skin.String(HomeItem.4.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.4.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFour)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.5.Type,VideoPlayList) | Skin.String(HomeItem.5.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.5.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFive)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.6.Type,VideoPlayList) | Skin.String(HomeItem.6.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.6.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistSix)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.7.Type,VideoPlayList) | Skin.String(HomeItem.7.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.7.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistSeven)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.8.Type,VideoPlayList) | Skin.String(HomeItem.8.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.8.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistEight)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.9.Type,VideoPlayList) | Skin.String(HomeItem.9.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.9.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistNine)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.10.Type,VideoPlayList) | Skin.String(HomeItem.10.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.10.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTen)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.11.Type,VideoPlayList) | Skin.String(HomeItem.11.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.11.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistEleven)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.12.Type,VideoPlayList) | Skin.String(HomeItem.12.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.12.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwelve)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.13.Type,VideoPlayList) | Skin.String(HomeItem.13.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.13.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistThirteen)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.14.Type,VideoPlayList) | Skin.String(HomeItem.14.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.14.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFourteen)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.15.Type,VideoPlayList) | Skin.String(HomeItem.15.Type,MusicPlayList)]">RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.15.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFifteen)</onload> -->
     <onload condition="!String.IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
     <onload condition="String.IsEmpty(Window.Property(ReturnHome))">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
     <onload condition="String.IsEmpty(Window.Property(ReturnHome))">SetProperty(ReturnHome,True)</onload>
