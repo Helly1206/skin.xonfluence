@@ -11355,7 +11355,8 @@
                 </control>
                 <control type="grouplist" id="9007">
                     <visible>Container(9000).Hasfocus(7)</visible>
-                    <left>435</left>
+                    <defaultcontrol>801</defaultcontrol>
+					<left>435</left>
                     <top>150</top>
                     <width>1125</width>
                     <height>795</height>
