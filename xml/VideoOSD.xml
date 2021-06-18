@@ -16,6 +16,7 @@
             <onup>100</onup>
             <ondown>87</ondown>
             <onclick>Dialog.Close(VideoOSD,true)</onclick>
+			<onclick>FullScreen</onclick>
             <include>DialogCloseButton</include>
             <animation effect="fade" time="150">VisibleChange</animation>
             <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
