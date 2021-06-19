@@ -369,6 +369,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.1.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.1.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.1.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.1.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.1.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.1.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.1.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -394,6 +395,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.2.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.2.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.2.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.2.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.2.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.2.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.2.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -419,6 +421,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.3.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.3.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.3.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.3.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.3.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.3.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.3.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -444,6 +447,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.4.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.4.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.4.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.4.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.4.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.4.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.4.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -469,6 +473,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.5.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.5.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.5.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.5.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.5.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.5.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.5.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -494,6 +499,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.6.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.6.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.6.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.6.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.6.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.6.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.6.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -519,6 +525,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.7.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.7.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.7.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.7.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.7.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.7.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.7.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -544,6 +551,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.8.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.8.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.8.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.8.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.8.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.8.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.8.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -569,6 +577,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.9.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.9.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.9.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.9.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.9.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.9.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.9.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -594,6 +603,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.10.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.10.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.10.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.10.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.10.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.10.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.10.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -619,6 +629,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.11.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.11.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.11.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.11.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.11.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.11.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.11.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -644,6 +655,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.12.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.12.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.12.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.12.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.12.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.12.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.12.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -669,6 +681,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.13.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.13.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.13.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.13.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.13.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.13.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.13.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -694,6 +707,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.14.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.14.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.14.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.14.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.14.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.14.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.14.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -719,6 +733,7 @@
 				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.15.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.15.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.15.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.15.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.15.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.15.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.15.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>

@@ -863,7 +863,7 @@
                                 <selected>Skin.HasSetting(MainMenuAllCaps)</selected>
                                 <include>MenuButton</include>
                             </control>
-                            <control type="radiobutton" id="141">
+<!--                            <control type="radiobutton" id="141">
                                 <description>large widget layout</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -874,7 +874,7 @@
                                 <onclick>Skin.ToggleSetting(EnableLargeWidgets)</onclick>
                                 <selected>Skin.HasSetting(EnableLargeWidgets)</selected>
                                 <include>MenuButton</include>
-                            </control>
+                            </control> -->
                             <control type="radiobutton" id="142">
                                 <width>1125</width>
                                 <height>60</height>
@@ -1867,6 +1867,20 @@
                                 <enable>Skin.String(HomeItem.1.Widget) + !String.IsEqual(Skin.String(HomeItem.1.Widget),None) + !String.IsEqual(Skin.String(HomeItem.1.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.1.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.1.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.1.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.1.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
                             </control>
+							<!-- Button for selecting widget layout -->
+							<control type="button" id="12051">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemOneWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.1,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+                            </control>
                             <control type="button" id="1206">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
@@ -2034,7 +2048,21 @@
                                 <enable>Skin.String(HomeItem.2.Widget) + !String.IsEqual(Skin.String(HomeItem.2.Widget),None) + !String.IsEqual(Skin.String(HomeItem.2.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.2.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.2.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.2.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.2.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
                             </control>
-                            <control type="button" id="1216">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="12151">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemTwoWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.2,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+                            </control>
+							<control type="button" id="1216">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2201,7 +2229,21 @@
                                 <enable>Skin.String(HomeItem.3.Widget) + !String.IsEqual(Skin.String(HomeItem.3.Widget),None) + !String.IsEqual(Skin.String(HomeItem.3.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.3.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.3.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.3.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.3.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
                             </control>
-                            <control type="button" id="1226">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="12251">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemThreeWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.3,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+                            </control>
+							<control type="button" id="1226">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2368,7 +2410,21 @@
                                 <enable>Skin.String(HomeItem.4.Widget) + !String.IsEqual(Skin.String(HomeItem.4.Widget),None) + !String.IsEqual(Skin.String(HomeItem.4.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.4.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.4.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.4.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.4.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
                             </control>
-                            <control type="button" id="1236">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="12351">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemFourWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.4,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+                            </control>
+							<control type="button" id="1236">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2535,7 +2591,21 @@
                                 <enable>Skin.String(HomeItem.5.Widget) + !String.IsEqual(Skin.String(HomeItem.5.Widget),None) + !String.IsEqual(Skin.String(HomeItem.5.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.5.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.5.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.5.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.5.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
                             </control>
-                            <control type="button" id="1246">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="12451">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemFiveWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.5,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+                            </control>
+							<control type="button" id="1246">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2702,7 +2772,21 @@
                                 <enable>Skin.String(HomeItem.6.Widget) + !String.IsEqual(Skin.String(HomeItem.6.Widget),None) + !String.IsEqual(Skin.String(HomeItem.6.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.6.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.6.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.6.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.6.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
                             </control>
-                            <control type="button" id="1256">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="12551">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemSixWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.6,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
+                            </control>
+							<control type="button" id="1256">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2869,7 +2953,21 @@
                                 <enable>Skin.String(HomeItem.7.Widget) + !String.IsEqual(Skin.String(HomeItem.7.Widget),None) + !String.IsEqual(Skin.String(HomeItem.7.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.7.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.7.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.7.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.7.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
                             </control>
-                            <control type="button" id="1266">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="12651">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemSevenWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.7,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+                            </control>
+							<control type="button" id="1266">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3036,7 +3134,21 @@
                                 <enable>Skin.String(HomeItem.8.Widget) + !String.IsEqual(Skin.String(HomeItem.8.Widget),None) + !String.IsEqual(Skin.String(HomeItem.8.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.8.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.8.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.8.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.8.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
                             </control>
-                            <control type="button" id="1276">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="12751">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemEightWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.8,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+                            </control>
+							<control type="button" id="1276">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3203,7 +3315,21 @@
                                 <enable>Skin.String(HomeItem.9.Widget) + !String.IsEqual(Skin.String(HomeItem.9.Widget),None) + !String.IsEqual(Skin.String(HomeItem.9.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.9.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.9.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.9.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.9.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
                             </control>
-                            <control type="button" id="1286">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="12851">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemNineWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.9,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+                            </control>
+							<control type="button" id="1286">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3370,7 +3496,21 @@
                                 <enable>Skin.String(HomeItem.10.Widget) + !String.IsEqual(Skin.String(HomeItem.10.Widget),None) + !String.IsEqual(Skin.String(HomeItem.10.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.10.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.10.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.10.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.10.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
                             </control>
-                            <control type="button" id="1296">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="12951">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemTenWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.10,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+                            </control>
+							<control type="button" id="1296">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3537,7 +3677,21 @@
                                 <enable>Skin.String(HomeItem.11.Widget) + !String.IsEqual(Skin.String(HomeItem.11.Widget),None) + !String.IsEqual(Skin.String(HomeItem.11.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.11.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.11.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.11.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.11.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
                             </control>
-                            <control type="button" id="1306">
+                            <!-- Button for selecting widget layout -->
+							<control type="button" id="13051">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemElevenWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.11,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+                            </control>
+							<control type="button" id="1306">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3702,6 +3856,20 @@
                                 <onclick condition="String.IsEqual(Skin.String(HomeItem.12.WidgetFormat),Poster)">Skin.SetString(HomeItem.12.WidgetFormat,Thumb)</onclick>
                                 <onclick condition="!String.IsEqual(Skin.String(HomeItem.12.WidgetFormat),Poster)">Skin.SetString(HomeItem.12.WidgetFormat,Poster)</onclick>
                                 <enable>Skin.String(HomeItem.12.Widget) + !String.IsEqual(Skin.String(HomeItem.12.Widget),None) + !String.IsEqual(Skin.String(HomeItem.12.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.12.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.12.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.12.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.12.Widget),SuggestedAlbums)</enable>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+                            </control>
+							<!-- Button for selecting widget layout -->
+							<control type="button" id="13151">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemTwelveWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.12,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
                             </control>
                             <control type="button" id="1316">
@@ -3871,6 +4039,20 @@
                                 <enable>Skin.String(HomeItem.13.Widget) + !String.IsEqual(Skin.String(HomeItem.13.Widget),None) + !String.IsEqual(Skin.String(HomeItem.13.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.13.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.13.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.13.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.13.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
                             </control>
+							<!-- Button for selecting widget layout -->
+							<control type="button" id="13251">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemThirteenWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.13,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+                            </control>
                             <control type="button" id="1326">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
@@ -4038,6 +4220,20 @@
                                 <enable>Skin.String(HomeItem.14.Widget) + !String.IsEqual(Skin.String(HomeItem.14.Widget),None) + !String.IsEqual(Skin.String(HomeItem.14.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.14.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.14.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.14.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.14.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
                             </control>
+							<!-- Button for selecting widget layout -->
+							<control type="button" id="13351">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemFourteenWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.14,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+                            </control>
                             <control type="button" id="1336">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
@@ -4203,6 +4399,20 @@
                                 <onclick condition="String.IsEqual(Skin.String(HomeItem.15.WidgetFormat),Poster)">Skin.SetString(HomeItem.15.WidgetFormat,Thumb)</onclick>
                                 <onclick condition="!String.IsEqual(Skin.String(HomeItem.15.WidgetFormat),Poster)">Skin.SetString(HomeItem.15.WidgetFormat,Poster)</onclick>
                                 <enable>Skin.String(HomeItem.15.Widget) + !String.IsEqual(Skin.String(HomeItem.15.Widget),None) + !String.IsEqual(Skin.String(HomeItem.15.Widget),Weather)  + !String.IsEqual(Skin.String(HomeItem.15.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.15.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.15.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.15.Widget),SuggestedAlbums)</enable>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+                            </control>
+							<!-- Button for selecting widget layout -->
+							<control type="button" id="13451">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32024]</label>
+                                <label2>[COLOR=grey2]$VAR[UsrDefItemFifteenWidgetLayout][/COLOR]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(UsrSelectBtn,HomeItem.15,Home)</onclick>
+                                <onclick>ActivateWindow(2136)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
                             </control>
                             <control type="button" id="1346">
