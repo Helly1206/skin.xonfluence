@@ -1933,12 +1933,14 @@
         <param name="Format" default="Poster" />
         <param name="Content" default="" />
         <param name="Visible" default="True" />
+		<param name="embuaryinfonextaired">false</param>
         <definition>
             <control type="group">
                 <visible>String.IsEqual($PARAM[Format],Thumb) + $PARAM[Visible]</visible>
                 <include content="ThumbLargeWidgetLayout">
                     <param name="Control">$PARAM[Control]1</param>
                     <param name="Content">$PARAM[Content]</param>
+					<param name="embuaryinfonextaired">$PARAM[embuaryinfonextaired]</param>
                 </include>
             </control>
 			<control type="group">
@@ -1946,6 +1948,7 @@
                 <include content="PosterLargeWidgetLayout">
                     <param name="Control">$PARAM[Control]</param>
                     <param name="Content">$PARAM[Content]</param>
+					<param name="embuaryinfonextaired">$PARAM[embuaryinfonextaired]</param>
                 </include>
             </control>
         </definition>
@@ -2145,7 +2148,6 @@
                         <align>center</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
-						<label>$INFO[ListItem.Title]</label>
                     </control>
 					<control type="label">
                         <left>22</left>
@@ -2270,10 +2272,20 @@
 		<param name="embuaryinfonextaired">false</param>
         <definition>
             <control type="image">
-                <left>-30</left>
+                <visible>!$PARAM[embuaryinfonextaired]</visible>
+				<left>-30</left>
                 <top>-8</top>
                 <width>1980</width>
                 <height>442</height>
+                <texture border="5">RecentAddedBack.png</texture>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+            </control>
+			<control type="image">
+                <visible>$PARAM[embuaryinfonextaired]</visible>
+				<left>-30</left>
+                <top>-8</top>
+                <width>1980</width>
+                <height>502</height>
                 <texture border="5">RecentAddedBack.png</texture>
                 <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
             </control>
@@ -2286,7 +2298,7 @@
                 <left>87</left>
                 <top>0</top>
                 <width>1755</width>
-                <height>480</height>
+                <height>540</height>
                 <onleft>$PARAM[Control]</onleft>
                 <onright>$PARAM[Control]</onright>
                 <onup>21</onup>
@@ -2296,7 +2308,7 @@
 				<viewtype label="535">list</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>Horizontal</orientation>
-                <itemlayout height="428" width="292">
+                <itemlayout height="428" width="292" condition="!$PARAM[embuaryinfonextaired]">
                     <control type="image">
                         <left>14</left>
                         <top>12</top>
@@ -2338,7 +2350,7 @@
                         <visible>!ListItem.IsResumable</visible>
                     </control>
                 </itemlayout>
-                <focusedlayout height="428" width="292">
+                <focusedlayout height="428" width="292" condition="!$PARAM[embuaryinfonextaired]">
                     <control type="image">
                         <left>14</left>
                         <top>12</top>
@@ -2406,6 +2418,149 @@
                         <visible>!ListItem.IsResumable</visible>
                     </control>
                 </focusedlayout>
+				
+				<itemlayout height="488" width="292" condition="$PARAM[embuaryinfonextaired]">
+                    <control type="image">
+                        <left>14</left>
+                        <top>12</top>
+                        <width>264</width>
+                        <height>372</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">$VAR[VideoThumbImage]</texture>
+                        <bordertexture border="5">button-nofocus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                    </control>
+					<control type="label">
+                        <left>14</left>
+                        <top>384</top>
+                        <width>264</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Premiered]</label>
+                    </control>
+					<control type="label">
+                        <left>14</left>
+                        <top>414</top>
+                        <width>264</width>
+                        <height>30</height>
+                        <font>font10</font>
+                        <textcolor>grey</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
+                    </control>
+					<control type="label">
+                        <left>14</left>
+                        <top>444</top>
+                        <width>264</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+						<label>$INFO[ListItem.Title]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="488" width="292" condition="$PARAM[embuaryinfonextaired]">
+                    <control type="image">
+                        <left>14</left>
+                        <top>12</top>
+                        <width>264</width>
+                        <height>372</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">$VAR[VideoThumbImage]</texture>
+                        <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                        <visible>Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+                    <control type="image">
+                        <left>14</left>
+                        <top>12</top>
+                        <width>264</width>
+                        <height>372</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">$VAR[VideoThumbImage]</texture>
+                        <bordertexture border="5">button-nofocus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                        <visible>!Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+					<control type="label">
+                        <left>14</left>
+                        <top>384</top>
+                        <width>264</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Premiered]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+					<control type="label">
+                        <left>14</left>
+                        <top>384</top>
+                        <width>264</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Premiered]</label>
+						<visible>Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+					<control type="label">
+                        <left>14</left>
+                        <top>414</top>
+                        <width>264</width>
+                        <height>30</height>
+                        <font>font10</font>
+                        <textcolor>grey</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
+                    </control>
+					<control type="label">
+                        <left>14</left>
+                        <top>444</top>
+                        <width>264</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+						<label>$INFO[ListItem.Title]</label>
+						<visible>!Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+					<control type="label">
+                        <left>14</left>
+                        <top>444</top>
+                        <width>264</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+						<label>$INFO[ListItem.Title]</label>
+						<visible>Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+                </focusedlayout>
                 <include>$PARAM[Content]</include>
             </control>
         </definition>
@@ -2414,15 +2569,16 @@
     <include name="ThumbSmallWidgetLayout">
         <param name="Control" default="8000" />
         <param name="Content" default="" />
+		<param name="embuaryinfonextaired">false</param>
         <definition>
             <control type="list" id="$PARAM[Control]">
                 <animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
                 <animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
                 <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
-                <left>0</left>
+                <left>45</left>
                 <top>0</top>
-                <width>1440</width>
-                <height>360</height>
+                <width>1800</width>
+                <height>390</height>
                 <onleft>PARAM[Control]</onleft>
                 <onright>PARAM[Control]</onright>
                 <onup>21</onup>
@@ -2432,7 +2588,7 @@
 				<viewtype label="535">list</viewtype>
                 <scrolltime>200</scrolltime>
                 <orientation>Horizontal</orientation>
-                <itemlayout height="330" width="360">
+                <itemlayout height="330" width="360" condition="!$PARAM[embuaryinfonextaired]">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -2532,7 +2688,7 @@
                         <visible>!ListItem.IsResumable</visible>
                     </control>
                 </itemlayout>
-                <focusedlayout height="330" width="360">
+                <focusedlayout height="330" width="360" condition="!$PARAM[embuaryinfonextaired]">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -2553,7 +2709,6 @@
                             <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
                             <include>TextureBorderWidgets</include>
                             <visible>Control.HasFocus($PARAM[Control])</visible>
-                            <visible>!$PARAM[Custom]</visible>
                         </control>
                         <control type="image">
                             <left>15</left>
@@ -2565,7 +2720,6 @@
                             <bordertexture border="5">button-nofocus.png</bordertexture>
                             <include>TextureBorderWidgets</include>
                             <visible>!Control.HasFocus($PARAM[Control])</visible>
-                            <visible>!$PARAM[Custom]</visible>
                         </control>
 					</control>
                     <control type="group">
@@ -2580,7 +2734,6 @@
                             <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
                             <include>TextureBorderWidgets</include>
                             <visible>Control.HasFocus($PARAM[Control])</visible>
-                            <visible>!$PARAM[Custom]</visible>
                         </control>
                         <control type="image">
                             <left>15</left>
@@ -2592,7 +2745,6 @@
                             <bordertexture border="5">button-nofocus.png</bordertexture>
                             <include>TextureBorderWidgets</include>
                             <visible>!Control.HasFocus($PARAM[Control])</visible>
-                            <visible>!$PARAM[Custom]</visible>
                         </control>
 					</control>					
                     <control type="image">
@@ -2696,6 +2848,166 @@
                         <visible>!ListItem.IsResumable</visible>
                     </control>
                 </focusedlayout>
+				
+				<itemlayout height="360" width="360" condition="$PARAM[embuaryinfonextaired]">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>360</width>
+                        <height>360</height>
+                        <texture border="15">RecentAddedBack.png</texture>
+                        <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                    </control>
+                    <control type="image">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>330</width>
+                        <height>232</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$VAR[EpisodeThumbImage]</texture>
+                        <bordertexture border="5">button-nofocus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <top>252</top>
+                        <width>300</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Premiered]</label>
+                    </control>
+					<control type="label">
+                        <left>30</left>
+                        <top>282</top>
+                        <width>300</width>
+                        <height>30</height>
+                        <font>font10</font>
+                        <textcolor>grey2</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
+                    </control>
+					<control type="label">
+                        <left>30</left>
+                        <top>312</top>
+                        <width>300</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="360" width="360" condition="$PARAM[embuaryinfonextaired]">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>360</width>
+                        <height>360</height>
+                        <texture border="15">RecentAddedBack.png</texture>
+                        <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                    </control>
+                    <control type="group">
+					    <left>15</left>
+                        <top>15</top>
+				        <control type="image">
+                            <width>330</width>
+                            <height>232</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$VAR[EpisodeThumbImage]</texture>
+                            <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+                            <include>TextureBorderWidgets</include>
+                            <visible>Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+                        <control type="image">
+                            <width>330</width>
+                            <height>232</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$VAR[EpisodeThumbImage]</texture>
+                            <bordertexture border="5">button-nofocus.png</bordertexture>
+                            <include>TextureBorderWidgets</include>
+                            <visible>!Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+					</control>
+                    <control type="group">
+                        <left>30</left>
+                        <top>252</top>
+						<control type="label">
+                            <width>300</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>white</textcolor>
+                            <shadowcolor>black</shadowcolor>
+                            <selectedcolor>selected</selectedcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Premiered]</label>
+                            <visible>!Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+                        <control type="label">
+                            <width>300</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>$VAR[MainColorOne]</textcolor>
+                            <selectedcolor>selected</selectedcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Premiered]</label>
+                            <visible>Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+					</control>
+					<control type="label">
+                        <left>30</left>
+                        <top>282</top>
+                        <width>300</width>
+                        <height>30</height>
+                        <font>font10</font>
+                        <textcolor>grey2</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
+						<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+                    </control>
+                    <control type="group">
+					    <left>30</left>
+						<top>312</top>
+                        <control type="label">
+                            <width>300</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>white</textcolor>
+                            <shadowcolor>black</shadowcolor>
+                            <selectedcolor>selected</selectedcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Title]</label>
+                            <visible>!Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+                        <control type="label">
+                            <width>300</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>$VAR[MainColorOne]</textcolor>
+                            <selectedcolor>selected</selectedcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Title]</label>
+                            <visible>Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+					</control>					
+                </focusedlayout>
                 <include>$PARAM[Content]</include>
             </control>
         </definition>
@@ -2703,6 +3015,7 @@
     <include name="ThumbLargeWidgetLayout">
         <param name="Control" default="8000" />
         <param name="Content" default="" />
+		<param name="embuaryinfonextaired">false</param>
         <definition>
             <control type="image">
                 <left>-30</left>
@@ -2711,6 +3024,16 @@
                 <height>442</height>
                 <texture border="5">RecentAddedBack.png</texture>
                 <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<visible>!$PARAM[embuaryinfonextaired]</visible>
+            </control>
+			<control type="image">
+                <left>-30</left>
+                <top>-8</top>
+                <width>1980</width>
+                <height>472</height>
+                <texture border="5">RecentAddedBack.png</texture>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<visible>$PARAM[embuaryinfonextaired]</visible>
             </control>
             <control type="list" id="$PARAM[Control]">
                 <animation effect="slide" start="0,0" end="675,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
@@ -2719,7 +3042,7 @@
                 <left>60</left>
                 <top>0</top>
                 <width>1800</width>
-                <height>510</height>
+                <height>540</height>
                 <onleft>$PARAM[Control]</onleft>
                 <onright>$PARAM[Control]</onright>
                 <onup>21</onup>
@@ -2729,7 +3052,7 @@
 				<viewtype label="535">list</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>Horizontal</orientation>
-                <itemlayout height="428" width="450">
+                <itemlayout height="428" width="450" condition="!$PARAM[embuaryinfonextaired]">
                     <control type="image">
                         <left>15</left>
                         <top>15</top>
@@ -2821,7 +3144,7 @@
                         <visible>!ListItem.IsResumable</visible>
                     </control>
                 </itemlayout>
-                <focusedlayout height="428" width="450">
+                <focusedlayout height="428" width="450" condition="!$PARAM[embuaryinfonextaired]">
                     <control type="image">
                         <left>15</left>
                         <top>15</top>
@@ -2970,6 +3293,150 @@
                         <texture>$INFO[ListItem.Overlay]</texture>
                         <visible>!ListItem.IsResumable</visible>
                     </control>
+                </focusedlayout>
+				
+				<itemlayout height="458" width="450" condition="$PARAM[embuaryinfonextaired]">
+                    <control type="image">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>420</width>
+                        <height>322</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$VAR[EpisodeThumbImage]</texture>
+                        <bordertexture border="5">button-nofocus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <top>345</top>
+                        <width>420</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Premiered]</label>
+                    </control>
+					<control type="label">
+                        <left>15</left>
+                        <top>375</top>
+                        <width>420</width>
+                        <height>30</height>
+                        <font>font10</font>
+                        <textcolor>grey2</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
+                    </control>
+					<control type="label">
+                        <left>15</left>
+                        <top>405</top>
+                        <width>420</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="458" width="450" condition="$PARAM[embuaryinfonextaired]">
+                    <control type="image">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>420</width>
+                        <height>322</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$VAR[EpisodeThumbImage]</texture>
+                        <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                        <visible>Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+                    <control type="image">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>420</width>
+                        <height>322</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>$VAR[EpisodeThumbImage]</texture>
+                        <bordertexture border="5">button-nofocus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                        <visible>!Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+                    <control type="group">
+					    <left>15</left>
+                        <top>345</top>
+                        <control type="label">
+                            <width>420</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>white</textcolor>
+                            <shadowcolor>black</shadowcolor>
+                            <selectedcolor>selected</selectedcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Premiered]</label>
+                            <visible>!Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>$VAR[MainColorOne]</textcolor>
+                            <selectedcolor>selected</selectedcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Premiered]</label>
+                            <visible>Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+					</control>
+					<control type="label">
+                        <left>15</left>
+                        <top>375</top>
+                        <width>420</width>
+                        <height>30</height>
+                        <font>font10</font>
+                        <textcolor>grey2</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
+						<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+                    </control>
+                    <control type="group">
+					    <left>15</left>
+                        <top>405</top>
+                        <control type="label">
+                            <width>420</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>white</textcolor>
+                            <shadowcolor>black</shadowcolor>
+                            <selectedcolor>selected</selectedcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Title]</label>
+                            <visible>!Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>$VAR[MainColorOne]</textcolor>
+                            <selectedcolor>selected</selectedcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Title]</label>
+                            <visible>Control.HasFocus($PARAM[Control])</visible>
+                        </control>
+					</control>					
                 </focusedlayout>
                 <include>$PARAM[Content]</include>
             </control>
@@ -3104,30 +3571,32 @@
     <include name="SmallWidgetThumbButtons">
         <param name="Control" default="8000" />
         <definition>
-            <control type="button">
-                <left>-60</left>
-                <top>135</top>
-                <width>45</width>
-                <height>60</height>
-                <texturefocus>arrow-big-left.png</texturefocus>
-                <texturenofocus>arrow-big-left.png</texturenofocus>
-                <include>VisibleFadeEffect</include>
-                <onclick>Control.Move($PARAM[Control],-1)</onclick>
-                <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
-                <include>VisibleFadeEffect</include>
-            </control>
-            <control type="button">
-                <left>1455</left>
-                <top>135</top>
-                <width>45</width>
-                <height>60</height>
-                <texturefocus>arrow-big-right.png</texturefocus>
-                <texturenofocus>arrow-big-right.png</texturenofocus>
-                <include>VisibleFadeEffect</include>
-                <onclick>Control.Move($PARAM[Control],1)</onclick>
-                <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
-                <include>VisibleFadeEffect</include>
-            </control>
+			<control type="group">
+				<control type="button">
+                    <left>0</left>
+                    <top>135</top>
+                    <width>45</width>
+                    <height>60</height>
+                    <texturefocus>arrow-big-left.png</texturefocus>
+                    <texturenofocus>arrow-big-left.png</texturenofocus>
+                    <include>VisibleFadeEffect</include>
+                    <onclick>Control.Move($PARAM[Control],-1)</onclick>
+                    <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
+                    <include>VisibleFadeEffect</include>
+                </control>
+                <control type="button">
+                    <left>1845</left>
+                    <top>135</top>
+                    <width>45</width>
+                    <height>60</height>
+                    <texturefocus>arrow-big-right.png</texturefocus>
+                    <texturenofocus>arrow-big-right.png</texturenofocus>
+                    <include>VisibleFadeEffect</include>
+                    <onclick>Control.Move($PARAM[Control],1)</onclick>
+                    <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
+                    <include>VisibleFadeEffect</include>
+                </control>
+			</control>
         </definition>
     </include>
     <include name="LargeWidgetThumbButtons">
