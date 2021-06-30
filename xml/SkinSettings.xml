@@ -1867,7 +1867,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.1,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.1.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.1.Widget)) + !String.IsEqual(Skin.String(HomeItem.1.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
                             </control>
                             <control type="button" id="1206">
@@ -2053,7 +2053,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.2,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.2.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.2.Widget)) + !String.IsEqual(Skin.String(HomeItem.2.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
                             </control>
 							<control type="button" id="1216">
@@ -2239,7 +2239,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.3,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.3.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.3.Widget)) + !String.IsEqual(Skin.String(HomeItem.3.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
                             </control>
 							<control type="button" id="1226">
@@ -2425,7 +2425,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.4,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.4.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.4.Widget)) + !String.IsEqual(Skin.String(HomeItem.4.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
                             </control>
 							<control type="button" id="1236">
@@ -2611,7 +2611,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.5,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.5.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.5.Widget)) + !String.IsEqual(Skin.String(HomeItem.5.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
                             </control>
 							<control type="button" id="1246">
@@ -2797,7 +2797,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.6,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.6.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.6.Widget)) + !String.IsEqual(Skin.String(HomeItem.6.Widget),None)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
                             </control>
 							<control type="button" id="1256">
@@ -2983,7 +2983,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.7,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.7.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.7.Widget)) + !String.IsEqual(Skin.String(HomeItem.7.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
                             </control>
 							<control type="button" id="1266">
@@ -3169,7 +3169,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.8,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.8.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.8.Widget)) + !String.IsEqual(Skin.String(HomeItem.8.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
                             </control>
 							<control type="button" id="1276">
@@ -3355,7 +3355,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.9,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.9.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.9.Widget)) + !String.IsEqual(Skin.String(HomeItem.9.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
                             </control>
 							<control type="button" id="1286">
@@ -3541,7 +3541,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.10,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.10.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.10.Widget)) + !String.IsEqual(Skin.String(HomeItem.10.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
                             </control>
 							<control type="button" id="1296">
@@ -3727,7 +3727,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.11,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.11.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.11.Widget)) + !String.IsEqual(Skin.String(HomeItem.11.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
                             </control>
 							<control type="button" id="1306">
@@ -3913,7 +3913,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.12,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.12.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.12.Widget)) + !String.IsEqual(Skin.String(HomeItem.12.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
                             </control>
                             <control type="button" id="1316">
@@ -4099,7 +4099,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.13,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.13.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.13.Widget)) + !String.IsEqual(Skin.String(HomeItem.13.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
                             </control>
                             <control type="button" id="1326">
@@ -4285,7 +4285,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.14,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <enable>!String.IsEmpty(Skin.String(HomeItem.14.Widget))</enable>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.14.Widget)) + !String.IsEqual(Skin.String(HomeItem.14.Widget),None)</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
                             </control>
                             <control type="button" id="1336">
@@ -4469,7 +4469,7 @@
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
                                 <include>MenuButton</include>
-                                <onclick>SetProperty(UsrSelectBtn,HomeItem.15,Home)</onclick>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.15.Widget)) + !String.IsEqual(Skin.String(HomeItem.15.Widget),None)</enable>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.15.Widget))</enable>
 								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
