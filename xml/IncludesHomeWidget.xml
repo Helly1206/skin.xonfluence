@@ -1630,9 +1630,9 @@
                 <animation effect="slide" start="0,0" end="150,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
                 <animation effect="slide" start="0,0" end="300,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
                 <animation effect="slide" start="0,0" end="450,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
-                <left>0</left>
+                <left>45</left>
                 <top>0</top>
-                <width>1200</width>
+                <width>1800</width>
                 <height>360</height>
                 <onleft>$PARAM[Control]</onleft>
                 <onright>$PARAM[Control]</onright>
@@ -3633,7 +3633,7 @@
         <param name="Control" default="8000" />
         <definition>
             <control type="button">
-                <left>-60</left>
+                <left>0</left>
                 <top>135</top>
                 <width>45</width>
                 <height>60</height>
@@ -3645,7 +3645,7 @@
                 <include>VisibleFadeEffect</include>
             </control>
             <control type="button">
-                <left>1215</left>
+                <left>1845</left>
                 <top>135</top>
                 <width>45</width>
                 <height>60</height>
