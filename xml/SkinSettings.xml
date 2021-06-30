@@ -863,18 +863,6 @@
                                 <selected>Skin.HasSetting(MainMenuAllCaps)</selected>
                                 <include>MenuButton</include>
                             </control>
-<!--                            <control type="radiobutton" id="141">
-                                <description>large widget layout</description>
-                                <width>1125</width>
-                                <height>60</height>
-                                <font>font13</font>
-                                <textcolor>grey2</textcolor>
-                                <focusedcolor>white</focusedcolor>
-                                <label>$LOCALIZE[31074]</label>
-                                <onclick>Skin.ToggleSetting(EnableLargeWidgets)</onclick>
-                                <selected>Skin.HasSetting(EnableLargeWidgets)</selected>
-                                <include>MenuButton</include>
-                            </control> -->
                             <control type="radiobutton" id="142">
                                 <width>1125</width>
                                 <height>60</height>
@@ -1879,7 +1867,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.1,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.1.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
                             </control>
                             <control type="button" id="1206">
                                 <description>Menu BackGround Type</description>
@@ -1914,6 +1903,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.1.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.1.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.1.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.1.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.1.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.1.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.1.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
                             </control>
@@ -2060,7 +2053,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.2,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.2.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
                             </control>
 							<control type="button" id="1216">
                                 <description>Menu BackGround Type</description>
@@ -2095,7 +2089,11 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.2.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.2.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.2.Playlist)],Home)</onclick>
-                                <onclick>ActivateWindow(1128)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.2.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.2.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.2.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.2.WidgetLayout)],Home)</onclick>
+								<onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
                             </control>
                             <control type="radiobutton" id="1218">
@@ -2241,7 +2239,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.3,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.3.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
                             </control>
 							<control type="button" id="1226">
                                 <description>Menu BackGround Type</description>
@@ -2276,7 +2275,11 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.3.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.3.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.3.Playlist)],Home)</onclick>
-                                <onclick>ActivateWindow(1128)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.3.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.3.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.3.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.3.WidgetLayout)],Home)</onclick>
+								<onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
                             </control>
                             <control type="radiobutton" id="1228">
@@ -2422,7 +2425,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.4,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.4.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
                             </control>
 							<control type="button" id="1236">
                                 <description>Menu BackGround Type</description>
@@ -2457,6 +2461,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.4.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.4.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.4.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.4.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.4.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.4.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.4.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
                             </control>
@@ -2603,7 +2611,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.5,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.5.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
                             </control>
 							<control type="button" id="1246">
                                 <description>Menu BackGround Type</description>
@@ -2638,6 +2647,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.5.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.5.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.5.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.5.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.5.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.5.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.5.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
                             </control>
@@ -2784,6 +2797,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.6,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.6.Widget))</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
                             </control>
 							<control type="button" id="1256">
@@ -2819,6 +2833,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.6.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.6.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.6.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.6.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.6.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.6.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.6.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
                             </control>
@@ -2965,7 +2983,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.7,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.7.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
                             </control>
 							<control type="button" id="1266">
                                 <description>Menu BackGround Type</description>
@@ -3000,6 +3019,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.7.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.7.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.7.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.7.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.7.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.7.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.7.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
                             </control>
@@ -3146,7 +3169,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.8,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.8.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
                             </control>
 							<control type="button" id="1276">
                                 <description>Menu BackGround Type</description>
@@ -3181,6 +3205,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.8.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.8.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.8.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.8.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.8.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.8.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.8.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
                             </control>
@@ -3327,7 +3355,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.9,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.9.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
                             </control>
 							<control type="button" id="1286">
                                 <description>Menu BackGround Type</description>
@@ -3362,6 +3391,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.9.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.9.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.9.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.9.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.9.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.9.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.9.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
                             </control>
@@ -3508,7 +3541,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.10,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.10.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
                             </control>
 							<control type="button" id="1296">
                                 <description>Menu BackGround Type</description>
@@ -3543,6 +3577,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.10.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.10.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.10.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.10.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.10.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.10.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.10.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
                             </control>
@@ -3689,7 +3727,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.11,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.11.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
                             </control>
 							<control type="button" id="1306">
                                 <description>Menu BackGround Type</description>
@@ -3724,6 +3763,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.11.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.11.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.11.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.11.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.11.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.11.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.11.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
                             </control>
@@ -3870,7 +3913,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.12,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.12.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
                             </control>
                             <control type="button" id="1316">
                                 <description>Menu BackGround Type</description>
@@ -3905,6 +3949,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.12.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.12.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.12.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.12.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.12.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.12.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.12.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
                             </control>
@@ -4051,7 +4099,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.13,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.13.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
                             </control>
                             <control type="button" id="1326">
                                 <description>Menu BackGround Type</description>
@@ -4086,6 +4135,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.13.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.13.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.13.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.13.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.13.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.13.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.13.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
                             </control>
@@ -4232,7 +4285,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.14,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.14.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
                             </control>
                             <control type="button" id="1336">
                                 <description>Menu BackGround Type</description>
@@ -4267,6 +4321,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.14.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.14.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.14.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.14.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.14.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.14.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.14.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
                             </control>
@@ -4413,7 +4471,8 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.15,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
-                                <visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+                                <enable>!String.IsEmpty(Skin.String(HomeItem.15.Widget))</enable>
+								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
                             </control>
                             <control type="button" id="1346">
                                 <description>Menu BackGround Type</description>
@@ -4448,6 +4507,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.15.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.15.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.15.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.15.PlaylistType)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.15.PlaylistContent)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.15.WidgetFormat)],Home)</onclick>
+								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.15.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
                             </control>

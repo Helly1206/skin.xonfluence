@@ -754,6 +754,7 @@
         <onload>Skin.SetString(HomeItem.1.Icon,Icons/weather2.png)</onload>
         <onload>Skin.SetString(HomeItem.1.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.1.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.1.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.2.Label,$LOCALIZE[1213])</onload>
         <onload>Skin.SetString(HomeItem.2.Path,ActivateWindow(Pictures,Pictures))</onload>
         <onload>Skin.SetString(HomeItem.2.Sub,Pictures)</onload>
@@ -764,6 +765,7 @@
         <onload>Skin.SetString(HomeItem.2.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.2.Icon,Icons/pictures.png)</onload>
         <onload>Skin.SetString(HomeItem.2.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.2.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.3.Label,$LOCALIZE[19021])</onload>
         <onload>Skin.SetString(HomeItem.3.Path,ActivateWindow(RadioChannels))</onload>
         <onload>Skin.SetString(HomeItem.3.Sub,Radio)</onload>
@@ -774,6 +776,7 @@
         <onload>Skin.SetString(HomeItem.3.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.3.Icon,Icons/radio.png)</onload>
         <onload>Skin.SetString(HomeItem.3.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.3.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.4.Label,$LOCALIZE[19020])</onload>
         <onload>Skin.SetString(HomeItem.4.Path,ActivateWindow(TVChannels))</onload>
         <onload>Skin.SetString(HomeItem.4.Sub,LiveTV)</onload>
@@ -784,6 +787,7 @@
         <onload>Skin.SetString(HomeItem.4.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.4.Icon,Icons/tv.png)</onload>
         <onload>Skin.SetString(HomeItem.4.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.4.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.5.Label,$LOCALIZE[3])</onload>
         <onload>Skin.SetString(HomeItem.5.Path,ActivateWindow(1199))</onload>
         <onload>Skin.SetString(HomeItem.5.Sub,Videos)</onload>
@@ -794,6 +798,7 @@
         <onload>Skin.SetString(HomeItem.5.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.5.Icon,Icons/video.png)</onload>
         <onload>Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload>Skin.SetString(HomeItem.5.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.6.Label,$LOCALIZE[342])</onload>
         <onload>Skin.SetString(HomeItem.6.Path,ActivateWindow(Videos,MovieTitles,return))</onload>
         <onload>Skin.SetString(HomeItem.6.Sub,Movies)</onload>
@@ -804,6 +809,7 @@
         <onload>Skin.SetString(HomeItem.6.Display,Database)</onload>
         <onload>Skin.SetString(HomeItem.6.Icon,Icons/movies.png)</onload>
         <onload>Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload>Skin.SetString(HomeItem.6.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.7.Label,$LOCALIZE[31424])</onload>
         <onload>Skin.SetString(HomeItem.7.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
         <onload>Skin.SetString(HomeItem.7.Sub,TVShows)</onload>
@@ -814,6 +820,7 @@
         <onload>Skin.SetString(HomeItem.7.Display,Database)</onload>
         <onload>Skin.SetString(HomeItem.7.Icon,Icons/tvshows.png)</onload>
         <onload>Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload>Skin.SetString(HomeItem.7.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.8.Label,$LOCALIZE[2])</onload>
         <onload>Skin.SetString(HomeItem.8.Path,ActivateWindow(Music))</onload>
         <onload>Skin.SetString(HomeItem.8.Sub,Music)</onload>
@@ -824,6 +831,7 @@
         <onload>Skin.SetString(HomeItem.8.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.8.Icon,Icons/music.png)</onload>
         <onload>Skin.SetString(HomeItem.8.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.8.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.9.Label,$LOCALIZE[24001])</onload>
         <onload condition="!System.Platform.Android">Skin.SetString(HomeItem.9.Path,ActivateWindow(Programs,Addons,return))</onload>
         <onload condition="System.Platform.Android">Skin.SetString(HomeItem.9.Path,ActivateWindow(Programs))</onload>
@@ -835,6 +843,7 @@
         <onload>Skin.SetString(HomeItem.9.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.9.Icon,Icons/programs.png)</onload>
         <onload>Skin.SetString(HomeItem.9.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.9.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.10.Label,$LOCALIZE[33002])</onload>
         <onload>Skin.SetString(HomeItem.10.Path,PlayMedia(special://skin/extras/Streaming/Radio105NetworkTV.strm))</onload>
         <onload>Skin.SetString(HomeItem.10.Sub,None)</onload>
@@ -845,6 +854,7 @@
         <onload>Skin.SetString(HomeItem.10.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.10.Icon,Icons/network.png)</onload>
         <onload>Skin.SetString(HomeItem.10.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.10.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.12.Label,$LOCALIZE[13000])</onload>
         <onload>Skin.SetString(HomeItem.12.Path,ActivateWindow(Settings))</onload>
         <onload>Skin.SetString(HomeItem.12.Sub,Settings)</onload>
@@ -855,6 +865,7 @@
         <onload>Skin.SetString(HomeItem.12.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.12.Icon,Icons/settings.png)</onload>
         <onload>Skin.SetString(HomeItem.12.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.12.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.15.Label,$LOCALIZE[31973])</onload>
         <onload>Skin.SetString(HomeItem.15.Path,PlayDVD())</onload>
         <onload>Skin.SetString(HomeItem.15.Sub,PlayDisc)</onload>
@@ -865,6 +876,7 @@
         <onload>Skin.SetString(HomeItem.15.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.15.Icon,Icons/playdvd.png)</onload>
         <onload>Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.15.WidgetLayout,Small)</onload>
         <onload>Skin.SetBool(SingleGlobalBackground)</onload>
         <onload condition="System.HasAddon(script.grab.fanart)">Skin.SetBool(EnableFanartScript)</onload>
         <onload condition="System.HasAddon(script.grab.fanart)">Skin.SetString(FanArtCycleRate,10)</onload>
@@ -1743,6 +1755,26 @@
         <onload>Skin.SetBool(Updates_V403)</onload>
     </include>
 	
+	<include name="UpdatesV415">
+        <onload condition="String.IsEmpty(Skin.String(HomeItem.1.WidgetLayout))">Skin.SetString(HomeItem.1.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.2.WidgetLayout))">Skin.SetString(HomeItem.2.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.3.WidgetLayout))">Skin.SetString(HomeItem.3.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.4.WidgetLayout))">Skin.SetString(HomeItem.4.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.5.WidgetLayout))">Skin.SetString(HomeItem.5.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.6.WidgetLayout))">Skin.SetString(HomeItem.6.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.7.WidgetLayout))">Skin.SetString(HomeItem.7.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.8.WidgetLayout))">Skin.SetString(HomeItem.8.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.9.WidgetLayout))">Skin.SetString(HomeItem.9.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.10.WidgetLayout))">Skin.SetString(HomeItem.10.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.11.WidgetLayout))">Skin.SetString(HomeItem.11.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.12.WidgetLayout))">Skin.SetString(HomeItem.12.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.13.WidgetLayout))">Skin.SetString(HomeItem.13.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.14.WidgetLayout))">Skin.SetString(HomeItem.14.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.15.WidgetLayout))">Skin.SetString(HomeItem.15.WidgetLayout,Small)</onload>
+        <onload>Skin.SetBool(Updates_V415)</onload>
+    </include>
+	
+	
 	<include name="HomeSuggestedMedia">
 	    <!-- Suggested Movie Info -->
 		<control type="group">
@@ -2016,6 +2048,5 @@
             </control>
         </control>
 	</include>
-	
 	
 </includes>

@@ -16,6 +16,10 @@
     <onunload>ClearProperty(SwapItemFanArt,Home)</onunload>
     <onunload>ClearProperty(SwapItemDisplay,Home)</onunload>
     <onunload>ClearProperty(SwapItemPlaylist,Home)</onunload>
+	<onunload>ClearProperty(SwapItemPlaylistType,Home)</onunload>
+	<onunload>ClearProperty(SwapItemPlaylistContent,Home)</onunload>
+	<onunload>ClearProperty(SwapItemWidgetFormat,Home)</onunload>
+	<onunload>ClearProperty(SwapItemWidgetLayout,Home)</onunload>
     <onunload>ClearProperty(UsrSelectBtn,Home)</onunload>
     <controls>
         <control type="group">
@@ -167,7 +171,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.1.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.1.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.1.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.1.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.1.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.1.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.1.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.1.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.1.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -176,7 +184,11 @@
                         <onclick>Skin.SetString(HomeItem.1.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
-                        <onclick>Dialog.Close(1128)</onclick>
+						<onclick>Skin.SetString(HomeItem.1.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.1.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.1.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.1.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+						<onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
                     </item>
@@ -192,7 +204,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.2.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.2.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.2.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.2.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.2.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.2.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.2.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.2.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.2.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -201,6 +217,10 @@
                         <onclick>Skin.SetString(HomeItem.2.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.2.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.2.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.2.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.2.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.2.Path))</visible>
@@ -217,7 +237,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.3.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.3.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.3.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.3.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.3.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.3.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.3.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.3.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.3.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -226,6 +250,10 @@
                         <onclick>Skin.SetString(HomeItem.3.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.3.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.3.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.3.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.3.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.3.Path))</visible>
@@ -242,7 +270,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.4.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.4.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.4.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.4.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.4.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.4.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.4.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.4.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.4.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -251,6 +283,10 @@
                         <onclick>Skin.SetString(HomeItem.4.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.4.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.4.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.4.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.4.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.4.Path))</visible>
@@ -267,7 +303,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.5.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.5.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.5.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.5.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.5.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.5.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.5.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.5.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.5.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -276,6 +316,10 @@
                         <onclick>Skin.SetString(HomeItem.5.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.5.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.5.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.5.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.5.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.5.Path))</visible>
@@ -292,7 +336,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.6.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.6.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.6.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.6.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.6.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.6.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.6.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.6.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.6.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -301,6 +349,10 @@
                         <onclick>Skin.SetString(HomeItem.6.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.6.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.6.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.6.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.6.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.6.Path))</visible>
@@ -317,7 +369,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.7.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.7.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.7.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.7.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.7.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.7.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.7.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.7.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.7.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -326,6 +382,10 @@
                         <onclick>Skin.SetString(HomeItem.7.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.7.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.7.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.7.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.7.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.7.Path))</visible>
@@ -342,7 +402,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.8.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.8.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.8.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.8.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.8.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.8.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.8.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.8.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.8.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -351,6 +415,10 @@
                         <onclick>Skin.SetString(HomeItem.8.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.8.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.8.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.8.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.8.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.8.Path))</visible>
@@ -367,7 +435,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.9.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.9.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.9.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.9.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.9.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.9.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.9.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.9.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.9.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -376,6 +448,10 @@
                         <onclick>Skin.SetString(HomeItem.9.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.9.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.9.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.9.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.9.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.9.Path))</visible>
@@ -392,7 +468,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.10.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.10.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.10.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.10.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.10.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.10.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.10.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.10.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.10.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -401,6 +481,10 @@
                         <onclick>Skin.SetString(HomeItem.10.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.10.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.10.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.10.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.10.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.10.Path))</visible>
@@ -417,7 +501,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.11.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.11.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.11.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.11.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.11.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.11.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.11.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.11.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.11.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -426,6 +514,10 @@
                         <onclick>Skin.SetString(HomeItem.11.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.11.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.11.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.11.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.11.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.11.Path))</visible>
@@ -442,7 +534,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.12.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.12.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.12.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.12.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.12.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.12.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.12.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.12.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.12.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -451,12 +547,16 @@
                         <onclick>Skin.SetString(HomeItem.12.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.12.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.12.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.12.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.12.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.12.Path))</visible>
                     </item>
                     <item id="13">
-                        <description>Home Menu Item Twelve</description>
+                        <description>Home Menu Item Thriteen</description>
                         <label>$INFO[Skin.String(HomeItem.13.Label)]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$INFO[Skin.String(HomeItem.13.Label)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,$INFO[Skin.String(HomeItem.13.Path)])</onclick>
@@ -467,7 +567,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.13.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.13.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.13.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.13.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.13.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.13.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.13.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.13.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -476,12 +580,16 @@
                         <onclick>Skin.SetString(HomeItem.13.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.13.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.13.Path))</visible>
                     </item>
                     <item id="14">
-                        <description>Home Menu Item Twelve</description>
+                        <description>Home Menu Item Fourteen</description>
                         <label>$INFO[Skin.String(HomeItem.14.Label)]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$INFO[Skin.String(HomeItem.14.Label)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,$INFO[Skin.String(HomeItem.14.Path)])</onclick>
@@ -492,7 +600,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.14.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.14.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.14.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.14.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.14.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.14.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.14.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.14.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -501,12 +613,16 @@
                         <onclick>Skin.SetString(HomeItem.14.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.14.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.14.Path))</visible>
                     </item>
                     <item id="15">
-                        <description>Home Menu Item Twelve</description>
+                        <description>Home Menu Item Fifteen</description>
                         <label>$INFO[Skin.String(HomeItem.15.Label)]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$INFO[Skin.String(HomeItem.15.Label)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,$INFO[Skin.String(HomeItem.15.Path)])</onclick>
@@ -517,7 +633,11 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$INFO[Skin.String(HomeItem.15.Fanart)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,$INFO[Skin.String(HomeItem.15.Display)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(HomeItem.15.Playlist)])</onclick>
-                        <onclick>Skin.SetString(HomeItem.15.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,$INFO[Skin.String(HomeItem.15.PlaylistType)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.15.PlaylistContent)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.15.WidgetFormat)])</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.15.WidgetLayout)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.Addon,$INFO[Window(Home).Property(SwapItemAddOn)])</onclick>
@@ -526,6 +646,10 @@
                         <onclick>Skin.SetString(HomeItem.15.Fanart,$INFO[Window(Home).Property(SwapItemFanArt)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.Display,$INFO[Window(Home).Property(SwapItemDisplay)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.Playlist,$INFO[Window(Home).Property(SwapItemPlaylist)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.PlaylistType,$INFO[Window(Home).Property(SwapItemPlaylistType)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
+						<onclick>Skin.SetString(HomeItem.15.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.15.Path))</visible>
