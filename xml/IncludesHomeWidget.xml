@@ -1627,9 +1627,11 @@
         <param name="Content" default="" />
         <definition>
             <control type="list" id="$PARAM[Control]">
-                <animation effect="slide" start="0,0" end="150,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="300,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="450,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="765,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="615,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="465,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="315,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="165,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,5)">Conditional</animation>
                 <left>45</left>
                 <top>0</top>
                 <width>1800</width>
@@ -1779,10 +1781,10 @@
                 <visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
             </control>
             <control type="list" id="$PARAM[Control]">
-                <animation effect="slide" start="0,0" end="732,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
-                <animation effect="slide" start="0,0" end="549,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
-                <animation effect="slide" start="0,0" end="366,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
-                <animation effect="slide" start="0,0" end="183,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">conditional</animation>
+                <animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
                 <left>60</left>
                 <top>0</top>
                 <width>1800</width>
@@ -1960,10 +1962,12 @@
 		<param name="embuaryinfonextaired">false</param>
         <definition>
             <control type="list" id="$PARAM[Control]">
-                <animation effect="slide" start="0,0" end="135,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">conditional</animation>
-                <animation effect="slide" start="0,0" end="270,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
-                <animation effect="slide" start="0,0" end="405,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
-                <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
+                <animation effect="slide" start="0,0" end="810,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="675,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="405,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="270,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,5)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="135,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,6)">Conditional</animation>
                 <left>0</left>
                 <top>0</top>
                 <width>1890</width>
@@ -2290,11 +2294,11 @@
                 <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
             </control>
             <control type="list" id="$PARAM[Control]">
-                <animation effect="slide" start="0,0" end="728,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
-                <animation effect="slide" start="0,0" end="580,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
-                <animation effect="slide" start="0,0" end="435,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
-                <animation effect="slide" start="0,0" end="288,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">conditional</animation>
-                <animation effect="slide" start="0,0" end="144,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,5)">conditional</animation>
+                <animation effect="slide" start="0,0" end="727,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="581,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="435,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="289,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="143,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,5)">Conditional</animation>
                 <left>87</left>
                 <top>0</top>
                 <width>1755</width>
@@ -2572,9 +2576,10 @@
 		<param name="embuaryinfonextaired">false</param>
         <definition>
             <control type="list" id="$PARAM[Control]">
-                <animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
-                <animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
-                <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
+                <animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
                 <left>45</left>
                 <top>0</top>
                 <width>1800</width>
