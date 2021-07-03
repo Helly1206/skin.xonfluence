@@ -2263,6 +2263,7 @@
                     <label>$VAR[VideoDescription]</label>
                     <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
+				<!-- Runtime -->
 				<control type="group">
 				    <top>760</top>
 					<visible>!String.IsEmpty(ListItem.Duration)</visible>
@@ -2281,7 +2282,7 @@
                     <control type="label">
                         <description>Duration Value</description>
                         <left>130</left>
-                        <width>220</width>
+                        <width>120</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Duration]</label>
                         <align>left</align>
@@ -2310,6 +2311,112 @@
                         <width>220</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Duration]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
+				<!-- Year -->
+				<control type="group">
+				    <top>760</top>
+					<visible>!String.IsEmpty(ListItem.Year)</visible>
+				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Year txt</description>
+                        <left>260</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[345]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Duration Value</description>
+                        <left>335</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label fallback="32016">$INFO[listitem.Year]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
+				<control type="group">
+				    <top>760</top>
+					<visible>!String.IsEmpty(ListItem.Year)</visible>
+				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Year txt</description>
+                        <left>330</left>
+                        <width>110</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[345]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Duration Value</description>
+                        <left>425</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label fallback="32016">$INFO[listitem.Year]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
+				<!-- rating -->
+				<control type="group">
+				    <top>760</top>
+					<visible>!String.IsEmpty(ListItem.Rating)</visible>
+				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Rating txt</description>
+                        <left>425</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[563]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Rating Value</description>
+                        <left>515</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label fallback="32016">$INFO[listitem.Rating]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
+				<control type="group">
+				    <top>760</top>
+					<visible>!String.IsEmpty(ListItem.Rating)</visible>
+				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Rating txt</description>
+                        <left>530</left>
+                        <width>110</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[563]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Rating Value</description>
+                        <left>650</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label fallback="32016">$INFO[listitem.Rating]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
@@ -2385,7 +2492,7 @@
                     <left>15</left>
                     <top>608</top>
                     <width>810</width>
-                    <height>230</height>
+                    <height>190</height>
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -2398,7 +2505,7 @@
                     <left>15</left>
                     <top>608</top>
                     <width>810</width>
-                    <height>250</height>
+                    <height>180</height>
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -2406,6 +2513,112 @@
                     <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
+				<!-- Year -->
+				<control type="group">
+				    <top>820</top>
+					<visible>!String.IsEmpty(ListItem.Year)</visible>
+				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Year txt</description>
+                        <left>260</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[345]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Duration Value</description>
+                        <left>335</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label fallback="32016">$INFO[listitem.Year]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
+				<control type="group">
+				    <top>820</top>
+					<visible>!String.IsEmpty(ListItem.Year)</visible>
+				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Year txt</description>
+                        <left>240</left>
+                        <width>110</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[345]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Duration Value</description>
+                        <left>335</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label fallback="32016">$INFO[listitem.Year]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
+				<!-- rating -->
+				<control type="group">
+				    <top>820</top>
+					<visible>!String.IsEmpty(ListItem.Rating)</visible>
+				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Rating txt</description>
+                        <left>425</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[563]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Rating Value</description>
+                        <left>515</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label fallback="32016">$INFO[listitem.Rating]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
+				<control type="group">
+				    <top>820</top>
+					<visible>!String.IsEmpty(ListItem.Rating)</visible>
+				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
+					<control type="label">
+                        <description>Rating txt</description>
+                        <left>440</left>
+                        <width>110</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[563]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                    </control>
+                    <control type="label">
+                        <description>Rating Value</description>
+                        <left>560</left>
+                        <width>80</width>
+                        <height>38</height>
+                        <label fallback="32016">$INFO[listitem.Rating]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                    </control>
+				</control>
                 <control type="image">
                     <depth>DepthContent+</depth>
                     <left>840</left>
