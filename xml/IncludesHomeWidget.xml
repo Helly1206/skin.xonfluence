@@ -2929,7 +2929,7 @@
                         <align>center</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
-						<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+						<visible>String.IsEqual(ListItem.DBType,episode) + ![String.IsEmpty(ListItem.TVShowTitle) | String.IsEmpty(ListItem.Season)]</visible>
                     </control>
                     <control type="label">
                         <left>30</left>
@@ -3057,7 +3057,7 @@
                         <align>center</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
-						<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+						<visible>String.IsEqual(ListItem.DBType,episode) + ![String.IsEmpty(ListItem.TVShowTitle) | String.IsEmpty(ListItem.Season)]</visible>
                     </control>
 					<control type="group">
 					    <visible>!String.IsEqual(ListItem.DBType,episode)</visible>
@@ -3385,7 +3385,7 @@
                         <align>center</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,s]$INFO[ListItem.Episode,e]</label>
-						<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+						<visible>String.IsEqual(ListItem.DBType,episode) + ![String.IsEmpty(ListItem.TVShowTitle) | String.IsEmpty(ListItem.Season)]</visible>
                     </control>
                     <control type="label">
                         <left>15</left>

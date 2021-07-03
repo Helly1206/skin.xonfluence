@@ -1354,7 +1354,20 @@
                                 <onclick>Skin.ToggleSetting(HideInfoStartOSD)</onclick>
                                 <selected>!Skin.HasSetting(HideInfoStartOSD)</selected>
                             </control>
-							<control type="radiobutton" id="17801">
+							<control type="button" id="17801">
+                                <description>Usr OSD Magic User Select</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>  - $LOCALIZE[32032]</label>
+                                <label2>[COLOR=selected]$VAR[IntroOSDTimeoutLabel][/COLOR]</label2>
+                                <textcolor>grey</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>ActivateWindow(2137)</onclick>
+                                <enable>!Skin.HasSetting(HideInfoStartOSD)</enable>
+                            </control>
+							<control type="radiobutton" id="17802">
                                 <description>OSD Seekbar wiht Start Media Intro</description>
                                 <width>1125</width>
                                 <height>60</height>

@@ -2082,4 +2082,16 @@
         <value condition="!String.IsEmpty(Skin.String(OSDLAF))">osd_modern/</value>
         <value>osd_classic/</value>
     </variable>
+	
+	<variable name="IntroOSDTimeoutLabel">
+        <value condition="String.IsEmpty(Skin.String(OSDTimeout))">3 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,two)">2 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,three)">3 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,four)">4 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,five)">5 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,six)">6 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,ten)">10 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,fifteen)">15 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,twenty)">20 $LOCALIZE[31940]</value>
+    </variable>
 </includes>
