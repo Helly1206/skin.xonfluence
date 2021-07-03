@@ -2430,7 +2430,7 @@
                 <width>180</width>
                 <height>74</height>
                 <aspectratio aligny="top" align="left">keep</aspectratio>
-                <texture>kodi-logo.png</texture>
+                <texture>special://skin/extras/resources/kodi-logo.png</texture>
                 <include>VisibleFadeEffect</include>
                 <include>Window_OpenClose_Animation</include>
                 <visible>String.IsEmpty(Skin.String(TopLeftHomeInfo)) | String.IsEqual(Skin.String(TopLeftHomeInfo),Logo)</visible>
