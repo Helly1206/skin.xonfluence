@@ -32,7 +32,8 @@
     </include>
     <include name="OSDMovieCover">
         <control type="group" id="1">
-            <control type="image" id="1">
+            <!-- Clear Art -->
+			<control type="image" id="1">
                 <description>clearart image</description>
                 <left>15</left>
                 <top>352r</top>
@@ -42,6 +43,7 @@
                 <aspectratio aligny="bottom">keep</aspectratio>
                 <visible>!Skin.HasSetting(DisableClearArt) + !String.IsEmpty(Player.Art(clearart))</visible>
             </control>
+			<!-- Clear logo if no Clear Art -->
             <control type="image" id="1">
                 <description>logo image</description>
                 <left>15</left>
@@ -52,18 +54,8 @@
                 <aspectratio aligny="bottom" align="center">keep</aspectratio>
                 <visible>!Skin.HasSetting(DisableLogoArt) + !String.IsEmpty(Player.Art(clearlogo)) + [String.IsEmpty(Player.Art(clearart)) | Skin.HasSetting(DisableClearArt)]</visible>
             </control>
-            <control type="image" id="1">
-                <description>Cover image</description>
-                <left>94</left>
-                <top>508r</top>
-                <width>315</width>
-                <height>480</height>
-                <aspectratio scalediffuse="false">stretch</aspectratio>
-                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideo.png">$INFO[Player.Art(poster)]</texture>
-                <visible>Skin.HasSetting(EnableDVDCases)</visible>
-                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
-            </control>
-            <control type="image" id="1">
+			<!-- Poster if no clear art or clear logo, no case -->
+			<control type="image" id="1">
                 <description>Movie cover image</description>
                 <left>30</left>
                 <top>525r</top>
@@ -76,18 +68,31 @@
                 <visible>!Skin.HasSetting(EnableDVDCases)</visible>
                 <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
             </control>
+			<!-- Poster if no clear art or clear logo, case enabled -->
             <control type="image" id="1">
+                <description>Cover image</description>
+                <left>94</left>
+                <top>508r</top>
+                <width>315</width>
+                <height>480</height>
+                <aspectratio scalediffuse="false">stretch</aspectratio>
+                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideo.png">$INFO[Player.Art(poster)]</texture>
+                <visible>Skin.HasSetting(EnableDVDCases)</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
+            </control>
+			<!-- Case -->
+			<control type="image" id="1">
                 <left>45</left>
                 <top>525r</top>
                 <width>382</width>
                 <height>518</height>
                 <aspectratio>stretch</aspectratio>
                 <texture>$VAR[VideoPlayerCase,ClearCase/,.png]</texture>
-                <visible>!Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)] + String.IsEmpty(Player.Art(poster))</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)] + !String.IsEmpty(Player.Art(poster))</visible>
                 <visible>Skin.HasSetting(EnableDVDCases)</visible>
             </control>
+            <!-- Icon if internet stream or no poster -->
             <control type="image" id="1">
-                <description>clearart image</description>
                 <left>15</left>
                 <top>352r</top>
                 <width>450</width>
