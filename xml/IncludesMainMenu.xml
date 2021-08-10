@@ -1780,7 +1780,7 @@
 		<control type="group">
             <left>0</left>
             <top>90</top>
-            <visible>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</visible>
+            <visible>Skin.HasSetting(LowerMainMenuBar)</visible>
             <visible>!Player.HasMedia + !String.IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
             <visible>!Integer.IsGreater(Window(Home).Property(RecommendedMovie.1.PercentPlayed),95)</visible>
             <visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Movies)</visible>
@@ -1856,7 +1856,7 @@
         <control type="group">
             <left>0</left>
             <top>90</top>
-            <visible>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</visible>
+            <visible>Skin.HasSetting(LowerMainMenuBar)</visible>
             <visible>!Player.HasMedia + !String.IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
             <visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),TVShows)</visible>
             <include>VisibleFadeEffect</include>
