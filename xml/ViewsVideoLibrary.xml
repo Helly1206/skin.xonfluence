@@ -2520,7 +2520,7 @@
 				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Year txt</description>
-                        <left>260</left>
+                        <left>15</left>
                         <width>80</width>
                         <height>38</height>
                         <label>$LOCALIZE[345]:</label>
@@ -2531,7 +2531,7 @@
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
-                        <left>335</left>
+                        <left>90</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Year]</label>
@@ -2546,7 +2546,7 @@
 				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Year txt</description>
-                        <left>240</left>
+                        <left>15</left>
                         <width>110</width>
                         <height>38</height>
                         <label>$LOCALIZE[345]:</label>
@@ -2557,7 +2557,7 @@
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
-                        <left>335</left>
+                        <left>120</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Year]</label>
@@ -2573,7 +2573,7 @@
 				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Rating txt</description>
-                        <left>425</left>
+                        <left>185</left>
                         <width>80</width>
                         <height>38</height>
                         <label>$LOCALIZE[563]:</label>
@@ -2584,7 +2584,7 @@
                     </control>
                     <control type="label">
                         <description>Rating Value</description>
-                        <left>515</left>
+                        <left>280</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Rating]</label>
@@ -2599,7 +2599,7 @@
 				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Rating txt</description>
-                        <left>440</left>
+                        <left>185</left>
                         <width>110</width>
                         <height>38</height>
                         <label>$LOCALIZE[563]:</label>
@@ -2610,7 +2610,7 @@
                     </control>
                     <control type="label">
                         <description>Rating Value</description>
-                        <left>560</left>
+                        <left>315</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Rating]</label>
