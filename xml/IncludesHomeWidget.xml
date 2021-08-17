@@ -1558,7 +1558,8 @@
         <param name="Content" default="" />
         <definition>
             <control type="list" id="$PARAM[Control]">
-                <animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="60,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,5)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="420,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
                 <animation effect="slide" start="0,0" end="600,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
                 <animation effect="slide" start="0,0" end="780,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
@@ -3371,7 +3372,7 @@
                         <width>405</width>
                         <height>308</height>
                         <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                        <texture>$INFO[ListItem.Property(Logo)]</texture>
+                        <texture>$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
                         <visible>!Skin.HasSetting(DisableLogoArt) + String.IsEqual(ListItem.DBType,episode)</visible>
                     </control>
                     <control type="label">
@@ -3489,7 +3490,7 @@
                         <width>405</width>
                         <height>308</height>
                         <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                        <texture>$INFO[ListItem.Property(Logo)]</texture>
+                        <texture>$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
                         <visible>!Skin.HasSetting(DisableLogoArt) + String.IsEqual(ListItem.DBType,episode)</visible>
                     </control>
                     <control type="label">
@@ -4394,7 +4395,7 @@
                 <label>$INFO[Window(Weather).Property(Day4.Title)]</label>
                 <label2>$INFO[Window(Weather).Property(Day4.Outlook)]</label2>
                 <onclick>Weather.Refresh</onclick>
-                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day4.FanartCode)]</icon>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Day4.FanartCode)]$VAR[WeatherIconExt]</icon>
                 <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Day4.FanartCode)]</thumb>
                 <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</property>
                 <visible>String.IsEqual(Skin.String(TopLeftHomeInfo),Weather)</visible>
