@@ -1806,22 +1806,9 @@
                     <height>429</height>
                     <aspectratio>keep</aspectratio>
                     <fadetime>IconCrossfadeTime</fadetime>
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                    <texture background="true">$VAR[EpisodeThumbImage]</texture>
                     <bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
                     <bordersize>8</bordersize>
-                    <visible>String.IsEqual(ListItem.Label,..) | [String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(HideEpisodeThumb)] | String.IsEqual(ListItem.DBType,video)</visible>
-                </control>
-                <control type="image">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>765</width>
-                    <height>429</height>
-                    <aspectratio>scale</aspectratio>
-                    <fadetime>IconCrossfadeTime</fadetime>
-                    <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-                    <bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
-                    <bordersize>8</bordersize>
-                    <visible>!String.IsEqual(ListItem.Label,..) + String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(HideEpisodeThumb)</visible>
                 </control>
                 <control type="grouplist">
                     <visible>!ListItem.IsParentFolder</visible>
