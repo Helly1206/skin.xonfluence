@@ -297,6 +297,39 @@
                     <label>13013</label>
                 </control>
             </control>
+			<control type="group" id="81">
+                <width>510</width>
+                <height>60</height>
+                <visible>System.CanReboot + [System.Platform.Linux | System.Platform.Linux.RaspberryPi | System.Platform.Android]</visible>
+                <control type="image">
+                    <description>background image</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>510</width>
+                    <height>60</height>
+                    <texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
+                </control>
+                <control type="button" id="800">
+                    <description>Reboot button</description>
+                    <left>27</left>
+                    <top>0</top>
+                    <width>456</width>
+                    <height>60</height>
+                    <onleft>9</onleft>
+                    <onright>7</onright>
+                    <onup>7</onup>
+                    <ondown>9</ondown>
+                    <textcolor>grey2</textcolor>
+                    <focusedcolor>white</focusedcolor>
+                    <align>center</align>
+                    <textwidth>435</textwidth>
+                    <onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
+                    <onclick>Reset()</onclick>
+                    <pulseonselect>no</pulseonselect>
+                    <font>font13</font>
+                    <label>$LOCALIZE[32033]</label>
+                </control>
+            </control>
             <control type="group" id="9">
                 <width>510</width>
                 <height>60</height>
