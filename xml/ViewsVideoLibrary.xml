@@ -1840,7 +1840,7 @@
 					    <visible>!String.IsEmpty(ListItem.Premiered) + String.IsEqual(ListItem.DBType,episode)</visible>
 					    <control type="label">
                             <description>Aired txt</description>
-                            <left>15</left>
+                            <left>0</left>
                             <top>502</top>
                             <width>210</width>
                             <height>38</height>
@@ -1852,7 +1852,7 @@
                         </control>
                         <control type="label">
                             <description>Aired Value</description>
-                            <left>240</left>
+                            <left>225</left>
                             <top>502</top>
                             <width>210</width>
                             <height>38</height>
@@ -1867,7 +1867,7 @@
 					    <visible>!String.IsEmpty(ListItem.Premiered) + String.IsEqual(ListItem.DBType,video)</visible>
 					    <control type="label">
                             <description>Aired txt</description>
-                            <left>15</left>
+                            <left>0</left>
                             <top>526</top>
                             <width>210</width>
                             <height>38</height>
@@ -1879,7 +1879,7 @@
                         </control>
                         <control type="label">
                             <description>Aired Value</description>
-                            <left>240</left>
+                            <left>225</left>
                             <top>526</top>
                             <width>210</width>
                             <height>38</height>
@@ -1894,9 +1894,9 @@
 					    <visible>!String.IsEmpty(ListItem.Duration) + String.IsEqual(ListItem.DBType,episode)</visible>
 				        <control type="label">
                             <description>Runtime txt</description>
-                            <left>450</left>
+                            <left>420</left>
                             <top>502</top>
-                            <width>130</width>
+                            <width>200</width>
                             <height>38</height>
                             <label>$LOCALIZE[2050]:</label>
                             <align>right</align>
@@ -1906,7 +1906,7 @@
                         </control>
                         <control type="label">
                             <description>Runtime Value</description>
-                            <left>600</left>
+                            <left>640</left>
                             <top>502</top>
                             <width>280</width>
                             <height>38</height>
@@ -1921,9 +1921,9 @@
 					    <visible>!String.IsEmpty(ListItem.Duration) + String.IsEqual(ListItem.DBType,video)</visible>
 				        <control type="label">
                             <description>Runtime txt</description>
-                            <left>450</left>
+                            <left>420</left>
                             <top>526</top>
-                            <width>130</width>
+                            <width>200</width>
                             <height>38</height>
                             <label>$LOCALIZE[2050]:</label>
                             <align>right</align>
@@ -1933,7 +1933,7 @@
                         </control>
                         <control type="label">
                             <description>Runtime Value</description>
-                            <left>600</left>
+                            <left>640</left>
                             <top>526</top>
                             <width>280</width>
                             <height>38</height>
@@ -1948,7 +1948,7 @@
 					    <visible>String.IsEqual(ListItem.DBType,episode)</visible>
                         <control type="label">
                             <description>Episode txt</description>
-                            <left>15</left>
+                            <left>0</left>
                             <top>540</top>
                             <width>210</width>
                             <height>38</height>
@@ -1960,7 +1960,7 @@
                         </control>
                         <control type="fadelabel">
                             <description>Episode Value</description>
-                            <left>240</left>
+                            <left>225</left>
                             <top>540</top>
                             <width>510</width>
                             <height>38</height>
@@ -2315,17 +2315,17 @@
 					<control type="label">
                         <description>Duration txt</description>
                         <left>15</left>
-                        <width>130</width>
+                        <width>180</width>
                         <height>38</height>
                         <label>$LOCALIZE[2050]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
-                        <left>130</left>
+                        <left>210</left>
                         <width>120</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Duration]</label>
@@ -2340,18 +2340,18 @@
 				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Duration txt</description>
-                        <left>15</left>
-                        <width>150</width>
+                        <left>0</left>
+                        <width>240</width>
                         <height>38</height>
                         <label>$LOCALIZE[2050]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
-                        <left>165</left>
+                        <left>250</left>
                         <width>220</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Duration]</label>
@@ -2367,18 +2367,18 @@
 				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Year txt</description>
-                        <left>260</left>
+                        <left>370</left>
                         <width>80</width>
                         <height>38</height>
                         <label>$LOCALIZE[345]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
-                        <left>335</left>
+                        <left>465</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Year]</label>
@@ -2393,18 +2393,18 @@
 				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Year txt</description>
-                        <left>330</left>
+                        <left>370</left>
                         <width>110</width>
                         <height>38</height>
                         <label>$LOCALIZE[345]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
-                        <left>425</left>
+                        <left>495</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Year]</label>
@@ -2420,18 +2420,18 @@
 				    <visible>!String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Rating txt</description>
-                        <left>425</left>
-                        <width>80</width>
+                        <left>525</left>
+                        <width>160</width>
                         <height>38</height>
                         <label>$LOCALIZE[563]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Rating Value</description>
-                        <left>515</left>
+                        <left>700</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Rating]</label>
@@ -2446,18 +2446,18 @@
 				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Rating txt</description>
-                        <left>530</left>
-                        <width>110</width>
+                        <left>590</left>
+                        <width>180</width>
                         <height>38</height>
                         <label>$LOCALIZE[563]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Rating Value</description>
-                        <left>650</left>
+                        <left>780</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Rating]</label>
@@ -2565,17 +2565,17 @@
 					<control type="label">
                         <description>Year txt</description>
                         <left>15</left>
-                        <width>80</width>
+                        <width>100</width>
                         <height>38</height>
                         <label>$LOCALIZE[345]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
-                        <left>90</left>
+                        <left>130</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Year]</label>
@@ -2594,14 +2594,14 @@
                         <width>110</width>
                         <height>38</height>
                         <label>$LOCALIZE[345]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
-                        <left>120</left>
+                        <left>145</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Year]</label>
@@ -2618,17 +2618,17 @@
 					<control type="label">
                         <description>Rating txt</description>
                         <left>185</left>
-                        <width>80</width>
+                        <width>180</width>
                         <height>38</height>
                         <label>$LOCALIZE[563]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Rating Value</description>
-                        <left>280</left>
+                        <left>380</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Rating]</label>
@@ -2643,18 +2643,18 @@
 				    <visible>String.IsEqual(Skin.Font,Massive)</visible>
 					<control type="label">
                         <description>Rating txt</description>
-                        <left>185</left>
-                        <width>110</width>
+                        <left>220</left>
+                        <width>210</width>
                         <height>38</height>
                         <label>$LOCALIZE[563]:</label>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>Rating Value</description>
-                        <left>315</left>
+                        <left>450</left>
                         <width>80</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Rating]</label>
@@ -2806,13 +2806,26 @@
 				    <control type="label">
                         <description>Duration txt</description>
                         <left>15</left>
-                        <width>150</width>
+                        <width>180</width>
                         <height>38</height>
                         <label>$LOCALIZE[2050]:</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>$VAR[MainColorOne]</textcolor>
+						<visible>!String.IsEqual(Skin.Font,Massive)</visible>
+                    </control>
+					<control type="label">
+                        <description>Duration txt</description>
+                        <left>15</left>
+                        <width>140</width>
+                        <height>38</height>
+                        <label>$LOCALIZE[2050]:</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+						<visible>String.IsEqual(Skin.Font,Massive)</visible>
                     </control>
                     <control type="label">
                         <description>Duration Value</description>
@@ -2827,7 +2840,7 @@
                     </control>
 					<control type="label">
                         <description>Duration Value</description>
-                        <left>130</left>
+                        <left>195</left>
                         <width>220</width>
                         <height>38</height>
                         <label fallback="32016">$INFO[listitem.Duration]</label>
