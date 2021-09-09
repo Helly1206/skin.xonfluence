@@ -666,9 +666,9 @@
 <!--                    <left>0</left>
                     <top>180</top>
                     <width>1365</width> -->
-					<left>1160</left>
+					<left>1140</left>
                     <top>185</top>
-                    <width>220</width>
+                    <width>240</width>
                     <height>38</height>
                     <label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
                     <align>right</align>
@@ -1097,9 +1097,9 @@
                 <include>OSDMediaHeading</include>
                 <include>OSDMediaFlagging</include>
 				<control type="label" id="1">
-                    <left>1160</left>
+                    <left>1140</left>
                     <top>185</top>
-                    <width>220</width>
+                    <width>240</width>
                     <height>38</height>
                     <label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
                     <align>right</align>
