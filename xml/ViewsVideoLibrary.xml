@@ -748,7 +748,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
             </control>
             <control type="grouplist">
@@ -1141,7 +1142,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
 					<visible>!String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
 				<control type="textbox">
@@ -1155,7 +1157,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
 					<visible>String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
             </control>
@@ -1303,7 +1306,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
             </control>
             <control type="group">
@@ -1333,7 +1337,8 @@
                         <align>justify</align>
                         <textcolor>white</textcolor>
                         <label>$INFO[Container.ShowPlot]</label>
-                        <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                        <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     </control>
                     <control type="label">
                         <description>Watched Count</description>
@@ -1393,7 +1398,8 @@
                         <align>justify</align>
                         <textcolor>white</textcolor>
                         <label>$VAR[VideoDescription]</label>
-                        <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                        <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     </control>
 				    <control type="group">
 				        <top>495</top>
@@ -1777,7 +1783,8 @@
                         <align>justify</align>
                         <textcolor>white</textcolor>
                         <label>$VAR[VideoDescription]</label>
-                        <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                        <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
 						<visible>!String.IsEqual(Skin.Font,Massive)</visible>
                     </control>
 					<control type="textbox">
@@ -1790,7 +1797,8 @@
                         <align>justify</align>
                         <textcolor>white</textcolor>
                         <label>$VAR[VideoDescription]</label>
-                        <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                        <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
 						<visible>String.IsEqual(Skin.Font,Massive)</visible>
                     </control>
 				</control>
@@ -1991,7 +1999,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
 					<visible>String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
 				<control type="textbox">
@@ -2005,7 +2014,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
 					<visible>!String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
             </control>
@@ -2305,7 +2315,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
 				<!-- Runtime -->
 				<control type="group">
@@ -2541,7 +2552,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
 					<visible>String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
 				<control type="textbox">
@@ -2554,7 +2566,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
 					<visible>!String.IsEqual(Skin.Font,Massive)</visible>
                 </control>
 				<!-- Year -->
@@ -2712,7 +2725,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$INFO[Container.ShowPlot]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
 				<control type="label">
                     <description>Watched Count</description>
@@ -2797,7 +2811,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
 					<visible>!ListItem.IsParentFolder</visible>
                 </control>
 				<control type="group">

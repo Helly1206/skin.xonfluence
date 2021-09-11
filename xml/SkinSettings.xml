@@ -1136,6 +1136,18 @@
                                 <onclick>Skin.ToggleSetting(AutoScroll)</onclick>
                                 <selected>Skin.HasSetting(AutoScroll)</selected>
                             </control>
+							<control type="radiobutton" id="1611">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32034]</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(AutoScroll.Slow)</onclick>
+                                <selected>Skin.HasSetting(AutoScroll.slow)</selected>
+								<visible>Skin.HasSetting(AutoScroll)</visible>
+                            </control>
                             <control type="radiobutton" id="162">
                                 <width>1125</width>
                                 <height>60</height>

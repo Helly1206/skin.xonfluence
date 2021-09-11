@@ -385,7 +385,8 @@
                         <font>font12</font>
                         <align>justify</align>
                         <textcolor>grey</textcolor>
-                        <autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
+                        <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                         <label>$INFO[ListItem.Plot]</label>
                     </control>
                 </control>

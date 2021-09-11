@@ -3288,4 +3288,14 @@
             </focusedlayout>
         </control>
     </include>
+	
+	<include name="StandardAutoScroll">
+	    <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+	</include>
+	
+	<include name="SlowerAutoScroll">
+	    <autoscroll time="4500" delay="16000" repeat="10000">true</autoscroll>
+	</include>
+	
+	
 </includes>
