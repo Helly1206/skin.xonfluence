@@ -996,6 +996,18 @@
                                 <onclick condition="Skin.String(CustomWidgets,75)">Skin.SetString(CustomWidgets,100)</onclick>
                                 <onclick condition="Skin.String(CustomWidgets,100)">Skin.Reset(CustomWidgets)</onclick>
                             </control>
+							<control type="radiobutton" id="1511">
+                                <description>Show widget fanart</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>$LOCALIZE[32036]</label>
+                                <onclick>Skin.ToggleSetting(ShowWidgetFanart)</onclick>
+                                <selected>Skin.HasSetting(ShowWidgetFanart)</selected>
+                                <include>MenuButton</include>
+                            </control>
                             <control type="radiobutton" id="152">
                                 <description>disable PVR in view</description>
                                 <width>1125</width>
@@ -10909,6 +10921,30 @@
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(DisableClearArt)</onclick>
                                 <selected>!Skin.HasSetting(DisableClearArt)</selected>
+                            </control>
+							<control type="radiobutton" id="628">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[32035]</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(EnableExtraFanart)</onclick>
+                                <selected>Skin.HasSetting(EnableExtraFanart)</selected>
+                            </control>
+							<control type="button" id="6281">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32037]</label>
+                                <label2>[COLOR=selected]$INFO[Skin.String(ExtraFanartCycleRate)][/COLOR] $LOCALIZE[31940]</label2>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>SetProperty(CustomSelectExtraFanartCycleRate,True)</onclick>
+                                <onclick>ActivateWindow(2138)</onclick>
+								<enable>Skin.HasSetting(EnableExtraFanart)</enable>
                             </control>
                         </control>
                         <control type="scrollbar" id="2565">

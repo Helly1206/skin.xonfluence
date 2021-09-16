@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Custom Select -->
+    <!-- Select delay in seconds to rotate extra fanart -->
+	<include name="SelectExtraFanartCycleRate">
+		<item>
+			<label>5 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,5)</onclick>
+		</item>
+		<item>
+			<label>6 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,6)</onclick>
+		</item>
+		<item>
+			<label>7 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.Reset(ExtraFanartCycleRate)</onclick>
+		</item>
+		<item>
+			<label>8 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,8)</onclick>
+		</item>
+		<item>
+			<label>9 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,9)</onclick>
+		</item>
+		<item>
+			<label>10 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,10)</onclick>
+		</item>
+		<item>
+			<label>15 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,15)</onclick>
+		</item>
+		<item>
+			<label>20 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,20)</onclick>
+		</item>
+		<item>
+			<label>30 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,30)</onclick>
+		</item>
+		<item>
+			<label>60 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,60)</onclick>
+		</item>
+		<item>
+			<label>90 $LOCALIZE[31940]</label>
+			<onclick>Dialog.Close(2138)</onclick>
+			<onclick>Skin.SetString(ExtraFanartCycleRate,90)</onclick>
+		</item>
+	</include>
+	
+</includes>

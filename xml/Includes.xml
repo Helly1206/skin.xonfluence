@@ -25,6 +25,7 @@
     <include file="IncludesPVR.xml" />
     <include file="IncludesBackgroundBuilding.xml" />
 	<include file="IncludesNowPlaying.xml" />
+	<include file="Includes_CustomSelect.xml" />
     <!-- CONSTANTS -->
     <constant name="FanartCrossfadeTime">500</constant>
     <constant name="IconCrossfadeTime">400</constant>

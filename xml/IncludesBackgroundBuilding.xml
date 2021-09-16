@@ -1,10 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    
+	<!-- Extrafanart Fadelabel Pause -->
+	<include name="FadelabelPauseAtEnd5">
+		<pauseatend>5000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd6">
+		<pauseatend>6000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd7">
+		<pauseatend>7000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd8">
+		<pauseatend>8000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd9">
+		<pauseatend>9000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd10">
+		<pauseatend>10000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd15">
+		<pauseatend>15000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd20">
+		<pauseatend>20000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd30">
+		<pauseatend>30000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd60">
+		<pauseatend>60000</pauseatend>
+	</include>
+	<include name="FadelabelPauseAtEnd90">
+		<pauseatend>90000</pauseatend>
+	</include>
+
+    <include name="FadeLabelTime">
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),5)">FadelabelPauseAtEnd5</include>
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),6)">FadelabelPauseAtEnd6</include>
+		<include condition="String.IsEmpty(Skin.String(ExtraFanartCycleRate))">FadelabelPauseAtEnd7</include>
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),8)">FadelabelPauseAtEnd8</include>
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),9)">FadelabelPauseAtEnd9</include>
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),10)">FadelabelPauseAtEnd10</include>
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),15)">FadelabelPauseAtEnd15</include>
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),20)">FadelabelPauseAtEnd20</include>
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),30)">FadelabelPauseAtEnd30</include>
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),60)">FadelabelPauseAtEnd60</include>
+		<include condition="String.IsEqual(Skin.String(ExtraFanartCycleRate),90)">FadelabelPauseAtEnd90</include>
+	</include>
+	
+	<variable name="WidgetItemFanart">
+        <!-- Widget extra fanart -->
+		<value condition="[!String.IsEmpty(ListItem.Art(fanart1)) | !String.IsEmpty(ListItem.Art(tvshow.fanart1))] + !String.IsEmpty(Control.GetLabel(4415))">$INFO[Control.GetLabel(4415)]</value>
+		<!-- Widget fanart -->
+		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
+	</variable>	
+	
+	<include name="HomeWidgetExtraFanart">
+	    <control type="fadelabel" id="4415">
+			<top>-100</top>
+			<width>2560</width>
+			<height>0</height>
+			<scrollspeed>20</scrollspeed>
+			<scroll>false</scroll>
+			<scrollout>false</scrollout>
+			<randomize>true</randomize>
+			<resetonlabelchange>true</resetonlabelchange>
+			<include>FadeLabelTime</include>
+			<label>$INFO[ListItem.Art(fanart)]</label>
+			<label>$INFO[ListItem.Art(fanart1)]</label>
+			<label>$INFO[ListItem.Art(fanart2)]</label>
+			<label>$INFO[ListItem.Art(fanart3)]</label>
+			<label>$INFO[ListItem.Art(fanart4)]</label>
+			<label>$INFO[ListItem.Art(fanart5)]</label>
+			<label>$INFO[ListItem.Art(fanart6)]</label>
+			<label>$INFO[ListItem.Art(fanart7)]</label>
+			<label>$INFO[ListItem.Art(fanart8)]</label>
+			<label>$INFO[ListItem.Art(fanart9)]</label>
+			<label>$INFO[ListItem.Art(fanart10)]</label>
+			<label>$INFO[ListItem.Art(fanart11)]</label>
+			<label>$INFO[ListItem.Art(fanart12)]</label>
+			<label>$INFO[ListItem.Art(fanart13)]</label>
+			<label>$INFO[ListItem.Art(fanart14)]</label>
+			<label>$INFO[ListItem.Art(fanart15)]</label>
+			<label>$INFO[ListItem.Art(fanart16)]</label>
+			<label>$INFO[ListItem.Art(fanart17)]</label>
+			<label>$INFO[ListItem.Art(fanart18)]</label>
+			<label>$INFO[ListItem.Art(fanart19)]</label>
+			<label>$INFO[ListItem.Art(fanart20)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart1)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart2)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart3)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart4)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart5)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart6)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart7)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart8)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart9)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart10)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart11)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart12)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart13)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart14)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart15)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart16)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart17)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart18)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart19)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart20)]</label>
+		</control>
+	</include>
+	
+
     <include name="CommonBackground">
-        <control type="group">
+        <!-- Widget Fanart/Extrafanart -->
+		<control type="group">
+            <depth>DepthBackground</depth>
+            <visible>Window.IsVisible(Home) + ControlGroup(9003).HasFocus + Skin.HasSetting(ShowWidgetFanart)</visible>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <imagepath background="true">$VAR[WidgetItemFanart]</imagepath>
+                <include>BackgroundTimePerImage</include>
+                <randomize>true</randomize>
+                <fadetime>FanartCrossfadeTime</fadetime>
+            </control>
+        </control>
+       <control type="group">
             <depth>DepthBackground</depth>
             <visible>Skin.HasSetting(SingleGlobalBackground) + !Skin.HasSetting(HolidayEffects)</visible>
-            <control type="multiimage">
+            <visible>![Window.IsVisible(Home) + ControlGroup(9003).HasFocus + Skin.HasSetting(ShowWidgetFanart)]</visible>
+			<control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
                 <imagepath background="true">$INFO[Skin.String(GlobalBackGroundPath)]</imagepath>
                 <include>BackgroundTimePerImage</include>
@@ -60,7 +186,8 @@
             <depth>DepthBackground</depth>
             <visible>Skin.HasSetting(HideHomeNowPlaying) | !Player.HasAudio | String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) | [Player.HasAudio + !Skin.HasSetting(VizOnlyOnHome) + Skin.HasSetting(HideBackgroundCDWall) + Skin.HasSetting(DisableSlideShowArt)]</visible>
             <visible>!Skin.HasSetting(SingleGlobalBackground) + !String.IsEqual(Window(Home).Property(MenuBackground),Theme) + !String.IsEqual(Container(9000).ListItem.Property(Background),Theme) + !Skin.HasSetting(HolidayEffects)</visible>
-            <control type="group">
+            <visible>![Window.IsVisible(Home) + ControlGroup(9003).HasFocus + Skin.HasSetting(ShowWidgetFanart)]</visible>
+			<control type="group">
                 <include>BackgroundFade</include>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <include>Window_OpenClose_Animation</include>
@@ -119,7 +246,7 @@
         <control type="group">
             <depth>DepthBackground</depth>
             <visible>!Window.IsVisible(Home) + !Player.HasVideo + !Skin.HasSetting(HideBackGroundFanart)</visible>
-            <control type="multiimage">
+			<control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
                 <aspectratio>scale</aspectratio>
                 <imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
@@ -337,7 +464,8 @@
         <control type="group">
             <depth>DepthBackground</depth>
             <visible>Window.IsVisible(Home) + !Skin.HasSetting(HideHomeNowPlaying) + Player.HasAudio + !String.Contains(Window(Videos).Property(TvTunesIsAlive),TRUE) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
-            <control type="image">
+            <visible>![Window.IsVisible(Home) + ControlGroup(9003).HasFocus + Skin.HasSetting(ShowWidgetFanart)]</visible>
+			<control type="image">
                 <include>Dimensions_Fullscreen</include>
                 <texture fallback="black-back.png">$VAR[SkinBackgroundPath]media-overlay.jpg</texture>
                 <visible>Skin.HasSetting(NoDiffuseVizFanart)</visible>
@@ -368,6 +496,7 @@
             <visible>Player.HasVideo + !Skin.HasSetting(HideHomeNowPlaying) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVChannels) | [Window.IsVisible(TVChannels) + !Skin.HasSetting(HidePVRNowPlaying)]</visible>
         </control>
     </include>
+	
     <include name="ArtistExtraFanArt">
         <control type="multiimage" id="5043">
             <include>InvisibleButton</include>

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
-    <include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+    
+	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
     <include condition="!Skin.HasSetting(Updates_V312)">UpdatesV312</include>
     <include condition="!Skin.HasSetting(Updates_V320)">UpdatesV320</include>
     <include condition="!Skin.HasSetting(Updates_V335)">UpdatesV335</include>
     <include condition="!Skin.HasSetting(Updates_V337)">UpdatesV337</include>
     <include condition="!Skin.HasSetting(Updates_V403)">UpdatesV403</include>
 	<include condition="!Skin.HasSetting(Updates_V415)">UpdatesV415</include>
-    <onload condition="!String.IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
+    
+	<onload condition="!String.IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
     <onload condition="!String.IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
     <onload condition="!String.IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
     <onload condition="!String.IsEmpty(Window(Home).Property(MenuBackground))">ClearProperty(MenuBackground,Home)</onload>
@@ -18,18 +20,26 @@
     <onload condition="System.HasAddon(script.favourites) + Skin.HasSetting(EnableScriptFavourites)">RunScript(script.favourites)</onload>
     <onload condition="!Skin.HasSetting(DisableSlideShowArt)">RunScript(script.artistslideshow, daemon=True)</onload>
     <onload condition="!String.IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
-    <onload condition="String.IsEmpty(Window.Property(ReturnHome))">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
-    <onload condition="String.IsEmpty(Window.Property(ReturnHome))">SetProperty(ReturnHome,True)</onload>
+    <onload condition="!Skin.HasSetting(Use.Skinshortcuts) + String.IsEmpty(Window.Property(ReturnHome))">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
+    <onload condition="!Skin.HasSetting(Use.Skinshortcuts) + String.IsEmpty(Window.Property(ReturnHome))">SetProperty(ReturnHome,True)</onload>
     <onload condition="String.IsEmpty(Skin.String(SkinFanart.Name)) + String.IsEmpty(Skin.String(AlternativeBackgroundPath)) + !Skin.HasSetting(DontAskBackgroundFanart) + Window.Previous(startup.xml)">ActivateWindow(1194)</onload>
-    <onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
+    
+	<!-- Build menu/submenus/widgets if skinshortcuts enabled -->
+	<onload condition="System.AddonIsEnabled(script.skinshortcuts) + Skin.HasSetting(Use.Skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu&amp;levels=2)</onload>
+	
+<!--	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
     <onunload condition="ControlGroup(9011).HasFocus">SetProperty(MusicDirectLink,True)</onunload>
     <onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
-    <onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(3)">ClearProperty(MusicDirectLink)</onunload>
+    <onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(3)">ClearProperty(MusicDirectLink)</onunload> -->
+	
     <controls>
         
 		<!-- Hidden list for video node statistics - uses service.library.data.provider -->
 		<include condition="Skin.HasSetting(EnableHomeStats) + Skin.HasSetting(EnableScriptStats) + System.HasAddon(service.library.data.provider)">VideoNodeStatsList</include>
-        
+		
+		<!-- Hidden fadelabel for widget extra fanart -->
+		<include condition="Skin.HasSetting(EnableExtraFanart)">HomeWidgetExtraFanart</include>
+		
 		<!-- Global background -->
 		<include>CommonBackground</include>
         <!-- Background effects -->
@@ -105,14 +115,16 @@
                 <effect type="fade" start="100" end="0" time="225" />
             </animation>
             <!-- Submenu -->
-			<include>HomeSubMenuControl</include>
+			<include condition="!Skin.HasSetting(Use.Skinshortcuts)">HomeSubMenuControl</include>
+			<include condition="Skin.HasSetting(Use.Skinshortcuts)">SkinShortcutsSubMenu</include>
             <!-- Menu -->
 			<include condition="Skin.HasSetting(WrapAroundHomeMenu)">WrapHomeMainMenu</include>
             <include condition="!Skin.HasSetting(WrapAroundHomeMenu)">FixedHomeMainMenu</include>
         </control>
 		
         <!-- Addon set below menu -->
-		<include>HomeAddonsDisplay</include>
+		<include condition="!Skin.HasSetting(Use.Skinshortcuts)">HomeAddonsDisplay</include>
+		<include condition="Skin.HasSetting(Use.Skinshortcuts)">SkinshortcutsAddonsDisplay</include>
         
 		<!-- RSS Feed / 5 next songs -->
 		<include>HomeRSS</include>
