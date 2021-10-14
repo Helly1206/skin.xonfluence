@@ -294,6 +294,78 @@
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
             </item>
+			<item>
+                <description>EmulationStation</description>
+                <label>$LOCALIZE[32038]</label>
+                <include>ClearButtonChoice</include>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript(/usr/bin/frontend-emulationstation.py))</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[32038])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Games)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]games.jpg)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/games.png)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+                <include>CloseMenuChoice</include>
+                <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
+            </item>
+			<item>
+                <description>Retroarch</description>
+                <label>$LOCALIZE[32039]</label>
+                <include>ClearButtonChoice</include>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript(/usr/bin/frontend-retroarch.py))</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[32039])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Games)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]games.jpg)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/games.png)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+                <include>CloseMenuChoice</include>
+                <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
+            </item>
+			<item>
+                <description>Pegasus</description>
+                <label>$LOCALIZE[32040]</label>
+                <include>ClearButtonChoice</include>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript(/usr/bin/frontend-pegasus-fe.py))</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[32040])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Games)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]games.jpg)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/games.png)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+                <include>CloseMenuChoice</include>
+                <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
+            </item>
+			<item>
+                <description>Moonlight</description>
+                <label>$LOCALIZE[32041]</label>
+                <include>ClearButtonChoice</include>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript(/usr/bin/moonlight-qt.py))</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[32041])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Games)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]games.jpg)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/games.png)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+                <include>CloseMenuChoice</include>
+                <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
+            </item>
             <item>
                 <description>Global Search</description>
                 <label>$LOCALIZE[31209]</label>
@@ -2755,6 +2827,7 @@
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
             </item>
+			<!-- Games menu -->
             <item>
                 <description>Games</description>
                 <label>$LOCALIZE[15016]</label>
@@ -2770,6 +2843,78 @@
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/games.png)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+                <include>CloseMenuChoice</include>
+                <visible>String.IsEqual(Window.Property(MenuItemType),GamesMenu)</visible>
+            </item>
+			<item>
+                <description>EmulationStation</description>
+                <label>$LOCALIZE[32038]</label>
+                <include>ClearButtonChoice</include>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript(/usr/bin/frontend-emulationstation.py))</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[32038])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Games)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]games.jpg)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/games.png)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+                <include>CloseMenuChoice</include>
+                <visible>String.IsEqual(Window.Property(MenuItemType),GamesMenu)</visible>
+            </item>
+			<item>
+                <description>Retroarch</description>
+                <label>$LOCALIZE[32039]</label>
+                <include>ClearButtonChoice</include>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript(/usr/bin/frontend-retroarch.py))</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[32039])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Games)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]games.jpg)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/games.png)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+                <include>CloseMenuChoice</include>
+                <visible>String.IsEqual(Window.Property(MenuItemType),GamesMenu)</visible>
+            </item>
+			<item>
+                <description>Pegasus</description>
+                <label>$LOCALIZE[32040]</label>
+                <include>ClearButtonChoice</include>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript(/usr/bin/frontend-pegasus-fe.py))</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[32040])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Games)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]games.jpg)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/games.png)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+                <include>CloseMenuChoice</include>
+                <visible>String.IsEqual(Window.Property(MenuItemType),GamesMenu)</visible>
+            </item>
+			<item>
+                <description>Moonlight</description>
+                <label>$LOCALIZE[32041]</label>
+                <include>ClearButtonChoice</include>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunScript(/usr/bin/moonlight-qt.py))</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[32041])</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Games)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]games.jpg)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/games.png)</onclick>
+                <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),GamesMenu)</visible>
             </item>
