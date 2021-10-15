@@ -300,7 +300,7 @@
 			<control type="group" id="81">
                 <width>510</width>
                 <height>60</height>
-                <visible>System.CanReboot + [System.Platform.Linux | System.Platform.Linux.RaspberryPi | System.Platform.Android]</visible>
+                <visible>!Skin.HasSetting(HideRebootToAndroid) + System.CanReboot + [System.Platform.Linux | System.Platform.Linux.RaspberryPi | System.Platform.Android]</visible>
                 <control type="image">
                     <description>background image</description>
                     <left>0</left>

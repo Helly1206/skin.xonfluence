@@ -628,6 +628,18 @@
                                 <onclick>Skin.ToggleSetting(HideEPGwithRDS)</onclick>
                                 <selected>Skin.HasSetting(HideEPGwithRDS)</selected>
                             </control>
+							<control type="radiobutton" id="1271">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>$LOCALIZE[32042]</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(HideRebootToAndroid)</onclick>
+                                <selected>Skin.HasSetting(HideRebootToAndroid)</selected>
+								<visible>System.CanReboot + [System.Platform.Linux | System.Platform.Linux.RaspberryPi | System.Platform.Android]</visible>
+                            </control>
                             <control type="button" id="128">
                                 <width>1125</width>
                                 <height>60</height>
