@@ -11275,6 +11275,42 @@
                                 <enable>!Skin.HasSetting(ScriptDisableScriptPlaylist)</enable>
                                 <visible>System.HasAddon(script.randomandlastitems)</visible>
                             </control>
+							<control type="radiobutton" id="6491">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label>32043</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(ScriptEnableExtendedInfo)</onclick>
+                                <selected>Skin.HasSetting(ScriptEnableExtendedInfo)</selected>
+                                <enable>System.AddonIsEnabled(script.extendedinfo)</enable>
+                            </control>
+                            <control type="button" id="6492">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32044]</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Addon.OpenSettings(script.extendedinfo)</onclick>
+                                <enable>Skin.HasSetting(ScriptEnableExtendedInfo)</enable>
+                                <visible>System.AddonIsEnabled(script.extendedinfo)</visible>
+                            </control>
+							<control type="radiobutton" id="6493">
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <label> - $LOCALIZE[32045]</label>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(AutoExtendedInfo)</onclick>
+                                <selected>Skin.HasSetting(AutoExtendedInfo)</selected>
+                                <visible>System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(ScriptEnableExtendedInfo)</visible>
+                            </control>
                             <control type="radiobutton" id="650">
                                 <width>1125</width>
                                 <height>60</height>
