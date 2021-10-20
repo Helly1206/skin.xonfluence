@@ -1363,7 +1363,7 @@
                 <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),Weather)</visible>
 				<!-- Small widget -->
 				<control type="group">
-                    <left>0</left>
+                    <left>15</left>
                     <top>90</top>
                     <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetLayout),Small) | $EXP[showSmallWidget]</visible>
 					<include>VisibleFadeEffect</include>
@@ -1383,7 +1383,41 @@
                         <param name="Content">WeatherForecastContent</param>
                     </include>
                 </control>
-			</control>	
+			</control>
+
+            <!-- Weather Extended -->
+            <control type="group">
+			    <visible>!String.IsEmpty(Weather.Plugin) + Weather.IsFetched</visible>
+                <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),WeatherExtended)</visible>
+				<!-- Small widget -->
+				<control type="group">
+                    <left>15</left>
+                    <top>90</top>
+                    <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetLayout),Small) | $EXP[showSmallWidget]</visible>
+					<include>VisibleFadeEffect</include>
+                    <include content="WeatherSmallWidgetLayout">
+                        <param name="Control">80362</param>
+                        <param name="Content">WeatherExtendedForecastContent</param>
+                    </include>
+					<include content="SmallWidgetThumbButtons">
+                        <param name="Control">80362</param>
+                    </include>
+                </control>
+				<!-- Large widget -->
+				<control type="group">
+                    <left>0</left>
+                    <top>81</top>
+                    <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetLayout),Large) + ![$EXP[showSmallWidget]]</visible>
+					<include>VisibleFadeEffect</include>
+                    <include content="WeatherLargeWidgetLayout">
+                        <param name="Control">80372</param>
+                        <param name="Content">WeatherExtendedForecastContent</param>
+                    </include>
+					<include content="LargeWidgetThumbButtons">
+                        <param name="Control">80372</param>
+                    </include>
+                </control>
+			</control>			
 			
 			<!-- Next Aired-->
             <control type="group">
@@ -1558,14 +1592,13 @@
         <param name="Content" default="" />
         <definition>
             <control type="list" id="$PARAM[Control]">
-                <animation effect="slide" start="0,0" end="60,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,5)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="420,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="600,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="780,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
-                <left>0</left>
+				<animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
+                <left>45</left>
                 <top>0</top>
-                <width>1920</width>
+                <width>1800</width>
                 <height>360</height>
                 <onleft>$PARAM[Control]</onleft>
                 <onright>$PARAM[Control]</onright>
@@ -1749,13 +1782,177 @@
                 <visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
             </control>
             <control type="list" id="$PARAM[Control]">
-                <animation effect="slide" start="0,0" end="732,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="549,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="366,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="183,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
-                <left>42</left>
+                <animation effect="slide" start="0,0" end="736,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="552,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="368,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="184,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
+                <left>40</left>
                 <top>0</top>
-                <width>1830</width>
+                <width>1840</width>
+                <height>428</height>
+                <onleft>$PARAM[Control]</onleft>
+                <onright>$PARAM[Control]</onright>
+                <onup>21</onup>
+                <ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+                <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(loorGlobalSearch)">610</ondown>
+                <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + [Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(loorGlobalSearch)]">603</ondown>
+                <viewtype label="535">list</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <orientation>Horizontal</orientation>
+                <itemlayout height="428" width="368">
+                    <control type="multiimage">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>338</width>
+                        <height>338</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
+                        <aspectratio>scale</aspectratio>
+                        <imagepath background="true">$INFO[ListItem.ActualIcon]</imagepath>
+                        <bordertexture border="5">button-nofocus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                    </control>
+                    <control type="label">
+                        <left>75</left>
+                        <top>22</top>
+                        <width>218</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <top>352</top>
+                        <width>338</width>
+                        <height>30</height>
+                        <font>font10</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>top</aligny>
+                        <label>$INFO[ListItem.Property(Temperatures)]</label>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <top>380</top>
+                        <width>338</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="428" width="368">
+                    <control type="multiimage">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>338</width>
+                        <height>338</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
+                        <aspectratio>scale</aspectratio>
+                        <imagepath background="true">$INFO[ListItem.ActualIcon]</imagepath>
+						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                        <visible>Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+					<control type="multiimage">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>338</width>
+                        <height>338</height>
+						<timeperimage>70</timeperimage>
+				        <fadetime>1</fadetime>
+				        <randomize>false</randomize>
+                        <aspectratio>scale</aspectratio>
+                        <imagepath background="true">$INFO[ListItem.ActualIcon]</imagepath>
+                        <bordertexture border="5">button-nofocus.png</bordertexture>
+                        <include>TextureBorderWidgets</include>
+                        <visible>!Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+                    <control type="label">
+                        <left>75</left>
+                        <top>22</top>
+                        <width>218</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <top>352</top>
+                        <width>338</width>
+                        <height>30</height>
+                        <font>font10</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Property(Temperatures)]</label>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <top>380</top>
+                        <width>338</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <visible>!Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <top>380</top>
+                        <width>338</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <visible>Control.HasFocus($PARAM[Control])</visible>
+                    </control>
+                </focusedlayout>
+                <include>$PARAM[Content]</include>
+            </control>
+        </definition>
+    </include>
+	
+	<include name="WeatherExtendedLargeWidgetLayout">
+        <param name="Control" default="8000" />
+        <param name="Content" default="" />
+        <definition>
+            <control type="list" id="$PARAM[Control]">
+                <animation effect="slide" start="0,0" end="736,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="552,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="368,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="184,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">Conditional</animation>
+                <left>40</left>
+                <top>0</top>
+                <width>1840</width>
                 <height>428</height>
                 <onleft>$PARAM[Control]</onleft>
                 <onright>$PARAM[Control]</onright>
@@ -4403,6 +4600,155 @@
         </content>
     </include>
 	
+	<include name="WeatherExtendedForecastContent">
+        <content>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.1.ShortDay)]  $INFO[Window(Weather).Property(Daily.1.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.1.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.1.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.1.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.1.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.1.LowTemperature)]</property>
+				<visible>!String.IsEmpty(Window(weather).Property(Daily.1.Outlook))</visible>
+            </item>
+            <item>
+                <label>$INFO[Window(Weather).Property(Daily.2.ShortDay)]  $INFO[Window(Weather).Property(Daily.2.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.2.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.2.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.2.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.2.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.2.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.2.Outlook))</visible>
+			</item>
+            <item>
+                <label>$INFO[Window(Weather).Property(Daily.3.ShortDay)]  $INFO[Window(Weather).Property(Daily.3.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.3.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.3.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.3.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.3.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.3.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.3.Outlook))</visible>
+			</item>
+            <item>
+                <label>$INFO[Window(Weather).Property(Daily.4.ShortDay)]  $INFO[Window(Weather).Property(Daily.4.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.4.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.4.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.4.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.4.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.4.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.4.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.5.ShortDay)]  $INFO[Window(Weather).Property(Daily.5.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.5.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.5.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.5.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.5.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.5.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.5.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.6.ShortDay)]  $INFO[Window(Weather).Property(Daily.6.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.6.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.6.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.6.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.6.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.6.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.6.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.7.ShortDay)]  $INFO[Window(Weather).Property(Daily.7.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.7.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.7.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.7.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.7.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.7.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.7.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.8.ShortDay)]  $INFO[Window(Weather).Property(Daily.8.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.8.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.8.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.8.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.8.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.8.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.8.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.9.ShortDay)]  $INFO[Window(Weather).Property(Daily.9.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.9.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.9.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.9.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.9.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.9.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.9.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.10.ShortDay)]  $INFO[Window(Weather).Property(Daily.10.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.10.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.10.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.10.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.10.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.10.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.10.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.11.ShortDay)]  $INFO[Window(Weather).Property(Daily.11.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.11.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.11.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.10.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.11.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.11.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.11.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.12.ShortDay)]  $INFO[Window(Weather).Property(Daily.12.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.12.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.12.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.12.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.12.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.12.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.12.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.13.ShortDay)]  $INFO[Window(Weather).Property(Daily.13.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.13.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.13.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.13.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.13.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.13.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.13.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.14.ShortDay)]  $INFO[Window(Weather).Property(Daily.14.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.14.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.14.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.14.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.14.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.14.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.14.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.15.ShortDay)]  $INFO[Window(Weather).Property(Daily.15.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.15.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.15.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.15.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.15.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.15.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.15.Outlook))</visible>
+			</item>
+			<item>
+                <label>$INFO[Window(Weather).Property(Daily.16.ShortDay)]  $INFO[Window(Weather).Property(Daily.16.ShortDate)]</label>
+                <label2>$INFO[Window(Weather).Property(Daily.16.Outlook)]</label2>
+                <onclick>Weather.Refresh</onclick>
+                <icon>$VAR[WeatherIconPath]$INFO[Window(Weather).Property(Daily.16.FanartCode)]$VAR[WeatherIconExt]</icon>
+                <thumb>$VAR[WeatherFanartPath]$INFO[Window(Weather).Property(Daily.16.FanartCode)]</thumb>
+                <property name="Temperatures">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(Weather).Property(Daily.16.HighTemperature)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(Weather).Property(Daily.16.LowTemperature)]</property>
+                <visible>!String.IsEmpty(Window(weather).Property(Daily.16.Outlook))</visible>
+			</item>
+        </content>
+    </include>
+	
 	<include name="EmbuaryInfoNextAiredContent">
 	    <content sortby="" sortorder="" limit="" target="videos">plugin://script.embuary.info/nextaired/week?reload=$INFO[Window(Home).Property(widgetreload)]</content>
 	</include>
@@ -4515,6 +4861,7 @@
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),VideoPlayList)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),MusicPlayList)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),Weather)</visible>
+		<visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),WeatherExtended)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),Favourites)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),NextAired)</visible>
         <visible>!String.IsEqual(Container(9000).ListItem.Property(WidgetSet),None)</visible>

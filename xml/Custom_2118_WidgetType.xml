@@ -208,6 +208,16 @@
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>!String.IsEmpty(Weather.Plugin)</visible>
                     </item>
+					<item>
+                        <description>Weather Extended</description>
+                        <label>$LOCALIZE[32046]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,WeatherExtended)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>!String.IsEmpty(Weather.Plugin)</visible>
+                    </item>
                     <item>
                         <description>Recent Movies</description>
                         <label>$LOCALIZE[31198]</label>
