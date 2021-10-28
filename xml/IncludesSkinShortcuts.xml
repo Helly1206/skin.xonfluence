@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="SkinShortcutsSubMenu">
+        <control type="fixedlist" id="9001">
+            <depth>DepthMenu-</depth>
+            <left>92</left>
+			<top>105</top>
+			<width>1740</width>
+            <height>52</height>
+            <onup>9000</onup>
+			<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+            <ondown condition="Skin.HasSetting(LowerMainMenuBar)">21</ondown>
+            <animation effect="slide" start="0,0" end="0,45" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
+            <viewtype label="535">list</viewtype>
+            <scrolltime>200</scrolltime>
+            <orientation>Horizontal</orientation>
+            <hitrect x="0" y="0" w="1920" h="66" />
+			<include>SubMenuAnimation</include>
+			<include content="SubMenuCommonLayout">
+			    <param name="visibility">Control.HasFocus(9001)</param>
+			</include>
+			<content>
+                <include>skinshortcuts-submenu</include>
+			</content>
+        </control>
+    </include>
+    
+	
+	<include name="HomeMainMenuSkinShortcutsContent">
+	    <content>
+            <include>skinshortcuts-mainmenu</include>
+		</content>
+	</include>
+	
+</includes>

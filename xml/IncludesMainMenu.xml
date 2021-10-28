@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+
     <include name="WrapHomeMainMenu">
         <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre1</include>
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre2</include>
         <control type="wraplist" id="9000">
             <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeMainMenuSys</include>
             <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeGraphMainMenuSys</include>
-            <include>HomeMainMenuContent</include>
+            <include condition="!Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuContent</include>
+			<include condition="Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuSkinShortcutsContent</include>
             <visible>Skin.HasSetting(WrapAroundHomeMenu)</visible>
         </control>
         <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeImagePost1</include>
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePost2</include>
     </include>
+	
     <include name="FixedHomeMainMenu">
         <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre1</include>
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre2</include>
         <control type="fixedlist" id="9000">
             <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeMainMenuSys</include>
             <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeGraphMainMenuSys</include>
-            <include>HomeMainMenuContent</include>
+            <include condition="!Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuContent</include>
+			<include condition="Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuSkinShortcutsContent</include>
             <visible>!Skin.HasSetting(WrapAroundHomeMenu)</visible>
         </control>
         <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeImagePost1</include>
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePost2</include>
     </include>
+	
     <include name="HomeImagePre1">
         <control type="image">
             <left>-150</left>
@@ -42,6 +47,7 @@
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
         </control>
     </include>
+	
     <include name="HomeImagePre2">
         <control type="image">
             <left>-150</left>
@@ -60,6 +66,7 @@
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
         </control>
     </include>
+	
     <include name="HomeImagePost1">
         <control type="image">
             <left>-15</left>
@@ -78,6 +85,7 @@
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
         </control>
     </include>
+	
     <include name="HomeImagePost2">
         <control type="image">
             <left>-15</left>
@@ -96,6 +104,7 @@
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
         </control>
     </include>
+	
     <include name="HomeMainMenuSys">
         <left>-165</left>
         <top>8</top>
@@ -225,6 +234,7 @@
             </control>
         </focusedlayout>
     </include>
+	
     <include name="HomeGraphMainMenuSys">
         <left>-164</left>
         <top>8</top>
@@ -349,6 +359,7 @@
             </control>
         </focusedlayout>
     </include>
+	
     <include name="HomeMainMenuContent">
         <content>
             <item id="1">
