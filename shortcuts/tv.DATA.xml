@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+	<shortcut>
+		<defaultID>19019</defaultID>
+		<label>$LOCALIZE[19019]</label>
+		<action>ActivateWindow(TVChannels)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>22020</defaultID>
+		<label>$LOCALIZE[22020]</label>
+		<action>ActivateWindow(TVGuide)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>19163</defaultID>
+		<label>$LOCALIZE[19163]</label>
+		<action>ActivateWindow(TVRecordings)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>19040</defaultID>
+		<label>$LOCALIZE[19040]</label>
+		<action>ActivateWindow(TVTimers)</action>
+	</shortcut>
+    <shortcut>
+		<defaultID>19138</defaultID>
+		<label>$LOCALIZE[19138]</label>
+		<action>ActivateWindow(TVTimerRules)</action>
+	</shortcut>	
+	<shortcut>
+		<defaultID>tvsearch</defaultID>
+		<label>$LOCALIZE[137]</label>
+		<action>ActivateWindow(TVSearch)</action>
+	</shortcut>    
+</shortcuts>

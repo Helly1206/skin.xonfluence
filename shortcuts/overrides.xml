@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overrides>
+	<!-- Do not share menu as other skins use custom language strings that do not work -->
+	<doNotShareMenu />
+
+	<widgetPlaylists>True</widgetPlaylists>
+	<thumbnailBrowseDefault>special://skin/media/</thumbnailBrowseDefault>
+
+	<!-- Browse for Backgrounds -->
+	<backgroundBrowse>True</backgroundBrowse>
+
+	<!-- action overrides -->
+    <override action="reboot_to_android">
+        <action>System.ExecWait("/usr/sbin/rebootfromnand")</action>
+        <action>Reset()</action>
+    </override>
+
+    <!-- For Power Menu -->
+    <groupoverride group="powermenu" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
+    
+</overrides>

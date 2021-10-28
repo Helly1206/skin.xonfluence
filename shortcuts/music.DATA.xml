@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+	<shortcut>
+		<defaultID>musicartists</defaultID>
+		<label>$LOCALIZE[133]</label>
+		<action>ActivateWindow(Music,musicdb://artists/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>musicalbums</defaultID>
+		<label>$LOCALIZE[132]</label>
+		<action>ActivateWindow(Music,musicdb://albums/,return)</action>
+	</shortcut>	
+	<shortcut>
+		<defaultID>musicsongs</defaultID>
+		<label>$LOCALIZE[134]</label>
+		<action>ActivateWindow(Music,musicdb://songs/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>musicfiles</defaultID>
+		<label>$LOCALIZE[744]</label>
+		<action>ActivateWindow(Music,Files,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>musicbrowse</defaultID>
+		<label>$LOCALIZE[1024]</label>
+		<action>ActivateWindow(Music,root)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>musicaddons</defaultID>
+		<label>$LOCALIZE[24001]</label>
+		<action>ActivateWindow(Music,Addons,return)</action>
+	</shortcut>	
+	<shortcut>
+		<defaultID>musicplaylists</defaultID>
+		<label>$LOCALIZE[136]</label>
+		<label2 />
+		<icon>DefaultMusicPlaylists.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,playlists,return)</action>
+	</shortcut>
+</shortcuts>

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+    
+	<include name="HomeMainMenuSkinShortcutsContent">
+	    <content>
+            <include>skinshortcuts-mainmenu</include>
+		</content>
+	</include>
+	
     <include name="SkinShortcutsSubMenu">
         <control type="fixedlist" id="9001">
             <depth>DepthMenu-</depth>
@@ -24,12 +31,5 @@
 			</content>
         </control>
     </include>
-    
-	
-	<include name="HomeMainMenuSkinShortcutsContent">
-	    <content>
-            <include>skinshortcuts-mainmenu</include>
-		</content>
-	</include>
 	
 </includes>
