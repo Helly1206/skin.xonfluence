@@ -27,6 +27,7 @@
 	<include file="IncludesNowPlaying.xml" />
 	<include file="Includes_CustomSelect.xml" />
 	<include file="IncludesSkinShortcuts.xml" />
+	<include file="script-skinshortcuts-includes.xml"/>
     <!-- CONSTANTS -->
     <constant name="FanartCrossfadeTime">500</constant>
     <constant name="IconCrossfadeTime">400</constant>

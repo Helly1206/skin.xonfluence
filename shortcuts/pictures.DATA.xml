@@ -4,7 +4,7 @@
 		<defaultID>pictureaddonssub</defaultID>
 		<label>$LOCALIZE[24001]</label>
 		<label2 />
-		<icon>DefaultAddonPicture.png</icon>
+		<icon />
 		<thumb />
 		<action>ActivateWindow(Pictures,Addons,return)</action>
 	</shortcut>

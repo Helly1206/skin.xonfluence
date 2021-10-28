@@ -3,6 +3,9 @@
 	<shortcut>
 		<defaultID>dvdejecttray</defaultID>
 		<label>$LOCALIZE[13391]</label>
+		<label2 />
+		<icon />
+		<thumb />
 		<action>EjectTray()</action>
 	</shortcut>
 </shortcuts>

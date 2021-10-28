@@ -149,14 +149,17 @@
                     <item id="2">
                         <label>31282</label>
                         <label2>31025</label2>
+						<visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
                     </item>
                     <item id="3">
                         <label>1034</label>
                         <label2>31113</label2>
+						<visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
                     </item>
                     <item id="4">
                         <label>24000</label>
                         <label2>31996</label2>
+						<visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
                     </item>
                     <item id="5">
                         <label>33068</label>
@@ -264,7 +267,19 @@
                             <height>720</height>
                             <itemgap>-1</itemgap>
                             <pagecontrol>2061</pagecontrol>
-                            <control type="radiobutton" id="100">
+                            <control type="radiobutton" id="99">
+                                <description>Use skinshortcuts for menu config</description>
+                                <width>1125</width>
+                                <height>60</height>
+                                <font>font13</font>
+                                <textcolor>grey2</textcolor>
+                                <focusedcolor>white</focusedcolor>
+                                <label>$LOCALIZE[32047]</label>
+                                <include>MenuButton</include>
+                                <onclick>Skin.ToggleSetting(Use.SkinShortcuts)</onclick>
+                                <selected>Skin.HasSetting(Use.SkinShortcuts)</selected>
+                            </control>
+							<control type="radiobutton" id="100">
                                 <description>Global Background</description>
                                 <width>1125</width>
                                 <height>60</height>
