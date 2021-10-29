@@ -1991,8 +1991,8 @@
             <include>Window_OpenClose_Animation</include>
             <left>30</left>
             <top>82r</top>
-            <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9002</onup>
-            <onup condition="Skin.HasSetting(LowerMainMenuBar)">9001</onup>
+            <onup condition="!Skin.HasSetting(LowerMainMenuBar) + Control.IsVisible(9002)">9002</onup>
+            <onup condition="Skin.HasSetting(LowerMainMenuBar) | !Control.IsVisible(9002)">9001</onup>
             <ondown>9003</ondown>
             <align>left</align>
             <orientation>horizontal</orientation>
