@@ -6,7 +6,8 @@
     <onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
     <onload condition="String.IsEqual(Container(9011).Position,0) + !String.IsEqual(Skin.String(InitialMenuPosi),0)">Control.Move(9011,$INFO[Skin.String(InitialMenuPosi)])</onload>
     <onunload condition="Skin.HasSetting(EnableFanartScript)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onunload>
-    <include>UnloadsScripts</include>
+    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onunload>
+	<include>UnloadsScripts</include>
     <controls>
         <include>CommonBackground</include>
         <control type="image">
@@ -151,6 +152,11 @@
                         <label2>31025</label2>
 						<visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
                     </item>
+					<item id="8">
+                        <label>31282</label>
+                        <label2>31112</label2>
+						<visible>Skin.HasSetting(Use.SkinShortcuts)</visible>
+                    </item>
                     <item id="3">
                         <label>1034</label>
                         <label2>31113</label2>
@@ -215,6 +221,72 @@
             </control>
             <control type="group" id="9010">
                 <defaultcontrol>8001</defaultcontrol>
+				<control type="group">
+				    <visible>Container(9000).Hasfocus(8)</visible>
+                    <left>435</left>
+                    <top>95</top>
+                    <width>1125</width>
+                    <height>795</height>
+					<control type="grouplist" id="9801">
+						<onleft>9000</onleft>
+                        <onright>9861</onright>
+                        <onup>9199</onup>
+                        <ondown>9199</ondown>
+                        <width>1125</width>
+                        <height>720</height>
+                        <itemgap>-1</itemgap>
+                        <pagecontrol>9861</pagecontrol>
+                        <control type="button" id="980101">
+                            <description>Customize Home menu</description>
+                            <width>1125</width>
+                            <height>60</height>
+                            <font>font13</font>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <label>$LOCALIZE[32049]</label>
+                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+                            <include>MenuButton</include>
+                        </control>
+						<control type="button" id="980102">
+                            <description>Customize Power menu</description>
+                            <width>1125</width>
+                            <height>60</height>
+                            <font>font13</font>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <label>$LOCALIZE[32050]</label>
+                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+                            <include>MenuButton</include>
+                        </control>
+						<control type="radiobutton" id="980103">
+                            <description>Enable choosing default menu item</description>
+                            <width>1125</width>
+                            <height>60</height>
+                            <font>font13</font>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <label>$LOCALIZE[32051]</label>
+                            <include>MenuButton</include>
+                            <onclick>Skin.ToggleSetting(Enable.DefaultMenu)</onclick>
+                            <selected>Skin.HasSetting(Enable.DefaultMenu)</selected>
+                        </control>
+					</control>
+                    <control type="scrollbar" id="9861">
+                        <left>1155</left>
+                        <top>0</top>
+                        <width>38</width>
+                        <height>720</height>
+                        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                        <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                        <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                        <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                        <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                        <onleft>9801</onleft>
+                        <onright>800</onright>
+                        <showonepage>false</showonepage>
+                        <orientation>vertical</orientation>
+                    </control>					
+				</control>
                 <control type="group">
                     <visible>Container(9000).Hasfocus(1)</visible>
                     <left>435</left>

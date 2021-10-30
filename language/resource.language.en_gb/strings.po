@@ -1742,6 +1742,41 @@ msgctxt "#31511"
 msgid "Channel options"
 msgstr ""
 
+#strings used with skinshortcuts
+
+msgctxt "#31512"
+msgid "Customize addon shortcuts"
+msgstr ""
+
+msgctxt "#31513"
+msgid "Disable item"
+msgstr ""
+
+msgctxt "#31514"
+msgid "Power Menu"
+msgstr ""
+
+msgctxt "#31515"
+msgid "Addon shortcuts"
+msgstr ""
+
+msgctxt "#31516"
+msgid "Submenu"
+msgstr ""
+
+msgctxt "#31517"
+msgid "Home menu setup"
+msgstr ""
+
+msgctxt "#31518"
+msgid "Delete/Disable System Menu Item?"
+msgstr ""
+
+msgctxt "#31519"
+msgid "Are you sure you want to remove/disable the System menu item?[CR]Please ensure that you have an alternative method of accessing Settings before you remove/disable this menu item."
+msgstr ""
+
+
 #empty strings from id 31512 to 31647
 
 msgctxt "#31648"
@@ -2356,9 +2391,19 @@ msgid "Weather (extended)"
 msgstr ""
 
 msgctxt "#32047"
-msgid "Use script.skinshortcuts for Menu/Submenu/Widget configuration"
+msgid "Use script.skinshortcuts for menu/submenu/widget configuration"
 msgstr ""
 
-msgctxt "#32048"
-msgid "Power Menu"
+#empty string 32048
+
+msgctxt "#32049"
+msgid "Customize Home menu"
+msgstr ""
+
+msgctxt "#32050"
+msgid "Customize Power menu"
+msgstr ""
+
+msgctxt "#32051"
+msgid "Enable choosing default menu item"
 msgstr ""

@@ -6,7 +6,10 @@
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre2</include>
         <control type="wraplist" id="9000">
             <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeMainMenuSys</include>
-            <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeGraphMainMenuSys</include>
+            <include condition="!String.IsEmpty(Skin.String(MenuLAF)) + !Skin.HasSetting(Use.SkinShortcuts)">HomeGraphMainMenuSys</include>
+			<include condition="!String.IsEmpty(Skin.String(MenuLAF)) + Skin.HasSetting(Use.SkinShortcuts)" content="HomeGraphMainMenuSys">
+			    <param name="menuitemicon">$INFO[ListItem.Icon]</param>
+			</include>
             <include condition="!Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuContent</include>
 			<include condition="Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuSkinShortcutsContent</include>
             <visible>Skin.HasSetting(WrapAroundHomeMenu)</visible>
@@ -20,7 +23,10 @@
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre2</include>
         <control type="fixedlist" id="9000">
             <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeMainMenuSys</include>
-            <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeGraphMainMenuSys</include>
+            <include condition="!String.IsEmpty(Skin.String(MenuLAF)) + !Skin.HasSetting(Use.SkinShortcuts)">HomeGraphMainMenuSys</include>
+			<include condition="!String.IsEmpty(Skin.String(MenuLAF)) + Skin.HasSetting(Use.SkinShortcuts)" content="HomeGraphMainMenuSys">
+			    <param name="menuitemicon">$INFO[ListItem.Icon]</param>
+			</include>
             <include condition="!Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuContent</include>
 			<include condition="Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuSkinShortcutsContent</include>
             <visible>!Skin.HasSetting(WrapAroundHomeMenu)</visible>
@@ -236,128 +242,131 @@
     </include>
 	
     <include name="HomeGraphMainMenuSys">
-        <left>-164</left>
-        <top>8</top>
-        <width>2247</width>
-        <height>135</height>
-        <onleft condition="!Skin.HasSetting(FixedEndingMenu)">9000</onleft>
-        <onright condition="!Skin.HasSetting(FixedEndingMenu)">9000</onright>
-        <onup condition="!Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)">610</onup>
-        <onup condition="Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)">603</onup>
-        <ondown>9001</ondown>
-        <scrolltime>300</scrolltime>
-        <focusposition>3</focusposition>
-        <movement>1</movement>
-        <orientation>Horizontal</orientation>
-        <itemlayout height="135" width="321">
-            <control type="image">
-                <left>0</left>
-                <top>6</top>
-                <width>1</width>
-                <height>123</height>
-                <texture>HomeSeperator.png</texture>
-            </control>
-            <control type="image">
-                <left>320</left>
-                <top>6</top>
-                <width>1</width>
-                <height>123</height>
-                <texture>HomeSeperator.png</texture>
-            </control>
-            <control type="label">
-                <left>8</left>
-                <top>82</top>
-                <width>306</width>
-                <height>45</height>
-                <font>font30_title</font>
-                <textcolor>grey3</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <scroll>true</scroll>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
-            </control>
-            <control type="image">
-                <left>8</left>
-                <top>0</top>
-                <width>306</width>
-                <height>90</height>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>33FFFFFF</colordiffuse>
-                <texture>$INFO[ListItem.Property(Icon)]</texture>
-                <animation effect="slide" start="0,0" end="0,30" time="0" condition="!String.IsEqual(Skin.String(MenuLAF),GraphText)">Conditional</animation>
-                <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="!String.IsEqual(Skin.String(MenuLAF),GraphText)">Conditional</animation>
-            </control>
-        </itemlayout>
-        <focusedlayout height="90" width="321">
-            <control type="image">
-                <left>0</left>
-                <top>6</top>
-                <width>1</width>
-                <height>123</height>
-                <texture>HomeSeperator.png</texture>
-            </control>
-            <control type="image">
-                <left>320</left>
-                <top>6</top>
-                <width>1</width>
-                <height>123</height>
-                <texture>HomeSeperator.png</texture>
-            </control>
-            <control type="label">
-                <left>8</left>
-                <top>82</top>
-                <width>306</width>
-                <height>45</height>
-                <font>font30_title</font>
-                <textcolor>grey3</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label>$INFO[ListItem.Label]</label>
-                <scroll>true</scroll>
-                <visible>!Control.HasFocus(9000)</visible>
-                <visible>String.IsEqual(Skin.String(MenuLAF),GraphFocused) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
-            </control>
-            <control type="label">
-                <left>8</left>
-                <top>82</top>
-                <width>306</width>
-                <height>45</height>
-                <font>font30_title</font>
-                <textcolor>$VAR[MainColorOne]</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <scroll>true</scroll>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>Control.HasFocus(9000)</visible>
-                <visible>String.IsEqual(Skin.String(MenuLAF),GraphFocused) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
-            </control>
-            <control type="image">
-                <left>8</left>
-                <top>0</top>
-                <width>306</width>
-                <height>90</height>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>$VAR[MainColorOne]</colordiffuse>
-                <texture>$INFO[ListItem.Property(Icon)]</texture>
-                <animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
-                <animation effect="slide" start="0,30" end="0,0" time="100" condition="String.IsEqual(Skin.String(MenuLAF),GraphFocused)">Focus</animation>
-                <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
-                <visible>Control.HasFocus(9000)</visible>
-            </control>
-            <control type="image">
-                <left>8</left>
-                <top>0</top>
-                <width>306</width>
-                <height>90</height>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>33FFFFFF</colordiffuse>
-                <texture>$INFO[ListItem.Property(Icon)]</texture>
-                <animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
-                <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
-                <visible>!Control.HasFocus(9000)</visible>
-            </control>
-        </focusedlayout>
+	    <param name="menuitemicon">$INFO[ListItem.Property(Icon)]</param>
+		<definition>
+            <left>-164</left>
+            <top>8</top>
+            <width>2247</width>
+            <height>135</height>
+            <onleft condition="!Skin.HasSetting(FixedEndingMenu)">9000</onleft>
+            <onright condition="!Skin.HasSetting(FixedEndingMenu)">9000</onright>
+            <onup condition="!Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)">610</onup>
+            <onup condition="Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)">603</onup>
+            <ondown>9001</ondown>
+            <scrolltime>300</scrolltime>
+            <focusposition>3</focusposition>
+            <movement>1</movement>
+            <orientation>Horizontal</orientation>
+            <itemlayout height="135" width="321">
+                <control type="image">
+                    <left>0</left>
+                    <top>6</top>
+                    <width>1</width>
+                    <height>123</height>
+                    <texture>HomeSeperator.png</texture>
+                </control>
+                <control type="image">
+                    <left>320</left>
+                    <top>6</top>
+                    <width>1</width>
+                    <height>123</height>
+                    <texture>HomeSeperator.png</texture>
+                </control>
+                <control type="label">
+                    <left>8</left>
+                    <top>82</top>
+                    <width>306</width>
+                    <height>45</height>
+                    <font>font30_title</font>
+                    <textcolor>grey3</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <scroll>true</scroll>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
+                </control>
+                <control type="image">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>306</width>
+                    <height>90</height>
+                    <aspectratio>keep</aspectratio>
+                    <colordiffuse>33FFFFFF</colordiffuse>
+                    <texture>$PARAM[menuitemicon]</texture>
+                    <animation effect="slide" start="0,0" end="0,30" time="0" condition="!String.IsEqual(Skin.String(MenuLAF),GraphText)">Conditional</animation>
+                    <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="!String.IsEqual(Skin.String(MenuLAF),GraphText)">Conditional</animation>
+                </control>
+            </itemlayout>
+            <focusedlayout height="90" width="321">
+                <control type="image">
+                    <left>0</left>
+                    <top>6</top>
+                    <width>1</width>
+                    <height>123</height>
+                    <texture>HomeSeperator.png</texture>
+                </control>
+                <control type="image">
+                    <left>320</left>
+                    <top>6</top>
+                    <width>1</width>
+                    <height>123</height>
+                    <texture>HomeSeperator.png</texture>
+                </control>
+                <control type="label">
+                    <left>8</left>
+                    <top>82</top>
+                    <width>306</width>
+                    <height>45</height>
+                    <font>font30_title</font>
+                    <textcolor>grey3</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.Label]</label>
+                    <scroll>true</scroll>
+                    <visible>!Control.HasFocus(9000)</visible>
+                    <visible>String.IsEqual(Skin.String(MenuLAF),GraphFocused) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
+                </control>
+                <control type="label">
+                    <left>8</left>
+                    <top>82</top>
+                    <width>306</width>
+                    <height>45</height>
+                    <font>font30_title</font>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <scroll>true</scroll>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>Control.HasFocus(9000)</visible>
+                    <visible>String.IsEqual(Skin.String(MenuLAF),GraphFocused) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
+                </control>
+                <control type="image">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>306</width>
+                    <height>90</height>
+                    <aspectratio>keep</aspectratio>
+                    <colordiffuse>$VAR[MainColorOne]</colordiffuse>
+                    <texture>$PARAM[menuitemicon]</texture>
+                    <animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+                    <animation effect="slide" start="0,30" end="0,0" time="100" condition="String.IsEqual(Skin.String(MenuLAF),GraphFocused)">Focus</animation>
+                    <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+                    <visible>Control.HasFocus(9000)</visible>
+                </control>
+                <control type="image">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>306</width>
+                    <height>90</height>
+                    <aspectratio>keep</aspectratio>
+                    <colordiffuse>33FFFFFF</colordiffuse>
+                    <texture>$PARAM[menuitemicon]</texture>
+                    <animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+                    <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+                    <visible>!Control.HasFocus(9000)</visible>
+                </control>
+            </focusedlayout>
+		</definition>	
     </include>
 	
     <include name="HomeMainMenuContent">

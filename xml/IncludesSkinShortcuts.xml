@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
     
+	<variable name="ShortcutsDisabled">
+		<value condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">[COLOR=red]x[/COLOR] </value>
+		<value />
+	</variable>
+	
+	<variable name="SkinShortcutsLabelVar">
+        <value condition="String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[33061]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),powermenu)">$LOCALIZE[31514]</value>
+		<value condition="String.EndsWith(Window.Property(groupname),.1)">[B]$INFO[Window(Home).Property(ShortcutsCurrentItem)][/B] - $LOCALIZE[31515]</value>
+        <value>[B]$INFO[Window(Home).Property(ShortcutsCurrentItem)][/B] - $LOCALIZE[31516]</value>
+    </variable>
+	
+	
 	<include name="HomeMainMenuSkinShortcutsContent">
 	    <content>
             <include>skinshortcuts-mainmenu</include>
@@ -142,7 +155,7 @@
                 <width>390</width>
                 <height>45</height>
                 <font>font13_title</font>
-                <label>$LOCALIZE[32048]</label>
+                <label>$LOCALIZE[31514]</label>
                 <align>center</align>
                 <aligny>center</aligny>
                 <textcolor>selected</textcolor>

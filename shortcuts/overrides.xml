@@ -4,7 +4,7 @@
 	<doNotShareMenu />
 
 	<widgetPlaylists>True</widgetPlaylists>
-	<thumbnailBrowseDefault>special://skin/media/</thumbnailBrowseDefault>
+	<thumbnailBrowseDefault>special://skin/extras/icons/</thumbnailBrowseDefault>
 
 	<!-- Browse for Backgrounds -->
 	<backgroundBrowse>True</backgroundBrowse>
@@ -14,6 +14,19 @@
         <action>System.ExecWait("/usr/sbin/rebootfromnand")</action>
         <action>Reset()</action>
     </override>
+	<override action="open_videos">
+        <action>ActivateWindow(1199)</action>
+    </override>
+    <override action="open_music">
+        <action>ActivateWindow(1197)</action>
+    </override>
+    <override action="start_favourites">
+		<action>Skin.SetString(FocusedMenu.Background,$INFO[Container(9000).ListItem.Property(Background)])</action>
+		<action>ActivateWindow(favourites)</action>
+	</override>	
+	
+	<!-- Warning to Remove/Disable Settings -->
+	<warn heading="31518" message="31519">ActivateWindow(Settings)</warn>
 
     <!-- For Power Menu -->
     <groupoverride group="powermenu" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>

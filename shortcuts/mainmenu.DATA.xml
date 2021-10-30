@@ -40,7 +40,7 @@
 		<label2 />
 		<thumb />
 		<icon>icons/video.png</icon>
-		<action>ActivateWindow(1199)</action>
+		<action>open_videos</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>movies</defaultID>
@@ -64,7 +64,7 @@
 		<label2 />
 		<thumb />
 		<icon>icons/music.png</icon>
-		<action>ActivateWindow(1197)</action>
+		<action>open_music</action>
 	</shortcut>
     <shortcut>
 		<defaultID>programs</defaultID>
