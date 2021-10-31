@@ -25,7 +25,7 @@
     <onload condition="String.IsEmpty(Skin.String(SkinFanart.Name)) + String.IsEmpty(Skin.String(AlternativeBackgroundPath)) + !Skin.HasSetting(DontAskBackgroundFanart) + Window.Previous(startup.xml)">ActivateWindow(1194)</onload>
     
 	<!-- Build menu/submenus/widgets if skinshortcuts enabled -->
-	<onload condition="System.AddonIsEnabled(script.skinshortcuts) + Skin.HasSetting(Use.SkinShortcuts)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
+	<onload condition="System.AddonIsEnabled(script.skinshortcuts) + Skin.HasSetting(Use.SkinShortcuts)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu&amp;levels=2)</onload>
 	
     <controls>
         
