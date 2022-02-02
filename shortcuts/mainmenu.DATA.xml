@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts>
+    <shortcut>
+        <defaultID>weather</defaultID>
+        <label>$LOCALIZE[8]</label>
+		<label2 />
+		<thumb />
+        <icon>icons/weather2.png</icon>
+        <action>ActivateWindow(weather)</action>
+    </shortcut>
+	<shortcut>
+		<defaultID>pictures</defaultID>
+		<label>$LOCALIZE[1213]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/pictures.png</icon>
+		<action>ActivateWindow(Pictures,Pictures)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>radio</defaultID>
+		<label>$LOCALIZE[19021]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/radio.png</icon>
+     	<visible>PVR.HasRadioChannels</visible>
+		<action>ActivateWindow(RadioChannels)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>tv</defaultID>
+		<label>$LOCALIZE[19020]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/tv.png</icon>
+		<visible>PVR.HasTVChannels</visible>
+		<action>ActivateWindow(TVChannels)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>videos</defaultID>
+		<label>$LOCALIZE[3]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/video.png</icon>
+		<action>open_videos</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>movies</defaultID>
+		<label>$LOCALIZE[342]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/movies.png</icon>
+		<action>ActivateWindow(Videos,MovieTitles,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>tvshows</defaultID>
+        <label>$LOCALIZE[31424]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/tvshows.png</icon>
+		<action>ActivateWindow(Videos,TVShowTitles,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>music</defaultID>
+        <label>$LOCALIZE[2]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/music.png</icon>
+		<action>open_music</action>
+	</shortcut>
+    <shortcut>
+		<defaultID>programs</defaultID>
+		<label>$LOCALIZE[10506]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/programs.png</icon>
+		<action>ActivateWindow(Programs)</action>
+	</shortcut>    
+	<shortcut>
+		<defaultID>radiostream</defaultID>
+		<label>$LOCALIZE[33002]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/network.png</icon>
+		<action>PlayMedia(special://skin/extras/Streaming/Radio105NetworkTV.strm)</action>
+		<visible>System.GetBool(gamesgeneral.enable)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>settings</defaultID>
+		<label>$LOCALIZE[13000]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/settings.png</icon>
+		<action>ActivateWindow(Settings)</action>
+	</shortcut>
+    <shortcut>
+        <defaultID>DVD</defaultID>
+        <label>$LOCALIZE[446]</label>
+		<label2 />
+		<thumb />
+        <icon>icons/playdvd.png</icon>
+        <action>PlayDVD()</action>
+    </shortcut>  
+    <shortcut>
+		<defaultID>games</defaultID>
+		<label>$LOCALIZE[15016]</label>
+		<label2 />
+		<thumb />
+		<icon>icons/games.png</icon>
+		<action>ActivateWindow(Games)</action>
+		<visible>System.GetBool(gamesgeneral.enable)</visible>
+	</shortcut>	
+</shortcuts>

@@ -219,7 +219,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription,[B]$LOCALIZE[207]: [/B]]</label>
-                    <autoscroll time="2600" delay="6000" repeat="6000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     <visible>!String.IsEqual(ListItem.Label,..)</visible>
                 </control>
                 <control type="image">

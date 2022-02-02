@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="2133">
-    <defaultcontrol always="true">450</defaultcontrol>
+    <onunload>ClearProperty(VideoPlaylistMenu,home)</onunload>
+	<onunload>ClearProperty(MusicPlaylistMenu,home)</onunload>
+	
+	<defaultcontrol always="true">450</defaultcontrol>
     <coordinates>
         <left>352</left>
         <top>112</top>
@@ -147,15 +150,59 @@
                 <content>
                     <item>
                         <description>Movie Playlist</description>
-                        <label>Movies</label>
+                        <label>$LOCALIZE[342]</label>
                         <onclick>Dialog.Close(2133)</onclick>
-                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,movies)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,movies)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,video)</onclick>
+						<visible>!String.IsEmpty(Window(Home).Property(VideoPlaylistMenu))</visible>
+                    </item>
+					<item>
+                        <description>Episode Playlist</description>
+                        <label>$LOCALIZE[20343]</label>
+                        <onclick>Dialog.Close(2133)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,tvshows)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,video)</onclick>
+						<visible>!String.IsEmpty(Window(Home).Property(VideoPlaylistMenu))</visible>
                     </item>
                     <item>
                         <description>Episode Playlist</description>
-                        <label>Episodes</label>
+                        <label>$LOCALIZE[20360]</label>
                         <onclick>Dialog.Close(2133)</onclick>
-                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,episodes)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,episodes)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,video)</onclick>
+						<visible>!String.IsEmpty(Window(Home).Property(VideoPlaylistMenu))</visible>
+                    </item>
+					<item>
+                        <description>Music Video Playlist</description>
+                        <label>$LOCALIZE[20389]</label>
+                        <onclick>Dialog.Close(2133)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,musicvideos)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,video)</onclick>
+						<visible>!String.IsEmpty(Window(Home).Property(VideoPlaylistMenu))</visible>
+                    </item>
+					<item>
+                        <description>Artist Playlist</description>
+                        <label>$LOCALIZE[133]</label>
+                        <onclick>Dialog.Close(2133)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,artists)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,music)</onclick>
+						<visible>!String.IsEmpty(Window(Home).Property(MusicPlaylistMenu))</visible>
+                    </item>
+					<item>
+                        <description>Album Playlist</description>
+                        <label>$LOCALIZE[132]</label>
+                        <onclick>Dialog.Close(2133)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,albums)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,music)</onclick>
+						<visible>!String.IsEmpty(Window(Home).Property(MusicPlaylistMenu))</visible>
+                    </item>
+                    <item>
+                        <description>Song Playlist</description>
+                        <label>$LOCALIZE[134]</label>
+                        <onclick>Dialog.Close(2133)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,songs)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistType,music)</onclick>
+						<visible>!String.IsEmpty(Window(Home).Property(MusicPlaylistMenu))</visible>
                     </item>
                 </content>
             </control>

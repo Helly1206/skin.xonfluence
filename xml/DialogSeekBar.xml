@@ -273,6 +273,7 @@
             <control type="group">
 			    <visible>![Window.IsVisible(VideoOSD) | Window.IsVisible(MusicOSD)]</visible>
 				<visible>!Player.ShowInfo</visible>
+				<visible>[!Skin.HasSetting(ShowSeekBarPaused) + Player.Paused] | !Player.Paused</visible>
 				<control type="group">
                     <visible>[VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
 				    <control type="label">
@@ -334,7 +335,6 @@
                 </control>
                 <control type="group">
                     <visible>![VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
-<!--                <visible>[!Skin.HasSetting(ShowSeekBarPaused) + Player.Paused] | !Player.Paused</visible> -->
 				    <control type="label">
                         <description>Elapsed Time Label</description>
                         <left>30</left>
@@ -394,6 +394,7 @@
                 </control>
 			    <!-- Cutlist and Chapters -->
 			    <control type="group">
+				    <visible>Skin.HasSetting(ShowCutlist)</visible>
 				    <control type="ranges">
 			            <left>30</left>
 			            <top>78</top>

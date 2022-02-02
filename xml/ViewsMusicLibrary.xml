@@ -429,7 +429,8 @@
                     <pagecontrol></pagecontrol>
                     <textcolor>white</textcolor>
                     <label>$INFO[ListItem.Property(Album_Description)]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
             </control>
         </control>
@@ -645,7 +646,7 @@
                 <control type="label">
                     <description>Year txt</description>
                     <left>15</left>
-                    <top>795</top>
+                    <top>785</top>
                     <width>435</width>
                     <height>38</height>
                     <label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[345]: [/COLOR]$INFO[listitem.Year]</label>
@@ -653,6 +654,19 @@
                     <aligny>center</aligny>
                     <font>font13_title</font>
                     <textcolor>white</textcolor>
+					<visible>!String.IsEmpty(ListItem.Year)</visible>
+                </control>
+				<control type="label">
+                    <description>Runtime</description>
+                    <left>15</left>
+                    <top>823</top>
+                    <width>435</width>
+                    <height>38</height>
+                    <label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[2050]: [/COLOR]$INFO[ListItem.Duration]</label>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>font13_title</font>
+					<visible>!String.IsEmpty(ListItem.Duration)</visible>
                 </control>
             </control>
         </control>
@@ -830,7 +844,7 @@
                         <top>45</top>
                         <width>525</width>
                         <height>38</height>
-                        <label fallback="10005">$INFO[ListItem.Property(Artist_Genre)]</label>
+                        <label fallback="32016">$INFO[ListItem.Property(Artist_Genre)]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
@@ -853,7 +867,8 @@
                         <align>justify</align>
                         <textcolor>white</textcolor>
                         <label>$INFO[ListItem.Property(Artist_Description)]</label>
-                        <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                        <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     </control>
                 </control>
             </control>
@@ -1008,7 +1023,8 @@
                     <pagecontrol></pagecontrol>
                     <textcolor>white</textcolor>
                     <label>$INFO[ListItem.Property(Album_Description)]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
             </control>
         </control>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    
+	<variable name="ShortcutsDisabled">
+		<value condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">[COLOR=red]x[/COLOR] </value>
+		<value />
+	</variable>
+	
+	<variable name="SkinShortcutsLabelVar">
+        <value condition="String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[33061]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),powermenu)">$LOCALIZE[31514]</value>
+		<value condition="String.EndsWith(Window.Property(groupname),.1)">[B]$INFO[Window(Home).Property(ShortcutsCurrentItem)][/B] - $LOCALIZE[31521]</value>
+		<value condition="String.EndsWith(Window.Property(groupname),.2)">[B]$INFO[Window(Home).Property(ShortcutsCurrentItem)][/B] - $LOCALIZE[31515]</value>
+        <value>[B]$INFO[Window(Home).Property(ShortcutsCurrentItem)][/B] - $LOCALIZE[31516]</value>
+    </variable>
+	
+	<variable name="SkinShortcutsItemLabelVar">
+		<value condition="String.EndsWith(Window.Property(groupname),.1) + String.IsEmpty(Container(211).ListItem.Property(widgetName))">$ADDON[script.skinshortcuts 32013]</value>
+		<value condition="String.EndsWith(Window.Property(groupname),.1)">$INFO[Container(211).ListItem.Property(widgetName)]</value>
+		<value>$INFO[Container(211).ListItem.Label]</value>
+    </variable>
+	
+	<variable name="WidgetSortByLabelVar">
+	    <value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),lastplayed)">$LOCALIZE[568]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),title)">$LOCALIZE[369]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),tvshowtitle)">$LOCALIZE[36902]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),date)">$LOCALIZE[552]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),artist)">$LOCALIZE[557]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),album)">$LOCALIZE[558]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),tracknumber)">$LOCALIZE[554]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),channelnumber)">$LOCALIZE[19029]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),year)">$LOCALIZE[345]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),dateadded)">$LOCALIZE[570]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),random)">$LOCALIZE[590]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),genre)">$LOCALIZE[515]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),playcount)">$LOCALIZE[567]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),studio)">$LOCALIZE[572]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),country)">$LOCALIZE[574]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),rating)">$LOCALIZE[563]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),userrating)">$LOCALIZE[33067]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),votes)">$LOCALIZE[205]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),name)">$LOCALIZE[551]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),file)">$LOCALIZE[561]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),time)">$LOCALIZE[555]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),playlistorder)">$LOCALIZE[559]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),lastused)">$LOCALIZE[12012]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),lastupdated)">$LOCALIZE[12014]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),episodenumber)">$LOCALIZE[20359]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),season)">$LOCALIZE[20373]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),tvshowstatus)">$LOCALIZE[31526]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),numberofepisodes)">$LOCALIZE[31527]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortBy),numberofwatchedepisodes)">$LOCALIZE[31528]</value>
+	</variable>
+	
+	<variable name="WidgetSortDirectionLabelVar">
+	    <value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortDirection),ascending)">$LOCALIZE[584]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortDirection),descending)">$LOCALIZE[585]</value>
+	</variable>
+	
+	<variable name="WidgetLimitLabelVar">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLimit))">$INFO[Container(211).ListItem.Property(widgetLimit)]</value>
+		<value>$LOCALIZE[16018]</value>
+	</variable>
+	
+	<include name="HomeMainMenuSkinShortcutsContent">
+	    <content>
+            <include>skinshortcuts-mainmenu</include>
+		</content>
+	</include>
+	
+    <include name="SkinShortcutsSubMenu">
+        <control type="list" id="9001">
+            <depth>DepthMenu-</depth>
+            <left>92</left>
+			<top>105</top>
+			<width>1740</width>
+            <height>52</height>
+            <onup>9000</onup>
+			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Control.IsVisible(9002)">9002</ondown>
+            <ondown condition="Skin.HasSetting(LowerMainMenuBar) | !Control.IsVisible(9002)">21</ondown>
+            <animation effect="slide" start="0,0" end="0,45" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
+            <viewtype label="535">list</viewtype>
+            <scrolltime>200</scrolltime>
+            <orientation>Horizontal</orientation>
+            <hitrect x="0" y="0" w="1920" h="66" />
+			<include>SubMenuAnimationSkinShortcuts</include>
+			<include content="SubMenuCommonLayout">
+			    <param name="visibility">Control.HasFocus(9001)</param>
+			</include>
+			<content>
+                <include>skinshortcuts-submenu</include>
+			</content>
+        </control>
+		<include content="SubMenuPositionImagesSkinShortcuts">
+            <param name="Control">9001</param>
+        </include>
+    </include>
+	
+	<include name="SubMenuAnimationSkinShortcuts">
+        <animation effect="slide" start="0,-60" end="0,0" delay="200" time="150" tween="quadratic" easing="out">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9001) + Skin.HasSetting(AutoVisableSubMenu)">conditional</animation>
+        <animation effect="fade" start="0" end="100" delay="300" time="150" condition="Control.HasFocus(9001) + Skin.HasSetting(AutoVisableSubMenu)">conditional</animation>
+        <animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(9001) + Skin.HasSetting(AutoVisableSubMenu)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="145,0" time="0" condition="String.IsEqual(Container(9001).NumItems,5)">conditional</animation>
+        <animation effect="slide" start="0,0" end="290,0" time="0" condition="String.IsEqual(Container(9001).NumItems,4)">conditional</animation>
+        <animation effect="slide" start="0,0" end="434,0" time="0" condition="String.IsEqual(Container(9001).NumItems,3)">conditional</animation>
+        <animation effect="slide" start="0,0" end="579,0" time="0" condition="String.IsEqual(Container(9001).NumItems,2)">conditional</animation>
+        <animation effect="slide" start="0,0" end="724,0" time="0" condition="String.IsEqual(Container(9001).NumItems,1)">conditional</animation>
+    </include>
+	
+	<include name="SubMenuPositionImagesSkinShortcuts">
+        <param name="Control" default="9000" />
+        <definition>
+            <control type="image">
+                <left>40</left>
+                <top>105</top>
+                <width>52</width>
+                <height>52</height>
+                <texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
+				<animation effect="slide" start="0,0" end="145,0" time="0" condition="String.IsEqual(Container(9001).NumItems,5)">conditional</animation>
+                <animation effect="slide" start="0,0" end="290,0" time="0" condition="String.IsEqual(Container(9001).NumItems,4)">conditional</animation>
+                <animation effect="slide" start="0,0" end="434,0" time="0" condition="String.IsEqual(Container(9001).NumItems,3)">conditional</animation>
+                <animation effect="slide" start="0,0" end="579,0" time="0" condition="String.IsEqual(Container(9001).NumItems,2)">conditional</animation>
+                <animation effect="slide" start="0,0" end="724,0" time="0" condition="String.IsEqual(Container(9001).NumItems,1)">conditional</animation>
+            </control>
+            <control type="image">
+                <left>1832</left>
+                <top>105</top>
+                <width>52</width>
+                <height>52</height>
+                <texture border="0,0,0,3">HomeSubEnd.png</texture>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <animation effect="slide" start="0,0" end="-145,0" time="0" condition="String.IsEqual(Container(9001).NumItems,5)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-290,0" time="0" condition="String.IsEqual(Container(9001).NumItems,4)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-434,0" time="0" condition="String.IsEqual(Container(9001).NumItems,3)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-579,0" time="0" condition="String.IsEqual(Container(9001).NumItems,2)">conditional</animation>
+                <animation effect="slide" start="0,0" end="-725,0" time="0" condition="String.IsEqual(Container(9001).NumItems,1)">conditional</animation>
+                <visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
+            </control>
+            <control type="image">
+                <left>62</left>
+                <top>113</top>
+                <width>30</width>
+                <height>30</height>
+                <texture>arrow-big-left.png</texture>
+                <include>VisibleFadeEffect</include>
+                <visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasPrevious</visible>
+                <visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
+                <include>VisibleFadeEffect</include>
+            </control>
+            <control type="image">
+                <left>1831</left>
+                <top>113</top>
+                <width>30</width>
+                <height>30</height>
+                <texture>arrow-big-right.png</texture>
+                <include>VisibleFadeEffect</include>
+                <visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasNext</visible>
+                <visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,5)</visible>
+                <include>VisibleFadeEffect</include>
+            </control>
+        </definition>
+    </include>
+	
+	<include name="SkinShortcutsPowerItems">
+	    <control type="group">
+            <animation effect="slide" start="0,0" end="0,69" time="0" condition="!Integer.IsGreater(Container(9099).NumItems,4)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,69" time="0" condition="!Integer.IsGreater(Container(9099).NumItems,6)">Conditional</animation>
+            <left>705</left>
+            <top>262</top>
+			<control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>510</width>
+                <height>610</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>Integer.IsGreater(Container(9099).NumItems,4)</visible>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>510</width>
+                <height>411</height>
+                <texture border="40">$VAR[SelectBack]</texture>
+                <visible>!Integer.IsGreater(Container(9099).NumItems,4)</visible>
+            </control>
+            <control type="image">
+                <description>Dialog Header image</description>
+                <left>60</left>
+                <top>24</top>
+                <width>390</width>
+                <height>60</height>
+                <texture>$VAR[DialogPath]dialogheader.png</texture>
+            </control>
+            <control type="label" id="1">
+                <description>header label</description>
+                <left>60</left>
+                <top>30</top>
+                <width>390</width>
+                <height>45</height>
+                <font>font13_title</font>
+                <label>$LOCALIZE[31514]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>selected</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="button">
+                <description>Close Window button</description>
+                <left>405</left>
+                <top>24</top>
+                <onclick>PreviousMenu</onclick>
+                <include>DialogCloseButton</include>
+                <onleft>9099</onleft>
+                <onright>9099</onright>
+                <onup>9099</onup>
+                <ondown>9099</ondown>
+            </control>
+            <control type="list" id="9099">
+                <left>30</left>
+                <top>100</top>
+                <width>410</width>
+                <height>480</height>
+                <onup>9099</onup>
+                <ondown>9099</ondown>
+                <onleft>9099</onleft>
+                <onright>61</onright>
+                <pagecontrol>61</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <itemlayout height="69" width="410">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>410</width>
+                        <height>60</height>
+                        <texture border="5">button-nofocus.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>410</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <textcolor>grey2</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="69" width="410">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>410</width>
+                        <height>60</height>
+                        <texture border="5">button-nofocus.png</texture>
+                        <visible>!Control.HasFocus(9099)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>410</width>
+                        <height>60</height>
+                        <texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
+                        <visible>Control.HasFocus(9099)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>410</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <textcolor>white</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+				    <include>skinshortcuts-group-powermenu</include>
+                </content>
+            </control>
+            <control type="scrollbar" id="61">
+                <left>448</left>
+                <top>94</top>
+                <width>40</width>
+                <height>490</height>
+                <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+                <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+                <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
+                <onleft>9099</onleft>
+                <onright></onright>
+                <ondown>61</ondown>
+                <onup>61</onup>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+                <visible>Control.IsVisible(9099)</visible>
+            </control>
+        </control>
+	</include>
+	
+</includes>

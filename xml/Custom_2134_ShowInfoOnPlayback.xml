@@ -2,8 +2,24 @@
     <visible>Player.HasVideo + !Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStart)) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone))</visible>
     
 	<onload condition="!Skin.HasSetting(HideInfoStartOSD)">SetProperty(ShowInfoStart,true,home)</onload>
-	<onload condition="!Skin.HasSetting(HideInfoStartOSD)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:03,silent)</onload>
-	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone))">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:03,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Skin.String(OSDTimeout))">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:03,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + Skin.String(OSDTimeout,two)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:02,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + Skin.String(OSDTimeout,three)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:03,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + Skin.String(OSDTimeout,four)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:04,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + Skin.String(OSDTimeout,five)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:05,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + Skin.String(OSDTimeout,six)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:06,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + Skin.String(OSDTimeout,ten)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:10,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + Skin.String(OSDTimeout,fifteen)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:15,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + Skin.String(OSDTimeout,twenty)">AlarmClock(ShowInfoStart,ClearProperty(ShowInfoStart,home),00:20,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone)) + String.IsEmpty(Skin.String(OSDTimeout))">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:03,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone)) + Skin.String(OSDTimeout,two)">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:01,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone)) + Skin.String(OSDTimeout,three)">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:01,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone)) + Skin.String(OSDTimeout,four)">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:01,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone)) + Skin.String(OSDTimeout,five)">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:01,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone)) + Skin.String(OSDTimeout,six)">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:01,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone)) + Skin.String(OSDTimeout,ten)">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:01,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone)) + Skin.String(OSDTimeout,fifteen)">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:01,silent)</onload>
+	<onload condition="!Skin.HasSetting(HideInfoStartOSD) + String.IsEmpty(Window(Home).Property(ShowInfoStartDone)) + Skin.String(OSDTimeout,twenty)">AlarmClock(ShowInfoStartDone,SetProperty(ShowInfoStartDone,true,home),00:01,silent)</onload>
 
     <controls />
 </window>

@@ -160,7 +160,8 @@
                     <shadowcolor>black</shadowcolor>
                     <pagecontrol></pagecontrol>
                     <label>$INFO[Container(50).ListItem.Plot]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
                 <control type="label">
                     <left>0</left>
@@ -636,7 +637,8 @@
                     <shadowcolor>black</shadowcolor>
                     <pagecontrol></pagecontrol>
                     <label>$INFO[Container(5010).ListItem.Plot]</label>
-                    <autoscroll time="2000" delay="3000" repeat="501000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
                 <control type="label">
                     <left>0</left>
@@ -1258,7 +1260,8 @@
                         <visible>Control.IsVisible(5060)</visible>
                         <label>$INFO[Container(5060).ListItem.Plot]</label>
                         <animation effect="fade" start="100" end="0" time="2000" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)">Conditional</animation>
-                        <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                        <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     </control>
                     <control type="image">
                         <posx>915</posx>
@@ -1572,7 +1575,7 @@
                     <top>540</top>
                     <width>510</width>
                     <height>38</height>
-                    <label fallback="10005">$INFO[listitem.Genre]</label>
+                    <label fallback="32016">$INFO[listitem.Genre]</label>
                     <align>left</align>
                     <aligny>center</aligny>
                     <font>font13</font>
@@ -1632,7 +1635,8 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
             </control>
             <control type="label">

@@ -9,13 +9,26 @@
         <top>0</top>
     </coordinates>
     <controls>
-        <control type="button" id="10">
+        <control type="button" id="99220">
+            <top>-1000</top>
+            <left>-1000</left>
+            <width>1</width>
+            <height>1</height>
+			<texturefocus />
+            <texturenofocus />
+            <font />
+			<visible allowhiddenfocus="true">False</visible>
+            <onfocus>SetFocus(202)</onfocus>
+            <onfocus condition="Window.IsVisible(videoosd)">Action(Close)</onfocus>
+        </control>
+		<control type="button" id="10">
             <description>Close Window button</description>
             <left>126r</left>
             <top>0</top>
             <onup>100</onup>
             <ondown>87</ondown>
             <onclick>Dialog.Close(VideoOSD,true)</onclick>
+			<onclick>FullScreen</onclick>
             <include>DialogCloseButton</include>
             <animation effect="fade" time="150">VisibleChange</animation>
             <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>

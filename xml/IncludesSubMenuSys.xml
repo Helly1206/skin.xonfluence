@@ -267,12 +267,17 @@
             </control>
         </control>
     </include>
+	
     <include name="SubMenuAnimation">
-        <animation effect="slide" start="0,-60" end="0,0" delay="200" time="150" tween="quadratic" easing="out">Visible</animation>
-        <animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus + Skin.HasSetting(AutoVisableSubMenu)">conditional</animation>
-        <animation effect="fade" start="0" end="100" delay="300" time="150" condition="ControlGroup(9001).HasFocus + Skin.HasSetting(AutoVisableSubMenu)">conditional</animation>
-        <animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus + Skin.HasSetting(AutoVisableSubMenu)">WindowClose</animation>
+	    <param name="visibility">ControlGroup(9001).HasFocus</param>
+		<definition>
+            <animation effect="slide" start="0,-60" end="0,0" delay="200" time="150" tween="quadratic" easing="out">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="0" condition="!$PARAM[visibility] + Skin.HasSetting(AutoVisableSubMenu)">conditional</animation>
+            <animation effect="fade" start="0" end="100" delay="300" time="150" condition="$PARAM[visibility] + Skin.HasSetting(AutoVisableSubMenu)">conditional</animation>
+            <animation effect="fade" start="100" end="0" time="0" condition="$PARAM[visibility] + Skin.HasSetting(AutoVisableSubMenu)">WindowClose</animation>
+		</definition>	
     </include>
+	
     <include name="SubMenuCommonValues">
         <left>92</left>
         <top>0</top>
@@ -286,70 +291,74 @@
         <ondown condition="Skin.HasSetting(LowerMainMenuBar)">21</ondown>
         <hitrect x="0" y="0" w="1920" h="66" />
     </include>
+	
     <include name="SubMenuCommonLayout">
-        <itemlayout height="52" width="290">
-            <control type="image">
-                <left>0</left>
-                <top>0</top>
-                <width>290</width>
-                <height>52</height>
-                <texture border="5">HomeSubNF.png</texture>
-                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-            </control>
-            <control type="label">
-                <left>8</left>
-                <top>0</top>
-                <height>52</height>
-                <width>274</width>
-                <font>font12</font>
-                <textcolor>grey2</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label>$INFO[ListItem.label]</label>
-            </control>
-        </itemlayout>
-        <focusedlayout height="52" width="290">
-            <control type="image">
-                <left>0</left>
-                <top>0</top>
-                <width>290</width>
-                <height>52</height>
-                <texture border="5">HomeSubNF.png</texture>
-                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-            </control>
-            <control type="image">
-                <left>0</left>
-                <top>0</top>
-                <width>290</width>
-                <height>52</height>
-                <texture border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texture>
-                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-                <visible>ControlGroup(9001).HasFocus</visible>
-            </control>
-            <control type="label">
-                <left>8</left>
-                <top>0</top>
-                <height>52</height>
-                <width>274</width>
-                <font>font12</font>
-                <textcolor>grey2</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label>$INFO[ListItem.label]</label>
-            </control>
-            <control type="label">
-                <left>8</left>
-                <top>0</top>
-                <height>52</height>
-                <width>274</width>
-                <font>font12</font>
-                <textcolor>white</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label>$INFO[ListItem.label]</label>
-                <visible>ControlGroup(9001).HasFocus</visible>
-            </control>
-        </focusedlayout>
+	    <param name="visibility">ControlGroup(9001).HasFocus</param>
+		<definition>
+            <itemlayout height="52" width="290">
+                <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>290</width>
+                    <height>52</height>
+                    <texture border="5">HomeSubNF.png</texture>
+                    <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                </control>
+                <control type="label">
+                    <left>8</left>
+                    <top>0</top>
+                    <height>52</height>
+                    <width>274</width>
+                    <font>font12</font>
+                    <textcolor>grey2</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.label]</label>
+                </control>
+            </itemlayout>
+            <focusedlayout height="52" width="290">
+                <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>290</width>
+                    <height>52</height>
+                    <texture border="5">HomeSubNF.png</texture>
+                    <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                </control>
+                <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>290</width>
+                    <height>52</height>
+                    <texture border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texture>
+                    <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                    <visible>$PARAM[visibility]</visible>
+                </control>
+                <control type="label">
+                    <left>8</left>
+                    <top>0</top>
+                    <height>52</height>
+                    <width>274</width>
+                    <font>font12</font>
+                    <textcolor>grey2</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.label]</label>
+                </control>
+                <control type="label">
+                    <left>8</left>
+                    <top>0</top>
+                    <height>52</height>
+                    <width>274</width>
+                    <font>font12</font>
+                    <textcolor>white</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.label]</label>
+                    <visible>$PARAM[visibility]</visible>
+                </control>
+            </focusedlayout>
+		</definition>	
     </include>
     <include name="HomeSubMenuVideos">
         <item>

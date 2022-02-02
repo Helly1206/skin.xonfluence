@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+	<shortcut>
+		<defaultID>tvshowsrecent</defaultID>
+		<label>$LOCALIZE[31998]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</action>
+	</shortcut>	
+	<shortcut>
+		<defaultID>tvshowsbrowse</defaultID>
+		<label>$LOCALIZE[1024]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,TVShowTitles,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>tvshowsgenres</defaultID>
+		<label>$LOCALIZE[135]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://tvshows/genres/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>tvshowsyears</defaultID>
+		<label>$LOCALIZE[652]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://tvshows/years/,return)</action>
+	</shortcut>    
+	<shortcut>
+		<defaultID>tvshowsactors</defaultID>
+		<label>$LOCALIZE[344]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,TVShowActors,return)</action>
+	</shortcut>    
+</shortcuts>

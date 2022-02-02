@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+	<shortcut>
+		<defaultID>videomovietitles</defaultID>
+		<label>$LOCALIZE[342]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,MovieTitles,return)</action>
+		<visible>Library.HasContent(Movies)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>videotvshowtitles</defaultID>
+		<label>$LOCALIZE[20343]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,TvShowTitles,return)</action>
+		<visible>Library.HasContent(TVShows)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>videomusicvideotitles</defaultID>
+		<label>$LOCALIZE[20389]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,MusicVideoTitles,return)</action>
+		<visible>Library.HasContent(MusicVideos)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>videosfiles</defaultID>
+		<label>$LOCALIZE[744]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,Files,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>videosroot</defaultID>
+		<label>$LOCALIZE[1024]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,Root)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>videosaddons</defaultID>
+		<label>$LOCALIZE[24001]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,Addons,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>videosplaylists</defaultID>
+		<label>$LOCALIZE[136]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,Playlists,return)</action>
+	</shortcut>
+</shortcuts>

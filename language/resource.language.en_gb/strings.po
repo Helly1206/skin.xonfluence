@@ -1742,11 +1742,416 @@ msgctxt "#31511"
 msgid "Channel options"
 msgstr ""
 
-#empty strings from id 31512 to 31647
+#strings used with skinshortcuts
 
-msgctxt "#31648"
-msgid "Low List"
+msgctxt "#31512"
+msgid "Customize addon shortcuts"
 msgstr ""
+
+msgctxt "#31513"
+msgid "Disable item"
+msgstr ""
+
+msgctxt "#31514"
+msgid "Power Menu"
+msgstr ""
+
+msgctxt "#31515"
+msgid "Addon shortcuts"
+msgstr ""
+
+msgctxt "#31516"
+msgid "Submenu"
+msgstr ""
+
+msgctxt "#31517"
+msgid "Home menu setup"
+msgstr ""
+
+msgctxt "#31518"
+msgid "Delete/Disable System Menu Item?"
+msgstr ""
+
+msgctxt "#31519"
+msgid "Are you sure you want to remove/disable the System menu item?[CR]Please ensure that you have an alternative method of accessing Settings before you remove/disable this menu item."
+msgstr ""
+
+msgctxt "#31520"
+msgid "Manage Widgets"
+msgstr ""
+
+msgctxt "#31521"
+msgid "Widgets"
+msgstr ""
+
+msgctxt "#31522"
+msgid "Choose widget"
+msgstr ""
+
+msgctxt "#31523"
+msgid "Widget Sort by"
+msgstr ""
+
+msgctxt "#31524"
+msgid "Widget Sort order"
+msgstr ""
+
+msgctxt "#31525"
+msgid "Widget item limit"
+msgstr ""
+
+msgctxt "#31526"
+msgid "TV Show status"
+msgstr ""
+
+msgctxt "#31527"
+msgid "Number of episodes"
+msgstr ""
+
+msgctxt "#31528"
+msgid "Number of watched episodes"
+msgstr ""
+
+msgctxt "#31529"
+msgid "Default widgets"
+msgstr ""
+
+msgctxt "#31530"
+msgid "Game Sources"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31531"
+msgid "Additional widgets"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31532"
+msgid "Recently Added Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31533"
+msgid "Recently Played Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31534"
+msgid "Random Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31535"
+msgid "In Progress Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31536"
+msgid "Unwatched Movies"
+msgstr ""
+
+msgctxt "#31537"
+msgid "Top Rated Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31538"
+msgid "Movie Genres"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31539"
+msgid "Movie Sets"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31540"
+msgid "Movie Nodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31541"
+msgid "IMDB Top 250 Movies"
+msgstr ""
+
+msgctxt "#31542"
+msgid "Decades"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31543"
+msgid "TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31544"
+msgid "Recently Added TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31545"
+msgid "Recently Played TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31546"
+msgid "Random TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31547"
+msgid "In Progress TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31548"
+msgid "Unwatched TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31549"
+msgid "Top Rated TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31550"
+msgid "TV Show Genres"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31551"
+msgid "TV Show Nodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31552"
+msgid "Recently Added Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31553"
+msgid "Recently Played Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31554"
+msgid "Random Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31555"
+msgid "In Progress Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31556"
+msgid "Unwatched Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31557"
+msgid "Top Rated Episodes"
+msgstr ""
+
+#: script-skinshortcuts.xml
+msgctxt "#31588"
+msgid "Next Aired Episodes"
+msgstr ""
+
+#: script-skinshortcuts.xml
+msgctxt "#31559"
+msgid "Recommended Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31560"
+msgid "Recently Added Episodes (with watched)"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31561"
+msgid "Recently Added Albums"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31562"
+msgid "Recently Played Albums"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31563"
+msgid "Recently Released Albums"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31564"
+msgid "Top 100 Albums"
+msgstr ""
+
+msgctxt "#31565"
+msgid "Random Albums"
+msgstr ""
+
+msgctxt "#31566"
+msgid "Most played albums"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31567"
+msgid "Recently Added Artists"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31568"
+msgid "Random Artists"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31569"
+msgid "Music Nodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31570"
+msgid "Recently Added Songs"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31571"
+msgid "Recently Released Songs"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31572"
+msgid "Most Played Songs"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31573"
+msgid "Random Songs"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31574"
+msgid "Recently Added Music Videos"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31575"
+msgid "Recently Added Music Videos (with watched)"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31576"
+msgid "In-Progress Music Videos"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31577"
+msgid "Random Music Videos"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31578"
+msgid "Unwatched Music Videos"
+msgstr ""
+
+#: /1080i/Settings.xml
+msgctxt "#31579"
+msgid "PVR"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31580"
+msgid "Last Played TV Channels"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31581"
+msgid "Active TV Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31582"
+msgid "Grouped Active TV Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31583"
+msgid "Grouped Deleted TV Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31584"
+msgid "Last Played Radio Channels"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31585"
+msgid "Active Radio Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31586"
+msgid "Grouped Active Radio Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31587"
+msgid "Grouped Deleted Radio Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31588"
+msgid "Daily Weather Forecast"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31589"
+msgid "Hourly Weather Forecast"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31590"
+msgid "Recently added movies (with watched)"
+msgstr ""
+
+msgctxt "#31591"
+msgid "Surprise Me"
+msgstr ""
+
+msgctxt "#31592"
+msgid "Surprise Me (Movie)"
+msgstr ""
+
+msgctxt "#31593"
+msgid "Surprise Me (Episode)"
+msgstr ""
+
+msgctxt "#31594"
+msgid "Surprise Me (Music Video)"
+msgstr ""
+
+msgctxt "#31595"
+msgid "Make Default Menu Item"
+msgstr ""
+
+msgctxt "#31596"
+msgid "Current Default Menu Item"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31597"
+msgid "Recently Added TV Shows (with watched)"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31598"
+msgid "Recently Played TV Shows (with fully played)"
+msgstr ""
+
+#empty strings from id 31599 to 31647
+
 
 #empty strings from id 31649 to 31697
 
@@ -1804,6 +2209,10 @@ msgstr ""
 
 msgctxt "#31711"
 msgid "France"
+msgstr ""
+
+msgctxt "#31712"
+msgid "Skin Settings"
 msgstr ""
 
 #empty strings from id 31712 to 31900
@@ -2209,4 +2618,162 @@ msgstr ""
 
 msgctxt "#32011"
 msgid "Enable CPU temperature display"
+msgstr ""
+
+msgctxt "#32012"
+msgid "Show chapter/cutlist markers on seekbar"
+msgstr ""
+
+msgctxt "#32013"
+msgid "Show end time in OSD"
+msgstr ""
+
+msgctxt "#32014"
+msgid "Hide rating"
+msgstr ""
+
+msgctxt "#32015"
+msgid "Hide widgets until focused"
+msgstr ""
+
+msgctxt "#32016"
+msgid "N/A"
+msgstr ""
+
+msgctxt "#32017"
+msgid "User selection thirteen"
+msgstr ""
+
+msgctxt "#32018"
+msgid "User selection fourteen"
+msgstr ""
+
+msgctxt "#32019"
+msgid "User selection fifteen"
+msgstr ""
+
+msgctxt "#32020"
+msgid "Same director"
+msgstr ""
+
+msgctxt "#32021"
+msgid "Xonfluence Initial Use"
+msgstr ""
+
+msgctxt "#32022"
+msgid "Since this is Xonfluence's first use, Kodi needs to be restarted for proper menu configuration.[CR][CR]Press the button below to proceed."
+msgstr ""
+
+msgctxt "#32023"
+msgid "Proceed with Kodi Exit"
+msgstr ""
+
+msgctxt "#32024"
+msgid "Widget layout"
+msgstr ""
+
+msgctxt "#32025"
+msgid "Small"
+msgstr ""
+
+msgctxt "#32026"
+msgid "Large"
+msgstr ""
+
+msgctxt "#32027"
+msgid "Large 2"
+msgstr ""
+
+msgctxt "#32028"
+msgid "Large 3"
+msgstr ""
+
+msgctxt "#32029"
+msgid "Large 4"
+msgstr ""
+
+msgctxt "#32030"
+msgid "Large 5"
+msgstr ""
+
+msgctxt "#32031"
+msgid "Select Widget Layout"
+msgstr ""
+
+msgctxt "#32032"
+msgid "Duration of OSD intro"
+msgstr ""
+
+msgctxt "#32033"
+msgid "Reboot to Android"
+msgstr ""
+
+msgctxt "#32034"
+msgid "Slower automatic scrolling"
+msgstr ""
+
+msgctxt "#32035"
+msgid "Enable Extra Fanart if available"
+msgstr ""
+
+msgctxt "#32036"
+msgid "Show widget fanart/extra fanart"
+msgstr ""
+
+msgctxt "#32037"
+msgid "Adjust Extra fanart cycle rate"
+msgstr ""
+
+msgctxt "#32038"
+msgid "Emulationstation"
+msgstr ""
+
+msgctxt "#32039"
+msgid "Retroarch"
+msgstr ""
+
+msgctxt "#32040"
+msgid "Pegasus"
+msgstr ""
+
+msgctxt "#32041"
+msgid "Moonlight"
+msgstr ""
+
+msgctxt "#32042"
+msgid "Hide Reboot to Android option in shutdown menu"
+msgstr ""
+
+msgctxt "#32043"
+msgid "Enable use of Extended Info script"
+msgstr ""
+
+msgctxt "#32044"
+msgid "Configure Extended Info"
+msgstr ""
+
+msgctxt "#32045"
+msgid "Open Extended Info for video info dialogs"
+msgstr ""
+
+msgctxt "#32046"
+msgid "Weather (extended)"
+msgstr ""
+
+msgctxt "#32047"
+msgid "Use script.skinshortcuts for menu/submenu/widget configuration"
+msgstr ""
+
+#empty string 32048
+
+msgctxt "#32049"
+msgid "Customize Home menu"
+msgstr ""
+
+msgctxt "#32050"
+msgid "Customize Power menu"
+msgstr ""
+
+msgctxt "#32051"
+msgid "Enable choosing default menu item"
 msgstr ""

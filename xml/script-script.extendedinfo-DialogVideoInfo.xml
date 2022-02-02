@@ -1518,7 +1518,8 @@
                                 <align>left</align>
                                 <label fallback="19055">[B]$INFO[Window.Property(TagLine),,[CR]][/B]$INFO[Window.Property(Plot)]</label>
                                 <font>font12</font>
-                                <autoscroll delay="10000" time="2000" repeat="10000">true</autoscroll>
+                                <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					            <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                             </control>
                         </control>
                     </control>

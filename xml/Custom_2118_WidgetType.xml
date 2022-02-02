@@ -153,6 +153,7 @@
                         <label>$LOCALIZE[31499]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,-)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
@@ -162,6 +163,7 @@
                         <label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[559]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <include>MenuMoviePlayListCheck</include>
@@ -171,6 +173,7 @@
                         <label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[31211]</label>
                         <onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Widget,VideoNode)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <include>MenuVideoNodeListCheck</include>
@@ -180,6 +183,7 @@
                         <label>$LOCALIZE[31115] $LOCALIZE[342]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,UPnPMovies)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi)</visible>
@@ -189,6 +193,7 @@
                         <label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[559]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,MusicPlayList)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <include>MenuMusicPlayListCheck</include>
@@ -198,6 +203,17 @@
                         <label>$LOCALIZE[8]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,Weather)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
+                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                        <onclick>Dialog.Close(2118)</onclick>
+                        <visible>!String.IsEmpty(Weather.Plugin)</visible>
+                    </item>
+					<item>
+                        <description>Weather Extended</description>
+                        <label>$LOCALIZE[32046]</label>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,WeatherExtended)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>!String.IsEmpty(Weather.Plugin)</visible>
@@ -207,6 +223,7 @@
                         <label>$LOCALIZE[31198]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentMovies)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(Movies)</visible>
@@ -216,6 +233,7 @@
                         <label>$LOCALIZE[32000]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentMoviesWatched)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(Movies)</visible>
@@ -225,6 +243,7 @@
                         <label>$LOCALIZE[31196]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomMovies)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(Movies)</visible>
@@ -234,6 +253,7 @@
                         <label>$LOCALIZE[31197]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedMovies)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(Movies)</visible>
@@ -243,6 +263,7 @@
                         <label>$LOCALIZE[31228]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,UnWatchedMovies)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>!Skin.HasSetting(DisableScriptPlaylist)</visible>
@@ -253,6 +274,7 @@
                         <label>$LOCALIZE[31195]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentEpisodes)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(TVShows)</visible>
@@ -262,6 +284,7 @@
                         <label>$LOCALIZE[32001]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentEpisodesWatched)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(TVShows)</visible>
@@ -271,6 +294,7 @@
                         <label>$LOCALIZE[31193]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomEpisodes)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(TVShows)</visible>
@@ -280,6 +304,7 @@
                         <label>$LOCALIZE[31194]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedEpisodes)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(TVShows)</visible>
@@ -289,6 +314,7 @@
                         <label>$LOCALIZE[31245]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,NextAired)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(TVShows)</visible>
@@ -299,6 +325,7 @@
                         <label>$LOCALIZE[31192]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentAlbums)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                     </item>
@@ -307,6 +334,7 @@
                         <label>$LOCALIZE[31190]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomAlbums)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                     </item>
@@ -315,6 +343,7 @@
                         <label>$LOCALIZE[31191]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedAlbums)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                     </item>
@@ -323,6 +352,7 @@
                         <label>$LOCALIZE[31189]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentConcerts)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(MusicVideos)</visible>
@@ -332,6 +362,7 @@
                         <label>$LOCALIZE[32002]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentConcertsWatched)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(MusicVideos)</visible>
@@ -341,6 +372,7 @@
                         <label>$LOCALIZE[31188]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomConcerts)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(MusicVideos)</visible>
@@ -350,6 +382,7 @@
                         <label>$LOCALIZE[31199]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedConcerts)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Thumb)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(MusicVideos)</visible>
@@ -360,6 +393,7 @@
                         <onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Widget)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
                         <onclick>Dialog.Close(2118)</onclick>
                     </item>
@@ -369,6 +403,7 @@
                         <onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Widget)</onclick>
                         <onclick>RunScript(script.favourites,property=WidgetFav)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,Poster)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                         <visible>System.HasAddon(script.favourites)</visible>
                     </item>
                 </content>

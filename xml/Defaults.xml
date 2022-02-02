@@ -106,7 +106,7 @@
         <include condition="String.IsEmpty(Skin.String(LayoutLAF))">RadioButtonClassic</include>
         <include condition="!String.IsEmpty(Skin.String(LayoutLAF))">RadioButtonModern</include>
         <include>NormalButton</include>
-        <label>215</label>
+        <label></label>
         <font>font13</font>
         <textcolor>white</textcolor>
         <disabledcolor>grey3</disabledcolor>

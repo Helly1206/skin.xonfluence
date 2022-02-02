@@ -75,6 +75,7 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label2]</label>
                         <visible>Window.IsVisible(Videos)</visible>
+						<visible>![Skin.HasSetting(HideRatingsViews) + String.IsEqual(ListItem.Label2,ListItem.Rating)]</visible>
                         <animation effect="slide" start="0,0" end="60,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
                     </control>
                     <control type="image">
@@ -174,6 +175,7 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label2]</label>
                         <visible>Window.IsVisible(Videos)</visible>
+						<visible>![Skin.HasSetting(HideRatingsViews) + String.IsEqual(ListItem.Label2,ListItem.Rating)]</visible>
                         <animation effect="slide" start="0,0" end="60,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
                     </control>
                     <control type="image">
@@ -318,15 +320,16 @@
                 <left>135</left>
                 <top>120</top>
                 <width>1620</width>
-                <height>837</height>
+                <height>838</height>
                 <onleft>2</onleft>
                 <onright>60</onright>
                 <onup>500</onup>
                 <ondown>500</ondown>
                 <viewtype label="21371">list</viewtype>
                 <pagecontrol>60</pagecontrol>
+				<orientation>vertical</orientation>
                 <scrolltime>200</scrolltime>
-                <preloaditems>2</preloaditems>
+                <preloaditems>10</preloaditems>
                 <itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="279" width="324">
                     <control type="image">
                         <left>1</left>
@@ -891,6 +894,7 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label2]</label>
                         <visible>Window.IsVisible(Videos)</visible>
+						<visible>![Skin.HasSetting(HideRatingsViews) + String.IsEqual(ListItem.Label2,ListItem.Rating)]</visible>
                         <animation effect="slide" start="0,0" end="60,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
                     </control>
                     <control type="image">
@@ -1027,6 +1031,7 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label2]</label>
                         <visible>Window.IsVisible(Videos)</visible>
+						<visible>![Skin.HasSetting(HideRatingsViews) + String.IsEqual(ListItem.Label2,ListItem.Rating)]</visible>
                         <animation effect="slide" start="0,0" end="60,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
                     </control>
                     <control type="image">

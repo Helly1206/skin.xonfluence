@@ -28,7 +28,7 @@
                 <width>150</width>
                 <height>75</height>
                 <aspectratio aligny="top" align="left">keep</aspectratio>
-                <texture>kodi-logo.png</texture>
+                <texture>special://skin/extras/reources/kodi-logo.png</texture>
                 <include>Window_OpenClose_Animation</include>
                 <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification)">Conditional</animation>
             </control>

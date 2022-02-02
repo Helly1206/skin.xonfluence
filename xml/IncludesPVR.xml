@@ -98,6 +98,7 @@
                 <visible>False</visible>
             </control>
             <include>Clock</include>
+		    <include>Date</include>
         </control>
     </include>
     <include name="PVRSideBlade">

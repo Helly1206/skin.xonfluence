@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+
     <include name="WrapHomeMainMenu">
         <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre1</include>
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre2</include>
         <control type="wraplist" id="9000">
             <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeMainMenuSys</include>
-            <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeGraphMainMenuSys</include>
-            <include>HomeMainMenuContent</include>
+            <include condition="!String.IsEmpty(Skin.String(MenuLAF)) + !Skin.HasSetting(Use.SkinShortcuts)">HomeGraphMainMenuSys</include>
+			<include condition="!String.IsEmpty(Skin.String(MenuLAF)) + Skin.HasSetting(Use.SkinShortcuts)" content="HomeGraphMainMenuSys">
+			    <param name="menuitemicon">$INFO[ListItem.Icon]</param>
+			</include>
+            <include condition="!Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuContent</include>
+			<include condition="Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuSkinShortcutsContent</include>
             <visible>Skin.HasSetting(WrapAroundHomeMenu)</visible>
         </control>
         <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeImagePost1</include>
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePost2</include>
     </include>
+	
     <include name="FixedHomeMainMenu">
         <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre1</include>
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePre2</include>
         <control type="fixedlist" id="9000">
             <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeMainMenuSys</include>
-            <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeGraphMainMenuSys</include>
-            <include>HomeMainMenuContent</include>
+            <include condition="!String.IsEmpty(Skin.String(MenuLAF)) + !Skin.HasSetting(Use.SkinShortcuts)">HomeGraphMainMenuSys</include>
+			<include condition="!String.IsEmpty(Skin.String(MenuLAF)) + Skin.HasSetting(Use.SkinShortcuts)" content="HomeGraphMainMenuSys">
+			    <param name="menuitemicon">$INFO[ListItem.Icon]</param>
+			</include>
+            <include condition="!Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuContent</include>
+			<include condition="Skin.HasSetting(Use.SkinShortcuts)">HomeMainMenuSkinShortcutsContent</include>
             <visible>!Skin.HasSetting(WrapAroundHomeMenu)</visible>
         </control>
         <include condition="String.IsEmpty(Skin.String(MenuLAF))">HomeImagePost1</include>
         <include condition="!String.IsEmpty(Skin.String(MenuLAF))">HomeImagePost2</include>
     </include>
+	
     <include name="HomeImagePre1">
         <control type="image">
             <left>-150</left>
@@ -42,6 +53,7 @@
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
         </control>
     </include>
+	
     <include name="HomeImagePre2">
         <control type="image">
             <left>-150</left>
@@ -60,6 +72,7 @@
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
         </control>
     </include>
+	
     <include name="HomeImagePost1">
         <control type="image">
             <left>-15</left>
@@ -78,6 +91,7 @@
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
         </control>
     </include>
+	
     <include name="HomeImagePost2">
         <control type="image">
             <left>-15</left>
@@ -96,6 +110,7 @@
             <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
         </control>
     </include>
+	
     <include name="HomeMainMenuSys">
         <left>-165</left>
         <top>8</top>
@@ -225,130 +240,135 @@
             </control>
         </focusedlayout>
     </include>
+	
     <include name="HomeGraphMainMenuSys">
-        <left>-164</left>
-        <top>8</top>
-        <width>2247</width>
-        <height>135</height>
-        <onleft condition="!Skin.HasSetting(FixedEndingMenu)">9000</onleft>
-        <onright condition="!Skin.HasSetting(FixedEndingMenu)">9000</onright>
-        <onup condition="!Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)">610</onup>
-        <onup condition="Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)">603</onup>
-        <ondown>9001</ondown>
-        <scrolltime>300</scrolltime>
-        <focusposition>3</focusposition>
-        <movement>1</movement>
-        <orientation>Horizontal</orientation>
-        <itemlayout height="135" width="321">
-            <control type="image">
-                <left>0</left>
-                <top>6</top>
-                <width>1</width>
-                <height>123</height>
-                <texture>HomeSeperator.png</texture>
-            </control>
-            <control type="image">
-                <left>320</left>
-                <top>6</top>
-                <width>1</width>
-                <height>123</height>
-                <texture>HomeSeperator.png</texture>
-            </control>
-            <control type="label">
-                <left>8</left>
-                <top>82</top>
-                <width>306</width>
-                <height>45</height>
-                <font>font30_title</font>
-                <textcolor>grey3</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <scroll>true</scroll>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
-            </control>
-            <control type="image">
-                <left>8</left>
-                <top>0</top>
-                <width>306</width>
-                <height>90</height>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>33FFFFFF</colordiffuse>
-                <texture>$INFO[ListItem.Property(Icon)]</texture>
-                <animation effect="slide" start="0,0" end="0,30" time="0" condition="!String.IsEqual(Skin.String(MenuLAF),GraphText)">Conditional</animation>
-                <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="!String.IsEqual(Skin.String(MenuLAF),GraphText)">Conditional</animation>
-            </control>
-        </itemlayout>
-        <focusedlayout height="90" width="321">
-            <control type="image">
-                <left>0</left>
-                <top>6</top>
-                <width>1</width>
-                <height>123</height>
-                <texture>HomeSeperator.png</texture>
-            </control>
-            <control type="image">
-                <left>320</left>
-                <top>6</top>
-                <width>1</width>
-                <height>123</height>
-                <texture>HomeSeperator.png</texture>
-            </control>
-            <control type="label">
-                <left>8</left>
-                <top>82</top>
-                <width>306</width>
-                <height>45</height>
-                <font>font30_title</font>
-                <textcolor>grey3</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label>$INFO[ListItem.Label]</label>
-                <scroll>true</scroll>
-                <visible>!Control.HasFocus(9000)</visible>
-                <visible>String.IsEqual(Skin.String(MenuLAF),GraphFocused) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
-            </control>
-            <control type="label">
-                <left>8</left>
-                <top>82</top>
-                <width>306</width>
-                <height>45</height>
-                <font>font30_title</font>
-                <textcolor>$VAR[MainColorOne]</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <scroll>true</scroll>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>Control.HasFocus(9000)</visible>
-                <visible>String.IsEqual(Skin.String(MenuLAF),GraphFocused) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
-            </control>
-            <control type="image">
-                <left>8</left>
-                <top>0</top>
-                <width>306</width>
-                <height>90</height>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>$VAR[MainColorOne]</colordiffuse>
-                <texture>$INFO[ListItem.Property(Icon)]</texture>
-                <animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
-                <animation effect="slide" start="0,30" end="0,0" time="100" condition="String.IsEqual(Skin.String(MenuLAF),GraphFocused)">Focus</animation>
-                <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
-                <visible>Control.HasFocus(9000)</visible>
-            </control>
-            <control type="image">
-                <left>8</left>
-                <top>0</top>
-                <width>306</width>
-                <height>90</height>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>33FFFFFF</colordiffuse>
-                <texture>$INFO[ListItem.Property(Icon)]</texture>
-                <animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
-                <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
-                <visible>!Control.HasFocus(9000)</visible>
-            </control>
-        </focusedlayout>
+	    <param name="menuitemicon">$INFO[ListItem.Property(Icon)]</param>
+		<definition>
+            <left>-164</left>
+            <top>8</top>
+            <width>2247</width>
+            <height>135</height>
+            <onleft condition="!Skin.HasSetting(FixedEndingMenu)">9000</onleft>
+            <onright condition="!Skin.HasSetting(FixedEndingMenu)">9000</onright>
+            <onup condition="!Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)">610</onup>
+            <onup condition="Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)">603</onup>
+            <ondown>9001</ondown>
+            <scrolltime>300</scrolltime>
+            <focusposition>3</focusposition>
+            <movement>1</movement>
+            <orientation>Horizontal</orientation>
+            <itemlayout height="135" width="321">
+                <control type="image">
+                    <left>0</left>
+                    <top>6</top>
+                    <width>1</width>
+                    <height>123</height>
+                    <texture>HomeSeperator.png</texture>
+                </control>
+                <control type="image">
+                    <left>320</left>
+                    <top>6</top>
+                    <width>1</width>
+                    <height>123</height>
+                    <texture>HomeSeperator.png</texture>
+                </control>
+                <control type="label">
+                    <left>8</left>
+                    <top>82</top>
+                    <width>306</width>
+                    <height>45</height>
+                    <font>font30_title</font>
+                    <textcolor>grey3</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <scroll>true</scroll>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
+                </control>
+                <control type="image">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>306</width>
+                    <height>90</height>
+                    <aspectratio>keep</aspectratio>
+                    <colordiffuse>33FFFFFF</colordiffuse>
+                    <texture>$PARAM[menuitemicon]</texture>
+                    <animation effect="slide" start="0,0" end="0,30" time="0" condition="!String.IsEqual(Skin.String(MenuLAF),GraphText)">Conditional</animation>
+                    <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="!String.IsEqual(Skin.String(MenuLAF),GraphText)">Conditional</animation>
+                </control>
+            </itemlayout>
+            <focusedlayout height="90" width="321">
+                <control type="image">
+                    <left>0</left>
+                    <top>6</top>
+                    <width>1</width>
+                    <height>123</height>
+                    <texture>HomeSeperator.png</texture>
+                </control>
+                <control type="image">
+                    <left>320</left>
+                    <top>6</top>
+                    <width>1</width>
+                    <height>123</height>
+                    <texture>HomeSeperator.png</texture>
+                </control>
+                <control type="label">
+                    <left>8</left>
+                    <top>82</top>
+                    <width>306</width>
+                    <height>45</height>
+                    <font>font30_title</font>
+                    <textcolor>grey3</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.Label]</label>
+                    <scroll>true</scroll>
+                    <visible>!Control.HasFocus(9000)</visible>
+                    <visible>String.IsEqual(Skin.String(MenuLAF),GraphFocused) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
+                </control>
+                <control type="label">
+                    <left>8</left>
+                    <top>82</top>
+                    <width>306</width>
+                    <height>45</height>
+                    <font>font30_title</font>
+                    <textcolor>$VAR[MainColorOne]</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <scroll>true</scroll>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>Control.HasFocus(9000)</visible>
+                    <visible>String.IsEqual(Skin.String(MenuLAF),GraphFocused) | String.IsEqual(Skin.String(MenuLAF),GraphText)</visible>
+                </control>
+                <control type="image">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>306</width>
+                    <height>90</height>
+                    <aspectratio>keep</aspectratio>
+                    <colordiffuse>$VAR[MainColorOne]</colordiffuse>
+                    <texture>$PARAM[menuitemicon]</texture>
+                    <animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+                    <animation effect="slide" start="0,30" end="0,0" time="100" condition="String.IsEqual(Skin.String(MenuLAF),GraphFocused)">Focus</animation>
+                    <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+                    <visible>Control.HasFocus(9000)</visible>
+                </control>
+                <control type="image">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>306</width>
+                    <height>90</height>
+                    <aspectratio>keep</aspectratio>
+                    <colordiffuse>33FFFFFF</colordiffuse>
+                    <texture>$PARAM[menuitemicon]</texture>
+                    <animation effect="slide" start="0,0" end="0,30" time="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+                    <animation effect="zoom" end="160" center="auto" time="0" delay="0" condition="String.IsEqual(Skin.String(MenuLAF),Graph)">Conditional</animation>
+                    <visible>!Control.HasFocus(9000)</visible>
+                </control>
+            </focusedlayout>
+		</definition>	
     </include>
+	
     <include name="HomeMainMenuContent">
         <content>
             <item id="1">
@@ -365,9 +385,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.1.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.1.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.1.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistOne.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.1.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.1.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.1.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.1.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.1.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.1.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.1.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.1.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.1.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -389,9 +411,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.2.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.2.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.2.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwo.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.2.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.2.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.2.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.2.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.2.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.2.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.2.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.2.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.2.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -413,9 +437,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.3.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.3.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.3.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistThree.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.3.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.3.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.3.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.3.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.3.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.3.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.3.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.3.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.3.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -437,9 +463,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.4.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.4.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.4.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFour.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.4.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.4.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.4.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.4.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.4.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.4.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.4.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.4.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.4.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -461,9 +489,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.5.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.5.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.5.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFive.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.5.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.5.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.5.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.5.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.5.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.5.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.5.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.5.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.5.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -485,9 +515,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.6.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.6.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.6.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSix.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.6.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.6.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.6.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.6.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.6.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.6.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.6.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.6.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.6.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -509,9 +541,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.7.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.7.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.7.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistSeven.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.7.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.7.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.7.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.7.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.7.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.7.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.7.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.7.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.7.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -533,9 +567,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.8.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.8.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.8.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEight.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.8.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.8.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.8.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.8.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.8.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.8.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.8.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.8.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.8.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -557,9 +593,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.9.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.9.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.9.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistNine.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.9.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.9.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.9.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.9.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.9.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.9.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.9.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.9.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.9.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -581,9 +619,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.10.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.10.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.10.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTen.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.10.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.10.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.10.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.10.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.10.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.10.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.10.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.10.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.10.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -605,9 +645,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.11.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.11.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.11.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistEleven.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.11.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.11.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.11.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.11.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.11.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.11.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.11.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.11.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.11.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -629,9 +671,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.12.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.12.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.12.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistTwelve.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.12.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.12.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.12.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.12.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.12.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.12.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.12.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.12.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.12.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -653,9 +697,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.13.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.13.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.13.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistThirteen.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.13.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.13.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.13.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.13.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.13.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.13.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.13.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.13.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.13.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -677,9 +723,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.14.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.14.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.14.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFourteen.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.14.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.14.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.14.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.14.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.14.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.14.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.14.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.14.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.14.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -701,9 +749,11 @@
                 <property name="HiLiteItem">$INFO[Skin.String(HomeItem.15.Type)]</property>
                 <property name="AddOnSet">$INFO[Skin.String(HomeItem.15.Addon)]</property>
                 <property name="WidgetSet">$INFO[Skin.String(HomeItem.15.Widget)]</property>
-                <property name="PlayListType">$INFO[Window(Home).Property(HomePlaylistFifteen.Type)]</property>
+                <property name="PlaylistType">$INFO[Skin.String(HomeItem.15.PlaylistType)]</property>
+				<property name="PlaylistContent">$INFO[Skin.String(HomeItem.15.PlaylistContent)]</property>
                 <property name="Background">$INFO[Skin.String(HomeItem.15.Display)]</property>
                 <property name="WidgetFormat">$INFO[Skin.String(HomeItem.15.WidgetFormat)]</property>
+				<property name="WidgetLayout">$INFO[Skin.String(HomeItem.15.WidgetLayout)]</property>
                 <visible>!String.IsEmpty(Skin.String(HomeItem.15.Path))</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.15.Type),Radio) | [String.IsEqual(Skin.String(HomeItem.15.Type),Radio) + !Skin.HasSetting(DisablePVRinView)]</visible>
                 <visible>!String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) | [String.IsEqual(Skin.String(HomeItem.15.Type),LiveTV) + !Skin.HasSetting(DisablePVRinView)]</visible>
@@ -724,6 +774,7 @@
         <onload>Skin.SetString(HomeItem.1.Icon,Icons/weather2.png)</onload>
         <onload>Skin.SetString(HomeItem.1.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.1.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.1.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.2.Label,$LOCALIZE[1213])</onload>
         <onload>Skin.SetString(HomeItem.2.Path,ActivateWindow(Pictures,Pictures))</onload>
         <onload>Skin.SetString(HomeItem.2.Sub,Pictures)</onload>
@@ -734,6 +785,7 @@
         <onload>Skin.SetString(HomeItem.2.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.2.Icon,Icons/pictures.png)</onload>
         <onload>Skin.SetString(HomeItem.2.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.2.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.3.Label,$LOCALIZE[19021])</onload>
         <onload>Skin.SetString(HomeItem.3.Path,ActivateWindow(RadioChannels))</onload>
         <onload>Skin.SetString(HomeItem.3.Sub,Radio)</onload>
@@ -744,6 +796,7 @@
         <onload>Skin.SetString(HomeItem.3.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.3.Icon,Icons/radio.png)</onload>
         <onload>Skin.SetString(HomeItem.3.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.3.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.4.Label,$LOCALIZE[19020])</onload>
         <onload>Skin.SetString(HomeItem.4.Path,ActivateWindow(TVChannels))</onload>
         <onload>Skin.SetString(HomeItem.4.Sub,LiveTV)</onload>
@@ -754,6 +807,7 @@
         <onload>Skin.SetString(HomeItem.4.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.4.Icon,Icons/tv.png)</onload>
         <onload>Skin.SetString(HomeItem.4.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.4.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.5.Label,$LOCALIZE[3])</onload>
         <onload>Skin.SetString(HomeItem.5.Path,ActivateWindow(1199))</onload>
         <onload>Skin.SetString(HomeItem.5.Sub,Videos)</onload>
@@ -764,6 +818,7 @@
         <onload>Skin.SetString(HomeItem.5.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.5.Icon,Icons/video.png)</onload>
         <onload>Skin.SetString(HomeItem.5.WidgetFormat,Poster)</onload>
+		<onload>Skin.SetString(HomeItem.5.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.6.Label,$LOCALIZE[342])</onload>
         <onload>Skin.SetString(HomeItem.6.Path,ActivateWindow(Videos,MovieTitles,return))</onload>
         <onload>Skin.SetString(HomeItem.6.Sub,Movies)</onload>
@@ -774,6 +829,7 @@
         <onload>Skin.SetString(HomeItem.6.Display,Database)</onload>
         <onload>Skin.SetString(HomeItem.6.Icon,Icons/movies.png)</onload>
         <onload>Skin.SetString(HomeItem.6.WidgetFormat,Poster)</onload>
+		<onload>Skin.SetString(HomeItem.6.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.7.Label,$LOCALIZE[31424])</onload>
         <onload>Skin.SetString(HomeItem.7.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
         <onload>Skin.SetString(HomeItem.7.Sub,TVShows)</onload>
@@ -784,6 +840,7 @@
         <onload>Skin.SetString(HomeItem.7.Display,Database)</onload>
         <onload>Skin.SetString(HomeItem.7.Icon,Icons/tvshows.png)</onload>
         <onload>Skin.SetString(HomeItem.7.WidgetFormat,Thumb)</onload>
+		<onload>Skin.SetString(HomeItem.7.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.8.Label,$LOCALIZE[2])</onload>
         <onload>Skin.SetString(HomeItem.8.Path,ActivateWindow(Music))</onload>
         <onload>Skin.SetString(HomeItem.8.Sub,Music)</onload>
@@ -794,6 +851,7 @@
         <onload>Skin.SetString(HomeItem.8.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.8.Icon,Icons/music.png)</onload>
         <onload>Skin.SetString(HomeItem.8.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.8.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.9.Label,$LOCALIZE[24001])</onload>
         <onload condition="!System.Platform.Android">Skin.SetString(HomeItem.9.Path,ActivateWindow(Programs,Addons,return))</onload>
         <onload condition="System.Platform.Android">Skin.SetString(HomeItem.9.Path,ActivateWindow(Programs))</onload>
@@ -805,6 +863,7 @@
         <onload>Skin.SetString(HomeItem.9.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.9.Icon,Icons/programs.png)</onload>
         <onload>Skin.SetString(HomeItem.9.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.9.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.10.Label,$LOCALIZE[33002])</onload>
         <onload>Skin.SetString(HomeItem.10.Path,PlayMedia(special://skin/extras/Streaming/Radio105NetworkTV.strm))</onload>
         <onload>Skin.SetString(HomeItem.10.Sub,None)</onload>
@@ -815,6 +874,7 @@
         <onload>Skin.SetString(HomeItem.10.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.10.Icon,Icons/network.png)</onload>
         <onload>Skin.SetString(HomeItem.10.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.10.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.12.Label,$LOCALIZE[13000])</onload>
         <onload>Skin.SetString(HomeItem.12.Path,ActivateWindow(Settings))</onload>
         <onload>Skin.SetString(HomeItem.12.Sub,Settings)</onload>
@@ -825,6 +885,7 @@
         <onload>Skin.SetString(HomeItem.12.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.12.Icon,Icons/settings.png)</onload>
         <onload>Skin.SetString(HomeItem.12.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.12.WidgetLayout,Small)</onload>
         <onload>Skin.SetString(HomeItem.15.Label,$LOCALIZE[31973])</onload>
         <onload>Skin.SetString(HomeItem.15.Path,PlayDVD())</onload>
         <onload>Skin.SetString(HomeItem.15.Sub,PlayDisc)</onload>
@@ -835,14 +896,16 @@
         <onload>Skin.SetString(HomeItem.15.Display,Default)</onload>
         <onload>Skin.SetString(HomeItem.15.Icon,Icons/playdvd.png)</onload>
         <onload>Skin.SetString(HomeItem.15.WidgetFormat,-)</onload>
+		<onload>Skin.SetString(HomeItem.15.WidgetLayout,Small)</onload>
         <onload>Skin.SetBool(SingleGlobalBackground)</onload>
-        <onload>Skin.SetBool(EnableFanartScript)</onload>
-        <onload>Skin.SetString(FanArtCycleRate,10)</onload>
+        <onload condition="System.HasAddon(script.grab.fanart)">Skin.SetBool(EnableFanartScript)</onload>
+        <onload condition="System.HasAddon(script.grab.fanart)">Skin.SetString(FanArtCycleRate,10)</onload>
         <onload condition="System.Date(11-24,1-6)">Skin.Setbool(HolidayEffects)</onload>
         <onload>Skin.SetString(HolidayThemePath,special://skin/extras/Holiday/xmastree.jpg)</onload>
         <onload condition="!System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlaylist)</onload>
         <onload>Skin.SetBool(InitialSetUpRun)</onload>
         <onload>Skin.Reset(DontAskBackgroundFanart)</onload>
+		<onload>ActivateWindow(2135)</onload>
     </include>
     <include name="UpdatesV312">
         <onload condition="Skin.String(HomeItem.1.Path,ActivateWindow(Videos,root,return))">Skin.SetString(HomeItem.1.Path,ActivateWindow(1199))</onload>
@@ -1712,12 +1775,32 @@
         <onload>Skin.SetBool(Updates_V403)</onload>
     </include>
 	
+	<include name="UpdatesV415">
+        <onload condition="String.IsEmpty(Skin.String(HomeItem.1.WidgetLayout))">Skin.SetString(HomeItem.1.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.2.WidgetLayout))">Skin.SetString(HomeItem.2.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.3.WidgetLayout))">Skin.SetString(HomeItem.3.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.4.WidgetLayout))">Skin.SetString(HomeItem.4.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.5.WidgetLayout))">Skin.SetString(HomeItem.5.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.6.WidgetLayout))">Skin.SetString(HomeItem.6.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.7.WidgetLayout))">Skin.SetString(HomeItem.7.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.8.WidgetLayout))">Skin.SetString(HomeItem.8.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.9.WidgetLayout))">Skin.SetString(HomeItem.9.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.10.WidgetLayout))">Skin.SetString(HomeItem.10.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.11.WidgetLayout))">Skin.SetString(HomeItem.11.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.12.WidgetLayout))">Skin.SetString(HomeItem.12.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.13.WidgetLayout))">Skin.SetString(HomeItem.13.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.14.WidgetLayout))">Skin.SetString(HomeItem.14.WidgetLayout,Small)</onload>
+		<onload condition="String.IsEmpty(Skin.String(HomeItem.15.WidgetLayout))">Skin.SetString(HomeItem.15.WidgetLayout,Small)</onload>
+        <onload>Skin.SetBool(Updates_V415)</onload>
+    </include>
+	
+	
 	<include name="HomeSuggestedMedia">
 	    <!-- Suggested Movie Info -->
 		<control type="group">
             <left>0</left>
             <top>90</top>
-            <visible>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</visible>
+            <visible>Skin.HasSetting(LowerMainMenuBar)</visible>
             <visible>!Player.HasMedia + !String.IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
             <visible>!Integer.IsGreater(Window(Home).Property(RecommendedMovie.1.PercentPlayed),95)</visible>
             <visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),Movies)</visible>
@@ -1793,7 +1876,7 @@
         <control type="group">
             <left>0</left>
             <top>90</top>
-            <visible>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</visible>
+            <visible>Skin.HasSetting(LowerMainMenuBar)</visible>
             <visible>!Player.HasMedia + !String.IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
             <visible>String.IsEqual(Container(9000).ListItem.Property(HiLiteItem),TVShows)</visible>
             <include>VisibleFadeEffect</include>
@@ -1917,13 +2000,33 @@
             <include>Window_OpenClose_Animation</include>
             <left>30</left>
             <top>82r</top>
-            <onup condition="!Skin.HasSetting(LowerMainMenuBar)">9002</onup>
-            <onup condition="Skin.HasSetting(LowerMainMenuBar)">9001</onup>
+            <onup condition="!Skin.HasSetting(LowerMainMenuBar) + Control.IsVisible(9002)">9002</onup>
+            <onup condition="Skin.HasSetting(LowerMainMenuBar) | !Control.IsVisible(9002)">9001</onup>
             <ondown>9003</ondown>
             <align>left</align>
             <orientation>horizontal</orientation>
             <itemgap>15</itemgap>
-            <control type="radiobutton" id="22">
+            <control type="radiobutton" id="23">
+                <description>Power push button</description>
+                <textureradioonfocus>icon_power.png</textureradioonfocus>
+                <textureradioonnofocus>icon_power.png</textureradioonnofocus>
+                <textureradioofffocus>icon_power.png</textureradioofffocus>
+                <textureradiooffnofocus>icon_power.png</textureradiooffnofocus>
+                <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+                <texturenofocus border="5">floor_button.png</texturenofocus>
+                <width>68</width>
+                <height>68</height>
+                <radiowidth>52</radiowidth>
+                <radioheight>52</radioheight>
+                <radioposx>8</radioposx>
+                <radioposy>8</radioposy>
+                <label>31003</label>
+                <font></font>
+                <onclick>$VAR[HomePowerBtnCommand]</onclick>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+                <visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
+            </control>
+			<control type="radiobutton" id="22">
                 <description>Favourites push button</description>
                 <textureradioonfocus>icon_favourites.png</textureradioonfocus>
                 <textureradioonnofocus>icon_favourites.png</textureradioonnofocus>
@@ -1963,28 +2066,7 @@
                 <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
                 <visible>!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(FloorGlobalSearch)</visible>
             </control>
-            <control type="radiobutton" id="23">
-                <description>Power push button</description>
-                <textureradioonfocus>icon_power.png</textureradioonfocus>
-                <textureradioonnofocus>icon_power.png</textureradioonnofocus>
-                <textureradioofffocus>icon_power.png</textureradioofffocus>
-                <textureradiooffnofocus>icon_power.png</textureradiooffnofocus>
-                <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
-                <texturenofocus border="5">floor_button.png</texturenofocus>
-                <width>68</width>
-                <height>68</height>
-                <radiowidth>52</radiowidth>
-                <radioheight>52</radioheight>
-                <radioposx>8</radioposx>
-                <radioposy>8</radioposy>
-                <label>31003</label>
-                <font></font>
-                <onclick>$VAR[HomePowerBtnCommand]</onclick>
-                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
-                <visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
-            </control>
         </control>
 	</include>
-	
 	
 </includes>

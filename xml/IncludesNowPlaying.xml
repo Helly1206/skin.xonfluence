@@ -282,18 +282,18 @@
                 <visible>VideoPlayer.Content(LiveTV)</visible>
                 <control type="image">
                     <description>Cover image</description>
-                    <left>30</left>
-                    <top>68</top>
-                    <width>180</width>
-                    <height>450</height>
-                    <aspectratio aligny="bottom">keep</aspectratio>
-                    <texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+                    <left>60</left>
+                    <top>403</top>
+                    <width>214</width>
+                    <height>120</height>
+                    <aspectratio>scale</aspectratio>
+					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
                     <bordertexture border="8">ThumbBorder.png</bordertexture>
                     <bordersize>5</bordersize>
                 </control>
                 <control type="label">
                     <description>Channel label</description>
-                    <left>240</left>
+                    <left>285</left>
                     <top>398</top>
                     <height>38</height>
                     <width>990</width>
@@ -306,7 +306,7 @@
                 </control>
                 <control type="label">
                     <description>Title label</description>
-                    <left>240</left>
+                    <left>285</left>
                     <top>428</top>
                     <height>45</height>
                     <width>1500</width>
@@ -319,7 +319,7 @@
                 </control>
                 <control type="label">
                     <description>Time Label</description>
-                    <left>240</left>
+                    <left>285</left>
                     <top>465</top>
                     <height>45</height>
                     <width>450</width>
@@ -336,18 +336,18 @@
                 <visible>VideoPlayer.Content(Movies)</visible>
                 <control type="image">
                     <description>Cover image</description>
-                    <left>30</left>
-                    <top>68</top>
-                    <width>180</width>
-                    <height>450</height>
-                    <aspectratio aligny="bottom">keep</aspectratio>
+                    <left>60</left>
+                    <top>403</top>
+                    <width>214</width>
+                    <height>120</height>
+                    <aspectratio>scale</aspectratio>
                     <texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
                     <bordertexture border="8">ThumbBorder.png</bordertexture>
                     <bordersize>5</bordersize>
                 </control>
                 <control type="label">
                     <description>Studio label</description>
-                    <left>240</left>
+                    <left>285</left>
                     <top>398</top>
                     <height>38</height>
                     <width>1500</width>
@@ -360,7 +360,7 @@
                 </control>
                 <control type="label">
                     <description>Title label</description>
-                    <left>240</left>
+                    <left>285</left>
                     <top>428</top>
                     <height>45</height>
                     <width>1500</width>
@@ -373,7 +373,7 @@
                 </control>
                 <control type="label">
                     <description>Time Label</description>
-                    <left>240</left>
+                    <left>285</left>
                     <top>465</top>
                     <height>45</height>
                     <width>450</width>
@@ -390,10 +390,10 @@
                 <visible>VideoPlayer.Content(Episodes)</visible>
                 <control type="image">
                     <description>Cover image</description>
-                    <left>30</left>
-                    <top>338</top>
-                    <width>270</width>
-                    <height>180</height>
+                    <left>60</left>
+                    <top>403</top>
+                    <width>214</width>
+                    <height>120</height>
                     <aspectratio>scale</aspectratio>
                     <texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
                     <bordertexture border="8">ThumbBorder.png</bordertexture>
@@ -401,7 +401,7 @@
                 </control>
                 <control type="label">
                     <description>TV Show Season Ep Label</description>
-                    <left>315</left>
+                    <left>285</left>
                     <top>398</top>
                     <height>38</height>
                     <width>1500</width>
@@ -414,7 +414,7 @@
                 </control>
                 <control type="label">
                     <description>Title label</description>
-                    <left>315</left>
+                    <left>285</left>
                     <top>428</top>
                     <height>45</height>
                     <width>1500</width>
@@ -427,7 +427,7 @@
                 </control>
                 <control type="label">
                     <description>Time Label</description>
-                    <left>315</left>
+                    <left>285</left>
                     <top>465</top>
                     <height>45</height>
                     <width>450</width>

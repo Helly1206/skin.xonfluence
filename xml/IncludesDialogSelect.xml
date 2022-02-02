@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="DefaultDialogSelectLayout">
+    
+	<variable name="DialogSelectImage">
+	    <value condition="String.IsEqual(Container(6).ListItem.DBType,movie) |  String.IsEqual(Container(6).ListItem.DBType,tvshow)">$INFO[Container(6).ListItem.Art(poster)]</value>
+        <value condition="String.IsEqual(Container(6).ListItem.DBType,episode) + !String.IsEmpty(Container(6).ListItem.Art(season.poster))">$INFO[Container(6).ListItem.Art(season.poster)]</value>
+        <value condition="String.IsEqual(Container(6).ListItem.DBType,episode) + String.IsEmpty(Container(6).ListItem.Art(season.poster))">$INFO[Container(6).ListItem.Art(tvshow.poster)]</value>
+		<value>$INFO[Container(6).ListItem.Icon]</value>
+	</variable>
+	
+	
+	<include name="DefaultDialogSelectLayout">
         <control type="group">
             <left>352</left>
             <top>112</top>
@@ -168,7 +177,7 @@
                         <top>4</top>
                         <width>120</width>
                         <height>120</height>
-                        <texture>$INFO[Listitem.Icon]</texture>
+                        <texture>$VAR[DialogSelectImage]</texture>
                         <aspectratio>keep</aspectratio>
                         <bordertexture border="3">black-back2.png</bordertexture>
                         <bordersize>2</bordersize>
@@ -221,7 +230,7 @@
                         <top>4</top>
                         <width>120</width>
                         <height>120</height>
-                        <texture>$INFO[Listitem.Icon]</texture>
+                        <texture>$VAR[DialogSelectImage]</texture>
                         <aspectratio>keep</aspectratio>
                         <bordertexture border="3">black-back2.png</bordertexture>
                         <bordersize>2</bordersize>

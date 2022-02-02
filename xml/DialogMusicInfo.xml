@@ -164,7 +164,8 @@
                     <font>font13</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
-                    <autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
                 <control type="image">
                     <left>60</left>

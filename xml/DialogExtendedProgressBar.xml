@@ -11,7 +11,8 @@
             <depth>DepthHeader</depth>
             <left>930</left>
             <top>0</top>
-            <animation effect="slide" end="0,-120" time="150" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
+            <animation effect="slide" start="0,0" end="-928,2" time="0" condition="Skin.HasSetting(NotificationsTopLeft)">Conditional</animation>
+			<animation effect="slide" end="0,-120" time="150" condition="!Skin.HasSetting(NotificationsTopLeft) + [Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]">conditional</animation>
             <control type="image">
                 <left>0</left>
                 <top>-15</top>

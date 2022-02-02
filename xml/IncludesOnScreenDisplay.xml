@@ -26,13 +26,15 @@
                 <textcolor>white</textcolor>
                 <font>font13</font>
                 <label>[B][COLOR=$VAR[MainColorOne]]$LOCALIZE[207]$LOCALIZE[31156] [/COLOR][/B]$VAR[VideoPlayingDescription]</label>
-                <autoscroll delay="3000" time="1800" repeat="10000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
+                <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
+				<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
             </control>
         </control>
     </include>
     <include name="OSDMovieCover">
         <control type="group" id="1">
-            <control type="image" id="1">
+            <!-- Clear Art -->
+			<control type="image" id="1">
                 <description>clearart image</description>
                 <left>15</left>
                 <top>352r</top>
@@ -42,6 +44,7 @@
                 <aspectratio aligny="bottom">keep</aspectratio>
                 <visible>!Skin.HasSetting(DisableClearArt) + !String.IsEmpty(Player.Art(clearart))</visible>
             </control>
+			<!-- Clear logo if no Clear Art -->
             <control type="image" id="1">
                 <description>logo image</description>
                 <left>15</left>
@@ -52,18 +55,8 @@
                 <aspectratio aligny="bottom" align="center">keep</aspectratio>
                 <visible>!Skin.HasSetting(DisableLogoArt) + !String.IsEmpty(Player.Art(clearlogo)) + [String.IsEmpty(Player.Art(clearart)) | Skin.HasSetting(DisableClearArt)]</visible>
             </control>
-            <control type="image" id="1">
-                <description>Cover image</description>
-                <left>94</left>
-                <top>508r</top>
-                <width>315</width>
-                <height>480</height>
-                <aspectratio scalediffuse="false">stretch</aspectratio>
-                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideo.png">$INFO[Player.Art(poster)]</texture>
-                <visible>Skin.HasSetting(EnableDVDCases)</visible>
-                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
-            </control>
-            <control type="image" id="1">
+			<!-- Poster if no clear art or clear logo, no case -->
+			<control type="image" id="1">
                 <description>Movie cover image</description>
                 <left>30</left>
                 <top>525r</top>
@@ -76,18 +69,31 @@
                 <visible>!Skin.HasSetting(EnableDVDCases)</visible>
                 <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
             </control>
+			<!-- Poster if no clear art or clear logo, case enabled -->
             <control type="image" id="1">
+                <description>Cover image</description>
+                <left>94</left>
+                <top>508r</top>
+                <width>315</width>
+                <height>480</height>
+                <aspectratio scalediffuse="false">stretch</aspectratio>
+                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideo.png">$INFO[Player.Art(poster)]</texture>
+                <visible>Skin.HasSetting(EnableDVDCases)</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)]</visible>
+            </control>
+			<!-- Case -->
+			<control type="image" id="1">
                 <left>45</left>
                 <top>525r</top>
                 <width>382</width>
                 <height>518</height>
                 <aspectratio>stretch</aspectratio>
                 <texture>$VAR[VideoPlayerCase,ClearCase/,.png]</texture>
-                <visible>!Player.IsInternetStream + [Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)] + String.IsEmpty(Player.Art(poster))</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(clearart))] + [String.IsEmpty(Player.Art(clearlogo)) | Skin.HasSetting(DisableLogoArt)] + !String.IsEmpty(Player.Art(poster))</visible>
                 <visible>Skin.HasSetting(EnableDVDCases)</visible>
             </control>
+            <!-- Icon if internet stream or no poster -->
             <control type="image" id="1">
-                <description>clearart image</description>
                 <left>15</left>
                 <top>352r</top>
                 <width>450</width>
@@ -128,9 +134,9 @@
                 <width>315</width>
                 <height>480</height>
                 <aspectratio scalediffuse="false">stretch</aspectratio>
-                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+                <texture diffuse="ClearCase/EmptyCaseMask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(tvshow.poster)]</texture>
                 <visible>Skin.HasSetting(EnableDVDCases)</visible>
-                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(tvshow.clearart))] + [String.IsEmpty(Player.Art(tvshow.clearlogo)) | Skin.HasSetting(DisableLogoArt)] + !String.IsEmpty(Player.Art(tvshow.thumb))</visible>
+                <visible>[Skin.HasSetting(DisableClearArt) | String.IsEmpty(Player.Art(tvshow.clearart))] + [String.IsEmpty(Player.Art(tvshow.clearlogo)) | Skin.HasSetting(DisableLogoArt)] + !String.IsEmpty(Player.Art(tvshow.poster))</visible>
             </control>
             <control type="image" id="1">
                 <left>45</left>
@@ -599,7 +605,8 @@
 	    <control type="group" id="1">
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
-            <visible>Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | [Skin.HasSetting(StandardSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]]</visible>
+            <visible>Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | [Skin.HasSetting(StandardSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]] | 
+			         [Player.Paused + Skin.HasSetting(ShowSeekBarPaused)]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <!-- Top background for clock, date, etc. -->
@@ -660,9 +667,9 @@
 <!--                    <left>0</left>
                     <top>180</top>
                     <width>1365</width> -->
-					<left>1160</left>
+					<left>1140</left>
                     <top>185</top>
-                    <width>220</width>
+                    <width>240</width>
                     <height>38</height>
                     <label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
                     <align>right</align>
@@ -672,6 +679,7 @@
                     <scroll>true</scroll>
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <animation effect="fade" time="150">VisibleChange</animation>
+					<visible>Skin.HasSetting(ShowEndTimeOSD)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>150</left>
@@ -775,26 +783,29 @@
                     </control>
                 </control>
 				<!-- Cutlist and Chapters -->
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>14</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <lefttexture>white.png</lefttexture>
-			        <midtexture colordiffuse="FFFF0000">white.png</midtexture>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Cutlist</info>
-			    </control>
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>7</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Chapters</info>
-			    </control>
+			    <control type="group" id="1">
+				    <visible>Skin.HasSetting(ShowCutlist)</visible>
+				    <control type="ranges" id="1">
+			            <left>150</left>
+			            <top>34</top>
+			            <width>1080</width>
+			            <height>14</height>
+			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+			            <lefttexture>white.png</lefttexture>
+			            <midtexture colordiffuse="FFFF0000">white.png</midtexture>
+			            <righttexture>white.png</righttexture>
+			            <info>Player.Cutlist</info>
+			        </control>
+			        <control type="ranges" id="1">
+			            <left>150</left>
+			            <top>34</top>
+			            <width>1080</width>
+			            <height>7</height>
+			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+			            <righttexture>white.png</righttexture>
+			            <info>Player.Chapters</info>
+			        </control>
+				</control>	
 				<!-- Right label: duration/end time -->
                 <control type="label" id="1">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -822,9 +833,9 @@
 			<!-- Seek frame -->
 			<control type="group" id="2">
 			    <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
-				<visible>Skin.HasSetting(HidePopupSeekBar)</visible>
+				<visible>Skin.HasSetting(HidePopupSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)</visible>
 				<left>564r</left>
-                <top>86r</top>
+                <top>94r</top>
                 <control type="group" id="1">
                     <left>390</left>
                     <top>15</top>
@@ -1004,21 +1015,6 @@
                         <visible>String.IsEqual(Player.PlaySpeed,1.50)</visible>
                     </control>
                 </control>
-				<!-- Seek label -->
-<!--                <control type="label" id="1">
-                    <description>Seekbar Label</description>
-                    <left>365</left>
-                    <top>-10</top>
-                    <width>195</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <font>font10_title</font>
-                    <textcolor>$VAR[MainColorOne]</textcolor>
-                    <label>$VAR[SeekLabel]</label>
-					<visible>!Skin.HasSetting(MinimumPopUpSeekBar)</visible>
-                </control> -->
-                <!-- Seek numeric label -->
 				<control type="label" id="1">
                     <description>Seek Number label</description>
                     <left>270</left>
@@ -1102,9 +1098,9 @@
                 <include>OSDMediaHeading</include>
                 <include>OSDMediaFlagging</include>
 				<control type="label" id="1">
-                    <left>1160</left>
+                    <left>1140</left>
                     <top>185</top>
-                    <width>220</width>
+                    <width>240</width>
                     <height>38</height>
                     <label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
                     <align>right</align>
@@ -1114,6 +1110,7 @@
                     <scroll>true</scroll>
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <animation effect="fade" time="150">VisibleChange</animation>
+					<visible>Skin.HasSetting(ShowEndTimeOSD)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>150</left>
@@ -1214,26 +1211,29 @@
                     </control>
                 </control>
 				<!-- Cutlist and Chapters -->
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>14</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <lefttexture>white.png</lefttexture>
-			        <midtexture colordiffuse="FFFF0000">white.png</midtexture>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Cutlist</info>
-			    </control>
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>7</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Chapters</info>
-			    </control>
+			    <control type="group" id="1">
+				    <visible>Skin.HasSetting(ShowCutlist)</visible>
+				    <control type="ranges" id="1">
+			            <left>150</left>
+			            <top>34</top>
+			            <width>1080</width>
+			            <height>14</height>
+			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+			            <lefttexture>white.png</lefttexture>
+			            <midtexture colordiffuse="FFFF0000">white.png</midtexture>
+			            <righttexture>white.png</righttexture>
+			            <info>Player.Cutlist</info>
+			        </control>
+			        <control type="ranges" id="1">
+			            <left>150</left>
+			            <top>34</top>
+			            <width>1080</width>
+			            <height>7</height>
+			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+			            <righttexture>white.png</righttexture>
+			            <info>Player.Chapters</info>
+			        </control>
+				</control>	
 				
                 <control type="label" id="1">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -1260,8 +1260,9 @@
             </control>
 			<control type="group" id="2">
 				<left>564r</left>
-                <top>86r</top>
-                <control type="group" id="1">
+                <top>94r</top>
+                <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
+				<control type="group" id="1">
                     <left>390</left>
                     <top>15</top>
                     <control type="image" id="1">
@@ -1440,18 +1441,6 @@
                         <visible>String.IsEqual(Player.PlaySpeed,1.50)</visible>
                     </control>
                 </control>
-<!--                <control type="label" id="1">
-                    <description>Seekbar Label</description>
-                    <left>365</left>
-                    <top>-10</top>
-                    <width>195</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <font>font10_title</font>
-                    <textcolor>$VAR[MainColorOne]</textcolor>
-                    <label>$VAR[SeekLabel]</label>
-                </control> -->
                 <control type="label" id="1">
                     <description>Seek Number label</description>
                     <left>270</left>
@@ -1499,7 +1488,7 @@
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
             <visible>Skin.HasSetting(MinimumPopUpSeekBar)</visible> 
-			 <visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
+			<visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <control type="image" id="1">
@@ -1523,7 +1512,7 @@
 			<control type="group" id="2">
 				<include condition="!Skin.HasSetting(HidePopUpSeekBar)">OSDPosMinimumWithPopUp</include>
 				<include condition="Skin.HasSetting(HidePopUpSeekBar)">OSDPosMinimumNoPopUp</include>
-                <control type="group" id="1">
+				<control type="group" id="1">
                     <left>390</left>
                     <top>15</top>
                     <control type="image" id="1">
@@ -1724,7 +1713,7 @@
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
             <visible>[!Skin.HasSetting(MinimumPopUpSeekBar) + Skin.HasSetting(HidePopupSeekBar) + !Skin.HasSetting(StandardSeekBar)]</visible> 
-			 <visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
+			 <visible>[[Player.Paused + !Skin.HasSetting(ShowSeekBarPaused)] | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <control type="image" id="1">
@@ -2069,7 +2058,8 @@
                 </control>
 			    <!-- Cutlist and Chapters -->
 			    <control type="group" id="1">
-				    <control type="ranges" id="1">
+				    <visible>Skin.HasSetting(ShowCutlist)</visible>
+					<control type="ranges" id="1">
 			            <left>30</left>
 			            <top>78</top>
 			            <width>360</width>
@@ -2097,5 +2087,17 @@
     <variable name="OSDPath">
         <value condition="!String.IsEmpty(Skin.String(OSDLAF))">osd_modern/</value>
         <value>osd_classic/</value>
+    </variable>
+	
+	<variable name="IntroOSDTimeoutLabel">
+        <value condition="String.IsEmpty(Skin.String(OSDTimeout))">3 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,two)">2 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,three)">3 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,four)">4 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,five)">5 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,six)">6 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,ten)">10 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,fifteen)">15 $LOCALIZE[31940]</value>
+		<value condition="Skin.String(OSDTimeout,twenty)">20 $LOCALIZE[31940]</value>
     </variable>
 </includes>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+	<shortcut>
+		<defaultID>settingsroot</defaultID>
+		<label>$LOCALIZE[5]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Settings)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>settingsfilemanager</defaultID>
+		<label>$LOCALIZE[10003]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(FileManager)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>settingsprofiles</defaultID>
+		<label>$LOCALIZE[13200]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Profiles)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>settingssysteminfo</defaultID>
+		<label>$LOCALIZE[130]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(SystemInfo)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>settingsskin</defaultID>
+		<label>$LOCALIZE[10035]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(SkinSettings)</action>
+	</shortcut>
+    <shortcut>
+		<defaultID>settingsaddonbrowser</defaultID>
+		<label>$LOCALIZE[10040]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(AddonBrowser)</action>
+	</shortcut>
+    <shortcut>
+		<defaultID>settingseventlog</defaultID>
+		<label>$LOCALIZE[14111]</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(EventLog,events://,return)</action>
+	</shortcut>
+</shortcuts>
